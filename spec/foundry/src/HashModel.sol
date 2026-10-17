@@ -1,4 +1,4 @@
-// SPDX-License-Identifier: UNLICENSED
+// SPDX-License-Identifier: Apache-2.0
 pragma solidity 0.8.24;
 
 /// EIP-712 encoding, identifiers and fiat rounding of documents 11 and 12 (reference model of tools/eip712_vectors.py).

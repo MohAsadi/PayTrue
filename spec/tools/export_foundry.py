@@ -32,7 +32,7 @@ if hasattr(sys.stdout, "reconfigure"):
 
 SPEC = pathlib.Path(__file__).resolve().parent.parent
 FOUNDRY = SPEC / "foundry"
-SPDX = "// SPDX-License-Identifier: UNLICENSED"
+SPDX = "// SPDX-License-Identifier: Apache-2.0"
 PRAGMA = "pragma solidity 0.8.24;"
 TOKEN_ARG_NAMES = {"NewPermissionMissing": "token", "OldPermissionNotRevoked": "token", "ResidualAllowanceUnbounded": "token",
                    "AccountCodeChanged": "customer, uint8 field", "QuoteSignerTombstoned": "key", "AllowanceExpired": "deadline",
