@@ -1,0 +1,1020 @@
+{
+ "schema": 1,
+ "tool": "tools/loop_audit.py",
+ "solc": "0.8.24",
+ "profile": "model",
+ "scope": "foundry/src (the reference model and the generated types library); the production contracts carry the same annotations and pass the same audit (profile contracts)",
+ "constants": {
+  "MAX_TOKENS_PER_MANDATE": 3,
+  "MAX_EXPOSED_TOKENS_PER_ROUTER": 8,
+  "MAX_BATCH": 10,
+  "MAX_SIGNERS_PER_SET": 16,
+  "MAX_WITNESS_BATCH": 2
+ },
+ "recordedBounds": {
+  "TOKENS": "PC-11",
+  "EXPOSED": "PC-18",
+  "BATCH": "PC-04",
+  "SIGNERS": "PC-19",
+  "WITNESS_BATCH": "none: 10 section 8 question 2 (merchant and fee), generated from eip712/types.json"
+ },
+ "safeRangeHardMax": {
+  "MAX_TOKENS_PER_MANDATE": 6,
+  "MAX_EXPOSED_TOKENS_PER_ROUTER": 30,
+  "MAX_BATCH": 20,
+  "MAX_SIGNERS_PER_SET": 64
+ },
+ "loops": [
+  {
+   "file": "ContainModel.sol",
+   "line": 116,
+   "function": "ContainModel.indexOf",
+   "statement": "ForStatement",
+   "header": "for (uint256 i = 0; i < t.nTokens; ++i) {",
+   "boundClass": "TOKENS",
+   "boundExpression": "nTokens <= MAX_TOKENS_PER_MANDATE",
+   "why": "TermsShape.require_ runs in activate and activateSuccessor before any terms are stored, and the arrays have three slots",
+   "boundValue": 3
+  },
+  {
+   "file": "ContainModel.sol",
+   "line": 157,
+   "function": "ContainModel._tokensSubset",
+   "statement": "ForStatement",
+   "header": "for (uint256 i = 0; i < succ.nTokens; ++i) {",
+   "boundClass": "TOKENS",
+   "boundExpression": "nTokens <= MAX_TOKENS_PER_MANDATE",
+   "why": "TermsShape.require_ runs in activate and activateSuccessor before any terms are stored, and the arrays have three slots",
+   "boundValue": 3
+  },
+  {
+   "file": "ContainModel.sol",
+   "line": 166,
+   "function": "ContainModel._capsViolated",
+   "statement": "ForStatement",
+   "header": "for (uint256 i = 0; i < succ.nTokens; ++i) {",
+   "boundClass": "TOKENS",
+   "boundExpression": "nTokens <= MAX_TOKENS_PER_MANDATE",
+   "why": "TermsShape.require_ runs in activate and activateSuccessor before any terms are stored, and the arrays have three slots",
+   "boundValue": 3
+  },
+  {
+   "file": "ContainModel.sol",
+   "line": 170,
+   "function": "ContainModel._capsViolated",
+   "statement": "ForStatement",
+   "header": "for (uint256 f = 0; f < 6; ++f) {",
+   "boundClass": "FIXED",
+   "boundExpression": "6 cap families per token",
+   "why": "a literal of 6: cap families per token",
+   "boundValue": 6
+  },
+  {
+   "file": "ContainModel.sol",
+   "line": 183,
+   "function": "ContainModel._fiatViolated",
+   "statement": "ForStatement",
+   "header": "for (uint256 f = 0; f < 6; ++f) {",
+   "boundClass": "FIXED",
+   "boundExpression": "6 fiat cap families",
+   "why": "a literal of 6: fiat cap families",
+   "boundValue": 6
+  },
+  {
+   "file": "ContainModel.sol",
+   "line": 194,
+   "function": "ContainModel.widenedMask",
+   "statement": "ForStatement",
+   "header": "for (uint256 i = 0; i < n.nTokens; ++i) {",
+   "boundClass": "TOKENS",
+   "boundExpression": "nTokens <= MAX_TOKENS_PER_MANDATE",
+   "why": "TermsShape.require_ runs in activate and activateSuccessor before any terms are stored, and the arrays have three slots",
+   "boundValue": 3
+  },
+  {
+   "file": "ContainModel.sol",
+   "line": 199,
+   "function": "ContainModel.widenedMask",
+   "statement": "ForStatement",
+   "header": "for (uint256 f = 2; f < 6; ++f) {",
+   "boundClass": "FIXED",
+   "boundExpression": "6 cap families per token",
+   "why": "a literal of 6: cap families per token",
+   "boundValue": 6
+  },
+  {
+   "file": "ContainModel.sol",
+   "line": 205,
+   "function": "ContainModel.widenedMask",
+   "statement": "ForStatement",
+   "header": "for (uint256 g = 0; g < 6; ++g) {",
+   "boundClass": "FIXED",
+   "boundExpression": "6 fiat cap families",
+   "why": "a literal of 6: fiat cap families",
+   "boundValue": 6
+  },
+  {
+   "file": "ContainModel.sol",
+   "line": 237,
+   "function": "ContainModel._windowsOk",
+   "statement": "ForStatement",
+   "header": "for (uint256 f = 0; f < 5; ++f) {",
+   "boundClass": "FIXED",
+   "boundExpression": "5 window and total counters",
+   "why": "a literal of 5: window and total counters",
+   "boundValue": 5
+  },
+  {
+   "file": "ContainModel.sol",
+   "line": 247,
+   "function": "ContainModel._fiatOk",
+   "statement": "ForStatement",
+   "header": "for (uint256 f = 0; f < 5; ++f) {",
+   "boundClass": "FIXED",
+   "boundExpression": "5 fiat window and total counters",
+   "why": "a literal of 5: fiat window and total counters",
+   "boundValue": 5
+  },
+  {
+   "file": "ContainModel.sol",
+   "line": 266,
+   "function": "ContainModel.snapshotHash",
+   "statement": "ForStatement",
+   "header": "for (uint256 i = 0; i < t.nTokens; ++i) {",
+   "boundClass": "TOKENS",
+   "boundExpression": "nTokens <= MAX_TOKENS_PER_MANDATE",
+   "why": "TermsShape.require_ runs in activate and activateSuccessor before any terms are stored, and the arrays have three slots",
+   "boundValue": 3
+  },
+  {
+   "file": "ContainModel.sol",
+   "line": 295,
+   "function": "ContainModel.toTyped",
+   "statement": "ForStatement",
+   "header": "for (uint256 i = 0; i < t.nTokens; ++i) {",
+   "boundClass": "TOKENS",
+   "boundExpression": "nTokens <= MAX_TOKENS_PER_MANDATE",
+   "why": "TermsShape.require_ runs in activate and activateSuccessor before any terms are stored, and the arrays have three slots",
+   "boundValue": 3
+  },
+  {
+   "file": "ContainModel.sol",
+   "line": 341,
+   "function": "ContainModel.referenceSnapshot",
+   "statement": "ForStatement",
+   "header": "for (uint256 i = 0; i < 2; ++i) {",
+   "boundClass": "FIXED",
+   "boundExpression": "2 tokens of the reference snapshot",
+   "why": "a literal of 2: tokens of the reference snapshot",
+   "boundValue": 2
+  },
+  {
+   "file": "ContainModel.sol",
+   "line": 389,
+   "function": "TermsShape.check",
+   "statement": "ForStatement",
+   "header": "for (uint256 i = 0; i < n; ++i) {",
+   "boundClass": "TOKENS",
+   "boundExpression": "nTokens <= MAX_TOKENS_PER_MANDATE",
+   "why": "TermsShape.require_ runs in activate and activateSuccessor before any terms are stored, and the arrays have three slots",
+   "boundValue": 3
+  },
+  {
+   "file": "ContainModel.sol",
+   "line": 394,
+   "function": "TermsShape.check",
+   "statement": "ForStatement",
+   "header": "for (uint256 i = n; i < MAX_TOKENS_PER_MANDATE; ++i) {",
+   "boundClass": "TOKENS",
+   "boundExpression": "nTokens <= MAX_TOKENS_PER_MANDATE",
+   "why": "TermsShape.require_ runs in activate and activateSuccessor before any terms are stored, and the arrays have three slots",
+   "boundValue": 3
+  },
+  {
+   "file": "ContainModel.sol",
+   "line": 397,
+   "function": "TermsShape.check",
+   "statement": "ForStatement",
+   "header": "for (uint256 f = 0; f < 6; ++f) {",
+   "boundClass": "FIXED",
+   "boundExpression": "6 cap families per token and fiat cap families",
+   "why": "a literal of 6: cap families per token and fiat cap families",
+   "boundValue": 6
+  },
+  {
+   "file": "ContainModel.sol",
+   "line": 405,
+   "function": "TermsShape.check",
+   "statement": "ForStatement",
+   "header": "for (uint256 f = 0; f < 6; ++f) {",
+   "boundClass": "FIXED",
+   "boundExpression": "6 cap families per token and fiat cap families",
+   "why": "a literal of 6: cap families per token and fiat cap families",
+   "boundValue": 6
+  },
+  {
+   "file": "MigrationModel.sol",
+   "line": 205,
+   "function": "MigrationModel._exposedCountWith",
+   "statement": "ForStatement",
+   "header": "for (uint256 i = 0; i < t.nTokens; ++i) {",
+   "boundClass": "TOKENS",
+   "boundExpression": "nTokens <= MAX_TOKENS_PER_MANDATE",
+   "why": "TermsShape.require_ runs in activate and activateSuccessor before any terms are stored, and the arrays have three slots",
+   "boundValue": 3
+  },
+  {
+   "file": "MigrationModel.sol",
+   "line": 261,
+   "function": "MigrationModel.activate",
+   "statement": "ForStatement",
+   "header": "for (uint256 i = 0; i < terms.nTokens; ++i) {",
+   "boundClass": "TOKENS",
+   "boundExpression": "nTokens <= MAX_TOKENS_PER_MANDATE",
+   "why": "TermsShape.require_ runs in activate and activateSuccessor before any terms are stored, and the arrays have three slots",
+   "boundValue": 3
+  },
+  {
+   "file": "MigrationModel.sol",
+   "line": 424,
+   "function": "MigrationModel._g1",
+   "statement": "ForStatement",
+   "header": "for (uint256 i = 0; i < n; ++i) {",
+   "boundClass": "TOKENS",
+   "boundExpression": "nTokens <= MAX_TOKENS_PER_MANDATE",
+   "why": "TermsShape.require_ runs in activate and activateSuccessor before any terms are stored, and the arrays have three slots",
+   "boundValue": 3
+  },
+  {
+   "file": "MigrationModel.sol",
+   "line": 460,
+   "function": "MigrationModel._o1n",
+   "statement": "ForStatement",
+   "header": "for (uint256 i = 0; i < x.pTerms.nTokens; ++i) {",
+   "boundClass": "TOKENS",
+   "boundExpression": "nTokens <= MAX_TOKENS_PER_MANDATE",
+   "why": "TermsShape.require_ runs in activate and activateSuccessor before any terms are stored, and the arrays have three slots",
+   "boundValue": 3
+  },
+  {
+   "file": "MigrationModel.sol",
+   "line": 486,
+   "function": "MigrationModel._o1e",
+   "statement": "ForStatement",
+   "header": "for (uint256 j = 0; j < exposed.length; ++j) {",
+   "boundClass": "EXPOSED",
+   "boundExpression": "exposed.length <= MAX_EXPOSED_TOKENS_PER_ROUTER",
+   "why": "predicate X2 refuses any activation that would push |Exposed(C, R)| above the bound; invariant I-MIG-10 and test/LoopBounds.t.sol check the list length",
+   "boundValue": 8
+  },
+  {
+   "file": "MigrationModel.sol",
+   "line": 480,
+   "function": "MigrationModel._o1e",
+   "statement": "ForStatement",
+   "header": "for (uint256 i = 0; i < x.pTerms.nTokens; ++i) {",
+   "boundClass": "TOKENS",
+   "boundExpression": "nTokens <= MAX_TOKENS_PER_MANDATE",
+   "why": "TermsShape.require_ runs in activate and activateSuccessor before any terms are stored, and the arrays have three slots",
+   "boundValue": 3
+  },
+  {
+   "file": "MigrationModel.sol",
+   "line": 509,
+   "function": "MigrationModel._effects",
+   "statement": "ForStatement",
+   "header": "for (uint256 i = 0; i < nDec; ++i) {",
+   "boundClass": "TOKENS",
+   "boundExpression": "nTokens <= MAX_TOKENS_PER_MANDATE",
+   "why": "TermsShape.require_ runs in activate and activateSuccessor before any terms are stored, and the arrays have three slots",
+   "boundValue": 3
+  },
+  {
+   "file": "MigrationModel.sol",
+   "line": 515,
+   "function": "MigrationModel._effects",
+   "statement": "ForStatement",
+   "header": "for (uint256 j = 0; j < newTerms.nTokens; ++j) {",
+   "boundClass": "TOKENS",
+   "boundExpression": "nTokens <= MAX_TOKENS_PER_MANDATE",
+   "why": "TermsShape.require_ runs in activate and activateSuccessor before any terms are stored, and the arrays have three slots",
+   "boundValue": 3
+  },
+  {
+   "file": "MigrationModel.sol",
+   "line": 524,
+   "function": "MigrationModel._effects",
+   "statement": "ForStatement",
+   "header": "for (uint256 k = 0; k < x.pTerms.nTokens; ++k) {",
+   "boundClass": "TOKENS",
+   "boundExpression": "nTokens <= MAX_TOKENS_PER_MANDATE",
+   "why": "TermsShape.require_ runs in activate and activateSuccessor before any terms are stored, and the arrays have three slots",
+   "boundValue": 3
+  },
+  {
+   "file": "MigrationModel.sol",
+   "line": 579,
+   "function": "MigrationModel.revoke",
+   "statement": "ForStatement",
+   "header": "for (uint256 i = 0; i < t.nTokens; ++i) {",
+   "boundClass": "TOKENS",
+   "boundExpression": "nTokens <= MAX_TOKENS_PER_MANDATE",
+   "why": "TermsShape.require_ runs in activate and activateSuccessor before any terms are stored, and the arrays have three slots",
+   "boundValue": 3
+  },
+  {
+   "file": "MigrationModel.sol",
+   "line": 598,
+   "function": "MigrationModel.retire",
+   "statement": "ForStatement",
+   "header": "for (uint256 i = 0; i < t.nTokens; ++i) {",
+   "boundClass": "TOKENS",
+   "boundExpression": "nTokens <= MAX_TOKENS_PER_MANDATE",
+   "why": "TermsShape.require_ runs in activate and activateSuccessor before any terms are stored, and the arrays have three slots",
+   "boundValue": 3
+  },
+  {
+   "file": "MigrationModel.sol",
+   "line": 616,
+   "function": "MigrationModel.reduceDropToken",
+   "statement": "ForStatement",
+   "header": "for (uint256 i = idx; i + 1 < t.nTokens; ++i) {",
+   "boundClass": "TOKENS",
+   "boundExpression": "nTokens <= MAX_TOKENS_PER_MANDATE",
+   "why": "TermsShape.require_ runs in activate and activateSuccessor before any terms are stored, and the arrays have three slots",
+   "boundValue": 3
+  },
+  {
+   "file": "MigrationModel.sol",
+   "line": 619,
+   "function": "MigrationModel.reduceDropToken",
+   "statement": "ForStatement",
+   "header": "for (uint256 f = 0; f < 6; ++f) {",
+   "boundClass": "FIXED",
+   "boundExpression": "6 cap families per token",
+   "why": "a literal of 6: cap families per token",
+   "boundValue": 6
+  },
+  {
+   "file": "MigrationModel.sol",
+   "line": 626,
+   "function": "MigrationModel.reduceDropToken",
+   "statement": "ForStatement",
+   "header": "for (uint256 g = 0; g < 6; ++g) {",
+   "boundClass": "FIXED",
+   "boundExpression": "6 cap families per token",
+   "why": "a literal of 6: cap families per token",
+   "boundValue": 6
+  },
+  {
+   "file": "MigrationModel.sol",
+   "line": 780,
+   "function": "MigrationModel.authRouter",
+   "statement": "ForStatement",
+   "header": "for (uint256 i = 0; i < ids.length; ++i) {",
+   "boundClass": "ORACLE",
+   "boundExpression": "ids.length = generations of the lineage",
+   "why": "the oracle of AuthRouters(L): it walks the whole history of one lineage; a view for the invariant tests, not reachable from any state-changing function",
+   "boundValue": null
+  },
+  {
+   "file": "MigrationModel.sol",
+   "line": 785,
+   "function": "MigrationModel.authRouter",
+   "statement": "ForStatement",
+   "header": "for (uint256 j = 0; j < t.nTokens; ++j) {",
+   "boundClass": "TOKENS",
+   "boundExpression": "nTokens <= MAX_TOKENS_PER_MANDATE",
+   "why": "TermsShape.require_ runs in activate and activateSuccessor before any terms are stored, and the arrays have three slots",
+   "boundValue": 3
+  },
+  {
+   "file": "MigrationModel.sol",
+   "line": 798,
+   "function": "MigrationModel.lineageDigest",
+   "statement": "ForStatement",
+   "header": "for (uint256 i = 1; i <= 10; ++i) {",
+   "boundClass": "FIXED",
+   "boundExpression": "10 token slots of the digest",
+   "why": "a literal of 10: token slots of the digest",
+   "boundValue": 11
+  },
+  {
+   "file": "Permit2Mock.sol",
+   "line": 61,
+   "function": "Permit2Mock.lockdown",
+   "statement": "ForStatement",
+   "header": "for (uint256 i = 0; i < length; ++i) {",
+   "boundClass": "EXTERNAL",
+   "boundExpression": "approvals.length chosen by the caller of Permit2",
+   "why": "Permit2's own function (a mock of the external contract): the caller supplies the array and pays its gas; no FastPay function calls it",
+   "boundValue": null
+  },
+  {
+   "file": "RegistryModel.sol",
+   "line": 98,
+   "function": "RegistryModel.liveCountScan",
+   "statement": "ForStatement",
+   "header": "for (uint256 i = 0; i < list.length; ++i) {",
+   "boundClass": "ORACLE",
+   "boundExpression": "routerList[group].length = routers ever proposed in the group",
+   "why": "the O(n) definition of liveCount, kept as the oracle of the O(1) counter; a view for the tests, not reachable from any state-changing function",
+   "boundValue": null
+  },
+  {
+   "file": "SignerSetModel.sol",
+   "line": 40,
+   "function": "SignerSetModel.proposeSignerSet",
+   "statement": "ForStatement",
+   "header": "for (uint256 i = 0; i < members.length; ++i) {",
+   "boundClass": "SIGNERS",
+   "boundExpression": "members.length <= MAX_SIGNERS_PER_SET",
+   "why": "the entry point reverts TooManySigners above the bound before the loop",
+   "boundValue": 16
+  },
+  {
+   "file": "SignerSetModel.sol",
+   "line": 46,
+   "function": "SignerSetModel.proposeSignerSet",
+   "statement": "ForStatement",
+   "header": "for (uint256 j = 0; j < members.length; ++j) {",
+   "boundClass": "SIGNERS",
+   "boundExpression": "members.length <= MAX_SIGNERS_PER_SET",
+   "why": "the entry point reverts TooManySigners above the bound before the loop",
+   "boundValue": 16
+  },
+  {
+   "file": "SignerSetModel.sol",
+   "line": 60,
+   "function": "SignerSetModel.activateSignerSet",
+   "statement": "ForStatement",
+   "header": "for (uint256 i = 0; i < list.length; ++i) {",
+   "boundClass": "SIGNERS",
+   "boundExpression": "memberList[version].length <= MAX_SIGNERS_PER_SET",
+   "why": "a set has at most the proposed members, and proposeSignerSet refuses more than the bound",
+   "boundValue": 16
+  },
+  {
+   "file": "generated/FastPayTypes.sol",
+   "line": 331,
+   "function": "FastPayTypes.hashStructs",
+   "statement": "ForStatement",
+   "header": "for (uint256 i; i < a.length; ++i) h[i] = hashStruct(a[i]);",
+   "boundClass": "TOKENS",
+   "boundExpression": "a.length <= MAX_TOKENS_PER_MANDATE",
+   "why": "hashStruct of the struct that owns the array reverts ArrayTooLong above the bound before it calls this function (the generator refuses an array without a declared bound)",
+   "boundValue": 3
+  },
+  {
+   "file": "generated/FastPayTypes.sol",
+   "line": 350,
+   "function": "FastPayTypes._tokensDigest",
+   "statement": "ForStatement",
+   "header": "for (uint256 i; i < ts.length; ++i) x = bytes.concat(x, abi.encode(ts[i].token));",
+   "boundClass": "TOKENS",
+   "boundExpression": "ts.length <= MAX_TOKENS_PER_MANDATE",
+   "why": "snapshotHash reverts ArrayTooLong above the bound before it calls this function",
+   "boundValue": 3
+  },
+  {
+   "file": "generated/FastPayTypes.sol",
+   "line": 357,
+   "function": "FastPayTypes._capTableDigest",
+   "statement": "ForStatement",
+   "header": "for (uint256 i; i < ts.length; ++i) x = bytes.concat(x, abi.encode(ts[i].token, ts[i].perPaymentMax, ts[i].dayMax, ts[i].weekMax, ts[i].thirtyDayMax, ts[i].periodMax, ts[i].totalMax));",
+   "boundClass": "TOKENS",
+   "boundExpression": "ts.length <= MAX_TOKENS_PER_MANDATE",
+   "why": "snapshotHash reverts ArrayTooLong above the bound before it calls this function",
+   "boundValue": 3
+  },
+  {
+   "file": "generated/FastPayTypes.sol",
+   "line": 376,
+   "function": "FastPayTypes.permit2BatchWitnessTransferFromHash",
+   "statement": "ForStatement",
+   "header": "for (uint256 i; i < tokens.length; ++i) h[i] = keccak256(abi.encode(TOKEN_PERMISSIONS_TYPEHASH, tokens[i], amounts[i]));",
+   "boundClass": "WITNESS_BATCH",
+   "boundExpression": "tokens.length <= MAX_WITNESS_BATCH",
+   "why": "the require above bounds the batch (Router v1.0: merchant and fee)",
+   "boundValue": 2
+  }
+ ],
+ "entryPoints": [
+  {
+   "contract": "MigrationModel",
+   "function": "activate",
+   "stateChanging": true,
+   "path": "MigrationModel.sol",
+   "loopsReachable": 6,
+   "iterationBound": 36,
+   "oracleLoopsReachable": [],
+   "iterationBoundAtHardMaxOfTheSafeRange": 66
+  },
+  {
+   "contract": "MigrationModel",
+   "function": "activateSuccessor",
+   "stateChanging": true,
+   "path": "MigrationModel.sol",
+   "loopsReachable": 23,
+   "iterationBound": 164,
+   "oracleLoopsReachable": [],
+   "iterationBoundAtHardMaxOfTheSafeRange": 396
+  },
+  {
+   "contract": "MigrationModel",
+   "function": "activeMandateOf",
+   "stateChanging": false,
+   "path": "MigrationModel.sol",
+   "loopsReachable": 0,
+   "iterationBound": 0,
+   "oracleLoopsReachable": [],
+   "iterationBoundAtHardMaxOfTheSafeRange": 0
+  },
+  {
+   "contract": "MigrationModel",
+   "function": "authRouter",
+   "stateChanging": false,
+   "path": "MigrationModel.sol",
+   "loopsReachable": 2,
+   "iterationBound": null,
+   "oracleLoopsReachable": [
+    "MigrationModel.sol:780"
+   ],
+   "iterationBoundAtHardMaxOfTheSafeRange": null
+  },
+  {
+   "contract": "MigrationModel",
+   "function": "buildAuth",
+   "stateChanging": false,
+   "path": "MigrationModel.sol",
+   "loopsReachable": 8,
+   "iterationBound": 57,
+   "oracleLoopsReachable": [],
+   "iterationBoundAtHardMaxOfTheSafeRange": 144
+  },
+  {
+   "contract": "MigrationModel",
+   "function": "consume",
+   "stateChanging": true,
+   "path": "MigrationModel.sol",
+   "loopsReachable": 1,
+   "iterationBound": 3,
+   "oracleLoopsReachable": [],
+   "iterationBoundAtHardMaxOfTheSafeRange": 6
+  },
+  {
+   "contract": "MigrationModel",
+   "function": "exposedAt",
+   "stateChanging": false,
+   "path": "MigrationModel.sol",
+   "loopsReachable": 0,
+   "iterationBound": 0,
+   "oracleLoopsReachable": [],
+   "iterationBoundAtHardMaxOfTheSafeRange": 0
+  },
+  {
+   "contract": "MigrationModel",
+   "function": "exposedCount",
+   "stateChanging": false,
+   "path": "MigrationModel.sol",
+   "loopsReachable": 0,
+   "iterationBound": 0,
+   "oracleLoopsReachable": [],
+   "iterationBoundAtHardMaxOfTheSafeRange": 0
+  },
+  {
+   "contract": "MigrationModel",
+   "function": "getMandate",
+   "stateChanging": false,
+   "path": "MigrationModel.sol",
+   "loopsReachable": 0,
+   "iterationBound": 0,
+   "oracleLoopsReachable": [],
+   "iterationBoundAtHardMaxOfTheSafeRange": 0
+  },
+  {
+   "contract": "MigrationModel",
+   "function": "isConsumable",
+   "stateChanging": false,
+   "path": "MigrationModel.sol",
+   "loopsReachable": 0,
+   "iterationBound": 0,
+   "oracleLoopsReachable": [],
+   "iterationBoundAtHardMaxOfTheSafeRange": 0
+  },
+  {
+   "contract": "MigrationModel",
+   "function": "lineageDigest",
+   "stateChanging": false,
+   "path": "MigrationModel.sol",
+   "loopsReachable": 1,
+   "iterationBound": 11,
+   "oracleLoopsReachable": [],
+   "iterationBoundAtHardMaxOfTheSafeRange": 11
+  },
+  {
+   "contract": "MigrationModel",
+   "function": "mandateCount",
+   "stateChanging": false,
+   "path": "MigrationModel.sol",
+   "loopsReachable": 0,
+   "iterationBound": 0,
+   "oracleLoopsReachable": [],
+   "iterationBoundAtHardMaxOfTheSafeRange": 0
+  },
+  {
+   "contract": "MigrationModel",
+   "function": "mandateDigest",
+   "stateChanging": false,
+   "path": "MigrationModel.sol",
+   "loopsReachable": 0,
+   "iterationBound": 0,
+   "oracleLoopsReachable": [],
+   "iterationBoundAtHardMaxOfTheSafeRange": 0
+  },
+  {
+   "contract": "MigrationModel",
+   "function": "mandatePin",
+   "stateChanging": false,
+   "path": "MigrationModel.sol",
+   "loopsReachable": 0,
+   "iterationBound": 0,
+   "oracleLoopsReachable": [],
+   "iterationBoundAtHardMaxOfTheSafeRange": 0
+  },
+  {
+   "contract": "MigrationModel",
+   "function": "mandateTerms",
+   "stateChanging": false,
+   "path": "MigrationModel.sol",
+   "loopsReachable": 0,
+   "iterationBound": 0,
+   "oracleLoopsReachable": [],
+   "iterationBoundAtHardMaxOfTheSafeRange": 0
+  },
+  {
+   "contract": "MigrationModel",
+   "function": "probe",
+   "stateChanging": false,
+   "path": "MigrationModel.sol",
+   "loopsReachable": 1,
+   "iterationBound": 3,
+   "oracleLoopsReachable": [],
+   "iterationBoundAtHardMaxOfTheSafeRange": 6
+  },
+  {
+   "contract": "MigrationModel",
+   "function": "reduceDropToken",
+   "stateChanging": true,
+   "path": "MigrationModel.sol",
+   "loopsReachable": 4,
+   "iterationBound": 30,
+   "oracleLoopsReachable": [],
+   "iterationBoundAtHardMaxOfTheSafeRange": 54
+  },
+  {
+   "contract": "MigrationModel",
+   "function": "retire",
+   "stateChanging": true,
+   "path": "MigrationModel.sol",
+   "loopsReachable": 1,
+   "iterationBound": 3,
+   "oracleLoopsReachable": [],
+   "iterationBoundAtHardMaxOfTheSafeRange": 6
+  },
+  {
+   "contract": "MigrationModel",
+   "function": "revoke",
+   "stateChanging": true,
+   "path": "MigrationModel.sol",
+   "loopsReachable": 1,
+   "iterationBound": 3,
+   "oracleLoopsReachable": [],
+   "iterationBoundAtHardMaxOfTheSafeRange": 6
+  },
+  {
+   "contract": "MigrationModel",
+   "function": "seedLive",
+   "stateChanging": true,
+   "path": "MigrationModel.sol",
+   "loopsReachable": 0,
+   "iterationBound": 0,
+   "oracleLoopsReachable": [],
+   "iterationBoundAtHardMaxOfTheSafeRange": 0
+  },
+  {
+   "contract": "MigrationModel",
+   "function": "setCodeHash",
+   "stateChanging": true,
+   "path": "MigrationModel.sol",
+   "loopsReachable": 0,
+   "iterationBound": 0,
+   "oracleLoopsReachable": [],
+   "iterationBoundAtHardMaxOfTheSafeRange": 0
+  },
+  {
+   "contract": "MigrationModel",
+   "function": "setPause",
+   "stateChanging": true,
+   "path": "MigrationModel.sol",
+   "loopsReachable": 0,
+   "iterationBound": 0,
+   "oracleLoopsReachable": [],
+   "iterationBoundAtHardMaxOfTheSafeRange": 0
+  },
+  {
+   "contract": "MigrationModel",
+   "function": "updateAccountPin",
+   "stateChanging": true,
+   "path": "MigrationModel.sol",
+   "loopsReachable": 0,
+   "iterationBound": 0,
+   "oracleLoopsReachable": [],
+   "iterationBoundAtHardMaxOfTheSafeRange": 0
+  },
+  {
+   "contract": "MigrationModel",
+   "function": "wouldConsume",
+   "stateChanging": false,
+   "path": "MigrationModel.sol",
+   "loopsReachable": 1,
+   "iterationBound": 3,
+   "oracleLoopsReachable": [],
+   "iterationBoundAtHardMaxOfTheSafeRange": 6
+  },
+  {
+   "contract": "RegistryModel",
+   "function": "activate",
+   "stateChanging": true,
+   "path": "RegistryModel.sol",
+   "loopsReachable": 0,
+   "iterationBound": 0,
+   "oracleLoopsReachable": [],
+   "iterationBoundAtHardMaxOfTheSafeRange": 0
+  },
+  {
+   "contract": "RegistryModel",
+   "function": "clearEmergency",
+   "stateChanging": true,
+   "path": "RegistryModel.sol",
+   "loopsReachable": 0,
+   "iterationBound": 0,
+   "oracleLoopsReachable": [],
+   "iterationBoundAtHardMaxOfTheSafeRange": 0
+  },
+  {
+   "contract": "RegistryModel",
+   "function": "codeHashOf",
+   "stateChanging": false,
+   "path": "RegistryModel.sol",
+   "loopsReachable": 0,
+   "iterationBound": 0,
+   "oracleLoopsReachable": [],
+   "iterationBoundAtHardMaxOfTheSafeRange": 0
+  },
+  {
+   "contract": "RegistryModel",
+   "function": "deprecate",
+   "stateChanging": true,
+   "path": "RegistryModel.sol",
+   "loopsReachable": 0,
+   "iterationBound": 0,
+   "oracleLoopsReachable": [],
+   "iterationBoundAtHardMaxOfTheSafeRange": 0
+  },
+  {
+   "contract": "RegistryModel",
+   "function": "emergencyDisable",
+   "stateChanging": true,
+   "path": "RegistryModel.sol",
+   "loopsReachable": 0,
+   "iterationBound": 0,
+   "oracleLoopsReachable": [],
+   "iterationBoundAtHardMaxOfTheSafeRange": 0
+  },
+  {
+   "contract": "RegistryModel",
+   "function": "forceState",
+   "stateChanging": true,
+   "path": "RegistryModel.sol",
+   "loopsReachable": 0,
+   "iterationBound": 0,
+   "oracleLoopsReachable": [],
+   "iterationBoundAtHardMaxOfTheSafeRange": 0
+  },
+  {
+   "contract": "RegistryModel",
+   "function": "isBindable",
+   "stateChanging": false,
+   "path": "RegistryModel.sol",
+   "loopsReachable": 0,
+   "iterationBound": 0,
+   "oracleLoopsReachable": [],
+   "iterationBoundAtHardMaxOfTheSafeRange": 0
+  },
+  {
+   "contract": "RegistryModel",
+   "function": "isChargeable",
+   "stateChanging": false,
+   "path": "RegistryModel.sol",
+   "loopsReachable": 0,
+   "iterationBound": 0,
+   "oracleLoopsReachable": [],
+   "iterationBoundAtHardMaxOfTheSafeRange": 0
+  },
+  {
+   "contract": "RegistryModel",
+   "function": "liveCount",
+   "stateChanging": false,
+   "path": "RegistryModel.sol",
+   "loopsReachable": 0,
+   "iterationBound": 0,
+   "oracleLoopsReachable": [],
+   "iterationBoundAtHardMaxOfTheSafeRange": 0
+  },
+  {
+   "contract": "RegistryModel",
+   "function": "liveCountScan",
+   "stateChanging": false,
+   "path": "RegistryModel.sol",
+   "loopsReachable": 1,
+   "iterationBound": null,
+   "oracleLoopsReachable": [
+    "RegistryModel.sol:98"
+   ],
+   "iterationBoundAtHardMaxOfTheSafeRange": null
+  },
+  {
+   "contract": "RegistryModel",
+   "function": "markSunset",
+   "stateChanging": true,
+   "path": "RegistryModel.sol",
+   "loopsReachable": 0,
+   "iterationBound": 0,
+   "oracleLoopsReachable": [],
+   "iterationBoundAtHardMaxOfTheSafeRange": 0
+  },
+  {
+   "contract": "RegistryModel",
+   "function": "mode",
+   "stateChanging": false,
+   "path": "RegistryModel.sol",
+   "loopsReachable": 0,
+   "iterationBound": 0,
+   "oracleLoopsReachable": [],
+   "iterationBoundAtHardMaxOfTheSafeRange": 0
+  },
+  {
+   "contract": "RegistryModel",
+   "function": "notice",
+   "stateChanging": false,
+   "path": "RegistryModel.sol",
+   "loopsReachable": 0,
+   "iterationBound": 0,
+   "oracleLoopsReachable": [],
+   "iterationBoundAtHardMaxOfTheSafeRange": 0
+  },
+  {
+   "contract": "RegistryModel",
+   "function": "propose",
+   "stateChanging": true,
+   "path": "RegistryModel.sol",
+   "loopsReachable": 0,
+   "iterationBound": 0,
+   "oracleLoopsReachable": [],
+   "iterationBoundAtHardMaxOfTheSafeRange": 0
+  },
+  {
+   "contract": "RegistryModel",
+   "function": "registerActive",
+   "stateChanging": true,
+   "path": "RegistryModel.sol",
+   "loopsReachable": 0,
+   "iterationBound": 0,
+   "oracleLoopsReachable": [],
+   "iterationBoundAtHardMaxOfTheSafeRange": 0
+  },
+  {
+   "contract": "RegistryModel",
+   "function": "retire",
+   "stateChanging": true,
+   "path": "RegistryModel.sol",
+   "loopsReachable": 0,
+   "iterationBound": 0,
+   "oracleLoopsReachable": [],
+   "iterationBoundAtHardMaxOfTheSafeRange": 0
+  },
+  {
+   "contract": "RegistryModel",
+   "function": "routerCount",
+   "stateChanging": false,
+   "path": "RegistryModel.sol",
+   "loopsReachable": 0,
+   "iterationBound": 0,
+   "oracleLoopsReachable": [],
+   "iterationBoundAtHardMaxOfTheSafeRange": 0
+  },
+  {
+   "contract": "RegistryModel",
+   "function": "snap",
+   "stateChanging": false,
+   "path": "RegistryModel.sol",
+   "loopsReachable": 0,
+   "iterationBound": 0,
+   "oracleLoopsReachable": [],
+   "iterationBoundAtHardMaxOfTheSafeRange": 0
+  },
+  {
+   "contract": "RegistryModel",
+   "function": "stateOf",
+   "stateChanging": false,
+   "path": "RegistryModel.sol",
+   "loopsReachable": 0,
+   "iterationBound": 0,
+   "oracleLoopsReachable": [],
+   "iterationBoundAtHardMaxOfTheSafeRange": 0
+  },
+  {
+   "contract": "RegistryModel",
+   "function": "sunset",
+   "stateChanging": true,
+   "path": "RegistryModel.sol",
+   "loopsReachable": 0,
+   "iterationBound": 0,
+   "oracleLoopsReachable": [],
+   "iterationBoundAtHardMaxOfTheSafeRange": 0
+  },
+  {
+   "contract": "RegistryModel",
+   "function": "versionOf",
+   "stateChanging": false,
+   "path": "RegistryModel.sol",
+   "loopsReachable": 0,
+   "iterationBound": 0,
+   "oracleLoopsReachable": [],
+   "iterationBoundAtHardMaxOfTheSafeRange": 0
+  },
+  {
+   "contract": "SignerSetModel",
+   "function": "accepts",
+   "stateChanging": false,
+   "path": "SignerSetModel.sol",
+   "loopsReachable": 0,
+   "iterationBound": 0,
+   "oracleLoopsReachable": [],
+   "iterationBoundAtHardMaxOfTheSafeRange": 0
+  },
+  {
+   "contract": "SignerSetModel",
+   "function": "activateSignerSet",
+   "stateChanging": true,
+   "path": "SignerSetModel.sol",
+   "loopsReachable": 1,
+   "iterationBound": 16,
+   "oracleLoopsReachable": [],
+   "iterationBoundAtHardMaxOfTheSafeRange": 64
+  },
+  {
+   "contract": "SignerSetModel",
+   "function": "proposeSignerSet",
+   "stateChanging": true,
+   "path": "SignerSetModel.sol",
+   "loopsReachable": 2,
+   "iterationBound": 32,
+   "oracleLoopsReachable": [],
+   "iterationBoundAtHardMaxOfTheSafeRange": 128
+  },
+  {
+   "contract": "SignerSetModel",
+   "function": "removeQuoteSigner",
+   "stateChanging": true,
+   "path": "SignerSetModel.sol",
+   "loopsReachable": 0,
+   "iterationBound": 0,
+   "oracleLoopsReachable": [],
+   "iterationBoundAtHardMaxOfTheSafeRange": 0
+  },
+  {
+   "contract": "SignerSetModel",
+   "function": "stopSignerSet",
+   "stateChanging": true,
+   "path": "SignerSetModel.sol",
+   "loopsReachable": 0,
+   "iterationBound": 0,
+   "oracleLoopsReachable": [],
+   "iterationBoundAtHardMaxOfTheSafeRange": 0
+  },
+  {
+   "contract": "SignerSetModel",
+   "function": "verify",
+   "stateChanging": false,
+   "path": "SignerSetModel.sol",
+   "loopsReachable": 0,
+   "iterationBound": 0,
+   "oracleLoopsReachable": [],
+   "iterationBoundAtHardMaxOfTheSafeRange": 0
+  }
+ ],
+ "problems": [],
+ "verdict": "PASS"
+}

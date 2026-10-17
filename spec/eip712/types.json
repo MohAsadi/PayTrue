@@ -1,0 +1,154 @@
+{
+ "schema": 1,
+ "specVersion": "0.5.0",
+ "status": "PROPOSED",
+ "statusNote": "Single source of truth for every FastPay EIP-712 type string. NOT FROZEN: freeze condition C-11 (EIP-712 types frozen) needs the Wallet Protocol Engineer and the Solidity Lead to approve this file (evidence/freeze_register.json). Strings marked QUOTED are copied from the cited document; DERIVED strings were assembled by the implementer from the field lists of the cited documents (they close FZ-22 and PR-10 as a proposal, not as a decision).",
+ "domainType": "EIP712Domain(string name,string version,uint256 chainId,address verifyingContract)",
+ "domains": {
+  "mandates": {"name": "FastPay Mandates", "version": "1", "verifyingContract": "MandateManager", "source": "12 section 5.3"},
+  "quote": {"name": "FastPay Quote", "version": "1", "verifyingContract": "PaymentRouter", "source": "11 section 4.1"}
+ },
+ "bounds": {
+  "MAX_TOKENS_PER_MANDATE": {"value": 3, "record": "PC-11", "appliesTo": "MandateTerms.tokens"},
+  "MAX_BATCH": {"value": 10, "record": "PC-04", "appliesTo": "AccountPinsUpdate.mandateIds"},
+  "MAX_WITNESS_BATCH": {"value": 2, "record": "10 section 8 question 2 (not a PC record: merchant and fee, Router v1.0)", "appliesTo": "the batch witness transfer of Pay Once"},
+  "MAX_EXPOSED_TOKENS_PER_ROUTER": {"value": 8, "record": "PC-18", "appliesTo": "the exposure index of one (customer, router): not a typed-data bound, shared by the manager and the successor validator"},
+  "MAX_SIGNERS_PER_SET": {"value": 16, "record": "PC-19", "appliesTo": "the members of one quote-signer set: not a typed-data bound, used by SignerSetRegistry"}
+ },
+ "structs": [
+  {
+   "name": "AccountPin", "domain": "mandates", "status": "QUOTED", "source": "17 section 5.1", "symbol": "ACCOUNT_PIN_TYPEHASH",
+   "fields": [["uint8", "accountMode"], ["bytes32", "accountCodeHash"], ["address", "delegate"], ["bytes32", "delegateCodeHash"],
+              ["bytes32", "implementationFamily"], ["uint32", "pinVersion"], ["uint8", "signatureMode"]]
+  },
+  {
+   "name": "TokenTerms", "domain": "mandates", "status": "DERIVED", "source": "11 section 3 (TokenCaps); 12 section 5.3.2 (per token cap order)", "symbol": "TOKEN_TERMS_TYPEHASH",
+   "fields": [["address", "token"], ["uint256", "perPaymentMax"], ["uint256", "dayMax"], ["uint256", "weekMax"], ["uint256", "thirtyDayMax"],
+              ["uint256", "periodMax"], ["uint256", "totalMax"]]
+  },
+  {
+   "name": "FiatTerms", "domain": "mandates", "status": "DERIVED", "source": "11 section 3 (FiatCaps); 12 section 5.3.2; ADR-020 (the price band is not in the mandate: it is the entry (token, currency, boundsVersion) of the bounds registry)", "symbol": "FIAT_TERMS_TYPEHASH",
+   "note": "`currency` is the invoice currency (ISO 4217 numeric) and `boundsVersion` the version of the price-bounds registry that the mandate pins; the band [minPriceE18, maxPriceE18] of each (token, currency, boundsVersion) is read from the registry, which never changes a published version (ADR-020).",
+   "fields": [["uint16", "currency"], ["uint64", "perPaymentMaxMinor"], ["uint64", "dayMaxMinor"], ["uint64", "weekMaxMinor"],
+              ["uint64", "thirtyDayMaxMinor"], ["uint64", "periodMaxMinor"], ["uint64", "totalMaxMinor"], ["uint32", "maxQuoteAge"],
+              ["uint32", "boundsVersion"]]
+  },
+  {
+   "name": "MandateTerms", "domain": "mandates", "status": "DERIVED", "source": "11 section 3 (mandate fields); 12 section 5.3.2 (MigrationSnapshot.terms)", "symbol": "MANDATE_TERMS_TYPEHASH",
+   "note": "hashStruct(MandateTerms) is `termsHash` of 12 section 5.3 (predicate A3: auth.newTermsHash = termsHash(N)). It holds everything the customer can compare; `accountPin`, the router and the identifiers are outside it.",
+   "boundedArrays": {"tokens": "MAX_TOKENS_PER_MANDATE"},
+   "fields": [["bytes32", "merchantId"], ["bytes32", "recipientPolicy"], ["bytes32", "subscriptionRef"], ["uint64", "periodSeconds"],
+              ["uint64", "anchorStartsAt"], ["uint64", "expiresAt"], ["TokenTerms[]", "tokens"], ["FiatTerms", "fiat"],
+              ["uint16", "maxChargesPerPeriod"], ["uint32", "minIntervalSeconds"], ["uint16", "maxFeeBps"], ["bytes32", "extensionsHash"]]
+  },
+  {
+   "name": "ActivationTerms", "domain": "mandates", "status": "DERIVED", "source": "17 section 5.3 names it; field list assembled from 11 section 3.1 and 12 section 5.3", "symbol": "ACTIVATION_TERMS_TYPEHASH",
+   "message": "activateBySig",
+   "note": "creationNonce is the replay protection: lineageId = keccak256(abi.encode(LINEAGE_TAG, chainId, mandateManager, customer, merchantId, subscriptionRef, creationNonce)) exists once.",
+   "fields": [["address", "customer"], ["address", "router"], ["bytes32", "routerCodeHash"], ["uint32", "routerVersion"],
+              ["uint256", "creationNonce"], ["MandateTerms", "terms"], ["AccountPin", "accountPin"], ["uint64", "deadline"]]
+  },
+  {
+   "name": "SuccessorAuthorization", "domain": "mandates", "status": "QUOTED", "source": "12 section 5.3", "symbol": "SUCCESSOR_AUTHORIZATION_TYPEHASH",
+   "message": "activateSuccessorBySig",
+   "fields": [["address", "customer"], ["bytes32", "lineageId"], ["bytes32", "predecessorId"], ["uint8", "kind"], ["bytes32", "newTermsHash"],
+              ["address", "newRouter"], ["bytes32", "newRouterCodeHash"], ["uint32", "newRouterVersion"], ["bytes32", "termsSnapshotHash"],
+              ["uint32", "widenedMask"], ["AccountPin", "accountPin"], ["uint64", "deadline"], ["uint256", "nonce"]]
+  },
+  {
+   "name": "AccountPinUpdate", "domain": "mandates", "status": "QUOTED", "source": "17 section 5.3", "symbol": "ACCOUNT_PIN_UPDATE_TYPEHASH",
+   "message": "updateAccountPinBySig",
+   "fields": [["address", "customer"], ["bytes32", "mandateId"], ["AccountPin", "newPin"], ["uint64", "deadline"], ["uint256", "nonce"]]
+  },
+  {
+   "name": "AccountPinsUpdate", "domain": "mandates", "status": "QUOTED", "source": "17 section 5.3", "symbol": "ACCOUNT_PINS_UPDATE_TYPEHASH",
+   "message": "updateAccountPinsBySig",
+   "boundedArrays": {"mandateIds": "MAX_BATCH"},
+   "fields": [["address", "customer"], ["bytes32[]", "mandateIds"], ["AccountPin", "newPin"], ["uint64", "deadline"], ["uint256", "nonce"]]
+  },
+  {
+   "name": "RevokeMandate", "domain": "mandates", "status": "DERIVED", "source": "06 section 3 and 17 section 5.4 name revokeBySig; fields are the minimum that identifies the act", "symbol": "REVOKE_MANDATE_TYPEHASH",
+   "message": "revokeBySig",
+   "note": "Revoking the active mandate of a lineage terminates the lineage (12 section 5.2, T8). Exits are never gated by the signature mode (17 section 5.4).",
+   "fields": [["address", "customer"], ["bytes32", "mandateId"], ["uint64", "deadline"], ["uint256", "nonce"]]
+  },
+  {
+   "name": "PauseMandate", "domain": "mandates", "status": "DERIVED", "source": "06 section 3 names pauseBySig", "symbol": "PAUSE_MANDATE_TYPEHASH",
+   "message": "pauseBySig",
+   "note": "Sets the customer pause bit only; the risk and delegation bits are not the customer's to set or clear. Exits are never gated by the signature mode.",
+   "fields": [["address", "customer"], ["bytes32", "mandateId"], ["uint64", "deadline"], ["uint256", "nonce"]]
+  },
+  {
+   "name": "ResumeMandate", "domain": "mandates", "status": "DERIVED", "source": "17 section 5.4 names resumeBySig", "symbol": "RESUME_MANDATE_TYPEHASH",
+   "message": "resumeBySig",
+   "note": "Clears the customer pause bit only; it grants nothing the mandate did not already have, and AUTH uses the pin already stored (17 section 5.4).",
+   "fields": [["address", "customer"], ["bytes32", "mandateId"], ["uint64", "deadline"], ["uint256", "nonce"]]
+  },
+  {
+   "name": "ReduceMandate", "domain": "mandates", "status": "DERIVED", "source": "06 section 3 (reduce, narrowing only) and 17 section 5.4 (reduceBySig)", "symbol": "REDUCE_MANDATE_TYPEHASH",
+   "message": "reduceBySig",
+   "note": "oldTermsHash must equal the stored termsHash (a stale reduction is refused); newTermsHash = hashStruct(MandateTerms) of the narrower terms, which the caller supplies as calldata and which must satisfy Contained(new, snapshot(old)) (12 section 5.3.2). Widening is not expressible: it is a REVISION.",
+   "fields": [["address", "customer"], ["bytes32", "mandateId"], ["bytes32", "oldTermsHash"], ["bytes32", "newTermsHash"], ["uint64", "deadline"], ["uint256", "nonce"]]
+  },
+  {
+   "name": "PriceQuote", "domain": "quote", "status": "QUOTED", "source": "11 section 4.1", "symbol": "PRICE_QUOTE_TYPEHASH",
+   "fields": [["bytes32", "paymentId"], ["address", "payer"], ["address", "token"], ["uint256", "amountIn"], ["uint16", "currency"],
+              ["uint256", "priceE18"], ["uint64", "issuedAt"], ["uint64", "validAfter"], ["uint64", "validUntil"], ["uint256", "nonce"],
+              ["uint32", "signerSetVersion"], ["uint64", "registryVersion"], ["uint32", "boundsVersion"], ["bytes32", "routeHash"],
+              ["bytes32", "priceSourceSetHash"]]
+  },
+  {
+   "name": "PayOnceIntent", "domain": "permit2", "status": "DERIVED", "source": "10 section 2.1", "symbol": "PAY_ONCE_INTENT_TYPEHASH",
+   "note": "Signed as the witness of a Permit2 SignatureTransfer: the domain is Permit2's own (name Permit2, no version), see `permit2Witness`.",
+   "fields": [["bytes32", "paymentId"], ["bytes32", "merchantId"], ["address", "recipient"], ["address", "feeRecipient"], ["address", "token"],
+              ["uint256", "grossAmountIn"], ["uint256", "merchantAmount"], ["uint256", "feeAmount"], ["address", "payer"],
+              ["uint64", "validUntil"], ["bytes32", "termsHash"], ["bytes32", "quoteHash"]]
+  }
+ ],
+ "permit2Witness": {
+  "status": "DERIVED",
+  "source": "Uniswap/permit2 cc306b601f172c51bc04334a109e98340456620b: src/libraries/PermitHash.sol (the stubs) and src/interfaces/ISignatureTransfer.sol",
+  "domain": {"type": "EIP712Domain(string name,uint256 chainId,address verifyingContract)", "name": "Permit2"},
+  "witness": "PayOnceIntent",
+  "witnessField": "witness",
+  "tokenPermissions": "TokenPermissions(address token,uint256 amount)",
+  "stubSingle": "PermitWitnessTransferFrom(TokenPermissions permitted,address spender,uint256 nonce,uint256 deadline,",
+  "stubBatch": "PermitBatchWitnessTransferFrom(TokenPermissions[] permitted,address spender,uint256 nonce,uint256 deadline,",
+  "rule": "witnessTypeString = '<WitnessType> witness)' + encodeType(<WitnessType>) with the referenced types appended in alphabetical order: the witness struct first, TokenPermissions after it (P < T). Permit2 hashes stub ++ witnessTypeString and does not check the string, so a wrong string only makes the signature fail; the router must hard-code it."
+ },
+ "tags": {
+  "LINEAGE_TAG": "fastpay.lineage.v1",
+  "MANDATE_TAG": "fastpay.mandate.v1",
+  "CYCLE_TAG": "fastpay.cycle.v1",
+  "ROUTE_DIRECT_TAG": "fastpay.route.direct.v1",
+  "SNAPSHOT_TAG": "fastpay.migration.snapshot.v1",
+  "PIN_EOA": "fastpay.pin.eoa.v1"
+ },
+ "snapshotEncoding": {
+  "status": "PROPOSED (revision of the encoding of the reference model: adds customer, anchorStartsAt and boundsVersion, removes the price pair, orders the caps as the typed data; findings F-06, F-07, F-09)",
+  "source": "tools/eip712_vectors.py snapshot_hash reads this list; FastPayTypes.snapshotHash and fastpay-types.generated.ts are generated from it; 12 section 5.3.2",
+  "rule": "termsSnapshotHash = keccak256(abi.encode(w1, ..., wN)) over the words below, in this order; every word is one 32-byte value. `arg:` words are the arguments of the function (the identifiers of the lineage and of the predecessor, the generation, the customer), `terms:` words are fields of MandateTerms (and `terms.fiat:` of its FiatTerms), SNAPSHOT_TAG is keccak256 of the tag string. `digest:tokens` is keccak256 of the 32-byte words of the token addresses in the order of the terms (strictly ascending, TermsShape); `digest:capTable` is keccak256 of the concatenation, token by token in the same order, of the token word and the six cap words perPaymentMax, dayMax, weekMax, thirtyDayMax, periodMax, totalMax (the order of TokenTerms).",
+  "words": [
+   ["SNAPSHOT_TAG", "tag"], ["lineageId", "arg:lineageId"], ["predecessorId", "arg:predecessorId"], ["generation", "arg:generation"], ["customer", "arg:customer"],
+   ["merchantId", "terms:merchantId"], ["recipientPolicy", "terms:recipientPolicy"], ["subscriptionRef", "terms:subscriptionRef"],
+   ["periodSeconds", "terms:periodSeconds"], ["anchorStartsAt", "terms:anchorStartsAt"], ["expiresAt", "terms:expiresAt"],
+   ["tokens", "digest:tokens"], ["capTable", "digest:capTable"], ["currency", "terms.fiat:currency"],
+   ["fiatPerPaymentMaxMinor", "terms.fiat:perPaymentMaxMinor"], ["fiatDayMaxMinor", "terms.fiat:dayMaxMinor"], ["fiatWeekMaxMinor", "terms.fiat:weekMaxMinor"],
+   ["fiatThirtyDayMaxMinor", "terms.fiat:thirtyDayMaxMinor"], ["fiatPeriodMaxMinor", "terms.fiat:periodMaxMinor"], ["fiatTotalMaxMinor", "terms.fiat:totalMaxMinor"],
+   ["maxQuoteAge", "terms.fiat:maxQuoteAge"], ["boundsVersion", "terms.fiat:boundsVersion"], ["maxChargesPerPeriod", "terms:maxChargesPerPeriod"],
+   ["minIntervalSeconds", "terms:minIntervalSeconds"], ["maxFeeBps", "terms:maxFeeBps"], ["extensionsHash", "terms:extensionsHash"]
+  ],
+  "tokenWords": ["token", "perPaymentMax", "dayMax", "weekMax", "thirtyDayMax", "periodMax", "totalMax"]
+ },
+ "versioning": {
+  "status": "PROPOSED (part of the freeze fingerprint: an approval of the types is an approval of this policy)",
+  "rules": [
+   "V1 The domain version string identifies the whole message set of a domain (`FastPay Mandates`, `FastPay Quote`). Any change to a type string, to a domain name, to the snapshot encoding or to a tag that a signature covers is a new domain version, deployed as new contracts; the previous contracts, and every signature made for them, are unchanged and cannot be replayed on the new domain because the domain separator differs.",
+   "V2 A deployed contract supports exactly one domain version and one type string per message: there is no version negotiation, no fallback and no upgrade of a type string in place.",
+   "V3 A type that is used inside a Permit2 witness is never edited: a changed `PayOnceIntent` is a new type with a new name (`PayOnceIntentV2`) under a new router address, so a signature for one can never validate on the other (09 section 5).",
+   "V4 The snapshot encoding is versioned by its tag (`fastpay.migration.snapshot.v1`); changing a word, its order or its source is `.v2` and is a domain version change under V1, because `termsSnapshotHash` is signed.",
+   "V5 The price-bounds registry is append-only: a published (token, currency, boundsVersion) entry is never changed or removed, so a mandate that pins a version always reads the band that its customer was shown. A new band is a new version.",
+   "V6 Every change under V1 to V5 goes through the Freeze Change Request of 14 section 7 and re-derives the freeze fingerprint; an approval names the fingerprint it approves."
+  ]
+ }
+}

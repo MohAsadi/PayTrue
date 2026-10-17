@@ -1,0 +1,29 @@
+# The actual FastPay contracts (not the reference model of spec/foundry).
+# The compiler settings below are FROZEN: they are recorded in frozen-settings.json and checked by spec/tools/contracts_report.py.
+# A runtime that does not fit is split into contracts, never tuned by changing these lines.
+[profile.default]
+src = "src"
+test = "test"
+out = "out"
+libs = ["lib"]
+solc_version = "0.8.24"
+evm_version = "cancun"
+via_ir = false
+optimizer = true
+optimizer_runs = 200
+bytecode_hash = "none"
+cbor_metadata = false
+ffi = false
+remappings = ["forge-std/=../spec/foundry/lib/forge-std/src/"]
+allow_paths = ["../spec/foundry/lib"]
+fs_permissions = [{ access = "read", path = "../spec/foundry/vectors" }, { access = "read", path = "../spec/eip712" }]
+# no code_size_limit override: the EIP-170 limit applies to every deployment of the tests too
+
+[fuzz]
+runs = 512
+seed = "0xfa57"
+
+[invariant]
+runs = 128
+depth = 96
+fail_on_revert = false

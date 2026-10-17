@@ -1,0 +1,2264 @@
+{
+ "schema": 1,
+ "tool": "tools/contracts_mutation.py",
+ "generatedAt": "2026-10-17T13:40:17Z",
+ "suite": "forge test of contracts/test except GasTest|InvariantsTest|FiatVectorsTest|Fork",
+ "baselineSeconds": 3.3,
+ "counts": {
+  "mutants": 249,
+  "killed": 243,
+  "survived": 6,
+  "invalid": 0
+ },
+ "equivalent": {
+  "MM14": "a mandate that is not its lineage's active mandate is always REVOKED: E1 revokes the predecessor in the same transaction that makes the successor active, so the status test of consume already refuses it",
+  "MM15": "retire requires block.timestamp >= expiresAt and consume refuses block.timestamp >= expiresAt, so a retired mandate is always expired and refused by the time test",
+  "SV03": "ctx.predecessorId is built by the manager from auth.predecessorId, so the comparison cannot differ; it stays as a guard for a context built another way",
+  "GW13": "the manager compares the hash of the supplied pin with the stored one and raises the same PinHashMismatch",
+  "AL02": "the ecrecover precompile itself returns no address for a v other than 27 and 28",
+  "AL04": "a call to an account without code returns no data, and the next line refuses return data shorter than one word"
+ },
+ "results": [
+  {
+   "id": "MM01",
+   "file": "src/MandateManager.sol",
+   "description": "_as: anyone may act as the customer",
+   "status": "KILLED",
+   "killedBy": "test_Activate_OnlyTheCustomerOrTheGateway()",
+   "seconds": 4.0,
+   "note": ""
+  },
+  {
+   "id": "MM02",
+   "file": "src/MandateManager.sol",
+   "description": "_own: the mandate need not belong to the customer named",
+   "status": "KILLED",
+   "killedBy": "test_RevokeBySig_Expired_AndForAnotherCustomersMandate()",
+   "seconds": 4.3,
+   "note": ""
+  },
+  {
+   "id": "MM03",
+   "file": "src/MandateManager.sol",
+   "description": "_liveInc: the list is extended at the wrong count",
+   "status": "KILLED",
+   "killedBy": "test_Activate_StoresHashesAndIndexesTheTokens()",
+   "seconds": 3.9,
+   "note": ""
+  },
+  {
+   "id": "MM04",
+   "file": "src/MandateManager.sol",
+   "description": "_liveDec: the token leaves the list at the wrong count",
+   "status": "KILLED",
+   "killedBy": "test_Exit_IsNeverBlockedByPauseOrByARouterThatWasDisabled()",
+   "seconds": 4.2,
+   "note": ""
+  },
+  {
+   "id": "MM05",
+   "file": "src/MandateManager.sol",
+   "description": "_liveDec: the moved token keeps its old position",
+   "status": "KILLED",
+   "killedBy": "test_Exposure_SwapAndPopKeepsThePositionMapExact()",
+   "seconds": 3.8,
+   "note": ""
+  },
+  {
+   "id": "MM06",
+   "file": "src/MandateManager.sol",
+   "description": "_liveInc: the bound of the index is off by one (a ninth token)",
+   "status": "KILLED",
+   "killedBy": "test_Alone_TheExposureBoundHoldsInTheIndexItself()",
+   "seconds": 43.0,
+   "note": ""
+  },
+  {
+   "id": "MM07",
+   "file": "src/MandateManager.sol",
+   "description": "activate: the exposure bound is off by one (the eighth token is refused)",
+   "status": "KILLED",
+   "killedBy": "test_Exposure_TheBoundOfEightDistinctTokensPerRouter()",
+   "seconds": 4.3,
+   "note": ""
+  },
+  {
+   "id": "MM08",
+   "file": "src/MandateManager.sol",
+   "description": "activate: the first pin version is not 1",
+   "status": "KILLED",
+   "killedBy": "test_Activate_PinMustBeWellFormedLiveAndVersionOne()",
+   "seconds": 4.3,
+   "note": ""
+  },
+  {
+   "id": "MM09",
+   "file": "src/MandateManager.sol",
+   "description": "activate: PIN_OK is not checked",
+   "status": "KILLED",
+   "killedBy": "test_Activate_PinMustBeWellFormedLiveAndVersionOne()",
+   "seconds": 4.3,
+   "note": ""
+  },
+  {
+   "id": "MM10",
+   "file": "src/MandateManager.sol",
+   "description": "activate: extensionsHash may be non-zero",
+   "status": "KILLED",
+   "killedBy": "test_Activate_ExtensionsMustBeZero()",
+   "seconds": 31.4,
+   "note": ""
+  },
+  {
+   "id": "MM11",
+   "file": "src/MandateManager.sol",
+   "description": "activate: the router need not be bindable",
+   "status": "KILLED",
+   "killedBy": "test_Activate_RouterMustBeBindable()",
+   "seconds": 44.9,
+   "note": ""
+  },
+  {
+   "id": "MM12",
+   "file": "src/MandateManager.sol",
+   "description": "activate: a lineage can be created twice",
+   "status": "KILLED",
+   "killedBy": "test_Activate_SameNonceTwice_LineageExists()",
+   "seconds": 3.4,
+   "note": ""
+  },
+  {
+   "id": "MM13",
+   "file": "src/MandateManager.sol",
+   "description": "consume: the pause bits do not stop a charge",
+   "status": "KILLED",
+   "killedBy": "test_Guard_Paused_ByEachBit()",
+   "seconds": 3.6,
+   "note": ""
+  },
+  {
+   "id": "MM14",
+   "file": "src/MandateManager.sol",
+   "description": "consume: a superseded mandate can charge",
+   "status": "SURVIVED",
+   "killedBy": null,
+   "seconds": 38.8,
+   "note": ""
+  },
+  {
+   "id": "MM15",
+   "file": "src/MandateManager.sol",
+   "description": "consume: a retired mandate can charge",
+   "status": "SURVIVED",
+   "killedBy": null,
+   "seconds": 10.5,
+   "note": ""
+  },
+  {
+   "id": "MM16",
+   "file": "src/MandateManager.sol",
+   "description": "consume: the expiry second is still valid",
+   "status": "KILLED",
+   "killedBy": "test_Reduce_AShorterExpiryEndsTheMandateEarly()",
+   "seconds": 12.2,
+   "note": ""
+  },
+  {
+   "id": "MM17",
+   "file": "src/MandateManager.sol",
+   "description": "consume: a charge before startsAt is allowed",
+   "status": "KILLED",
+   "killedBy": "test_Guard_Expired_AndNotYetStarted()",
+   "seconds": 3.8,
+   "note": ""
+  },
+  {
+   "id": "MM18",
+   "file": "src/MandateManager.sol",
+   "description": "consume: any caller may consume",
+   "status": "KILLED",
+   "killedBy": "test_Charge_AnotherRouterCannotChargeTheMandate()",
+   "seconds": 3.9,
+   "note": ""
+  },
+  {
+   "id": "MM19",
+   "file": "src/MandateManager.sol",
+   "description": "consume: a disabled router can charge",
+   "status": "KILLED",
+   "killedBy": "test_Router_RetiredOrDisabledRouterCannotCharge()",
+   "seconds": 4.7,
+   "note": ""
+  },
+  {
+   "id": "MM20",
+   "file": "src/MandateManager.sol",
+   "description": "consume: the pin is not bound by hash",
+   "status": "KILLED",
+   "killedBy": "test_PinUpdate_ThenChargeNeedsTheNewPin()",
+   "seconds": 4.6,
+   "note": ""
+  },
+  {
+   "id": "MM21",
+   "file": "src/MandateManager.sol",
+   "description": "consume: PIN_OK is not checked",
+   "status": "KILLED",
+   "killedBy": "test_Guard_PinIsBoundByHash_AndTheAccountMustStillMatch()",
+   "seconds": 4.4,
+   "note": ""
+  },
+  {
+   "id": "MM22",
+   "file": "src/MandateManager.sol",
+   "description": "consume: the terms are not bound by hash",
+   "status": "KILLED",
+   "killedBy": "test_Reduce_ThenChargeUsesTheNewTerms()",
+   "seconds": 13.2,
+   "note": ""
+  },
+  {
+   "id": "MM23",
+   "file": "src/MandateManager.sol",
+   "description": "consume: the ledger is not called (no counter moves)",
+   "status": "KILLED",
+   "killedBy": "test_Q19_FiatPerPaymentCap()",
+   "seconds": 4.1,
+   "note": ""
+  },
+  {
+   "id": "MM24",
+   "file": "src/MandateManager.sol",
+   "description": "revoke: a revoked mandate can be revoked again",
+   "status": "KILLED",
+   "killedBy": "test_Revoke_OnlyTheCustomer_AndOnlyOnce()",
+   "seconds": 4.2,
+   "note": ""
+  },
+  {
+   "id": "MM25",
+   "file": "src/MandateManager.sol",
+   "description": "revoke: a retired mandate is released twice",
+   "status": "KILLED",
+   "killedBy": "test_Revoke_OfARetiredMandateDoesNotDecrementTwice()",
+   "seconds": 3.7,
+   "note": ""
+  },
+  {
+   "id": "MM26",
+   "file": "src/MandateManager.sol",
+   "description": "revoke: the lineage is not terminated",
+   "status": "KILLED",
+   "killedBy": "test_AfterAMigration_TheCustomerCanRevokeTheSuccessor_AndTheLineageTerminates()",
+   "seconds": 3.7,
+   "note": ""
+  },
+  {
+   "id": "MM27",
+   "file": "src/MandateManager.sol",
+   "description": "retire: a live mandate can be retired",
+   "status": "KILLED",
+   "killedBy": "test_Retire_OnlyAfterExpiry_OnlyOnce()",
+   "seconds": 4.1,
+   "note": ""
+  },
+  {
+   "id": "MM28",
+   "file": "src/MandateManager.sol",
+   "description": "retire: the exposure index is not released",
+   "status": "KILLED",
+   "killedBy": "test_Retire_OnlyAfterExpiry_OnlyOnce()",
+   "seconds": 4.5,
+   "note": ""
+  },
+  {
+   "id": "MM29",
+   "file": "src/MandateManager.sol",
+   "description": "pause: a revoked mandate can be paused",
+   "status": "KILLED",
+   "killedBy": "test_Pause_ARevokedMandateCannotBePaused()",
+   "seconds": 4.3,
+   "note": ""
+  },
+  {
+   "id": "MM30",
+   "file": "src/MandateManager.sol",
+   "description": "resume: it clears every pause bit",
+   "status": "KILLED",
+   "killedBy": "test_Pause_BitsAreIndependent()",
+   "seconds": 5.1,
+   "note": ""
+  },
+  {
+   "id": "MM31",
+   "file": "src/MandateManager.sol",
+   "description": "setPauseBit: the authority may set the customer's bit",
+   "status": "KILLED",
+   "killedBy": "test_Pause_OnlyThePauseAuthorityTouchesRiskAndDelegationBits()",
+   "seconds": 4.9,
+   "note": ""
+  },
+  {
+   "id": "MM32",
+   "file": "src/MandateManager.sol",
+   "description": "reduce: a reduction may widen",
+   "status": "KILLED",
+   "killedBy": "test_ReduceBySig_AWideningThroughTheGatewayStillFailsAtTheManager()",
+   "seconds": 5.2,
+   "note": ""
+  },
+  {
+   "id": "MM33",
+   "file": "src/MandateManager.sol",
+   "description": "reduce: the old terms are not bound by hash",
+   "status": "KILLED",
+   "killedBy": "test_Reduce_NeedsTheStoredTerms_AndAFutureExpiry()",
+   "seconds": 41.4,
+   "note": ""
+  },
+  {
+   "id": "MM34",
+   "file": "src/MandateManager.sol",
+   "description": "reduce: a dropped token stays in the exposure index",
+   "status": "KILLED",
+   "killedBy": "test_Reduce_Narrowing_ReleasesTheDroppedToken()",
+   "seconds": 4.1,
+   "note": ""
+  },
+  {
+   "id": "MM35",
+   "file": "src/MandateManager.sol",
+   "description": "reduce: the expiry is not updated",
+   "status": "KILLED",
+   "killedBy": "test_Reduce_AShorterExpiryEndsTheMandateEarly()",
+   "seconds": 14.0,
+   "note": ""
+  },
+  {
+   "id": "MM36",
+   "file": "src/MandateManager.sol",
+   "description": "updateAccountPin: the version may skip",
+   "status": "KILLED",
+   "killedBy": "test_PinUpdate_VersionMustBeExactlyPlusOne()",
+   "seconds": 4.1,
+   "note": ""
+  },
+  {
+   "id": "MM37",
+   "file": "src/MandateManager.sol",
+   "description": "updateAccountPin: the lineage keeps the old pin version",
+   "status": "KILLED",
+   "killedBy": "test_PinUpdate_IncrementsTheVersion_AndChangesNothingElse()",
+   "seconds": 4.6,
+   "note": ""
+  },
+  {
+   "id": "MM38",
+   "file": "src/MandateManager.sol",
+   "description": "activateSuccessor: an expired predecessor may migrate",
+   "status": "KILLED",
+   "killedBy": "test_L1_AnExpiredPredecessorIsRefused_AndASupersededOneToo()",
+   "seconds": 4.0,
+   "note": ""
+  },
+  {
+   "id": "MM39",
+   "file": "src/MandateManager.sol",
+   "description": "activateSuccessor: the deadline second is expired",
+   "status": "KILLED",
+   "killedBy": "test_A2_DeadlineAndNonce()",
+   "seconds": 4.2,
+   "note": ""
+  },
+  {
+   "id": "MM40",
+   "file": "src/MandateManager.sol",
+   "description": "activateSuccessor: a spent nonce is accepted",
+   "status": "KILLED",
+   "killedBy": "test_Alone_TheCallerRule_TheDeadline_TheNonce_AndTheActivePredecessor()",
+   "seconds": 25.7,
+   "note": ""
+  },
+  {
+   "id": "MM41",
+   "file": "src/MandateManager.sol",
+   "description": "activateSuccessor: the predecessor's terms are not bound",
+   "status": "KILLED",
+   "killedBy": "test_Alone_TheManagerBindsTheStoredTermsAndPin()",
+   "seconds": 11.6,
+   "note": ""
+  },
+  {
+   "id": "MM42",
+   "file": "src/MandateManager.sol",
+   "description": "activateSuccessor: the predecessor's pin is not bound",
+   "status": "KILLED",
+   "killedBy": "test_Alone_TheManagerBindsTheStoredTermsAndPin()",
+   "seconds": 43.5,
+   "note": ""
+  },
+  {
+   "id": "MM43",
+   "file": "src/MandateManager.sol",
+   "description": "activateSuccessor: the predicates are not run",
+   "status": "KILLED",
+   "killedBy": "test_A3_EveryBoundFieldMustMatch()",
+   "seconds": 3.5,
+   "note": ""
+  },
+  {
+   "id": "MM44",
+   "file": "src/MandateManager.sol",
+   "description": "activateSuccessor: the nonce is not spent",
+   "status": "KILLED",
+   "killedBy": "test_Normal_Migration_Effects()",
+   "seconds": 4.7,
+   "note": ""
+  },
+  {
+   "id": "MM45",
+   "file": "src/MandateManager.sol",
+   "description": "activateSuccessor: the predecessor's exposure is not released",
+   "status": "KILLED",
+   "killedBy": "test_Plan_OneStepMigratesEveryLineage()",
+   "seconds": 4.6,
+   "note": ""
+  },
+  {
+   "id": "MM46",
+   "file": "src/MandateManager.sol",
+   "description": "activateSuccessor: the predecessor stays ACTIVE",
+   "status": "KILLED",
+   "killedBy": "test_Abort_OnlyTheCustomer_AndItStopsTheSteps()",
+   "seconds": 4.8,
+   "note": ""
+  },
+  {
+   "id": "MM47",
+   "file": "src/MandateManager.sol",
+   "description": "activateSuccessor: the pause bits are not inherited",
+   "status": "KILLED",
+   "killedBy": "test_Migration_PauseBitsAreInherited()",
+   "seconds": 5.0,
+   "note": ""
+  },
+  {
+   "id": "MM48",
+   "file": "src/MandateManager.sol",
+   "description": "activateSuccessor: the new exposure is not counted",
+   "status": "KILLED",
+   "killedBy": "test_A1_ThroughTheGateway_WithTheStoredPinGoverning()",
+   "seconds": 4.9,
+   "note": ""
+  },
+  {
+   "id": "MM49",
+   "file": "src/MandateManager.sol",
+   "description": "activateSuccessor: the lineage keeps the old active mandate",
+   "status": "KILLED",
+   "killedBy": "test_Migration_SecondGenerationUsesTheGrandparentInTheSnapshot()",
+   "seconds": 5.0,
+   "note": ""
+  },
+  {
+   "id": "MM50",
+   "file": "src/MandateManager.sol",
+   "description": "activateSuccessor: the window anchor may change",
+   "status": "KILLED",
+   "killedBy": "test_Alone_TheLineageConstantsCannotChange()",
+   "seconds": 23.0,
+   "note": ""
+  },
+  {
+   "id": "MM51",
+   "file": "src/MandateManager.sol",
+   "description": "activateSuccessor: a revision is recorded as a migration",
+   "status": "KILLED",
+   "killedBy": "test_C2_ARevisionMayWidenWithTheExactMask_AndNothingElse()",
+   "seconds": 5.6,
+   "note": ""
+  },
+  {
+   "id": "MM52",
+   "file": "src/MandateManager.sol",
+   "description": "spendNonce: anyone may spend a nonce",
+   "status": "KILLED",
+   "killedBy": "test_Spend_NonceIsGatewayOnly()",
+   "seconds": 71.2,
+   "note": ""
+  },
+  {
+   "id": "MM53",
+   "file": "src/MandateManager.sol",
+   "description": "spendNonce: a spent nonce is accepted",
+   "status": "KILLED",
+   "killedBy": "test_ReduceBySig()",
+   "seconds": 15.1,
+   "note": ""
+  },
+  {
+   "id": "MM54",
+   "file": "src/MandateManager.sol",
+   "description": "activateSuccessor: anyone may call it",
+   "status": "KILLED",
+   "killedBy": "test_A1_AStrangerCannotActivateWithoutTheCustomersSignature()",
+   "seconds": 7.1,
+   "note": ""
+  },
+  {
+   "id": "MM55",
+   "file": "src/MandateManager.sol",
+   "description": "activateSuccessor: the queue may not call it",
+   "status": "KILLED",
+   "killedBy": "test_Abort_OnlyTheCustomer_AndItStopsTheSteps()",
+   "seconds": 6.1,
+   "note": ""
+  },
+  {
+   "id": "MM56",
+   "file": "src/MandateManager.sol",
+   "description": "activateSuccessor: the queue may migrate another customer's lineage",
+   "status": "KILLED",
+   "killedBy": "test_A1_AStrangerCannotActivateWithoutTheCustomersSignature()",
+   "seconds": 5.2,
+   "note": ""
+  },
+  {
+   "id": "MM57",
+   "file": "src/MandateManager.sol",
+   "description": "activateSuccessor: the merchant may change (the manager's own lineage-constant check)",
+   "status": "KILLED",
+   "killedBy": "test_Alone_TheLineageConstantsCannotChange()",
+   "seconds": 27.3,
+   "note": ""
+  },
+  {
+   "id": "SV01",
+   "file": "src/SuccessorValidator.sol",
+   "description": "A3: the customer is not compared",
+   "status": "KILLED",
+   "killedBy": "test_A3_EveryBoundFieldMustMatch()",
+   "seconds": 5.5,
+   "note": ""
+  },
+  {
+   "id": "SV02",
+   "file": "src/SuccessorValidator.sol",
+   "description": "A3: the lineage is not compared",
+   "status": "KILLED",
+   "killedBy": "test_A3_EveryBoundFieldMustMatch()",
+   "seconds": 3.8,
+   "note": ""
+  },
+  {
+   "id": "SV03",
+   "file": "src/SuccessorValidator.sol",
+   "description": "A3: the predecessor is not compared",
+   "status": "SURVIVED",
+   "killedBy": null,
+   "seconds": 48.5,
+   "note": ""
+  },
+  {
+   "id": "SV04",
+   "file": "src/SuccessorValidator.sol",
+   "description": "A3: the new terms are not compared",
+   "status": "KILLED",
+   "killedBy": "test_A3_EveryBoundFieldMustMatch()",
+   "seconds": 3.6,
+   "note": ""
+  },
+  {
+   "id": "SV05",
+   "file": "src/SuccessorValidator.sol",
+   "description": "A3: the router code hash is not compared",
+   "status": "KILLED",
+   "killedBy": "test_A3_EveryBoundFieldMustMatch()",
+   "seconds": 3.3,
+   "note": ""
+  },
+  {
+   "id": "SV06",
+   "file": "src/SuccessorValidator.sol",
+   "description": "A3: the router version is not compared",
+   "status": "KILLED",
+   "killedBy": "test_A3_EveryBoundFieldMustMatch()",
+   "seconds": 3.1,
+   "note": ""
+  },
+  {
+   "id": "SV07",
+   "file": "src/SuccessorValidator.sol",
+   "description": "A3: the pin is not compared",
+   "status": "KILLED",
+   "killedBy": "test_A3_EveryBoundFieldMustMatch()",
+   "seconds": 4.0,
+   "note": ""
+  },
+  {
+   "id": "SV08",
+   "file": "src/SuccessorValidator.sol",
+   "description": "A3: the snapshot is not compared",
+   "status": "KILLED",
+   "killedBy": "test_A3_EveryBoundFieldMustMatch()",
+   "seconds": 3.1,
+   "note": ""
+  },
+  {
+   "id": "SV09",
+   "file": "src/SuccessorValidator.sol",
+   "description": "A3: the snapshot names the wrong predecessor",
+   "status": "KILLED",
+   "killedBy": "test_A1_AStoredDirectOnlyPinAcceptsNoRelayedSuccessor()",
+   "seconds": 3.2,
+   "note": ""
+  },
+  {
+   "id": "SV10",
+   "file": "src/SuccessorValidator.sol",
+   "description": "A3: the snapshot names the wrong generation",
+   "status": "KILLED",
+   "killedBy": "test_A1_AStoredDirectOnlyPinAcceptsNoRelayedSuccessor()",
+   "seconds": 2.9,
+   "note": ""
+  },
+  {
+   "id": "SV11",
+   "file": "src/SuccessorValidator.sol",
+   "description": "R1: the new router need not be bindable",
+   "status": "KILLED",
+   "killedBy": "test_R1_TheNewRouterMustBeBindable()",
+   "seconds": 3.3,
+   "note": ""
+  },
+  {
+   "id": "SV12",
+   "file": "src/SuccessorValidator.sol",
+   "description": "R2: a migration to the same router",
+   "status": "KILLED",
+   "killedBy": "test_R2_KindAgainstTheRouters()",
+   "seconds": 3.7,
+   "note": ""
+  },
+  {
+   "id": "SV13",
+   "file": "src/SuccessorValidator.sol",
+   "description": "R2: a revision to another router",
+   "status": "KILLED",
+   "killedBy": "test_R2_KindAgainstTheRouters()",
+   "seconds": 3.6,
+   "note": ""
+  },
+  {
+   "id": "SV14",
+   "file": "src/SuccessorValidator.sol",
+   "description": "R3: the mode is not enforced",
+   "status": "KILLED",
+   "killedBy": "test_R3_TheModeIsDerivedFromTheRegistry_NotChosenByTheCaller()",
+   "seconds": 3.4,
+   "note": ""
+  },
+  {
+   "id": "SV15",
+   "file": "src/SuccessorValidator.sol",
+   "description": "R2: an unknown kind",
+   "status": "KILLED",
+   "killedBy": "test_R2_KindAgainstTheRouters()",
+   "seconds": 3.8,
+   "note": ""
+  },
+  {
+   "id": "SV16",
+   "file": "src/SuccessorValidator.sol",
+   "description": "X1: extensions allowed",
+   "status": "KILLED",
+   "killedBy": "test_X1_ExtensionsMustBeZeroOnBothSides()",
+   "seconds": 3.5,
+   "note": ""
+  },
+  {
+   "id": "SV17",
+   "file": "src/SuccessorValidator.sol",
+   "description": "K1: the new pin need not be well-formed",
+   "status": "KILLED",
+   "killedBy": "test_K1_NewPinWellFormedLiveAndWithTheRightVersion()",
+   "seconds": 3.5,
+   "note": ""
+  },
+  {
+   "id": "SV18",
+   "file": "src/SuccessorValidator.sol",
+   "description": "K1: the new pin need not hold on the account",
+   "status": "KILLED",
+   "killedBy": "test_K1_ThePinMustHoldOnTheLiveAccount()",
+   "seconds": 4.0,
+   "note": ""
+  },
+  {
+   "id": "SV19",
+   "file": "src/SuccessorValidator.sol",
+   "description": "K1: the pin version may skip",
+   "status": "KILLED",
+   "killedBy": "test_K1_NewPinWellFormedLiveAndWithTheRightVersion()",
+   "seconds": 3.1,
+   "note": ""
+  },
+  {
+   "id": "SV20",
+   "file": "src/SuccessorValidator.sol",
+   "description": "G1: the allowance must exceed the cap (not equal it)",
+   "status": "KILLED",
+   "killedBy": "test_G1_TheNewRouterNeedsAnAllowanceOfAtLeastThePerPaymentCap()",
+   "seconds": 3.0,
+   "note": ""
+  },
+  {
+   "id": "SV21",
+   "file": "src/SuccessorValidator.sol",
+   "description": "G1: the expiry second is expired",
+   "status": "KILLED",
+   "killedBy": "test_G1_AnAllowanceThatExpiresThisSecondStillCounts()",
+   "seconds": 33.4,
+   "note": ""
+  },
+  {
+   "id": "SV22",
+   "file": "src/SuccessorValidator.sol",
+   "description": "G1: the amount is not checked",
+   "status": "KILLED",
+   "killedBy": "test_G1_TheNewRouterNeedsAnAllowanceOfAtLeastThePerPaymentCap()",
+   "seconds": 3.3,
+   "note": ""
+  },
+  {
+   "id": "SV23",
+   "file": "src/SuccessorValidator.sol",
+   "description": "G1: the expiry is not checked",
+   "status": "KILLED",
+   "killedBy": "test_G1_AnExpiredAllowanceDoesNotCount()",
+   "seconds": 3.4,
+   "note": ""
+  },
+  {
+   "id": "SV24",
+   "file": "src/SuccessorValidator.sol",
+   "description": "X2: the bound is off by one",
+   "status": "KILLED",
+   "killedBy": "test_X2_ExactlyEightExposedTokensAreAllowed()",
+   "seconds": 39.1,
+   "note": ""
+  },
+  {
+   "id": "SV25",
+   "file": "src/SuccessorValidator.sol",
+   "description": "C1: containment is not checked",
+   "status": "KILLED",
+   "killedBy": "test_C1_EachClauseOfContainmentIsEnforced()",
+   "seconds": 3.7,
+   "note": ""
+  },
+  {
+   "id": "SV26",
+   "file": "src/SuccessorValidator.sol",
+   "description": "C1: a migration may declare a widening",
+   "status": "KILLED",
+   "killedBy": "test_C1_ANormalMigrationCannotDeclareAWidening()",
+   "seconds": 3.4,
+   "note": ""
+  },
+  {
+   "id": "SV27",
+   "file": "src/SuccessorValidator.sol",
+   "description": "C2: the lineage constants may change",
+   "status": "KILLED",
+   "killedBy": "test_C2_ARevisionCannotChangeTheLineageConstants()",
+   "seconds": 3.4,
+   "note": ""
+  },
+  {
+   "id": "SV28",
+   "file": "src/SuccessorValidator.sol",
+   "description": "C2: the widened mask is not checked",
+   "status": "KILLED",
+   "killedBy": "test_C2_ARevisionMayWidenWithTheExactMask_AndNothingElse()",
+   "seconds": 2.9,
+   "note": ""
+  },
+  {
+   "id": "SV29",
+   "file": "src/SuccessorValidator.sol",
+   "description": "O1N: the sibling count is wrong (the lockdown is never required)",
+   "status": "KILLED",
+   "killedBy": "test_O1N_NoSibling_TheOldAllowanceMustBeUnusable()",
+   "seconds": 2.7,
+   "note": ""
+  },
+  {
+   "id": "SV30",
+   "file": "src/SuccessorValidator.sol",
+   "description": "O1N: usable at the expiry second is treated as unusable",
+   "status": "KILLED",
+   "killedBy": "test_O1N_BoundaryAtTheExpirySecond()",
+   "seconds": 47.2,
+   "note": ""
+  },
+  {
+   "id": "SV31",
+   "file": "src/SuccessorValidator.sol",
+   "description": "O1N: the unlimited allowance is accepted (never true)",
+   "status": "KILLED",
+   "killedBy": "test_O1N_WithASibling_AnUnlimitedOldAllowanceIsRefused()",
+   "seconds": 3.1,
+   "note": ""
+  },
+  {
+   "id": "SV32",
+   "file": "src/SuccessorValidator.sol",
+   "description": "O1E: usable at the expiry second is treated as unusable",
+   "status": "KILLED",
+   "killedBy": "test_O1E_BoundaryAtTheExpirySecond()",
+   "seconds": 59.4,
+   "note": ""
+  },
+  {
+   "id": "SV33",
+   "file": "src/SuccessorValidator.sol",
+   "description": "O1E: no exposed token is checked",
+   "status": "KILLED",
+   "killedBy": "test_O1E_ARegrantedOldAllowanceBlocksTheNextEmergencyActivation()",
+   "seconds": 3.2,
+   "note": ""
+  },
+  {
+   "id": "SV34",
+   "file": "src/SuccessorValidator.sol",
+   "description": "O1E: not run at all",
+   "status": "KILLED",
+   "killedBy": "test_O1E_ARegrantedOldAllowanceBlocksTheNextEmergencyActivation()",
+   "seconds": 3.6,
+   "note": ""
+  },
+  {
+   "id": "SV35",
+   "file": "src/SuccessorValidator.sol",
+   "description": "O1N: not run at all",
+   "status": "KILLED",
+   "killedBy": "test_O1N_NoSibling_TheOldAllowanceMustBeUnusable()",
+   "seconds": 2.9,
+   "note": ""
+  },
+  {
+   "id": "SV36",
+   "file": "src/SuccessorValidator.sol",
+   "description": "O1E: only the predecessor's own tokens are checked (the model's M_O1E_PRED_ONLY)",
+   "status": "KILLED",
+   "killedBy": "test_O1E_EveryExposedTokenMustBeUnusable_NotOnlyThePredecessorsTokens()",
+   "seconds": 2.7,
+   "note": ""
+  },
+  {
+   "id": "UL01",
+   "file": "src/UsageLedger.sol",
+   "description": "charge: anyone may write the counters",
+   "status": "KILLED",
+   "killedBy": "test_Ledger_OnlyTheManagerWritesTheCounters()",
+   "seconds": 12.1,
+   "note": ""
+  },
+  {
+   "id": "UL02",
+   "file": "src/UsageLedger.sol",
+   "description": "G9: the current cycle is refused",
+   "status": "KILLED",
+   "killedBy": "test_NonInterference_AQuoteForAMandateWithoutFiatCapsIsIgnored()",
+   "seconds": 3.3,
+   "note": ""
+  },
+  {
+   "id": "UL03",
+   "file": "src/UsageLedger.sol",
+   "description": "G9: a settled cycle can settle again",
+   "status": "KILLED",
+   "killedBy": "test_Charge_SameCycleTwice_PaymentAlreadySettled()",
+   "seconds": 3.0,
+   "note": ""
+  },
+  {
+   "id": "UL04",
+   "file": "src/UsageLedger.sol",
+   "description": "cadence: one charge too many per period",
+   "status": "KILLED",
+   "killedBy": "test_Charge_ChargesPerPeriod()",
+   "seconds": 3.5,
+   "note": ""
+  },
+  {
+   "id": "UL05",
+   "file": "src/UsageLedger.sol",
+   "description": "cadence: the interval boundary is off by one",
+   "status": "KILLED",
+   "killedBy": "test_Caps_Day_ResetsLazilyAtTheNextDay()",
+   "seconds": 3.4,
+   "note": ""
+  },
+  {
+   "id": "UL06",
+   "file": "src/UsageLedger.sol",
+   "description": "fee: the cap itself is refused",
+   "status": "KILLED",
+   "killedBy": "test_Fee_AboveTheMandateCap_FeeTooHigh()",
+   "seconds": 3.4,
+   "note": ""
+  },
+  {
+   "id": "UL07",
+   "file": "src/UsageLedger.sol",
+   "description": "windows: a counter is never reset",
+   "status": "KILLED",
+   "killedBy": "test_Caps_AWindowResetsWhenItsIndexMoves()",
+   "seconds": 3.7,
+   "note": ""
+  },
+  {
+   "id": "UL08",
+   "file": "src/UsageLedger.sol",
+   "description": "windows: no window cap",
+   "status": "KILLED",
+   "killedBy": "test_Caps_Day_ResetsLazilyAtTheNextDay()",
+   "seconds": 3.6,
+   "note": ""
+  },
+  {
+   "id": "UL09",
+   "file": "src/UsageLedger.sol",
+   "description": "caps: no per-payment cap",
+   "status": "KILLED",
+   "killedBy": "test_NonInterference_AValidQuoteCannotOverrideATokenCap()",
+   "seconds": 3.5,
+   "note": ""
+  },
+  {
+   "id": "UL10",
+   "file": "src/UsageLedger.sol",
+   "description": "caps: no total cap",
+   "status": "KILLED",
+   "killedBy": "test_Caps_Total()",
+   "seconds": 3.4,
+   "note": ""
+  },
+  {
+   "id": "UL11",
+   "file": "src/UsageLedger.sol",
+   "description": "windows: the day window is a week long",
+   "status": "KILLED",
+   "killedBy": "test_Caps_Day_ResetsLazilyAtTheNextDay()",
+   "seconds": 3.2,
+   "note": ""
+  },
+  {
+   "id": "UL12",
+   "file": "src/UsageLedger.sol",
+   "description": "windows: the thirty-day window is a day long",
+   "status": "KILLED",
+   "killedBy": "test_Caps_TheThirtyDayWindowSpansManyDays()",
+   "seconds": 13.7,
+   "note": ""
+  },
+  {
+   "id": "UL13",
+   "file": "src/UsageLedger.sol",
+   "description": "windows: the billing-period window is a week long",
+   "status": "KILLED",
+   "killedBy": "test_Caps_TheBillingPeriodWindowResetsPerPeriod_NotPerWeek()",
+   "seconds": 15.5,
+   "note": ""
+  },
+  {
+   "id": "UL14",
+   "file": "src/UsageLedger.sol",
+   "description": "fiat: a charge without a quote under a fiat cap",
+   "status": "KILLED",
+   "killedBy": "test_Rogue_AFiatCappedMandateNeedsAFiatValue()",
+   "seconds": 11.8,
+   "note": ""
+  },
+  {
+   "id": "UL15",
+   "file": "src/UsageLedger.sol",
+   "description": "G9: the cycle is not recorded",
+   "status": "KILLED",
+   "killedBy": "test_Charge_SameCycleTwice_PaymentAlreadySettled()",
+   "seconds": 3.2,
+   "note": ""
+  },
+  {
+   "id": "UL16",
+   "file": "src/UsageLedger.sol",
+   "description": "fiat: the fiat counters do not move",
+   "status": "KILLED",
+   "killedBy": "test_Charge_FiatValueIsRoundedUp()",
+   "seconds": 3.7,
+   "note": ""
+  },
+  {
+   "id": "UL17",
+   "file": "src/UsageLedger.sol",
+   "description": "caps: the total counter does not accumulate",
+   "status": "KILLED",
+   "killedBy": "test_Caps_AWindowResetsWhenItsIndexMoves()",
+   "seconds": 3.5,
+   "note": ""
+  },
+  {
+   "id": "UL18",
+   "file": "src/UsageLedger.sol",
+   "description": "G9: no cycle or cadence check",
+   "status": "KILLED",
+   "killedBy": "test_Charge_ChargesPerPeriod()",
+   "seconds": 3.2,
+   "note": ""
+  },
+  {
+   "id": "PR01",
+   "file": "src/PaymentRouter.sol",
+   "description": "anyone may submit",
+   "status": "KILLED",
+   "killedBy": "test_PayOnce_OnlyAnExecutorSubmits()",
+   "seconds": 20.6,
+   "note": ""
+  },
+  {
+   "id": "PR02",
+   "file": "src/PaymentRouter.sol",
+   "description": "a blocked token reports another error",
+   "status": "KILLED",
+   "killedBy": "test_PayOnce_MerchantAndTokenStatus()",
+   "seconds": 20.4,
+   "note": ""
+  },
+  {
+   "id": "PR03",
+   "file": "src/PaymentRouter.sol",
+   "description": "the fee at the controller's rate is refused",
+   "status": "KILLED",
+   "killedBy": "test_Minout_AFeeOnTransferTokenIsRefusedByPayOnce()",
+   "seconds": 28.2,
+   "note": ""
+  },
+  {
+   "id": "PR04",
+   "file": "src/PaymentRouter.sol",
+   "description": "a missing quote reports another error",
+   "status": "KILLED",
+   "killedBy": "test_Q0_NoQuote_FiatQuoteRequired()",
+   "seconds": 34.8,
+   "note": ""
+  },
+  {
+   "id": "PR05",
+   "file": "src/PaymentRouter.sol",
+   "description": "Q2: an unrecoverable signature",
+   "status": "KILLED",
+   "killedBy": "test_Q2_MalformedSignatures()",
+   "seconds": 32.7,
+   "note": ""
+  },
+  {
+   "id": "PR06",
+   "file": "src/PaymentRouter.sol",
+   "description": "Q1 and Q13: the signer is not checked",
+   "status": "KILLED",
+   "killedBy": "test_Q1_AKeyOutsideTheSet_Unauthorized()",
+   "seconds": 19.3,
+   "note": ""
+  },
+  {
+   "id": "PR07",
+   "file": "src/PaymentRouter.sol",
+   "description": "Q4: the payment id is not bound",
+   "status": "KILLED",
+   "killedBy": "test_Q4_to_Q8_EveryBoundFieldMustMatch()",
+   "seconds": 22.5,
+   "note": ""
+  },
+  {
+   "id": "PR08",
+   "file": "src/PaymentRouter.sol",
+   "description": "Q5: the payer is not bound",
+   "status": "KILLED",
+   "killedBy": "test_Q4_to_Q8_EveryBoundFieldMustMatch()",
+   "seconds": 21.1,
+   "note": ""
+  },
+  {
+   "id": "PR09",
+   "file": "src/PaymentRouter.sol",
+   "description": "Q6: the token is not bound",
+   "status": "KILLED",
+   "killedBy": "test_Q4_to_Q8_EveryBoundFieldMustMatch()",
+   "seconds": 21.0,
+   "note": ""
+  },
+  {
+   "id": "PR10",
+   "file": "src/PaymentRouter.sol",
+   "description": "Q7: the amount is not bound",
+   "status": "KILLED",
+   "killedBy": "test_Q4_to_Q8_EveryBoundFieldMustMatch()",
+   "seconds": 24.0,
+   "note": ""
+  },
+  {
+   "id": "PR11",
+   "file": "src/PaymentRouter.sol",
+   "description": "Q8: the currency is not bound",
+   "status": "KILLED",
+   "killedBy": "test_Q4_to_Q8_EveryBoundFieldMustMatch()",
+   "seconds": 24.4,
+   "note": ""
+  },
+  {
+   "id": "PR12",
+   "file": "src/PaymentRouter.sol",
+   "description": "Q9: the times need not be ordered",
+   "status": "KILLED",
+   "killedBy": "test_Q9_TimesMustBeOrdered()",
+   "seconds": 24.7,
+   "note": ""
+  },
+  {
+   "id": "PR13",
+   "file": "src/PaymentRouter.sol",
+   "description": "Q10: validAfter == now is not yet valid",
+   "status": "KILLED",
+   "killedBy": "test_Charge_ChargesPerPeriod()",
+   "seconds": 29.7,
+   "note": ""
+  },
+  {
+   "id": "PR14",
+   "file": "src/PaymentRouter.sol",
+   "description": "Q11: validUntil == now is expired",
+   "status": "KILLED",
+   "killedBy": "test_Q11_Expired_AndTheBoundary()",
+   "seconds": 20.1,
+   "note": ""
+  },
+  {
+   "id": "PR15",
+   "file": "src/PaymentRouter.sol",
+   "description": "Q12: the maximum life itself is refused",
+   "status": "KILLED",
+   "killedBy": "test_Q17_PriceSourceSet()",
+   "seconds": 31.2,
+   "note": ""
+  },
+  {
+   "id": "PR16",
+   "file": "src/PaymentRouter.sol",
+   "description": "Q12: the registry's ceiling is ignored",
+   "status": "KILLED",
+   "killedBy": "test_Q12_TtlIsBoundedByTheMandateAndByTheRegistry()",
+   "seconds": 22.5,
+   "note": ""
+  },
+  {
+   "id": "PR17",
+   "file": "src/PaymentRouter.sol",
+   "description": "Q14: the token version is not checked",
+   "status": "KILLED",
+   "killedBy": "test_Q14_TokenVersionMustBeCurrent()",
+   "seconds": 23.9,
+   "note": ""
+  },
+  {
+   "id": "PR18",
+   "file": "src/PaymentRouter.sol",
+   "description": "Q15: the bounds version is not checked",
+   "status": "KILLED",
+   "killedBy": "test_Q15_BoundsVersionMustBeCurrent()",
+   "seconds": 20.7,
+   "note": ""
+  },
+  {
+   "id": "PR19",
+   "file": "src/PaymentRouter.sol",
+   "description": "Q16: the route is not checked",
+   "status": "KILLED",
+   "killedBy": "test_Q16_RouteHash()",
+   "seconds": 19.6,
+   "note": ""
+  },
+  {
+   "id": "PR20",
+   "file": "src/PaymentRouter.sol",
+   "description": "Q17: the price source set is not checked",
+   "status": "KILLED",
+   "killedBy": "test_Q17_PriceSourceSet()",
+   "seconds": 50.6,
+   "note": ""
+  },
+  {
+   "id": "PR21",
+   "file": "src/PaymentRouter.sol",
+   "description": "Q18: a pinned version that was never published is accepted",
+   "status": "KILLED",
+   "killedBy": "test_Q18_AnUnpublishedPinnedVersionCanNeverBeCharged()",
+   "seconds": 30.6,
+   "note": ""
+  },
+  {
+   "id": "PR22",
+   "file": "src/PaymentRouter.sol",
+   "description": "Q18: the pinned lower bound is ignored (a wider band widens the mandate)",
+   "status": "KILLED",
+   "killedBy": "test_Q18_AWiderCurrentBandNeverWidensAnExistingMandate()",
+   "seconds": 21.0,
+   "note": ""
+  },
+  {
+   "id": "PR23",
+   "file": "src/PaymentRouter.sol",
+   "description": "Q18: the pinned upper bound is ignored",
+   "status": "KILLED",
+   "killedBy": "test_Q18_AWiderCurrentUpperBandNeverWidensAnExistingMandate()",
+   "seconds": 23.0,
+   "note": ""
+  },
+  {
+   "id": "PR24",
+   "file": "src/PaymentRouter.sol",
+   "description": "Q18: the lower edge of the band is outside",
+   "status": "KILLED",
+   "killedBy": "test_Q18_ATighterCurrentBandNarrowsAnExistingMandate()",
+   "seconds": 19.4,
+   "note": ""
+  },
+  {
+   "id": "PR25",
+   "file": "src/PaymentRouter.sol",
+   "description": "Q18: the upper edge of the band is outside",
+   "status": "KILLED",
+   "killedBy": "test_Q19_FiatPerPaymentCap()",
+   "seconds": 18.7,
+   "note": ""
+  },
+  {
+   "id": "PR26",
+   "file": "src/PaymentRouter.sol",
+   "description": "the fiat value is rounded down",
+   "status": "KILLED",
+   "killedBy": "test_Charge_FiatValueIsRoundedUp()",
+   "seconds": 28.7,
+   "note": ""
+  },
+  {
+   "id": "PR27",
+   "file": "src/PaymentRouter.sol",
+   "description": "the fiat value is truncated to uint64",
+   "status": "KILLED",
+   "killedBy": "test_Q19_FiatValueTooLargeForUint64()",
+   "seconds": 43.8,
+   "note": ""
+  },
+  {
+   "id": "PR28",
+   "file": "src/PaymentRouter.sol",
+   "description": "charge: the manager is not asked (no mandate check, no counters)",
+   "status": "KILLED",
+   "killedBy": "test_NonInterference_AValidQuoteCannotOverrideATokenCap()",
+   "seconds": 52.4,
+   "note": ""
+  },
+  {
+   "id": "PR29",
+   "file": "src/PaymentRouter.sol",
+   "description": "charge: no minimum-output check",
+   "status": "KILLED",
+   "killedBy": "test_Minout_AFeeOnTransferTokenIsRefusedByRecurringCharges()",
+   "seconds": 61.0,
+   "note": ""
+  },
+  {
+   "id": "PR30",
+   "file": "src/PaymentRouter.sol",
+   "description": "charge: the fee is not paid",
+   "status": "KILLED",
+   "killedBy": "test_Permit2_AllowanceIsDecrementedByTheRouterOnly()",
+   "seconds": 43.0,
+   "note": ""
+  },
+  {
+   "id": "PR31",
+   "file": "src/PaymentRouter.sol",
+   "description": "payOnce: validUntil may exceed the signature deadline",
+   "status": "KILLED",
+   "killedBy": "test_PayOnce_ValidityWindow()",
+   "seconds": 38.1,
+   "note": ""
+  },
+  {
+   "id": "PR32",
+   "file": "src/PaymentRouter.sol",
+   "description": "payOnce: validUntil == now is expired",
+   "status": "KILLED",
+   "killedBy": "test_PayOnce_ValidityWindow()",
+   "seconds": 34.2,
+   "note": ""
+  },
+  {
+   "id": "PR33",
+   "file": "src/PaymentRouter.sol",
+   "description": "payOnce: the amounts need not add up",
+   "status": "KILLED",
+   "killedBy": "test_PayOnce_FeeAndAmountsAreBounded()",
+   "seconds": 33.8,
+   "note": ""
+  },
+  {
+   "id": "PR34",
+   "file": "src/PaymentRouter.sol",
+   "description": "payOnce: the recipient is not the registry's",
+   "status": "KILLED",
+   "killedBy": "test_PayOnce_MerchantAndTokenStatus()",
+   "seconds": 34.6,
+   "note": ""
+  },
+  {
+   "id": "PR35",
+   "file": "src/PaymentRouter.sol",
+   "description": "payOnce: the fee recipient is not the controller's",
+   "status": "KILLED",
+   "killedBy": "test_PayOnce_TheRecipientIsTheRegistryRecipientNow_NotWhatTheSignatureSays()",
+   "seconds": 52.9,
+   "note": ""
+  },
+  {
+   "id": "PR36",
+   "file": "src/PaymentRouter.sol",
+   "description": "payOnce: a payment can settle twice",
+   "status": "KILLED",
+   "killedBy": "test_PayOnce_ARouterThatIsNotInTheRegistryCannotMarkPayments()",
+   "seconds": 47.2,
+   "note": ""
+  },
+  {
+   "id": "PR37",
+   "file": "src/PaymentRouter.sol",
+   "description": "no reentrancy lock",
+   "status": "KILLED",
+   "killedBy": "test_PayOnce_ReentrancyIsLocked()",
+   "seconds": 41.4,
+   "note": ""
+  },
+  {
+   "id": "PR38",
+   "file": "src/PaymentRouter.sol",
+   "description": "payOnce: no minimum-output check",
+   "status": "KILLED",
+   "killedBy": "test_Minout_AFeeOnTransferTokenIsRefusedByPayOnce()",
+   "seconds": 44.3,
+   "note": ""
+  },
+  {
+   "id": "PR39",
+   "file": "src/PaymentRouter.sol",
+   "description": "payOnce: the witness is not the intent",
+   "status": "KILLED",
+   "killedBy": "test_Minout_AFeeOnTransferTokenIsRefusedByPayOnce()",
+   "seconds": 39.5,
+   "note": ""
+  },
+  {
+   "id": "PR40",
+   "file": "src/PaymentRouter.sol",
+   "description": "payOnce: the merchant amount goes to the caller",
+   "status": "KILLED",
+   "killedBy": "test_PayOnce_ASecondSubmissionOfTheSamePayment_IsRefused()",
+   "seconds": 63.6,
+   "note": ""
+  },
+  {
+   "id": "GW01",
+   "file": "src/MandateGateway.sol",
+   "description": "the deadline second is expired",
+   "status": "KILLED",
+   "killedBy": "test_ActivateBySig_Expired_AndTheBoundary()",
+   "seconds": 145.0,
+   "note": ""
+  },
+  {
+   "id": "GW02",
+   "file": "src/MandateGateway.sol",
+   "description": "the signed pin is not the stored pin",
+   "status": "KILLED",
+   "killedBy": "test_ResumeBySig_UnderEcdsaMode_AndTheSuppliedPinMustBeTheStoredOne()",
+   "seconds": 19.9,
+   "note": ""
+  },
+  {
+   "id": "GW03",
+   "file": "src/MandateGateway.sol",
+   "description": "activation: the router code hash and version are not bound",
+   "status": "KILLED",
+   "killedBy": "test_ActivateBySig_TheSignedRouterCodeHashAndVersionMustBeTheRegistryOnes()",
+   "seconds": 17.2,
+   "note": ""
+  },
+  {
+   "id": "GW04",
+   "file": "src/MandateGateway.sol",
+   "description": "activation: no signature check",
+   "status": "KILLED",
+   "killedBy": "test_ActivateBySig_DirectOnlyPinAcceptsNoSignature()",
+   "seconds": 17.0,
+   "note": ""
+  },
+  {
+   "id": "GW05",
+   "file": "src/MandateGateway.sol",
+   "description": "revoke: the nonce is not spent",
+   "status": "KILLED",
+   "killedBy": "test_RevokeBySig_NonceIsSingleUse_AndSharedAcrossMessageTypes()",
+   "seconds": 21.9,
+   "note": ""
+  },
+  {
+   "id": "GW06",
+   "file": "src/MandateGateway.sol",
+   "description": "revoke: no signature check",
+   "status": "KILLED",
+   "killedBy": "test_TheGatewayCannotBeUsedWithoutASignature()",
+   "seconds": 27.3,
+   "note": ""
+  },
+  {
+   "id": "GW07",
+   "file": "src/MandateGateway.sol",
+   "description": "resume: accepted under any pin mode",
+   "status": "KILLED",
+   "killedBy": "test_PauseBySig_ThenResumeNeedsTheStoredPin()",
+   "seconds": 13.7,
+   "note": ""
+  },
+  {
+   "id": "GW08",
+   "file": "src/MandateGateway.sol",
+   "description": "reduce: the signed terms are not the supplied ones",
+   "status": "KILLED",
+   "killedBy": "test_ReduceBySig()",
+   "seconds": 13.0,
+   "note": ""
+  },
+  {
+   "id": "GW09",
+   "file": "src/MandateGateway.sol",
+   "description": "pin batch: the signing pin need not be stored",
+   "status": "KILLED",
+   "killedBy": "test_UpdateAccountPinsBySig_ABatchThatIncludesAMandateAtAnotherPinFailsWhole()",
+   "seconds": 13.4,
+   "note": ""
+  },
+  {
+   "id": "GW10",
+   "file": "src/MandateGateway.sol",
+   "description": "pin batch: no bound",
+   "status": "KILLED",
+   "killedBy": "test_UpdateAccountPins_OverTheBoundIsRefused()",
+   "seconds": 10.9,
+   "note": ""
+  },
+  {
+   "id": "GW11",
+   "file": "src/MandateGateway.sol",
+   "description": "the signed domain names the gateway, not the manager",
+   "status": "KILLED",
+   "killedBy": "test_ActivateBySig_AnyoneCanRelay()",
+   "seconds": 12.9,
+   "note": ""
+  },
+  {
+   "id": "GW12",
+   "file": "src/MandateGateway.sol",
+   "description": "successor: no signature check",
+   "status": "KILLED",
+   "killedBy": "test_A1_AStoredDirectOnlyPinAcceptsNoRelayedSuccessor()",
+   "seconds": 14.5,
+   "note": ""
+  },
+  {
+   "id": "GW13",
+   "file": "src/MandateGateway.sol",
+   "description": "successor: the signing pin is not the stored pin",
+   "status": "SURVIVED",
+   "killedBy": null,
+   "seconds": 15.8,
+   "note": ""
+  },
+  {
+   "id": "GW14",
+   "file": "src/MandateGateway.sol",
+   "description": "pin batch: anyone may re-pin anyone's mandates",
+   "status": "KILLED",
+   "killedBy": "test_UpdateAccountPins_CustomerBatch_AndOnlyOwnMandates()",
+   "seconds": 14.7,
+   "note": ""
+  },
+  {
+   "id": "MQ01",
+   "file": "src/MigrationQueue.sol",
+   "description": "step: no bound",
+   "status": "KILLED",
+   "killedBy": "test_Step_Bounds()",
+   "seconds": 14.0,
+   "note": ""
+  },
+  {
+   "id": "MQ02",
+   "file": "src/MigrationQueue.sol",
+   "description": "step: an entry of another customer",
+   "status": "KILLED",
+   "killedBy": "test_Plan_CannotMigrateSomeoneElsesLineage()",
+   "seconds": 11.2,
+   "note": ""
+  },
+  {
+   "id": "MQ03",
+   "file": "src/MigrationQueue.sol",
+   "description": "step: an entry of another kind",
+   "status": "KILLED",
+   "killedBy": "test_Chain_AnEntryOfAnotherKindOrRouterIsRefused()",
+   "seconds": 10.9,
+   "note": ""
+  },
+  {
+   "id": "MQ04",
+   "file": "src/MigrationQueue.sol",
+   "description": "step: an entry for another router",
+   "status": "KILLED",
+   "killedBy": "test_Chain_AnEntryForAnotherRouterIsRefused()",
+   "seconds": 13.2,
+   "note": ""
+  },
+  {
+   "id": "MQ05",
+   "file": "src/MigrationQueue.sol",
+   "description": "step: the chain is not checked",
+   "status": "KILLED",
+   "killedBy": "test_Chain_ATamperedEntryIsRefused()",
+   "seconds": 9.4,
+   "note": ""
+  },
+  {
+   "id": "MQ06",
+   "file": "src/MigrationQueue.sol",
+   "description": "step: the chain may end anywhere",
+   "status": "KILLED",
+   "killedBy": "test_Open_AFinalHeadThatIsNotZeroNeverCompletes()",
+   "seconds": 9.4,
+   "note": ""
+  },
+  {
+   "id": "MQ07",
+   "file": "src/MigrationQueue.sol",
+   "description": "step: an expired plan runs",
+   "status": "KILLED",
+   "killedBy": "test_Expiry_StepsAreRefusedAfterIt_AndAnyoneCanRecordIt()",
+   "seconds": 9.1,
+   "note": ""
+  },
+  {
+   "id": "MQ08",
+   "file": "src/MigrationQueue.sol",
+   "description": "skip: anyone may skip",
+   "status": "KILLED",
+   "killedBy": "test_Step_AFailingEntryRevertsTheWholeStep_AndTheCustomerCanSkipIt()",
+   "seconds": 12.7,
+   "note": ""
+  },
+  {
+   "id": "MQ09",
+   "file": "src/MigrationQueue.sol",
+   "description": "abort: anyone may abort",
+   "status": "KILLED",
+   "killedBy": "test_Abort_OnlyTheCustomer_AndItStopsTheSteps()",
+   "seconds": 12.5,
+   "note": ""
+  },
+  {
+   "id": "MQ10",
+   "file": "src/MigrationQueue.sol",
+   "description": "open: a plan can be reopened",
+   "status": "KILLED",
+   "killedBy": "test_Open_Validations()",
+   "seconds": 8.1,
+   "note": ""
+  },
+  {
+   "id": "MQ11",
+   "file": "src/MigrationQueue.sol",
+   "description": "expire: a live plan can be expired",
+   "status": "KILLED",
+   "killedBy": "test_Expiry_StepsAreRefusedAfterIt_AndAnyoneCanRecordIt()",
+   "seconds": 8.1,
+   "note": ""
+  },
+  {
+   "id": "MQ12",
+   "file": "src/MigrationQueue.sol",
+   "description": "step: more entries than the plan holds",
+   "status": "KILLED",
+   "killedBy": "test_Step_MoreEntriesThanThePlanHoldsIsRefused()",
+   "seconds": 13.2,
+   "note": ""
+  },
+  {
+   "id": "MQ13",
+   "file": "src/MigrationQueue.sol",
+   "description": "open: any router",
+   "status": "KILLED",
+   "killedBy": "test_Open_Validations()",
+   "seconds": 8.2,
+   "note": ""
+  },
+  {
+   "id": "MQ14",
+   "file": "src/MigrationQueue.sol",
+   "description": "open: a revision plan",
+   "status": "KILLED",
+   "killedBy": "test_Open_Validations()",
+   "seconds": 8.1,
+   "note": ""
+  },
+  {
+   "id": "MQ15",
+   "file": "src/MigrationQueue.sol",
+   "description": "step: the successor is not activated",
+   "status": "KILLED",
+   "killedBy": "test_Chain_TheAuthorizationInTheEntryDecidesWhatTheManagerSees()",
+   "seconds": 8.6,
+   "note": ""
+  },
+  {
+   "id": "AL01",
+   "file": "src/lib/AuthLib.sol",
+   "description": "recover: a high-s signature is accepted",
+   "status": "KILLED",
+   "killedBy": "test_Q2_MalformedSignatures()",
+   "seconds": 56.4,
+   "note": ""
+  },
+  {
+   "id": "AL02",
+   "file": "src/lib/AuthLib.sol",
+   "description": "recover: any v is accepted",
+   "status": "SURVIVED",
+   "killedBy": null,
+   "seconds": 42.0,
+   "note": ""
+  },
+  {
+   "id": "AL03",
+   "file": "src/lib/AuthLib.sol",
+   "description": "recover: any length (reads past the signature)",
+   "status": "KILLED",
+   "killedBy": "test_TheGatewayCannotBeUsedWithoutASignature()",
+   "seconds": 72.9,
+   "note": ""
+  },
+  {
+   "id": "AL04",
+   "file": "src/lib/AuthLib.sol",
+   "description": "ERC-1271: an account without code",
+   "status": "SURVIVED",
+   "killedBy": null,
+   "seconds": 35.5,
+   "note": ""
+  },
+  {
+   "id": "AL05",
+   "file": "src/lib/AuthLib.sol",
+   "description": "ERC-1271: any return value is valid",
+   "status": "KILLED",
+   "killedBy": "test_ActivateBySig_Erc1271_OnlyWhileTheAccountStillMatchesThePin()",
+   "seconds": 75.3,
+   "note": ""
+  },
+  {
+   "id": "AL06",
+   "file": "src/lib/AuthLib.sol",
+   "description": "authAuthority: ERC-1271 accepted without PIN_OK",
+   "status": "KILLED",
+   "killedBy": "test_ActivateBySig_Erc1271_OnlyWhileTheAccountStillMatchesThePin()",
+   "seconds": 67.0,
+   "note": ""
+  },
+  {
+   "id": "AL07",
+   "file": "src/lib/AuthLib.sol",
+   "description": "authExit: no ECDSA path",
+   "status": "KILLED",
+   "killedBy": "test_RevokeBySig_AcceptedUnderEveryPinMode_ExitsAreNeverGated()",
+   "seconds": 97.1,
+   "note": ""
+  },
+  {
+   "id": "AL08",
+   "file": "src/lib/AuthLib.sol",
+   "description": "authAuthority: ECDSA mode accepts any signature",
+   "status": "KILLED",
+   "killedBy": "test_ActivateBySig_TheDomainNamesTheManagerNotTheGateway()",
+   "seconds": 67.3,
+   "note": ""
+  },
+  {
+   "id": "AL09",
+   "file": "src/lib/AuthLib.sol",
+   "description": "authAuthority: DIRECT_ONLY accepts an ECDSA signature",
+   "status": "KILLED",
+   "killedBy": "test_A1_AStoredDirectOnlyPinAcceptsNoRelayedSuccessor()",
+   "seconds": 43.4,
+   "note": ""
+  },
+  {
+   "id": "CL01",
+   "file": "src/lib/ContainLib.sol",
+   "description": "containment: K.1 expiry is not checked",
+   "status": "KILLED",
+   "killedBy": "test_Reduce_Widening_IsRefused_OnEveryDimension()",
+   "seconds": 33.2,
+   "note": ""
+  },
+  {
+   "id": "CL04",
+   "file": "src/lib/ContainLib.sol",
+   "description": "containment: K.4 token caps is not checked",
+   "status": "KILLED",
+   "killedBy": "test_ReduceBySig_AWideningThroughTheGatewayStillFailsAtTheManager()",
+   "seconds": 43.3,
+   "note": ""
+  },
+  {
+   "id": "CL06",
+   "file": "src/lib/ContainLib.sol",
+   "description": "containment: K.6 bounds version is not checked",
+   "status": "KILLED",
+   "killedBy": "test_Reduce_Widening_IsRefused_OnEveryDimension()",
+   "seconds": 30.3,
+   "note": ""
+  },
+  {
+   "id": "CL08",
+   "file": "src/lib/ContainLib.sol",
+   "description": "containment: K.8 fee is not checked",
+   "status": "KILLED",
+   "killedBy": "test_Reduce_Widening_IsRefused_OnEveryDimension()",
+   "seconds": 31.5,
+   "note": ""
+  },
+  {
+   "id": "CL09",
+   "file": "src/lib/ContainLib.sol",
+   "description": "containment: K.9 extensions is not checked",
+   "status": "KILLED",
+   "killedBy": "test_Containment_MaskEqualsTheModel_OnEveryExportedTuple()",
+   "seconds": 33.7,
+   "note": ""
+  },
+  {
+   "id": "CL03",
+   "file": "src/lib/ContainLib.sol",
+   "description": "containment: K.3 tokens are not checked",
+   "status": "KILLED",
+   "killedBy": "test_Reduce_Widening_IsRefused_OnEveryDimension()",
+   "seconds": 29.5,
+   "note": ""
+  },
+  {
+   "id": "CL05",
+   "file": "src/lib/ContainLib.sol",
+   "description": "containment: K.5 fiat caps are not checked",
+   "status": "KILLED",
+   "killedBy": "test_Reduce_Widening_IsRefused_OnEveryDimension()",
+   "seconds": 31.9,
+   "note": ""
+  },
+  {
+   "id": "CL07",
+   "file": "src/lib/ContainLib.sol",
+   "description": "containment: K.7 the interval is not checked",
+   "status": "KILLED",
+   "killedBy": "test_Reduce_Widening_IsRefused_OnEveryDimension()",
+   "seconds": 34.3,
+   "note": ""
+  },
+  {
+   "id": "CL02",
+   "file": "src/lib/ContainLib.sol",
+   "description": "containment: K.2 the anchor is not checked",
+   "status": "KILLED",
+   "killedBy": "test_Containment_MaskEqualsTheModel_OnEveryExportedTuple()",
+   "seconds": 45.0,
+   "note": ""
+  },
+  {
+   "id": "CL10",
+   "file": "src/lib/ContainLib.sol",
+   "description": "leE: no cap counts as narrow as a cap",
+   "status": "KILLED",
+   "killedBy": "test_Reduce_Widening_IsRefused_OnEveryDimension()",
+   "seconds": 62.0,
+   "note": ""
+  },
+  {
+   "id": "CL11",
+   "file": "src/lib/ContainLib.sol",
+   "description": "shape: no tokens",
+   "status": "KILLED",
+   "killedBy": "test_Activate_TermsShape()",
+   "seconds": 69.3,
+   "note": ""
+  },
+  {
+   "id": "CL12",
+   "file": "src/lib/ContainLib.sol",
+   "description": "shape: duplicate tokens",
+   "status": "KILLED",
+   "killedBy": "test_Activate_TermsShape()",
+   "seconds": 61.7,
+   "note": ""
+  },
+  {
+   "id": "CL13",
+   "file": "src/lib/ContainLib.sol",
+   "description": "shape: a zero billing period",
+   "status": "KILLED",
+   "killedBy": "a failing test",
+   "seconds": 16124.3,
+   "note": ""
+  },
+  {
+   "id": "CL14",
+   "file": "src/lib/ContainLib.sol",
+   "description": "widened: a bounds-version change is not a widening",
+   "status": "KILLED",
+   "killedBy": "test_C2_ABoundsVersionChangeIsAWideningOfARevision()",
+   "seconds": 96.6,
+   "note": ""
+  },
+  {
+   "id": "CL15",
+   "file": "src/lib/ContainLib.sol",
+   "description": "widened: a later expiry is not a widening",
+   "status": "KILLED",
+   "killedBy": "test_C2_ALaterExpiryIsAWidening()",
+   "seconds": 27.3,
+   "note": ""
+  },
+  {
+   "id": "PL01",
+   "file": "src/lib/PinLib.sol",
+   "description": "pin: version 0 is well-formed",
+   "status": "KILLED",
+   "killedBy": "test_Activate_PinMustBeWellFormedLiveAndVersionOne()",
+   "seconds": 65.9,
+   "note": ""
+  },
+  {
+   "id": "PL02",
+   "file": "src/lib/PinLib.sol",
+   "description": "pin: an EOA pin with an ERC-1271 mode",
+   "status": "KILLED",
+   "killedBy": "test_WellFormed_EoaModes()",
+   "seconds": 28.9,
+   "note": ""
+  },
+  {
+   "id": "PL03",
+   "file": "src/lib/PinLib.sol",
+   "description": "pin: an EOA pin holds on an account with code",
+   "status": "KILLED",
+   "killedBy": "test_Activate_PinMustBeWellFormedLiveAndVersionOne()",
+   "seconds": 68.0,
+   "note": ""
+  },
+  {
+   "id": "PL04",
+   "file": "src/lib/PinLib.sol",
+   "description": "pin: the delegate's code is not checked",
+   "status": "KILLED",
+   "killedBy": "test_CheckField_ReportsTheFieldThatMoved()",
+   "seconds": 28.8,
+   "note": ""
+  },
+  {
+   "id": "PL05",
+   "file": "src/lib/PinLib.sol",
+   "description": "pin: a signature-mode change keeps the version",
+   "status": "KILLED",
+   "killedBy": "test_K1_NewPinWellFormedLiveAndWithTheRightVersion()",
+   "seconds": 67.5,
+   "note": ""
+  },
+  {
+   "id": "PL06",
+   "file": "src/lib/PinLib.sol",
+   "description": "pin: a changed pin keeps the version",
+   "status": "KILLED",
+   "killedBy": "test_K1_NewPinWellFormedLiveAndWithTheRightVersion()",
+   "seconds": 70.0,
+   "note": ""
+  },
+  {
+   "id": "RR01",
+   "file": "src/RouterRegistry.sol",
+   "description": "registry: a third live router",
+   "status": "KILLED",
+   "killedBy": "test_Router_AtMostTwoLiveRouters()",
+   "seconds": 70.9,
+   "note": ""
+  },
+  {
+   "id": "RR02",
+   "file": "src/RouterRegistry.sol",
+   "description": "registry: no minimum notice",
+   "status": "KILLED",
+   "killedBy": "test_Router_NoticeMinimums()",
+   "seconds": 5.4,
+   "note": ""
+  },
+  {
+   "id": "RR03",
+   "file": "src/RouterRegistry.sol",
+   "description": "registry: sunset before the notice",
+   "status": "KILLED",
+   "killedBy": "test_Router_SunsetAndRetentionBeforeRetire()",
+   "seconds": 5.5,
+   "note": ""
+  },
+  {
+   "id": "RR04",
+   "file": "src/RouterRegistry.sol",
+   "description": "registry: retire before the retention",
+   "status": "KILLED",
+   "killedBy": "test_Router_SunsetAndRetentionBeforeRetire()",
+   "seconds": 5.5,
+   "note": ""
+  },
+  {
+   "id": "RR05",
+   "file": "src/RouterRegistry.sol",
+   "description": "registry: a deprecated router stays bindable",
+   "status": "KILLED",
+   "killedBy": "test_Router_RollbackWindowEndsBindability_ButNotChargeability()",
+   "seconds": 5.8,
+   "note": ""
+  },
+  {
+   "id": "RR06",
+   "file": "src/RouterRegistry.sol",
+   "description": "registry: a security deprecation is not emergency mode",
+   "status": "KILLED",
+   "killedBy": "test_Router_SecurityDeprecationIsEmergencyMode_WithTheShorterNotice()",
+   "seconds": 5.8,
+   "note": ""
+  },
+  {
+   "id": "RR07",
+   "file": "src/RouterRegistry.sol",
+   "description": "registry: a disabled router is not emergency mode",
+   "status": "KILLED",
+   "killedBy": "test_Router_GuardianCanOnlyDisable_AndGovernanceRestores()",
+   "seconds": 5.5,
+   "note": ""
+  },
+  {
+   "id": "RR08",
+   "file": "src/RouterRegistry.sol",
+   "description": "registry: anyone may mark a payment settled",
+   "status": "KILLED",
+   "killedBy": "test_PayOnce_ARouterThatIsNotInTheRegistryCannotMarkPayments()",
+   "seconds": 5.8,
+   "note": ""
+  },
+  {
+   "id": "RR09",
+   "file": "src/RouterRegistry.sol",
+   "description": "registry: a payment settles twice",
+   "status": "KILLED",
+   "killedBy": "test_PayOnce_ASecondSubmissionOfTheSamePayment_IsRefused()",
+   "seconds": 6.0,
+   "note": ""
+  },
+  {
+   "id": "RR10",
+   "file": "src/RouterRegistry.sol",
+   "description": "registry: anyone may disable a router",
+   "status": "KILLED",
+   "killedBy": "test_Router_OnlyGovernanceMovesTheLifecycle()",
+   "seconds": 5.0,
+   "note": ""
+  },
+  {
+   "id": "RR11",
+   "file": "src/RouterRegistry.sol",
+   "description": "registry: the live counter never goes down",
+   "status": "KILLED",
+   "killedBy": "test_Router_AtMostTwoLiveRouters()",
+   "seconds": 4.0,
+   "note": ""
+  },
+  {
+   "id": "TP01",
+   "file": "src/TokenPolicyRegistry.sol",
+   "description": "bounds: no width ceiling",
+   "status": "KILLED",
+   "killedBy": "test_Bounds_AreBoundedInWidth_AndWellFormed()",
+   "seconds": 4.9,
+   "note": ""
+  },
+  {
+   "id": "TP02",
+   "file": "src/TokenPolicyRegistry.sol",
+   "description": "bounds: the width is rounded down",
+   "status": "KILLED",
+   "killedBy": "test_Bounds_WidthIsMeasuredOnTheMinimum()",
+   "seconds": 4.2,
+   "note": ""
+  },
+  {
+   "id": "TP03",
+   "file": "src/TokenPolicyRegistry.sol",
+   "description": "bounds: a zero minimum",
+   "status": "KILLED",
+   "killedBy": "test_Bounds_AreBoundedInWidth_AndWellFormed()",
+   "seconds": 5.1,
+   "note": ""
+  },
+  {
+   "id": "TP04",
+   "file": "src/TokenPolicyRegistry.sol",
+   "description": "policy: anyone may block a token",
+   "status": "KILLED",
+   "killedBy": "test_Token_OnlyTheGuardianOrGovernanceBlocks()",
+   "seconds": 26.7,
+   "note": ""
+  },
+  {
+   "id": "TP05",
+   "file": "src/TokenPolicyRegistry.sol",
+   "description": "policy: a token can be listed as SWAP_ONLY or BLOCKED",
+   "status": "KILLED",
+   "killedBy": "test_Token_ListingAndStatus()",
+   "seconds": 4.4,
+   "note": ""
+  },
+  {
+   "id": "TP06",
+   "file": "src/TokenPolicyRegistry.sol",
+   "description": "policy: a blocked token can be unblocked",
+   "status": "KILLED",
+   "killedBy": "test_Token_AGuardianBlockIsFinal()",
+   "seconds": 4.7,
+   "note": ""
+  },
+  {
+   "id": "TP07",
+   "file": "src/TokenPolicyRegistry.sol",
+   "description": "bounds: the current version never moves",
+   "status": "KILLED",
+   "killedBy": "test_Bounds_AreBoundedInWidth_AndWellFormed()",
+   "seconds": 5.4,
+   "note": ""
+  },
+  {
+   "id": "TP08",
+   "file": "src/TokenPolicyRegistry.sol",
+   "description": "bounds: a publication does not bump the token version",
+   "status": "KILLED",
+   "killedBy": "test_Bounds_APublicationBumpsTheTokenVersion()",
+   "seconds": 12.6,
+   "note": ""
+  },
+  {
+   "id": "SS01",
+   "file": "src/SignerSetRegistry.sol",
+   "description": "signers: no bound on the set",
+   "status": "KILLED",
+   "killedBy": "test_Signers_TheSetSizeIsBounded()",
+   "seconds": 6.1,
+   "note": ""
+  },
+  {
+   "id": "SS02",
+   "file": "src/SignerSetRegistry.sol",
+   "description": "signers: a tombstoned key can be proposed",
+   "status": "KILLED",
+   "killedBy": "test_Q1_ARemovedKeyIsRefusedWithNoGrace_AndStaysRefused()",
+   "seconds": 5.7,
+   "note": ""
+  },
+  {
+   "id": "SS03",
+   "file": "src/SignerSetRegistry.sol",
+   "description": "signers: a key removed after the proposal can join",
+   "status": "KILLED",
+   "killedBy": "test_Signers_SetsActivateInOrder_AndAKeyRemovedAfterTheProposalCannotJoin()",
+   "seconds": 5.2,
+   "note": ""
+  },
+  {
+   "id": "SS04",
+   "file": "src/SignerSetRegistry.sol",
+   "description": "signers: sets activate out of order",
+   "status": "KILLED",
+   "killedBy": "test_Signers_SetsActivateInOrder_AndAKeyRemovedAfterTheProposalCannotJoin()",
+   "seconds": 5.8,
+   "note": ""
+  },
+  {
+   "id": "SS05",
+   "file": "src/SignerSetRegistry.sol",
+   "description": "signers: anyone may remove a key",
+   "status": "KILLED",
+   "killedBy": "test_Signers_OnlyTheGuardianOrGovernanceRemoveAKey()",
+   "seconds": 12.4,
+   "note": ""
+  },
+  {
+   "id": "SS06",
+   "file": "src/SignerSetRegistry.sol",
+   "description": "signers: a removed key is accepted",
+   "status": "KILLED",
+   "killedBy": "test_Signers_EmergencyRemovalHasNoGraceAndIsPermanent()",
+   "seconds": 5.2,
+   "note": ""
+  },
+  {
+   "id": "SS07",
+   "file": "src/SignerSetRegistry.sol",
+   "description": "signers: a stopped set is accepted",
+   "status": "KILLED",
+   "killedBy": "test_Q13_AStoppedSetIsRefused()",
+   "seconds": 5.5,
+   "note": ""
+  },
+  {
+   "id": "SS08",
+   "file": "src/SignerSetRegistry.sol",
+   "description": "signers: a quote issued at the activation second is refused",
+   "status": "KILLED",
+   "killedBy": "test_Atomic_APullThatFailsRevertsTheCounters()",
+   "seconds": 5.4,
+   "note": ""
+  },
+  {
+   "id": "SS09",
+   "file": "src/SignerSetRegistry.sol",
+   "description": "signers: the last second of the grace is refused",
+   "status": "KILLED",
+   "killedBy": "test_Signers_TheGraceBoundaries()",
+   "seconds": 11.8,
+   "note": ""
+  },
+  {
+   "id": "SS10",
+   "file": "src/SignerSetRegistry.sol",
+   "description": "signers: a quote issued after the rotation is honoured under the retired set",
+   "status": "KILLED",
+   "killedBy": "test_Signers_TheGraceBoundaries()",
+   "seconds": 11.0,
+   "note": ""
+  },
+  {
+   "id": "SS11",
+   "file": "src/SignerSetRegistry.sol",
+   "description": "signers: any grace",
+   "status": "KILLED",
+   "killedBy": "test_Signers_GraceBoundsAreImmutableAndChecked()",
+   "seconds": 12.1,
+   "note": ""
+  },
+  {
+   "id": "SS12",
+   "file": "src/SignerSetRegistry.sol",
+   "description": "signers: the old set is not retired",
+   "status": "KILLED",
+   "killedBy": "test_Q13_RotationHonoursEarlierQuotesForTheGraceOnly()",
+   "seconds": 6.7,
+   "note": ""
+  },
+  {
+   "id": "MR01",
+   "file": "src/MerchantRegistry.sol",
+   "description": "merchant: no recipient delay",
+   "status": "KILLED",
+   "killedBy": "test_Merchant_TheRecipientDelayIsEnforced_AndCancellable()",
+   "seconds": 16.1,
+   "note": ""
+  },
+  {
+   "id": "MR02",
+   "file": "src/MerchantRegistry.sol",
+   "description": "merchant: the ready second is not ready",
+   "status": "KILLED",
+   "killedBy": "test_Merchant_TheRecipientDelayIsEnforced_AndCancellable()",
+   "seconds": 5.6,
+   "note": ""
+  },
+  {
+   "id": "MR03",
+   "file": "src/MerchantRegistry.sol",
+   "description": "merchant: a one-day delay",
+   "status": "KILLED",
+   "killedBy": "test_Router_ConstantsAreTheProposalsOfTheRecords()",
+   "seconds": 40.7,
+   "note": ""
+  },
+  {
+   "id": "MR04",
+   "file": "src/MerchantRegistry.sol",
+   "description": "merchant: any token",
+   "status": "KILLED",
+   "killedBy": "test_Router_MerchantPausedOrTokenNotAccepted()",
+   "seconds": 68.6,
+   "note": ""
+  },
+  {
+   "id": "MR05",
+   "file": "src/MerchantRegistry.sol",
+   "description": "merchant: a paused merchant settles",
+   "status": "KILLED",
+   "killedBy": "test_PayOnce_MerchantAndTokenStatus()",
+   "seconds": 5.2,
+   "note": ""
+  },
+  {
+   "id": "MR06",
+   "file": "src/MerchantRegistry.sol",
+   "description": "merchant: anyone may pause",
+   "status": "KILLED",
+   "killedBy": "test_Merchant_RegistrationAndRoles()",
+   "seconds": 5.6,
+   "note": ""
+  },
+  {
+   "id": "ER01",
+   "file": "src/ExecutorRegistry.sol",
+   "description": "executors: anyone may remove an executor",
+   "status": "KILLED",
+   "killedBy": "test_Executors_GovernanceAdds_GuardianRemoves()",
+   "seconds": 4.8,
+   "note": ""
+  },
+  {
+   "id": "FC01",
+   "file": "src/FeeController.sol",
+   "description": "fees: no ceiling on a change",
+   "status": "KILLED",
+   "killedBy": "test_Fee_GovernanceCannotRaiseItAboveTheImmutableCeiling()",
+   "seconds": 4.9,
+   "note": ""
+  }
+ ]
+}

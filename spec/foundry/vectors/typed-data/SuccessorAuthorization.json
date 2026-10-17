@@ -1,0 +1,136 @@
+{
+ "types": {
+  "EIP712Domain": [
+   {
+    "name": "name",
+    "type": "string"
+   },
+   {
+    "name": "version",
+    "type": "string"
+   },
+   {
+    "name": "chainId",
+    "type": "uint256"
+   },
+   {
+    "name": "verifyingContract",
+    "type": "address"
+   }
+  ],
+  "SuccessorAuthorization": [
+   {
+    "name": "customer",
+    "type": "address"
+   },
+   {
+    "name": "lineageId",
+    "type": "bytes32"
+   },
+   {
+    "name": "predecessorId",
+    "type": "bytes32"
+   },
+   {
+    "name": "kind",
+    "type": "uint8"
+   },
+   {
+    "name": "newTermsHash",
+    "type": "bytes32"
+   },
+   {
+    "name": "newRouter",
+    "type": "address"
+   },
+   {
+    "name": "newRouterCodeHash",
+    "type": "bytes32"
+   },
+   {
+    "name": "newRouterVersion",
+    "type": "uint32"
+   },
+   {
+    "name": "termsSnapshotHash",
+    "type": "bytes32"
+   },
+   {
+    "name": "widenedMask",
+    "type": "uint32"
+   },
+   {
+    "name": "accountPin",
+    "type": "AccountPin"
+   },
+   {
+    "name": "deadline",
+    "type": "uint64"
+   },
+   {
+    "name": "nonce",
+    "type": "uint256"
+   }
+  ],
+  "AccountPin": [
+   {
+    "name": "accountMode",
+    "type": "uint8"
+   },
+   {
+    "name": "accountCodeHash",
+    "type": "bytes32"
+   },
+   {
+    "name": "delegate",
+    "type": "address"
+   },
+   {
+    "name": "delegateCodeHash",
+    "type": "bytes32"
+   },
+   {
+    "name": "implementationFamily",
+    "type": "bytes32"
+   },
+   {
+    "name": "pinVersion",
+    "type": "uint32"
+   },
+   {
+    "name": "signatureMode",
+    "type": "uint8"
+   }
+  ]
+ },
+ "primaryType": "SuccessorAuthorization",
+ "domain": {
+  "name": "FastPay Mandates",
+  "version": "1",
+  "chainId": "84532",
+  "verifyingContract": "0x2222222222222222222222222222222222222222"
+ },
+ "message": {
+  "customer": "0x4444444444444444444444444444444444444444",
+  "lineageId": "0x7777777777777777777777777777777777777777777777777777777777777777",
+  "predecessorId": "0x7878787878787878787878787878787878787878787878787878787878787878",
+  "kind": "2",
+  "newTermsHash": "0x9999999999999999999999999999999999999999999999999999999999999999",
+  "newRouter": "0x1212121212121212121212121212121212121212",
+  "newRouterCodeHash": "0xb3c09d7618a623d4a622d6c8f73003d5719cd0a99dea51d8355b4fdc01fbd9da",
+  "newRouterVersion": "2",
+  "termsSnapshotHash": "0x9898989898989898989898989898989898989898989898989898989898989898",
+  "widenedMask": "5",
+  "accountPin": {
+   "accountMode": "2",
+   "accountCodeHash": "0x4a37830a39af172052f51de869b4cdb29187b16a71da5457fca733c4db241364",
+   "delegate": "0xabababababababababababababababababababab",
+   "delegateCodeHash": "0x00e909366694deb1e4fbbd183b70356e899ca8dcca5ecf975177e3ec29c1e052",
+   "implementationFamily": "0x41e7cea110e32333d68057a4496a860f2f362502e359b0971b6b6544c205e24c",
+   "pinVersion": "1",
+   "signatureMode": "1"
+  },
+  "deadline": "1800003600",
+  "nonce": "5"
+ }
+}

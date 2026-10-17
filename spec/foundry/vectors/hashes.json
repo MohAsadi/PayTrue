@@ -1,0 +1,495 @@
+{
+  "designators": {
+    "D1": "0xabababababababababababababababababababab",
+    "D2": "0xcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcdcd",
+    "codeD1": "0xef0100abababababababababababababababababababab",
+    "hashD1": "0x4a37830a39af172052f51de869b4cdb29187b16a71da5457fca733c4db241364",
+    "hashD2": "0x8a642d7f1449eccbe45df15c4187cf981920a6fd94ca405c134f128f73c620d7",
+    "keccakEmpty": "0xc5d2460186f7233c927e7db2dcc703c0e500b653ca82273b7bfad8045d85a470",
+    "source": "17 section 9"
+  },
+  "fiat": [
+    {
+      "amountIn": 49990000,
+      "fiatValueMinor": 4999,
+      "priceE18": "100000000000000000000",
+      "source": "11 section 4.1; CAP-TV-01..03",
+      "tokenDecimals": 6
+    },
+    {
+      "amountIn": 10000001,
+      "fiatValueMinor": 1002,
+      "priceE18": "100100000000000000000",
+      "source": "11 section 4.1; CAP-TV-01..03",
+      "tokenDecimals": 6
+    },
+    {
+      "amountIn": 1,
+      "fiatValueMinor": 1,
+      "priceE18": 1,
+      "source": "11 section 4.1; CAP-TV-01..03",
+      "tokenDecimals": 6
+    },
+    {
+      "amountIn": 1000000,
+      "fiatValueMinor": 100,
+      "priceE18": "100000000000000000000",
+      "source": "11 section 4.1; CAP-TV-01..03",
+      "tokenDecimals": 6
+    },
+    {
+      "amountIn": "1000000000000000000",
+      "fiatValueMinor": 100,
+      "priceE18": "100000000000000000000",
+      "source": "11 section 4.1; CAP-TV-01..03",
+      "tokenDecimals": 18
+    },
+    {
+      "amountIn": "100000000000000000000000000000000000000000",
+      "fiatValueMinor": "99000000000000000100000",
+      "priceE18": "990000000000000001",
+      "source": "11 section 4.1; CAP-TV-01..03",
+      "tokenDecimals": 18
+    },
+    {
+      "amountIn": 123456789,
+      "fiatValueMinor": 12099,
+      "priceE18": "98000000000000000000",
+      "source": "11 section 4.1; CAP-TV-01..03",
+      "tokenDecimals": 6
+    },
+    {
+      "amountIn": 0,
+      "fiatValueMinor": 0,
+      "priceE18": "1000000000000000000",
+      "source": "11 section 4.1; CAP-TV-01..03",
+      "tokenDecimals": 6
+    },
+    {
+      "amountIn": "10000000000000000000000000000000000000000",
+      "fiatValueMinor": "10000000000000000000000000000000000",
+      "priceE18": "1000000000000000000000000000000",
+      "source": "11 section 4.1; CAP-TV-01..03",
+      "tokenDecimals": 18
+    },
+    {
+      "amountIn": 7,
+      "fiatValueMinor": 1,
+      "priceE18": "100000000000000000",
+      "source": "11 section 4.1; CAP-TV-01..03",
+      "tokenDecimals": 0
+    }
+  ],
+  "identifiers": {
+    "chainId": 84532,
+    "creationNonce": 7,
+    "customer": "0x4444444444444444444444444444444444444444",
+    "cycles": [
+      {
+        "cycleId": "0x8804d9d61c2133cc3f514977381e8932f94b4cd18758fb5acd3ee3c610392679",
+        "cycleIndex": 0,
+        "paymentId": "0x35406bd162fc6879d548d082a539227100fff3e589f2f3a8afbfa2c811ada52b"
+      },
+      {
+        "cycleId": "0xfdd3ccb4b08ac939d2b360ea615ca69dd50d27a86f6f76b6b99b99f14ba6e5fb",
+        "cycleIndex": 1,
+        "paymentId": "0xce0a7f5ef5ed03bc11198df6b564080f5512104724ad5ffd89a1a7f5d1eb07e3"
+      },
+      {
+        "cycleId": "0x0009655bce5449bf87f6096a84225091d3a463a7050d90ba90a6b00a6bbd4a7e",
+        "cycleIndex": 2,
+        "paymentId": "0xb40f70b3a16a2e583842c8191582f35d4cd040e77475ee01b1c7e4b9999d5fb2"
+      },
+      {
+        "cycleId": "0xc6777ba0e4b1c30c8bd16b9cf5855c02a39904a5278e68f8b2845060fa53de52",
+        "cycleIndex": 7,
+        "paymentId": "0x66b84cdd2fabfbf8a6f737335500225df8d296c8e208ef37732102c9674211c1"
+      }
+    ],
+    "lineageId": "0x6ad40af8ba8b2575c865f668a66e44bf4593949326bb0abd9347fb3867a8a7d7",
+    "mandateManager": "0x2222222222222222222222222222222222222222",
+    "mandates": [
+      {
+        "generation": 0,
+        "mandateId": "0x6be2553b584eafae19d0d8042907ddc82eb19554ad31473458e2ab0c0c2693ba"
+      },
+      {
+        "generation": 1,
+        "mandateId": "0xf5a40fcfd519ca4c28a7268d6c36b64777170f71c3a9701b269ad9399126d4f9"
+      },
+      {
+        "generation": 2,
+        "mandateId": "0x94453be58037bef11eb9c51692bd4228dedc2c88d62aae7288cbdf1899da3715"
+      }
+    ],
+    "merchantId": "0xaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+    "payOnce": {
+      "orderId": "0xcccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc",
+      "paymentId": "0x1df2cf8225a18dd50683c5c0021387daf68c2e9d79ccff1676818188c452848a",
+      "routerRegistry": "0x1111111111111111111111111111111111111111"
+    },
+    "source": "MIG-TV-19; 12 section 4; 11 section 3.1",
+    "subscriptionRef": "0xbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+  },
+  "permit2": [
+    {
+      "amount": 1,
+      "expiration": 100,
+      "now": 99,
+      "source": "MIG-TV-22, 40",
+      "usable": true
+    },
+    {
+      "amount": 1,
+      "expiration": 100,
+      "now": 100,
+      "source": "MIG-TV-22, 40",
+      "usable": true
+    },
+    {
+      "amount": 1,
+      "expiration": 100,
+      "now": 101,
+      "source": "MIG-TV-22, 40",
+      "usable": false
+    },
+    {
+      "amount": 0,
+      "expiration": 100,
+      "now": 50,
+      "source": "MIG-TV-22, 40",
+      "usable": false
+    },
+    {
+      "amount": "1461501637330902918203684832716283019655932542975",
+      "expiration": 100,
+      "now": 100,
+      "source": "MIG-TV-22, 40",
+      "usable": true
+    },
+    {
+      "amount": "1461501637330902918203684832716283019655932542975",
+      "expiration": 100,
+      "now": 101,
+      "source": "MIG-TV-22, 40",
+      "usable": false
+    },
+    {
+      "amount": 1,
+      "expiration": 0,
+      "now": 0,
+      "source": "MIG-TV-22, 40",
+      "usable": true
+    },
+    {
+      "amount": 1,
+      "expiration": 0,
+      "now": 1,
+      "source": "MIG-TV-22, 40",
+      "usable": false
+    },
+    {
+      "amount": 5,
+      "expiration": 281474976710655,
+      "now": 281474976710655,
+      "source": "MIG-TV-22, 40",
+      "usable": true
+    },
+    {
+      "amount": 5,
+      "expiration": 281474976710655,
+      "now": 281474976710656,
+      "source": "MIG-TV-22, 40",
+      "usable": false
+    }
+  ],
+  "pinStructs": {
+    "pin4337": {
+      "accountCodeHash": "0x49223014cf10cccde82f9b5ae5498e22f98e0eea663bca91a911e361add69e2e",
+      "accountMode": 3,
+      "delegate": "0x0000000000000000000000000000000000000000",
+      "delegateCodeHash": "0x0000000000000000000000000000000000000000000000000000000000000000",
+      "implementationFamily": "0xb9a15d488bd9222804976115d8c2ff92815d777e252bf9aa3fe6341f4b613d15",
+      "pinVersion": 1,
+      "signatureMode": 2
+    },
+    "pin7702": {
+      "accountCodeHash": "0x4a37830a39af172052f51de869b4cdb29187b16a71da5457fca733c4db241364",
+      "accountMode": 2,
+      "delegate": "0xabababababababababababababababababababab",
+      "delegateCodeHash": "0x00e909366694deb1e4fbbd183b70356e899ca8dcca5ecf975177e3ec29c1e052",
+      "implementationFamily": "0x41e7cea110e32333d68057a4496a860f2f362502e359b0971b6b6544c205e24c",
+      "pinVersion": 1,
+      "signatureMode": 2
+    },
+    "pinEoa": {
+      "accountCodeHash": "0x8b07c3b3a0bc8c34a9a1a11064f80e35587006d2afc562b5114a4d9071547ba5",
+      "accountMode": 1,
+      "delegate": "0x0000000000000000000000000000000000000000",
+      "delegateCodeHash": "0x0000000000000000000000000000000000000000000000000000000000000000",
+      "implementationFamily": "0x0000000000000000000000000000000000000000000000000000000000000000",
+      "pinVersion": 1,
+      "signatureMode": 1
+    }
+  },
+  "pins": {
+    "accountPinTypeHash": "0xa080d57e052584c73c3f7c5069eb0bccf7ce7d0326916d81ecda5f8867f57ec4",
+    "designatorCodeD1": "0xef0100abababababababababababababababababababab",
+    "designatorHashD1": "0x4a37830a39af172052f51de869b4cdb29187b16a71da5457fca733c4db241364",
+    "designatorHashD2": "0x8a642d7f1449eccbe45df15c4187cf981920a6fd94ca405c134f128f73c620d7",
+    "familyAccount": "0xb9a15d488bd9222804976115d8c2ff92815d777e252bf9aa3fe6341f4b613d15",
+    "familyDelegator": "0x41e7cea110e32333d68057a4496a860f2f362502e359b0971b6b6544c205e24c",
+    "keccakEmpty": "0xc5d2460186f7233c927e7db2dcc703c0e500b653ca82273b7bfad8045d85a470",
+    "pinEOA": "0x8b07c3b3a0bc8c34a9a1a11064f80e35587006d2afc562b5114a4d9071547ba5",
+    "pinHash4337": "0xd18faf6a27f9ff586ff4063f203c5072e5c5766efe213f8c10fc47935f023d08",
+    "pinHash7702": "0x63ee21ce79ca7fbcfd6bb2f823516ae5e92c24191b8a2a3f788a6497239a705c",
+    "pinHashEoa": "0x73d9001f3d8c6f9c3f105e1db220f675da955b585359fe5745fe15de58f5e7f0",
+    "source": "17 section 5.1, 9",
+    "testAccountCodeHash": "0x49223014cf10cccde82f9b5ae5498e22f98e0eea663bca91a911e361add69e2e",
+    "testDelegateCodeHash": "0x00e909366694deb1e4fbbd183b70356e899ca8dcca5ecf975177e3ec29c1e052"
+  },
+  "quote": {
+    "expected": {
+      "cycleId": "0xfdd3ccb4b08ac939d2b360ea615ca69dd50d27a86f6f76b6b99b99f14ba6e5fb",
+      "digest": "0x0326193de0387563de812611b1308f36c257a9d97a9b8be8cee2151e65672220",
+      "digestOnRouterB": "0xbe9f3e114405cdcf58ac12a216c83876420cb6dd4f0fc70350caee545110c8bc",
+      "domainSeparator": "0xf57423e1f3b9586afce650d682c7a0588bd96ddf5d1adb019358d198664a61d4",
+      "domainTypeHash": "0x8b73c3c69bb8fe3d512ecc4cf759cc79239f7b179b0ffacaa9a75d522b39400f",
+      "fiatValueMinor": 4999,
+      "lineageId": "0x6ad40af8ba8b2575c865f668a66e44bf4593949326bb0abd9347fb3867a8a7d7",
+      "mandateId0": "0x6be2553b584eafae19d0d8042907ddc82eb19554ad31473458e2ab0c0c2693ba",
+      "paymentId": "0xce0a7f5ef5ed03bc11198df6b564080f5512104724ad5ffd89a1a7f5d1eb07e3",
+      "priceQuoteTypeHash": "0x384641be814e75f4dce15c63df78fd013ed6055d9b4aeb1c855dc0ed3ec275c4",
+      "priceSourceSetHash": "0x1b7e9ef15cee6e37b6d59cbdb99f46a322e8a2109daa9e5c0c2a4a82c222d5d7",
+      "routeHash": "0xfdd8df3c220e58908ac7930433326b449ae46ddf928029a7fb6949364907d2d7",
+      "structHash": "0xad342b0681d76d0f3a825f0a2aa37e91345cde4a7373b562738492cf4f277986"
+    },
+    "inputs": {
+      "chainId": 84532,
+      "creationNonce": 7,
+      "customer": "0x4444444444444444444444444444444444444444",
+      "cycleIndex": 1,
+      "mandateManager": "0x2222222222222222222222222222222222222222",
+      "merchantId": "0xaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "quote": {
+        "amountIn": 49990000,
+        "boundsVersion": 1,
+        "currency": 840,
+        "issuedAt": 1800000000,
+        "nonce": 424242,
+        "payer": "0x4444444444444444444444444444444444444444",
+        "priceE18": "100000000000000000000",
+        "registryVersion": 12,
+        "signerSetVersion": 3,
+        "token": "0x5555555555555555555555555555555555555555",
+        "validAfter": 1800000000,
+        "validUntil": 1800000120
+      },
+      "router": "0x1111111111111111111111111111111111111111",
+      "routerB": "0x1212121212121212121212121212121212121212",
+      "subscriptionRef": "0xbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+      "tokenDecimals": 6
+    },
+    "source": "11 section 4.6"
+  },
+  "route": [
+    {
+      "chainId": 84532,
+      "routeHash": "0xfdd8df3c220e58908ac7930433326b449ae46ddf928029a7fb6949364907d2d7",
+      "source": "11 section 4.1 field 14",
+      "token": "0x5555555555555555555555555555555555555555"
+    },
+    {
+      "chainId": 1,
+      "routeHash": "0xf49768d76dfb5afde494c53acebee5ce3413f3aba84520c467ec0343da4860bd",
+      "source": "11 section 4.1 field 14",
+      "token": "0x5555555555555555555555555555555555555555"
+    },
+    {
+      "chainId": 84532,
+      "routeHash": "0xd0ab71ed9da76d1f3e3af32c27c0ebb8af7cc2d2471ed64a4222b313bcce7ad5",
+      "source": "11 section 4.1 field 14",
+      "token": "0x6666666666666666666666666666666666666666"
+    }
+  ],
+  "snapshot": {
+    "snapshotHash": "0x717e6c794e72d2bb7bd09f3904f69b0ed1aa1fa249a5beace858ce12e92f9256",
+    "source": "12 section 5.3.4",
+    "termsHash": "0xbe1b1af38fd02087cfe4374e2d035b6fbb1d1e6020bbdb2400aba488205e2433"
+  },
+  "termsHashes": [
+    {
+      "customer": "0x4444444444444444444444444444444444444444",
+      "generation": 0,
+      "id": "TH_00",
+      "label": "reference predecessor of 12 5.3.4",
+      "lineageId": "0x7777777777777777777777777777777777777777777777777777777777777777",
+      "predecessorId": "0x7878787878787878787878787878787878787878787878787878787878787878",
+      "snapshotHash": "0x717e6c794e72d2bb7bd09f3904f69b0ed1aa1fa249a5beace858ce12e92f9256",
+      "source": "12 section 5.3.2; 12 A3",
+      "termsHash": "0xbe1b1af38fd02087cfe4374e2d035b6fbb1d1e6020bbdb2400aba488205e2433",
+      "words": [
+        "1900000000", "77194726158210796949047323339125271902179989777093709359638389338608753093290",
+        "454086624460063511464984254936031011189294057512315937409637584344757371137",
+        "84914198774031876643952055673037799092397988754803080295602228272469628402619", "2592000", "1800000000",
+        "840", "2", "487167212443634306067894944238761006551977514325",
+        "584600654932361167281473933086513207862373017190", "0", "51020409", "612244908", "0", "0", "51020409", "0",
+        "51020409", "612244908", "0", "0", "51020409", "0", "0", "0", "0", "0", "0", "0", "5000", "60000", "0", "0",
+        "5000", "0", "120", "1", "1", "86400", "100", "0"
+      ]
+    },
+    {
+      "customer": "0x4444444444444444444444444444444444444444",
+      "generation": 1,
+      "id": "TH_01",
+      "label": "reference narrower successor",
+      "lineageId": "0x7777777777777777777777777777777777777777777777777777777777777777",
+      "predecessorId": "0x7878787878787878787878787878787878787878787878787878787878787878",
+      "snapshotHash": "0x12e2f90cdce5d016dcbe3e3e4232b8f3aa87ab59d978a6b92e9574e234482140",
+      "source": "12 section 5.3.2; 12 A3",
+      "termsHash": "0x3657e33b7bead0a3a52b1aebd9f8e4ca884820358c343c7301414f563519c7ce",
+      "words": [
+        "1850000000", "77194726158210796949047323339125271902179989777093709359638389338608753093290",
+        "454086624460063511464984254936031011189294057512315937409637584344757371137",
+        "84914198774031876643952055673037799092397988754803080295602228272469628402619", "2592000", "1800000000",
+        "840", "1", "487167212443634306067894944238761006551977514325", "0", "0", "40000000", "500000000", "0", "0",
+        "40000000", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "5000", "50000", "0", "0", "5000",
+        "0", "120", "1", "1", "86400", "50", "0"
+      ]
+    },
+    {
+      "customer": "0x34d5a77847eb79af0fabe965c91f76db7d99a949",
+      "generation": 1,
+      "id": "TH_02",
+      "label": "random terms 0",
+      "lineageId": "0x7fb72fd68bba1318b8e73b486a331324b53f758b056407c0f1b998ed619b1fe8",
+      "predecessorId": "0xdee53fe96e44ec2a18ca2c21ce2dcffd761e5cbded4c1909c65515f99c01a9e3",
+      "snapshotHash": "0x0ae30a8fdaaf1211a9ec3a618a1f20d93434af16514b8b617034f0f928ee8d76",
+      "source": "12 section 5.3.2; 12 A3",
+      "termsHash": "0x952a4da607b84d442d42d09f7850fe8207625d4e3eec39e2f4a867a283c56464",
+      "words": [
+        "287", "77", "82", "83", "100", "0", "840", "2", "28673", "28674", "0", "497", "490", "537", "535", "965",
+        "338", "526", "579", "577", "0", "168", "927", "0", "0", "0", "0", "0", "0", "0", "196", "168", "410", "0",
+        "0", "270", "2", "3", "10", "196", "0"
+      ]
+    },
+    {
+      "customer": "0x89c577c48a88d149f801e359cf61408ddf16a6f6",
+      "generation": 2,
+      "id": "TH_03",
+      "label": "random terms 1",
+      "lineageId": "0xbc288330589d9ec6fba17aa144126c6b4d3a974a6c82845df78063aefa7736ee",
+      "predecessorId": "0x2531e176fdfbb3cee85ab53568e6ac5e131d251d1eaae2964d391c713f08080b",
+      "snapshotHash": "0x0e65835162e8a6759a343b36d59e2677c31edde637bfdea315b26b247b29be0f",
+      "source": "12 section 5.3.2; 12 A3",
+      "termsHash": "0xc83c4ced8fcd653a4db90d4bbcb0464acdbffa02685782e36d9809bc12d39e38",
+      "words": [
+        "415", "77", "82", "83", "100", "0", "840", "1", "28673", "0", "0", "0", "739", "440", "73", "0", "178", "0",
+        "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "181", "219", "194", "0", "158", "0", "246", "0", "1",
+        "100", "107", "0"
+      ]
+    },
+    {
+      "customer": "0xb91c865851cbe37acf6022b8c802a272e4b33699",
+      "generation": 3,
+      "id": "TH_04",
+      "label": "random terms 2",
+      "lineageId": "0x61b4f7ba1a724be25ff0cca3476bf1f14040061bd30235efac261bab254cf54b",
+      "predecessorId": "0x721fa1eeef69051e52c9da9f46c77cfa15075a0a33c4094bd47ecd6330211f54",
+      "snapshotHash": "0x8dd5b88285eeb13e7a4fc00c4df8a15f657ebfd3fa45d35b82f1225c0e37d05e",
+      "source": "12 section 5.3.2; 12 A3",
+      "termsHash": "0x8a4b3c1ae247e46be071da31990e5e2cbad9eee1f5ba1201ebebb277f6d5429d",
+      "words": [
+        "206", "77", "82", "83", "100", "0", "840", "1", "28675", "0", "0", "11", "815", "126", "954", "319", "358",
+        "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "225", "116", "189", "304", "60", "0", "84", "1",
+        "1", "10", "166", "0"
+      ]
+    },
+    {
+      "customer": "0xdaa5092e81c224eb651660b80a128284671a4ad9",
+      "generation": 4,
+      "id": "TH_05",
+      "label": "random terms 3",
+      "lineageId": "0x13fabb7c19d97e2f777519ae63a3afe54f946a295b2adb7729b759673d63f483",
+      "predecessorId": "0x5d8c942a21159a8e2c14b8afe10a581eaeae03fb960b4a1a185dfd9ff0127e79",
+      "snapshotHash": "0x3c81600689a8c1ff9ab3a965cb9815d581e930576312f0b495dc4ab9b63c7f6a",
+      "source": "12 section 5.3.2; 12 A3",
+      "termsHash": "0x4679103f8415a9b699a5365809894a7ec8d6c35f55c894985519db8f9c52b10b",
+      "words": [
+        "138", "19762", "82", "83", "100", "0", "840", "2", "28673", "28675", "0", "709", "0", "739", "300", "411",
+        "773", "557", "371", "884", "202", "0", "363", "0", "0", "0", "0", "0", "0", "296", "279", "246", "442", "241",
+        "260", "240", "4", "0", "10", "131", "0"
+      ]
+    },
+    {
+      "customer": "0x9b3c3a97f5e4254c2cacaa7f490347e957a4fcc0",
+      "generation": 5,
+      "id": "TH_06",
+      "label": "random terms 4",
+      "lineageId": "0x5d48ebc1e75882a275db8c016054f51492f463bde28d31f837adcac6fafdc77b",
+      "predecessorId": "0x18d9b8cf3d3e94b4c87f50635c2b8203d0afc777ef545b6c59f0f1dfb11bab92",
+      "snapshotHash": "0xa641113d5d185d03e548130df738f0bc7d7d9977b183bbe475c1939346e9e49d",
+      "source": "12 section 5.3.2; 12 A3",
+      "termsHash": "0x08a47c8c5b27eac8c09e09d95ec48b568820f215f80146d3717e3f2cf1ae0e36",
+      "words": [
+        "959", "77", "82", "83", "100", "0", "840", "3", "28673", "28674", "28675", "920", "474", "439", "633", "465",
+        "578", "735", "252", "773", "931", "416", "410", "0", "356", "699", "467", "0", "445", "344", "88", "13",
+        "194", "456", "219", "136", "3", "2", "10", "17", "0"
+      ]
+    },
+    {
+      "customer": "0x441b367264f4efdfe28d361d8c76e1428118faf3",
+      "generation": 6,
+      "id": "TH_07",
+      "label": "random terms 5",
+      "lineageId": "0xa474ed71da6b89b2360df9b4f58c09004eee73a8e20d74f19bf4e44354dd394c",
+      "predecessorId": "0x48d5e2ffd2cfb277b2bcec6b420f03e083f753dd04291526a2772d97d60fb165",
+      "snapshotHash": "0x41f4a4f6842da09eabc7d6f94f06cce58d81a9d3e4a264178e2b54484ea4908a",
+      "source": "12 section 5.3.2; 12 A3",
+      "termsHash": "0x600beb3a1899c8f39aa28097ba7131469bca01b94cdc7ee01e3c9d2f1253e5af",
+      "words": [
+        "559", "77", "82", "83", "100", "0", "840", "2", "28673", "28675", "0", "0", "0", "503", "281", "641", "0",
+        "927", "410", "0", "893", "997", "135", "0", "0", "0", "0", "0", "0", "167", "0", "314", "150", "340", "137",
+        "42", "0", "3", "0", "51", "0"
+      ]
+    },
+    {
+      "customer": "0xffffffffffffffffffffffffffffffffffffffff",
+      "generation": 4294967295,
+      "id": "TH_08",
+      "label": "every field at the maximum of its width",
+      "lineageId": "0xaefa957f3af5c253fe352c5865ae4cc73099521448e81c4b456eadc342a5b1d6",
+      "predecessorId": "0x8a935464e4d53644ce1f665b5c7ceaf43e92285dc35806bdcfa0f8729f02d6ce",
+      "snapshotHash": "0xd11607bffb9963d87fee4a89ecf5dd19aa43108e85026b0a1a53006bec8a52a6",
+      "source": "12 section 5.3.2; 12 A3",
+      "termsHash": "0x303d3665c1b6aa553f0c3b757964e6c1c7990c532b47230024095485f2c60673",
+      "words": [
+        "18446744073709551615", "115792089237316195423570985008687907853269984665640564039457584007913129639935",
+        "115338002612856131912106000753751876842080690608128248102047946423568372268798",
+        "114883915988396068400641016498815845830891396550615932164638308839223614897661", "18446744073709551614",
+        "18446744073709551613", "65535", "3", "28673", "28674", "28675",
+        "115792089237316195423570985008687907853269984665640564039457584007913129639935",
+        "115792089237316195423570985008687907853269984665640564039457584007913129639930",
+        "115792089237316195423570985008687907853269984665640564039457584007913129639934",
+        "115792089237316195423570985008687907853269984665640564039457584007913129639933",
+        "115792089237316195423570985008687907853269984665640564039457584007913129639932",
+        "115792089237316195423570985008687907853269984665640564039457584007913129639931",
+        "115792089237316195423570985008687907853269984665640564039457584007913129639935",
+        "115792089237316195423570985008687907853269984665640564039457584007913129639930",
+        "115792089237316195423570985008687907853269984665640564039457584007913129639934",
+        "115792089237316195423570985008687907853269984665640564039457584007913129639933",
+        "115792089237316195423570985008687907853269984665640564039457584007913129639932",
+        "115792089237316195423570985008687907853269984665640564039457584007913129639931",
+        "115792089237316195423570985008687907853269984665640564039457584007913129639935",
+        "115792089237316195423570985008687907853269984665640564039457584007913129639930",
+        "115792089237316195423570985008687907853269984665640564039457584007913129639934",
+        "115792089237316195423570985008687907853269984665640564039457584007913129639933",
+        "115792089237316195423570985008687907853269984665640564039457584007913129639932",
+        "115792089237316195423570985008687907853269984665640564039457584007913129639931", "18446744073709551615",
+        "18446744073709551610", "18446744073709551614", "18446744073709551613", "18446744073709551612",
+        "18446744073709551611", "4294967295", "4294967294", "65535", "4294967293", "65534",
+        "114429829363936004889176032243879814819702102493103616227228671254878857526524"
+      ]
+    }
+  ]
+}

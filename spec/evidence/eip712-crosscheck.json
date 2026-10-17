@@ -1,0 +1,42 @@
+{
+ "schema": 1,
+ "tool": "tools/eip712_crosscheck.py",
+ "typesFingerprint": "472bb8c27abe7f8c7f21d55b2c30dda3f45cab11cd76da9a19d2e46ca06bbe9e",
+ "typesJsonSha256": "5ecb34e57e622cdf7c868c385900ebd4872fc60d37e97f6979c924e03d07d66d",
+ "goldenVectorsSha256": "26f40ab6b0fed48c1f107fabd564d73eadccd3b13eb4b4affdf403dab7b34ab4",
+ "node": "v22.19.0",
+ "forge": "forge Version: 1.8.5",
+ "generatedAt": "2026-10-17T13:31:38Z",
+ "runs": [
+  {
+   "name": "PYTHON: export_eip712.py --check (every generated artifact equals what the reference encoder produces)",
+   "exit": 0,
+   "passed": 1,
+   "failed": 0,
+   "detail": "eip712 artifacts: up to date (38 files)"
+  },
+  {
+   "name": "TYPESCRIPT: eip712/test-eip712.ts",
+   "exit": 0,
+   "passed": 369,
+   "failed": 0,
+   "detail": "eip712 TypeScript: 369 checks passed (14 structs, Permit2 witness single and batch, tags, bounds)"
+  },
+  {
+   "name": "SOLIDITY, reference model (spec/foundry): EIP712GoldenTest against Foundry's EIP-712 cheat codes",
+   "exit": 0,
+   "passed": 19,
+   "failed": 0,
+   "detail": ""
+  },
+  {
+   "name": "SOLIDITY, actual contracts (contracts/): EIP712GoldenTest against Foundry's EIP-712 cheat codes",
+   "exit": 0,
+   "passed": 19,
+   "failed": 0,
+   "detail": ""
+  }
+ ],
+ "allAgree": true,
+ "note": "The four implementations agree on the golden vectors. No wallet has displayed or signed any of these messages."
+}

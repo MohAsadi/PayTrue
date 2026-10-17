@@ -1,0 +1,919 @@
+{
+ "schema": 1,
+ "tool": "tools/fork_run.py",
+ "project": "foundry (reference model, Permit2 freeze tests)",
+ "forge": "forge Version: 1.8.5 | Commit SHA: 51a52c59cffd940f76eddd0b4bb1791aa4b5ac7f | Build Timestamp: 2026-10-05T17:01:32.131957300Z (1791219692) | Build Profile: dist",
+ "back": 64,
+ "generatedAt": "2026-10-17T11:11:52Z",
+ "permit2": "0x000000000022D473030F116dDEE9F6B43aC78BA3",
+ "pinnedCommit": "cc306b601f172c51bc04334a109e98340456620b",
+ "chains": [
+  {
+   "chainId": 1,
+   "name": "Ethereum mainnet",
+   "block": 26211820,
+   "blockHash": "0x3e9e0ffb4a8766d8036f3adbe20a7d70a302846d16974f104366cdd231fced09",
+   "providersAgreeing": [
+    "https://ethereum-rpc.publicnode.com",
+    "https://1rpc.io/eth",
+    "https://eth.drpc.org",
+    "https://rpc.flashbots.net",
+    "https://eth-mainnet.public.blastapi.io"
+   ],
+   "attempts": [
+    {
+     "forkUrl": "https://ethereum-rpc.publicnode.com",
+     "exitCode": 0,
+     "seconds": 5.0,
+     "rawOutput": "evidence/implementation/logs/fork-1.json",
+     "tests": [
+      {
+       "suite": "Permit2FreezeTest",
+       "test": "testFuzz_DifferentialAgainstMock(uint256)",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": 1000,
+       "logs": []
+      },
+      {
+       "suite": "Permit2FreezeTest",
+       "test": "test_F2_ApproveOverwritesTheSharedSlot()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "Permit2FreezeTest",
+       "test": "test_F4_UnlimitedIsNeverDecremented_BoundedIs()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "Permit2FreezeTest",
+       "test": "test_F5_ExpirationZeroStoresBlockTimestamp()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "Permit2FreezeTest",
+       "test": "test_MIG_TV_22_40_UsabilityBoundary()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "Permit2FreezeTest",
+       "test": "test_RV_T01_LockdownZeroesTheAmountOnly()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "Permit2FreezeTest",
+       "test": "test_RV_T02_LockdownOfTheUnlimitedSentinel()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "Permit2FreezeTest",
+       "test": "test_RV_T03_OneCallTwoPairsLeavesOtherSpendersAlone()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "Permit2FreezeTest",
+       "test": "test_RV_T04_LockdownOfAnExpiredAllowance()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "Permit2FreezeTest",
+       "test": "test_RV_T05_LockdownWithNoAllowance()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "Permit2FreezeTest",
+       "test": "test_RV_T06_AnAttackersLockdownChangesNothingOfTheOwner()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "Permit2FreezeTest",
+       "test": "test_RV_T07_AllowanceFromASignedPermit_LockdownAndReplay()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "Permit2FreezeTest",
+       "test": "test_RV_T08_ApproveZeroZero()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "Permit2FreezeTest",
+       "test": "test_RV_T10_InvalidateNonces_Cap()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "Permit2FreezeTest",
+       "test": "test_RV_T11_LockdownForEoa_DelegatedEoa_AndContractAccount()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "Permit2ThreeChainsTest",
+       "test": "test_Fork_ChainBlockAndCodeAreRecorded()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": [
+        "chain id: 1",
+        "fork block number: 26211820",
+        "fork block timestamp: 1792234643",
+        "Permit2 code hash on the fork: 0xc67d1657868aa5146eaf24fb879fb1fdec3d2d493b3683a61c9c2f4fb2851131",
+        "Permit2 code length on the fork: 9152"
+       ]
+      },
+      {
+       "suite": "Permit2ThreeChainsTest",
+       "test": "test_Fork_DeployedCodeIsExactlyTheRebuiltCode()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "Permit2ThreeChainsTest",
+       "test": "test_Fork_DomainSeparatorEqualsTheGoldenLibrary()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "Permit2ThreeChainsTest",
+       "test": "test_Fork_ImmutableSlotsHoldTheChainIdAndTheDomainSeparator()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "Permit2ThreeChainsTest",
+       "test": "test_Witness_Batch_Accepted()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "Permit2ThreeChainsTest",
+       "test": "test_Witness_Batch_PermittedAmountsAreBinding()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "Permit2ThreeChainsTest",
+       "test": "test_Witness_Batch_SingleSignatureDoesNotValidateAsBatchAndViceVersa()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "Permit2ThreeChainsTest",
+       "test": "test_Witness_Batch_WrongSpenderAndLengthMismatch()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "Permit2ThreeChainsTest",
+       "test": "test_Witness_Single_Accepted()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "Permit2ThreeChainsTest",
+       "test": "test_Witness_Single_AnyChangeOfTheTypeStringFails()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "Permit2ThreeChainsTest",
+       "test": "test_Witness_Single_DestinationIsNotBoundByPermit2()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "Permit2ThreeChainsTest",
+       "test": "test_Witness_Single_EveryFieldIsBound()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "Permit2ThreeChainsTest",
+       "test": "test_Witness_Single_ExpiredAndOverRequested()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "Permit2ThreeChainsTest",
+       "test": "test_Witness_Single_OnlyTheSignedSpender()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "Permit2ThreeChainsTest",
+       "test": "test_Witness_Single_ReplayIsRefused()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      }
+     ],
+     "passed": 30,
+     "failed": 0,
+     "skipped": 0
+    }
+   ],
+   "result": "PASS",
+   "usedAttempt": 0
+  },
+  {
+   "chainId": 8453,
+   "name": "Base",
+   "block": 52722988,
+   "blockHash": "0x9d7e7150a410d47a4b1c1b9ab37f5da32180d2a0bc18b0f67bb3e865bce7bdf9",
+   "providersAgreeing": [
+    "https://mainnet.base.org",
+    "https://base-rpc.publicnode.com"
+   ],
+   "attempts": [
+    {
+     "forkUrl": "https://mainnet.base.org",
+     "exitCode": 0,
+     "seconds": 41.0,
+     "rawOutput": "evidence/implementation/logs/fork-8453.json",
+     "tests": [
+      {
+       "suite": "Permit2FreezeTest",
+       "test": "testFuzz_DifferentialAgainstMock(uint256)",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": 1000,
+       "logs": []
+      },
+      {
+       "suite": "Permit2FreezeTest",
+       "test": "test_F2_ApproveOverwritesTheSharedSlot()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "Permit2FreezeTest",
+       "test": "test_F4_UnlimitedIsNeverDecremented_BoundedIs()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "Permit2FreezeTest",
+       "test": "test_F5_ExpirationZeroStoresBlockTimestamp()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "Permit2FreezeTest",
+       "test": "test_MIG_TV_22_40_UsabilityBoundary()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "Permit2FreezeTest",
+       "test": "test_RV_T01_LockdownZeroesTheAmountOnly()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "Permit2FreezeTest",
+       "test": "test_RV_T02_LockdownOfTheUnlimitedSentinel()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "Permit2FreezeTest",
+       "test": "test_RV_T03_OneCallTwoPairsLeavesOtherSpendersAlone()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "Permit2FreezeTest",
+       "test": "test_RV_T04_LockdownOfAnExpiredAllowance()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "Permit2FreezeTest",
+       "test": "test_RV_T05_LockdownWithNoAllowance()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "Permit2FreezeTest",
+       "test": "test_RV_T06_AnAttackersLockdownChangesNothingOfTheOwner()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "Permit2FreezeTest",
+       "test": "test_RV_T07_AllowanceFromASignedPermit_LockdownAndReplay()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "Permit2FreezeTest",
+       "test": "test_RV_T08_ApproveZeroZero()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "Permit2FreezeTest",
+       "test": "test_RV_T10_InvalidateNonces_Cap()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "Permit2FreezeTest",
+       "test": "test_RV_T11_LockdownForEoa_DelegatedEoa_AndContractAccount()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "Permit2ThreeChainsTest",
+       "test": "test_Fork_ChainBlockAndCodeAreRecorded()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": [
+        "chain id: 8453",
+        "fork block number: 52722988",
+        "fork block timestamp: 1792235323",
+        "Permit2 code hash on the fork: 0xa67739abc3ede9dbdc0491636c67d6a14ac07fab9030c3f509b1eb7b11dff8ed",
+        "Permit2 code length on the fork: 9152"
+       ]
+      },
+      {
+       "suite": "Permit2ThreeChainsTest",
+       "test": "test_Fork_DeployedCodeIsExactlyTheRebuiltCode()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "Permit2ThreeChainsTest",
+       "test": "test_Fork_DomainSeparatorEqualsTheGoldenLibrary()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "Permit2ThreeChainsTest",
+       "test": "test_Fork_ImmutableSlotsHoldTheChainIdAndTheDomainSeparator()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "Permit2ThreeChainsTest",
+       "test": "test_Witness_Batch_Accepted()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "Permit2ThreeChainsTest",
+       "test": "test_Witness_Batch_PermittedAmountsAreBinding()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "Permit2ThreeChainsTest",
+       "test": "test_Witness_Batch_SingleSignatureDoesNotValidateAsBatchAndViceVersa()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "Permit2ThreeChainsTest",
+       "test": "test_Witness_Batch_WrongSpenderAndLengthMismatch()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "Permit2ThreeChainsTest",
+       "test": "test_Witness_Single_Accepted()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "Permit2ThreeChainsTest",
+       "test": "test_Witness_Single_AnyChangeOfTheTypeStringFails()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "Permit2ThreeChainsTest",
+       "test": "test_Witness_Single_DestinationIsNotBoundByPermit2()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "Permit2ThreeChainsTest",
+       "test": "test_Witness_Single_EveryFieldIsBound()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "Permit2ThreeChainsTest",
+       "test": "test_Witness_Single_ExpiredAndOverRequested()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "Permit2ThreeChainsTest",
+       "test": "test_Witness_Single_OnlyTheSignedSpender()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "Permit2ThreeChainsTest",
+       "test": "test_Witness_Single_ReplayIsRefused()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      }
+     ],
+     "passed": 30,
+     "failed": 0,
+     "skipped": 0
+    }
+   ],
+   "result": "PASS",
+   "usedAttempt": 0
+  },
+  {
+   "chainId": 42161,
+   "name": "Arbitrum One",
+   "block": 515655382,
+   "blockHash": "0xb0c775640e0d063eefb5080f9ec7b0e6e2fab31a9a5e2eb23ea5395b85e7bea4",
+   "providersAgreeing": [
+    "https://arb1.arbitrum.io/rpc",
+    "https://arbitrum-one-rpc.publicnode.com"
+   ],
+   "attempts": [
+    {
+     "forkUrl": "https://arb1.arbitrum.io/rpc",
+     "exitCode": 0,
+     "seconds": 16.1,
+     "rawOutput": "evidence/implementation/logs/fork-42161.json",
+     "tests": [
+      {
+       "suite": "Permit2FreezeTest",
+       "test": "testFuzz_DifferentialAgainstMock(uint256)",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": 1000,
+       "logs": []
+      },
+      {
+       "suite": "Permit2FreezeTest",
+       "test": "test_F2_ApproveOverwritesTheSharedSlot()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "Permit2FreezeTest",
+       "test": "test_F4_UnlimitedIsNeverDecremented_BoundedIs()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "Permit2FreezeTest",
+       "test": "test_F5_ExpirationZeroStoresBlockTimestamp()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "Permit2FreezeTest",
+       "test": "test_MIG_TV_22_40_UsabilityBoundary()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "Permit2FreezeTest",
+       "test": "test_RV_T01_LockdownZeroesTheAmountOnly()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "Permit2FreezeTest",
+       "test": "test_RV_T02_LockdownOfTheUnlimitedSentinel()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "Permit2FreezeTest",
+       "test": "test_RV_T03_OneCallTwoPairsLeavesOtherSpendersAlone()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "Permit2FreezeTest",
+       "test": "test_RV_T04_LockdownOfAnExpiredAllowance()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "Permit2FreezeTest",
+       "test": "test_RV_T05_LockdownWithNoAllowance()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "Permit2FreezeTest",
+       "test": "test_RV_T06_AnAttackersLockdownChangesNothingOfTheOwner()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "Permit2FreezeTest",
+       "test": "test_RV_T07_AllowanceFromASignedPermit_LockdownAndReplay()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "Permit2FreezeTest",
+       "test": "test_RV_T08_ApproveZeroZero()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "Permit2FreezeTest",
+       "test": "test_RV_T10_InvalidateNonces_Cap()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "Permit2FreezeTest",
+       "test": "test_RV_T11_LockdownForEoa_DelegatedEoa_AndContractAccount()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "Permit2ThreeChainsTest",
+       "test": "test_Fork_ChainBlockAndCodeAreRecorded()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": [
+        "chain id: 42161",
+        "fork block number: 26211888",
+        "fork block timestamp: 1792235472",
+        "Permit2 code hash on the fork: 0x9e51dcb64cf56fc09a82cb41edbc17c6a2250f18dbd1b91e884c0aca02acd57c",
+        "Permit2 code length on the fork: 9152"
+       ]
+      },
+      {
+       "suite": "Permit2ThreeChainsTest",
+       "test": "test_Fork_DeployedCodeIsExactlyTheRebuiltCode()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "Permit2ThreeChainsTest",
+       "test": "test_Fork_DomainSeparatorEqualsTheGoldenLibrary()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "Permit2ThreeChainsTest",
+       "test": "test_Fork_ImmutableSlotsHoldTheChainIdAndTheDomainSeparator()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "Permit2ThreeChainsTest",
+       "test": "test_Witness_Batch_Accepted()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "Permit2ThreeChainsTest",
+       "test": "test_Witness_Batch_PermittedAmountsAreBinding()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "Permit2ThreeChainsTest",
+       "test": "test_Witness_Batch_SingleSignatureDoesNotValidateAsBatchAndViceVersa()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "Permit2ThreeChainsTest",
+       "test": "test_Witness_Batch_WrongSpenderAndLengthMismatch()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "Permit2ThreeChainsTest",
+       "test": "test_Witness_Single_Accepted()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "Permit2ThreeChainsTest",
+       "test": "test_Witness_Single_AnyChangeOfTheTypeStringFails()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "Permit2ThreeChainsTest",
+       "test": "test_Witness_Single_DestinationIsNotBoundByPermit2()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "Permit2ThreeChainsTest",
+       "test": "test_Witness_Single_EveryFieldIsBound()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "Permit2ThreeChainsTest",
+       "test": "test_Witness_Single_ExpiredAndOverRequested()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "Permit2ThreeChainsTest",
+       "test": "test_Witness_Single_OnlyTheSignedSpender()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "Permit2ThreeChainsTest",
+       "test": "test_Witness_Single_ReplayIsRefused()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      }
+     ],
+     "passed": 30,
+     "failed": 0,
+     "skipped": 0
+    }
+   ],
+   "result": "PASS",
+   "usedAttempt": 0
+  }
+ ],
+ "verdict": "PASS"
+}

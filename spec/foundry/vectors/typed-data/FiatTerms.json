@@ -1,0 +1,78 @@
+{
+ "types": {
+  "EIP712Domain": [
+   {
+    "name": "name",
+    "type": "string"
+   },
+   {
+    "name": "version",
+    "type": "string"
+   },
+   {
+    "name": "chainId",
+    "type": "uint256"
+   },
+   {
+    "name": "verifyingContract",
+    "type": "address"
+   }
+  ],
+  "FiatTerms": [
+   {
+    "name": "currency",
+    "type": "uint16"
+   },
+   {
+    "name": "perPaymentMaxMinor",
+    "type": "uint64"
+   },
+   {
+    "name": "dayMaxMinor",
+    "type": "uint64"
+   },
+   {
+    "name": "weekMaxMinor",
+    "type": "uint64"
+   },
+   {
+    "name": "thirtyDayMaxMinor",
+    "type": "uint64"
+   },
+   {
+    "name": "periodMaxMinor",
+    "type": "uint64"
+   },
+   {
+    "name": "totalMaxMinor",
+    "type": "uint64"
+   },
+   {
+    "name": "maxQuoteAge",
+    "type": "uint32"
+   },
+   {
+    "name": "boundsVersion",
+    "type": "uint32"
+   }
+  ]
+ },
+ "primaryType": "FiatTerms",
+ "domain": {
+  "name": "FastPay Mandates",
+  "version": "1",
+  "chainId": "84532",
+  "verifyingContract": "0x2222222222222222222222222222222222222222"
+ },
+ "message": {
+  "currency": "840",
+  "perPaymentMaxMinor": "5000",
+  "dayMaxMinor": "1001",
+  "weekMaxMinor": "2002",
+  "thirtyDayMaxMinor": "3003",
+  "periodMaxMinor": "4004",
+  "totalMaxMinor": "60000",
+  "maxQuoteAge": "120",
+  "boundsVersion": "3"
+ }
+}

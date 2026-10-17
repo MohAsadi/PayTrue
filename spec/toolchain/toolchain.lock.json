@@ -1,0 +1,118 @@
+{
+ "schema": 1,
+ "lockedOn": "2026-10-16",
+ "purpose": "Pinned toolchain for the Foundry suites and the Permit2 rebuild. Every artifact is identified by URL and SHA-256 and is verified before use. Nothing here is a claim that the artifacts are safe beyond that: Foundry's published attestations (sigstore) are recorded but NOT verified by this repository's tooling.",
+ "foundry": {
+  "version": "v1.8.5",
+  "releasedAt": "2026-10-05T18:46:58Z",
+  "source": "https://github.com/foundry-rs/foundry/releases/tag/v1.8.5",
+  "artifacts": {
+   "windows-amd64": {
+    "url": "https://github.com/foundry-rs/foundry/releases/download/v1.8.5/foundry_v1.8.5_win32_amd64.zip",
+    "sha256": "21f86b563d87404a68481f513bf3e419780ee536307b89c658215ae6f8f5aa45",
+    "published": [
+     "foundry_v1.8.5_win32_amd64.sha256 (same value)",
+     "foundry_v1.8.5_win32_amd64.attestation.txt",
+     "foundry_v1.8.5_win32_amd64.sigstore.json"
+    ],
+    "extractTo": "bin"
+   },
+   "linux-amd64": {
+    "url": "https://github.com/foundry-rs/foundry/releases/download/v1.8.5/foundry_v1.8.5_linux_amd64.tar.gz",
+    "sha256": "6c66ffcc55fa4249197721baa3098bc208014ea1d8aa04b2ed50ac6bccffb226",
+    "published": [
+     "foundry_v1.8.5_linux_amd64.sha256 (same value)",
+     "foundry_v1.8.5_linux_amd64.attestation.txt",
+     "foundry_v1.8.5_linux_amd64.sigstore.json"
+    ],
+    "extractTo": "bin"
+   }
+  }
+ },
+ "solc": {
+  "versions": {
+   "0.8.24": {
+    "use": "the reference model and every test of spec/foundry",
+    "windows-amd64": {
+     "url": "https://binaries.soliditylang.org/windows-amd64/solc-windows-amd64-v0.8.24+commit.e11b9ed9.exe",
+     "sha256": "580ee56b61bbcaad953117e1e4a0874d90e6af5cb4ce4359571d7da25f6620e9",
+     "file": "solc-0.8.24.exe"
+    },
+    "linux-amd64": {
+     "url": "https://binaries.soliditylang.org/linux-amd64/solc-linux-amd64-v0.8.24+commit.e11b9ed9",
+     "sha256": "fb03a29a517452b9f12bcf459ef37d0a543765bb3bbc911e70a87d6a37c30d5f",
+     "file": "solc-0.8.24"
+    }
+   },
+   "0.8.17": {
+    "use": "the Permit2 rebuild at the pinned commit (the compiler its foundry.toml names)",
+    "windows-amd64": {
+     "url": "https://binaries.soliditylang.org/windows-amd64/solc-windows-amd64-v0.8.17+commit.8df45f5f.exe",
+     "sha256": "7615e019666f29c7e77b20f9c506dda839a875fbc9baf3322d21348c88c05c69",
+     "file": "solc-0.8.17.exe"
+    },
+    "linux-amd64": {
+     "url": "https://binaries.soliditylang.org/linux-amd64/solc-linux-amd64-v0.8.17+commit.8df45f5f",
+     "sha256": "99f2070b776e9714f1f76c43c229cf99b8978a92938ee8d2364c6de11c1a03d4",
+     "file": "solc-0.8.17"
+    }
+   }
+  }
+ },
+ "sources": {
+  "forge-std": {
+   "version": "v1.9.7",
+   "commit": "77041d2ce690e692d6e03cc812b57d1ddaa4d505",
+   "url": "https://github.com/foundry-rs/forge-std/archive/77041d2ce690e692d6e03cc812b57d1ddaa4d505.zip",
+   "sha256": "68207874a8c61d6dcd5c5de9136dd7388f7c53c3f369545e52d1d870823e9878",
+   "extractTo": "../foundry/lib/forge-std",
+   "note": "The archive is addressed by commit; its SHA-256 is recorded on first fetch (`fetch_toolchain.py --record`) and verified afterwards."
+  },
+  "permit2": {
+   "commit": "cc306b601f172c51bc04334a109e98340456620b",
+   "url": "https://github.com/Uniswap/permit2/archive/cc306b601f172c51bc04334a109e98340456620b.zip",
+   "sha256": "6b0df80b1fa86d9bf3c9495651d047ae2c4a858e3865a9ed868e4723df453859",
+   "extractTo": "permit2-build/permit2",
+   "note": "The pinned Permit2 commit (document 16 section 5.1). Submodules are not part of the archive: solmate follows."
+  },
+  "permit2-lib-forge-std": {
+   "commit": "27e14b7f2448e5f5ac32719f51fe652aa0b0733e",
+   "url": "https://github.com/foundry-rs/forge-std/archive/27e14b7f2448e5f5ac32719f51fe652aa0b0733e.zip",
+   "sha256": "48fa7698e4c319cb170f55fe76925b9bfd8c330dc84392d2994f4b5434eda752",
+   "extractTo": "permit2-build/permit2/lib/forge-std",
+   "note": "The `lib/forge-std` submodule commit of Uniswap/permit2 at the pinned commit (not the forge-std of the Foundry project)."
+  },
+  "permit2-lib-forge-gas-snapshot": {
+   "commit": "3c5d52a26169876a144f7690d2f9ef0200eb0791",
+   "url": "https://github.com/marktoda/forge-gas-snapshot/archive/3c5d52a26169876a144f7690d2f9ef0200eb0791.zip",
+   "sha256": "c7958d06ca667e04dcda1eeff5bf2280400c9b806cf81761d90a0c3ed954d76e",
+   "extractTo": "permit2-build/permit2/lib/forge-gas-snapshot",
+   "note": "The `lib/forge-gas-snapshot` submodule commit of Uniswap/permit2 at the pinned commit."
+  },
+  "permit2-lib-openzeppelin-contracts": {
+   "commit": "d3ff81b37f3c773b44dcaf5fda212c7176eef0e2",
+   "url": "https://github.com/OpenZeppelin/openzeppelin-contracts/archive/d3ff81b37f3c773b44dcaf5fda212c7176eef0e2.zip",
+   "sha256": "0773c191a7c15e480dfceb18c368437d4627df8673e9e9dd3f9e298b86e87b63",
+   "extractTo": "permit2-build/permit2/lib/openzeppelin-contracts",
+   "note": "The `lib/openzeppelin-contracts` submodule commit of Uniswap/permit2 at the pinned commit."
+  },
+  "solmate-for-permit2": {
+   "commit": "8d910d876f51c3b2585c9109409d601f600e68e1",
+   "url": "https://github.com/transmissions11/solmate/archive/8d910d876f51c3b2585c9109409d601f600e68e1.zip",
+   "sha256": "05c34eec3127dbe36b03cc377366866aa3c23da9b2a0ef49c46b8025fbeb2d20",
+   "extractTo": "permit2-build/permit2/lib/solmate",
+   "recordedNested": "solmate and forge-std each pin ds-test at 9310e879db8ba3ea6d5c6489a579118fd264a3f5 (entry permit2-nested-ds-test below)",
+   "note": "The commit of the `lib/solmate` submodule of Uniswap/permit2 at cc306b601f172c51bc04334a109e98340456620b (git tree entry)."
+  },
+  "permit2-nested-ds-test": {
+   "commit": "9310e879db8ba3ea6d5c6489a579118fd264a3f5",
+   "url": "https://github.com/dapphub/ds-test/archive/9310e879db8ba3ea6d5c6489a579118fd264a3f5.zip",
+   "sha256": "d6d829b6c4eb9dee30a0f084df187f4efa1cd3f91ce73a20a1b5f83987add80e",
+   "extractTo": [
+    "permit2-build/permit2/lib/forge-std/lib/ds-test",
+    "permit2-build/permit2/lib/solmate/lib/ds-test"
+   ],
+   "note": "The lib/ds-test submodule pinned by both forge-std@27e14b7f and solmate@8d910d87 (nested submodule of the Permit2 dependencies; approved by the user on 2026-10-16)."
+  }
+ }
+}

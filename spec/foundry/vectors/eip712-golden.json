@@ -1,0 +1,758 @@
+{
+ "schema": 1,
+ "specVersion": "0.5.0",
+ "status": "PROPOSED",
+ "chainId": 84532,
+ "mandateManager": "0x2222222222222222222222222222222222222222",
+ "router": "0x1111111111111111111111111111111111111111",
+ "permit2": "0x000000000022D473030F116dDEE9F6B43aC78BA3",
+ "domainTypeHash": "0x8b73c3c69bb8fe3d512ecc4cf759cc79239f7b179b0ffacaa9a75d522b39400f",
+ "freezeFingerprintSha256": "472bb8c27abe7f8c7f21d55b2c30dda3f45cab11cd76da9a19d2e46ca06bbe9e",
+ "domains": {
+  "mandates": {
+   "name": "FastPay Mandates",
+   "version": "1",
+   "verifyingContract": "0x2222222222222222222222222222222222222222",
+   "separator": "0xca654456826ecba376f7f62afc6e4a73bc23e12eb069cc1224b00715892b2235"
+  },
+  "quote": {
+   "name": "FastPay Quote",
+   "version": "1",
+   "verifyingContract": "0x1111111111111111111111111111111111111111",
+   "separator": "0xf57423e1f3b9586afce650d682c7a0588bd96ddf5d1adb019358d198664a61d4"
+  }
+ },
+ "structs": {
+  "AccountPin": {
+   "domain": "mandates",
+   "status": "QUOTED",
+   "encodeType": "AccountPin(uint8 accountMode,bytes32 accountCodeHash,address delegate,bytes32 delegateCodeHash,bytes32 implementationFamily,uint32 pinVersion,uint8 signatureMode)",
+   "typeHash": "0xa080d57e052584c73c3f7c5069eb0bccf7ce7d0326916d81ecda5f8867f57ec4",
+   "value": {
+    "accountMode": "2",
+    "accountCodeHash": "0x4a37830a39af172052f51de869b4cdb29187b16a71da5457fca733c4db241364",
+    "delegate": "0xabababababababababababababababababababab",
+    "delegateCodeHash": "0x00e909366694deb1e4fbbd183b70356e899ca8dcca5ecf975177e3ec29c1e052",
+    "implementationFamily": "0x41e7cea110e32333d68057a4496a860f2f362502e359b0971b6b6544c205e24c",
+    "pinVersion": "1",
+    "signatureMode": "1"
+   },
+   "hashStruct": "0x8005a3124d4375d611e1b3aa37864f4c893528e74e74e78bb0331319fb9f6a88",
+   "digest": "0xed9114734d526e95ff56129555ec64a3881ff3c182d1eac2fc0a4757269042d0",
+   "mutatedFieldHashes": {
+    "accountMode": "0xd62848a2bc5aad2ed3a2e80ebf76cdba6036fe5710a9a03ea49c5fe0b9e299d3",
+    "accountCodeHash": "0xb837600a01143e338a12f5c600845e2060df69ebe01811dcd296c97ed100ca50",
+    "delegate": "0xbd861f57f4fac670a38ae11b442302726a3eb77585b7047aadcbdd3cabbc8033",
+    "delegateCodeHash": "0xf4b853e6070d69e186ea077b9b2d5b7816bdc6d18eb5fe8912a5ec569909eca3",
+    "implementationFamily": "0xabfa73f9674fc895481be04869880c0e3d82c6f3bffc1bea2fb261196d3c9ddd",
+    "pinVersion": "0x5b4bba9cf7f41a0afba2ae3d87cab2e5ed02e78d2efed8a45c2bc659caed6cf3",
+    "signatureMode": "0x63ee21ce79ca7fbcfd6bb2f823516ae5e92c24191b8a2a3f788a6497239a705c"
+   }
+  },
+  "TokenTerms": {
+   "domain": "mandates",
+   "status": "DERIVED",
+   "encodeType": "TokenTerms(address token,uint256 perPaymentMax,uint256 dayMax,uint256 weekMax,uint256 thirtyDayMax,uint256 periodMax,uint256 totalMax)",
+   "typeHash": "0x8d688b0a85a78a7f1912cfee0cf60cf0862a8785b13a005e0199e7b7a73716d0",
+   "value": {
+    "token": "0x5555555555555555555555555555555555555555",
+    "perPaymentMax": "51020410",
+    "dayMax": "10000002",
+    "weekMax": "20000003",
+    "thirtyDayMax": "30000004",
+    "periodMax": "40000005",
+    "totalMax": "612244909"
+   },
+   "hashStruct": "0xed24aa836e00827e75ed2bfe0467514c90f1536acd435ff54d16d15a2c5a3d10",
+   "digest": "0xc10db873d26d0afa7ad7b25641254f9868da875261fb59ab3cd19dcb582f8e0b",
+   "mutatedFieldHashes": {
+    "token": "0x73951a40bfa48a4b280d571ae9109015a2de534e9dfd286540983c19181c41f6",
+    "perPaymentMax": "0x243abaa20bdc3383739b1cb8e9f969ca85b211c39f01cabf75878a43c07f7f79",
+    "dayMax": "0xfcfc275f09b3a884368b8c472ddb4bf3fa228f46e499b2a29ff669f26358fc88",
+    "weekMax": "0xca02d49a451ff019f41141df55067c989c48369b979406bb2b772f767f86442d",
+    "thirtyDayMax": "0x5f38acf50e21f278947c7e8e6cffcbcf12288ed44e483b75d6f757b6bd027563",
+    "periodMax": "0x7a2767ff16ef0d53f429e04fdf03a8d3c0a03e2b86a331063698fc9c55858a7b",
+    "totalMax": "0x29c0b0eec7fcb37089170ee503798679ab6733e87eab5a2be8e38fe97db01a76"
+   }
+  },
+  "FiatTerms": {
+   "domain": "mandates",
+   "status": "DERIVED",
+   "encodeType": "FiatTerms(uint16 currency,uint64 perPaymentMaxMinor,uint64 dayMaxMinor,uint64 weekMaxMinor,uint64 thirtyDayMaxMinor,uint64 periodMaxMinor,uint64 totalMaxMinor,uint32 maxQuoteAge,uint32 boundsVersion)",
+   "typeHash": "0xfc4958eeb615f20cd3d3131dbd77963e1b111af3f95219c0cf8870b656e5561a",
+   "value": {
+    "currency": "840",
+    "perPaymentMaxMinor": "5000",
+    "dayMaxMinor": "1001",
+    "weekMaxMinor": "2002",
+    "thirtyDayMaxMinor": "3003",
+    "periodMaxMinor": "4004",
+    "totalMaxMinor": "60000",
+    "maxQuoteAge": "120",
+    "boundsVersion": "3"
+   },
+   "hashStruct": "0x6df40d93d1bdcc6dc9f893c403d6a1bc0dee0c0e8a162eeb7352dc4be825dcd5",
+   "digest": "0x809745bf61639bd55421fbb66cc8bce46540efeaa42e6ee47b881cd07e98f955",
+   "mutatedFieldHashes": {
+    "currency": "0xf06288a1ab3d99c29b239498facb263a9ceae780422d41c7caa7455d7a25ff10",
+    "perPaymentMaxMinor": "0x5d8a42bb94b3f14b7c9b0661e4261df18649d0737829dbd6387445770eefb42a",
+    "dayMaxMinor": "0x4cf654d6a666a2d560c51c6c12d37c8a8172d1daabbbb6e16877a8cdfdf46794",
+    "weekMaxMinor": "0xe1e363c84489ac7a389a727c0facc74f23ed8cea4a0550ceac036ca7eecb6195",
+    "thirtyDayMaxMinor": "0xa21383d9de8004d4fe1e36e8d95954c0f933bfc71b69f97ec2172ba9d2928d0a",
+    "periodMaxMinor": "0x7f490dc1bb74e62f460a6cb76bb70d065747145a990c393dbe5dfde3726c51bd",
+    "totalMaxMinor": "0x12851a3866027f4522c6c73b87c87f46c0fec89af1f0971c28029d64ac376a35",
+    "maxQuoteAge": "0x1693a3338cb9506784ae7e0809d1e4fdb7d273826beaff1d62543351ea57efa2",
+    "boundsVersion": "0xbd7a522d320a95cff68c83c15f216deec227a1aa6b5e9e954622f5d7392b2190"
+   }
+  },
+  "MandateTerms": {
+   "domain": "mandates",
+   "status": "DERIVED",
+   "encodeType": "MandateTerms(bytes32 merchantId,bytes32 recipientPolicy,bytes32 subscriptionRef,uint64 periodSeconds,uint64 anchorStartsAt,uint64 expiresAt,TokenTerms[] tokens,FiatTerms fiat,uint16 maxChargesPerPeriod,uint32 minIntervalSeconds,uint16 maxFeeBps,bytes32 extensionsHash)FiatTerms(uint16 currency,uint64 perPaymentMaxMinor,uint64 dayMaxMinor,uint64 weekMaxMinor,uint64 thirtyDayMaxMinor,uint64 periodMaxMinor,uint64 totalMaxMinor,uint32 maxQuoteAge,uint32 boundsVersion)TokenTerms(address token,uint256 perPaymentMax,uint256 dayMax,uint256 weekMax,uint256 thirtyDayMax,uint256 periodMax,uint256 totalMax)",
+   "typeHash": "0x9fecb76cdb169444849bb4564cf3ab6584b3d78cb367c2b0ca7f9b69d9612136",
+   "value": {
+    "merchantId": "0xaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+    "recipientPolicy": "0x0101010101010101010101010101010101010101010101010101010101010101",
+    "subscriptionRef": "0xbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+    "periodSeconds": "2592000",
+    "anchorStartsAt": "1800000000",
+    "expiresAt": "1900000000",
+    "tokens": [
+     {
+      "token": "0x5555555555555555555555555555555555555555",
+      "perPaymentMax": "51020409",
+      "dayMax": "10000001",
+      "weekMax": "20000002",
+      "thirtyDayMax": "30000003",
+      "periodMax": "40000004",
+      "totalMax": "612244908"
+     },
+     {
+      "token": "0x6666666666666666666666666666666666666666",
+      "perPaymentMax": "51020509",
+      "dayMax": "10000101",
+      "weekMax": "20000102",
+      "thirtyDayMax": "30000103",
+      "periodMax": "40000104",
+      "totalMax": "612245008"
+     }
+    ],
+    "fiat": {
+     "currency": "840",
+     "perPaymentMaxMinor": "5000",
+     "dayMaxMinor": "1001",
+     "weekMaxMinor": "2002",
+     "thirtyDayMaxMinor": "3003",
+     "periodMaxMinor": "4004",
+     "totalMaxMinor": "60000",
+     "maxQuoteAge": "120",
+     "boundsVersion": "3"
+    },
+    "maxChargesPerPeriod": "4",
+    "minIntervalSeconds": "86400",
+    "maxFeeBps": "100",
+    "extensionsHash": "0x0000000000000000000000000000000000000000000000000000000000000000"
+   },
+   "hashStruct": "0x9674fedf26f09c88394060316e8d844d61ea3d0c7514af33f375407db3506f55",
+   "digest": "0x9dcd691fa5ad168c596027b0f501611ebd6891d976cb132dd859807bec0849b5",
+   "mutatedFieldHashes": {
+    "merchantId": "0xd0241be9328f96aa04d53b5467a8db54b3a95ebab72a5089b391ac098f257061",
+    "recipientPolicy": "0xa1cb337433a88613acb4a992b280bc478e23851583e45cf81816b03272d924d1",
+    "subscriptionRef": "0x02982233242d8561c004350312f105d378f13ac807de7708b68cada980ca3db9",
+    "periodSeconds": "0x2a602613308b27169a3bd8e98cfccd4527e7e38a1e6080ec76daada1de64cd09",
+    "anchorStartsAt": "0x63350d806f2d0cdcdb253c7ff30fe3581491ceb3d51db884a8fcbac60ff3a8f7",
+    "expiresAt": "0x396946b3b628f361101d3c01e72aeac2abaa58c1dc048811b420bc09c8555616",
+    "tokens": "0xeaf7e50ddaf1c49711f261fe651d7d9f8967e8209b640ac480e3c6fa35057c22",
+    "fiat": "0xf864ca7aa62a46065758581b9104083c7698c792e3d4c33bcc4b0b5df9059793",
+    "maxChargesPerPeriod": "0x8d8d99d64ae59821c4c41eb04f5ebdc1efa78490b7bd661a7799e9c4b7036781",
+    "minIntervalSeconds": "0x5e84dd346fd52b5dd0fd38bf79ab9d4b0cc0a3a97a26af7c98215bde8e231349",
+    "maxFeeBps": "0xeb92fc407c2b2a8383812cab524806cb1049d07798ebecf8442356bea4f072f8",
+    "extensionsHash": "0xd678337a74c78d00f1ae059974c8d89fdee58256123df0cc8dbd2df2045859b5"
+   }
+  },
+  "ActivationTerms": {
+   "domain": "mandates",
+   "status": "DERIVED",
+   "encodeType": "ActivationTerms(address customer,address router,bytes32 routerCodeHash,uint32 routerVersion,uint256 creationNonce,MandateTerms terms,AccountPin accountPin,uint64 deadline)AccountPin(uint8 accountMode,bytes32 accountCodeHash,address delegate,bytes32 delegateCodeHash,bytes32 implementationFamily,uint32 pinVersion,uint8 signatureMode)FiatTerms(uint16 currency,uint64 perPaymentMaxMinor,uint64 dayMaxMinor,uint64 weekMaxMinor,uint64 thirtyDayMaxMinor,uint64 periodMaxMinor,uint64 totalMaxMinor,uint32 maxQuoteAge,uint32 boundsVersion)MandateTerms(bytes32 merchantId,bytes32 recipientPolicy,bytes32 subscriptionRef,uint64 periodSeconds,uint64 anchorStartsAt,uint64 expiresAt,TokenTerms[] tokens,FiatTerms fiat,uint16 maxChargesPerPeriod,uint32 minIntervalSeconds,uint16 maxFeeBps,bytes32 extensionsHash)TokenTerms(address token,uint256 perPaymentMax,uint256 dayMax,uint256 weekMax,uint256 thirtyDayMax,uint256 periodMax,uint256 totalMax)",
+   "typeHash": "0xe74ad9d665ad7aa0f27b6f69ba3e14227434a9a282d81f0529ac2e3cf0776d61",
+   "value": {
+    "customer": "0x4444444444444444444444444444444444444444",
+    "router": "0x1111111111111111111111111111111111111111",
+    "routerCodeHash": "0xc65819cfac543fe55054bd0d49fed1d81278b2c187f5acce0e40b7eb492c357e",
+    "routerVersion": "1",
+    "creationNonce": "7",
+    "terms": {
+     "merchantId": "0xaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+     "recipientPolicy": "0x0101010101010101010101010101010101010101010101010101010101010101",
+     "subscriptionRef": "0xbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+     "periodSeconds": "2592000",
+     "anchorStartsAt": "1800000000",
+     "expiresAt": "1900000000",
+     "tokens": [
+      {
+       "token": "0x5555555555555555555555555555555555555555",
+       "perPaymentMax": "51020409",
+       "dayMax": "10000001",
+       "weekMax": "20000002",
+       "thirtyDayMax": "30000003",
+       "periodMax": "40000004",
+       "totalMax": "612244908"
+      },
+      {
+       "token": "0x6666666666666666666666666666666666666666",
+       "perPaymentMax": "51020509",
+       "dayMax": "10000101",
+       "weekMax": "20000102",
+       "thirtyDayMax": "30000103",
+       "periodMax": "40000104",
+       "totalMax": "612245008"
+      }
+     ],
+     "fiat": {
+      "currency": "840",
+      "perPaymentMaxMinor": "5000",
+      "dayMaxMinor": "1001",
+      "weekMaxMinor": "2002",
+      "thirtyDayMaxMinor": "3003",
+      "periodMaxMinor": "4004",
+      "totalMaxMinor": "60000",
+      "maxQuoteAge": "120",
+      "boundsVersion": "3"
+     },
+     "maxChargesPerPeriod": "4",
+     "minIntervalSeconds": "86400",
+     "maxFeeBps": "100",
+     "extensionsHash": "0x0000000000000000000000000000000000000000000000000000000000000000"
+    },
+    "accountPin": {
+     "accountMode": "2",
+     "accountCodeHash": "0x4a37830a39af172052f51de869b4cdb29187b16a71da5457fca733c4db241364",
+     "delegate": "0xabababababababababababababababababababab",
+     "delegateCodeHash": "0x00e909366694deb1e4fbbd183b70356e899ca8dcca5ecf975177e3ec29c1e052",
+     "implementationFamily": "0x41e7cea110e32333d68057a4496a860f2f362502e359b0971b6b6544c205e24c",
+     "pinVersion": "1",
+     "signatureMode": "1"
+    },
+    "deadline": "1800003600"
+   },
+   "hashStruct": "0xc149b71651baf2905ddb26f95d25b4a2fa85b1ad6ed0f0a570c923237467703d",
+   "digest": "0x50407953aa1a2f825f27968ff4059341d79aada24c2d6f7bb3144ad7f58a3838",
+   "mutatedFieldHashes": {
+    "customer": "0xd8a26453a74e9634f0442e56d76043a6469a0370364fa5dc083bb1f3f0607285",
+    "router": "0xccd3409d225ff8c6b4ce19a72bb0f4b0c22507315ad0099265ab57080e64e51b",
+    "routerCodeHash": "0x46d0029635417946f939d3031f958cca463d71dffcf0f7031d927b48f59ff19f",
+    "routerVersion": "0x64dae755de3bfd556559f6a2f0dd961a4c0914489a7384db853da5284ca06011",
+    "creationNonce": "0xb023b8ebbad24c695d8402b6e0b77f40e88d0946ae51a9a16c7aa466da3623be",
+    "terms": "0xd9687f60224902bae805292e7e244f43540e3da63f4114c9892d50051447ab8f",
+    "accountPin": "0x14f71bbdccb5fa5a670ab20cda53ccf6d4a934083ba7032cca2e14c8a37f9792",
+    "deadline": "0x66018eaf84e9ffa113646c4cd458f1b01b73706fcaf8581c64ae8c44cdd5dfb9"
+   }
+  },
+  "SuccessorAuthorization": {
+   "domain": "mandates",
+   "status": "QUOTED",
+   "encodeType": "SuccessorAuthorization(address customer,bytes32 lineageId,bytes32 predecessorId,uint8 kind,bytes32 newTermsHash,address newRouter,bytes32 newRouterCodeHash,uint32 newRouterVersion,bytes32 termsSnapshotHash,uint32 widenedMask,AccountPin accountPin,uint64 deadline,uint256 nonce)AccountPin(uint8 accountMode,bytes32 accountCodeHash,address delegate,bytes32 delegateCodeHash,bytes32 implementationFamily,uint32 pinVersion,uint8 signatureMode)",
+   "typeHash": "0x0a86c2ac458cd20311931d0d8a92dcf30ab8088189b6510f327cbeb13a72d741",
+   "value": {
+    "customer": "0x4444444444444444444444444444444444444444",
+    "lineageId": "0x7777777777777777777777777777777777777777777777777777777777777777",
+    "predecessorId": "0x7878787878787878787878787878787878787878787878787878787878787878",
+    "kind": "2",
+    "newTermsHash": "0x9999999999999999999999999999999999999999999999999999999999999999",
+    "newRouter": "0x1212121212121212121212121212121212121212",
+    "newRouterCodeHash": "0xb3c09d7618a623d4a622d6c8f73003d5719cd0a99dea51d8355b4fdc01fbd9da",
+    "newRouterVersion": "2",
+    "termsSnapshotHash": "0x9898989898989898989898989898989898989898989898989898989898989898",
+    "widenedMask": "5",
+    "accountPin": {
+     "accountMode": "2",
+     "accountCodeHash": "0x4a37830a39af172052f51de869b4cdb29187b16a71da5457fca733c4db241364",
+     "delegate": "0xabababababababababababababababababababab",
+     "delegateCodeHash": "0x00e909366694deb1e4fbbd183b70356e899ca8dcca5ecf975177e3ec29c1e052",
+     "implementationFamily": "0x41e7cea110e32333d68057a4496a860f2f362502e359b0971b6b6544c205e24c",
+     "pinVersion": "1",
+     "signatureMode": "1"
+    },
+    "deadline": "1800003600",
+    "nonce": "5"
+   },
+   "hashStruct": "0xa035273c070711499262b292f22090c96566ef08d71d0e82031cc48195b0d2cc",
+   "digest": "0x0cb350c58d146c7d2826b7520d9b678b073aeaa74037440e1dfefe3b43016bcc",
+   "mutatedFieldHashes": {
+    "customer": "0xe3cc81f5e1bc5d0a0ded5688c954f83f1f58e0a5296f68f4d4c1a26225d91139",
+    "lineageId": "0x465efa1289c6b56d6d241e2d872c979d088cec46d503f43e4bb30d06ec5867dd",
+    "predecessorId": "0x5878af5b6c28a2ebb6895a4ca9df524c7be76afa689df11353262ce6e1db3114",
+    "kind": "0x6f0c45a2261f312aabc0f9f93d8dd261b8f85b92c573aaa284035ff2651e45ea",
+    "newTermsHash": "0x60b0af416352f0afe16927ad66d95ce66c30f7b1fbffdf402103e53b64737dcf",
+    "newRouter": "0xbca0c22e31acaf033b14b0e062545143370fd3563c6ec4e8d08d477077179f25",
+    "newRouterCodeHash": "0x16a30149d192ef6f3c2e4f2aa1b6e4aed5daac18ca4de761846de91701259ab4",
+    "newRouterVersion": "0xc846c77bb92c2c2d1f91ffb7c5fa8c807392ad28536a9c29cf49a05971d800a8",
+    "termsSnapshotHash": "0xe6f56c1a80390bc2f846d6c76fe38efda80d0ae6763828d7e9099701f8d7f595",
+    "widenedMask": "0x6b5bfa6e17609f2044d8e184a81d55e69f2cf4003f17cad99c97e440f38b61f4",
+    "accountPin": "0x17c03018a23c72915534fb126c79bc8192688d938ba6047863fcae693ac33aed",
+    "deadline": "0xa10872a9c0ec25742bd4c3b922f0416bb3b7c30a2f8e949e82c744ce8ff4bd58",
+    "nonce": "0x7e6f706d7f5ce70e9c7836145f4b9edcadb945582b1deb1b9fa73f5d31230d9d"
+   }
+  },
+  "AccountPinUpdate": {
+   "domain": "mandates",
+   "status": "QUOTED",
+   "encodeType": "AccountPinUpdate(address customer,bytes32 mandateId,AccountPin newPin,uint64 deadline,uint256 nonce)AccountPin(uint8 accountMode,bytes32 accountCodeHash,address delegate,bytes32 delegateCodeHash,bytes32 implementationFamily,uint32 pinVersion,uint8 signatureMode)",
+   "typeHash": "0x0e22d83b1dc4e6f4b1c6f4e2246ae1bd4fb1f915961f60c72692177ed09e4ab8",
+   "value": {
+    "customer": "0x4444444444444444444444444444444444444444",
+    "mandateId": "0x1010101010101010101010101010101010101010101010101010101010101010",
+    "newPin": {
+     "accountMode": "2",
+     "accountCodeHash": "0x4a37830a39af172052f51de869b4cdb29187b16a71da5457fca733c4db241364",
+     "delegate": "0xabababababababababababababababababababab",
+     "delegateCodeHash": "0x00e909366694deb1e4fbbd183b70356e899ca8dcca5ecf975177e3ec29c1e052",
+     "implementationFamily": "0x41e7cea110e32333d68057a4496a860f2f362502e359b0971b6b6544c205e24c",
+     "pinVersion": "2",
+     "signatureMode": "1"
+    },
+    "deadline": "1800003600",
+    "nonce": "6"
+   },
+   "hashStruct": "0xc1cd8958a92518344225f2023b9760e08b3b0d2f2ba4bab58029724b372cf4ca",
+   "digest": "0xb0994ff47ca624217652e9bbe606998ded8919e253b8ecc1042fd007bde09dd2",
+   "mutatedFieldHashes": {
+    "customer": "0xaf5ce896da9990b9206b87038ea7d4bac9b0d686c9ebe80dfcb36d6f1ef6a1da",
+    "mandateId": "0x8a1c221d96f9eeb8e63a0e9dd9c34f58528dab42fa3d4269c921788ac9a00878",
+    "newPin": "0x2e48fd3b389c75ad300ffeb2f71ef07df64ca2ba4cef9cec38570017dae04214",
+    "deadline": "0x71dab4bbb45d465658fcac3ad6787dd659f81f03ba2cc940bda67686e06cca1d",
+    "nonce": "0x24f68b9ff7e8edb6380cf4442307422be7986ec995d6adc61779a61e116c23e9"
+   }
+  },
+  "AccountPinsUpdate": {
+   "domain": "mandates",
+   "status": "QUOTED",
+   "encodeType": "AccountPinsUpdate(address customer,bytes32[] mandateIds,AccountPin newPin,uint64 deadline,uint256 nonce)AccountPin(uint8 accountMode,bytes32 accountCodeHash,address delegate,bytes32 delegateCodeHash,bytes32 implementationFamily,uint32 pinVersion,uint8 signatureMode)",
+   "typeHash": "0xb642c366bb9b921cd388a122c8bfb8199df7f1971bdac9275958ce1f9a8f8908",
+   "value": {
+    "customer": "0x4444444444444444444444444444444444444444",
+    "mandateIds": [
+     "0x1010101010101010101010101010101010101010101010101010101010101010",
+     "0x1111111111111111111111111111111111111111111111111111111111111111",
+     "0x1212121212121212121212121212121212121212121212121212121212121212"
+    ],
+    "newPin": {
+     "accountMode": "2",
+     "accountCodeHash": "0x4a37830a39af172052f51de869b4cdb29187b16a71da5457fca733c4db241364",
+     "delegate": "0xabababababababababababababababababababab",
+     "delegateCodeHash": "0x00e909366694deb1e4fbbd183b70356e899ca8dcca5ecf975177e3ec29c1e052",
+     "implementationFamily": "0x41e7cea110e32333d68057a4496a860f2f362502e359b0971b6b6544c205e24c",
+     "pinVersion": "2",
+     "signatureMode": "1"
+    },
+    "deadline": "1800003600",
+    "nonce": "8"
+   },
+   "hashStruct": "0xccfda4d3013b805fde96ffe576ee90cfa1a82a1c734461559c6fbdb483ccbe5c",
+   "digest": "0x4cb27ba06c4eacc1de5246949ccf5e0ee70cd15cbd194d3cbd38eb6c8212e169",
+   "mutatedFieldHashes": {
+    "customer": "0x5210fd5f1d998ff6989b4e841b5d1c2a00ff82683f4b1d40b9b5e209494537c7",
+    "mandateIds": "0x19ca40f56cee01958f3543468cb7d90eb2a1d78830efa2aaa1f570070c2c294d",
+    "newPin": "0xcb5dafdc28ce254a3fcb8ec53824390c1a2c20b1aac7dc1d8ce560fec8ffc8da",
+    "deadline": "0xea51d7c02264b633156d70586e765575ab6da7c0ff4e547556f136213a3f1d39",
+    "nonce": "0xa0d0864fdd0f1067bfea8a2879ddff7cce785968fa944250ea1811cacc163fa4"
+   }
+  },
+  "RevokeMandate": {
+   "domain": "mandates",
+   "status": "DERIVED",
+   "encodeType": "RevokeMandate(address customer,bytes32 mandateId,uint64 deadline,uint256 nonce)",
+   "typeHash": "0xa77b96a416e42fe084b07266fbb92af55717f72f5ec95374c63ebfee3caa0ac5",
+   "value": {
+    "customer": "0x4444444444444444444444444444444444444444",
+    "mandateId": "0x1010101010101010101010101010101010101010101010101010101010101010",
+    "deadline": "1800003600",
+    "nonce": "9"
+   },
+   "hashStruct": "0x1b077adfbea639db73b1ca9c25595d77a06da4e43965f4a5ed3990eb64058f13",
+   "digest": "0x22c6a9cc2380cff9a41d3a37cdef10dee85510b0e16d82ba5a91861be4eb7dcd",
+   "mutatedFieldHashes": {
+    "customer": "0x316895f236af20ebf1fcc54950f81388001f763be8b06e42806e4218fe300759",
+    "mandateId": "0x5ffd554d19fd24a07ff29a51dddb71237c12eb5a65db68339ac6863ab0caa6f9",
+    "deadline": "0xd940605c3296b9888500d355c876476eb3c32124c8610376a3e869ca646111d6",
+    "nonce": "0x207dd67b59281e181fc0b5841167497c42659d45dc46fde3ec205db13512ec56"
+   }
+  },
+  "PauseMandate": {
+   "domain": "mandates",
+   "status": "DERIVED",
+   "encodeType": "PauseMandate(address customer,bytes32 mandateId,uint64 deadline,uint256 nonce)",
+   "typeHash": "0x9ab43f67f7cdd186af60ca48a057bdd17446d08757779e9506e0e83affa40b04",
+   "value": {
+    "customer": "0x4444444444444444444444444444444444444444",
+    "mandateId": "0x1010101010101010101010101010101010101010101010101010101010101010",
+    "deadline": "1800003600",
+    "nonce": "10"
+   },
+   "hashStruct": "0xb9c6dc7db6531a02c6e6de3bfdbaf3a0b898c45c2c83f6f6451ea24e60172145",
+   "digest": "0x8ffe40472b85485a5f3cd4d3685aca3068c779c44317aa518f043c9d24eeb94c",
+   "mutatedFieldHashes": {
+    "customer": "0x024788dd6b4c1edb160c4b6e3eb1eebf2437f74418908ecb13007d77f6428485",
+    "mandateId": "0x360055618aa518ea45961ef5e72486f4863e8e9afa41fb9beb2fc0c5abfa9a21",
+    "deadline": "0x0be5cc1be23fbc798d389924074754f2ce1aa4ba9b7d04ffe71cf2c32c403fd7",
+    "nonce": "0x44fd4dae0e45994fa47c036ab1ec2c6244d618eb7ff609cc6a2976fe9aae23bf"
+   }
+  },
+  "ResumeMandate": {
+   "domain": "mandates",
+   "status": "DERIVED",
+   "encodeType": "ResumeMandate(address customer,bytes32 mandateId,uint64 deadline,uint256 nonce)",
+   "typeHash": "0x0b6de585bd5705f05d9e260d5951e24a1518ae1a1b83da19dcad489dd476e1a7",
+   "value": {
+    "customer": "0x4444444444444444444444444444444444444444",
+    "mandateId": "0x1010101010101010101010101010101010101010101010101010101010101010",
+    "deadline": "1800003600",
+    "nonce": "11"
+   },
+   "hashStruct": "0x8587c89f24f8443da08c4ef7e7d0a828ec48ffbbaf1a95b0e74c8116f375186b",
+   "digest": "0x3c57aade258d16677d7da88d08dce03854afdc19b89b29b5f8e1f7f4da89313b",
+   "mutatedFieldHashes": {
+    "customer": "0x3b03e9a6849a697c6cb5f9b0e5069c8e73dffeec2faa83b21a477562a89f9ffd",
+    "mandateId": "0x3d6d8234ce51d8265611acaf0bf56092b033180b6c2aae906415957bdfe18b45",
+    "deadline": "0x7bc1fa82288b48cd69ce7ebe41ddb45bac61aebfd9c9822c541faa7497ccbf68",
+    "nonce": "0xebede307feae53c8b2428d31e8c34779ec82bdd678d3277cf1315b0c7b2429eb"
+   }
+  },
+  "ReduceMandate": {
+   "domain": "mandates",
+   "status": "DERIVED",
+   "encodeType": "ReduceMandate(address customer,bytes32 mandateId,bytes32 oldTermsHash,bytes32 newTermsHash,uint64 deadline,uint256 nonce)",
+   "typeHash": "0x6f1f4b7fa4ac9c2085fe75c091a15cd6d81bc22f126434a129a65412a823fee4",
+   "value": {
+    "customer": "0x4444444444444444444444444444444444444444",
+    "mandateId": "0x1010101010101010101010101010101010101010101010101010101010101010",
+    "oldTermsHash": "0x9674fedf26f09c88394060316e8d844d61ea3d0c7514af33f375407db3506f55",
+    "newTermsHash": "0x1f4f9bb29726d128c924d1c3a1d9af8c5a8056657dfc51ed6a6050a279a298f7",
+    "deadline": "1800003600",
+    "nonce": "12"
+   },
+   "hashStruct": "0x9f11b8a9733511d1fbc4d82f819f864724a7ff7c0b1fd6584541f2f9f2b0bdb9",
+   "digest": "0x35e478dd968d9bfba5d7f2008596a7d30301b9ef121b5f47e9703c89b07d7b3a",
+   "mutatedFieldHashes": {
+    "customer": "0x4faf9f6e5491cdbf8c0bd23e095e6be0ca47c63f96c9fdc21955290f06a29211",
+    "mandateId": "0xd80498f678aa3790a0abe29bf929c6beaafc891257cfcdf69b0f2354cb42f0ba",
+    "oldTermsHash": "0xa4380775e12c258f33573a8297b39eeead548d724410b0c35a01245327f816b7",
+    "newTermsHash": "0x1e5a737f45dcc64cc31cbb76f83cd5a69226b0ff53a2ce4bb6fcec53b10e242e",
+    "deadline": "0xeb55f682a3f4dd2c61c63daba8f4d39736ce3a17b1868d2b90f1cfc87b7e7c7a",
+    "nonce": "0x30d19f4d5d0c6ee02fa156c922e0dc2f10164a447f6a74a815d7a336450db23d"
+   }
+  },
+  "PriceQuote": {
+   "domain": "quote",
+   "status": "QUOTED",
+   "encodeType": "PriceQuote(bytes32 paymentId,address payer,address token,uint256 amountIn,uint16 currency,uint256 priceE18,uint64 issuedAt,uint64 validAfter,uint64 validUntil,uint256 nonce,uint32 signerSetVersion,uint64 registryVersion,uint32 boundsVersion,bytes32 routeHash,bytes32 priceSourceSetHash)",
+   "typeHash": "0x384641be814e75f4dce15c63df78fd013ed6055d9b4aeb1c855dc0ed3ec275c4",
+   "value": {
+    "paymentId": "0xce0a7f5ef5ed03bc11198df6b564080f5512104724ad5ffd89a1a7f5d1eb07e3",
+    "payer": "0x4444444444444444444444444444444444444444",
+    "token": "0x5555555555555555555555555555555555555555",
+    "amountIn": "49990000",
+    "currency": "840",
+    "priceE18": "100000000000000000000",
+    "issuedAt": "1800000000",
+    "validAfter": "1800000001",
+    "validUntil": "1800000120",
+    "nonce": "424242",
+    "signerSetVersion": "3",
+    "registryVersion": "12",
+    "boundsVersion": "1",
+    "routeHash": "0xfdd8df3c220e58908ac7930433326b449ae46ddf928029a7fb6949364907d2d7",
+    "priceSourceSetHash": "0x1b7e9ef15cee6e37b6d59cbdb99f46a322e8a2109daa9e5c0c2a4a82c222d5d7"
+   },
+   "hashStruct": "0x3fdf9b30f0af19674463e59a68531dafbde5ea63ca81b04ac08c1e99e47e42d2",
+   "digest": "0x4cebb4fc45b76e2a5c66eb9f60466be05242a9dd661130f5996887f5d208a8fc",
+   "mutatedFieldHashes": {
+    "paymentId": "0xa67688d379b319aff86a4aca2b6de11ae579324fbcfed3badd2510768c794952",
+    "payer": "0xdb5b75ef3cba041078a867c267e3001dd27fe1aa3a3f410f4e497a93684c4363",
+    "token": "0x82a1bbcd39bba5f80c8d6192400ee94ed58a984e81335cae5ce43ee2d86af4fd",
+    "amountIn": "0xee615b1d2f59bfa7ea67f0601945a5ed8b25cb19d65eb4de3507bb5f43ca0dbd",
+    "currency": "0x780bf7b9e165a52b550f27c8d4949676e0b138efabc62908f8b61809f7a93669",
+    "priceE18": "0x536caacb655270c797efcae44c41067d10f2eb19b07d032293f71fdfbfda85b9",
+    "issuedAt": "0xc574ff791fd6821a70f608afd8197d06de0bcc04c7c18f0029d034e0bbb1270f",
+    "validAfter": "0xcb3ba0ad132c0a2382bfb1256fafe1dec3ec6408e434d08602db924513656cd8",
+    "validUntil": "0x97a54f1e8575dec7435b5d16c013635ef07b438236623e459ff2046fae9792b5",
+    "nonce": "0x2b45fde760a587b9735bb8b285fad41bf61824b7013abf8e037cd5215702664a",
+    "signerSetVersion": "0x05480c5f850b0910a40b2d8f75b22807123d80af6753c8e3780f4b5b9a84ec00",
+    "registryVersion": "0xcdfaaf172acce05cf6267acfba8e05f0cafb384a3fb1212270afbe3acc2f6297",
+    "boundsVersion": "0x6c36990b6135dbc9186e7290ab6e9a5b995fdb8ab149cfeda37cd3842360fb7a",
+    "routeHash": "0xa271f9a0d80881ce06a788883bf7fb816bc63600fdd00133d2dc157cdcb76954",
+    "priceSourceSetHash": "0xc2a14a3d7d37c02c873a669f3cdfa1dce8b04cb421ca552029f6ce8cfac856e6"
+   }
+  },
+  "PayOnceIntent": {
+   "domain": "permit2",
+   "status": "DERIVED",
+   "encodeType": "PayOnceIntent(bytes32 paymentId,bytes32 merchantId,address recipient,address feeRecipient,address token,uint256 grossAmountIn,uint256 merchantAmount,uint256 feeAmount,address payer,uint64 validUntil,bytes32 termsHash,bytes32 quoteHash)",
+   "typeHash": "0x18d7c79fe9b89aeef53539395bf2e1ef5b39739f2e54b35d6c1ea86c43688ccb",
+   "value": {
+    "paymentId": "0x2121212121212121212121212121212121212121212121212121212121212121",
+    "merchantId": "0xaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+    "recipient": "0x3131313131313131313131313131313131313131",
+    "feeRecipient": "0x3232323232323232323232323232323232323232",
+    "token": "0x5555555555555555555555555555555555555555",
+    "grossAmountIn": "50000000",
+    "merchantAmount": "49500000",
+    "feeAmount": "500000",
+    "payer": "0x4444444444444444444444444444444444444444",
+    "validUntil": "1800000300",
+    "termsHash": "0x2222222222222222222222222222222222222222222222222222222222222222",
+    "quoteHash": "0x0000000000000000000000000000000000000000000000000000000000000000"
+   },
+   "hashStruct": "0x57f076880ef737bc7c89a2ccc57c11d815caf59ae32fad7bff36f31269bbaf3e",
+   "mutatedFieldHashes": {
+    "paymentId": "0xbb935912289b0e40626d7b7337249c656eff87d599b0d939c790360df29e152b",
+    "merchantId": "0x84cc1e341c027cb8e9fd37231818fb0433a84dccb8bb712bd859642ed3f41993",
+    "recipient": "0xf88c1dfda72356bfe77a30a977bf0e283826b24dbb54508e024fd8385ac70914",
+    "feeRecipient": "0xe92fabad53cc9e7926b21c5c2fc4b2a2d86ae6911d72abe3ccd589737ed90640",
+    "token": "0x269c805a17dedaa4e0f70089462932b4beb0690254659b9b46b5d485aeabdfed",
+    "grossAmountIn": "0xd7705f394523f33f70df05e5ef2533a70fdc4b9a20f5c849373a678f35023fc5",
+    "merchantAmount": "0xce32815515151fb30654cfddd4b51eeb72a4bfb719e2bd69291cb64ab593f002",
+    "feeAmount": "0x1c70120271592d15299fa2cae6dcf52df46bd09e30747fb61aa34989f9b05986",
+    "payer": "0x57f88b149ea2f9ba9e792a922a3db4695d9384389633cff0a8d253057955d192",
+    "validUntil": "0xb2514b49a597a2e2bf758277d596553ea91031444aebc6dcd731e9cafc98b54c",
+    "termsHash": "0xbbe77f2e7e9fafc489edc7fbfbcaae1018417e41991d3bf5e803f0ba62907213",
+    "quoteHash": "0x18070f3e11d3f0810f3408af968ad9daea6009cd84355eba6c9b7ca87351bc89"
+   }
+  }
+ },
+ "permit2Witness": {
+  "witnessTypeString": "PayOnceIntent witness)PayOnceIntent(bytes32 paymentId,bytes32 merchantId,address recipient,address feeRecipient,address token,uint256 grossAmountIn,uint256 merchantAmount,uint256 feeAmount,address payer,uint64 validUntil,bytes32 termsHash,bytes32 quoteHash)TokenPermissions(address token,uint256 amount)",
+  "stubSingle": "PermitWitnessTransferFrom(TokenPermissions permitted,address spender,uint256 nonce,uint256 deadline,",
+  "stubBatch": "PermitBatchWitnessTransferFrom(TokenPermissions[] permitted,address spender,uint256 nonce,uint256 deadline,",
+  "typeStringSingle": "PermitWitnessTransferFrom(TokenPermissions permitted,address spender,uint256 nonce,uint256 deadline,PayOnceIntent witness)PayOnceIntent(bytes32 paymentId,bytes32 merchantId,address recipient,address feeRecipient,address token,uint256 grossAmountIn,uint256 merchantAmount,uint256 feeAmount,address payer,uint64 validUntil,bytes32 termsHash,bytes32 quoteHash)TokenPermissions(address token,uint256 amount)",
+  "typeStringBatch": "PermitBatchWitnessTransferFrom(TokenPermissions[] permitted,address spender,uint256 nonce,uint256 deadline,PayOnceIntent witness)PayOnceIntent(bytes32 paymentId,bytes32 merchantId,address recipient,address feeRecipient,address token,uint256 grossAmountIn,uint256 merchantAmount,uint256 feeAmount,address payer,uint64 validUntil,bytes32 termsHash,bytes32 quoteHash)TokenPermissions(address token,uint256 amount)",
+  "typeHashSingle": "0xe9e5a628726ac516218746dbe0f05e9577c33a78ab77c80d80869a9dc2fdb8eb",
+  "typeHashBatch": "0xd62ccbc65c7e41d263a5467d0eb498512db256c3c6faef1b089f014c5355e36b",
+  "tokenPermissionsTypeHash": "0x618358ac3db8dc274f0cd8829da7e234bd48cd73c4a740aede1adec9846d06a1",
+  "permit2DomainTypeHash": "0x8cad95687ba82c2ce50e74f7b754645e5117c3a5bec8151c0726d5857980a866",
+  "permit2DomainSeparator": "0x010f27a92fb9a32622f44f001dc4d15706a85b33499cfc2ce9033113ab26592c",
+  "permit": {
+   "token": "0x5555555555555555555555555555555555555555",
+   "amount": "50000000",
+   "spender": "0x1111111111111111111111111111111111111111",
+   "nonce": "4660",
+   "deadline": "1800000300"
+  },
+  "witnessHash": "0x57f076880ef737bc7c89a2ccc57c11d815caf59ae32fad7bff36f31269bbaf3e",
+  "hashSingle": "0xcb34656f1de962a836d735340c0409e5bda215c4776e167202e4e42ffb6c67d9",
+  "digestSingle": "0xc86be503f16dd3a7a615fc8e98b586566ca0547dcb15e2f6aa9db30d89fcf18b",
+  "batchExtra": [
+   {
+    "token": "0x6666666666666666666666666666666666666666",
+    "amount": "7"
+   }
+  ],
+  "hashBatch": "0x73f5bcd092ce0a6a4133c2e021ccfdbf6f8aefc6bd2b1d647a84c5a490bd9e6f",
+  "digestBatch": "0xca6a24a3b8361b90df16b628d4a981df79b3145edfd5e18fdd7001bfd71fa72f"
+ },
+ "tags": {
+  "LINEAGE_TAG": {
+   "string": "fastpay.lineage.v1",
+   "hash": "0xbf83254ba89afa77ea2c40c1c20ce6b11934c50e327179d94462f39f2aa718ca"
+  },
+  "MANDATE_TAG": {
+   "string": "fastpay.mandate.v1",
+   "hash": "0x0945ea3d0f624223c05a4649c8e90b730e0955e6c384b0c6495dc8d46ca84a47"
+  },
+  "CYCLE_TAG": {
+   "string": "fastpay.cycle.v1",
+   "hash": "0x1b3b500f4535f791b4c727ae471cd2d9a515d37b0f981805b68a4420165b214c"
+  },
+  "ROUTE_DIRECT_TAG": {
+   "string": "fastpay.route.direct.v1",
+   "hash": "0x48a89266632b4264377511a397d72a77f3b9d62cd378b304495771cc80eac486"
+  },
+  "SNAPSHOT_TAG": {
+   "string": "fastpay.migration.snapshot.v1",
+   "hash": "0x4aad20bbdc76b59b6c54f2654e80c83256a985795153592e09edf6ed88fa0092"
+  },
+  "PIN_EOA": {
+   "string": "fastpay.pin.eoa.v1",
+   "hash": "0x8b07c3b3a0bc8c34a9a1a11064f80e35587006d2afc562b5114a4d9071547ba5"
+  }
+ },
+ "snapshot": {
+  "tag": "0x4aad20bbdc76b59b6c54f2654e80c83256a985795153592e09edf6ed88fa0092",
+  "arguments": {
+   "lineageId": "0x7777777777777777777777777777777777777777777777777777777777777777",
+   "predecessorId": "0x7878787878787878787878787878787878787878787878787878787878787878",
+   "generation": 1,
+   "customer": "0x4444444444444444444444444444444444444444"
+  },
+  "terms": "structs.MandateTerms.value",
+  "words": [
+   "0x4aad20bbdc76b59b6c54f2654e80c83256a985795153592e09edf6ed88fa0092",
+   "0x7777777777777777777777777777777777777777777777777777777777777777",
+   "0x7878787878787878787878787878787878787878787878787878787878787878",
+   "0x0000000000000000000000000000000000000000000000000000000000000001",
+   "0x0000000000000000000000004444444444444444444444444444444444444444",
+   "0xaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+   "0x0101010101010101010101010101010101010101010101010101010101010101",
+   "0xbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+   "0x0000000000000000000000000000000000000000000000000000000000278d00",
+   "0x000000000000000000000000000000000000000000000000000000006b49d200",
+   "0x00000000000000000000000000000000000000000000000000000000713fb300",
+   "0x0396d2d9c293f4bd9413f4c014cb5fef3878e45086871d31f93e3f86cda9b23f",
+   "0x54b813746d163fcf91ed26471ca977d860361cb76986b70553c07ed7f08a8c52",
+   "0x0000000000000000000000000000000000000000000000000000000000000348",
+   "0x0000000000000000000000000000000000000000000000000000000000001388",
+   "0x00000000000000000000000000000000000000000000000000000000000003e9",
+   "0x00000000000000000000000000000000000000000000000000000000000007d2",
+   "0x0000000000000000000000000000000000000000000000000000000000000bbb",
+   "0x0000000000000000000000000000000000000000000000000000000000000fa4",
+   "0x000000000000000000000000000000000000000000000000000000000000ea60",
+   "0x0000000000000000000000000000000000000000000000000000000000000078",
+   "0x0000000000000000000000000000000000000000000000000000000000000003",
+   "0x0000000000000000000000000000000000000000000000000000000000000004",
+   "0x0000000000000000000000000000000000000000000000000000000000015180",
+   "0x0000000000000000000000000000000000000000000000000000000000000064",
+   "0x0000000000000000000000000000000000000000000000000000000000000000"
+  ],
+  "wordNames": [
+   "SNAPSHOT_TAG",
+   "lineageId",
+   "predecessorId",
+   "generation",
+   "customer",
+   "merchantId",
+   "recipientPolicy",
+   "subscriptionRef",
+   "periodSeconds",
+   "anchorStartsAt",
+   "expiresAt",
+   "tokens",
+   "capTable",
+   "currency",
+   "fiatPerPaymentMaxMinor",
+   "fiatDayMaxMinor",
+   "fiatWeekMaxMinor",
+   "fiatThirtyDayMaxMinor",
+   "fiatPeriodMaxMinor",
+   "fiatTotalMaxMinor",
+   "maxQuoteAge",
+   "boundsVersion",
+   "maxChargesPerPeriod",
+   "minIntervalSeconds",
+   "maxFeeBps",
+   "extensionsHash"
+  ],
+  "hash": "0x391a4923ceaff6edac551b7677d9284d28feb6bee0286207160116b651838da7",
+  "mutatedWordHashes": {
+   "lineageId": "0xd33eefeab0360f5549bfd89eb33155ffe5793b5f13d07de4362a5eb706bd517a",
+   "predecessorId": "0xc9532174d63c931a43c32325bc008d6756230e407347df41fa63f1550c0dfce9",
+   "generation": "0xfe51910cb8c10afa025eb1f30c80074739a4465aa162893acb453f82b13ac0d4",
+   "customer": "0x5d093fbb2e4c6d3a01403c7bf5aa737c898c5fd206cb1aa9ee6005750753557e",
+   "merchantId": "0x338fbd680a21c9e392bd55a96fe9940d575bfeb70865afc044ebde53fcafbca6",
+   "recipientPolicy": "0x17ea22832656ace63ca2af82284c06342427c859e424778ef09005beb1dbe35a",
+   "subscriptionRef": "0x9a5eafde9150ff888546ddae2ff5339333151980991cf3aef3502e8f631e4d94",
+   "periodSeconds": "0x4e2c09bbd869bbc260a6146a87191eb4510ed15df6181773ee6b5f60a2440e22",
+   "anchorStartsAt": "0x6ab56ee8ae5bbf45c0bb9093a9b7c82252d4f0b98372b97db1d727e33a588207",
+   "expiresAt": "0x3e6aa94cc2da9329415888f63ea6175e71882a92a91a418a7d38a183ec084f5e",
+   "tokens": "0xf991f3671c1fddd32506cefcf9538301691ce890afc799533b54efb04d2de19f",
+   "capTable": "0x3085a685a99f7cb3e79c97f2ba11a04d4115a32131ded667b7d8ca641aa2241c",
+   "currency": "0xd0f9ecb8fc662c99b814f872f2ad4400d59e0ada0971794cdb6bf4b2fba9c1df",
+   "fiatPerPaymentMaxMinor": "0xa9679f36787e1979458da5808825ab53c9ec7c7bb318b677a408edce6ab2de6e",
+   "fiatDayMaxMinor": "0xeaf0dda6c517f0a860f432a117da9dcf6e95a192ab4abba91d2cb40850359248",
+   "fiatWeekMaxMinor": "0x706751fc8b437bd3cd5c0aff4bdf0f92defb578e281baa54628792f11b9c86aa",
+   "fiatThirtyDayMaxMinor": "0xdb7ac546e23c5449cffb6dbb8bdf83a783a4d320b94b9299599be198ecce06a4",
+   "fiatPeriodMaxMinor": "0x0ef654492b99198eacbe0c0fda9e01786cd7f4eafc23a81447d5f666f349932e",
+   "fiatTotalMaxMinor": "0xd2b029f5ae63542cd994e914f4c4d7200952d8eb695e7c81762260e52ba07f47",
+   "maxQuoteAge": "0x96f0dbd52739a4de5c031547363107479eace1a0564148cf65f284d9f395a87f",
+   "boundsVersion": "0x0b350adf3528e34a6976cbeb16525fe777de2b12eea24f4dd9627312037682b1",
+   "maxChargesPerPeriod": "0x1a218531facbbae5c81cb7d57b0811698a83a9bdcc607bccd585afdcc2d593c7",
+   "minIntervalSeconds": "0xa5afda91d78c403818205bbbc65772d97e02c945110df67c2a103307619c44bf",
+   "maxFeeBps": "0x9fdc084fa4b8b71f1dee2af8852e9da3122299deb7ecc209a87d7723e5dfb959",
+   "extensionsHash": "0x9ed2dc4bfb39c057517b6f11419be64a6e31264461468ffb14b3c70eea7b413e"
+  }
+ },
+ "signatures": {
+  "note": "TEST key only (keccak256 of the ASCII string below, mod n); it protects nothing",
+  "keyDerivation": "fastpay-eip712-golden-test-key-v1",
+  "signer": "0x45be1e918a1e3a8f11d8664e459b44134bd489e5",
+  "byStruct": {
+   "AccountPin": {
+    "digest": "0xed9114734d526e95ff56129555ec64a3881ff3c182d1eac2fc0a4757269042d0",
+    "v": 27,
+    "r": "0x38bbf26a2580f3819ea8e65a49fd3f74e5e8e6c2a825bf1d085761d97c81c626",
+    "s": "0x0f180534e92165279425af1287cd5493d8fd8f90c7a1c4ae24ee8bb5fb6efb3d"
+   },
+   "TokenTerms": {
+    "digest": "0xc10db873d26d0afa7ad7b25641254f9868da875261fb59ab3cd19dcb582f8e0b",
+    "v": 28,
+    "r": "0x0160674e3a34b84bfaa90be7f3507b9b6b38e717c9e99dfeb816178e3500b428",
+    "s": "0x19c4aab235b89d10b231094c7e882c6d620077dd0e052e1c412e91789262ad30"
+   },
+   "FiatTerms": {
+    "digest": "0x809745bf61639bd55421fbb66cc8bce46540efeaa42e6ee47b881cd07e98f955",
+    "v": 28,
+    "r": "0xcc495991a7d87b0ee5fe3d945a18eba52e135d019184d6848592d4288ba48c73",
+    "s": "0x4b9114b1883ed6a5d2b4eac05873925a14e37aefff0a07b93a308422a38cc894"
+   },
+   "MandateTerms": {
+    "digest": "0x9dcd691fa5ad168c596027b0f501611ebd6891d976cb132dd859807bec0849b5",
+    "v": 28,
+    "r": "0x29c05c55525e1c923566a59b09a591def5b0a82cd6b5c13b967badb531642699",
+    "s": "0x05c8b13c31bf364299492e8272713098921688e5e9d46ff1c3446a42fec4ea2f"
+   },
+   "ActivationTerms": {
+    "digest": "0x50407953aa1a2f825f27968ff4059341d79aada24c2d6f7bb3144ad7f58a3838",
+    "v": 27,
+    "r": "0xc61ad134bb93a907f8d83e6ba182b417e8b37b9801b261ead56c139bf2cfa7ab",
+    "s": "0x4a51b14963ed97e9a564b1ccea1b7f6ec0108698abd3d5e8ec3badf4358f04b0"
+   },
+   "SuccessorAuthorization": {
+    "digest": "0x0cb350c58d146c7d2826b7520d9b678b073aeaa74037440e1dfefe3b43016bcc",
+    "v": 28,
+    "r": "0x311789f4b0ef49d279b3cd5f890349785df36ba217b1956ec06d5d73812ef77e",
+    "s": "0x539ff68bf6700ad65009b0576244bb113790e34797f81a9cf20fc33ee633472a"
+   },
+   "AccountPinUpdate": {
+    "digest": "0xb0994ff47ca624217652e9bbe606998ded8919e253b8ecc1042fd007bde09dd2",
+    "v": 28,
+    "r": "0x76a9e4ec627429fb9f8a9c3a3734dba07f7aa8c27807a5ffaebaf8511bff118b",
+    "s": "0x4206780a271bec3f65691e744793bc7b51e3e9807b55399644d138cd112ce419"
+   },
+   "AccountPinsUpdate": {
+    "digest": "0x4cb27ba06c4eacc1de5246949ccf5e0ee70cd15cbd194d3cbd38eb6c8212e169",
+    "v": 27,
+    "r": "0x5f6604e405d63a784bcac75c489ffdbf0d43a19baa7c4899ff38cd1f88661258",
+    "s": "0x7159eed7ac25a2b199d485442414d1bdd5650bd2f4029af34a3b4b525ccbd22c"
+   },
+   "RevokeMandate": {
+    "digest": "0x22c6a9cc2380cff9a41d3a37cdef10dee85510b0e16d82ba5a91861be4eb7dcd",
+    "v": 27,
+    "r": "0x9f5b88f593f059edc55083f28344eebef05500696518f0040de7654f8dac18d8",
+    "s": "0x461b7ebc314287c354ae31e50fb5a90f42d060bf71a1c521fab568ccf8818b14"
+   },
+   "PauseMandate": {
+    "digest": "0x8ffe40472b85485a5f3cd4d3685aca3068c779c44317aa518f043c9d24eeb94c",
+    "v": 27,
+    "r": "0x59d5b5b90189a7b4d7def3ed226a412a39d812bf121baa2698ceb32d8ed2b0ac",
+    "s": "0x04d8f59b0fb9cc426b293b22d835419bcb0a0ba519e7b433a80c5d832d50a16e"
+   },
+   "ResumeMandate": {
+    "digest": "0x3c57aade258d16677d7da88d08dce03854afdc19b89b29b5f8e1f7f4da89313b",
+    "v": 27,
+    "r": "0xc9b56ceadfa7802ae32c9e6c5f91437a8fa42d62d4d266565576b74ea416553e",
+    "s": "0x12b0cc1981ce00ddfc07516e07f17bf304364cef7efe65ecd38866a10496b8de"
+   },
+   "ReduceMandate": {
+    "digest": "0x35e478dd968d9bfba5d7f2008596a7d30301b9ef121b5f47e9703c89b07d7b3a",
+    "v": 28,
+    "r": "0x74c29e5ae651c8690d28c43c805f34f121b9c88eedc9d04c1c88704ed011492f",
+    "s": "0x3c745ee49e02e7fcae8092e9bf44ea10e37c26021d3415492e94fb393fb0a7f6"
+   },
+   "PriceQuote": {
+    "digest": "0x4cebb4fc45b76e2a5c66eb9f60466be05242a9dd661130f5996887f5d208a8fc",
+    "v": 28,
+    "r": "0xb778954843c81fa97de3db2e2ef524788ec62356afdc39b4ca937cc66f505191",
+    "s": "0x33c5f0cbc5a2691a923a1964b433b38153a73cc3debf9f82fa8fb30e7fd8094b"
+   }
+  }
+ }
+}

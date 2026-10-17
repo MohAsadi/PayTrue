@@ -1,0 +1,4 @@
+chain 1 Ethereum mainnet: choosing the block and running the fork tests ...
+  block 26205635 0xf0b4fd12aa4edbdf55c20c8dc1bd9bd55621da18cd1a509c33e18f0b15511537: PASS  passed 30 failed 0 skipped 0
+verdict PASS -> evidence\implementation\fork-runs.json
+exit=0

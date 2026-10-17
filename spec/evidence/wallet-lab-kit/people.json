@@ -1,0 +1,4 @@
+{
+ "_comment": "Register of the people who may sign run records: name -> Ethereum address of the account they sign with. A person is added by a human (the QA Lead), with the date and the name of the registrar; this file is empty until then and this repository never adds a name.",
+ "people": {}
+}

@@ -1,0 +1,37 @@
+{
+ "schema": 1,
+ "source": "evidence/permit2/rebuild.json",
+ "pinnedCommit": "cc306b601f172c51bc04334a109e98340456620b",
+ "canonicalAddress": "0x000000000022D473030F116dDEE9F6B43aC78BA3",
+ "deployer": "0x4e59b44847b379578588920cA78FbF26c0B4956C",
+ "salt": "0x0000000000000000000000000000000000000000d3af2663da51c10215000000",
+ "creationCodeKeccak256": "0xe2be1e05eedf35dacd66c65c862f8150ff9ab4b6b24b9bbe62be71b6b16cf0f8",
+ "creationCodeLength": 9345,
+ "runtimeCodeKeccak256WithZeroImmutables": "0x463331fa7a0d5f07488e42c37b461bb56a822145c161a821fbafe7d4e916b546",
+ "runtimeCodeLength": 9152,
+ "immutableOffsets": {
+  "_CACHED_DOMAIN_SEPARATOR": 6983,
+  "_CACHED_CHAIN_ID": 6945
+ },
+ "chains": {
+  "1": {
+   "name": "Ethereum mainnet",
+   "deployedCodeKeccak256": "0xc67d1657868aa5146eaf24fb879fb1fdec3d2d493b3683a61c9c2f4fb2851131",
+   "rebuiltWithImmutablesFilledKeccak256": "0xc67d1657868aa5146eaf24fb879fb1fdec3d2d493b3683a61c9c2f4fb2851131",
+   "recordedDomainSeparator": "0x866a5aba21966af95d6c7ab78eb2b2fc913915c28be3b9aa07cc04ff903e3f28"
+  },
+  "42161": {
+   "name": "Arbitrum One",
+   "deployedCodeKeccak256": "0x9e51dcb64cf56fc09a82cb41edbc17c6a2250f18dbd1b91e884c0aca02acd57c",
+   "rebuiltWithImmutablesFilledKeccak256": "0x9e51dcb64cf56fc09a82cb41edbc17c6a2250f18dbd1b91e884c0aca02acd57c",
+   "recordedDomainSeparator": "0x8a6e6e19bdfb3db3409910416b47c2f8fc28b49488d6555c7fceaa4479135bc3"
+  },
+  "8453": {
+   "name": "Base",
+   "deployedCodeKeccak256": "0xa67739abc3ede9dbdc0491636c67d6a14ac07fab9030c3f509b1eb7b11dff8ed",
+   "rebuiltWithImmutablesFilledKeccak256": "0xa67739abc3ede9dbdc0491636c67d6a14ac07fab9030c3f509b1eb7b11dff8ed",
+   "recordedDomainSeparator": "0x3b6f35e4fce979ef8eac3bcdc8c3fc38fe7911bb0c69c8fe72bf1fd1a17e6f07"
+  }
+ },
+ "deployerProxyCodeKeccak256": "0x2fa86add0aed31f33a762c9d88e807c475bd51d0f52bd0955754b2608f7e4989"
+}

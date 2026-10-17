@@ -1,0 +1,129 @@
+{
+ "types": {
+  "EIP712Domain": [
+   {
+    "name": "name",
+    "type": "string"
+   },
+   {
+    "name": "chainId",
+    "type": "uint256"
+   },
+   {
+    "name": "verifyingContract",
+    "type": "address"
+   }
+  ],
+  "PermitWitnessTransferFrom": [
+   {
+    "name": "permitted",
+    "type": "TokenPermissions"
+   },
+   {
+    "name": "spender",
+    "type": "address"
+   },
+   {
+    "name": "nonce",
+    "type": "uint256"
+   },
+   {
+    "name": "deadline",
+    "type": "uint256"
+   },
+   {
+    "name": "witness",
+    "type": "PayOnceIntent"
+   }
+  ],
+  "TokenPermissions": [
+   {
+    "name": "token",
+    "type": "address"
+   },
+   {
+    "name": "amount",
+    "type": "uint256"
+   }
+  ],
+  "PayOnceIntent": [
+   {
+    "name": "paymentId",
+    "type": "bytes32"
+   },
+   {
+    "name": "merchantId",
+    "type": "bytes32"
+   },
+   {
+    "name": "recipient",
+    "type": "address"
+   },
+   {
+    "name": "feeRecipient",
+    "type": "address"
+   },
+   {
+    "name": "token",
+    "type": "address"
+   },
+   {
+    "name": "grossAmountIn",
+    "type": "uint256"
+   },
+   {
+    "name": "merchantAmount",
+    "type": "uint256"
+   },
+   {
+    "name": "feeAmount",
+    "type": "uint256"
+   },
+   {
+    "name": "payer",
+    "type": "address"
+   },
+   {
+    "name": "validUntil",
+    "type": "uint64"
+   },
+   {
+    "name": "termsHash",
+    "type": "bytes32"
+   },
+   {
+    "name": "quoteHash",
+    "type": "bytes32"
+   }
+  ]
+ },
+ "primaryType": "PermitWitnessTransferFrom",
+ "domain": {
+  "name": "Permit2",
+  "chainId": "84532",
+  "verifyingContract": "0x000000000022D473030F116dDEE9F6B43aC78BA3"
+ },
+ "message": {
+  "permitted": {
+   "token": "0x5555555555555555555555555555555555555555",
+   "amount": "50000000"
+  },
+  "spender": "0x1111111111111111111111111111111111111111",
+  "nonce": "4660",
+  "deadline": "1800000300",
+  "witness": {
+   "paymentId": "0x2121212121212121212121212121212121212121212121212121212121212121",
+   "merchantId": "0xaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+   "recipient": "0x3131313131313131313131313131313131313131",
+   "feeRecipient": "0x3232323232323232323232323232323232323232",
+   "token": "0x5555555555555555555555555555555555555555",
+   "grossAmountIn": "50000000",
+   "merchantAmount": "49500000",
+   "feeAmount": "500000",
+   "payer": "0x4444444444444444444444444444444444444444",
+   "validUntil": "1800000300",
+   "termsHash": "0x2222222222222222222222222222222222222222222222222222222222222222",
+   "quoteHash": "0x0000000000000000000000000000000000000000000000000000000000000000"
+  }
+ }
+}

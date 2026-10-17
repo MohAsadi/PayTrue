@@ -1,0 +1,287 @@
+{
+  "note": "vectors that only the planner, the orchestrator or the signer policy can execute; the on-chain halves are scenarios ACP_TV_41 and MIG_TV_*",
+  "plannerParts": [
+    {
+      "id": "MIG-TV-26",
+      "owner": "planner",
+      "part": "a plan that contains lockdown(t, Rold) while a sibling uses t is refused by the validator (NC-20)"
+    },
+    {
+      "id": "MIG-TV-41",
+      "owner": "planner",
+      "part": "the planner refuses approve(t, R, 50, T+10) while a sibling relies on the slot (NC-21)"
+    },
+    {
+      "id": "MIG-TV-42",
+      "owner": "orchestrator",
+      "part": "the orchestrator raises ALLOWANCE_SHORTFALL before submitting a charge that would revert"
+    },
+    {
+      "id": "MIG-TV-44",
+      "owner": "planner and orchestrator",
+      "part": "NORMAL_PARTIAL with every token shared: no S2, no Q2 state, no hold"
+    },
+    {
+      "id": "MIG-TV-04",
+      "owner": "orchestrator",
+      "part": "Q2 hold: no charge attempt and no dunning while MIGRATION_IN_PROGRESS"
+    },
+    {
+      "id": "MIG-TV-16",
+      "owner": "planner",
+      "part": "planner with the experimental flag off never emits a zero-amount permit step"
+    },
+    {
+      "id": "MIG-TV-18",
+      "owner": "contracts",
+      "part": "a plan step of 10 successors succeeds, 11 reverts MAX_BATCH (the pure limit is in scenario TB_BATCH; the step on the contracts is in contracts/test/Queue.t.sol)"
+    }
+  ],
+  "schema": 1,
+  "sigCapability": [
+    {
+      "id": "ACP_TV_41",
+      "initialPinVersion": 1,
+      "source": "ACP-TV-41",
+      "steps": [
+        {
+          "args": {},
+          "event": "proxy_implementation_changed",
+          "pinVersion": 1,
+          "reason": "IMPLEMENTATION",
+          "signatureTransportAllowed": false,
+          "state": "REVOKED"
+        }
+      ],
+      "title": "Mode 3: the proxy implementation changes, the proxy bytecode does not: the chain pin holds, the backend revokes"
+    },
+    {
+      "id": "ACP_TV_42",
+      "initialPinVersion": 1,
+      "source": "ACP-TV-42",
+      "steps": [
+        {
+          "args": {},
+          "event": "wallet_version_changed",
+          "pinVersion": 1,
+          "reason": "WALLET_VERSION",
+          "signatureTransportAllowed": false,
+          "state": "REVOKED"
+        },
+        {
+          "args": {
+            "pin_version": 2
+          },
+          "event": "reverify",
+          "pinVersion": 2,
+          "reason": null,
+          "signatureTransportAllowed": true,
+          "state": "VERIFIED"
+        }
+      ],
+      "title": "Wallet version label changes with every code hash unchanged: REVOKED(WALLET_VERSION); re-verification with pinVersion + 1 restores"
+    },
+    {
+      "id": "ACP_TV_43",
+      "initialPinVersion": 3,
+      "source": "ACP-TV-43",
+      "steps": [
+        {
+          "args": {
+            "new_version": 4
+          },
+          "event": "pin_version_moved",
+          "pinVersion": 4,
+          "reason": null,
+          "signatureTransportAllowed": false,
+          "state": "UNVERIFIED"
+        },
+        {
+          "args": {
+            "pin_version": 4
+          },
+          "event": "reverify",
+          "pinVersion": 4,
+          "reason": null,
+          "signatureTransportAllowed": true,
+          "state": "VERIFIED"
+        }
+      ],
+      "title": "Evidence bound to pinVersion 3; the pin is updated to 4: UNVERIFIED until re-bound and a pre-flight passes"
+    },
+    {
+      "id": "ACP_TV_44",
+      "initialPinVersion": 1,
+      "source": "ACP-TV-44",
+      "steps": [
+        {
+          "args": {},
+          "event": "preflight_failed",
+          "pinVersion": 1,
+          "reason": null,
+          "signatureTransportAllowed": true,
+          "state": "VERIFIED"
+        },
+        {
+          "args": {},
+          "event": "preflight_failed",
+          "pinVersion": 1,
+          "reason": null,
+          "signatureTransportAllowed": true,
+          "state": "VERIFIED"
+        },
+        {
+          "args": {},
+          "event": "preflight_failed",
+          "pinVersion": 1,
+          "reason": "PREFLIGHT",
+          "signatureTransportAllowed": false,
+          "state": "REVOKED"
+        },
+        {
+          "args": {},
+          "event": "preflight_ok",
+          "pinVersion": 1,
+          "reason": "PREFLIGHT",
+          "signatureTransportAllowed": false,
+          "state": "REVOKED"
+        },
+        {
+          "args": {
+            "pin_version": 2
+          },
+          "event": "reverify",
+          "pinVersion": 2,
+          "reason": null,
+          "signatureTransportAllowed": true,
+          "state": "VERIFIED"
+        }
+      ],
+      "title": "Three consecutive pre-flight failures: REVOKED(PREFLIGHT) after the third; one success does not restore it"
+    },
+    {
+      "id": "ACP_TV_T_SIG",
+      "initialPinVersion": 1,
+      "source": "ACP-TV-41..44; 17 section 5.6",
+      "steps": [
+        {
+          "args": {},
+          "event": "account_code_changed",
+          "pinVersion": 1,
+          "reason": "ACCOUNT_CODE",
+          "signatureTransportAllowed": false,
+          "state": "REVOKED"
+        },
+        {
+          "args": {
+            "pin_version": 2
+          },
+          "event": "reverify",
+          "pinVersion": 2,
+          "reason": null,
+          "signatureTransportAllowed": true,
+          "state": "VERIFIED"
+        },
+        {
+          "args": {},
+          "event": "delegate_changed",
+          "pinVersion": 2,
+          "reason": "DELEGATE",
+          "signatureTransportAllowed": false,
+          "state": "REVOKED"
+        },
+        {
+          "args": {
+            "pin_version": 3
+          },
+          "event": "reverify",
+          "pinVersion": 3,
+          "reason": null,
+          "signatureTransportAllowed": true,
+          "state": "VERIFIED"
+        },
+        {
+          "args": {},
+          "event": "delegate_code_changed",
+          "pinVersion": 3,
+          "reason": "DELEGATE_CODE",
+          "signatureTransportAllowed": false,
+          "state": "REVOKED"
+        },
+        {
+          "args": {
+            "pin_version": 4
+          },
+          "event": "reverify",
+          "pinVersion": 4,
+          "reason": null,
+          "signatureTransportAllowed": true,
+          "state": "VERIFIED"
+        },
+        {
+          "args": {},
+          "event": "probe_changed",
+          "pinVersion": 4,
+          "reason": "PROBE",
+          "signatureTransportAllowed": false,
+          "state": "REVOKED"
+        },
+        {
+          "args": {
+            "pin_version": 5
+          },
+          "event": "reverify",
+          "pinVersion": 5,
+          "reason": null,
+          "signatureTransportAllowed": true,
+          "state": "VERIFIED"
+        },
+        {
+          "args": {},
+          "event": "row_revoked",
+          "pinVersion": 5,
+          "reason": "ROW",
+          "signatureTransportAllowed": false,
+          "state": "REVOKED"
+        },
+        {
+          "args": {
+            "pin_version": 6
+          },
+          "event": "reverify",
+          "pinVersion": 6,
+          "reason": null,
+          "signatureTransportAllowed": true,
+          "state": "VERIFIED"
+        },
+        {
+          "args": {},
+          "event": "evidence_expired",
+          "pinVersion": 6,
+          "reason": null,
+          "signatureTransportAllowed": false,
+          "state": "UNVERIFIED"
+        },
+        {
+          "args": {
+            "pin_version": 7
+          },
+          "event": "reverify",
+          "pinVersion": 7,
+          "reason": null,
+          "signatureTransportAllowed": true,
+          "state": "VERIFIED"
+        },
+        {
+          "args": {},
+          "event": "family_stopped",
+          "pinVersion": 7,
+          "reason": "FAMILY",
+          "signatureTransportAllowed": false,
+          "state": "REVOKED"
+        }
+      ],
+      "title": "Every invalidation trigger of the eleven: the state it leads to"
+    }
+  ]
+}

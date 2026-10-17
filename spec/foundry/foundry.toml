@@ -1,0 +1,34 @@
+[profile.default]
+src = "src"
+test = "test"
+out = "out"
+libs = ["lib"]
+solc_version = "0.8.24"
+evm_version = "cancun"
+# via_ir keeps the large memory-struct functions of the reference model clear of "stack too deep"; it makes the build slower.
+via_ir = true
+optimizer = true
+optimizer_runs = 20
+bytecode_hash = "none"
+# The reference model and the scenario machine are test contracts: they may exceed the 24 KB deployment limit.
+code_size_limit = 262144
+# Tests read the exported vectors (vectors/*.json) and nothing else.
+fs_permissions = [{ access = "read", path = "./vectors" }]
+# No network by default: the fork tests under test/fork read ETH_RPC_URL themselves and skip when it is not set.
+ffi = false
+gas_limit = 9223372036854775807
+# The scenario machine and the mutation test parse large exported JSON files; the default 128 MB memory limit of the EVM is too small.
+memory_limit = 2147483648
+
+[fuzz]
+runs = 1000
+seed = "0xfa57"
+
+[invariant]
+runs = 256
+depth = 64
+fail_on_revert = false
+
+[profile.fork]
+# forge test --profile fork --match-path "test/fork/*" with ETH_RPC_URL set
+fs_permissions = [{ access = "read", path = "./vectors" }]

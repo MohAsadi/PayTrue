@@ -1,0 +1,1166 @@
+{
+ "schema": 1,
+ "tool": "tools/loop_audit.py",
+ "solc": "0.8.24",
+ "profile": "contracts",
+ "scope": "contracts/src (the actual FastPay contracts and the generated types library)",
+ "constants": {
+  "MAX_TOKENS_PER_MANDATE": 3,
+  "MAX_EXPOSED_TOKENS_PER_ROUTER": 8,
+  "MAX_BATCH": 10,
+  "MAX_SIGNERS_PER_SET": 16,
+  "MAX_WITNESS_BATCH": 2
+ },
+ "recordedBounds": {
+  "TOKENS": "PC-11",
+  "EXPOSED": "PC-18",
+  "BATCH": "PC-04",
+  "SIGNERS": "PC-19",
+  "WITNESS_BATCH": "none: 10 section 8 question 2 (merchant and fee), generated from eip712/types.json"
+ },
+ "safeRangeHardMax": {
+  "MAX_TOKENS_PER_MANDATE": 6,
+  "MAX_EXPOSED_TOKENS_PER_ROUTER": 30,
+  "MAX_BATCH": 20,
+  "MAX_SIGNERS_PER_SET": 64
+ },
+ "loops": [
+  {
+   "file": "MandateGateway.sol",
+   "line": 111,
+   "function": "MandateGateway.updateAccountPinsBySig",
+   "statement": "ForStatement",
+   "header": "for (uint256 i = 0; i < u.mandateIds.length; ++i) {",
+   "boundClass": "BATCH",
+   "boundExpression": "mandateIds.length <= MAX_BATCH",
+   "why": "the first line reverts BatchTooLarge",
+   "boundValue": 10
+  },
+  {
+   "file": "MandateGateway.sol",
+   "line": 121,
+   "function": "MandateGateway.updateAccountPins",
+   "statement": "ForStatement",
+   "header": "for (uint256 i = 0; i < mandateIds.length; ++i) {",
+   "boundClass": "BATCH",
+   "boundExpression": "mandateIds.length <= MAX_BATCH",
+   "why": "the line above reverts BatchTooLarge",
+   "boundValue": 10
+  },
+  {
+   "file": "MandateManager.sol",
+   "line": 198,
+   "function": "MandateManager.exposedUnionCount",
+   "statement": "ForStatement",
+   "header": "for (uint256 i = 0; i < tokens.length; ++i) {",
+   "boundClass": "TOKENS",
+   "boundExpression": "tokens.length <= MAX_TOKENS_PER_MANDATE",
+   "why": "every caller passes terms that requireShape has accepted",
+   "boundValue": 3
+  },
+  {
+   "file": "MandateManager.sol",
+   "line": 262,
+   "function": "MandateManager._setTokens",
+   "statement": "ForStatement",
+   "header": "for (uint256 i = 0; i < n; ++i) {",
+   "boundClass": "TOKENS",
+   "boundExpression": "tokens.length <= MAX_TOKENS_PER_MANDATE",
+   "why": "requireShape ran on the terms that these tokens belong to",
+   "boundValue": 3
+  },
+  {
+   "file": "MandateManager.sol",
+   "line": 266,
+   "function": "MandateManager._setTokens",
+   "statement": "ForStatement",
+   "header": "for (uint256 i = n; i < 3; ++i) {",
+   "boundClass": "TOKENS",
+   "boundExpression": "the slots n .. 2 of a three-slot array",
+   "why": "the array has MAX_TOKENS_PER_MANDATE slots",
+   "boundValue": 3
+  },
+  {
+   "file": "MandateManager.sol",
+   "line": 273,
+   "function": "MandateManager._incTokens",
+   "statement": "ForStatement",
+   "header": "for (uint256 i = 0; i < tokens.length; ++i) {",
+   "boundClass": "TOKENS",
+   "boundExpression": "tokens.length <= MAX_TOKENS_PER_MANDATE",
+   "why": "requireShape ran on these terms",
+   "boundValue": 3
+  },
+  {
+   "file": "MandateManager.sol",
+   "line": 280,
+   "function": "MandateManager._decStored",
+   "statement": "ForStatement",
+   "header": "for (uint256 i = 0; i < m.nTokens; ++i) {",
+   "boundClass": "TOKENS",
+   "boundExpression": "nTokens <= MAX_TOKENS_PER_MANDATE",
+   "why": "nTokens was set from requireShape'd terms",
+   "boundValue": 3
+  },
+  {
+   "file": "MandateManager.sol",
+   "line": 361,
+   "function": "MandateManager.reduce",
+   "statement": "ForStatement",
+   "header": "for (uint256 i = 0; i < m.nTokens; ++i) {",
+   "boundClass": "TOKENS",
+   "boundExpression": "nTokens <= MAX_TOKENS_PER_MANDATE",
+   "why": "nTokens was set from requireShape'd terms",
+   "boundValue": 3
+  },
+  {
+   "file": "MigrationQueue.sol",
+   "line": 114,
+   "function": "MigrationQueue.step",
+   "statement": "ForStatement",
+   "header": "for (uint256 i = 0; i < entries.length; ++i) {",
+   "boundClass": "BATCH",
+   "boundExpression": "entries.length <= MAX_BATCH",
+   "why": "the first line reverts StepTooLarge",
+   "boundValue": 10
+  },
+  {
+   "file": "SignerSetRegistry.sol",
+   "line": 58,
+   "function": "SignerSetRegistry.proposeSignerSet",
+   "statement": "ForStatement",
+   "header": "for (uint256 i = 0; i < members.length; ++i) {",
+   "boundClass": "SIGNERS",
+   "boundExpression": "members.length <= MAX_SIGNERS_PER_SET",
+   "why": "the line above reverts TooManySigners before the loop",
+   "boundValue": 16
+  },
+  {
+   "file": "SignerSetRegistry.sol",
+   "line": 73,
+   "function": "SignerSetRegistry.activateSignerSet",
+   "statement": "ForStatement",
+   "header": "for (uint256 i = 0; i < list.length; ++i) {",
+   "boundClass": "SIGNERS",
+   "boundExpression": "memberList[version].length <= MAX_SIGNERS_PER_SET",
+   "why": "proposeSignerSet refuses a larger set",
+   "boundValue": 16
+  },
+  {
+   "file": "SuccessorValidator.sol",
+   "line": 78,
+   "function": "SuccessorValidator._g1",
+   "statement": "ForStatement",
+   "header": "for (uint256 i = 0; i < x.newTerms.tokens.length; ++i) {",
+   "boundClass": "TOKENS",
+   "boundExpression": "newTerms.tokens.length <= MAX_TOKENS_PER_MANDATE",
+   "why": "the manager runs requireShape on the new terms before it calls validate",
+   "boundValue": 3
+  },
+  {
+   "file": "SuccessorValidator.sol",
+   "line": 108,
+   "function": "SuccessorValidator._o1n",
+   "statement": "ForStatement",
+   "header": "for (uint256 i = 0; i < x.predTerms.tokens.length; ++i) {",
+   "boundClass": "TOKENS",
+   "boundExpression": "predTerms.tokens.length <= MAX_TOKENS_PER_MANDATE",
+   "why": "the terms were hash-bound to a stored mandate that requireShape accepted",
+   "boundValue": 3
+  },
+  {
+   "file": "SuccessorValidator.sol",
+   "line": 125,
+   "function": "SuccessorValidator._o1e",
+   "statement": "ForStatement",
+   "header": "for (uint256 j = 0; j < n; ++j) {",
+   "boundClass": "EXPOSED",
+   "boundExpression": "exposedCount <= MAX_EXPOSED_TOKENS_PER_ROUTER",
+   "why": "the manager's _liveInc refuses a ninth token and predicate X2 refuses the activation",
+   "boundValue": 8
+  },
+  {
+   "file": "generated/FastPayTypes.sol",
+   "line": 331,
+   "function": "FastPayTypes.hashStructs",
+   "statement": "ForStatement",
+   "header": "for (uint256 i; i < a.length; ++i) h[i] = hashStruct(a[i]);",
+   "boundClass": "TOKENS",
+   "boundExpression": "a.length <= MAX_TOKENS_PER_MANDATE",
+   "why": "hashStruct of the struct that owns the array reverts ArrayTooLong above the bound before it calls this function (the generator refuses an array without a declared bound)",
+   "boundValue": 3
+  },
+  {
+   "file": "generated/FastPayTypes.sol",
+   "line": 350,
+   "function": "FastPayTypes._tokensDigest",
+   "statement": "ForStatement",
+   "header": "for (uint256 i; i < ts.length; ++i) x = bytes.concat(x, abi.encode(ts[i].token));",
+   "boundClass": "TOKENS",
+   "boundExpression": "ts.length <= MAX_TOKENS_PER_MANDATE",
+   "why": "snapshotHash reverts ArrayTooLong above the bound before it calls this function",
+   "boundValue": 3
+  },
+  {
+   "file": "generated/FastPayTypes.sol",
+   "line": 357,
+   "function": "FastPayTypes._capTableDigest",
+   "statement": "ForStatement",
+   "header": "for (uint256 i; i < ts.length; ++i) x = bytes.concat(x, abi.encode(ts[i].token, ts[i].perPaymentMax, ts[i].dayMax, ts[i].weekMax, ts[i].thirtyDayMax, ts[i].periodMax, ts[i].totalMax));",
+   "boundClass": "TOKENS",
+   "boundExpression": "ts.length <= MAX_TOKENS_PER_MANDATE",
+   "why": "snapshotHash reverts ArrayTooLong above the bound before it calls this function",
+   "boundValue": 3
+  },
+  {
+   "file": "generated/FastPayTypes.sol",
+   "line": 376,
+   "function": "FastPayTypes.permit2BatchWitnessTransferFromHash",
+   "statement": "ForStatement",
+   "header": "for (uint256 i; i < tokens.length; ++i) h[i] = keccak256(abi.encode(TOKEN_PERMISSIONS_TYPEHASH, tokens[i], amounts[i]));",
+   "boundClass": "WITNESS_BATCH",
+   "boundExpression": "tokens.length <= MAX_WITNESS_BATCH",
+   "why": "the require above bounds the batch (Router v1.0: merchant and fee)",
+   "boundValue": 2
+  },
+  {
+   "file": "lib/ContainLib.sol",
+   "line": 20,
+   "function": "ContainLib.requireShape",
+   "statement": "ForStatement",
+   "header": "for (uint256 i = 0; i < n; ++i) {",
+   "boundClass": "TOKENS",
+   "boundExpression": "tokens.length <= MAX_TOKENS_PER_MANDATE",
+   "why": "the line above reverts TermsInvalid above the bound",
+   "boundValue": 3
+  },
+  {
+   "file": "lib/ContainLib.sol",
+   "line": 29,
+   "function": "ContainLib.indexOf",
+   "statement": "ForStatement",
+   "header": "for (uint256 i = 0; i < t.tokens.length; ++i) {",
+   "boundClass": "TOKENS",
+   "boundExpression": "tokens.length <= MAX_TOKENS_PER_MANDATE",
+   "why": "requireShape ran on these terms before they were stored or hashed into a mandate",
+   "boundValue": 3
+  },
+  {
+   "file": "lib/ContainLib.sol",
+   "line": 59,
+   "function": "ContainLib._tokensSubset",
+   "statement": "ForStatement",
+   "header": "for (uint256 i = 0; i < succ.tokens.length; ++i) {",
+   "boundClass": "TOKENS",
+   "boundExpression": "tokens.length <= MAX_TOKENS_PER_MANDATE",
+   "why": "requireShape ran on both terms before they were stored or hashed",
+   "boundValue": 3
+  },
+  {
+   "file": "lib/ContainLib.sol",
+   "line": 73,
+   "function": "ContainLib._capsViolated",
+   "statement": "ForStatement",
+   "header": "for (uint256 i = 0; i < succ.tokens.length; ++i) {",
+   "boundClass": "TOKENS",
+   "boundExpression": "tokens.length <= MAX_TOKENS_PER_MANDATE",
+   "why": "requireShape ran on both terms before they were stored or hashed",
+   "boundValue": 3
+  },
+  {
+   "file": "lib/ContainLib.sol",
+   "line": 110,
+   "function": "ContainLib.widenedMask",
+   "statement": "ForStatement",
+   "header": "for (uint256 i = 0; i < n.tokens.length; ++i) {",
+   "boundClass": "TOKENS",
+   "boundExpression": "tokens.length <= MAX_TOKENS_PER_MANDATE",
+   "why": "requireShape ran on both terms before they were stored or hashed",
+   "boundValue": 3
+  }
+ ],
+ "entryPoints": [
+  {
+   "contract": "ExecutorRegistry",
+   "function": "add",
+   "stateChanging": true,
+   "path": "ExecutorRegistry.sol",
+   "loopsReachable": 0,
+   "iterationBound": 0,
+   "oracleLoopsReachable": [],
+   "iterationBoundAtHardMaxOfTheSafeRange": 0
+  },
+  {
+   "contract": "ExecutorRegistry",
+   "function": "remove",
+   "stateChanging": true,
+   "path": "ExecutorRegistry.sol",
+   "loopsReachable": 0,
+   "iterationBound": 0,
+   "oracleLoopsReachable": [],
+   "iterationBoundAtHardMaxOfTheSafeRange": 0
+  },
+  {
+   "contract": "FeeController",
+   "function": "setFee",
+   "stateChanging": true,
+   "path": "FeeController.sol",
+   "loopsReachable": 0,
+   "iterationBound": 0,
+   "oracleLoopsReachable": [],
+   "iterationBoundAtHardMaxOfTheSafeRange": 0
+  },
+  {
+   "contract": "MandateGateway",
+   "function": "activateBySig",
+   "stateChanging": true,
+   "path": "MandateGateway.sol",
+   "loopsReachable": 6,
+   "iterationBound": 21,
+   "oracleLoopsReachable": [],
+   "iterationBoundAtHardMaxOfTheSafeRange": 42
+  },
+  {
+   "contract": "MandateGateway",
+   "function": "activateSuccessorBySig",
+   "stateChanging": true,
+   "path": "MandateGateway.sol",
+   "loopsReachable": 16,
+   "iterationBound": 95,
+   "oracleLoopsReachable": [],
+   "iterationBoundAtHardMaxOfTheSafeRange": 276
+  },
+  {
+   "contract": "MandateGateway",
+   "function": "pauseBySig",
+   "stateChanging": true,
+   "path": "MandateGateway.sol",
+   "loopsReachable": 0,
+   "iterationBound": 0,
+   "oracleLoopsReachable": [],
+   "iterationBoundAtHardMaxOfTheSafeRange": 0
+  },
+  {
+   "contract": "MandateGateway",
+   "function": "reduceBySig",
+   "stateChanging": true,
+   "path": "MandateGateway.sol",
+   "loopsReachable": 8,
+   "iterationBound": 57,
+   "oracleLoopsReachable": [],
+   "iterationBoundAtHardMaxOfTheSafeRange": 168
+  },
+  {
+   "contract": "MandateGateway",
+   "function": "resumeBySig",
+   "stateChanging": true,
+   "path": "MandateGateway.sol",
+   "loopsReachable": 0,
+   "iterationBound": 0,
+   "oracleLoopsReachable": [],
+   "iterationBoundAtHardMaxOfTheSafeRange": 0
+  },
+  {
+   "contract": "MandateGateway",
+   "function": "revokeBySig",
+   "stateChanging": true,
+   "path": "MandateGateway.sol",
+   "loopsReachable": 1,
+   "iterationBound": 3,
+   "oracleLoopsReachable": [],
+   "iterationBoundAtHardMaxOfTheSafeRange": 6
+  },
+  {
+   "contract": "MandateGateway",
+   "function": "updateAccountPinBySig",
+   "stateChanging": true,
+   "path": "MandateGateway.sol",
+   "loopsReachable": 0,
+   "iterationBound": 0,
+   "oracleLoopsReachable": [],
+   "iterationBoundAtHardMaxOfTheSafeRange": 0
+  },
+  {
+   "contract": "MandateGateway",
+   "function": "updateAccountPins",
+   "stateChanging": true,
+   "path": "MandateGateway.sol",
+   "loopsReachable": 1,
+   "iterationBound": 10,
+   "oracleLoopsReachable": [],
+   "iterationBoundAtHardMaxOfTheSafeRange": 20
+  },
+  {
+   "contract": "MandateGateway",
+   "function": "updateAccountPinsBySig",
+   "stateChanging": true,
+   "path": "MandateGateway.sol",
+   "loopsReachable": 1,
+   "iterationBound": 10,
+   "oracleLoopsReachable": [],
+   "iterationBoundAtHardMaxOfTheSafeRange": 20
+  },
+  {
+   "contract": "MandateManager",
+   "function": "activate",
+   "stateChanging": true,
+   "path": "MandateManager.sol",
+   "loopsReachable": 6,
+   "iterationBound": 18,
+   "oracleLoopsReachable": [],
+   "iterationBoundAtHardMaxOfTheSafeRange": 36
+  },
+  {
+   "contract": "MandateManager",
+   "function": "activateSuccessor",
+   "stateChanging": true,
+   "path": "MandateManager.sol",
+   "loopsReachable": 16,
+   "iterationBound": 95,
+   "oracleLoopsReachable": [],
+   "iterationBoundAtHardMaxOfTheSafeRange": 276
+  },
+  {
+   "contract": "MandateManager",
+   "function": "consume",
+   "stateChanging": true,
+   "path": "MandateManager.sol",
+   "loopsReachable": 2,
+   "iterationBound": 6,
+   "oracleLoopsReachable": [],
+   "iterationBoundAtHardMaxOfTheSafeRange": 12
+  },
+  {
+   "contract": "MandateManager",
+   "function": "domainSeparator",
+   "stateChanging": false,
+   "path": "MandateManager.sol",
+   "loopsReachable": 0,
+   "iterationBound": 0,
+   "oracleLoopsReachable": [],
+   "iterationBoundAtHardMaxOfTheSafeRange": 0
+  },
+  {
+   "contract": "MandateManager",
+   "function": "exposedAt",
+   "stateChanging": false,
+   "path": "MandateManager.sol",
+   "loopsReachable": 0,
+   "iterationBound": 0,
+   "oracleLoopsReachable": [],
+   "iterationBoundAtHardMaxOfTheSafeRange": 0
+  },
+  {
+   "contract": "MandateManager",
+   "function": "exposedCount",
+   "stateChanging": false,
+   "path": "MandateManager.sol",
+   "loopsReachable": 0,
+   "iterationBound": 0,
+   "oracleLoopsReachable": [],
+   "iterationBoundAtHardMaxOfTheSafeRange": 0
+  },
+  {
+   "contract": "MandateManager",
+   "function": "exposedUnionCount",
+   "stateChanging": false,
+   "path": "MandateManager.sol",
+   "loopsReachable": 1,
+   "iterationBound": 3,
+   "oracleLoopsReachable": [],
+   "iterationBoundAtHardMaxOfTheSafeRange": 6
+  },
+  {
+   "contract": "MandateManager",
+   "function": "isConsumable",
+   "stateChanging": false,
+   "path": "MandateManager.sol",
+   "loopsReachable": 0,
+   "iterationBound": 0,
+   "oracleLoopsReachable": [],
+   "iterationBoundAtHardMaxOfTheSafeRange": 0
+  },
+  {
+   "contract": "MandateManager",
+   "function": "lineageIdOf",
+   "stateChanging": false,
+   "path": "MandateManager.sol",
+   "loopsReachable": 0,
+   "iterationBound": 0,
+   "oracleLoopsReachable": [],
+   "iterationBoundAtHardMaxOfTheSafeRange": 0
+  },
+  {
+   "contract": "MandateManager",
+   "function": "mandateIdOf",
+   "stateChanging": false,
+   "path": "MandateManager.sol",
+   "loopsReachable": 0,
+   "iterationBound": 0,
+   "oracleLoopsReachable": [],
+   "iterationBoundAtHardMaxOfTheSafeRange": 0
+  },
+  {
+   "contract": "MandateManager",
+   "function": "mandateView",
+   "stateChanging": false,
+   "path": "MandateManager.sol",
+   "loopsReachable": 0,
+   "iterationBound": 0,
+   "oracleLoopsReachable": [],
+   "iterationBoundAtHardMaxOfTheSafeRange": 0
+  },
+  {
+   "contract": "MandateManager",
+   "function": "partiesOf",
+   "stateChanging": false,
+   "path": "MandateManager.sol",
+   "loopsReachable": 0,
+   "iterationBound": 0,
+   "oracleLoopsReachable": [],
+   "iterationBoundAtHardMaxOfTheSafeRange": 0
+  },
+  {
+   "contract": "MandateManager",
+   "function": "pause",
+   "stateChanging": true,
+   "path": "MandateManager.sol",
+   "loopsReachable": 0,
+   "iterationBound": 0,
+   "oracleLoopsReachable": [],
+   "iterationBoundAtHardMaxOfTheSafeRange": 0
+  },
+  {
+   "contract": "MandateManager",
+   "function": "pinHashOf",
+   "stateChanging": false,
+   "path": "MandateManager.sol",
+   "loopsReachable": 0,
+   "iterationBound": 0,
+   "oracleLoopsReachable": [],
+   "iterationBoundAtHardMaxOfTheSafeRange": 0
+  },
+  {
+   "contract": "MandateManager",
+   "function": "reduce",
+   "stateChanging": true,
+   "path": "MandateManager.sol",
+   "loopsReachable": 8,
+   "iterationBound": 51,
+   "oracleLoopsReachable": [],
+   "iterationBoundAtHardMaxOfTheSafeRange": 156
+  },
+  {
+   "contract": "MandateManager",
+   "function": "resume",
+   "stateChanging": true,
+   "path": "MandateManager.sol",
+   "loopsReachable": 0,
+   "iterationBound": 0,
+   "oracleLoopsReachable": [],
+   "iterationBoundAtHardMaxOfTheSafeRange": 0
+  },
+  {
+   "contract": "MandateManager",
+   "function": "retire",
+   "stateChanging": true,
+   "path": "MandateManager.sol",
+   "loopsReachable": 1,
+   "iterationBound": 3,
+   "oracleLoopsReachable": [],
+   "iterationBoundAtHardMaxOfTheSafeRange": 6
+  },
+  {
+   "contract": "MandateManager",
+   "function": "revoke",
+   "stateChanging": true,
+   "path": "MandateManager.sol",
+   "loopsReachable": 1,
+   "iterationBound": 3,
+   "oracleLoopsReachable": [],
+   "iterationBoundAtHardMaxOfTheSafeRange": 6
+  },
+  {
+   "contract": "MandateManager",
+   "function": "setPauseBit",
+   "stateChanging": true,
+   "path": "MandateManager.sol",
+   "loopsReachable": 0,
+   "iterationBound": 0,
+   "oracleLoopsReachable": [],
+   "iterationBoundAtHardMaxOfTheSafeRange": 0
+  },
+  {
+   "contract": "MandateManager",
+   "function": "spendNonce",
+   "stateChanging": true,
+   "path": "MandateManager.sol",
+   "loopsReachable": 0,
+   "iterationBound": 0,
+   "oracleLoopsReachable": [],
+   "iterationBoundAtHardMaxOfTheSafeRange": 0
+  },
+  {
+   "contract": "MandateManager",
+   "function": "updateAccountPin",
+   "stateChanging": true,
+   "path": "MandateManager.sol",
+   "loopsReachable": 0,
+   "iterationBound": 0,
+   "oracleLoopsReachable": [],
+   "iterationBoundAtHardMaxOfTheSafeRange": 0
+  },
+  {
+   "contract": "MerchantRegistry",
+   "function": "acceptRecipient",
+   "stateChanging": true,
+   "path": "MerchantRegistry.sol",
+   "loopsReachable": 0,
+   "iterationBound": 0,
+   "oracleLoopsReachable": [],
+   "iterationBoundAtHardMaxOfTheSafeRange": 0
+  },
+  {
+   "contract": "MerchantRegistry",
+   "function": "cancelRecipient",
+   "stateChanging": true,
+   "path": "MerchantRegistry.sol",
+   "loopsReachable": 0,
+   "iterationBound": 0,
+   "oracleLoopsReachable": [],
+   "iterationBoundAtHardMaxOfTheSafeRange": 0
+  },
+  {
+   "contract": "MerchantRegistry",
+   "function": "deactivate",
+   "stateChanging": true,
+   "path": "MerchantRegistry.sol",
+   "loopsReachable": 0,
+   "iterationBound": 0,
+   "oracleLoopsReachable": [],
+   "iterationBoundAtHardMaxOfTheSafeRange": 0
+  },
+  {
+   "contract": "MerchantRegistry",
+   "function": "pauseMerchant",
+   "stateChanging": true,
+   "path": "MerchantRegistry.sol",
+   "loopsReachable": 0,
+   "iterationBound": 0,
+   "oracleLoopsReachable": [],
+   "iterationBoundAtHardMaxOfTheSafeRange": 0
+  },
+  {
+   "contract": "MerchantRegistry",
+   "function": "proposeRecipient",
+   "stateChanging": true,
+   "path": "MerchantRegistry.sol",
+   "loopsReachable": 0,
+   "iterationBound": 0,
+   "oracleLoopsReachable": [],
+   "iterationBoundAtHardMaxOfTheSafeRange": 0
+  },
+  {
+   "contract": "MerchantRegistry",
+   "function": "register",
+   "stateChanging": true,
+   "path": "MerchantRegistry.sol",
+   "loopsReachable": 0,
+   "iterationBound": 0,
+   "oracleLoopsReachable": [],
+   "iterationBoundAtHardMaxOfTheSafeRange": 0
+  },
+  {
+   "contract": "MerchantRegistry",
+   "function": "setAccepted",
+   "stateChanging": true,
+   "path": "MerchantRegistry.sol",
+   "loopsReachable": 0,
+   "iterationBound": 0,
+   "oracleLoopsReachable": [],
+   "iterationBoundAtHardMaxOfTheSafeRange": 0
+  },
+  {
+   "contract": "MerchantRegistry",
+   "function": "setChargeSigner",
+   "stateChanging": true,
+   "path": "MerchantRegistry.sol",
+   "loopsReachable": 0,
+   "iterationBound": 0,
+   "oracleLoopsReachable": [],
+   "iterationBoundAtHardMaxOfTheSafeRange": 0
+  },
+  {
+   "contract": "MerchantRegistry",
+   "function": "settlement",
+   "stateChanging": false,
+   "path": "MerchantRegistry.sol",
+   "loopsReachable": 0,
+   "iterationBound": 0,
+   "oracleLoopsReachable": [],
+   "iterationBoundAtHardMaxOfTheSafeRange": 0
+  },
+  {
+   "contract": "MerchantRegistry",
+   "function": "unpauseMerchant",
+   "stateChanging": true,
+   "path": "MerchantRegistry.sol",
+   "loopsReachable": 0,
+   "iterationBound": 0,
+   "oracleLoopsReachable": [],
+   "iterationBoundAtHardMaxOfTheSafeRange": 0
+  },
+  {
+   "contract": "MigrationQueue",
+   "function": "abort",
+   "stateChanging": true,
+   "path": "MigrationQueue.sol",
+   "loopsReachable": 0,
+   "iterationBound": 0,
+   "oracleLoopsReachable": [],
+   "iterationBoundAtHardMaxOfTheSafeRange": 0
+  },
+  {
+   "contract": "MigrationQueue",
+   "function": "expire",
+   "stateChanging": true,
+   "path": "MigrationQueue.sol",
+   "loopsReachable": 0,
+   "iterationBound": 0,
+   "oracleLoopsReachable": [],
+   "iterationBoundAtHardMaxOfTheSafeRange": 0
+  },
+  {
+   "contract": "MigrationQueue",
+   "function": "link",
+   "stateChanging": false,
+   "path": "MigrationQueue.sol",
+   "loopsReachable": 0,
+   "iterationBound": 0,
+   "oracleLoopsReachable": [],
+   "iterationBoundAtHardMaxOfTheSafeRange": 0
+  },
+  {
+   "contract": "MigrationQueue",
+   "function": "open",
+   "stateChanging": true,
+   "path": "MigrationQueue.sol",
+   "loopsReachable": 0,
+   "iterationBound": 0,
+   "oracleLoopsReachable": [],
+   "iterationBoundAtHardMaxOfTheSafeRange": 0
+  },
+  {
+   "contract": "MigrationQueue",
+   "function": "planIdOf",
+   "stateChanging": false,
+   "path": "MigrationQueue.sol",
+   "loopsReachable": 0,
+   "iterationBound": 0,
+   "oracleLoopsReachable": [],
+   "iterationBoundAtHardMaxOfTheSafeRange": 0
+  },
+  {
+   "contract": "MigrationQueue",
+   "function": "skip",
+   "stateChanging": true,
+   "path": "MigrationQueue.sol",
+   "loopsReachable": 0,
+   "iterationBound": 0,
+   "oracleLoopsReachable": [],
+   "iterationBoundAtHardMaxOfTheSafeRange": 0
+  },
+  {
+   "contract": "MigrationQueue",
+   "function": "step",
+   "stateChanging": true,
+   "path": "MigrationQueue.sol",
+   "loopsReachable": 17,
+   "iterationBound": 960,
+   "oracleLoopsReachable": [],
+   "iterationBoundAtHardMaxOfTheSafeRange": 5540
+  },
+  {
+   "contract": "PaymentRouter",
+   "function": "charge",
+   "stateChanging": true,
+   "path": "PaymentRouter.sol",
+   "loopsReachable": 2,
+   "iterationBound": 6,
+   "oracleLoopsReachable": [],
+   "iterationBoundAtHardMaxOfTheSafeRange": 12
+  },
+  {
+   "contract": "PaymentRouter",
+   "function": "payOnceWithSignature",
+   "stateChanging": true,
+   "path": "PaymentRouter.sol",
+   "loopsReachable": 0,
+   "iterationBound": 0,
+   "oracleLoopsReachable": [],
+   "iterationBoundAtHardMaxOfTheSafeRange": 0
+  },
+  {
+   "contract": "PaymentRouter",
+   "function": "paymentIdOf",
+   "stateChanging": false,
+   "path": "PaymentRouter.sol",
+   "loopsReachable": 0,
+   "iterationBound": 0,
+   "oracleLoopsReachable": [],
+   "iterationBoundAtHardMaxOfTheSafeRange": 0
+  },
+  {
+   "contract": "PaymentRouter",
+   "function": "quoteDomainSeparator",
+   "stateChanging": false,
+   "path": "PaymentRouter.sol",
+   "loopsReachable": 0,
+   "iterationBound": 0,
+   "oracleLoopsReachable": [],
+   "iterationBoundAtHardMaxOfTheSafeRange": 0
+  },
+  {
+   "contract": "RouterRegistry",
+   "function": "activate",
+   "stateChanging": true,
+   "path": "RouterRegistry.sol",
+   "loopsReachable": 0,
+   "iterationBound": 0,
+   "oracleLoopsReachable": [],
+   "iterationBoundAtHardMaxOfTheSafeRange": 0
+  },
+  {
+   "contract": "RouterRegistry",
+   "function": "clearEmergency",
+   "stateChanging": true,
+   "path": "RouterRegistry.sol",
+   "loopsReachable": 0,
+   "iterationBound": 0,
+   "oracleLoopsReachable": [],
+   "iterationBoundAtHardMaxOfTheSafeRange": 0
+  },
+  {
+   "contract": "RouterRegistry",
+   "function": "codeHashOf",
+   "stateChanging": false,
+   "path": "RouterRegistry.sol",
+   "loopsReachable": 0,
+   "iterationBound": 0,
+   "oracleLoopsReachable": [],
+   "iterationBoundAtHardMaxOfTheSafeRange": 0
+  },
+  {
+   "contract": "RouterRegistry",
+   "function": "deprecate",
+   "stateChanging": true,
+   "path": "RouterRegistry.sol",
+   "loopsReachable": 0,
+   "iterationBound": 0,
+   "oracleLoopsReachable": [],
+   "iterationBoundAtHardMaxOfTheSafeRange": 0
+  },
+  {
+   "contract": "RouterRegistry",
+   "function": "emergencyDisable",
+   "stateChanging": true,
+   "path": "RouterRegistry.sol",
+   "loopsReachable": 0,
+   "iterationBound": 0,
+   "oracleLoopsReachable": [],
+   "iterationBoundAtHardMaxOfTheSafeRange": 0
+  },
+  {
+   "contract": "RouterRegistry",
+   "function": "isBindable",
+   "stateChanging": false,
+   "path": "RouterRegistry.sol",
+   "loopsReachable": 0,
+   "iterationBound": 0,
+   "oracleLoopsReachable": [],
+   "iterationBoundAtHardMaxOfTheSafeRange": 0
+  },
+  {
+   "contract": "RouterRegistry",
+   "function": "isChargeable",
+   "stateChanging": false,
+   "path": "RouterRegistry.sol",
+   "loopsReachable": 0,
+   "iterationBound": 0,
+   "oracleLoopsReachable": [],
+   "iterationBoundAtHardMaxOfTheSafeRange": 0
+  },
+  {
+   "contract": "RouterRegistry",
+   "function": "markSettled",
+   "stateChanging": true,
+   "path": "RouterRegistry.sol",
+   "loopsReachable": 0,
+   "iterationBound": 0,
+   "oracleLoopsReachable": [],
+   "iterationBoundAtHardMaxOfTheSafeRange": 0
+  },
+  {
+   "contract": "RouterRegistry",
+   "function": "mode",
+   "stateChanging": false,
+   "path": "RouterRegistry.sol",
+   "loopsReachable": 0,
+   "iterationBound": 0,
+   "oracleLoopsReachable": [],
+   "iterationBoundAtHardMaxOfTheSafeRange": 0
+  },
+  {
+   "contract": "RouterRegistry",
+   "function": "notice",
+   "stateChanging": false,
+   "path": "RouterRegistry.sol",
+   "loopsReachable": 0,
+   "iterationBound": 0,
+   "oracleLoopsReachable": [],
+   "iterationBoundAtHardMaxOfTheSafeRange": 0
+  },
+  {
+   "contract": "RouterRegistry",
+   "function": "propose",
+   "stateChanging": true,
+   "path": "RouterRegistry.sol",
+   "loopsReachable": 0,
+   "iterationBound": 0,
+   "oracleLoopsReachable": [],
+   "iterationBoundAtHardMaxOfTheSafeRange": 0
+  },
+  {
+   "contract": "RouterRegistry",
+   "function": "retire",
+   "stateChanging": true,
+   "path": "RouterRegistry.sol",
+   "loopsReachable": 0,
+   "iterationBound": 0,
+   "oracleLoopsReachable": [],
+   "iterationBoundAtHardMaxOfTheSafeRange": 0
+  },
+  {
+   "contract": "RouterRegistry",
+   "function": "stateOf",
+   "stateChanging": false,
+   "path": "RouterRegistry.sol",
+   "loopsReachable": 0,
+   "iterationBound": 0,
+   "oracleLoopsReachable": [],
+   "iterationBoundAtHardMaxOfTheSafeRange": 0
+  },
+  {
+   "contract": "RouterRegistry",
+   "function": "sunset",
+   "stateChanging": true,
+   "path": "RouterRegistry.sol",
+   "loopsReachable": 0,
+   "iterationBound": 0,
+   "oracleLoopsReachable": [],
+   "iterationBoundAtHardMaxOfTheSafeRange": 0
+  },
+  {
+   "contract": "RouterRegistry",
+   "function": "versionOf",
+   "stateChanging": false,
+   "path": "RouterRegistry.sol",
+   "loopsReachable": 0,
+   "iterationBound": 0,
+   "oracleLoopsReachable": [],
+   "iterationBoundAtHardMaxOfTheSafeRange": 0
+  },
+  {
+   "contract": "SignerSetRegistry",
+   "function": "activateSignerSet",
+   "stateChanging": true,
+   "path": "SignerSetRegistry.sol",
+   "loopsReachable": 1,
+   "iterationBound": 16,
+   "oracleLoopsReachable": [],
+   "iterationBoundAtHardMaxOfTheSafeRange": 64
+  },
+  {
+   "contract": "SignerSetRegistry",
+   "function": "memberCount",
+   "stateChanging": false,
+   "path": "SignerSetRegistry.sol",
+   "loopsReachable": 0,
+   "iterationBound": 0,
+   "oracleLoopsReachable": [],
+   "iterationBoundAtHardMaxOfTheSafeRange": 0
+  },
+  {
+   "contract": "SignerSetRegistry",
+   "function": "proposeSignerSet",
+   "stateChanging": true,
+   "path": "SignerSetRegistry.sol",
+   "loopsReachable": 1,
+   "iterationBound": 16,
+   "oracleLoopsReachable": [],
+   "iterationBoundAtHardMaxOfTheSafeRange": 64
+  },
+  {
+   "contract": "SignerSetRegistry",
+   "function": "removeQuoteSigner",
+   "stateChanging": true,
+   "path": "SignerSetRegistry.sol",
+   "loopsReachable": 0,
+   "iterationBound": 0,
+   "oracleLoopsReachable": [],
+   "iterationBoundAtHardMaxOfTheSafeRange": 0
+  },
+  {
+   "contract": "SignerSetRegistry",
+   "function": "stopSignerSet",
+   "stateChanging": true,
+   "path": "SignerSetRegistry.sol",
+   "loopsReachable": 0,
+   "iterationBound": 0,
+   "oracleLoopsReachable": [],
+   "iterationBoundAtHardMaxOfTheSafeRange": 0
+  },
+  {
+   "contract": "SignerSetRegistry",
+   "function": "verifySigner",
+   "stateChanging": false,
+   "path": "SignerSetRegistry.sol",
+   "loopsReachable": 0,
+   "iterationBound": 0,
+   "oracleLoopsReachable": [],
+   "iterationBoundAtHardMaxOfTheSafeRange": 0
+  },
+  {
+   "contract": "SuccessorValidator",
+   "function": "validate",
+   "stateChanging": false,
+   "path": "SuccessorValidator.sol",
+   "loopsReachable": 11,
+   "iterationBound": 74,
+   "oracleLoopsReachable": [],
+   "iterationBoundAtHardMaxOfTheSafeRange": 234
+  },
+  {
+   "contract": "TokenPolicyRegistry",
+   "function": "bandOf",
+   "stateChanging": false,
+   "path": "TokenPolicyRegistry.sol",
+   "loopsReachable": 0,
+   "iterationBound": 0,
+   "oracleLoopsReachable": [],
+   "iterationBoundAtHardMaxOfTheSafeRange": 0
+  },
+  {
+   "contract": "TokenPolicyRegistry",
+   "function": "block_",
+   "stateChanging": true,
+   "path": "TokenPolicyRegistry.sol",
+   "loopsReachable": 0,
+   "iterationBound": 0,
+   "oracleLoopsReachable": [],
+   "iterationBoundAtHardMaxOfTheSafeRange": 0
+  },
+  {
+   "contract": "TokenPolicyRegistry",
+   "function": "list",
+   "stateChanging": true,
+   "path": "TokenPolicyRegistry.sol",
+   "loopsReachable": 0,
+   "iterationBound": 0,
+   "oracleLoopsReachable": [],
+   "iterationBoundAtHardMaxOfTheSafeRange": 0
+  },
+  {
+   "contract": "TokenPolicyRegistry",
+   "function": "publishBounds",
+   "stateChanging": true,
+   "path": "TokenPolicyRegistry.sol",
+   "loopsReachable": 0,
+   "iterationBound": 0,
+   "oracleLoopsReachable": [],
+   "iterationBoundAtHardMaxOfTheSafeRange": 0
+  },
+  {
+   "contract": "TokenPolicyRegistry",
+   "function": "quoteContext",
+   "stateChanging": false,
+   "path": "TokenPolicyRegistry.sol",
+   "loopsReachable": 0,
+   "iterationBound": 0,
+   "oracleLoopsReachable": [],
+   "iterationBoundAtHardMaxOfTheSafeRange": 0
+  },
+  {
+   "contract": "TokenPolicyRegistry",
+   "function": "setPriceSourceSet",
+   "stateChanging": true,
+   "path": "TokenPolicyRegistry.sol",
+   "loopsReachable": 0,
+   "iterationBound": 0,
+   "oracleLoopsReachable": [],
+   "iterationBoundAtHardMaxOfTheSafeRange": 0
+  },
+  {
+   "contract": "TokenPolicyRegistry",
+   "function": "setStatus",
+   "stateChanging": true,
+   "path": "TokenPolicyRegistry.sol",
+   "loopsReachable": 0,
+   "iterationBound": 0,
+   "oracleLoopsReachable": [],
+   "iterationBoundAtHardMaxOfTheSafeRange": 0
+  },
+  {
+   "contract": "TokenPolicyRegistry",
+   "function": "status",
+   "stateChanging": false,
+   "path": "TokenPolicyRegistry.sol",
+   "loopsReachable": 0,
+   "iterationBound": 0,
+   "oracleLoopsReachable": [],
+   "iterationBoundAtHardMaxOfTheSafeRange": 0
+  },
+  {
+   "contract": "TokenPolicyRegistry",
+   "function": "tokenVersion",
+   "stateChanging": false,
+   "path": "TokenPolicyRegistry.sol",
+   "loopsReachable": 0,
+   "iterationBound": 0,
+   "oracleLoopsReachable": [],
+   "iterationBoundAtHardMaxOfTheSafeRange": 0
+  },
+  {
+   "contract": "UsageLedger",
+   "function": "charge",
+   "stateChanging": true,
+   "path": "UsageLedger.sol",
+   "loopsReachable": 1,
+   "iterationBound": 3,
+   "oracleLoopsReachable": [],
+   "iterationBoundAtHardMaxOfTheSafeRange": 6
+  },
+  {
+   "contract": "UsageLedger",
+   "function": "fiatUsage",
+   "stateChanging": false,
+   "path": "UsageLedger.sol",
+   "loopsReachable": 0,
+   "iterationBound": 0,
+   "oracleLoopsReachable": [],
+   "iterationBoundAtHardMaxOfTheSafeRange": 0
+  },
+  {
+   "contract": "UsageLedger",
+   "function": "tokenUsage",
+   "stateChanging": false,
+   "path": "UsageLedger.sol",
+   "loopsReachable": 0,
+   "iterationBound": 0,
+   "oracleLoopsReachable": [],
+   "iterationBoundAtHardMaxOfTheSafeRange": 0
+  }
+ ],
+ "problems": [],
+ "verdict": "PASS"
+}

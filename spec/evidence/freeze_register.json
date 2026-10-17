@@ -1,0 +1,99 @@
+{
+  "schema": 1,
+  "asOf": "2026-10-16",
+  "freezeApproved": false,
+  "note": "Hand-maintained register read by tools/freeze_readiness.py. A status is changed only together with the evidence it names. Nothing here is approved.",
+  "freezeBlockingDecisions": {
+    "UD-01": "OPEN",
+    "UD-02": "OPEN",
+    "UD-03": "OPEN",
+    "UD-04": "OPEN",
+    "UD-05": "OPEN",
+    "UD-06": "OPEN",
+    "UD-07": "OPEN",
+    "UD-08": "OPEN",
+    "UD-09": "OPEN",
+    "UD-12": "OPEN",
+    "UD-17": "OPEN",
+    "UD-18": "OPEN"
+  },
+  "freezeBlockingFacts": {
+    "UX-01": "OPEN",
+    "UX-02": "OPEN",
+    "UX-03": "OPEN",
+    "UX-04": "OPEN",
+    "UX-05": "OPEN",
+    "UX-06": "OPEN",
+    "UX-07": "OPEN",
+    "UX-09": "OPEN",
+    "UX-16": "OPEN",
+    "UX-18": "OPEN"
+  },
+  "plannerImplementations": [],
+  "auditEngagements": [],
+  "foundryReport": {
+    "compiled": true,
+    "suites": 23,
+    "passed": 303,
+    "failed": 0,
+    "skippedInThisRun": 30,
+    "fuzzRunsExecuted": 19000,
+    "tool": "forge Version: 1.8.5 | Commit SHA: 51a52c59cffd940f76eddd0b4bb1791aa4b5ac7f | Build Timestamp: 2026-10-05T17:01:32.131957300Z (1791219692) | Build Profile: dist",
+    "solc": "0.8.24 (via-IR, 20 optimizer runs, cancun)",
+    "runFile": "evidence/implementation/logs/forge-test-final.json",
+    "runFileSha256": "2654f346e0363c37b9ce7f689359700dbd8e4954eb2a40f3047cc442afa9999b",
+    "rawRunFileGzip": "evidence/implementation/logs/forge-test-final.raw.json.gz",
+    "rawRunFileGzipSha256": "31908d7da6caff913b429e8452e6c7408d71ed9981627355f76a4456e4adf5ae",
+    "scope": "every suite of spec/foundry/test; the fork suites (test/fork) are skipped in this run because no RPC URL is set and are reported by evidence/implementation/fork-runs.json",
+    "note": "recorded by tools/record_evidence.py from the run file; this records a test run, not an approval"
+  },
+  "signoffs": {
+    "Principal Blockchain Architect": null,
+    "CISO (veto)": null,
+    "VP Engineering": null,
+    "QA Lead": null
+  },
+  "eip712Freeze": null,
+  "contractsReport": {
+    "compiled": true,
+    "passed": 289,
+    "failed": 0,
+    "skippedInThisRun": 7,
+    "suites": 25,
+    "tool": "forge Version: 1.8.5",
+    "solc": "0.8.24 (no via-IR, 200 optimizer runs, cancun)",
+    "runFile": "evidence/implementation/contracts-test-run.json",
+    "runFileSha256": "2cba08546e789e91959e576993bafd647bcd89c4b1138c94ac532af6e3bc75f8",
+    "reportFileSha256": "7b8b6e913147b3a472d7b6da469abafaa36c382aa96a92013047055c174daaf7",
+    "runtimeBytesLargest": 21357,
+    "loopsAudited": 23,
+    "note": "recorded by tools/record_evidence.py --contracts; this records a test run of the actual contracts, not an approval and not an audit",
+    "mutation": {
+      "mutants": 249,
+      "killed": 243,
+      "survived": 6,
+      "invalid": 0,
+      "file": "evidence/implementation/contracts-mutation.json",
+      "fileSha256": "feb8d29f1a4e8e3bb329672cb9ae15ebec533963c56da629783a5164654ab660"
+    },
+    "forks": {
+      "verdict": "PASS",
+      "chains": {
+        "1": {
+          "block": 26211828,
+          "result": "PASS"
+        },
+        "8453": {
+          "block": 52723027,
+          "result": "PASS"
+        },
+        "42161": {
+          "block": 515655559,
+          "result": "PASS"
+        }
+      },
+      "file": "evidence/implementation/contracts-fork-runs.json",
+      "fileSha256": "c9ccdcc4c7d6cbba11c8ee3b3a2ddab9d7a105c605030e39e3c698faf3e6599a"
+    }
+  }
+}

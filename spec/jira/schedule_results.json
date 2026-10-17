@@ -1,0 +1,2571 @@
+{
+ "status": "EXPLORATORY",
+ "hash": "08d206d1d5cc14751f60dd78627f2305564f8d07ea577a09b0c72ecaf0986300",
+ "n_runs": 3000,
+ "seed": 20261013,
+ "recommended": "recommended",
+ "scenarios": {
+  "as_organized": {
+   "label": "As organized in document 07 (squad sizes fixed); licensing mixed",
+   "hc": {
+    "Leadership and Program": 5,
+    "Product and Design": 7,
+    "Protocol and Contracts": 7,
+    "Payments Core": 8,
+    "Chain Infrastructure": 3,
+    "Checkout and Merchant Experience": 5,
+    "Platform, SRE and Security Engineering": 5,
+    "Quality": 3,
+    "Compliance, Risk and Privacy": 4,
+    "DevEx, Support and Partnerships": 3
+   },
+   "priority": [
+    "Chain Infrastructure",
+    "Protocol and Contracts",
+    "Quality"
+   ]
+  },
+  "as_organized_contractors": {
+   "label": "As organized + 3 protocol and 2 core contractors from week 0 (outside the 50)",
+   "hc": {
+    "Leadership and Program": 5,
+    "Product and Design": 7,
+    "Protocol and Contracts": 7,
+    "Payments Core": 8,
+    "Chain Infrastructure": 3,
+    "Checkout and Merchant Experience": 5,
+    "Platform, SRE and Security Engineering": 5,
+    "Quality": 3,
+    "Compliance, Risk and Privacy": 4,
+    "DevEx, Support and Partnerships": 3
+   },
+   "priority": [
+    "Chain Infrastructure",
+    "Protocol and Contracts",
+    "Quality"
+   ]
+  },
+  "recommended": {
+   "label": "Recommended: squad sizes rebalanced (still 50), Payments Core hired first; licensing mixed",
+   "hc": {
+    "Leadership and Program": 4,
+    "Product and Design": 4,
+    "Protocol and Contracts": 8,
+    "Payments Core": 11,
+    "Chain Infrastructure": 3,
+    "Checkout and Merchant Experience": 4,
+    "Platform, SRE and Security Engineering": 6,
+    "Quality": 3,
+    "Compliance, Risk and Privacy": 3,
+    "DevEx, Support and Partnerships": 4
+   },
+   "priority": [
+    "Chain Infrastructure",
+    "Payments Core",
+    "Protocol and Contracts",
+    "Quality"
+   ]
+  },
+  "recommended_contractors": {
+   "label": "Recommended + 7 contractors from week 0 outside the 50 (3 core, 2 protocol, 2 platform)",
+   "hc": {
+    "Leadership and Program": 4,
+    "Product and Design": 4,
+    "Protocol and Contracts": 8,
+    "Payments Core": 11,
+    "Chain Infrastructure": 3,
+    "Checkout and Merchant Experience": 4,
+    "Platform, SRE and Security Engineering": 6,
+    "Quality": 3,
+    "Compliance, Risk and Privacy": 3,
+    "DevEx, Support and Partnerships": 4
+   },
+   "priority": [
+    "Chain Infrastructure",
+    "Payments Core",
+    "Protocol and Contracts",
+    "Quality"
+   ]
+  },
+  "recommended_partner": {
+   "label": "Recommended; licensing through a licensed partner",
+   "hc": {
+    "Leadership and Program": 4,
+    "Product and Design": 4,
+    "Protocol and Contracts": 8,
+    "Payments Core": 11,
+    "Chain Infrastructure": 3,
+    "Checkout and Merchant Experience": 4,
+    "Platform, SRE and Security Engineering": 6,
+    "Quality": 3,
+    "Compliance, Risk and Privacy": 3,
+    "DevEx, Support and Partnerships": 4
+   },
+   "priority": [
+    "Chain Infrastructure",
+    "Payments Core",
+    "Protocol and Contracts",
+    "Quality"
+   ]
+  },
+  "recommended_own_licence": {
+   "label": "Recommended; own licence",
+   "hc": {
+    "Leadership and Program": 4,
+    "Product and Design": 4,
+    "Protocol and Contracts": 8,
+    "Payments Core": 11,
+    "Chain Infrastructure": 3,
+    "Checkout and Merchant Experience": 4,
+    "Platform, SRE and Security Engineering": 6,
+    "Quality": 3,
+    "Compliance, Risk and Privacy": 3,
+    "DevEx, Support and Partnerships": 4
+   },
+   "priority": [
+    "Chain Infrastructure",
+    "Payments Core",
+    "Protocol and Contracts",
+    "Quality"
+   ]
+  },
+  "recommended_p0_first": {
+   "label": "Recommended, with every Phase 0 package served first in a squad queue (a staffing rule; sensitivity only)",
+   "hc": {
+    "Leadership and Program": 4,
+    "Product and Design": 4,
+    "Protocol and Contracts": 8,
+    "Payments Core": 11,
+    "Chain Infrastructure": 3,
+    "Checkout and Merchant Experience": 4,
+    "Platform, SRE and Security Engineering": 6,
+    "Quality": 3,
+    "Compliance, Risk and Privacy": 3,
+    "DevEx, Support and Partnerships": 4
+   },
+   "priority": [
+    "Chain Infrastructure",
+    "Payments Core",
+    "Protocol and Contracts",
+    "Quality"
+   ]
+  }
+ },
+ "tiers": {
+  "TRI": {
+   "name": "Tier 1: testnet reference implementation",
+   "top": "G_TRI4",
+   "milestones": [
+    {
+     "id": "TRI-1",
+     "label": "Protocol freeze (RG-016)",
+     "node": "G_FREEZE"
+    },
+    {
+     "id": "TRI-2",
+     "label": "Contracts complete on fork (vectors and Foundry suites green)",
+     "node": "G_TRI2"
+    },
+    {
+     "id": "TRI-3",
+     "label": "Wallet-lab Compatibility Register v0 complete; two planner implementations pass all vectors",
+     "node": "G_TRI3"
+    },
+    {
+     "id": "TRI-4",
+     "label": "Testnet reference exit (deployed on a public testnet and rehearsed)",
+     "node": "G_TRI4"
+    }
+   ],
+   "graph": {
+    "nodes": 66,
+    "wps": 59,
+    "edges": 210,
+    "by_type": {
+     "FF": 47,
+     "FS": 116,
+     "SS": 47
+    },
+    "work_pw": 451.1,
+    "work_by_squad": {
+     "Leadership and Program": 0.0,
+     "Product and Design": 0.0,
+     "Protocol and Contracts": 257.8,
+     "Payments Core": 74.9,
+     "Chain Infrastructure": 25.1,
+     "Checkout and Merchant Experience": 8.1,
+     "Platform, SRE and Security Engineering": 10.8,
+     "Quality": 74.3,
+     "Compliance, Risk and Privacy": 0.0,
+     "DevEx, Support and Partnerships": 0.0
+    }
+   },
+   "dropped": [
+    [
+     "EPIC-P1-CHAINGW",
+     "RP-04"
+    ],
+    [
+     "EPIC-P1-CHAINGW",
+     "RP-22"
+    ],
+    [
+     "EPIC-P1-DELEGATION",
+     "EPIC-P0-WALLETLAB"
+    ]
+   ],
+   "scenarios": {
+    "as_organized": {
+     "ms": {
+      "G_FREEZE": [
+       33,
+       36,
+       38
+      ],
+      "G_TRI2": [
+       69,
+       74,
+       79
+      ],
+      "G_TRI3": [
+       77,
+       83,
+       88
+      ],
+      "G_TRI4": [
+       84,
+       90,
+       96
+      ]
+     },
+     "crit": {
+      "EPIC-P0-TOKENLAB": 100.0,
+      "EPIC-P1-DELEGATION": 100.0,
+      "EPIC-P1-REVOKE": 100.0,
+      "EPIC-P0-PROTOSPEC": 100.0,
+      "EPIC-P1-MIGRATION": 100.0,
+      "EPIC-P2-DEPLOYPREP": 100.0,
+      "EPIC-P0-PROTO": 100.0,
+      "EPIC-P0-PLANNER": 100.0,
+      "G_TRI4": 100.0,
+      "W_LAB_MIN": 100.0,
+      "EPIC-P1-PAYONCE": 100.0,
+      "EPIC-P1-TOKENREG": 100.0,
+      "EPIC-P0-SOURCES": 100.0,
+      "EPIC-P1-CONTRACTS": 100.0,
+      "G_FREEZE": 6.1
+     },
+     "crit_wp": {
+      "G_TRI4": 100.0,
+      "EPIC-P1-TOKENREG#R": 100.0,
+      "EPIC-P1-REVOKE#R": 100.0,
+      "EPIC-P1-PAYONCE#R": 100.0,
+      "EPIC-P1-MIGRATION#R": 100.0,
+      "EPIC-P1-DELEGATION#R": 100.0,
+      "EPIC-P2-DEPLOYPREP#R": 100.0,
+      "EPIC-P2-DEPLOYPREP#A": 100.0,
+      "EPIC-P2-DEPLOYPREP#B": 100.0,
+      "EPIC-P1-DELEGATION#A": 100.0,
+      "EPIC-P1-DELEGATION#B": 100.0,
+      "EPIC-P1-CONTRACTS#R": 100.0,
+      "EPIC-P1-REVOKE#A": 100.0,
+      "EPIC-P1-REVOKE#B": 100.0,
+      "EPIC-P1-PAYONCE#A": 100.0,
+      "EPIC-P1-TOKENREG#B": 100.0,
+      "EPIC-P1-MIGRATION#A": 100.0,
+      "EPIC-P1-PAYONCE#B": 100.0,
+      "EPIC-P1-MIGRATION#B": 100.0,
+      "EPIC-P1-CONTRACTS#A": 100.0,
+      "EPIC-P1-CONTRACTS#B": 100.0,
+      "EPIC-P0-TOKENLAB#A": 100.0,
+      "EPIC-P0-TOKENLAB#B": 100.0,
+      "EPIC-P0-PROTO#A": 100.0,
+      "EPIC-P0-PLANNER#B": 100.0,
+      "EPIC-P0-PROTO#B": 100.0,
+      "EPIC-P0-PROTOSPEC#A": 100.0,
+      "EPIC-P0-PROTOSPEC#B": 100.0,
+      "EPIC-P0-SOURCES#B": 100.0,
+      "W_LAB_MIN": 100.0,
+      "EPIC-P1-TOKENREG#A": 97.2,
+      "EPIC-P0-TOKENLAB#R": 93.9,
+      "EPIC-P0-PLANNER#R": 93.9,
+      "EPIC-P0-PROTO#R": 93.9,
+      "EPIC-P0-PROTOSPEC#R": 93.9,
+      "EPIC-P0-PLANNER#A": 54.2,
+      "G_FREEZE": 6.1
+     }
+    },
+    "recommended": {
+     "ms": {
+      "G_FREEZE": [
+       32,
+       34,
+       36
+      ],
+      "G_TRI2": [
+       63,
+       68,
+       72
+      ],
+      "G_TRI3": [
+       71,
+       76,
+       81
+      ],
+      "G_TRI4": [
+       76,
+       82,
+       88
+      ]
+     },
+     "crit": {
+      "EPIC-P1-REVOKE": 100.0,
+      "EPIC-P0-PROTOSPEC": 100.0,
+      "EPIC-P1-MIGRATION": 100.0,
+      "G_TRI4": 100.0,
+      "W_LAB_MIN": 100.0,
+      "EPIC-P1-PAYONCE": 100.0,
+      "EPIC-P1-TOKENREG": 100.0,
+      "EPIC-P0-SOURCES": 100.0,
+      "EPIC-P1-CONTRACTS": 100.0,
+      "EPIC-P0-TOKENLAB": 99.9,
+      "EPIC-P0-PROTO": 99.9,
+      "EPIC-P0-PLANNER": 99.9,
+      "EPIC-P1-DELEGATION": 99.5,
+      "EPIC-P2-DEPLOYPREP": 99.5,
+      "G_FREEZE": 21.5,
+      "EPIC-P2-TESTNET": 0.5,
+      "G_TRI2": 0.5,
+      "L_PC_APPROVAL": 0.1
+     },
+     "crit_wp": {
+      "G_TRI4": 100.0,
+      "EPIC-P1-REVOKE#A": 100.0,
+      "EPIC-P1-REVOKE#B": 100.0,
+      "EPIC-P1-PAYONCE#A": 100.0,
+      "EPIC-P1-TOKENREG#B": 100.0,
+      "EPIC-P1-MIGRATION#A": 100.0,
+      "EPIC-P1-PAYONCE#B": 100.0,
+      "EPIC-P1-MIGRATION#B": 100.0,
+      "EPIC-P1-CONTRACTS#A": 100.0,
+      "EPIC-P1-CONTRACTS#B": 100.0,
+      "EPIC-P0-PROTOSPEC#A": 100.0,
+      "EPIC-P0-PROTOSPEC#B": 100.0,
+      "EPIC-P0-SOURCES#B": 100.0,
+      "W_LAB_MIN": 100.0,
+      "EPIC-P0-TOKENLAB#A": 99.9,
+      "EPIC-P0-TOKENLAB#B": 99.9,
+      "EPIC-P0-PROTO#A": 99.9,
+      "EPIC-P0-PLANNER#B": 99.9,
+      "EPIC-P0-PROTO#B": 99.9,
+      "EPIC-P1-TOKENREG#R": 99.5,
+      "EPIC-P1-REVOKE#R": 99.5,
+      "EPIC-P1-PAYONCE#R": 99.5,
+      "EPIC-P1-MIGRATION#R": 99.5,
+      "EPIC-P1-DELEGATION#R": 99.5,
+      "EPIC-P2-DEPLOYPREP#R": 99.5,
+      "EPIC-P2-DEPLOYPREP#A": 99.5,
+      "EPIC-P2-DEPLOYPREP#B": 99.5,
+      "EPIC-P1-DELEGATION#A": 99.5,
+      "EPIC-P1-DELEGATION#B": 99.5,
+      "EPIC-P1-CONTRACTS#R": 99.5,
+      "EPIC-P0-PROTO#R": 78.5,
+      "EPIC-P0-PROTOSPEC#R": 78.5,
+      "EPIC-P0-PLANNER#R": 78.4,
+      "EPIC-P0-TOKENLAB#R": 78.2,
+      "EPIC-P1-TOKENREG#A": 75.1,
+      "G_FREEZE": 21.5,
+      "EPIC-P0-PLANNER#A": 18.8,
+      "EPIC-P2-TESTNET#R": 0.5,
+      "EPIC-P2-TESTNET#A": 0.5,
+      "EPIC-P2-TESTNET#B": 0.5
+     }
+    },
+    "recommended_contractors": {
+     "ms": {
+      "G_FREEZE": [
+       29,
+       31,
+       33
+      ],
+      "G_TRI2": [
+       55,
+       59,
+       63
+      ],
+      "G_TRI3": [
+       61,
+       66,
+       70
+      ],
+      "G_TRI4": [
+       66,
+       71,
+       75
+      ]
+     },
+     "crit": {
+      "EPIC-P1-REVOKE": 100.0,
+      "EPIC-P1-MIGRATION": 100.0,
+      "G_TRI4": 100.0,
+      "W_LAB_MIN": 100.0,
+      "EPIC-P1-PAYONCE": 100.0,
+      "EPIC-P1-TOKENREG": 100.0,
+      "EPIC-P0-SOURCES": 100.0,
+      "EPIC-P1-CONTRACTS": 100.0,
+      "EPIC-P0-TOKENLAB": 96.6,
+      "EPIC-P0-PROTOSPEC": 85.4,
+      "EPIC-P0-PROTO": 82.0,
+      "EPIC-P0-PLANNER": 81.7,
+      "EPIC-P2-TESTNET": 77.6,
+      "G_TRI2": 77.6,
+      "G_FREEZE": 73.6,
+      "EPIC-P1-DELEGATION": 22.4,
+      "EPIC-P2-DEPLOYPREP": 22.4,
+      "W_LAB_REST": 17.1,
+      "L_PC_APPROVAL": 3.4
+     },
+     "crit_wp": {
+      "G_TRI4": 100.0,
+      "EPIC-P1-REVOKE#A": 100.0,
+      "EPIC-P1-REVOKE#B": 100.0,
+      "EPIC-P1-PAYONCE#A": 100.0,
+      "EPIC-P1-TOKENREG#B": 100.0,
+      "EPIC-P1-MIGRATION#A": 100.0,
+      "EPIC-P1-PAYONCE#B": 100.0,
+      "EPIC-P1-MIGRATION#B": 100.0,
+      "EPIC-P1-CONTRACTS#A": 100.0,
+      "EPIC-P1-CONTRACTS#B": 100.0,
+      "EPIC-P0-SOURCES#B": 100.0,
+      "W_LAB_MIN": 100.0,
+      "EPIC-P0-TOKENLAB#A": 96.6,
+      "EPIC-P0-TOKENLAB#B": 96.6,
+      "EPIC-P0-PROTOSPEC#A": 82.9,
+      "EPIC-P0-PROTOSPEC#B": 82.9,
+      "EPIC-P0-PROTO#A": 79.4,
+      "EPIC-P0-PLANNER#B": 79.4,
+      "EPIC-P0-PROTO#B": 79.4,
+      "EPIC-P2-TESTNET#R": 77.6,
+      "EPIC-P2-TESTNET#A": 77.6,
+      "EPIC-P2-TESTNET#B": 77.6,
+      "G_TRI2": 77.6,
+      "G_FREEZE": 73.6,
+      "EPIC-P0-PROTOSPEC#R": 26.4,
+      "EPIC-P0-PROTO#R": 26.2,
+      "EPIC-P1-TOKENREG#R": 22.4,
+      "EPIC-P1-REVOKE#R": 22.4,
+      "EPIC-P1-PAYONCE#R": 22.4,
+      "EPIC-P1-MIGRATION#R": 22.4,
+      "EPIC-P1-DELEGATION#R": 22.4,
+      "EPIC-P2-DEPLOYPREP#R": 22.4,
+      "EPIC-P2-DEPLOYPREP#A": 22.4,
+      "EPIC-P2-DEPLOYPREP#B": 22.4,
+      "EPIC-P1-DELEGATION#A": 22.4,
+      "EPIC-P1-DELEGATION#B": 22.4,
+      "EPIC-P1-CONTRACTS#R": 22.4,
+      "EPIC-P0-PLANNER#R": 22.4,
+      "W_LAB_REST": 17.1,
+      "EPIC-P0-SOURCES#A": 17.1
+     }
+    }
+   }
+  },
+  "PMB": {
+   "name": "Tier 2: private mainnet beta",
+   "top": "G_BETA",
+   "milestones": [
+    {
+     "id": "PMB-1",
+     "label": "Protocol freeze (RG-016)",
+     "node": "G_FREEZE"
+    },
+    {
+     "id": "PMB-2",
+     "label": "Phase 0 exit (RG-001)",
+     "node": "G_RG001"
+    },
+    {
+     "id": "PMB-3",
+     "label": "Contract audit freeze (audits start)",
+     "node": "G_CONTRACT_FREEZE"
+    },
+    {
+     "id": "PMB-4",
+     "label": "Phase 1 exit; testnet alpha (RG-002, R3)",
+     "node": "G_RG002"
+    },
+    {
+     "id": "PMB-5",
+     "label": "Audits complete (RG-005)",
+     "node": "G_RG005"
+    },
+    {
+     "id": "PMB-6",
+     "label": "Security testing (RG-006)",
+     "node": "G_RG006"
+    },
+    {
+     "id": "PMB-7",
+     "label": "Wallet evidence (RG-003)",
+     "node": "G_RG003"
+    },
+    {
+     "id": "PMB-8",
+     "label": "Chain evidence (RG-004)",
+     "node": "G_RG004"
+    },
+    {
+     "id": "PMB-9",
+     "label": "Reconciliation (RG-007)",
+     "node": "G_RG007"
+    },
+    {
+     "id": "PMB-10",
+     "label": "Legal go-live (RG-008)",
+     "node": "G_RG008"
+    },
+    {
+     "id": "PMB-11",
+     "label": "Load and operations (RG-009)",
+     "node": "G_RG009"
+    },
+    {
+     "id": "PMB-12",
+     "label": "Private beta go (RG-010)",
+     "node": "G_BETA"
+    }
+   ],
+   "graph": {
+    "nodes": 183,
+    "wps": 155,
+    "edges": 531,
+    "by_type": {
+     "FF": 133,
+     "FS": 263,
+     "SS": 135
+    },
+    "work_pw": 1394.1,
+    "work_by_squad": {
+     "Leadership and Program": 24.0,
+     "Product and Design": 54.0,
+     "Protocol and Contracts": 357.9,
+     "Payments Core": 408.7,
+     "Chain Infrastructure": 56.2,
+     "Checkout and Merchant Experience": 109.3,
+     "Platform, SRE and Security Engineering": 103.3,
+     "Quality": 141.4,
+     "Compliance, Risk and Privacy": 95.1,
+     "DevEx, Support and Partnerships": 44.2
+    }
+   },
+   "dropped": [
+    [
+     "EPIC-P1-CHAINGW",
+     "RP-04"
+    ],
+    [
+     "EPIC-P1-CHAINGW",
+     "RP-22"
+    ],
+    [
+     "EPIC-P1-DELEGATION",
+     "EPIC-P0-WALLETLAB"
+    ],
+    [
+     "EPIC-P2-REFUNDS",
+     "OD-007"
+    ]
+   ],
+   "scenarios": {
+    "as_organized": {
+     "ms": {
+      "G_FREEZE": [
+       33,
+       36,
+       38
+      ],
+      "G_RG001": [
+       74,
+       79,
+       85
+      ],
+      "G_CONTRACT_FREEZE": [
+       74,
+       79,
+       84
+      ],
+      "G_RG002": [
+       97,
+       105,
+       112
+      ],
+      "G_RG005": [
+       107,
+       114,
+       120
+      ],
+      "G_RG006": [
+       135,
+       146,
+       155
+      ],
+      "G_RG003": [
+       121,
+       131,
+       140
+      ],
+      "G_RG004": [
+       74,
+       80,
+       100
+      ],
+      "G_RG007": [
+       140,
+       152,
+       162
+      ],
+      "G_RG008": [
+       81,
+       89,
+       96
+      ],
+      "G_RG009": [
+       147,
+       159,
+       170
+      ],
+      "G_BETA": [
+       149,
+       162,
+       173
+      ]
+     },
+     "crit": {
+      "G_BETA": 100.0,
+      "EPIC-P2-TESTNET": 98.9,
+      "EPIC-P2-LOAD": 98.9,
+      "W_WALLET_E3": 98.9,
+      "EPIC-P1-FLAGS": 98.8,
+      "G_RG009": 98.5,
+      "EPIC-P2-ORCH": 90.2,
+      "EPIC-P2-MERCHANT": 90.2,
+      "EPIC-P0-TOKENLAB": 89.2,
+      "EPIC-P0-PROTOSPEC": 89.2,
+      "EPIC-P0-PROTO": 89.2,
+      "EPIC-P0-PLANNER": 89.2,
+      "EPIC-P1-TOKENREG": 89.2,
+      "EPIC-P1-CONTRACTS": 89.2,
+      "EPIC-P1-AUDITPREP": 89.2,
+      "EPIC-P1-REVOKE": 89.2,
+      "EPIC-P1-MIGRATION": 89.2,
+      "W_LAB_MIN": 89.2,
+      "EPIC-P0-SOURCES": 89.2,
+      "EPIC-P1-PAYONCE": 89.2,
+      "G_RG001": 89.2,
+      "EPIC-P1-CORE": 89.2,
+      "EPIC-P1-LEDGER": 89.2,
+      "G_RG002": 53.9,
+      "EPIC-P2-SUBS": 46.0,
+      "EPIC-P1-DELEGATION": 10.2,
+      "EPIC-P1-MANDATE": 9.7,
+      "EPIC-P3-DEPLOY": 1.5,
+      "L_PENTEST_RETEST": 1.4,
+      "G_RG006": 1.4,
+      "W_PENTEST_FIX": 1.4,
+      "EPIC-P2-REFUNDS": 1.0,
+      "EPIC-P2-MIGSVC": 1.0,
+      "EPIC-P2-RECON": 1.0,
+      "L_PENTEST": 0.9,
+      "G_FEATURE_COMPLETE": 0.9,
+      "EPIC-P3-IRDR": 0.4,
+      "EPIC-P3-LIMITS": 0.1,
+      "EPIC-P1-QUOTE": 0.1,
+      "W_PENTEST_SUPPORT": 0.1
+     },
+     "crit_wp": {
+      "G_BETA": 100.0,
+      "EPIC-P2-LOAD#A": 98.9,
+      "EPIC-P2-TESTNET#R": 98.9,
+      "EPIC-P2-TESTNET#A": 98.9,
+      "EPIC-P2-LOAD#B": 98.9,
+      "EPIC-P2-TESTNET#B": 98.9,
+      "W_WALLET_E3": 98.9,
+      "EPIC-P1-FLAGS#A": 98.8,
+      "G_RG009": 98.5,
+      "EPIC-P2-LOAD#R": 98.5,
+      "EPIC-P1-REVOKE#A": 89.2,
+      "EPIC-P1-REVOKE#B": 89.2,
+      "EPIC-P1-PAYONCE#A": 89.2,
+      "EPIC-P1-MIGRATION#A": 89.2,
+      "EPIC-P1-TOKENREG#A": 89.2,
+      "EPIC-P1-AUDITPREP#A": 89.2,
+      "EPIC-P1-PAYONCE#B": 89.2,
+      "EPIC-P1-MIGRATION#B": 89.2,
+      "EPIC-P1-TOKENREG#B": 89.2,
+      "EPIC-P1-AUDITPREP#B": 89.2,
+      "EPIC-P1-CONTRACTS#A": 89.2,
+      "EPIC-P1-CONTRACTS#B": 89.2,
+      "EPIC-P0-TOKENLAB#A": 89.2,
+      "EPIC-P0-TOKENLAB#B": 89.2,
+      "EPIC-P0-PROTO#A": 89.2,
+      "EPIC-P0-PLANNER#B": 89.2,
+      "EPIC-P0-PROTO#B": 89.2,
+      "EPIC-P0-PROTOSPEC#A": 89.2,
+      "EPIC-P0-PROTOSPEC#B": 89.2,
+      "EPIC-P0-SOURCES#B": 89.2,
+      "W_LAB_MIN": 89.2,
+      "EPIC-P1-LEDGER#A": 89.2,
+      "EPIC-P2-ORCH#B": 89.2,
+      "EPIC-P1-CORE#A": 89.2,
+      "EPIC-P1-FLAGS#B": 89.2,
+      "EPIC-P1-LEDGER#B": 89.2,
+      "EPIC-P2-MERCHANT#B": 89.2,
+      "EPIC-P1-CORE#B": 89.2,
+      "G_RG001": 89.2,
+      "EPIC-P0-TOKENLAB#R": 89.2
+     }
+    },
+    "recommended": {
+     "ms": {
+      "G_FREEZE": [
+       32,
+       34,
+       36
+      ],
+      "G_RG001": [
+       66,
+       72,
+       78
+      ],
+      "G_CONTRACT_FREEZE": [
+       68,
+       73,
+       77
+      ],
+      "G_RG002": [
+       84,
+       92,
+       98
+      ],
+      "G_RG005": [
+       100,
+       106,
+       112
+      ],
+      "G_RG006": [
+       113,
+       123,
+       132
+      ],
+      "G_RG003": [
+       107,
+       117,
+       126
+      ],
+      "G_RG004": [
+       74,
+       86,
+       96
+      ],
+      "G_RG007": [
+       126,
+       138,
+       148
+      ],
+      "G_RG008": [
+       77,
+       85,
+       94
+      ],
+      "G_RG009": [
+       132,
+       145,
+       156
+      ],
+      "G_BETA": [
+       134,
+       148,
+       158
+      ]
+     },
+     "crit": {
+      "G_BETA": 100.0,
+      "EPIC-P2-TESTNET": 99.4,
+      "W_WALLET_E3": 99.4,
+      "EPIC-P2-LOAD": 99.4,
+      "EPIC-P1-FLAGS": 99.3,
+      "G_RG009": 99.2,
+      "EPIC-P0-TOKENLAB": 73.4,
+      "EPIC-P0-PROTOSPEC": 73.4,
+      "EPIC-P0-PROTO": 73.4,
+      "EPIC-P0-PLANNER": 73.4,
+      "EPIC-P1-TOKENREG": 73.4,
+      "EPIC-P1-CONTRACTS": 73.4,
+      "EPIC-P1-AUDITPREP": 73.4,
+      "EPIC-P1-REVOKE": 73.4,
+      "EPIC-P1-MIGRATION": 73.4,
+      "W_LAB_MIN": 73.4,
+      "EPIC-P0-SOURCES": 73.4,
+      "EPIC-P1-PAYONCE": 73.4,
+      "G_RG001": 73.1,
+      "EPIC-P1-CORE": 73.1,
+      "EPIC-P1-LEDGER": 73.1,
+      "EPIC-P2-ORCH": 73.1,
+      "EPIC-P2-MERCHANT": 73.1,
+      "EPIC-P2-SUBS": 58.5,
+      "G_RG002": 40.9,
+      "EPIC-P1-DELEGATION": 26.3,
+      "EPIC-P1-MANDATE": 26.3,
+      "G_CONTRACT_FREEZE": 0.3,
+      "L_AUDIT_AVAIL": 0.3,
+      "L_AUDIT_RUN": 0.3,
+      "G_RG005": 0.3,
+      "L_REREVIEW": 0.3,
+      "W_REMEDIATE": 0.3,
+      "L_LICENSE": 0.3,
+      "L_OD001": 0.3,
+      "L_GOLIVE": 0.3,
+      "G_RG008": 0.3,
+      "L_LEGAL_MEMO": 0.3,
+      "G_FREEZE": 0.3,
+      "EPIC-P3-DEPLOY": 0.2
+     },
+     "crit_wp": {
+      "G_BETA": 100.0,
+      "EPIC-P2-LOAD#A": 99.4,
+      "EPIC-P2-TESTNET#R": 99.4,
+      "EPIC-P2-TESTNET#A": 99.4,
+      "W_WALLET_E3": 99.4,
+      "EPIC-P2-TESTNET#B": 99.4,
+      "EPIC-P2-LOAD#B": 99.4,
+      "EPIC-P1-FLAGS#A": 99.3,
+      "G_RG009": 99.2,
+      "EPIC-P2-LOAD#R": 99.2,
+      "EPIC-P1-REVOKE#A": 73.4,
+      "EPIC-P1-REVOKE#B": 73.4,
+      "EPIC-P1-PAYONCE#A": 73.4,
+      "EPIC-P1-MIGRATION#A": 73.4,
+      "EPIC-P1-TOKENREG#A": 73.4,
+      "EPIC-P1-AUDITPREP#A": 73.4,
+      "EPIC-P1-PAYONCE#B": 73.4,
+      "EPIC-P1-MIGRATION#B": 73.4,
+      "EPIC-P1-TOKENREG#B": 73.4,
+      "EPIC-P1-AUDITPREP#B": 73.4,
+      "EPIC-P1-CONTRACTS#A": 73.4,
+      "EPIC-P1-CONTRACTS#B": 73.4,
+      "EPIC-P0-TOKENLAB#A": 73.4,
+      "EPIC-P0-TOKENLAB#B": 73.4,
+      "EPIC-P0-PROTO#A": 73.4,
+      "EPIC-P0-PLANNER#B": 73.4,
+      "EPIC-P0-PROTO#B": 73.4,
+      "EPIC-P0-PROTOSPEC#A": 73.4,
+      "EPIC-P0-PROTOSPEC#B": 73.4,
+      "EPIC-P0-SOURCES#B": 73.4,
+      "W_LAB_MIN": 73.4,
+      "EPIC-P0-TOKENLAB#R": 73.1,
+      "EPIC-P0-PLANNER#R": 73.1,
+      "EPIC-P0-PROTO#R": 73.1,
+      "EPIC-P0-PROTOSPEC#R": 73.1,
+      "EPIC-P1-LEDGER#A": 73.1,
+      "EPIC-P2-ORCH#B": 73.1,
+      "EPIC-P1-CORE#A": 73.1,
+      "EPIC-P1-FLAGS#B": 73.1,
+      "EPIC-P1-LEDGER#B": 73.1
+     }
+    },
+    "recommended_contractors": {
+     "ms": {
+      "G_FREEZE": [
+       29,
+       32,
+       34
+      ],
+      "G_RG001": [
+       37,
+       42,
+       63
+      ],
+      "G_CONTRACT_FREEZE": [
+       59,
+       63,
+       67
+      ],
+      "G_RG002": [
+       63,
+       70,
+       79
+      ],
+      "G_RG005": [
+       89,
+       94,
+       99
+      ],
+      "G_RG006": [
+       92,
+       99,
+       107
+      ],
+      "G_RG003": [
+       93,
+       100,
+       108
+      ],
+      "G_RG004": [
+       81,
+       87,
+       92
+      ],
+      "G_RG007": [
+       103,
+       114,
+       126
+      ],
+      "G_RG008": [
+       75,
+       83,
+       93
+      ],
+      "G_RG009": [
+       109,
+       121,
+       134
+      ],
+      "G_BETA": [
+       112,
+       123,
+       136
+      ]
+     },
+     "crit": {
+      "G_BETA": 100.0,
+      "EPIC-P2-TESTNET": 97.7,
+      "W_WALLET_E3": 97.7,
+      "EPIC-P2-LOAD": 97.7,
+      "G_RG009": 97.7,
+      "EPIC-P1-FLAGS": 97.5,
+      "EPIC-P2-SUBS": 85.5,
+      "EPIC-P1-DELEGATION": 76.3,
+      "EPIC-P1-MANDATE": 76.3,
+      "EPIC-P0-TOKENLAB": 21.9,
+      "EPIC-P1-TOKENREG": 21.9,
+      "EPIC-P1-AUDITPREP": 21.9,
+      "EPIC-P1-CONTRACTS": 21.9,
+      "EPIC-P1-REVOKE": 21.9,
+      "EPIC-P1-MIGRATION": 21.9,
+      "W_LAB_MIN": 21.9,
+      "EPIC-P0-SOURCES": 21.9,
+      "EPIC-P1-PAYONCE": 21.9,
+      "EPIC-P0-PROTOSPEC": 21.8,
+      "EPIC-P0-PROTO": 21.8,
+      "EPIC-P0-PLANNER": 21.8,
+      "G_RG001": 21.3,
+      "EPIC-P1-CORE": 21.3,
+      "EPIC-P1-LEDGER": 21.3,
+      "EPIC-P2-ORCH": 21.3,
+      "EPIC-P2-MERCHANT": 21.3,
+      "G_RG002": 12.2,
+      "W_LAB_REST": 2.1,
+      "L_LICENSE": 2.1,
+      "L_OD001": 2.1,
+      "L_GOLIVE": 2.1,
+      "G_RG008": 2.1,
+      "L_LEGAL_MEMO": 2.1,
+      "G_FREEZE": 0.6,
+      "G_CONTRACT_FREEZE": 0.3,
+      "L_AUDIT_AVAIL": 0.2,
+      "EPIC-P3-BOUNTY": 0.2,
+      "L_AUDIT_RUN": 0.2,
+      "G_RG005": 0.2,
+      "L_REREVIEW": 0.2
+     },
+     "crit_wp": {
+      "G_BETA": 100.0,
+      "EPIC-P2-LOAD#A": 97.7,
+      "EPIC-P2-TESTNET#R": 97.7,
+      "EPIC-P2-TESTNET#A": 97.7,
+      "EPIC-P2-TESTNET#B": 97.7,
+      "W_WALLET_E3": 97.7,
+      "EPIC-P2-LOAD#B": 97.7,
+      "G_RG009": 97.7,
+      "EPIC-P2-LOAD#R": 97.7,
+      "EPIC-P1-FLAGS#A": 97.5,
+      "EPIC-P2-SUBS#B": 85.5,
+      "EPIC-P1-MANDATE#A": 76.3,
+      "EPIC-P1-DELEGATION#A": 76.0,
+      "EPIC-P1-REVOKE#A": 21.9,
+      "EPIC-P1-REVOKE#B": 21.9,
+      "EPIC-P1-PAYONCE#A": 21.9,
+      "EPIC-P1-MIGRATION#A": 21.9,
+      "EPIC-P1-TOKENREG#A": 21.9,
+      "EPIC-P1-AUDITPREP#A": 21.9,
+      "EPIC-P1-PAYONCE#B": 21.9,
+      "EPIC-P1-MIGRATION#B": 21.9,
+      "EPIC-P1-TOKENREG#B": 21.9,
+      "EPIC-P1-AUDITPREP#B": 21.9,
+      "EPIC-P1-CONTRACTS#A": 21.9,
+      "EPIC-P1-CONTRACTS#B": 21.9,
+      "EPIC-P0-TOKENLAB#A": 21.9,
+      "EPIC-P0-TOKENLAB#B": 21.9,
+      "EPIC-P0-SOURCES#B": 21.9,
+      "W_LAB_MIN": 21.9,
+      "EPIC-P1-LEDGER#A": 21.3,
+      "EPIC-P2-ORCH#B": 21.3,
+      "EPIC-P1-CORE#A": 21.3,
+      "EPIC-P1-FLAGS#B": 21.3,
+      "EPIC-P1-LEDGER#B": 21.3,
+      "EPIC-P2-MERCHANT#B": 21.3,
+      "EPIC-P1-CORE#B": 21.3,
+      "G_RG001": 21.3,
+      "EPIC-P0-TOKENLAB#R": 21.3,
+      "EPIC-P0-PLANNER#R": 21.3,
+      "EPIC-P0-PROTO#R": 21.3
+     }
+    }
+   }
+  },
+  "GA": {
+   "name": "Tier 3: full GA platform",
+   "top": "G_GA",
+   "milestones": [
+    {
+     "id": "GA-1",
+     "label": "Protocol freeze (RG-016)",
+     "node": "G_FREEZE"
+    },
+    {
+     "id": "GA-2",
+     "label": "Phase 0 exit (RG-001)",
+     "node": "G_RG001"
+    },
+    {
+     "id": "GA-3",
+     "label": "Contract audit freeze (audits start)",
+     "node": "G_CONTRACT_FREEZE"
+    },
+    {
+     "id": "GA-4",
+     "label": "Phase 1 exit; testnet alpha (RG-002, R3)",
+     "node": "G_RG002"
+    },
+    {
+     "id": "GA-5",
+     "label": "Audits complete (RG-005)",
+     "node": "G_RG005"
+    },
+    {
+     "id": "GA-6",
+     "label": "Security testing (RG-006)",
+     "node": "G_RG006"
+    },
+    {
+     "id": "GA-7",
+     "label": "Wallet evidence (RG-003)",
+     "node": "G_RG003"
+    },
+    {
+     "id": "GA-8",
+     "label": "Chain evidence (RG-004)",
+     "node": "G_RG004"
+    },
+    {
+     "id": "GA-9",
+     "label": "Reconciliation (RG-007)",
+     "node": "G_RG007"
+    },
+    {
+     "id": "GA-10",
+     "label": "Legal go-live (RG-008)",
+     "node": "G_RG008"
+    },
+    {
+     "id": "GA-11",
+     "label": "Load and operations (RG-009)",
+     "node": "G_RG009"
+    },
+    {
+     "id": "GA-12",
+     "label": "Private beta go (RG-010)",
+     "node": "G_BETA"
+    },
+    {
+     "id": "GA-13",
+     "label": "Public beta go (RG-011)",
+     "node": "G_PUBBETA"
+    },
+    {
+     "id": "GA-14",
+     "label": "GA go (RG-012)",
+     "node": "G_GA"
+    },
+    {
+     "id": "GA-15",
+     "label": "v1.1 conversion enablement (RG-013), post-GA",
+     "node": "G_RG013"
+    },
+    {
+     "id": "GA-16",
+     "label": "v2.0 enablement (RG-014, indicative), post-GA",
+     "node": "G_RG014"
+    }
+   ],
+   "graph": {
+    "nodes": 349,
+    "wps": 305,
+    "edges": 976,
+    "by_type": {
+     "FF": 264,
+     "FS": 445,
+     "SS": 267
+    },
+    "work_pw": 3435.0,
+    "work_by_squad": {
+     "Leadership and Program": 88.0,
+     "Product and Design": 118.8,
+     "Protocol and Contracts": 1016.8,
+     "Payments Core": 838.9,
+     "Chain Infrastructure": 130.2,
+     "Checkout and Merchant Experience": 248.7,
+     "Platform, SRE and Security Engineering": 345.8,
+     "Quality": 157.3,
+     "Compliance, Risk and Privacy": 300.1,
+     "DevEx, Support and Partnerships": 190.4
+    }
+   },
+   "dropped": [
+    [
+     "EPIC-P1-CHAINGW",
+     "RP-04"
+    ],
+    [
+     "EPIC-P1-CHAINGW",
+     "RP-22"
+    ],
+    [
+     "EPIC-P1-DELEGATION",
+     "EPIC-P0-WALLETLAB"
+    ],
+    [
+     "EPIC-P2-REFUNDS",
+     "OD-007"
+    ]
+   ],
+   "scenarios": {
+    "as_organized": {
+     "ms": {
+      "G_FREEZE": [
+       33,
+       36,
+       38
+      ],
+      "G_RG001": [
+       73,
+       79,
+       85
+      ],
+      "G_CONTRACT_FREEZE": [
+       73,
+       79,
+       84
+      ],
+      "G_RG002": [
+       97,
+       106,
+       112
+      ],
+      "G_RG005": [
+       108,
+       116,
+       122
+      ],
+      "G_RG006": [
+       136,
+       146,
+       156
+      ],
+      "G_RG003": [
+       121,
+       131,
+       140
+      ],
+      "G_RG004": [
+       74,
+       80,
+       92
+      ],
+      "G_RG007": [
+       140,
+       152,
+       162
+      ],
+      "G_RG008": [
+       81,
+       88,
+       96
+      ],
+      "G_RG009": [
+       147,
+       159,
+       170
+      ],
+      "G_BETA": [
+       149,
+       161,
+       173
+      ],
+      "G_PUBBETA": [
+       166,
+       179,
+       191
+      ],
+      "G_GA": [
+       211,
+       228,
+       245
+      ],
+      "G_RG013": [
+       226,
+       245,
+       262
+      ],
+      "G_RG014": [
+       320,
+       344,
+       367
+      ]
+     },
+     "crit": {
+      "G_GA": 100.0,
+      "EPIC-P5-RELREADY": 100.0,
+      "EPIC-P4-MIGGAME": 69.2,
+      "EPIC-P5-GA": 69.2,
+      "G_BETA": 59.1,
+      "EPIC-P2-TESTNET": 58.4,
+      "EPIC-P2-LOAD": 58.4,
+      "W_WALLET_E3": 58.4,
+      "EPIC-P1-FLAGS": 58.4,
+      "G_RG009": 55.7,
+      "EPIC-P2-ORCH": 51.8,
+      "EPIC-P1-CORE": 51.4,
+      "EPIC-P1-LEDGER": 51.4,
+      "EPIC-P2-MERCHANT": 51.2,
+      "EPIC-P5-SUPPORT247": 49.9,
+      "EPIC-P3-SUPPORT": 49.9,
+      "EPIC-P2-SUBS": 46.2,
+      "EPIC-P4-DRDRILLS": 43.4,
+      "EPIC-P1-CONTRACTS": 42.0,
+      "EPIC-P5-DRILLS": 41.7,
+      "EPIC-P3-TUNE": 35.0,
+      "EPIC-P4-SCALE": 35.0,
+      "EPIC-P5-OPSMAT": 35.0,
+      "EPIC-P1-MIGRATION": 34.4,
+      "EPIC-P1-AUDITPREP": 33.7,
+      "EPIC-P1-DELEGATION": 29.9,
+      "EPIC-P1-PAYONCE": 29.7,
+      "EPIC-P1-MANDATE": 29.6,
+      "EPIC-P0-TOKENLAB": 28.9,
+      "EPIC-P0-PROTOSPEC": 28.9,
+      "EPIC-P0-PROTO": 28.9,
+      "EPIC-P0-PLANNER": 28.9,
+      "W_LAB_MIN": 28.9,
+      "EPIC-P0-SOURCES": 28.9,
+      "EPIC-P1-TOKENREG": 28.4,
+      "EPIC-P1-REVOKE": 25.0,
+      "G_RG001": 24.6,
+      "EPIC-P4-FRAUD": 14.3,
+      "EPIC-P4-MERCHANTOPS": 14.1,
+      "EPIC-P3-LIMITS": 13.3
+     },
+     "crit_wp": {
+      "G_GA": 100.0,
+      "EPIC-P5-RELREADY#R": 100.0,
+      "EPIC-P5-RELREADY#A": 100.0,
+      "EPIC-P5-RELREADY#B": 100.0,
+      "EPIC-P4-MIGGAME#R": 69.2,
+      "EPIC-P5-GA#R": 69.2,
+      "G_BETA": 59.1,
+      "EPIC-P2-LOAD#A": 58.4,
+      "EPIC-P2-TESTNET#R": 58.4,
+      "EPIC-P2-TESTNET#A": 58.4,
+      "EPIC-P2-TESTNET#B": 58.4,
+      "W_WALLET_E3": 58.4,
+      "EPIC-P2-LOAD#B": 58.4,
+      "EPIC-P1-FLAGS#A": 58.4,
+      "G_RG009": 55.7,
+      "EPIC-P2-LOAD#R": 55.7,
+      "EPIC-P1-LEDGER#A": 50.2,
+      "EPIC-P2-ORCH#B": 50.2,
+      "EPIC-P1-CORE#A": 50.2,
+      "EPIC-P1-FLAGS#B": 50.2,
+      "EPIC-P1-LEDGER#B": 50.2,
+      "EPIC-P2-MERCHANT#B": 50.2,
+      "EPIC-P1-CORE#B": 50.2,
+      "EPIC-P4-MIGGAME#A": 49.9,
+      "EPIC-P5-GA#A": 49.9,
+      "EPIC-P4-MIGGAME#B": 49.9,
+      "EPIC-P5-SUPPORT247#R": 49.9,
+      "EPIC-P5-GA#B": 49.9,
+      "EPIC-P5-SUPPORT247#A": 49.9,
+      "EPIC-P5-SUPPORT247#B": 49.9,
+      "EPIC-P3-SUPPORT#R": 49.9,
+      "EPIC-P3-SUPPORT#A": 49.9,
+      "EPIC-P3-SUPPORT#B": 49.9,
+      "EPIC-P2-SUBS#B": 45.5,
+      "EPIC-P4-DRDRILLS#A": 42.3,
+      "EPIC-P5-DRILLS#A": 41.2,
+      "EPIC-P5-DRILLS#R": 40.9,
+      "EPIC-P4-SCALE#R": 35.0,
+      "EPIC-P5-OPSMAT#R": 35.0,
+      "EPIC-P5-OPSMAT#A": 35.0
+     }
+    },
+    "as_organized_contractors": {
+     "ms": {
+      "G_FREEZE": [
+       29,
+       31,
+       33
+      ],
+      "G_RG001": [
+       32,
+       35,
+       62
+      ],
+      "G_CONTRACT_FREEZE": [
+       58,
+       63,
+       66
+      ],
+      "G_RG002": [
+       69,
+       76,
+       84
+      ],
+      "G_RG005": [
+       89,
+       94,
+       99
+      ],
+      "G_RG006": [
+       105,
+       113,
+       123
+      ],
+      "G_RG003": [
+       100,
+       108,
+       116
+      ],
+      "G_RG004": [
+       97,
+       104,
+       111
+      ],
+      "G_RG007": [
+       113,
+       123,
+       134
+      ],
+      "G_RG008": [
+       86,
+       94,
+       101
+      ],
+      "G_RG009": [
+       119,
+       130,
+       141
+      ],
+      "G_BETA": [
+       121,
+       132,
+       144
+      ],
+      "G_PUBBETA": [
+       138,
+       150,
+       162
+      ],
+      "G_GA": [
+       183,
+       200,
+       216
+      ],
+      "G_RG013": [
+       187,
+       203,
+       219
+      ],
+      "G_RG014": [
+       265,
+       284,
+       302
+      ]
+     },
+     "crit": {
+      "G_GA": 100.0,
+      "EPIC-P5-RELREADY": 100.0,
+      "EPIC-P4-MIGGAME": 85.0,
+      "EPIC-P5-GA": 85.0,
+      "G_BETA": 79.3,
+      "EPIC-P2-TESTNET": 78.6,
+      "W_WALLET_E3": 78.6,
+      "G_RG009": 78.6,
+      "EPIC-P2-LOAD": 78.6,
+      "EPIC-P1-FLAGS": 78.6,
+      "EPIC-P1-DELEGATION": 73.7,
+      "EPIC-P1-MANDATE": 73.0,
+      "EPIC-P3-SUPPORT": 66.0,
+      "EPIC-P5-SUPPORT247": 66.0,
+      "EPIC-P2-SUBS": 43.7,
+      "G_RG002": 35.1,
+      "EPIC-P3-TUNE": 31.3,
+      "EPIC-P5-OPSMAT": 31.3,
+      "EPIC-P4-SCALE": 31.3,
+      "EPIC-P6-OPSV11": 24.4,
+      "EPIC-P5-DRILLS": 21.3,
+      "EPIC-P4-DRDRILLS": 21.3,
+      "EPIC-P3-CANARY": 13.4,
+      "EPIC-P1-CORE": 10.4,
+      "EPIC-P1-LEDGER": 10.4,
+      "EPIC-P2-ORCH": 10.4,
+      "EPIC-P2-MERCHANT": 10.4,
+      "EPIC-P4-FRAUD": 9.2,
+      "EPIC-P3-LIMITS": 8.5,
+      "EPIC-P2-COMPOPS": 8.5,
+      "EPIC-P2-COMPLIANCE": 8.4,
+      "EPIC-P4-MERCHANTOPS": 6.9,
+      "EPIC-P1-CONTRACTS": 5.9,
+      "EPIC-P0-TOKENLAB": 5.7,
+      "EPIC-P0-PROTOSPEC": 5.7,
+      "EPIC-P0-PROTO": 5.7,
+      "EPIC-P0-PLANNER": 5.7,
+      "W_LAB_MIN": 5.7,
+      "EPIC-P0-SOURCES": 5.7,
+      "EPIC-P1-AUDITPREP": 5.4
+     },
+     "crit_wp": {
+      "G_GA": 100.0,
+      "EPIC-P5-RELREADY#R": 100.0,
+      "EPIC-P5-RELREADY#A": 100.0,
+      "EPIC-P5-RELREADY#B": 100.0,
+      "EPIC-P4-MIGGAME#R": 85.0,
+      "EPIC-P5-GA#R": 85.0,
+      "G_BETA": 79.3,
+      "G_RG009": 78.6,
+      "EPIC-P2-LOAD#R": 78.6,
+      "EPIC-P2-LOAD#A": 78.6,
+      "EPIC-P2-TESTNET#R": 78.6,
+      "EPIC-P2-TESTNET#A": 78.6,
+      "EPIC-P2-TESTNET#B": 78.6,
+      "W_WALLET_E3": 78.6,
+      "EPIC-P2-LOAD#B": 78.6,
+      "EPIC-P1-FLAGS#A": 78.6,
+      "EPIC-P1-DELEGATION#A": 69.0,
+      "EPIC-P1-MANDATE#A": 69.0,
+      "EPIC-P4-MIGGAME#A": 66.0,
+      "EPIC-P5-GA#A": 66.0,
+      "EPIC-P4-MIGGAME#B": 66.0,
+      "EPIC-P5-SUPPORT247#R": 66.0,
+      "EPIC-P5-GA#B": 66.0,
+      "EPIC-P5-SUPPORT247#A": 66.0,
+      "EPIC-P5-SUPPORT247#B": 66.0,
+      "EPIC-P3-SUPPORT#R": 66.0,
+      "EPIC-P3-SUPPORT#A": 66.0,
+      "EPIC-P3-SUPPORT#B": 66.0,
+      "EPIC-P2-SUBS#B": 43.5,
+      "G_RG002": 35.1,
+      "EPIC-P4-SCALE#R": 31.3,
+      "EPIC-P5-OPSMAT#R": 31.3,
+      "EPIC-P5-OPSMAT#A": 31.3,
+      "EPIC-P4-SCALE#A": 31.3,
+      "EPIC-P5-OPSMAT#B": 31.3,
+      "EPIC-P4-SCALE#B": 31.3,
+      "EPIC-P3-TUNE#R": 31.3,
+      "EPIC-P3-TUNE#A": 31.3,
+      "EPIC-P3-TUNE#B": 31.3,
+      "EPIC-P6-OPSV11#B": 24.4
+     }
+    },
+    "recommended": {
+     "ms": {
+      "G_FREEZE": [
+       32,
+       34,
+       36
+      ],
+      "G_RG001": [
+       66,
+       72,
+       77
+      ],
+      "G_CONTRACT_FREEZE": [
+       67,
+       73,
+       77
+      ],
+      "G_RG002": [
+       83,
+       91,
+       98
+      ],
+      "G_RG005": [
+       101,
+       107,
+       113
+      ],
+      "G_RG006": [
+       113,
+       124,
+       132
+      ],
+      "G_RG003": [
+       106,
+       116,
+       125
+      ],
+      "G_RG004": [
+       74,
+       87,
+       96
+      ],
+      "G_RG007": [
+       126,
+       138,
+       147
+      ],
+      "G_RG008": [
+       78,
+       85,
+       94
+      ],
+      "G_RG009": [
+       132,
+       145,
+       156
+      ],
+      "G_BETA": [
+       134,
+       147,
+       158
+      ],
+      "G_PUBBETA": [
+       150,
+       164,
+       174
+      ],
+      "G_GA": [
+       181,
+       198,
+       213
+      ],
+      "G_RG013": [
+       206,
+       224,
+       239
+      ],
+      "G_RG014": [
+       292,
+       315,
+       334
+      ]
+     },
+     "crit": {
+      "G_GA": 100.0,
+      "EPIC-P5-RELREADY": 99.9,
+      "EPIC-P3-TUNE": 95.0,
+      "EPIC-P4-SCALE": 95.0,
+      "EPIC-P5-OPSMAT": 95.0,
+      "EPIC-P3-CANARY": 86.1,
+      "EPIC-P2-TESTNET": 62.6,
+      "EPIC-P2-LOAD": 62.6,
+      "W_WALLET_E3": 62.6,
+      "EPIC-P1-FLAGS": 62.6,
+      "G_BETA": 62.5,
+      "G_RG009": 62.4,
+      "EPIC-P2-ORCH": 61.2,
+      "EPIC-P2-MERCHANT": 61.2,
+      "EPIC-P1-CORE": 61.0,
+      "EPIC-P1-LEDGER": 61.0,
+      "EPIC-P1-CONTRACTS": 51.7,
+      "EPIC-P0-TOKENLAB": 51.6,
+      "EPIC-P0-PROTOSPEC": 51.6,
+      "EPIC-P0-PROTO": 51.6,
+      "EPIC-P0-PLANNER": 51.6,
+      "W_LAB_MIN": 51.6,
+      "EPIC-P0-SOURCES": 51.6,
+      "EPIC-P1-PAYONCE": 50.3,
+      "EPIC-P1-AUDITPREP": 50.2,
+      "EPIC-P1-MIGRATION": 50.2,
+      "EPIC-P1-TOKENREG": 50.2,
+      "EPIC-P1-REVOKE": 50.1,
+      "G_RG001": 49.6,
+      "G_RG002": 31.7,
+      "EPIC-P2-SUBS": 31.1,
+      "EPIC-P4-MIGGAME": 28.2,
+      "EPIC-P5-GA": 28.2,
+      "EPIC-P4-T1": 28.1,
+      "EPIC-P3-T1START": 28.1,
+      "EPIC-P4-MERCHANTOPS": 11.8,
+      "EPIC-P4-FRAUD": 11.6,
+      "EPIC-P3-LIMITS": 11.3,
+      "EPIC-P2-COMPOPS": 11.0,
+      "EPIC-P2-LEGALPACK": 10.9
+     },
+     "crit_wp": {
+      "G_GA": 100.0,
+      "EPIC-P5-RELREADY#R": 99.9,
+      "EPIC-P5-RELREADY#A": 99.9,
+      "EPIC-P5-RELREADY#B": 99.9,
+      "EPIC-P4-SCALE#R": 95.0,
+      "EPIC-P5-OPSMAT#R": 95.0,
+      "EPIC-P5-OPSMAT#A": 95.0,
+      "EPIC-P4-SCALE#A": 95.0,
+      "EPIC-P5-OPSMAT#B": 95.0,
+      "EPIC-P4-SCALE#B": 95.0,
+      "EPIC-P3-TUNE#R": 95.0,
+      "EPIC-P3-TUNE#A": 95.0,
+      "EPIC-P3-TUNE#B": 95.0,
+      "EPIC-P3-CANARY#B": 86.1,
+      "EPIC-P2-LOAD#A": 62.6,
+      "EPIC-P2-TESTNET#R": 62.6,
+      "EPIC-P2-TESTNET#A": 62.6,
+      "EPIC-P2-LOAD#B": 62.6,
+      "EPIC-P2-TESTNET#B": 62.6,
+      "W_WALLET_E3": 62.6,
+      "EPIC-P1-FLAGS#A": 62.6,
+      "G_BETA": 62.5,
+      "G_RG009": 62.4,
+      "EPIC-P2-LOAD#R": 62.4,
+      "EPIC-P1-LEDGER#A": 61.0,
+      "EPIC-P2-ORCH#B": 61.0,
+      "EPIC-P1-CORE#A": 61.0,
+      "EPIC-P1-FLAGS#B": 61.0,
+      "EPIC-P1-LEDGER#B": 61.0,
+      "EPIC-P2-MERCHANT#B": 61.0,
+      "EPIC-P1-CORE#B": 61.0,
+      "EPIC-P1-CONTRACTS#A": 51.6,
+      "EPIC-P1-CONTRACTS#B": 51.6,
+      "EPIC-P0-TOKENLAB#A": 51.6,
+      "EPIC-P0-TOKENLAB#B": 51.6,
+      "EPIC-P0-PROTO#A": 51.6,
+      "EPIC-P0-PLANNER#B": 51.6,
+      "EPIC-P0-PROTO#B": 51.6,
+      "EPIC-P0-PROTOSPEC#A": 51.6,
+      "EPIC-P0-PROTOSPEC#B": 51.6
+     }
+    },
+    "recommended_contractors": {
+     "ms": {
+      "G_FREEZE": [
+       29,
+       31,
+       33
+      ],
+      "G_RG001": [
+       37,
+       42,
+       62
+      ],
+      "G_CONTRACT_FREEZE": [
+       59,
+       63,
+       67
+      ],
+      "G_RG002": [
+       63,
+       70,
+       78
+      ],
+      "G_RG005": [
+       89,
+       94,
+       99
+      ],
+      "G_RG006": [
+       92,
+       99,
+       107
+      ],
+      "G_RG003": [
+       93,
+       101,
+       107
+      ],
+      "G_RG004": [
+       81,
+       87,
+       92
+      ],
+      "G_RG007": [
+       103,
+       114,
+       125
+      ],
+      "G_RG008": [
+       76,
+       83,
+       94
+      ],
+      "G_RG009": [
+       109,
+       121,
+       133
+      ],
+      "G_BETA": [
+       112,
+       123,
+       135
+      ],
+      "G_PUBBETA": [
+       133,
+       145,
+       155
+      ],
+      "G_GA": [
+       161,
+       175,
+       190
+      ],
+      "G_RG013": [
+       181,
+       196,
+       210
+      ],
+      "G_RG014": [
+       258,
+       277,
+       293
+      ]
+     },
+     "crit": {
+      "G_GA": 100.0,
+      "EPIC-P5-GA": 100.0,
+      "EPIC-P4-MIGGAME": 79.3,
+      "EPIC-P5-SUPPORT247": 77.8,
+      "EPIC-P5-SLALEGAL": 69.1,
+      "EPIC-P6-COMPLV11": 68.7,
+      "EPIC-P2-SUBS": 65.6,
+      "EPIC-P5-RELREADY": 55.5,
+      "EPIC-P4-COMPEXP": 53.5,
+      "EPIC-P4-MERCHANTOPS": 53.5,
+      "EPIC-P4-FRAUD": 53.5,
+      "EPIC-P1-DELEGATION": 49.5,
+      "EPIC-P3-LIMITS": 49.1,
+      "EPIC-P3-SUPPORT": 46.5,
+      "G_BETA": 46.5,
+      "EPIC-P1-FLAGS": 46.0,
+      "EPIC-P2-TESTNET": 45.9,
+      "EPIC-P2-LOAD": 45.9,
+      "W_WALLET_E3": 45.9,
+      "G_RG009": 45.2,
+      "EPIC-P1-MANDATE": 44.8,
+      "EPIC-P2-COMPOPS": 35.5,
+      "EPIC-P2-PORTALS": 34.4,
+      "EPIC-P2-PORTAL": 34.3,
+      "EPIC-P2-CHECKOUT": 34.3,
+      "EPIC-P2-RISKCON": 33.6,
+      "EPIC-P1-PAYONCE": 32.9,
+      "EPIC-P1-MIGRATION": 32.9,
+      "EPIC-P1-TOKENREG": 32.1,
+      "EPIC-P1-REVOKE": 32.1,
+      "EPIC-P1-AUDITPREP": 31.4,
+      "EPIC-P1-CONTRACTS": 31.4,
+      "W_LAB_MIN": 31.4,
+      "EPIC-P0-SOURCES": 31.4,
+      "EPIC-P0-TOKENLAB": 30.7,
+      "EPIC-P2-REFUNDS": 30.5,
+      "EPIC-P2-RECON": 30.5,
+      "EPIC-P2-MIGSVC": 30.2,
+      "EPIC-P1-QUOTE": 30.0,
+      "EPIC-P1-CHAINGW": 29.5
+     },
+     "crit_wp": {
+      "G_GA": 100.0,
+      "EPIC-P5-GA#R": 100.0,
+      "EPIC-P5-GA#A": 100.0,
+      "EPIC-P5-GA#B": 100.0,
+      "EPIC-P4-MIGGAME#B": 77.9,
+      "EPIC-P5-SUPPORT247#R": 77.8,
+      "EPIC-P6-COMPLV11#B": 68.6,
+      "EPIC-P5-RELREADY#B": 55.3,
+      "EPIC-P5-SLALEGAL#B": 53.5,
+      "EPIC-P4-COMPEXP#A": 53.5,
+      "EPIC-P4-MERCHANTOPS#R": 53.5,
+      "EPIC-P4-FRAUD#R": 53.5,
+      "EPIC-P4-MERCHANTOPS#A": 53.5,
+      "EPIC-P4-FRAUD#A": 53.5,
+      "EPIC-P4-MERCHANTOPS#B": 53.5,
+      "EPIC-P4-COMPEXP#B": 53.5,
+      "EPIC-P4-COMPEXP#R": 53.4,
+      "EPIC-P5-RELREADY#R": 53.0,
+      "EPIC-P5-RELREADY#A": 53.0,
+      "EPIC-P4-FRAUD#B": 52.4,
+      "EPIC-P4-MIGGAME#A": 50.9,
+      "EPIC-P3-LIMITS#R": 49.1,
+      "EPIC-P5-SLALEGAL#R": 49.0,
+      "EPIC-P4-MIGGAME#R": 48.4,
+      "EPIC-P5-SLALEGAL#A": 47.6,
+      "EPIC-P5-SUPPORT247#A": 46.5,
+      "EPIC-P5-SUPPORT247#B": 46.5,
+      "EPIC-P3-SUPPORT#R": 46.5,
+      "EPIC-P3-SUPPORT#A": 46.5,
+      "EPIC-P3-SUPPORT#B": 46.5,
+      "G_BETA": 46.5,
+      "EPIC-P1-FLAGS#A": 46.0,
+      "EPIC-P2-LOAD#A": 45.9,
+      "EPIC-P2-TESTNET#R": 45.9,
+      "EPIC-P2-TESTNET#A": 45.9,
+      "EPIC-P2-LOAD#B": 45.9,
+      "EPIC-P2-TESTNET#B": 45.9,
+      "W_WALLET_E3": 45.9,
+      "G_RG009": 45.2,
+      "EPIC-P2-LOAD#R": 45.2
+     }
+    },
+    "recommended_partner": {
+     "ms": {
+      "G_FREEZE": [
+       32,
+       34,
+       36
+      ],
+      "G_RG001": [
+       66,
+       72,
+       77
+      ],
+      "G_CONTRACT_FREEZE": [
+       67,
+       73,
+       77
+      ],
+      "G_RG002": [
+       83,
+       91,
+       98
+      ],
+      "G_RG005": [
+       101,
+       107,
+       113
+      ],
+      "G_RG006": [
+       113,
+       124,
+       132
+      ],
+      "G_RG003": [
+       106,
+       116,
+       125
+      ],
+      "G_RG004": [
+       74,
+       87,
+       96
+      ],
+      "G_RG007": [
+       126,
+       138,
+       147
+      ],
+      "G_RG008": [
+       72,
+       79,
+       84
+      ],
+      "G_RG009": [
+       132,
+       145,
+       156
+      ],
+      "G_BETA": [
+       134,
+       147,
+       158
+      ],
+      "G_PUBBETA": [
+       150,
+       163,
+       174
+      ],
+      "G_GA": [
+       181,
+       198,
+       213
+      ],
+      "G_RG013": [
+       206,
+       224,
+       239
+      ],
+      "G_RG014": [
+       292,
+       315,
+       334
+      ]
+     },
+     "crit": {
+      "G_GA": 100.0,
+      "EPIC-P5-RELREADY": 99.7,
+      "EPIC-P3-TUNE": 94.6,
+      "EPIC-P4-SCALE": 94.6,
+      "EPIC-P5-OPSMAT": 94.6,
+      "EPIC-P3-CANARY": 86.1,
+      "EPIC-P2-TESTNET": 64.0,
+      "EPIC-P2-LOAD": 64.0,
+      "W_WALLET_E3": 64.0,
+      "EPIC-P1-FLAGS": 64.0,
+      "G_RG009": 63.8,
+      "G_BETA": 63.8,
+      "EPIC-P2-ORCH": 62.2,
+      "EPIC-P2-MERCHANT": 62.2,
+      "EPIC-P1-CORE": 62.1,
+      "EPIC-P1-LEDGER": 62.1,
+      "EPIC-P1-CONTRACTS": 51.9,
+      "EPIC-P0-TOKENLAB": 51.7,
+      "EPIC-P0-PROTOSPEC": 51.7,
+      "EPIC-P0-PROTO": 51.7,
+      "EPIC-P0-PLANNER": 51.7,
+      "W_LAB_MIN": 51.7,
+      "EPIC-P0-SOURCES": 51.7,
+      "EPIC-P1-PAYONCE": 50.3,
+      "EPIC-P1-AUDITPREP": 50.2,
+      "EPIC-P1-MIGRATION": 50.2,
+      "EPIC-P1-TOKENREG": 50.2,
+      "EPIC-P1-REVOKE": 50.1,
+      "G_RG001": 49.7,
+      "EPIC-P2-SUBS": 32.1,
+      "G_RG002": 32.0,
+      "EPIC-P5-GA": 29.6,
+      "EPIC-P4-MIGGAME": 29.5,
+      "EPIC-P4-T1": 27.2,
+      "EPIC-P3-T1START": 27.2,
+      "EPIC-P4-MERCHANTOPS": 12.6,
+      "EPIC-P4-FRAUD": 12.6,
+      "EPIC-P3-LIMITS": 12.2,
+      "EPIC-P2-COMPOPS": 11.9,
+      "EPIC-P2-LEGALPACK": 11.8
+     },
+     "crit_wp": {
+      "G_GA": 100.0,
+      "EPIC-P5-RELREADY#R": 99.7,
+      "EPIC-P5-RELREADY#A": 99.7,
+      "EPIC-P5-RELREADY#B": 99.7,
+      "EPIC-P4-SCALE#R": 94.6,
+      "EPIC-P5-OPSMAT#R": 94.6,
+      "EPIC-P5-OPSMAT#A": 94.6,
+      "EPIC-P4-SCALE#A": 94.6,
+      "EPIC-P5-OPSMAT#B": 94.6,
+      "EPIC-P4-SCALE#B": 94.6,
+      "EPIC-P3-TUNE#R": 94.6,
+      "EPIC-P3-TUNE#A": 94.6,
+      "EPIC-P3-TUNE#B": 94.6,
+      "EPIC-P3-CANARY#B": 86.1,
+      "EPIC-P2-LOAD#A": 64.0,
+      "EPIC-P2-TESTNET#R": 64.0,
+      "EPIC-P2-TESTNET#A": 64.0,
+      "EPIC-P2-LOAD#B": 64.0,
+      "EPIC-P2-TESTNET#B": 64.0,
+      "W_WALLET_E3": 64.0,
+      "EPIC-P1-FLAGS#A": 64.0,
+      "G_BETA": 63.8,
+      "G_RG009": 63.8,
+      "EPIC-P2-LOAD#R": 63.8,
+      "EPIC-P1-LEDGER#A": 62.1,
+      "EPIC-P2-ORCH#B": 62.1,
+      "EPIC-P1-CORE#A": 62.1,
+      "EPIC-P1-FLAGS#B": 62.1,
+      "EPIC-P1-LEDGER#B": 62.1,
+      "EPIC-P2-MERCHANT#B": 62.1,
+      "EPIC-P1-CORE#B": 62.1,
+      "EPIC-P1-CONTRACTS#A": 51.7,
+      "EPIC-P1-CONTRACTS#B": 51.7,
+      "EPIC-P0-PROTOSPEC#R": 51.7,
+      "EPIC-P0-TOKENLAB#A": 51.7,
+      "EPIC-P0-TOKENLAB#B": 51.7,
+      "EPIC-P0-PROTO#A": 51.7,
+      "EPIC-P0-PLANNER#B": 51.7,
+      "EPIC-P0-PROTO#B": 51.7,
+      "EPIC-P0-PROTOSPEC#A": 51.7
+     }
+    },
+    "recommended_own_licence": {
+     "ms": {
+      "G_FREEZE": [
+       32,
+       34,
+       36
+      ],
+      "G_RG001": [
+       66,
+       72,
+       77
+      ],
+      "G_CONTRACT_FREEZE": [
+       68,
+       73,
+       77
+      ],
+      "G_RG002": [
+       83,
+       91,
+       98
+      ],
+      "G_RG005": [
+       101,
+       107,
+       113
+      ],
+      "G_RG006": [
+       113,
+       124,
+       132
+      ],
+      "G_RG003": [
+       106,
+       116,
+       126
+      ],
+      "G_RG004": [
+       74,
+       87,
+       96
+      ],
+      "G_RG007": [
+       125,
+       138,
+       148
+      ],
+      "G_RG008": [
+       83,
+       92,
+       100
+      ],
+      "G_RG009": [
+       132,
+       145,
+       156
+      ],
+      "G_BETA": [
+       134,
+       147,
+       158
+      ],
+      "G_PUBBETA": [
+       150,
+       163,
+       174
+      ],
+      "G_GA": [
+       181,
+       198,
+       213
+      ],
+      "G_RG013": [
+       206,
+       224,
+       239
+      ],
+      "G_RG014": [
+       292,
+       315,
+       335
+      ]
+     },
+     "crit": {
+      "G_GA": 100.0,
+      "EPIC-P5-RELREADY": 99.8,
+      "EPIC-P3-TUNE": 94.8,
+      "EPIC-P4-SCALE": 94.8,
+      "EPIC-P5-OPSMAT": 94.8,
+      "EPIC-P3-CANARY": 85.9,
+      "EPIC-P2-TESTNET": 62.9,
+      "EPIC-P2-LOAD": 62.9,
+      "W_WALLET_E3": 62.9,
+      "EPIC-P1-FLAGS": 62.9,
+      "G_BETA": 62.5,
+      "G_RG009": 62.4,
+      "EPIC-P2-ORCH": 61.3,
+      "EPIC-P2-MERCHANT": 61.3,
+      "EPIC-P1-CORE": 61.0,
+      "EPIC-P1-LEDGER": 61.0,
+      "EPIC-P1-CONTRACTS": 51.5,
+      "EPIC-P0-TOKENLAB": 51.4,
+      "EPIC-P0-PROTOSPEC": 51.4,
+      "EPIC-P0-PROTO": 51.4,
+      "EPIC-P0-PLANNER": 51.4,
+      "W_LAB_MIN": 51.4,
+      "EPIC-P0-SOURCES": 51.4,
+      "EPIC-P1-PAYONCE": 50.3,
+      "EPIC-P1-AUDITPREP": 50.2,
+      "EPIC-P1-MIGRATION": 50.2,
+      "EPIC-P1-REVOKE": 50.2,
+      "EPIC-P1-TOKENREG": 50.2,
+      "G_RG001": 49.7,
+      "EPIC-P2-SUBS": 32.0,
+      "G_RG002": 31.1,
+      "EPIC-P5-GA": 28.6,
+      "EPIC-P4-MIGGAME": 28.5,
+      "EPIC-P4-T1": 27.8,
+      "EPIC-P3-T1START": 27.8,
+      "EPIC-P4-MERCHANTOPS": 11.9,
+      "EPIC-P4-FRAUD": 11.7,
+      "EPIC-P3-LIMITS": 11.3,
+      "EPIC-P2-COMPOPS": 11.0,
+      "EPIC-P2-LEGALPACK": 11.0
+     },
+     "crit_wp": {
+      "G_GA": 100.0,
+      "EPIC-P5-RELREADY#R": 99.8,
+      "EPIC-P5-RELREADY#A": 99.8,
+      "EPIC-P5-RELREADY#B": 99.8,
+      "EPIC-P4-SCALE#R": 94.8,
+      "EPIC-P5-OPSMAT#R": 94.8,
+      "EPIC-P5-OPSMAT#A": 94.8,
+      "EPIC-P4-SCALE#A": 94.8,
+      "EPIC-P5-OPSMAT#B": 94.8,
+      "EPIC-P4-SCALE#B": 94.8,
+      "EPIC-P3-TUNE#R": 94.8,
+      "EPIC-P3-TUNE#A": 94.8,
+      "EPIC-P3-TUNE#B": 94.8,
+      "EPIC-P3-CANARY#B": 85.9,
+      "EPIC-P2-LOAD#A": 62.9,
+      "EPIC-P2-TESTNET#R": 62.9,
+      "EPIC-P2-TESTNET#A": 62.9,
+      "EPIC-P2-LOAD#B": 62.9,
+      "EPIC-P2-TESTNET#B": 62.9,
+      "W_WALLET_E3": 62.9,
+      "EPIC-P1-FLAGS#A": 62.9,
+      "G_BETA": 62.5,
+      "G_RG009": 62.4,
+      "EPIC-P2-LOAD#R": 62.4,
+      "EPIC-P1-LEDGER#A": 61.0,
+      "EPIC-P2-ORCH#B": 61.0,
+      "EPIC-P1-CORE#A": 61.0,
+      "EPIC-P1-FLAGS#B": 61.0,
+      "EPIC-P1-LEDGER#B": 61.0,
+      "EPIC-P2-MERCHANT#B": 61.0,
+      "EPIC-P1-CORE#B": 61.0,
+      "EPIC-P1-CONTRACTS#A": 51.4,
+      "EPIC-P1-CONTRACTS#B": 51.4,
+      "EPIC-P0-TOKENLAB#A": 51.4,
+      "EPIC-P0-TOKENLAB#B": 51.4,
+      "EPIC-P0-PROTO#A": 51.4,
+      "EPIC-P0-PLANNER#B": 51.4,
+      "EPIC-P0-PROTO#B": 51.4,
+      "EPIC-P0-PROTOSPEC#A": 51.4,
+      "EPIC-P0-PROTOSPEC#B": 51.4
+     }
+    }
+   }
+  }
+ },
+ "graph": {
+  "nodes": 349,
+  "wps": 305,
+  "edges": 976,
+  "by_type": {
+   "FF": 264,
+   "FS": 445,
+   "SS": 267
+  },
+  "work_pw": 3435.0,
+  "work_by_squad": {
+   "Leadership and Program": 88.0,
+   "Product and Design": 118.8,
+   "Protocol and Contracts": 1016.8,
+   "Payments Core": 838.9,
+   "Chain Infrastructure": 130.2,
+   "Checkout and Merchant Experience": 248.7,
+   "Platform, SRE and Security Engineering": 345.8,
+   "Quality": 157.3,
+   "Compliance, Risk and Privacy": 300.1,
+   "DevEx, Support and Partnerships": 190.4
+  }
+ },
+ "queue_rule": {
+  "TRI": {
+   "label": "Recommended, with every Phase 0 package served first in a squad queue (a staffing rule; sensitivity only)",
+   "ms": {
+    "G_FREEZE": [
+     32,
+     34,
+     36
+    ],
+    "G_TRI2": [
+     64,
+     68,
+     73
+    ],
+    "G_TRI3": [
+     71,
+     76,
+     81
+    ],
+    "G_TRI4": [
+     76,
+     82,
+     88
+    ]
+   }
+  },
+  "PMB": {
+   "label": "Recommended, with every Phase 0 package served first in a squad queue (a staffing rule; sensitivity only)",
+   "ms": {
+    "G_FREEZE": [
+     32,
+     34,
+     36
+    ],
+    "G_RG001": [
+     37,
+     39,
+     42
+    ],
+    "G_CONTRACT_FREEZE": [
+     68,
+     73,
+     77
+    ],
+    "G_RG002": [
+     72,
+     77,
+     82
+    ],
+    "G_RG005": [
+     100,
+     106,
+     112
+    ],
+    "G_RG006": [
+     97,
+     104,
+     110
+    ],
+    "G_RG003": [
+     96,
+     103,
+     109
+    ],
+    "G_RG004": [
+     98,
+     105,
+     111
+    ],
+    "G_RG007": [
+     111,
+     119,
+     127
+    ],
+    "G_RG008": [
+     80,
+     89,
+     97
+    ],
+    "G_RG009": [
+     117,
+     126,
+     135
+    ],
+    "G_BETA": [
+     119,
+     129,
+     137
+    ]
+   }
+  },
+  "GA": {
+   "label": "Recommended, with every Phase 0 package served first in a squad queue (a staffing rule; sensitivity only)",
+   "ms": {
+    "G_FREEZE": [
+     32,
+     34,
+     36
+    ],
+    "G_RG001": [
+     37,
+     39,
+     42
+    ],
+    "G_CONTRACT_FREEZE": [
+     68,
+     73,
+     77
+    ],
+    "G_RG002": [
+     71,
+     77,
+     82
+    ],
+    "G_RG005": [
+     101,
+     108,
+     113
+    ],
+    "G_RG006": [
+     99,
+     106,
+     112
+    ],
+    "G_RG003": [
+     96,
+     103,
+     109
+    ],
+    "G_RG004": [
+     98,
+     105,
+     110
+    ],
+    "G_RG007": [
+     110,
+     119,
+     127
+    ],
+    "G_RG008": [
+     81,
+     89,
+     97
+    ],
+    "G_RG009": [
+     117,
+     126,
+     135
+    ],
+    "G_BETA": [
+     119,
+     129,
+     137
+    ],
+    "G_PUBBETA": [
+     136,
+     146,
+     155
+    ],
+    "G_GA": [
+     167,
+     180,
+     192
+    ],
+    "G_RG013": [
+     192,
+     206,
+     220
+    ],
+    "G_RG014": [
+     278,
+     298,
+     315
+    ]
+   }
+  }
+ },
+ "freeze_drivers": {
+  "TRI": {
+   "as_organized": {
+    "EPIC-P0-TOKENLAB#A": 100.0
+   },
+   "recommended": {
+    "EPIC-P0-TOKENLAB#A": 99.7,
+    "L_PC_APPROVAL": 0.3
+   },
+   "recommended_contractors": {
+    "EPIC-P0-TOKENLAB#A": 95.9,
+    "L_PC_APPROVAL": 4.1
+   }
+  },
+  "PMB": {
+   "as_organized": {
+    "EPIC-P0-TOKENLAB#A": 100.0
+   },
+   "recommended": {
+    "EPIC-P0-TOKENLAB#A": 99.9,
+    "L_PC_APPROVAL": 0.1
+   },
+   "recommended_contractors": {
+    "EPIC-P0-TOKENLAB#A": 96.3,
+    "L_PC_APPROVAL": 3.7
+   }
+  },
+  "GA": {
+   "as_organized": {
+    "EPIC-P0-TOKENLAB#A": 100.0
+   },
+   "recommended": {
+    "EPIC-P0-TOKENLAB#A": 99.8,
+    "L_PC_APPROVAL": 0.2
+   },
+   "recommended_contractors": {
+    "EPIC-P0-TOKENLAB#A": 95.7,
+    "L_PC_APPROVAL": 4.3
+   }
+  }
+ },
+ "aggregate": {
+  "ga": 93.4,
+  "pw": 2719
+ },
+ "squad_load": [
+  [
+   "Leadership and Program",
+   5,
+   88.0,
+   25.142857142857142
+  ],
+  [
+   "Product and Design",
+   7,
+   276.8,
+   56.489795918367356
+  ],
+  [
+   "Protocol and Contracts",
+   7,
+   510.8,
+   104.24489795918369
+  ],
+  [
+   "Payments Core",
+   8,
+   582.9,
+   104.08928571428572
+  ],
+  [
+   "Chain Infrastructure",
+   3,
+   56.199999999999996,
+   26.761904761904763
+  ],
+  [
+   "Checkout and Merchant Experience",
+   5,
+   248.70000000000002,
+   71.05714285714286
+  ],
+  [
+   "Platform, SRE and Security Engineering",
+   5,
+   401.8,
+   114.8
+  ],
+  [
+   "Quality",
+   3,
+   133.29999999999998,
+   63.47619047619048
+  ],
+  [
+   "Compliance, Risk and Privacy",
+   4,
+   230.1,
+   82.17857142857143
+  ],
+  [
+   "DevEx, Support and Partnerships",
+   3,
+   190.4,
+   90.66666666666669
+  ]
+ ],
+ "sensitivity": {
+  "baseline": {
+   "G_CONTRACT_FREEZE": 73.07023579068752,
+   "G_RG002": 96.96454805103873,
+   "G_BETA": 148.23015053511682,
+   "G_GA": 208.8944005096088
+  },
+  "rows": [
+   [
+    "Leadership and Program",
+    {
+     "G_CONTRACT_FREEZE": -0.0390680353804953,
+     "G_RG002": 0.08698346813140745,
+     "G_BETA": 0.007620286645959595,
+     "G_GA": 1.0763218000845711
+    }
+   ],
+   [
+    "Product and Design",
+    {
+     "G_CONTRACT_FREEZE": 0.10391753137450621,
+     "G_RG002": 0.07200879009049288,
+     "G_BETA": 0.060391031300440545,
+     "G_GA": 0.5312069981115712
+    }
+   ],
+   [
+    "Protocol and Contracts",
+    {
+     "G_CONTRACT_FREEZE": -11.194880949963121,
+     "G_RG002": -15.49052604624059,
+     "G_BETA": -15.184370094323924,
+     "G_GA": -14.847660313159253
+    }
+   ],
+   [
+    "Payments Core",
+    {
+     "G_CONTRACT_FREEZE": 0.04304767556973843,
+     "G_RG002": -4.349951859879255,
+     "G_BETA": -4.7086979458881615,
+     "G_GA": -5.179631140171097
+    }
+   ],
+   [
+    "Chain Infrastructure",
+    {
+     "G_CONTRACT_FREEZE": 0.0004053580940279744,
+     "G_RG002": -0.403468750768738,
+     "G_BETA": 0.12005432141788219,
+     "G_GA": 0.2902942534808517
+    }
+   ],
+   [
+    "Checkout and Merchant Experience",
+    {
+     "G_CONTRACT_FREEZE": -0.20983350255713162,
+     "G_RG002": 0.17480682454207397,
+     "G_BETA": 0.16298146569164373,
+     "G_GA": 0.21041300557732256
+    }
+   ],
+   [
+    "Platform, SRE and Security Engineering",
+    {
+     "G_CONTRACT_FREEZE": 0.014647592126181053,
+     "G_RG002": -0.42133594999920376,
+     "G_BETA": -0.36892200290964183,
+     "G_GA": -0.7110991950476091
+    }
+   ],
+   [
+    "Quality",
+    {
+     "G_CONTRACT_FREEZE": -5.889242544081384,
+     "G_RG002": -4.527996636972929,
+     "G_BETA": -7.905631216603695,
+     "G_GA": -8.561539577512832
+    }
+   ],
+   [
+    "Compliance, Risk and Privacy",
+    {
+     "G_CONTRACT_FREEZE": 0.10844573125760348,
+     "G_RG002": -0.25042754204407913,
+     "G_BETA": -0.529443793885946,
+     "G_GA": 0.09515830550702731
+    }
+   ],
+   [
+    "DevEx, Support and Partnerships",
+    {
+     "G_CONTRACT_FREEZE": -0.23188545475422018,
+     "G_RG002": -0.5138568611057934,
+     "G_BETA": -0.5404848019076667,
+     "G_GA": -2.6177315764297475
+    }
+   ]
+  ]
+ }
+}

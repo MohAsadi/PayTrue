@@ -1,0 +1,731 @@
+{
+ "storage": [
+  {
+   "astId": 2714,
+   "contract": "src/MigrationModel.sol:MigrationModel",
+   "label": "mandates",
+   "offset": 0,
+   "slot": "0",
+   "type": "t_mapping(t_bytes32,t_struct(Mandate)2639_storage)"
+  },
+  {
+   "astId": 2719,
+   "contract": "src/MigrationModel.sol:MigrationModel",
+   "label": "lineages",
+   "offset": 0,
+   "slot": "1",
+   "type": "t_mapping(t_bytes32,t_struct(Lineage)2652_storage)"
+  },
+  {
+   "astId": 2724,
+   "contract": "src/MigrationModel.sol:MigrationModel",
+   "label": "lineageMandateIds",
+   "offset": 0,
+   "slot": "2",
+   "type": "t_mapping(t_bytes32,t_array(t_bytes32)dyn_storage)"
+  },
+  {
+   "astId": 2732,
+   "contract": "src/MigrationModel.sol:MigrationModel",
+   "label": "live",
+   "offset": 0,
+   "slot": "3",
+   "type": "t_mapping(t_address,t_mapping(t_address,t_mapping(t_address,t_uint32)))"
+  },
+  {
+   "astId": 2739,
+   "contract": "src/MigrationModel.sol:MigrationModel",
+   "label": "exposedList",
+   "offset": 0,
+   "slot": "4",
+   "type": "t_mapping(t_address,t_mapping(t_address,t_array(t_address)dyn_storage))"
+  },
+  {
+   "astId": 2747,
+   "contract": "src/MigrationModel.sol:MigrationModel",
+   "label": "exposedPos",
+   "offset": 0,
+   "slot": "5",
+   "type": "t_mapping(t_address,t_mapping(t_address,t_mapping(t_address,t_uint256)))"
+  },
+  {
+   "astId": 2753,
+   "contract": "src/MigrationModel.sol:MigrationModel",
+   "label": "usedNonce",
+   "offset": 0,
+   "slot": "6",
+   "type": "t_mapping(t_address,t_mapping(t_uint256,t_bool))"
+  },
+  {
+   "astId": 2757,
+   "contract": "src/MigrationModel.sol:MigrationModel",
+   "label": "codeHashOf",
+   "offset": 0,
+   "slot": "7",
+   "type": "t_mapping(t_address,t_bytes32)"
+  },
+  {
+   "astId": 2763,
+   "contract": "src/MigrationModel.sol:MigrationModel",
+   "label": "usedTotal",
+   "offset": 0,
+   "slot": "8",
+   "type": "t_mapping(t_bytes32,t_mapping(t_address,t_uint256))"
+  },
+  {
+   "astId": 2767,
+   "contract": "src/MigrationModel.sol:MigrationModel",
+   "label": "cycleEpoch",
+   "offset": 0,
+   "slot": "9",
+   "type": "t_mapping(t_bytes32,t_uint256)"
+  },
+  {
+   "astId": 2775,
+   "contract": "src/MigrationModel.sol:MigrationModel",
+   "label": "cycleSettled",
+   "offset": 0,
+   "slot": "10",
+   "type": "t_mapping(t_bytes32,t_mapping(t_uint256,t_mapping(t_uint256,t_bool)))"
+  },
+  {
+   "astId": 2779,
+   "contract": "src/MigrationModel.sol:MigrationModel",
+   "label": "cycleCount",
+   "offset": 0,
+   "slot": "11",
+   "type": "t_mapping(t_bytes32,t_uint256)"
+  },
+  {
+   "astId": 2784,
+   "contract": "src/MigrationModel.sol:MigrationModel",
+   "label": "termsStore",
+   "offset": 0,
+   "slot": "12",
+   "type": "t_mapping(t_bytes32,t_struct(Terms)55_storage)"
+  },
+  {
+   "astId": 2788,
+   "contract": "src/MigrationModel.sol:MigrationModel",
+   "label": "termsKnown",
+   "offset": 0,
+   "slot": "13",
+   "type": "t_mapping(t_bytes32,t_bool)"
+  },
+  {
+   "astId": 2793,
+   "contract": "src/MigrationModel.sol:MigrationModel",
+   "label": "pinStore",
+   "offset": 0,
+   "slot": "14",
+   "type": "t_mapping(t_bytes32,t_struct(Pin)8404_storage)"
+  },
+  {
+   "astId": 2797,
+   "contract": "src/MigrationModel.sol:MigrationModel",
+   "label": "pinKnown",
+   "offset": 0,
+   "slot": "15",
+   "type": "t_mapping(t_bytes32,t_bool)"
+  }
+ ],
+ "types": {
+  "t_address": {
+   "encoding": "inplace",
+   "label": "address",
+   "numberOfBytes": "20"
+  },
+  "t_array(t_address)3_storage": {
+   "base": "t_address",
+   "encoding": "inplace",
+   "label": "address[3]",
+   "numberOfBytes": "96"
+  },
+  "t_array(t_address)dyn_storage": {
+   "base": "t_address",
+   "encoding": "dynamic_array",
+   "label": "address[]",
+   "numberOfBytes": "32"
+  },
+  "t_array(t_array(t_uint256)6_storage)3_storage": {
+   "base": "t_array(t_uint256)6_storage",
+   "encoding": "inplace",
+   "label": "uint256[6][3]",
+   "numberOfBytes": "576"
+  },
+  "t_array(t_bytes32)dyn_storage": {
+   "base": "t_bytes32",
+   "encoding": "dynamic_array",
+   "label": "bytes32[]",
+   "numberOfBytes": "32"
+  },
+  "t_array(t_uint256)6_storage": {
+   "base": "t_uint256",
+   "encoding": "inplace",
+   "label": "uint256[6]",
+   "numberOfBytes": "192"
+  },
+  "t_bool": {
+   "encoding": "inplace",
+   "label": "bool",
+   "numberOfBytes": "1"
+  },
+  "t_bytes32": {
+   "encoding": "inplace",
+   "label": "bytes32",
+   "numberOfBytes": "32"
+  },
+  "t_mapping(t_address,t_array(t_address)dyn_storage)": {
+   "encoding": "mapping",
+   "key": "t_address",
+   "label": "mapping(address => address[])",
+   "numberOfBytes": "32",
+   "value": "t_array(t_address)dyn_storage"
+  },
+  "t_mapping(t_address,t_bytes32)": {
+   "encoding": "mapping",
+   "key": "t_address",
+   "label": "mapping(address => bytes32)",
+   "numberOfBytes": "32",
+   "value": "t_bytes32"
+  },
+  "t_mapping(t_address,t_mapping(t_address,t_array(t_address)dyn_storage))": {
+   "encoding": "mapping",
+   "key": "t_address",
+   "label": "mapping(address => mapping(address => address[]))",
+   "numberOfBytes": "32",
+   "value": "t_mapping(t_address,t_array(t_address)dyn_storage)"
+  },
+  "t_mapping(t_address,t_mapping(t_address,t_mapping(t_address,t_uint256)))": {
+   "encoding": "mapping",
+   "key": "t_address",
+   "label": "mapping(address => mapping(address => mapping(address => uint256)))",
+   "numberOfBytes": "32",
+   "value": "t_mapping(t_address,t_mapping(t_address,t_uint256))"
+  },
+  "t_mapping(t_address,t_mapping(t_address,t_mapping(t_address,t_uint32)))": {
+   "encoding": "mapping",
+   "key": "t_address",
+   "label": "mapping(address => mapping(address => mapping(address => uint32)))",
+   "numberOfBytes": "32",
+   "value": "t_mapping(t_address,t_mapping(t_address,t_uint32))"
+  },
+  "t_mapping(t_address,t_mapping(t_address,t_uint256))": {
+   "encoding": "mapping",
+   "key": "t_address",
+   "label": "mapping(address => mapping(address => uint256))",
+   "numberOfBytes": "32",
+   "value": "t_mapping(t_address,t_uint256)"
+  },
+  "t_mapping(t_address,t_mapping(t_address,t_uint32))": {
+   "encoding": "mapping",
+   "key": "t_address",
+   "label": "mapping(address => mapping(address => uint32))",
+   "numberOfBytes": "32",
+   "value": "t_mapping(t_address,t_uint32)"
+  },
+  "t_mapping(t_address,t_mapping(t_uint256,t_bool))": {
+   "encoding": "mapping",
+   "key": "t_address",
+   "label": "mapping(address => mapping(uint256 => bool))",
+   "numberOfBytes": "32",
+   "value": "t_mapping(t_uint256,t_bool)"
+  },
+  "t_mapping(t_address,t_uint256)": {
+   "encoding": "mapping",
+   "key": "t_address",
+   "label": "mapping(address => uint256)",
+   "numberOfBytes": "32",
+   "value": "t_uint256"
+  },
+  "t_mapping(t_address,t_uint32)": {
+   "encoding": "mapping",
+   "key": "t_address",
+   "label": "mapping(address => uint32)",
+   "numberOfBytes": "32",
+   "value": "t_uint32"
+  },
+  "t_mapping(t_bytes32,t_array(t_bytes32)dyn_storage)": {
+   "encoding": "mapping",
+   "key": "t_bytes32",
+   "label": "mapping(bytes32 => bytes32[])",
+   "numberOfBytes": "32",
+   "value": "t_array(t_bytes32)dyn_storage"
+  },
+  "t_mapping(t_bytes32,t_bool)": {
+   "encoding": "mapping",
+   "key": "t_bytes32",
+   "label": "mapping(bytes32 => bool)",
+   "numberOfBytes": "32",
+   "value": "t_bool"
+  },
+  "t_mapping(t_bytes32,t_mapping(t_address,t_uint256))": {
+   "encoding": "mapping",
+   "key": "t_bytes32",
+   "label": "mapping(bytes32 => mapping(address => uint256))",
+   "numberOfBytes": "32",
+   "value": "t_mapping(t_address,t_uint256)"
+  },
+  "t_mapping(t_bytes32,t_mapping(t_uint256,t_mapping(t_uint256,t_bool)))": {
+   "encoding": "mapping",
+   "key": "t_bytes32",
+   "label": "mapping(bytes32 => mapping(uint256 => mapping(uint256 => bool)))",
+   "numberOfBytes": "32",
+   "value": "t_mapping(t_uint256,t_mapping(t_uint256,t_bool))"
+  },
+  "t_mapping(t_bytes32,t_struct(Lineage)2652_storage)": {
+   "encoding": "mapping",
+   "key": "t_bytes32",
+   "label": "mapping(bytes32 => struct MigrationModel.Lineage)",
+   "numberOfBytes": "32",
+   "value": "t_struct(Lineage)2652_storage"
+  },
+  "t_mapping(t_bytes32,t_struct(Mandate)2639_storage)": {
+   "encoding": "mapping",
+   "key": "t_bytes32",
+   "label": "mapping(bytes32 => struct MigrationModel.Mandate)",
+   "numberOfBytes": "32",
+   "value": "t_struct(Mandate)2639_storage"
+  },
+  "t_mapping(t_bytes32,t_struct(Pin)8404_storage)": {
+   "encoding": "mapping",
+   "key": "t_bytes32",
+   "label": "mapping(bytes32 => struct PinModel.Pin)",
+   "numberOfBytes": "32",
+   "value": "t_struct(Pin)8404_storage"
+  },
+  "t_mapping(t_bytes32,t_struct(Terms)55_storage)": {
+   "encoding": "mapping",
+   "key": "t_bytes32",
+   "label": "mapping(bytes32 => struct ContainModel.Terms)",
+   "numberOfBytes": "32",
+   "value": "t_struct(Terms)55_storage"
+  },
+  "t_mapping(t_bytes32,t_uint256)": {
+   "encoding": "mapping",
+   "key": "t_bytes32",
+   "label": "mapping(bytes32 => uint256)",
+   "numberOfBytes": "32",
+   "value": "t_uint256"
+  },
+  "t_mapping(t_uint256,t_bool)": {
+   "encoding": "mapping",
+   "key": "t_uint256",
+   "label": "mapping(uint256 => bool)",
+   "numberOfBytes": "32",
+   "value": "t_bool"
+  },
+  "t_mapping(t_uint256,t_mapping(t_uint256,t_bool))": {
+   "encoding": "mapping",
+   "key": "t_uint256",
+   "label": "mapping(uint256 => mapping(uint256 => bool))",
+   "numberOfBytes": "32",
+   "value": "t_mapping(t_uint256,t_bool)"
+  },
+  "t_struct(Lineage)2652_storage": {
+   "encoding": "inplace",
+   "label": "struct MigrationModel.Lineage",
+   "members": [
+    {
+     "astId": 2641,
+     "contract": "src/MigrationModel.sol:MigrationModel",
+     "label": "customer",
+     "offset": 0,
+     "slot": "0",
+     "type": "t_address"
+    },
+    {
+     "astId": 2643,
+     "contract": "src/MigrationModel.sol:MigrationModel",
+     "label": "activeMandateId",
+     "offset": 0,
+     "slot": "1",
+     "type": "t_bytes32"
+    },
+    {
+     "astId": 2645,
+     "contract": "src/MigrationModel.sol:MigrationModel",
+     "label": "generation",
+     "offset": 0,
+     "slot": "2",
+     "type": "t_uint32"
+    },
+    {
+     "astId": 2647,
+     "contract": "src/MigrationModel.sol:MigrationModel",
+     "label": "pinVersion",
+     "offset": 4,
+     "slot": "2",
+     "type": "t_uint32"
+    },
+    {
+     "astId": 2649,
+     "contract": "src/MigrationModel.sol:MigrationModel",
+     "label": "terminated",
+     "offset": 8,
+     "slot": "2",
+     "type": "t_bool"
+    },
+    {
+     "astId": 2651,
+     "contract": "src/MigrationModel.sol:MigrationModel",
+     "label": "exists",
+     "offset": 9,
+     "slot": "2",
+     "type": "t_bool"
+    }
+   ],
+   "numberOfBytes": "96"
+  },
+  "t_struct(Mandate)2639_storage": {
+   "encoding": "inplace",
+   "label": "struct MigrationModel.Mandate",
+   "members": [
+    {
+     "astId": 2614,
+     "contract": "src/MigrationModel.sol:MigrationModel",
+     "label": "id",
+     "offset": 0,
+     "slot": "0",
+     "type": "t_bytes32"
+    },
+    {
+     "astId": 2616,
+     "contract": "src/MigrationModel.sol:MigrationModel",
+     "label": "lineageId",
+     "offset": 0,
+     "slot": "1",
+     "type": "t_bytes32"
+    },
+    {
+     "astId": 2618,
+     "contract": "src/MigrationModel.sol:MigrationModel",
+     "label": "predecessorId",
+     "offset": 0,
+     "slot": "2",
+     "type": "t_bytes32"
+    },
+    {
+     "astId": 2620,
+     "contract": "src/MigrationModel.sol:MigrationModel",
+     "label": "termsKey",
+     "offset": 0,
+     "slot": "3",
+     "type": "t_bytes32"
+    },
+    {
+     "astId": 2622,
+     "contract": "src/MigrationModel.sol:MigrationModel",
+     "label": "pinKey",
+     "offset": 0,
+     "slot": "4",
+     "type": "t_bytes32"
+    },
+    {
+     "astId": 2624,
+     "contract": "src/MigrationModel.sol:MigrationModel",
+     "label": "parentSnapshotHash",
+     "offset": 0,
+     "slot": "5",
+     "type": "t_bytes32"
+    },
+    {
+     "astId": 2626,
+     "contract": "src/MigrationModel.sol:MigrationModel",
+     "label": "customer",
+     "offset": 0,
+     "slot": "6",
+     "type": "t_address"
+    },
+    {
+     "astId": 2628,
+     "contract": "src/MigrationModel.sol:MigrationModel",
+     "label": "router",
+     "offset": 0,
+     "slot": "7",
+     "type": "t_address"
+    },
+    {
+     "astId": 2630,
+     "contract": "src/MigrationModel.sol:MigrationModel",
+     "label": "generation",
+     "offset": 20,
+     "slot": "7",
+     "type": "t_uint32"
+    },
+    {
+     "astId": 2632,
+     "contract": "src/MigrationModel.sol:MigrationModel",
+     "label": "status",
+     "offset": 24,
+     "slot": "7",
+     "type": "t_uint8"
+    },
+    {
+     "astId": 2634,
+     "contract": "src/MigrationModel.sol:MigrationModel",
+     "label": "reason",
+     "offset": 25,
+     "slot": "7",
+     "type": "t_uint8"
+    },
+    {
+     "astId": 2636,
+     "contract": "src/MigrationModel.sol:MigrationModel",
+     "label": "pause",
+     "offset": 26,
+     "slot": "7",
+     "type": "t_uint8"
+    },
+    {
+     "astId": 2638,
+     "contract": "src/MigrationModel.sol:MigrationModel",
+     "label": "retired",
+     "offset": 27,
+     "slot": "7",
+     "type": "t_bool"
+    }
+   ],
+   "numberOfBytes": "256"
+  },
+  "t_struct(Pin)8404_storage": {
+   "encoding": "inplace",
+   "label": "struct PinModel.Pin",
+   "members": [
+    {
+     "astId": 8391,
+     "contract": "src/MigrationModel.sol:MigrationModel",
+     "label": "accountMode",
+     "offset": 0,
+     "slot": "0",
+     "type": "t_uint8"
+    },
+    {
+     "astId": 8393,
+     "contract": "src/MigrationModel.sol:MigrationModel",
+     "label": "accountCodeHash",
+     "offset": 0,
+     "slot": "1",
+     "type": "t_bytes32"
+    },
+    {
+     "astId": 8395,
+     "contract": "src/MigrationModel.sol:MigrationModel",
+     "label": "delegate",
+     "offset": 0,
+     "slot": "2",
+     "type": "t_address"
+    },
+    {
+     "astId": 8397,
+     "contract": "src/MigrationModel.sol:MigrationModel",
+     "label": "delegateCodeHash",
+     "offset": 0,
+     "slot": "3",
+     "type": "t_bytes32"
+    },
+    {
+     "astId": 8399,
+     "contract": "src/MigrationModel.sol:MigrationModel",
+     "label": "implementationFamily",
+     "offset": 0,
+     "slot": "4",
+     "type": "t_bytes32"
+    },
+    {
+     "astId": 8401,
+     "contract": "src/MigrationModel.sol:MigrationModel",
+     "label": "pinVersion",
+     "offset": 0,
+     "slot": "5",
+     "type": "t_uint32"
+    },
+    {
+     "astId": 8403,
+     "contract": "src/MigrationModel.sol:MigrationModel",
+     "label": "signatureMode",
+     "offset": 4,
+     "slot": "5",
+     "type": "t_uint8"
+    }
+   ],
+   "numberOfBytes": "192"
+  },
+  "t_struct(Terms)55_storage": {
+   "encoding": "inplace",
+   "label": "struct ContainModel.Terms",
+   "members": [
+    {
+     "astId": 12,
+     "contract": "src/MigrationModel.sol:MigrationModel",
+     "label": "expiresAt",
+     "offset": 0,
+     "slot": "0",
+     "type": "t_uint64"
+    },
+    {
+     "astId": 14,
+     "contract": "src/MigrationModel.sol:MigrationModel",
+     "label": "periodSeconds",
+     "offset": 8,
+     "slot": "0",
+     "type": "t_uint64"
+    },
+    {
+     "astId": 16,
+     "contract": "src/MigrationModel.sol:MigrationModel",
+     "label": "anchorStartsAt",
+     "offset": 16,
+     "slot": "0",
+     "type": "t_uint64"
+    },
+    {
+     "astId": 18,
+     "contract": "src/MigrationModel.sol:MigrationModel",
+     "label": "maxQuoteAge",
+     "offset": 24,
+     "slot": "0",
+     "type": "t_uint64"
+    },
+    {
+     "astId": 20,
+     "contract": "src/MigrationModel.sol:MigrationModel",
+     "label": "minInterval",
+     "offset": 0,
+     "slot": "1",
+     "type": "t_uint64"
+    },
+    {
+     "astId": 22,
+     "contract": "src/MigrationModel.sol:MigrationModel",
+     "label": "maxChargesPerPeriod",
+     "offset": 8,
+     "slot": "1",
+     "type": "t_uint32"
+    },
+    {
+     "astId": 24,
+     "contract": "src/MigrationModel.sol:MigrationModel",
+     "label": "currency",
+     "offset": 12,
+     "slot": "1",
+     "type": "t_uint16"
+    },
+    {
+     "astId": 26,
+     "contract": "src/MigrationModel.sol:MigrationModel",
+     "label": "maxFeeBps",
+     "offset": 14,
+     "slot": "1",
+     "type": "t_uint16"
+    },
+    {
+     "astId": 28,
+     "contract": "src/MigrationModel.sol:MigrationModel",
+     "label": "nTokens",
+     "offset": 16,
+     "slot": "1",
+     "type": "t_uint8"
+    },
+    {
+     "astId": 30,
+     "contract": "src/MigrationModel.sol:MigrationModel",
+     "label": "merchantId",
+     "offset": 0,
+     "slot": "2",
+     "type": "t_bytes32"
+    },
+    {
+     "astId": 32,
+     "contract": "src/MigrationModel.sol:MigrationModel",
+     "label": "recipientPolicy",
+     "offset": 0,
+     "slot": "3",
+     "type": "t_bytes32"
+    },
+    {
+     "astId": 34,
+     "contract": "src/MigrationModel.sol:MigrationModel",
+     "label": "subscriptionRef",
+     "offset": 0,
+     "slot": "4",
+     "type": "t_bytes32"
+    },
+    {
+     "astId": 36,
+     "contract": "src/MigrationModel.sol:MigrationModel",
+     "label": "extensionsHash",
+     "offset": 0,
+     "slot": "5",
+     "type": "t_bytes32"
+    },
+    {
+     "astId": 40,
+     "contract": "src/MigrationModel.sol:MigrationModel",
+     "label": "tokens",
+     "offset": 0,
+     "slot": "6",
+     "type": "t_array(t_address)3_storage"
+    },
+    {
+     "astId": 46,
+     "contract": "src/MigrationModel.sol:MigrationModel",
+     "label": "caps",
+     "offset": 0,
+     "slot": "9",
+     "type": "t_array(t_array(t_uint256)6_storage)3_storage"
+    },
+    {
+     "astId": 50,
+     "contract": "src/MigrationModel.sol:MigrationModel",
+     "label": "fiat",
+     "offset": 0,
+     "slot": "27",
+     "type": "t_array(t_uint256)6_storage"
+    },
+    {
+     "astId": 52,
+     "contract": "src/MigrationModel.sol:MigrationModel",
+     "label": "boundsMin",
+     "offset": 0,
+     "slot": "33",
+     "type": "t_uint256"
+    },
+    {
+     "astId": 54,
+     "contract": "src/MigrationModel.sol:MigrationModel",
+     "label": "boundsMax",
+     "offset": 0,
+     "slot": "34",
+     "type": "t_uint256"
+    }
+   ],
+   "numberOfBytes": "1120"
+  },
+  "t_uint16": {
+   "encoding": "inplace",
+   "label": "uint16",
+   "numberOfBytes": "2"
+  },
+  "t_uint256": {
+   "encoding": "inplace",
+   "label": "uint256",
+   "numberOfBytes": "32"
+  },
+  "t_uint32": {
+   "encoding": "inplace",
+   "label": "uint32",
+   "numberOfBytes": "4"
+  },
+  "t_uint64": {
+   "encoding": "inplace",
+   "label": "uint64",
+   "numberOfBytes": "8"
+  },
+  "t_uint8": {
+   "encoding": "inplace",
+   "label": "uint8",
+   "numberOfBytes": "1"
+  }
+ }
+}

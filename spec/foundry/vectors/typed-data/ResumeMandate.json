@@ -1,0 +1,53 @@
+{
+ "types": {
+  "EIP712Domain": [
+   {
+    "name": "name",
+    "type": "string"
+   },
+   {
+    "name": "version",
+    "type": "string"
+   },
+   {
+    "name": "chainId",
+    "type": "uint256"
+   },
+   {
+    "name": "verifyingContract",
+    "type": "address"
+   }
+  ],
+  "ResumeMandate": [
+   {
+    "name": "customer",
+    "type": "address"
+   },
+   {
+    "name": "mandateId",
+    "type": "bytes32"
+   },
+   {
+    "name": "deadline",
+    "type": "uint64"
+   },
+   {
+    "name": "nonce",
+    "type": "uint256"
+   }
+  ]
+ },
+ "primaryType": "ResumeMandate",
+ "domain": {
+  "name": "FastPay Mandates",
+  "version": "1",
+  "chainId": "84532",
+  "verifyingContract": "0x2222222222222222222222222222222222222222"
+ },
+ "message": {
+  "customer": "0x4444444444444444444444444444444444444444",
+  "mandateId": "0x1010101010101010101010101010101010101010101010101010101010101010",
+  "deadline": "1800003600",
+  "nonce": "11"
+ }
+}

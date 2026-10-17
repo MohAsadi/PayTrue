@@ -1,0 +1,310 @@
+{
+ "schema": 1,
+ "scope": "Findings made while implementing and testing the reference model, the EIP-712 types and the Permit2 rebuild (specification 0.5.0). A finding is something the implementation showed; it is not a decision. Status RESOLVED_IN_MODEL means the reference model and its tests were changed; it does not mean the specification text or the production design was approved.",
+ "findings": [
+  {
+   "id": "F-01",
+   "kind": "HARNESS",
+   "status": "RESOLVED_IN_MODEL",
+   "title": "The via-IR optimizer moves block.timestamp across vm.warp",
+   "what": "Forge 1.8.5 with via-IR may sink or hoist `block.timestamp` across a `vm.warp`; a test that read the timestamp into a local before warping saw the later value (TimestampBoundary `test_Registry_NoticeSunsetRetentionBoundaries` failed with 'next call did not revert as expected').",
+   "resolution": "Every test reads the clock with `vm.getBlockTimestamp()`; the signer-set test library has its own Vm handle. No contract is affected: the model reads `block.timestamp` inside the contracts.",
+   "evidence": [
+    "foundry/test/TimestampBoundary.t.sol",
+    "evidence/implementation/logs/forge-test-final.json"
+   ],
+   "specImpact": "none"
+  },
+  {
+   "id": "F-02",
+   "kind": "HARNESS",
+   "status": "RESOLVED_IN_MODEL",
+   "title": "Unbounded fuzz seeds overflowed the oracle arithmetic",
+   "what": "Three fuzz tests multiplied a 256-bit seed; a reviewer found the overflow before a run did.",
+   "resolution": "`seed = bound(seed, 0, type(uint128).max)` in testFuzz_ContainedMatchesOracle, testFuzz_LemmaM and testFuzz_LemmaM_Tightened.",
+   "evidence": [
+    "foundry/test/MigrationFuzz.t.sol"
+   ],
+   "specImpact": "none"
+  },
+  {
+   "id": "F-03",
+   "kind": "HARNESS",
+   "status": "RESOLVED_IN_MODEL",
+   "title": "The mutation suite exhausted the EVM memory limit in one test",
+   "what": "Killing all 151 mutants in one test failed with MemoryLimitOOG: Solidity never frees memory inside a call and every scenario re-parses the exported JSON.",
+   "resolution": "The suite runs in ten tests of sixteen mutants and `memory_limit` is raised; `test_ChunksCoverEveryMutant` proves the chunks cover every mutant.",
+   "evidence": [
+    "foundry/test/MigrationMutation.t.sol",
+    "foundry/foundry.toml"
+   ],
+   "specImpact": "none"
+  },
+  {
+   "id": "F-04",
+   "kind": "CONFLICT",
+   "status": "RESOLVED_IN_MODEL",
+   "title": "Type widths of the model were wider than the documented ones",
+   "what": "Document 11 section 3 gives maxChargesPerPeriod as uint16, minIntervalSeconds as uint32, maxQuoteAgeSeconds as uint32 and the fiat caps as uint64. The reference model used uint32, uint64, uint64 and uint256, and `Auth.deadline` is uint256 while the typed data says uint64. A value above the documented width was accepted by the model and could not exist on chain.",
+   "resolution": "The typed data (eip712/types.json) uses the documented widths; `TermsShape` (ContainModel.sol) refuses terms that break them (reasons WIDTH_CHARGES, WIDTH_INTERVAL, WIDTH_QUOTE_AGE, WIDTH_FIAT) and any terms that are not in canonical form (token count 1..3, strictly ascending non-zero tokens, empty unused slots); `activate` and `activateSuccessor` call it first. The maximum of every width is accepted and one more is refused (LoopBounds.t.sol). The `deadline` field stays uint256 in the model's Auth struct and is compared with block.timestamp; the signed field is uint64: the production contract takes the typed-data width.",
+   "evidence": [
+    "foundry/src/ContainModel.sol (TermsShape)",
+    "foundry/test/LoopBounds.t.sol",
+    "eip712/types.json"
+   ],
+   "specImpact": "none if the documented widths stand; the widths are part of the frozen type strings"
+  },
+  {
+   "id": "F-05",
+   "kind": "DEFECT",
+   "status": "RESOLVED_IN_MODEL",
+   "title": "Three loops could grow without a bound on an exit or emergency path",
+   "what": "(a) The exposure index removed a token by scanning the exposure list (bounded by PC-18 only through predicate X2). (b) RegistryModel.liveCount scanned every router ever proposed in the group, and it is called by router activation, which an emergency replacement needs. (c) proposeSignerSet and activateSignerSet looped over a member list of any length; a very large set could make the activation of a replacement set run out of gas, which would block an emergency rotation (removal and stop have no loop and were not blocked).",
+   "resolution": "(a) A 1-based position map makes insertion and swap-and-pop removal O(1); the membership test of X2 is O(tokens). (b) `liveCount` is a counter maintained by the single state setter; the scan remains as `liveCountScan`, an oracle that the invariant `invariant_RegistryLiveCounterEqualsScan` and a fuzz test compare with the counter after every operation. (c) `MAX_SIGNERS_PER_SET = 16`: a larger set is refused before any loop (TooManySigners). The constant is NEW and has no configuration record: PC-19 must be created, with an owner, a range and approval, before freeze.",
+   "evidence": [
+    "evidence/implementation/loop-audit.json",
+    "foundry/test/LoopBounds.t.sol",
+    "foundry/src/MigrationModel.sol",
+    "foundry/src/RegistryModel.sol",
+    "foundry/src/SignerSetModel.sol"
+   ],
+   "specImpact": "new configuration record PC-19 (MAX_SIGNERS_PER_SET) is needed; document 12 section 5.3.1 may now say that the exposure index is O(1)"
+  },
+  {
+   "id": "F-06",
+   "kind": "CONFLICT",
+   "status": "RESOLVED_IN_CONTRACTS",
+   "title": "The implemented snapshot hash does not cover everything that document 12 lists",
+   "what": "Document 12 section 5.3.2 lists customer, anchorStartsAt and boundsVersion in the static terms that `termsSnapshotHash` covers. The encoding in tools/eip712_vectors.py and in ContainModel.snapshotHash (25 words) does not hash them. customer and anchorStartsAt cannot differ for one lineage (the authorization names the customer, and the anchor is a lineage constant); boundsVersion is a label of the min and max prices, which are hashed. The security effect found is small; the text and the code disagree.",
+   "resolution": "Option 2, as the corrective instruction asked: `customer`, `anchorStartsAt` and `boundsVersion` are hashed. The snapshot is now the 26 words of `snapshotEncoding` in eip712/types.json, the single source; the Python model, the Solidity reference model, the generated library of the contracts and the TypeScript encoder produce the same hash on the golden vector, and each of the 26 words moves the hash (mutation check). No ADR showed any of the three to be unnecessary (ADR-020). The tag of the snapshot is unchanged, so it is still a frozen item once FG-14 is re-recorded; that and the approval of the types file (condition C-11) are human acts.",
+   "evidence": [
+    "eip712/types.json (snapshotEncoding)",
+    "tools/eip712_vectors.py snapshot_hash",
+    "foundry/test/TermsHashParity.t.sol",
+    "contracts/test/Differential.t.sol",
+    "contracts/test/Successor.t.sol",
+    "eip712/test-eip712.ts"
+   ],
+   "specImpact": "document 12 section 5.3.2 now states the 26 words; FG-14 must be re-recorded (freeze_fingerprints.py --write) and the types file approved (C-11)"
+  },
+  {
+   "id": "F-07",
+   "kind": "CONFLICT",
+   "status": "RESOLVED_IN_CONTRACTS",
+   "title": "The cap table of the snapshot hash is in a different order from the typed data",
+   "what": "The snapshot hash words the caps of a token as perPaymentMax, totalMax, dayMax, weekMax, thirtyDayMax, periodMax; the typed data TokenTerms lists perPaymentMax, dayMax, weekMax, thirtyDayMax, periodMax, totalMax (the order of document 12 section 5.3.2). Both are internally consistent; a second implementation written from the document would produce a different snapshot hash.",
+   "resolution": "The cap table of the snapshot is hashed in the typed order (perPayment, day, week, thirtyDay, period, total) in the Python model, the Solidity model and the contracts; the model's internal arrays keep their own order and are converted at the boundary (`ContainModel.toTyped`). The hashes agree on nine exported cases (TH_00 to TH_08) in the Python model, the Solidity model and the actual contracts.",
+   "evidence": [
+    "eip712/types.json (snapshotEncoding)",
+    "foundry/test/TermsHashParity.t.sol",
+    "contracts/test/Differential.t.sol"
+   ],
+   "specImpact": "none beyond F-06"
+  },
+  {
+   "id": "F-08",
+   "kind": "DOCUMENT",
+   "status": "RESOLVED_IN_DOCUMENT",
+   "title": "Document 11 still described the pin as a bytes32",
+   "what": "Document 11 section 3 listed `accountPin bytes32 ... PIN_OK(EXTCODEHASH(customer), accountPin)`, the pre-0.5 form.",
+   "resolution": "Corrected to the seven-field AccountPin struct and its hash.",
+   "evidence": [
+    "11-dual-cap-model.md section 3"
+   ],
+   "specImpact": "none (the 0.5 text of document 17 governs)"
+  },
+  {
+   "id": "F-09",
+   "kind": "CONFLICT",
+   "status": "RESOLVED_IN_CONTRACTS",
+   "title": "Price bounds: per (token, currency) in document 11, one pair per mandate in the model and in the snapshot",
+   "what": "Document 11 section 3 says the bounds snapshot holds [minPriceE18, maxPriceE18] per (token, currency); the model, the snapshot of document 12 and the typed data `FiatTerms` carry one pair and a boundsVersion per mandate. A mandate with two tokens would need two bands if the tokens are priced differently.",
+   "resolution": "Bounds are a versioned token-currency registry: `TokenPolicyRegistry.publishBounds` appends a version per (token, currency) with a width of at most MAX_BAND_WIDTH_BPS (PC-07); a mandate pins the invoice currency and a `boundsVersion` and carries no price pair; Q18 uses the intersection of the pinned band and the current band; K.6 asks for the same bounds version; a pinned version that was never published can never be charged against a fiat cap. ADR-020.",
+   "evidence": [
+    "eip712/types.json (FiatTerms)",
+    "foundry/test/BoundsVersion.t.sol",
+    "contracts/test/Quote.t.sol",
+    "contracts/src/TokenPolicyRegistry.sol",
+    "06-initial-architecture.md"
+   ],
+   "specImpact": "documents 11 and 12 and the type string of FiatTerms changed (PC-09 regenerated); the planner must show the bounds version that a consent pins"
+  },
+  {
+   "id": "F-10",
+   "kind": "VECTOR",
+   "status": "RESOLVED_IN_VECTORS",
+   "title": "The PriceQuote vector of document 11 cannot detect a swap of two fields",
+   "what": "In the vector of document 11 section 4.6, issuedAt equals validAfter (1,800,000,000), so an implementation that swapped the two fields would still reproduce the digest.",
+   "resolution": "The golden vectors of eip712/golden-vectors.json give every field of one type a distinct value (the generator refuses a vector otherwise) and use validAfter = issuedAt + 1. The vector of document 11 is still reproduced by the generic encoder, unchanged. Recommendation: change the vector in document 11 (this changes fingerprint FG-11).",
+   "evidence": [
+    "tools/eip712_types.py assert_distinct_leaves",
+    "eip712/golden-vectors.json"
+   ],
+   "specImpact": "optional edit of the vector of 11 section 4.6"
+  },
+  {
+   "id": "F-11",
+   "kind": "DESIGN",
+   "status": "RESOLVED_IN_MODEL",
+   "title": "Loops over history exist only in oracles, and the audit enforces that",
+   "what": "`authRouter` (walks every generation of a lineage) and `liveCountScan` (every router ever proposed) are unbounded by design: they are the executable definitions of AuthRouters(L) and of the live count. They are views for the tests.",
+   "resolution": "tools/loop_audit.py requires every one of the 40 loops of the sources to carry a `loop-bound` annotation naming its bound, and fails if a loop without a constant bound is reachable from a state-changing function. The same rule is a requirement for the production contracts.",
+   "evidence": [
+    "evidence/implementation/loop-audit.json",
+    "tools/loop_audit.py"
+   ],
+   "specImpact": "requirement for the production contracts: the same annotation and the same audit"
+  },
+  {
+   "id": "F-12",
+   "kind": "GAS",
+   "status": "RESOLVED_IN_CONTRACTS",
+   "title": "Storing the full terms record is expensive: it dominates the cost of a successor and of a reduction",
+   "what": "The model stores the terms of a mandate as a record of about twenty-five slots. Measured in the model (LoopBounds.t.sol, Foundry 1.8.5): a reduction costs 535,925 gas; an EMERGENCY successor with three tokens costs on average 591,740 gas in a batch of ten (5,917,402 in total) and 571,447 gas in a batch of 100 (57,144,760 in total, which does not fit the 30,000,000 gas that this repository assumes as the lowest block gas limit of the launch chains: an assumption, not a recorded fact). By contrast a revoke costs between 148,153 and 221,688 gas depending on the state and an emergency migration with 150 exposed tokens 1,885,666 gas. (The first run of the model measured a batch of 50 at 28.7 million gas; the constant has since been changed to 10, so that figure is no longer reproduced.)",
+   "resolution": "(1) The contracts store the hash of the terms and only the data that an exit needs (expiry, tokens): a successor is a handful of slots, and the events carry the full terms (an indexer rebuilds the terms from them). (2) The gas of the plan step was measured on the actual contracts with every account and slot cold: a worst-case successor (three tokens out of eight exposed on each router) costs about 545,000 to 605,000 gas and about 4,000 bytes of calldata, so a step of 50 costs about 30 million gas (the marginal cost per entry of two recorded steps extrapolates to 29.7 million; a run with the constant at 50 measured 30.5 million before the constant was changed, a figure that no file keeps) and does not fit; PC-04 MAX_BATCH is provisionally 10 (about 6.5 million gas, 39% of 2^24) and the migration is a bounded, resumable plan (ADR-022). (3) Measured on the EVM schedule of the compiler's target, also on the forks of the three chains (contracts-fork-runs.json), but NOT on the chains' own gas accounting: Arbitrum's is not modelled and the per-transaction cap of each chain is an assumption (EIP-7825, 2^24).",
+   "evidence": [
+    "contracts/test/Gas.t.sol",
+    "contracts/test/Queue.t.sol",
+    "evidence/implementation/contracts-test-run.json",
+    "evidence/implementation/contracts-fork-runs.json",
+    "config/pc_records.json"
+   ],
+   "specImpact": "PC-04 re-measured and changed to 10 (range 4 to 20); document 12 sections 5.3.1 and 13 say plan steps; RP-19 still needs the chains' own limits"
+  },
+  {
+   "id": "F-13",
+   "kind": "PERMIT2",
+   "status": "ESTABLISHED",
+   "title": "Permit2 does not bind the destination of a witness transfer: shown on the real code",
+   "what": "Document 10 section 2.1 says transferDetails.to is not part of the signature. With a valid signature the spender can name any `to` (test_Witness_Single_DestinationIsNotBoundByPermit2, on the Permit2 built from the pinned commit and on the three real deployments).",
+   "resolution": "The router must enforce `to == intent.recipient` (and the fee recipient) itself; I-PO-WITNESS must test it on the router, which does not exist yet.",
+   "evidence": [
+    "foundry/test/helpers/Permit2Evidence.sol"
+   ],
+   "specImpact": "none (confirms the text)"
+  },
+  {
+   "id": "F-14",
+   "kind": "REPRODUCIBILITY",
+   "status": "ESTABLISHED",
+   "title": "The Permit2 creation code depends on the whole compile unit of the repository",
+   "what": "Compiling only src/ with the recorded settings gives another creation code and another CREATE2 address (this was run and the address differed). Building the pinned commit as the repository builds itself, the compile unit of 77 files (src, test, script and the libraries), gives the canonical address. So the bytes depend on files that no deployed contract imports. The probable cause is that solc numbers AST nodes across the whole compile unit (the two immutables have ids 28192 and 28194) and a via-IR build is sensitive to that numbering; this explanation is a hypothesis, the dependency on the compile unit is observed.",
+   "resolution": "The rebuild procedure is `forge build` of the whole pinned repository with every dependency of its submodule graph (tools/permit2_rebuild.py); the evidence records the compile unit and its hashes. Every dependency in the report is therefore needed to reproduce the bytes, even those whose role is 'test compilation'. A Permit2 reproduction claim that compiles only src/ is wrong.",
+   "evidence": [
+    "evidence/permit2/rebuild.json"
+   ],
+   "specImpact": "wording of the rebuild step in document 16 section 5"
+  },
+  {
+   "id": "F-15",
+   "kind": "SPEC",
+   "status": "RESOLVED_IN_DOCUMENT",
+   "title": "Invariant I-MIG-8 mixed two layers",
+   "what": "I-MIG-8 was worded as 'at most one router can pull', which mixes executable Layer 3 authority (one router per lineage) with Layer 2 Permit2 allowances (shared, may coexist on several routers).",
+   "resolution": "Document 12 section 5.5 defines Exec3(L) and AuthRouters(L) with AuthRouters(L) a subset of Exec3(L) and |Exec3(L)| <= 1; Layer 2 allowances are expressly outside the claim. Tests: Exec3.t.sol and invariant_I_MIG_8_Exec3AtMostOneRouterPerLineage.",
+   "evidence": [
+    "12-router-lifecycle-and-migration.md section 5.5",
+    "foundry/test/Exec3.t.sol"
+   ],
+   "specImpact": "none"
+  },
+  {
+   "id": "F-16",
+   "kind": "DEFECT",
+   "status": "RESOLVED_IN_MODEL",
+   "title": "The model's consume pulled through Permit2 before it wrote its effects: the opposite of document 11's order",
+   "what": "Document 11 section 5 orders the charge as step 7 (effects: usage counters, settled cycle) and then step 8 (interactions: the Permit2 pull), and calls this checks-effects-interactions. The reference model did the pull first and wrote the effects afterwards (its comment said 'effects only after the pull succeeded', which has no benefit: a failed pull reverts the whole call). `forge lint` reported it (reentrancy-no-eth). Permit2 spends the allowance and then calls the token, with no reentrancy guard of its own (16 PR-14), so a token with a callback runs between the pull and the effects: a test arms such a callback in the Permit2 mock and shows that, with the old order, a nested charge of the SAME cycle succeeds (20 pulled for one cycle while the counter says 10) and a nested charge pushes the pulls to 100 under a total cap of 60.",
+   "resolution": "`consume` now writes the effects first and pulls last, as document 11 says. Reentrancy.t.sol runs the same callbacks against the new order (the nested charge reverts PaymentAlreadySettled or TokenTotalCapExceeded, and a failed pull leaves no effect) and against a subclass that keeps the old order (the double charge happens). In the production contracts the manager authenticates msg.sender as the router, so exploiting the old order also needed the router to be re-entered; the router needs its own reentrancy lock (TB-08) and the manager keeps the order of 11 §5 as defence in depth.",
+   "evidence": [
+    "foundry/test/Reentrancy.t.sol",
+    "foundry/src/MigrationModel.sol consume",
+    "11-dual-cap-model.md section 5 steps 7 and 8"
+   ],
+   "specImpact": "none: the specification was right; the model is corrected. Requirement for the production manager and router: the same order, plus a reentrancy lock on the router"
+  },
+  {
+   "id": "F-17",
+   "kind": "SIZE",
+   "status": "RESOLVED_IN_CONTRACTS",
+   "title": "The first complete manager measured 34,067 bytes: above the 24,576-byte contract size limit",
+   "what": "The reference model of the manager measured 25,900 bytes (via-IR, 20 runs), above EIP-170. The first complete manager written as a real contract, with the frozen settings (0.8.24, cancun, optimizer 200 runs, no via-IR), measured 34,067 bytes: the signature entry points alone were 8,000 bytes, the calldata decoders of the terms and the events the rest.",
+   "resolution": "ADR-021: the manager is split into MandateManager (21,357 bytes: the only writer of mandate state), UsageLedger (4,511), SuccessorValidator (13,059, stateless, STATICCALL), MandateGateway (16,399, signatures) and MigrationQueue (6,895); no delegatecall, no generic call, no proxy. Every runtime is at most 22,000 bytes (the largest is 21,357, 3,219 under EIP-170) with the settings frozen in contracts/frozen-settings.json, and the build that forge made is byte-identical to the one compiled by tools/contracts_report.py. The cross-contract invariants stay where the write is, and a manager with a validator that accepts everything still refuses what the manager owns (contracts/test/ManagerAlone.t.sol).",
+   "evidence": [
+    "contracts/frozen-settings.json",
+    "evidence/implementation/contracts-report.json",
+    "contracts/test/Deployment.t.sol",
+    "contracts/test/ManagerAlone.t.sol",
+    "06-initial-architecture.md"
+   ],
+   "specImpact": "the contract set of document 06 section 4 and the audit scope of document 16 section 8.1 changed (four new contracts, one registry split)"
+  },
+  {
+   "id": "F-18",
+   "kind": "SPEC",
+   "status": "OPEN_DECISION",
+   "title": "`recipientPolicy` has no defined meaning",
+   "what": "The mandate carries a `recipientPolicy` (a bytes32 lineage constant, part of K.2 and of the snapshot), but no document says what value means what. The contracts treat it as opaque: it is bound by hash and compared in containment, and the router always pays the recipient that the merchant registry holds at charge time (I-RECIPIENT).",
+   "resolution": "Not changed. A decision is needed: either define the values (for example 0 = the registry's current recipient, another value = a recipient pinned in the mandate) or remove the field from v1.0.",
+   "evidence": [
+    "eip712/types.json (MandateTerms)",
+    "contracts/src/PaymentRouter.sol",
+    "11-dual-cap-model.md"
+   ],
+   "specImpact": "decision for the Principal Architect and the Payments PM before the type strings are approved (C-11)"
+  },
+  {
+   "id": "F-19",
+   "kind": "SPEC",
+   "status": "OPEN_DECISION",
+   "title": "The charge request has no typed message, so the merchant's charge signer verifies nothing",
+   "what": "[06 §4](06-initial-architecture.md) lists `setChargeSigner` in the merchant registry and [11 §4.8](11-dual-cap-model.md) guard G11 speaks of a signed charge request, but eip712/types.json has no charge-request message. The contracts store the charge signer and no contract reads it: a charge is authorized by the mandate, the executor registry and the quote, not by the merchant's signature.",
+   "resolution": "Not built. Either add the typed message (and the router check) or remove the charge signer from the merchant registry; until then it is dead state.",
+   "evidence": [
+    "contracts/src/MerchantRegistry.sol",
+    "eip712/types.json",
+    "11-dual-cap-model.md"
+   ],
+   "specImpact": "decision before C-11; adding a message changes the frozen set of type strings"
+  },
+  {
+   "id": "F-20",
+   "kind": "SPEC",
+   "status": "RESOLVED_IN_DOCUMENT",
+   "title": "Quote check Q3 cannot fail on its own",
+   "what": "Q3 (the quote's domain is this chain and this router) is built into the digest: a quote for another domain recovers another address and fails Q1 with `QuoteSignerUnauthorized`; `QuoteDomainMismatch` cannot be raised.",
+   "resolution": "Document 11 now says so, next to the table of checks; the test shows the behaviour.",
+   "evidence": [
+    "11-dual-cap-model.md",
+    "contracts/test/Quote.t.sol"
+   ],
+   "specImpact": "none beyond the note"
+  },
+  {
+   "id": "F-21",
+   "kind": "SPEC",
+   "status": "OPEN_DECISION",
+   "title": "No rule says that an activation needs a future expiry",
+   "what": "`activate` accepts terms whose `expiresAt` is already past (or before `anchorStartsAt`). Such a mandate can never be consumed, but it counts in the exposure index until someone calls `retire`, and it counts toward the bound of eight tokens per router. No document states a rule either way, and the model accepts the same terms.",
+   "resolution": "Not changed. A one-line rule (`expiresAt > now` and `expiresAt > anchorStartsAt`) would remove the case; it is a change of the activation predicates and so a decision.",
+   "evidence": [
+    "contracts/src/MandateManager.sol",
+    "12-router-lifecycle-and-migration.md"
+   ],
+   "specImpact": "decision for the Principal Architect; a rule needs a vector and a type-level test"
+  },
+  {
+   "id": "F-22",
+   "kind": "DESIGN",
+   "status": "RESOLVED_IN_CONTRACTS",
+   "title": "Signatures name the manager but the gateway verifies them",
+   "what": "After the split (ADR-021) the contract that checks a customer's signature is `MandateGateway`, while the signed domain of types.json names `MandateManager` as the verifying contract.",
+   "resolution": "Kept: the domain names the contract that holds the state, so the signature binds to the state and survives a replacement of the gateway. The gateway computes the domain separator from the manager's address; the test shows that a signature for the gateway as verifying contract is refused.",
+   "evidence": [
+    "contracts/src/MandateGateway.sol",
+    "contracts/test/Gateway.t.sol",
+    "eip712/types.json"
+   ],
+   "specImpact": "a note in ADR-021; no change of the type strings"
+  }
+ ]
+}

@@ -1,0 +1,997 @@
+{
+ "schema": 1,
+ "tool": "tools/contracts_report.py",
+ "solc": "0.8.24",
+ "settings": {
+  "solc": "0.8.24",
+  "evmVersion": "cancun",
+  "viaIR": false,
+  "optimizer": {
+   "enabled": true,
+   "runs": 200
+  },
+  "metadata": {
+   "bytecodeHash": "none",
+   "appendCBOR": false
+  }
+ },
+ "frozenSettings": "contracts/frozen-settings.json",
+ "settingsFrozenFileSha256": "fca7110349b28012c01b5ec6470787a96b739bf85f240a3c3ebfa2a8bb34ee4d",
+ "sourcesSha256": {
+  "src/Errors.sol": "dc64ece1a1e4fb973eb2826e0137c36290a36dcf64720336e48c6d0507619b24",
+  "src/ExecutorRegistry.sol": "75d6ca12c33cc869c3a434fded01a8cca073ec2f2b49156c823519b069cfeae2",
+  "src/FeeController.sol": "504ba656febc6940f18dfb5317f2cca7a060134abe6e78bbe53f9131adafd385",
+  "src/generated/FastPayTypes.sol": "7b379de47bac8c56d5b3ca114740f375048acd42fde880fe88c034594f57c44b",
+  "src/interfaces/IERC20.sol": "9a5ceaa273b3b90be4ac80590a38a330c55c71fa266c69398d4d3ad7ffd9ea16",
+  "src/interfaces/IMandateManager.sol": "ccaaa22f52aa4e4d962656ea1575167ec468fc1d5534b7ca460215fe4d00dc48",
+  "src/interfaces/IPermit2.sol": "1719766050e9348b08fe08513cc9ebbfccc0300c611d0473a7d962fa33e89533",
+  "src/interfaces/IRegistries.sol": "0dd5699405a33e7ef3c7cb2ed11949228ead8899dde77e547164674db246915b",
+  "src/interfaces/IRouterRegistry.sol": "da350d3f92f9e8a6272f8d445100d9ea9c89c952527c7f9940da26406264646d",
+  "src/interfaces/ISignerSetRegistry.sol": "831993ebcbfda6cb03f724231c0759c5f559a0afb9703b4957adaf532f7ff7f9",
+  "src/interfaces/ISuccessorValidator.sol": "733c3bad4d09fcbdd3a4cc80012e16dc27207f084181d25f9df17d929d0e22e7",
+  "src/interfaces/ITokenPolicyRegistry.sol": "d4b4629084e12c31eb3a2f83a4dc417cb985b0721ce0d1534c8af234e6cc184a",
+  "src/lib/AuthLib.sol": "fb94f694376254932fa29a2c41a6522a9e07cc33c704fc1f6b900f1e6bf87632",
+  "src/lib/ContainLib.sol": "70cd9eeffb5f4d4b084551e087d94c8c97761fddb891604e81f28de82904c4dd",
+  "src/lib/PinLib.sol": "1de1a22ccdfc4eb0e9718a4e407cb65f5a91024c034921bad4a12abebf0fdf58",
+  "src/MandateGateway.sol": "e128c54efd3ac6efca62d1fc30b76bc87e598f009619803deb56f37901819b7b",
+  "src/MandateManager.sol": "929f76b9baf7937eabd4d1a935834aa8e31f3d00ae8889a73126401992ea7f2f",
+  "src/MerchantRegistry.sol": "fa6e1ae3a3766f8f9f807497a02b753fbea192b7811c497c3c8b384ab15f03f8",
+  "src/MigrationQueue.sol": "ed76c3088f4a31936b531ee9fe2870b449c05d73cd394296d6eb9b9034757271",
+  "src/PaymentRouter.sol": "22c06f3238e91b6fb1a994c658d6e30eb14abc5449719c7d6bd4c9c01c1f6513",
+  "src/RouterRegistry.sol": "93f2c44db71aea618fd8712679ff54fd8713ccf00c01e968dc968150e7db81c9",
+  "src/SignerSetRegistry.sol": "5ca1b8770afc91293426fa10e1b8339738d46bf9060e4d832bbdf3a55646be82",
+  "src/SuccessorValidator.sol": "e15a77ce76eed5064246cc7f1c43e89e8e5d2f3c43938c22e655a341e3d2100c",
+  "src/TokenPolicyRegistry.sol": "9bc7f1652a66f07f38f880be686f597fa9114f2cdadecd934fe914fe4e8bbabd",
+  "src/UsageLedger.sol": "99184be354dce028a80a3d9013c56b331f2b0f60c6393b0372864f828276b00f"
+ },
+ "contracts": {
+  "AuthLib": {
+   "file": "src/lib/AuthLib.sol",
+   "runtimeBytes": 31,
+   "marginToTarget": 21969,
+   "marginToEip170": 24545,
+   "runtimeSha256": "e52bc03bfabdec0f91aa1bdf726c7237f4b01ac0756ddc37ba3da7b967bfc842",
+   "forgeRuntimeSha256": "e52bc03bfabdec0f91aa1bdf726c7237f4b01ac0756ddc37ba3da7b967bfc842",
+   "sameAsForge": true,
+   "codeInstructions": 9,
+   "dataInstructionsSkipped": 0,
+   "forbiddenOpcodes": {
+    "DELEGATECALL": 0,
+    "CALLCODE": 0,
+    "SELFDESTRUCT": 0,
+    "ORIGIN": 0,
+    "CREATE": 0,
+    "CREATE2": 0
+   },
+   "calls": 0,
+   "staticcalls": 0,
+   "externalCallTargets": []
+  },
+  "ContainLib": {
+   "file": "src/lib/ContainLib.sol",
+   "runtimeBytes": 31,
+   "marginToTarget": 21969,
+   "marginToEip170": 24545,
+   "runtimeSha256": "e52bc03bfabdec0f91aa1bdf726c7237f4b01ac0756ddc37ba3da7b967bfc842",
+   "forgeRuntimeSha256": "e52bc03bfabdec0f91aa1bdf726c7237f4b01ac0756ddc37ba3da7b967bfc842",
+   "sameAsForge": true,
+   "codeInstructions": 9,
+   "dataInstructionsSkipped": 0,
+   "forbiddenOpcodes": {
+    "DELEGATECALL": 0,
+    "CALLCODE": 0,
+    "SELFDESTRUCT": 0,
+    "ORIGIN": 0,
+    "CREATE": 0,
+    "CREATE2": 0
+   },
+   "calls": 0,
+   "staticcalls": 0,
+   "externalCallTargets": []
+  },
+  "ExecutorRegistry": {
+   "file": "src/ExecutorRegistry.sol",
+   "runtimeBytes": 679,
+   "marginToTarget": 21321,
+   "marginToEip170": 23897,
+   "runtimeSha256": "2f1f167c167649cb6ae8b9c6d6471006e371e4f6e6ef97151dc70726004aaaea",
+   "forgeRuntimeSha256": "2f1f167c167649cb6ae8b9c6d6471006e371e4f6e6ef97151dc70726004aaaea",
+   "sameAsForge": true,
+   "codeInstructions": 323,
+   "dataInstructionsSkipped": 0,
+   "forbiddenOpcodes": {
+    "DELEGATECALL": 0,
+    "CALLCODE": 0,
+    "SELFDESTRUCT": 0,
+    "ORIGIN": 0,
+    "CREATE": 0,
+    "CREATE2": 0
+   },
+   "calls": 0,
+   "staticcalls": 0,
+   "externalCallTargets": [],
+   "externalFunctions": [
+    {
+     "function": "add",
+     "selector": "0x0a3b0a4f",
+     "mutability": "nonpayable",
+     "typeStrings": "add(address)"
+    },
+    {
+     "function": "remove",
+     "selector": "0x29092d0e",
+     "mutability": "nonpayable",
+     "typeStrings": "remove(address)"
+    }
+   ]
+  },
+  "FastPayTypes": {
+   "file": "src/generated/FastPayTypes.sol",
+   "runtimeBytes": 31,
+   "marginToTarget": 21969,
+   "marginToEip170": 24545,
+   "runtimeSha256": "e52bc03bfabdec0f91aa1bdf726c7237f4b01ac0756ddc37ba3da7b967bfc842",
+   "forgeRuntimeSha256": "e52bc03bfabdec0f91aa1bdf726c7237f4b01ac0756ddc37ba3da7b967bfc842",
+   "sameAsForge": true,
+   "codeInstructions": 9,
+   "dataInstructionsSkipped": 0,
+   "forbiddenOpcodes": {
+    "DELEGATECALL": 0,
+    "CALLCODE": 0,
+    "SELFDESTRUCT": 0,
+    "ORIGIN": 0,
+    "CREATE": 0,
+    "CREATE2": 0
+   },
+   "calls": 0,
+   "staticcalls": 0,
+   "externalCallTargets": []
+  },
+  "FeeController": {
+   "file": "src/FeeController.sol",
+   "runtimeBytes": 599,
+   "marginToTarget": 21401,
+   "marginToEip170": 23977,
+   "runtimeSha256": "eb0f07264e9efef518b0405148f793007305005274dd9cde96120fb4605f7f86",
+   "forgeRuntimeSha256": "eb0f07264e9efef518b0405148f793007305005274dd9cde96120fb4605f7f86",
+   "sameAsForge": true,
+   "codeInstructions": 310,
+   "dataInstructionsSkipped": 0,
+   "forbiddenOpcodes": {
+    "DELEGATECALL": 0,
+    "CALLCODE": 0,
+    "SELFDESTRUCT": 0,
+    "ORIGIN": 0,
+    "CREATE": 0,
+    "CREATE2": 0
+   },
+   "calls": 0,
+   "staticcalls": 0,
+   "externalCallTargets": [],
+   "externalFunctions": [
+    {
+     "function": "setFee",
+     "selector": "0x30f738be",
+     "mutability": "nonpayable",
+     "typeStrings": "setFee(uint16,address)"
+    }
+   ]
+  },
+  "MandateGateway": {
+   "file": "src/MandateGateway.sol",
+   "runtimeBytes": 16399,
+   "marginToTarget": 5601,
+   "marginToEip170": 8177,
+   "runtimeSha256": "063d9f0e831d5e15b6f6bffadc0bc53d788dcebd198b2bee400b63f12b5ae795",
+   "forgeRuntimeSha256": "063d9f0e831d5e15b6f6bffadc0bc53d788dcebd198b2bee400b63f12b5ae795",
+   "sameAsForge": true,
+   "codeInstructions": 8934,
+   "dataInstructionsSkipped": 304,
+   "forbiddenOpcodes": {
+    "DELEGATECALL": 0,
+    "CALLCODE": 0,
+    "SELFDESTRUCT": 0,
+    "ORIGIN": 0,
+    "CREATE": 0,
+    "CREATE2": 0
+   },
+   "calls": 13,
+   "staticcalls": 5,
+   "externalCallTargets": [
+    "IMandateManager",
+    "IRouterRegistry"
+   ],
+   "externalFunctions": [
+    {
+     "function": "activateBySig",
+     "selector": "0xb35f5b5a",
+     "mutability": "nonpayable",
+     "typeStrings": "activateBySig(struct FastPayTypes.ActivationTerms,bytes)"
+    },
+    {
+     "function": "activateSuccessorBySig",
+     "selector": "0xea1738f0",
+     "mutability": "nonpayable",
+     "typeStrings": "activateSuccessorBySig(struct IMandateManager.SuccessorRequest,bytes)"
+    },
+    {
+     "function": "pauseBySig",
+     "selector": "0xe4b38bc4",
+     "mutability": "nonpayable",
+     "typeStrings": "pauseBySig(struct FastPayTypes.PauseMandate,bytes)"
+    },
+    {
+     "function": "reduceBySig",
+     "selector": "0x80c71ef3",
+     "mutability": "nonpayable",
+     "typeStrings": "reduceBySig(struct FastPayTypes.ReduceMandate,struct FastPayTypes.MandateTerms,struct FastPayTypes.MandateTerms,struct FastPayTypes.AccountPin,bytes)"
+    },
+    {
+     "function": "resumeBySig",
+     "selector": "0x4f7f7ef3",
+     "mutability": "nonpayable",
+     "typeStrings": "resumeBySig(struct FastPayTypes.ResumeMandate,struct FastPayTypes.AccountPin,bytes)"
+    },
+    {
+     "function": "revokeBySig",
+     "selector": "0xb4126c20",
+     "mutability": "nonpayable",
+     "typeStrings": "revokeBySig(struct FastPayTypes.RevokeMandate,bytes)"
+    },
+    {
+     "function": "updateAccountPinBySig",
+     "selector": "0xe49f5527",
+     "mutability": "nonpayable",
+     "typeStrings": "updateAccountPinBySig(struct FastPayTypes.AccountPinUpdate,struct FastPayTypes.AccountPin,bytes)"
+    },
+    {
+     "function": "updateAccountPins",
+     "selector": "0xa10f2c0c",
+     "mutability": "nonpayable",
+     "typeStrings": "updateAccountPins(bytes32[],struct FastPayTypes.AccountPin)"
+    },
+    {
+     "function": "updateAccountPinsBySig",
+     "selector": "0x7f06b0ac",
+     "mutability": "nonpayable",
+     "typeStrings": "updateAccountPinsBySig(struct FastPayTypes.AccountPinsUpdate,struct FastPayTypes.AccountPin,bytes)"
+    }
+   ]
+  },
+  "MandateManager": {
+   "file": "src/MandateManager.sol",
+   "runtimeBytes": 21357,
+   "marginToTarget": 643,
+   "marginToEip170": 3219,
+   "runtimeSha256": "fef35a21a3c56b6a2a481a81a13db652ddb94d91c2004a48606a6aef42b78710",
+   "forgeRuntimeSha256": "fef35a21a3c56b6a2a481a81a13db652ddb94d91c2004a48606a6aef42b78710",
+   "sameAsForge": true,
+   "codeInstructions": 13847,
+   "dataInstructionsSkipped": 107,
+   "forbiddenOpcodes": {
+    "DELEGATECALL": 0,
+    "CALLCODE": 0,
+    "SELFDESTRUCT": 0,
+    "ORIGIN": 0,
+    "CREATE": 0,
+    "CREATE2": 0
+   },
+   "calls": 1,
+   "staticcalls": 3,
+   "externalCallTargets": [
+    "IRouterRegistry",
+    "ISuccessorValidator",
+    "UsageLedger"
+   ],
+   "externalFunctions": [
+    {
+     "function": "activate",
+     "selector": "0x4109e77b",
+     "mutability": "nonpayable",
+     "typeStrings": "activate(address,uint256,address,struct FastPayTypes.MandateTerms,struct FastPayTypes.AccountPin)"
+    },
+    {
+     "function": "activateSuccessor",
+     "selector": "0xa0c35735",
+     "mutability": "nonpayable",
+     "typeStrings": "activateSuccessor(address,struct IMandateManager.SuccessorRequest)"
+    },
+    {
+     "function": "consume",
+     "selector": "0x3fd2a694",
+     "mutability": "nonpayable",
+     "typeStrings": "consume(bytes32,struct FastPayTypes.MandateTerms,struct FastPayTypes.AccountPin,struct IMandateManager.ChargeInput)"
+    },
+    {
+     "function": "domainSeparator",
+     "selector": "0xf698da25",
+     "mutability": "view",
+     "typeStrings": "domainSeparator()"
+    },
+    {
+     "function": "exposedAt",
+     "selector": "0x4b894f8a",
+     "mutability": "view",
+     "typeStrings": "exposedAt(address,address,uint256)"
+    },
+    {
+     "function": "exposedCount",
+     "selector": "0x325c6df6",
+     "mutability": "view",
+     "typeStrings": "exposedCount(address,address)"
+    },
+    {
+     "function": "exposedUnionCount",
+     "selector": "0xe4d4c7a7",
+     "mutability": "view",
+     "typeStrings": "exposedUnionCount(address,address,struct FastPayTypes.TokenTerms[])"
+    },
+    {
+     "function": "isConsumable",
+     "selector": "0x9dd2dd25",
+     "mutability": "view",
+     "typeStrings": "isConsumable(bytes32,address)"
+    },
+    {
+     "function": "lineageIdOf",
+     "selector": "0x58f7cec4",
+     "mutability": "view",
+     "typeStrings": "lineageIdOf(address,bytes32,bytes32,uint256)"
+    },
+    {
+     "function": "mandateIdOf",
+     "selector": "0xd38118fe",
+     "mutability": "pure",
+     "typeStrings": "mandateIdOf(bytes32,uint256)"
+    },
+    {
+     "function": "mandateView",
+     "selector": "0x60cac8cd",
+     "mutability": "view",
+     "typeStrings": "mandateView(bytes32)"
+    },
+    {
+     "function": "partiesOf",
+     "selector": "0xf6ba4c1b",
+     "mutability": "view",
+     "typeStrings": "partiesOf(bytes32)"
+    },
+    {
+     "function": "pause",
+     "selector": "0x98097581",
+     "mutability": "nonpayable",
+     "typeStrings": "pause(address,bytes32)"
+    },
+    {
+     "function": "pinHashOf",
+     "selector": "0xc5829e09",
+     "mutability": "view",
+     "typeStrings": "pinHashOf(bytes32)"
+    },
+    {
+     "function": "reduce",
+     "selector": "0x57a26b5d",
+     "mutability": "nonpayable",
+     "typeStrings": "reduce(address,bytes32,struct FastPayTypes.MandateTerms,struct FastPayTypes.MandateTerms)"
+    },
+    {
+     "function": "resume",
+     "selector": "0x388314c6",
+     "mutability": "nonpayable",
+     "typeStrings": "resume(address,bytes32)"
+    },
+    {
+     "function": "retire",
+     "selector": "0x1f2b6f23",
+     "mutability": "nonpayable",
+     "typeStrings": "retire(bytes32)"
+    },
+    {
+     "function": "revoke",
+     "selector": "0x88e62721",
+     "mutability": "nonpayable",
+     "typeStrings": "revoke(address,bytes32)"
+    },
+    {
+     "function": "setPauseBit",
+     "selector": "0xc85cf408",
+     "mutability": "nonpayable",
+     "typeStrings": "setPauseBit(bytes32,uint8,bool)"
+    },
+    {
+     "function": "spendNonce",
+     "selector": "0xd8b2a514",
+     "mutability": "nonpayable",
+     "typeStrings": "spendNonce(address,uint256)"
+    },
+    {
+     "function": "updateAccountPin",
+     "selector": "0xb0da053e",
+     "mutability": "nonpayable",
+     "typeStrings": "updateAccountPin(address,bytes32,struct FastPayTypes.AccountPin)"
+    }
+   ]
+  },
+  "MerchantRegistry": {
+   "file": "src/MerchantRegistry.sol",
+   "runtimeBytes": 3540,
+   "marginToTarget": 18460,
+   "marginToEip170": 21036,
+   "runtimeSha256": "b79348c895118a3c9b178cf4e89202ffb183f6e6556fe2cc3db02004ac2a41b3",
+   "forgeRuntimeSha256": "b79348c895118a3c9b178cf4e89202ffb183f6e6556fe2cc3db02004ac2a41b3",
+   "sameAsForge": true,
+   "codeInstructions": 2263,
+   "dataInstructionsSkipped": 0,
+   "forbiddenOpcodes": {
+    "DELEGATECALL": 0,
+    "CALLCODE": 0,
+    "SELFDESTRUCT": 0,
+    "ORIGIN": 0,
+    "CREATE": 0,
+    "CREATE2": 0
+   },
+   "calls": 0,
+   "staticcalls": 0,
+   "externalCallTargets": [],
+   "externalFunctions": [
+    {
+     "function": "acceptRecipient",
+     "selector": "0xbd14deea",
+     "mutability": "nonpayable",
+     "typeStrings": "acceptRecipient(bytes32)"
+    },
+    {
+     "function": "cancelRecipient",
+     "selector": "0xf2835cad",
+     "mutability": "nonpayable",
+     "typeStrings": "cancelRecipient(bytes32)"
+    },
+    {
+     "function": "deactivate",
+     "selector": "0x22eee84c",
+     "mutability": "nonpayable",
+     "typeStrings": "deactivate(bytes32)"
+    },
+    {
+     "function": "pauseMerchant",
+     "selector": "0xf816ad70",
+     "mutability": "nonpayable",
+     "typeStrings": "pauseMerchant(bytes32)"
+    },
+    {
+     "function": "proposeRecipient",
+     "selector": "0xe4a088b2",
+     "mutability": "nonpayable",
+     "typeStrings": "proposeRecipient(bytes32,address)"
+    },
+    {
+     "function": "register",
+     "selector": "0x2a8b5b2a",
+     "mutability": "nonpayable",
+     "typeStrings": "register(bytes32,address,address,address)"
+    },
+    {
+     "function": "setAccepted",
+     "selector": "0xb08e36b2",
+     "mutability": "nonpayable",
+     "typeStrings": "setAccepted(bytes32,address,bool)"
+    },
+    {
+     "function": "setChargeSigner",
+     "selector": "0xfddaf841",
+     "mutability": "nonpayable",
+     "typeStrings": "setChargeSigner(bytes32,address)"
+    },
+    {
+     "function": "settlement",
+     "selector": "0x253a2faa",
+     "mutability": "view",
+     "typeStrings": "settlement(bytes32,address)"
+    },
+    {
+     "function": "unpauseMerchant",
+     "selector": "0xcc4912fa",
+     "mutability": "nonpayable",
+     "typeStrings": "unpauseMerchant(bytes32)"
+    }
+   ]
+  },
+  "MigrationQueue": {
+   "file": "src/MigrationQueue.sol",
+   "runtimeBytes": 6895,
+   "marginToTarget": 15105,
+   "marginToEip170": 17681,
+   "runtimeSha256": "ca78ea538de0be82a84632bc3ee0974fe99183bb113e56f1ea8ffde517d5b63b",
+   "forgeRuntimeSha256": "ca78ea538de0be82a84632bc3ee0974fe99183bb113e56f1ea8ffde517d5b63b",
+   "sameAsForge": true,
+   "codeInstructions": 4278,
+   "dataInstructionsSkipped": 54,
+   "forbiddenOpcodes": {
+    "DELEGATECALL": 0,
+    "CALLCODE": 0,
+    "SELFDESTRUCT": 0,
+    "ORIGIN": 0,
+    "CREATE": 0,
+    "CREATE2": 0
+   },
+   "calls": 1,
+   "staticcalls": 1,
+   "externalCallTargets": [
+    "IMandateManager",
+    "IRouterRegistry"
+   ],
+   "externalFunctions": [
+    {
+     "function": "abort",
+     "selector": "0x09d6ce0e",
+     "mutability": "nonpayable",
+     "typeStrings": "abort(bytes32)"
+    },
+    {
+     "function": "expire",
+     "selector": "0xc6441798",
+     "mutability": "nonpayable",
+     "typeStrings": "expire(bytes32)"
+    },
+    {
+     "function": "link",
+     "selector": "0x9ce9abd8",
+     "mutability": "pure",
+     "typeStrings": "link(bytes32,bytes32)"
+    },
+    {
+     "function": "open",
+     "selector": "0xe958b160",
+     "mutability": "nonpayable",
+     "typeStrings": "open(uint256,uint8,address,uint32,bytes32,uint64)"
+    },
+    {
+     "function": "planIdOf",
+     "selector": "0x19cbdbbb",
+     "mutability": "view",
+     "typeStrings": "planIdOf(address,uint256)"
+    },
+    {
+     "function": "skip",
+     "selector": "0x193019b2",
+     "mutability": "nonpayable",
+     "typeStrings": "skip(bytes32,struct MigrationQueue.Entry)"
+    },
+    {
+     "function": "step",
+     "selector": "0x2d3b252f",
+     "mutability": "nonpayable",
+     "typeStrings": "step(bytes32,struct MigrationQueue.Entry[])"
+    }
+   ]
+  },
+  "PaymentRouter": {
+   "file": "src/PaymentRouter.sol",
+   "runtimeBytes": 13249,
+   "marginToTarget": 8751,
+   "marginToEip170": 11327,
+   "runtimeSha256": "e736d84803cef1500859be2e7cdfce85a32c3961f2fd7a94ed4a0341dc515822",
+   "forgeRuntimeSha256": "e736d84803cef1500859be2e7cdfce85a32c3961f2fd7a94ed4a0341dc515822",
+   "sameAsForge": true,
+   "codeInstructions": 8288,
+   "dataInstructionsSkipped": 105,
+   "forbiddenOpcodes": {
+    "DELEGATECALL": 0,
+    "CALLCODE": 0,
+    "SELFDESTRUCT": 0,
+    "ORIGIN": 0,
+    "CREATE": 0,
+    "CREATE2": 0
+   },
+   "calls": 5,
+   "staticcalls": 16,
+   "externalCallTargets": [
+    "IAllowanceTransfer",
+    "IERC20",
+    "IExecutorRegistry",
+    "IFeeController",
+    "IMandateManager",
+    "IMerchantRegistry",
+    "IRouterRegistry",
+    "ISignatureTransfer",
+    "ISignerSetRegistry",
+    "ITokenPolicyRegistry"
+   ],
+   "externalFunctions": [
+    {
+     "function": "charge",
+     "selector": "0x5772c40f",
+     "mutability": "nonpayable",
+     "typeStrings": "charge(struct PaymentRouter.ChargeRequest,struct FastPayTypes.MandateTerms,struct FastPayTypes.AccountPin,struct PaymentRouter.QuoteBundle)"
+    },
+    {
+     "function": "payOnceWithSignature",
+     "selector": "0x4c4406c3",
+     "mutability": "nonpayable",
+     "typeStrings": "payOnceWithSignature(struct FastPayTypes.PayOnceIntent,uint256,uint256,bytes)"
+    },
+    {
+     "function": "paymentIdOf",
+     "selector": "0x19ae85a5",
+     "mutability": "view",
+     "typeStrings": "paymentIdOf(bytes32,uint256)"
+    },
+    {
+     "function": "quoteDomainSeparator",
+     "selector": "0x7102ae2a",
+     "mutability": "view",
+     "typeStrings": "quoteDomainSeparator()"
+    }
+   ]
+  },
+  "PinLib": {
+   "file": "src/lib/PinLib.sol",
+   "runtimeBytes": 31,
+   "marginToTarget": 21969,
+   "marginToEip170": 24545,
+   "runtimeSha256": "e52bc03bfabdec0f91aa1bdf726c7237f4b01ac0756ddc37ba3da7b967bfc842",
+   "forgeRuntimeSha256": "e52bc03bfabdec0f91aa1bdf726c7237f4b01ac0756ddc37ba3da7b967bfc842",
+   "sameAsForge": true,
+   "codeInstructions": 9,
+   "dataInstructionsSkipped": 0,
+   "forbiddenOpcodes": {
+    "DELEGATECALL": 0,
+    "CALLCODE": 0,
+    "SELFDESTRUCT": 0,
+    "ORIGIN": 0,
+    "CREATE": 0,
+    "CREATE2": 0
+   },
+   "calls": 0,
+   "staticcalls": 0,
+   "externalCallTargets": []
+  },
+  "RouterRegistry": {
+   "file": "src/RouterRegistry.sol",
+   "runtimeBytes": 4202,
+   "marginToTarget": 17798,
+   "marginToEip170": 20374,
+   "runtimeSha256": "402f044c5aa56e461c2420a8708a833810923027e0b4b844ab34e04aacfeb450",
+   "forgeRuntimeSha256": "402f044c5aa56e461c2420a8708a833810923027e0b4b844ab34e04aacfeb450",
+   "sameAsForge": true,
+   "codeInstructions": 2494,
+   "dataInstructionsSkipped": 0,
+   "forbiddenOpcodes": {
+    "DELEGATECALL": 0,
+    "CALLCODE": 0,
+    "SELFDESTRUCT": 0,
+    "ORIGIN": 0,
+    "CREATE": 0,
+    "CREATE2": 0
+   },
+   "calls": 0,
+   "staticcalls": 0,
+   "externalCallTargets": [],
+   "externalFunctions": [
+    {
+     "function": "activate",
+     "selector": "0x1c5a9d9c",
+     "mutability": "nonpayable",
+     "typeStrings": "activate(address)"
+    },
+    {
+     "function": "clearEmergency",
+     "selector": "0xfd0184ce",
+     "mutability": "nonpayable",
+     "typeStrings": "clearEmergency(address)"
+    },
+    {
+     "function": "codeHashOf",
+     "selector": "0xbbd652c7",
+     "mutability": "view",
+     "typeStrings": "codeHashOf(address)"
+    },
+    {
+     "function": "deprecate",
+     "selector": "0x1730fbed",
+     "mutability": "nonpayable",
+     "typeStrings": "deprecate(address,address,uint8,uint64)"
+    },
+    {
+     "function": "emergencyDisable",
+     "selector": "0x75435703",
+     "mutability": "nonpayable",
+     "typeStrings": "emergencyDisable(address)"
+    },
+    {
+     "function": "isBindable",
+     "selector": "0xe1ba6cf9",
+     "mutability": "view",
+     "typeStrings": "isBindable(address)"
+    },
+    {
+     "function": "isChargeable",
+     "selector": "0x0a72dfa6",
+     "mutability": "view",
+     "typeStrings": "isChargeable(address)"
+    },
+    {
+     "function": "markSettled",
+     "selector": "0x86caf102",
+     "mutability": "nonpayable",
+     "typeStrings": "markSettled(bytes32)"
+    },
+    {
+     "function": "mode",
+     "selector": "0x2acd78c2",
+     "mutability": "view",
+     "typeStrings": "mode(address)"
+    },
+    {
+     "function": "notice",
+     "selector": "0x75f953d6",
+     "mutability": "pure",
+     "typeStrings": "notice(uint8)"
+    },
+    {
+     "function": "propose",
+     "selector": "0x2ac58877",
+     "mutability": "nonpayable",
+     "typeStrings": "propose(address,bytes32,uint32)"
+    },
+    {
+     "function": "retire",
+     "selector": "0x9e6371ba",
+     "mutability": "nonpayable",
+     "typeStrings": "retire(address)"
+    },
+    {
+     "function": "stateOf",
+     "selector": "0x45b4903a",
+     "mutability": "view",
+     "typeStrings": "stateOf(address)"
+    },
+    {
+     "function": "sunset",
+     "selector": "0x9ec7aaad",
+     "mutability": "nonpayable",
+     "typeStrings": "sunset(address)"
+    },
+    {
+     "function": "versionOf",
+     "selector": "0x0db3ff45",
+     "mutability": "view",
+     "typeStrings": "versionOf(address)"
+    }
+   ]
+  },
+  "SignerSetRegistry": {
+   "file": "src/SignerSetRegistry.sol",
+   "runtimeBytes": 3649,
+   "marginToTarget": 18351,
+   "marginToEip170": 20927,
+   "runtimeSha256": "62ab4d6e32ee4370189a67f6418a4850a2549cb103f9460a0ea5dd1d28d1dc39",
+   "forgeRuntimeSha256": "62ab4d6e32ee4370189a67f6418a4850a2549cb103f9460a0ea5dd1d28d1dc39",
+   "sameAsForge": true,
+   "codeInstructions": 2247,
+   "dataInstructionsSkipped": 0,
+   "forbiddenOpcodes": {
+    "DELEGATECALL": 0,
+    "CALLCODE": 0,
+    "SELFDESTRUCT": 0,
+    "ORIGIN": 0,
+    "CREATE": 0,
+    "CREATE2": 0
+   },
+   "calls": 0,
+   "staticcalls": 0,
+   "externalCallTargets": [],
+   "externalFunctions": [
+    {
+     "function": "activateSignerSet",
+     "selector": "0xc8abaaff",
+     "mutability": "nonpayable",
+     "typeStrings": "activateSignerSet(uint32)"
+    },
+    {
+     "function": "memberCount",
+     "selector": "0xd9c53cd9",
+     "mutability": "view",
+     "typeStrings": "memberCount(uint32)"
+    },
+    {
+     "function": "proposeSignerSet",
+     "selector": "0xc17b4a0a",
+     "mutability": "nonpayable",
+     "typeStrings": "proposeSignerSet(uint32,address[])"
+    },
+    {
+     "function": "removeQuoteSigner",
+     "selector": "0x02037b80",
+     "mutability": "nonpayable",
+     "typeStrings": "removeQuoteSigner(address)"
+    },
+    {
+     "function": "stopSignerSet",
+     "selector": "0x4ed2b6e2",
+     "mutability": "nonpayable",
+     "typeStrings": "stopSignerSet(uint32)"
+    },
+    {
+     "function": "verifySigner",
+     "selector": "0x87dd4a98",
+     "mutability": "view",
+     "typeStrings": "verifySigner(address,uint32,uint64)"
+    }
+   ]
+  },
+  "SuccessorValidator": {
+   "file": "src/SuccessorValidator.sol",
+   "runtimeBytes": 13059,
+   "marginToTarget": 8941,
+   "marginToEip170": 11517,
+   "runtimeSha256": "7634b6ff86ebc46731f5fed18539eb8127c3221143d56d40b366c8e7742f97a0",
+   "forgeRuntimeSha256": "7634b6ff86ebc46731f5fed18539eb8127c3221143d56d40b366c8e7742f97a0",
+   "sameAsForge": true,
+   "codeInstructions": 8151,
+   "dataInstructionsSkipped": 90,
+   "forbiddenOpcodes": {
+    "DELEGATECALL": 0,
+    "CALLCODE": 0,
+    "SELFDESTRUCT": 0,
+    "ORIGIN": 0,
+    "CREATE": 0,
+    "CREATE2": 0
+   },
+   "calls": 0,
+   "staticcalls": 11,
+   "externalCallTargets": [
+    "IAllowanceTransfer",
+    "IMandateManager",
+    "IRouterRegistry"
+   ],
+   "externalFunctions": [
+    {
+     "function": "validate",
+     "selector": "0xe02d88ba",
+     "mutability": "view",
+     "typeStrings": "validate(struct ISuccessorValidator.SuccessorContext)"
+    }
+   ]
+  },
+  "TokenPolicyRegistry": {
+   "file": "src/TokenPolicyRegistry.sol",
+   "runtimeBytes": 4479,
+   "marginToTarget": 17521,
+   "marginToEip170": 20097,
+   "runtimeSha256": "f708cb3a566b6fda7af4cf8946956d9867edb774d475307279a613084dd46325",
+   "forgeRuntimeSha256": "f708cb3a566b6fda7af4cf8946956d9867edb774d475307279a613084dd46325",
+   "sameAsForge": true,
+   "codeInstructions": 2870,
+   "dataInstructionsSkipped": 0,
+   "forbiddenOpcodes": {
+    "DELEGATECALL": 0,
+    "CALLCODE": 0,
+    "SELFDESTRUCT": 0,
+    "ORIGIN": 0,
+    "CREATE": 0,
+    "CREATE2": 0
+   },
+   "calls": 0,
+   "staticcalls": 0,
+   "externalCallTargets": [],
+   "externalFunctions": [
+    {
+     "function": "bandOf",
+     "selector": "0xbd3877f2",
+     "mutability": "view",
+     "typeStrings": "bandOf(address,uint16,uint32)"
+    },
+    {
+     "function": "block_",
+     "selector": "0x9757b98a",
+     "mutability": "nonpayable",
+     "typeStrings": "block_(address)"
+    },
+    {
+     "function": "list",
+     "selector": "0x7d92dad6",
+     "mutability": "nonpayable",
+     "typeStrings": "list(address,uint8,uint8)"
+    },
+    {
+     "function": "publishBounds",
+     "selector": "0x807e1148",
+     "mutability": "nonpayable",
+     "typeStrings": "publishBounds(address,uint16,uint256,uint256)"
+    },
+    {
+     "function": "quoteContext",
+     "selector": "0x57ad7372",
+     "mutability": "view",
+     "typeStrings": "quoteContext(address,uint16,uint32)"
+    },
+    {
+     "function": "setPriceSourceSet",
+     "selector": "0x26e03d16",
+     "mutability": "nonpayable",
+     "typeStrings": "setPriceSourceSet(address,uint16,bytes32)"
+    },
+    {
+     "function": "setStatus",
+     "selector": "0x278e07ce",
+     "mutability": "nonpayable",
+     "typeStrings": "setStatus(address,uint8)"
+    },
+    {
+     "function": "status",
+     "selector": "0x645b8b1b",
+     "mutability": "view",
+     "typeStrings": "status(address)"
+    },
+    {
+     "function": "tokenVersion",
+     "selector": "0xff1a5f92",
+     "mutability": "view",
+     "typeStrings": "tokenVersion(address)"
+    }
+   ]
+  },
+  "UsageLedger": {
+   "file": "src/UsageLedger.sol",
+   "runtimeBytes": 4511,
+   "marginToTarget": 17489,
+   "marginToEip170": 20065,
+   "runtimeSha256": "ce27e00b89633e357f2f4a7595f74ac41b9683d8eb445471bb7007bf421bb397",
+   "forgeRuntimeSha256": "ce27e00b89633e357f2f4a7595f74ac41b9683d8eb445471bb7007bf421bb397",
+   "sameAsForge": true,
+   "codeInstructions": 3179,
+   "dataInstructionsSkipped": 0,
+   "forbiddenOpcodes": {
+    "DELEGATECALL": 0,
+    "CALLCODE": 0,
+    "SELFDESTRUCT": 0,
+    "ORIGIN": 0,
+    "CREATE": 0,
+    "CREATE2": 0
+   },
+   "calls": 0,
+   "staticcalls": 0,
+   "externalCallTargets": [],
+   "externalFunctions": [
+    {
+     "function": "charge",
+     "selector": "0x318a3beb",
+     "mutability": "nonpayable",
+     "typeStrings": "charge(bytes32,bytes32,struct FastPayTypes.MandateTerms,struct IMandateManager.ChargeInput)"
+    },
+    {
+     "function": "fiatUsage",
+     "selector": "0xbbed3069",
+     "mutability": "view",
+     "typeStrings": "fiatUsage(bytes32)"
+    },
+    {
+     "function": "tokenUsage",
+     "selector": "0xa9b83430",
+     "mutability": "view",
+     "typeStrings": "tokenUsage(bytes32,address)"
+    }
+   ]
+  }
+ },
+ "problems": [],
+ "lowLevelCalls": [
+  {
+   "file": "lib/AuthLib.sol",
+   "line": 32,
+   "contract": "AuthLib",
+   "instruction": "staticcall",
+   "kind": "yul",
+   "allowed": true,
+   "reason": "ERC-1271 isValidSignature of the customer's account by STATICCALL with no artificial gas cap (CLM-032): the target is the account that the signature claims, the calldata is the fixed selector with the digest and the signature, only one return word is read"
+  }
+ ],
+ "loopAudit": {
+  "file": "evidence\\implementation\\loop-audit-contracts.json",
+  "loops": 23,
+  "verdict": "PASS",
+  "problems": []
+ },
+ "verdict": "PASS"
+}

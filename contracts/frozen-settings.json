@@ -1,0 +1,16 @@
+{
+  "schema": 1,
+  "name": "contracts/frozen-settings.json",
+  "note": "The compiler settings of the actual FastPay contracts, FROZEN for this revision (item 4 of the corrective instruction). contracts/foundry.toml must equal them; tools/contracts_report.py checks it and fails otherwise. A runtime that does not fit is split into contracts (ADR-021), never tuned by changing a line here.",
+  "solc": "0.8.24",
+  "evmVersion": "cancun",
+  "viaIR": false,
+  "optimizer": {"enabled": true, "runs": 200},
+  "metadata": {"bytecodeHash": "none", "appendCBOR": false},
+  "runtimeSizeTargetBytes": 22000,
+  "eip170Bytes": 24576,
+  "codeSizeLimitOverride": null,
+  "forbiddenOpcodes": ["DELEGATECALL", "CALLCODE", "SELFDESTRUCT", "ORIGIN", "CREATE", "CREATE2"],
+  "testProfile": {"fuzzRuns": 512, "fuzzSeed": "0xfa57", "invariantRuns": 128, "invariantDepth": 96,
+                  "note": "the test settings are recorded, not frozen: they do not change a deployed byte"}
+}

@@ -1,0 +1,271 @@
+{
+ "types": {
+  "EIP712Domain": [
+   {
+    "name": "name",
+    "type": "string"
+   },
+   {
+    "name": "version",
+    "type": "string"
+   },
+   {
+    "name": "chainId",
+    "type": "uint256"
+   },
+   {
+    "name": "verifyingContract",
+    "type": "address"
+   }
+  ],
+  "ActivationTerms": [
+   {
+    "name": "customer",
+    "type": "address"
+   },
+   {
+    "name": "router",
+    "type": "address"
+   },
+   {
+    "name": "routerCodeHash",
+    "type": "bytes32"
+   },
+   {
+    "name": "routerVersion",
+    "type": "uint32"
+   },
+   {
+    "name": "creationNonce",
+    "type": "uint256"
+   },
+   {
+    "name": "terms",
+    "type": "MandateTerms"
+   },
+   {
+    "name": "accountPin",
+    "type": "AccountPin"
+   },
+   {
+    "name": "deadline",
+    "type": "uint64"
+   }
+  ],
+  "AccountPin": [
+   {
+    "name": "accountMode",
+    "type": "uint8"
+   },
+   {
+    "name": "accountCodeHash",
+    "type": "bytes32"
+   },
+   {
+    "name": "delegate",
+    "type": "address"
+   },
+   {
+    "name": "delegateCodeHash",
+    "type": "bytes32"
+   },
+   {
+    "name": "implementationFamily",
+    "type": "bytes32"
+   },
+   {
+    "name": "pinVersion",
+    "type": "uint32"
+   },
+   {
+    "name": "signatureMode",
+    "type": "uint8"
+   }
+  ],
+  "FiatTerms": [
+   {
+    "name": "currency",
+    "type": "uint16"
+   },
+   {
+    "name": "perPaymentMaxMinor",
+    "type": "uint64"
+   },
+   {
+    "name": "dayMaxMinor",
+    "type": "uint64"
+   },
+   {
+    "name": "weekMaxMinor",
+    "type": "uint64"
+   },
+   {
+    "name": "thirtyDayMaxMinor",
+    "type": "uint64"
+   },
+   {
+    "name": "periodMaxMinor",
+    "type": "uint64"
+   },
+   {
+    "name": "totalMaxMinor",
+    "type": "uint64"
+   },
+   {
+    "name": "maxQuoteAge",
+    "type": "uint32"
+   },
+   {
+    "name": "boundsVersion",
+    "type": "uint32"
+   }
+  ],
+  "MandateTerms": [
+   {
+    "name": "merchantId",
+    "type": "bytes32"
+   },
+   {
+    "name": "recipientPolicy",
+    "type": "bytes32"
+   },
+   {
+    "name": "subscriptionRef",
+    "type": "bytes32"
+   },
+   {
+    "name": "periodSeconds",
+    "type": "uint64"
+   },
+   {
+    "name": "anchorStartsAt",
+    "type": "uint64"
+   },
+   {
+    "name": "expiresAt",
+    "type": "uint64"
+   },
+   {
+    "name": "tokens",
+    "type": "TokenTerms[]"
+   },
+   {
+    "name": "fiat",
+    "type": "FiatTerms"
+   },
+   {
+    "name": "maxChargesPerPeriod",
+    "type": "uint16"
+   },
+   {
+    "name": "minIntervalSeconds",
+    "type": "uint32"
+   },
+   {
+    "name": "maxFeeBps",
+    "type": "uint16"
+   },
+   {
+    "name": "extensionsHash",
+    "type": "bytes32"
+   }
+  ],
+  "TokenTerms": [
+   {
+    "name": "token",
+    "type": "address"
+   },
+   {
+    "name": "perPaymentMax",
+    "type": "uint256"
+   },
+   {
+    "name": "dayMax",
+    "type": "uint256"
+   },
+   {
+    "name": "weekMax",
+    "type": "uint256"
+   },
+   {
+    "name": "thirtyDayMax",
+    "type": "uint256"
+   },
+   {
+    "name": "periodMax",
+    "type": "uint256"
+   },
+   {
+    "name": "totalMax",
+    "type": "uint256"
+   }
+  ]
+ },
+ "primaryType": "ActivationTerms",
+ "domain": {
+  "name": "FastPay Mandates",
+  "version": "1",
+  "chainId": "84532",
+  "verifyingContract": "0x2222222222222222222222222222222222222222"
+ },
+ "message": {
+  "customer": "0x4444444444444444444444444444444444444444",
+  "router": "0x1111111111111111111111111111111111111111",
+  "routerCodeHash": "0xc65819cfac543fe55054bd0d49fed1d81278b2c187f5acce0e40b7eb492c357e",
+  "routerVersion": "1",
+  "creationNonce": "7",
+  "terms": {
+   "merchantId": "0xaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+   "recipientPolicy": "0x0101010101010101010101010101010101010101010101010101010101010101",
+   "subscriptionRef": "0xbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+   "periodSeconds": "2592000",
+   "anchorStartsAt": "1800000000",
+   "expiresAt": "1900000000",
+   "tokens": [
+    {
+     "token": "0x5555555555555555555555555555555555555555",
+     "perPaymentMax": "51020409",
+     "dayMax": "10000001",
+     "weekMax": "20000002",
+     "thirtyDayMax": "30000003",
+     "periodMax": "40000004",
+     "totalMax": "612244908"
+    },
+    {
+     "token": "0x6666666666666666666666666666666666666666",
+     "perPaymentMax": "51020509",
+     "dayMax": "10000101",
+     "weekMax": "20000102",
+     "thirtyDayMax": "30000103",
+     "periodMax": "40000104",
+     "totalMax": "612245008"
+    }
+   ],
+   "fiat": {
+    "currency": "840",
+    "perPaymentMaxMinor": "5000",
+    "dayMaxMinor": "1001",
+    "weekMaxMinor": "2002",
+    "thirtyDayMaxMinor": "3003",
+    "periodMaxMinor": "4004",
+    "totalMaxMinor": "60000",
+    "maxQuoteAge": "120",
+    "boundsVersion": "3"
+   },
+   "maxChargesPerPeriod": "4",
+   "minIntervalSeconds": "86400",
+   "maxFeeBps": "100",
+   "extensionsHash": "0x0000000000000000000000000000000000000000000000000000000000000000"
+  },
+  "accountPin": {
+   "accountMode": "2",
+   "accountCodeHash": "0x4a37830a39af172052f51de869b4cdb29187b16a71da5457fca733c4db241364",
+   "delegate": "0xabababababababababababababababababababab",
+   "delegateCodeHash": "0x00e909366694deb1e4fbbd183b70356e899ca8dcca5ecf975177e3ec29c1e052",
+   "implementationFamily": "0x41e7cea110e32333d68057a4496a860f2f362502e359b0971b6b6544c205e24c",
+   "pinVersion": "1",
+   "signatureMode": "1"
+  },
+  "deadline": "1800003600"
+ }
+}

@@ -1,0 +1,136 @@
+{
+ "storage": [
+  {
+   "astId": 7601,
+   "contract": "src/Permit2Mock.sol:Permit2Mock",
+   "label": "allowance",
+   "offset": 0,
+   "slot": "0",
+   "type": "t_mapping(t_address,t_mapping(t_address,t_mapping(t_address,t_struct(PackedAllowance)7587_storage)))"
+  },
+  {
+   "astId": 7876,
+   "contract": "src/Permit2Mock.sol:Permit2Mock",
+   "label": "hookTarget",
+   "offset": 0,
+   "slot": "1",
+   "type": "t_address"
+  },
+  {
+   "astId": 7878,
+   "contract": "src/Permit2Mock.sol:Permit2Mock",
+   "label": "hookData",
+   "offset": 0,
+   "slot": "2",
+   "type": "t_bytes_storage"
+  },
+  {
+   "astId": 7880,
+   "contract": "src/Permit2Mock.sol:Permit2Mock",
+   "label": "hookSucceeded",
+   "offset": 0,
+   "slot": "3",
+   "type": "t_bool"
+  },
+  {
+   "astId": 7882,
+   "contract": "src/Permit2Mock.sol:Permit2Mock",
+   "label": "hookReturn",
+   "offset": 0,
+   "slot": "4",
+   "type": "t_bytes_storage"
+  },
+  {
+   "astId": 7884,
+   "contract": "src/Permit2Mock.sol:Permit2Mock",
+   "label": "hookCalls",
+   "offset": 0,
+   "slot": "5",
+   "type": "t_uint256"
+  }
+ ],
+ "types": {
+  "t_address": {
+   "encoding": "inplace",
+   "label": "address",
+   "numberOfBytes": "20"
+  },
+  "t_bool": {
+   "encoding": "inplace",
+   "label": "bool",
+   "numberOfBytes": "1"
+  },
+  "t_bytes_storage": {
+   "encoding": "bytes",
+   "label": "bytes",
+   "numberOfBytes": "32"
+  },
+  "t_mapping(t_address,t_mapping(t_address,t_mapping(t_address,t_struct(PackedAllowance)7587_storage)))": {
+   "encoding": "mapping",
+   "key": "t_address",
+   "label": "mapping(address => mapping(address => mapping(address => struct Permit2Mock.PackedAllowance)))",
+   "numberOfBytes": "32",
+   "value": "t_mapping(t_address,t_mapping(t_address,t_struct(PackedAllowance)7587_storage))"
+  },
+  "t_mapping(t_address,t_mapping(t_address,t_struct(PackedAllowance)7587_storage))": {
+   "encoding": "mapping",
+   "key": "t_address",
+   "label": "mapping(address => mapping(address => struct Permit2Mock.PackedAllowance))",
+   "numberOfBytes": "32",
+   "value": "t_mapping(t_address,t_struct(PackedAllowance)7587_storage)"
+  },
+  "t_mapping(t_address,t_struct(PackedAllowance)7587_storage)": {
+   "encoding": "mapping",
+   "key": "t_address",
+   "label": "mapping(address => struct Permit2Mock.PackedAllowance)",
+   "numberOfBytes": "32",
+   "value": "t_struct(PackedAllowance)7587_storage"
+  },
+  "t_struct(PackedAllowance)7587_storage": {
+   "encoding": "inplace",
+   "label": "struct Permit2Mock.PackedAllowance",
+   "members": [
+    {
+     "astId": 7582,
+     "contract": "src/Permit2Mock.sol:Permit2Mock",
+     "label": "amount",
+     "offset": 0,
+     "slot": "0",
+     "type": "t_uint160"
+    },
+    {
+     "astId": 7584,
+     "contract": "src/Permit2Mock.sol:Permit2Mock",
+     "label": "expiration",
+     "offset": 20,
+     "slot": "0",
+     "type": "t_uint48"
+    },
+    {
+     "astId": 7586,
+     "contract": "src/Permit2Mock.sol:Permit2Mock",
+     "label": "nonce",
+     "offset": 26,
+     "slot": "0",
+     "type": "t_uint48"
+    }
+   ],
+   "numberOfBytes": "32"
+  },
+  "t_uint160": {
+   "encoding": "inplace",
+   "label": "uint160",
+   "numberOfBytes": "20"
+  },
+  "t_uint256": {
+   "encoding": "inplace",
+   "label": "uint256",
+   "numberOfBytes": "32"
+  },
+  "t_uint48": {
+   "encoding": "inplace",
+   "label": "uint48",
+   "numberOfBytes": "6"
+  }
+ }
+}

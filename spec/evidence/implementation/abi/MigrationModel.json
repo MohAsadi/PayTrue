@@ -1,0 +1,2405 @@
+[
+ {
+  "inputs": [
+   {
+    "internalType": "contract Permit2Mock",
+    "name": "p2_",
+    "type": "address"
+   },
+   {
+    "internalType": "contract RegistryModel",
+    "name": "reg_",
+    "type": "address"
+   }
+  ],
+  "stateMutability": "nonpayable",
+  "type": "constructor"
+ },
+ {
+  "inputs": [],
+  "name": "EMERGENCY",
+  "outputs": [
+   {
+    "internalType": "uint8",
+    "name": "",
+    "type": "uint8"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "MAX_EXPOSED_TOKENS_PER_ROUTER",
+  "outputs": [
+   {
+    "internalType": "uint256",
+    "name": "",
+    "type": "uint256"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "MODE_EMERGENCY",
+  "outputs": [
+   {
+    "internalType": "uint8",
+    "name": "",
+    "type": "uint8"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "MS_ACTIVE",
+  "outputs": [
+   {
+    "internalType": "uint8",
+    "name": "",
+    "type": "uint8"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "MS_REVOKED",
+  "outputs": [
+   {
+    "internalType": "uint8",
+    "name": "",
+    "type": "uint8"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "NORMAL",
+  "outputs": [
+   {
+    "internalType": "uint8",
+    "name": "",
+    "type": "uint8"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "REVISION",
+  "outputs": [
+   {
+    "internalType": "uint8",
+    "name": "",
+    "type": "uint8"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "RV_CUSTOMER",
+  "outputs": [
+   {
+    "internalType": "uint8",
+    "name": "",
+    "type": "uint8"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "RV_NONE",
+  "outputs": [
+   {
+    "internalType": "uint8",
+    "name": "",
+    "type": "uint8"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "RV_SUPERSEDED_MIGRATION",
+  "outputs": [
+   {
+    "internalType": "uint8",
+    "name": "",
+    "type": "uint8"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "RV_SUPERSEDED_REVISION",
+  "outputs": [
+   {
+    "internalType": "uint8",
+    "name": "",
+    "type": "uint8"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "TOKEN_BASE",
+  "outputs": [
+   {
+    "internalType": "uint256",
+    "name": "",
+    "type": "uint256"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "address",
+    "name": "customer",
+    "type": "address"
+   },
+   {
+    "internalType": "uint256",
+    "name": "creationNonce",
+    "type": "uint256"
+   },
+   {
+    "internalType": "address",
+    "name": "router",
+    "type": "address"
+   },
+   {
+    "components": [
+     {
+      "internalType": "uint64",
+      "name": "expiresAt",
+      "type": "uint64"
+     },
+     {
+      "internalType": "uint64",
+      "name": "periodSeconds",
+      "type": "uint64"
+     },
+     {
+      "internalType": "uint64",
+      "name": "anchorStartsAt",
+      "type": "uint64"
+     },
+     {
+      "internalType": "uint64",
+      "name": "maxQuoteAge",
+      "type": "uint64"
+     },
+     {
+      "internalType": "uint64",
+      "name": "minInterval",
+      "type": "uint64"
+     },
+     {
+      "internalType": "uint32",
+      "name": "maxChargesPerPeriod",
+      "type": "uint32"
+     },
+     {
+      "internalType": "uint16",
+      "name": "currency",
+      "type": "uint16"
+     },
+     {
+      "internalType": "uint16",
+      "name": "maxFeeBps",
+      "type": "uint16"
+     },
+     {
+      "internalType": "uint8",
+      "name": "nTokens",
+      "type": "uint8"
+     },
+     {
+      "internalType": "bytes32",
+      "name": "merchantId",
+      "type": "bytes32"
+     },
+     {
+      "internalType": "bytes32",
+      "name": "recipientPolicy",
+      "type": "bytes32"
+     },
+     {
+      "internalType": "bytes32",
+      "name": "subscriptionRef",
+      "type": "bytes32"
+     },
+     {
+      "internalType": "bytes32",
+      "name": "extensionsHash",
+      "type": "bytes32"
+     },
+     {
+      "internalType": "address[3]",
+      "name": "tokens",
+      "type": "address[3]"
+     },
+     {
+      "internalType": "uint256[6][3]",
+      "name": "caps",
+      "type": "uint256[6][3]"
+     },
+     {
+      "internalType": "uint256[6]",
+      "name": "fiat",
+      "type": "uint256[6]"
+     },
+     {
+      "internalType": "uint256",
+      "name": "boundsMin",
+      "type": "uint256"
+     },
+     {
+      "internalType": "uint256",
+      "name": "boundsMax",
+      "type": "uint256"
+     }
+    ],
+    "internalType": "struct ContainModel.Terms",
+    "name": "terms",
+    "type": "tuple"
+   },
+   {
+    "components": [
+     {
+      "internalType": "uint8",
+      "name": "accountMode",
+      "type": "uint8"
+     },
+     {
+      "internalType": "bytes32",
+      "name": "accountCodeHash",
+      "type": "bytes32"
+     },
+     {
+      "internalType": "address",
+      "name": "delegate",
+      "type": "address"
+     },
+     {
+      "internalType": "bytes32",
+      "name": "delegateCodeHash",
+      "type": "bytes32"
+     },
+     {
+      "internalType": "bytes32",
+      "name": "implementationFamily",
+      "type": "bytes32"
+     },
+     {
+      "internalType": "uint32",
+      "name": "pinVersion",
+      "type": "uint32"
+     },
+     {
+      "internalType": "uint8",
+      "name": "signatureMode",
+      "type": "uint8"
+     }
+    ],
+    "internalType": "struct PinModel.Pin",
+    "name": "pin",
+    "type": "tuple"
+   },
+   {
+    "internalType": "uint256",
+    "name": "mutant",
+    "type": "uint256"
+   }
+  ],
+  "name": "activate",
+  "outputs": [
+   {
+    "internalType": "bytes32",
+    "name": "lid",
+    "type": "bytes32"
+   },
+   {
+    "internalType": "bytes32",
+    "name": "mid",
+    "type": "bytes32"
+   }
+  ],
+  "stateMutability": "nonpayable",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "bytes32",
+    "name": "predecessorId",
+    "type": "bytes32"
+   },
+   {
+    "internalType": "uint8",
+    "name": "kind",
+    "type": "uint8"
+   },
+   {
+    "internalType": "address",
+    "name": "newRouter",
+    "type": "address"
+   },
+   {
+    "components": [
+     {
+      "internalType": "uint64",
+      "name": "expiresAt",
+      "type": "uint64"
+     },
+     {
+      "internalType": "uint64",
+      "name": "periodSeconds",
+      "type": "uint64"
+     },
+     {
+      "internalType": "uint64",
+      "name": "anchorStartsAt",
+      "type": "uint64"
+     },
+     {
+      "internalType": "uint64",
+      "name": "maxQuoteAge",
+      "type": "uint64"
+     },
+     {
+      "internalType": "uint64",
+      "name": "minInterval",
+      "type": "uint64"
+     },
+     {
+      "internalType": "uint32",
+      "name": "maxChargesPerPeriod",
+      "type": "uint32"
+     },
+     {
+      "internalType": "uint16",
+      "name": "currency",
+      "type": "uint16"
+     },
+     {
+      "internalType": "uint16",
+      "name": "maxFeeBps",
+      "type": "uint16"
+     },
+     {
+      "internalType": "uint8",
+      "name": "nTokens",
+      "type": "uint8"
+     },
+     {
+      "internalType": "bytes32",
+      "name": "merchantId",
+      "type": "bytes32"
+     },
+     {
+      "internalType": "bytes32",
+      "name": "recipientPolicy",
+      "type": "bytes32"
+     },
+     {
+      "internalType": "bytes32",
+      "name": "subscriptionRef",
+      "type": "bytes32"
+     },
+     {
+      "internalType": "bytes32",
+      "name": "extensionsHash",
+      "type": "bytes32"
+     },
+     {
+      "internalType": "address[3]",
+      "name": "tokens",
+      "type": "address[3]"
+     },
+     {
+      "internalType": "uint256[6][3]",
+      "name": "caps",
+      "type": "uint256[6][3]"
+     },
+     {
+      "internalType": "uint256[6]",
+      "name": "fiat",
+      "type": "uint256[6]"
+     },
+     {
+      "internalType": "uint256",
+      "name": "boundsMin",
+      "type": "uint256"
+     },
+     {
+      "internalType": "uint256",
+      "name": "boundsMax",
+      "type": "uint256"
+     }
+    ],
+    "internalType": "struct ContainModel.Terms",
+    "name": "newTerms",
+    "type": "tuple"
+   },
+   {
+    "components": [
+     {
+      "internalType": "uint8",
+      "name": "accountMode",
+      "type": "uint8"
+     },
+     {
+      "internalType": "bytes32",
+      "name": "accountCodeHash",
+      "type": "bytes32"
+     },
+     {
+      "internalType": "address",
+      "name": "delegate",
+      "type": "address"
+     },
+     {
+      "internalType": "bytes32",
+      "name": "delegateCodeHash",
+      "type": "bytes32"
+     },
+     {
+      "internalType": "bytes32",
+      "name": "implementationFamily",
+      "type": "bytes32"
+     },
+     {
+      "internalType": "uint32",
+      "name": "pinVersion",
+      "type": "uint32"
+     },
+     {
+      "internalType": "uint8",
+      "name": "signatureMode",
+      "type": "uint8"
+     }
+    ],
+    "internalType": "struct PinModel.Pin",
+    "name": "newPin",
+    "type": "tuple"
+   },
+   {
+    "components": [
+     {
+      "internalType": "address",
+      "name": "customer",
+      "type": "address"
+     },
+     {
+      "internalType": "bytes32",
+      "name": "lineageId",
+      "type": "bytes32"
+     },
+     {
+      "internalType": "bytes32",
+      "name": "predecessorId",
+      "type": "bytes32"
+     },
+     {
+      "internalType": "uint8",
+      "name": "kind",
+      "type": "uint8"
+     },
+     {
+      "internalType": "bytes32",
+      "name": "newTermsHash",
+      "type": "bytes32"
+     },
+     {
+      "internalType": "address",
+      "name": "newRouter",
+      "type": "address"
+     },
+     {
+      "internalType": "bytes32",
+      "name": "newRouterCodeHash",
+      "type": "bytes32"
+     },
+     {
+      "internalType": "uint32",
+      "name": "newRouterVersion",
+      "type": "uint32"
+     },
+     {
+      "internalType": "bytes32",
+      "name": "termsSnapshotHash",
+      "type": "bytes32"
+     },
+     {
+      "internalType": "uint32",
+      "name": "widenedMask",
+      "type": "uint32"
+     },
+     {
+      "components": [
+       {
+        "internalType": "uint8",
+        "name": "accountMode",
+        "type": "uint8"
+       },
+       {
+        "internalType": "bytes32",
+        "name": "accountCodeHash",
+        "type": "bytes32"
+       },
+       {
+        "internalType": "address",
+        "name": "delegate",
+        "type": "address"
+       },
+       {
+        "internalType": "bytes32",
+        "name": "delegateCodeHash",
+        "type": "bytes32"
+       },
+       {
+        "internalType": "bytes32",
+        "name": "implementationFamily",
+        "type": "bytes32"
+       },
+       {
+        "internalType": "uint32",
+        "name": "pinVersion",
+        "type": "uint32"
+       },
+       {
+        "internalType": "uint8",
+        "name": "signatureMode",
+        "type": "uint8"
+       }
+      ],
+      "internalType": "struct PinModel.Pin",
+      "name": "accountPin",
+      "type": "tuple"
+     },
+     {
+      "internalType": "uint256",
+      "name": "deadline",
+      "type": "uint256"
+     },
+     {
+      "internalType": "uint256",
+      "name": "nonce",
+      "type": "uint256"
+     }
+    ],
+    "internalType": "struct MigrationModel.Auth",
+    "name": "auth",
+    "type": "tuple"
+   },
+   {
+    "components": [
+     {
+      "internalType": "bool",
+      "name": "senderIsCustomer",
+      "type": "bool"
+     },
+     {
+      "internalType": "uint8",
+      "name": "sigPath",
+      "type": "uint8"
+     },
+     {
+      "internalType": "bool",
+      "name": "sigOk",
+      "type": "bool"
+     }
+    ],
+    "internalType": "struct MigrationModel.Access",
+    "name": "access",
+    "type": "tuple"
+   },
+   {
+    "internalType": "uint256",
+    "name": "mutant",
+    "type": "uint256"
+   }
+  ],
+  "name": "activateSuccessor",
+  "outputs": [
+   {
+    "internalType": "bytes32",
+    "name": "newId",
+    "type": "bytes32"
+   }
+  ],
+  "stateMutability": "nonpayable",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "bytes32",
+    "name": "lineageId",
+    "type": "bytes32"
+   }
+  ],
+  "name": "activeMandateOf",
+  "outputs": [
+   {
+    "internalType": "bytes32",
+    "name": "",
+    "type": "bytes32"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "bytes32",
+    "name": "lineageId",
+    "type": "bytes32"
+   },
+   {
+    "internalType": "address",
+    "name": "router",
+    "type": "address"
+   },
+   {
+    "internalType": "uint256",
+    "name": "mutant",
+    "type": "uint256"
+   }
+  ],
+  "name": "authRouter",
+  "outputs": [
+   {
+    "internalType": "bool",
+    "name": "",
+    "type": "bool"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "bytes32",
+    "name": "predecessorId",
+    "type": "bytes32"
+   },
+   {
+    "internalType": "uint8",
+    "name": "kind",
+    "type": "uint8"
+   },
+   {
+    "internalType": "address",
+    "name": "newRouter",
+    "type": "address"
+   },
+   {
+    "components": [
+     {
+      "internalType": "uint64",
+      "name": "expiresAt",
+      "type": "uint64"
+     },
+     {
+      "internalType": "uint64",
+      "name": "periodSeconds",
+      "type": "uint64"
+     },
+     {
+      "internalType": "uint64",
+      "name": "anchorStartsAt",
+      "type": "uint64"
+     },
+     {
+      "internalType": "uint64",
+      "name": "maxQuoteAge",
+      "type": "uint64"
+     },
+     {
+      "internalType": "uint64",
+      "name": "minInterval",
+      "type": "uint64"
+     },
+     {
+      "internalType": "uint32",
+      "name": "maxChargesPerPeriod",
+      "type": "uint32"
+     },
+     {
+      "internalType": "uint16",
+      "name": "currency",
+      "type": "uint16"
+     },
+     {
+      "internalType": "uint16",
+      "name": "maxFeeBps",
+      "type": "uint16"
+     },
+     {
+      "internalType": "uint8",
+      "name": "nTokens",
+      "type": "uint8"
+     },
+     {
+      "internalType": "bytes32",
+      "name": "merchantId",
+      "type": "bytes32"
+     },
+     {
+      "internalType": "bytes32",
+      "name": "recipientPolicy",
+      "type": "bytes32"
+     },
+     {
+      "internalType": "bytes32",
+      "name": "subscriptionRef",
+      "type": "bytes32"
+     },
+     {
+      "internalType": "bytes32",
+      "name": "extensionsHash",
+      "type": "bytes32"
+     },
+     {
+      "internalType": "address[3]",
+      "name": "tokens",
+      "type": "address[3]"
+     },
+     {
+      "internalType": "uint256[6][3]",
+      "name": "caps",
+      "type": "uint256[6][3]"
+     },
+     {
+      "internalType": "uint256[6]",
+      "name": "fiat",
+      "type": "uint256[6]"
+     },
+     {
+      "internalType": "uint256",
+      "name": "boundsMin",
+      "type": "uint256"
+     },
+     {
+      "internalType": "uint256",
+      "name": "boundsMax",
+      "type": "uint256"
+     }
+    ],
+    "internalType": "struct ContainModel.Terms",
+    "name": "newTerms",
+    "type": "tuple"
+   },
+   {
+    "components": [
+     {
+      "internalType": "uint8",
+      "name": "accountMode",
+      "type": "uint8"
+     },
+     {
+      "internalType": "bytes32",
+      "name": "accountCodeHash",
+      "type": "bytes32"
+     },
+     {
+      "internalType": "address",
+      "name": "delegate",
+      "type": "address"
+     },
+     {
+      "internalType": "bytes32",
+      "name": "delegateCodeHash",
+      "type": "bytes32"
+     },
+     {
+      "internalType": "bytes32",
+      "name": "implementationFamily",
+      "type": "bytes32"
+     },
+     {
+      "internalType": "uint32",
+      "name": "pinVersion",
+      "type": "uint32"
+     },
+     {
+      "internalType": "uint8",
+      "name": "signatureMode",
+      "type": "uint8"
+     }
+    ],
+    "internalType": "struct PinModel.Pin",
+    "name": "newPin",
+    "type": "tuple"
+   },
+   {
+    "internalType": "uint256",
+    "name": "deadline",
+    "type": "uint256"
+   },
+   {
+    "internalType": "uint256",
+    "name": "nonce",
+    "type": "uint256"
+   }
+  ],
+  "name": "buildAuth",
+  "outputs": [
+   {
+    "components": [
+     {
+      "internalType": "address",
+      "name": "customer",
+      "type": "address"
+     },
+     {
+      "internalType": "bytes32",
+      "name": "lineageId",
+      "type": "bytes32"
+     },
+     {
+      "internalType": "bytes32",
+      "name": "predecessorId",
+      "type": "bytes32"
+     },
+     {
+      "internalType": "uint8",
+      "name": "kind",
+      "type": "uint8"
+     },
+     {
+      "internalType": "bytes32",
+      "name": "newTermsHash",
+      "type": "bytes32"
+     },
+     {
+      "internalType": "address",
+      "name": "newRouter",
+      "type": "address"
+     },
+     {
+      "internalType": "bytes32",
+      "name": "newRouterCodeHash",
+      "type": "bytes32"
+     },
+     {
+      "internalType": "uint32",
+      "name": "newRouterVersion",
+      "type": "uint32"
+     },
+     {
+      "internalType": "bytes32",
+      "name": "termsSnapshotHash",
+      "type": "bytes32"
+     },
+     {
+      "internalType": "uint32",
+      "name": "widenedMask",
+      "type": "uint32"
+     },
+     {
+      "components": [
+       {
+        "internalType": "uint8",
+        "name": "accountMode",
+        "type": "uint8"
+       },
+       {
+        "internalType": "bytes32",
+        "name": "accountCodeHash",
+        "type": "bytes32"
+       },
+       {
+        "internalType": "address",
+        "name": "delegate",
+        "type": "address"
+       },
+       {
+        "internalType": "bytes32",
+        "name": "delegateCodeHash",
+        "type": "bytes32"
+       },
+       {
+        "internalType": "bytes32",
+        "name": "implementationFamily",
+        "type": "bytes32"
+       },
+       {
+        "internalType": "uint32",
+        "name": "pinVersion",
+        "type": "uint32"
+       },
+       {
+        "internalType": "uint8",
+        "name": "signatureMode",
+        "type": "uint8"
+       }
+      ],
+      "internalType": "struct PinModel.Pin",
+      "name": "accountPin",
+      "type": "tuple"
+     },
+     {
+      "internalType": "uint256",
+      "name": "deadline",
+      "type": "uint256"
+     },
+     {
+      "internalType": "uint256",
+      "name": "nonce",
+      "type": "uint256"
+     }
+    ],
+    "internalType": "struct MigrationModel.Auth",
+    "name": "a",
+    "type": "tuple"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "address",
+    "name": "",
+    "type": "address"
+   }
+  ],
+  "name": "codeHashOf",
+  "outputs": [
+   {
+    "internalType": "bytes32",
+    "name": "",
+    "type": "bytes32"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "address",
+    "name": "router",
+    "type": "address"
+   },
+   {
+    "internalType": "bytes32",
+    "name": "mandateId",
+    "type": "bytes32"
+   },
+   {
+    "internalType": "address",
+    "name": "token",
+    "type": "address"
+   },
+   {
+    "internalType": "uint256",
+    "name": "amount",
+    "type": "uint256"
+   },
+   {
+    "internalType": "uint256",
+    "name": "cycleIndex",
+    "type": "uint256"
+   },
+   {
+    "components": [
+     {
+      "internalType": "uint8",
+      "name": "accountMode",
+      "type": "uint8"
+     },
+     {
+      "internalType": "bytes32",
+      "name": "accountCodeHash",
+      "type": "bytes32"
+     },
+     {
+      "internalType": "address",
+      "name": "delegate",
+      "type": "address"
+     },
+     {
+      "internalType": "bytes32",
+      "name": "delegateCodeHash",
+      "type": "bytes32"
+     },
+     {
+      "internalType": "bytes32",
+      "name": "implementationFamily",
+      "type": "bytes32"
+     },
+     {
+      "internalType": "uint32",
+      "name": "pinVersion",
+      "type": "uint32"
+     },
+     {
+      "internalType": "uint8",
+      "name": "signatureMode",
+      "type": "uint8"
+     }
+    ],
+    "internalType": "struct PinModel.Pin",
+    "name": "pin",
+    "type": "tuple"
+   },
+   {
+    "internalType": "uint256",
+    "name": "mutant",
+    "type": "uint256"
+   }
+  ],
+  "name": "consume",
+  "outputs": [],
+  "stateMutability": "nonpayable",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "bytes32",
+    "name": "",
+    "type": "bytes32"
+   }
+  ],
+  "name": "cycleCount",
+  "outputs": [
+   {
+    "internalType": "uint256",
+    "name": "",
+    "type": "uint256"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "bytes32",
+    "name": "",
+    "type": "bytes32"
+   }
+  ],
+  "name": "cycleEpoch",
+  "outputs": [
+   {
+    "internalType": "uint256",
+    "name": "",
+    "type": "uint256"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "bytes32",
+    "name": "",
+    "type": "bytes32"
+   },
+   {
+    "internalType": "uint256",
+    "name": "",
+    "type": "uint256"
+   },
+   {
+    "internalType": "uint256",
+    "name": "",
+    "type": "uint256"
+   }
+  ],
+  "name": "cycleSettled",
+  "outputs": [
+   {
+    "internalType": "bool",
+    "name": "",
+    "type": "bool"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "address",
+    "name": "c",
+    "type": "address"
+   },
+   {
+    "internalType": "address",
+    "name": "r",
+    "type": "address"
+   },
+   {
+    "internalType": "uint256",
+    "name": "i",
+    "type": "uint256"
+   }
+  ],
+  "name": "exposedAt",
+  "outputs": [
+   {
+    "internalType": "address",
+    "name": "",
+    "type": "address"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "address",
+    "name": "c",
+    "type": "address"
+   },
+   {
+    "internalType": "address",
+    "name": "r",
+    "type": "address"
+   }
+  ],
+  "name": "exposedCount",
+  "outputs": [
+   {
+    "internalType": "uint256",
+    "name": "",
+    "type": "uint256"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "address",
+    "name": "",
+    "type": "address"
+   },
+   {
+    "internalType": "address",
+    "name": "",
+    "type": "address"
+   },
+   {
+    "internalType": "address",
+    "name": "",
+    "type": "address"
+   }
+  ],
+  "name": "exposedPos",
+  "outputs": [
+   {
+    "internalType": "uint256",
+    "name": "",
+    "type": "uint256"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "bytes32",
+    "name": "id",
+    "type": "bytes32"
+   }
+  ],
+  "name": "getMandate",
+  "outputs": [
+   {
+    "components": [
+     {
+      "internalType": "bytes32",
+      "name": "id",
+      "type": "bytes32"
+     },
+     {
+      "internalType": "bytes32",
+      "name": "lineageId",
+      "type": "bytes32"
+     },
+     {
+      "internalType": "bytes32",
+      "name": "predecessorId",
+      "type": "bytes32"
+     },
+     {
+      "internalType": "bytes32",
+      "name": "termsKey",
+      "type": "bytes32"
+     },
+     {
+      "internalType": "bytes32",
+      "name": "pinKey",
+      "type": "bytes32"
+     },
+     {
+      "internalType": "bytes32",
+      "name": "parentSnapshotHash",
+      "type": "bytes32"
+     },
+     {
+      "internalType": "address",
+      "name": "customer",
+      "type": "address"
+     },
+     {
+      "internalType": "address",
+      "name": "router",
+      "type": "address"
+     },
+     {
+      "internalType": "uint32",
+      "name": "generation",
+      "type": "uint32"
+     },
+     {
+      "internalType": "uint8",
+      "name": "status",
+      "type": "uint8"
+     },
+     {
+      "internalType": "uint8",
+      "name": "reason",
+      "type": "uint8"
+     },
+     {
+      "internalType": "uint8",
+      "name": "pause",
+      "type": "uint8"
+     },
+     {
+      "internalType": "bool",
+      "name": "retired",
+      "type": "bool"
+     }
+    ],
+    "internalType": "struct MigrationModel.Mandate",
+    "name": "",
+    "type": "tuple"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "bytes32",
+    "name": "id",
+    "type": "bytes32"
+   },
+   {
+    "internalType": "address",
+    "name": "router",
+    "type": "address"
+   }
+  ],
+  "name": "isConsumable",
+  "outputs": [
+   {
+    "internalType": "bool",
+    "name": "",
+    "type": "bool"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "bytes32",
+    "name": "lid",
+    "type": "bytes32"
+   }
+  ],
+  "name": "lineageDigest",
+  "outputs": [
+   {
+    "internalType": "bytes32",
+    "name": "",
+    "type": "bytes32"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "bytes32",
+    "name": "",
+    "type": "bytes32"
+   },
+   {
+    "internalType": "uint256",
+    "name": "",
+    "type": "uint256"
+   }
+  ],
+  "name": "lineageMandateIds",
+  "outputs": [
+   {
+    "internalType": "bytes32",
+    "name": "",
+    "type": "bytes32"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "bytes32",
+    "name": "",
+    "type": "bytes32"
+   }
+  ],
+  "name": "lineages",
+  "outputs": [
+   {
+    "internalType": "address",
+    "name": "customer",
+    "type": "address"
+   },
+   {
+    "internalType": "bytes32",
+    "name": "activeMandateId",
+    "type": "bytes32"
+   },
+   {
+    "internalType": "uint32",
+    "name": "generation",
+    "type": "uint32"
+   },
+   {
+    "internalType": "uint32",
+    "name": "pinVersion",
+    "type": "uint32"
+   },
+   {
+    "internalType": "bool",
+    "name": "terminated",
+    "type": "bool"
+   },
+   {
+    "internalType": "bool",
+    "name": "exists",
+    "type": "bool"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "address",
+    "name": "",
+    "type": "address"
+   },
+   {
+    "internalType": "address",
+    "name": "",
+    "type": "address"
+   },
+   {
+    "internalType": "address",
+    "name": "",
+    "type": "address"
+   }
+  ],
+  "name": "live",
+  "outputs": [
+   {
+    "internalType": "uint32",
+    "name": "",
+    "type": "uint32"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "bytes32",
+    "name": "lineageId",
+    "type": "bytes32"
+   }
+  ],
+  "name": "mandateCount",
+  "outputs": [
+   {
+    "internalType": "uint256",
+    "name": "",
+    "type": "uint256"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "bytes32",
+    "name": "id",
+    "type": "bytes32"
+   }
+  ],
+  "name": "mandateDigest",
+  "outputs": [
+   {
+    "internalType": "bytes32",
+    "name": "",
+    "type": "bytes32"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "bytes32",
+    "name": "id",
+    "type": "bytes32"
+   }
+  ],
+  "name": "mandatePin",
+  "outputs": [
+   {
+    "components": [
+     {
+      "internalType": "uint8",
+      "name": "accountMode",
+      "type": "uint8"
+     },
+     {
+      "internalType": "bytes32",
+      "name": "accountCodeHash",
+      "type": "bytes32"
+     },
+     {
+      "internalType": "address",
+      "name": "delegate",
+      "type": "address"
+     },
+     {
+      "internalType": "bytes32",
+      "name": "delegateCodeHash",
+      "type": "bytes32"
+     },
+     {
+      "internalType": "bytes32",
+      "name": "implementationFamily",
+      "type": "bytes32"
+     },
+     {
+      "internalType": "uint32",
+      "name": "pinVersion",
+      "type": "uint32"
+     },
+     {
+      "internalType": "uint8",
+      "name": "signatureMode",
+      "type": "uint8"
+     }
+    ],
+    "internalType": "struct PinModel.Pin",
+    "name": "",
+    "type": "tuple"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "bytes32",
+    "name": "id",
+    "type": "bytes32"
+   }
+  ],
+  "name": "mandateTerms",
+  "outputs": [
+   {
+    "components": [
+     {
+      "internalType": "uint64",
+      "name": "expiresAt",
+      "type": "uint64"
+     },
+     {
+      "internalType": "uint64",
+      "name": "periodSeconds",
+      "type": "uint64"
+     },
+     {
+      "internalType": "uint64",
+      "name": "anchorStartsAt",
+      "type": "uint64"
+     },
+     {
+      "internalType": "uint64",
+      "name": "maxQuoteAge",
+      "type": "uint64"
+     },
+     {
+      "internalType": "uint64",
+      "name": "minInterval",
+      "type": "uint64"
+     },
+     {
+      "internalType": "uint32",
+      "name": "maxChargesPerPeriod",
+      "type": "uint32"
+     },
+     {
+      "internalType": "uint16",
+      "name": "currency",
+      "type": "uint16"
+     },
+     {
+      "internalType": "uint16",
+      "name": "maxFeeBps",
+      "type": "uint16"
+     },
+     {
+      "internalType": "uint8",
+      "name": "nTokens",
+      "type": "uint8"
+     },
+     {
+      "internalType": "bytes32",
+      "name": "merchantId",
+      "type": "bytes32"
+     },
+     {
+      "internalType": "bytes32",
+      "name": "recipientPolicy",
+      "type": "bytes32"
+     },
+     {
+      "internalType": "bytes32",
+      "name": "subscriptionRef",
+      "type": "bytes32"
+     },
+     {
+      "internalType": "bytes32",
+      "name": "extensionsHash",
+      "type": "bytes32"
+     },
+     {
+      "internalType": "address[3]",
+      "name": "tokens",
+      "type": "address[3]"
+     },
+     {
+      "internalType": "uint256[6][3]",
+      "name": "caps",
+      "type": "uint256[6][3]"
+     },
+     {
+      "internalType": "uint256[6]",
+      "name": "fiat",
+      "type": "uint256[6]"
+     },
+     {
+      "internalType": "uint256",
+      "name": "boundsMin",
+      "type": "uint256"
+     },
+     {
+      "internalType": "uint256",
+      "name": "boundsMax",
+      "type": "uint256"
+     }
+    ],
+    "internalType": "struct ContainModel.Terms",
+    "name": "",
+    "type": "tuple"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "p2",
+  "outputs": [
+   {
+    "internalType": "contract Permit2Mock",
+    "name": "",
+    "type": "address"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "address",
+    "name": "router",
+    "type": "address"
+   },
+   {
+    "internalType": "bytes32",
+    "name": "mandateId",
+    "type": "bytes32"
+   },
+   {
+    "internalType": "address",
+    "name": "token",
+    "type": "address"
+   },
+   {
+    "internalType": "uint256",
+    "name": "amount",
+    "type": "uint256"
+   },
+   {
+    "internalType": "uint256",
+    "name": "cycleIndex",
+    "type": "uint256"
+   },
+   {
+    "components": [
+     {
+      "internalType": "uint8",
+      "name": "accountMode",
+      "type": "uint8"
+     },
+     {
+      "internalType": "bytes32",
+      "name": "accountCodeHash",
+      "type": "bytes32"
+     },
+     {
+      "internalType": "address",
+      "name": "delegate",
+      "type": "address"
+     },
+     {
+      "internalType": "bytes32",
+      "name": "delegateCodeHash",
+      "type": "bytes32"
+     },
+     {
+      "internalType": "bytes32",
+      "name": "implementationFamily",
+      "type": "bytes32"
+     },
+     {
+      "internalType": "uint32",
+      "name": "pinVersion",
+      "type": "uint32"
+     },
+     {
+      "internalType": "uint8",
+      "name": "signatureMode",
+      "type": "uint8"
+     }
+    ],
+    "internalType": "struct PinModel.Pin",
+    "name": "pin",
+    "type": "tuple"
+   },
+   {
+    "internalType": "uint256",
+    "name": "mutant",
+    "type": "uint256"
+   }
+  ],
+  "name": "probe",
+  "outputs": [
+   {
+    "internalType": "bool",
+    "name": "",
+    "type": "bool"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "bytes32",
+    "name": "mandateId",
+    "type": "bytes32"
+   },
+   {
+    "internalType": "address",
+    "name": "token",
+    "type": "address"
+   },
+   {
+    "internalType": "uint256",
+    "name": "mutant",
+    "type": "uint256"
+   }
+  ],
+  "name": "reduceDropToken",
+  "outputs": [],
+  "stateMutability": "nonpayable",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "reg",
+  "outputs": [
+   {
+    "internalType": "contract RegistryModel",
+    "name": "",
+    "type": "address"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "bytes32",
+    "name": "mandateId",
+    "type": "bytes32"
+   },
+   {
+    "internalType": "uint256",
+    "name": "mutant",
+    "type": "uint256"
+   }
+  ],
+  "name": "retire",
+  "outputs": [],
+  "stateMutability": "nonpayable",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "bytes32",
+    "name": "mandateId",
+    "type": "bytes32"
+   },
+   {
+    "internalType": "bool",
+    "name": "senderIsCustomer",
+    "type": "bool"
+   },
+   {
+    "internalType": "uint256",
+    "name": "mutant",
+    "type": "uint256"
+   }
+  ],
+  "name": "revoke",
+  "outputs": [],
+  "stateMutability": "nonpayable",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "address",
+    "name": "c",
+    "type": "address"
+   },
+   {
+    "internalType": "address",
+    "name": "r",
+    "type": "address"
+   },
+   {
+    "internalType": "address",
+    "name": "t",
+    "type": "address"
+   },
+   {
+    "internalType": "uint256",
+    "name": "n",
+    "type": "uint256"
+   }
+  ],
+  "name": "seedLive",
+  "outputs": [],
+  "stateMutability": "nonpayable",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "address",
+    "name": "account",
+    "type": "address"
+   },
+   {
+    "internalType": "bytes32",
+    "name": "h",
+    "type": "bytes32"
+   }
+  ],
+  "name": "setCodeHash",
+  "outputs": [],
+  "stateMutability": "nonpayable",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "bytes32",
+    "name": "mandateId",
+    "type": "bytes32"
+   },
+   {
+    "internalType": "uint8",
+    "name": "bit",
+    "type": "uint8"
+   },
+   {
+    "internalType": "bool",
+    "name": "on",
+    "type": "bool"
+   }
+  ],
+  "name": "setPause",
+  "outputs": [],
+  "stateMutability": "nonpayable",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "bytes32",
+    "name": "mandateId",
+    "type": "bytes32"
+   },
+   {
+    "components": [
+     {
+      "internalType": "uint8",
+      "name": "accountMode",
+      "type": "uint8"
+     },
+     {
+      "internalType": "bytes32",
+      "name": "accountCodeHash",
+      "type": "bytes32"
+     },
+     {
+      "internalType": "address",
+      "name": "delegate",
+      "type": "address"
+     },
+     {
+      "internalType": "bytes32",
+      "name": "delegateCodeHash",
+      "type": "bytes32"
+     },
+     {
+      "internalType": "bytes32",
+      "name": "implementationFamily",
+      "type": "bytes32"
+     },
+     {
+      "internalType": "uint32",
+      "name": "pinVersion",
+      "type": "uint32"
+     },
+     {
+      "internalType": "uint8",
+      "name": "signatureMode",
+      "type": "uint8"
+     }
+    ],
+    "internalType": "struct PinModel.Pin",
+    "name": "newPin",
+    "type": "tuple"
+   },
+   {
+    "internalType": "uint256",
+    "name": "deadline",
+    "type": "uint256"
+   },
+   {
+    "internalType": "uint256",
+    "name": "nonce",
+    "type": "uint256"
+   },
+   {
+    "components": [
+     {
+      "internalType": "bool",
+      "name": "senderIsCustomer",
+      "type": "bool"
+     },
+     {
+      "internalType": "uint8",
+      "name": "sigPath",
+      "type": "uint8"
+     },
+     {
+      "internalType": "bool",
+      "name": "sigOk",
+      "type": "bool"
+     }
+    ],
+    "internalType": "struct MigrationModel.Access",
+    "name": "access",
+    "type": "tuple"
+   },
+   {
+    "internalType": "uint256",
+    "name": "mutant",
+    "type": "uint256"
+   }
+  ],
+  "name": "updateAccountPin",
+  "outputs": [],
+  "stateMutability": "nonpayable",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "address",
+    "name": "",
+    "type": "address"
+   },
+   {
+    "internalType": "uint256",
+    "name": "",
+    "type": "uint256"
+   }
+  ],
+  "name": "usedNonce",
+  "outputs": [
+   {
+    "internalType": "bool",
+    "name": "",
+    "type": "bool"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "bytes32",
+    "name": "",
+    "type": "bytes32"
+   },
+   {
+    "internalType": "address",
+    "name": "",
+    "type": "address"
+   }
+  ],
+  "name": "usedTotal",
+  "outputs": [
+   {
+    "internalType": "uint256",
+    "name": "",
+    "type": "uint256"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "address",
+    "name": "router",
+    "type": "address"
+   },
+   {
+    "internalType": "bytes32",
+    "name": "mandateId",
+    "type": "bytes32"
+   },
+   {
+    "internalType": "address",
+    "name": "token",
+    "type": "address"
+   },
+   {
+    "internalType": "uint256",
+    "name": "amount",
+    "type": "uint256"
+   },
+   {
+    "internalType": "uint256",
+    "name": "cycleIndex",
+    "type": "uint256"
+   },
+   {
+    "internalType": "uint256",
+    "name": "mutant",
+    "type": "uint256"
+   }
+  ],
+  "name": "wouldConsume",
+  "outputs": [
+   {
+    "internalType": "bool",
+    "name": "",
+    "type": "bool"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "anonymous": false,
+  "inputs": [
+   {
+    "indexed": true,
+    "internalType": "bytes32",
+    "name": "mandateId",
+    "type": "bytes32"
+   },
+   {
+    "indexed": false,
+    "internalType": "uint32",
+    "name": "pinVersion",
+    "type": "uint32"
+   }
+  ],
+  "name": "AccountPinUpdated",
+  "type": "event"
+ },
+ {
+  "anonymous": false,
+  "inputs": [
+   {
+    "indexed": true,
+    "internalType": "bytes32",
+    "name": "lineageId",
+    "type": "bytes32"
+   },
+   {
+    "indexed": true,
+    "internalType": "bytes32",
+    "name": "mandateId",
+    "type": "bytes32"
+   }
+  ],
+  "name": "MandateActivated",
+  "type": "event"
+ },
+ {
+  "anonymous": false,
+  "inputs": [
+   {
+    "indexed": true,
+    "internalType": "bytes32",
+    "name": "mandateId",
+    "type": "bytes32"
+   }
+  ],
+  "name": "MandateRetired",
+  "type": "event"
+ },
+ {
+  "anonymous": false,
+  "inputs": [
+   {
+    "indexed": true,
+    "internalType": "bytes32",
+    "name": "lineageId",
+    "type": "bytes32"
+   },
+   {
+    "indexed": true,
+    "internalType": "bytes32",
+    "name": "mandateId",
+    "type": "bytes32"
+   }
+  ],
+  "name": "MandateRevoked",
+  "type": "event"
+ },
+ {
+  "anonymous": false,
+  "inputs": [
+   {
+    "indexed": true,
+    "internalType": "bytes32",
+    "name": "lineageId",
+    "type": "bytes32"
+   },
+   {
+    "indexed": true,
+    "internalType": "bytes32",
+    "name": "predecessorId",
+    "type": "bytes32"
+   },
+   {
+    "indexed": false,
+    "internalType": "bytes32",
+    "name": "newId",
+    "type": "bytes32"
+   },
+   {
+    "indexed": false,
+    "internalType": "uint8",
+    "name": "kind",
+    "type": "uint8"
+   }
+  ],
+  "name": "MandateSuperseded",
+  "type": "event"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "address",
+    "name": "customer",
+    "type": "address"
+   },
+   {
+    "internalType": "uint8",
+    "name": "field",
+    "type": "uint8"
+   }
+  ],
+  "name": "AccountCodeChanged",
+  "type": "error"
+ },
+ {
+  "inputs": [],
+  "name": "AccountPinMalformed",
+  "type": "error"
+ },
+ {
+  "inputs": [],
+  "name": "AccountPinMismatch",
+  "type": "error"
+ },
+ {
+  "inputs": [],
+  "name": "AuthorizationExpired",
+  "type": "error"
+ },
+ {
+  "inputs": [],
+  "name": "AuthorizationMismatch",
+  "type": "error"
+ },
+ {
+  "inputs": [],
+  "name": "AuthorizationReplayed",
+  "type": "error"
+ },
+ {
+  "inputs": [],
+  "name": "ExposureLimit",
+  "type": "error"
+ },
+ {
+  "inputs": [],
+  "name": "ExtensionsNotSupported",
+  "type": "error"
+ },
+ {
+  "inputs": [],
+  "name": "LineageConstantsChanged",
+  "type": "error"
+ },
+ {
+  "inputs": [],
+  "name": "MandateNotActive",
+  "type": "error"
+ },
+ {
+  "inputs": [],
+  "name": "MandateNotConsumable",
+  "type": "error"
+ },
+ {
+  "inputs": [],
+  "name": "ModeMismatch",
+  "type": "error"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "address",
+    "name": "token",
+    "type": "address"
+   }
+  ],
+  "name": "NewPermissionMissing",
+  "type": "error"
+ },
+ {
+  "inputs": [],
+  "name": "NoTokensLeft",
+  "type": "error"
+ },
+ {
+  "inputs": [],
+  "name": "NotCustomer",
+  "type": "error"
+ },
+ {
+  "inputs": [],
+  "name": "NotRetirable",
+  "type": "error"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "address",
+    "name": "token",
+    "type": "address"
+   }
+  ],
+  "name": "OldPermissionNotRevoked",
+  "type": "error"
+ },
+ {
+  "inputs": [],
+  "name": "PaymentAlreadySettled",
+  "type": "error"
+ },
+ {
+  "inputs": [],
+  "name": "PinHashMismatch",
+  "type": "error"
+ },
+ {
+  "inputs": [],
+  "name": "PinVersionMismatch",
+  "type": "error"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "address",
+    "name": "token",
+    "type": "address"
+   }
+  ],
+  "name": "ResidualAllowanceUnbounded",
+  "type": "error"
+ },
+ {
+  "inputs": [],
+  "name": "RouterNotBindable",
+  "type": "error"
+ },
+ {
+  "inputs": [],
+  "name": "RouterNotChargeable",
+  "type": "error"
+ },
+ {
+  "inputs": [],
+  "name": "SignatureModeNotPermitted",
+  "type": "error"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "uint8",
+    "name": "reason",
+    "type": "uint8"
+   }
+  ],
+  "name": "TermsInvalid",
+  "type": "error"
+ },
+ {
+  "inputs": [],
+  "name": "TermsNotContained",
+  "type": "error"
+ },
+ {
+  "inputs": [],
+  "name": "TokenNotInMandate",
+  "type": "error"
+ },
+ {
+  "inputs": [],
+  "name": "TokenPerPaymentCapExceeded",
+  "type": "error"
+ },
+ {
+  "inputs": [],
+  "name": "TokenTotalCapExceeded",
+  "type": "error"
+ },
+ {
+  "inputs": [],
+  "name": "UnknownMandate",
+  "type": "error"
+ },
+ {
+  "inputs": [],
+  "name": "UnsafeCast",
+  "type": "error"
+ },
+ {
+  "inputs": [],
+  "name": "WidenedMaskMismatch",
+  "type": "error"
+ },
+ {
+  "inputs": [],
+  "name": "WrongKind",
+  "type": "error"
+ },
+ {
+  "inputs": [],
+  "name": "WrongPredecessor",
+  "type": "error"
+ },
+ {
+  "inputs": [],
+  "name": "WrongRouter",
+  "type": "error"
+ }
+]

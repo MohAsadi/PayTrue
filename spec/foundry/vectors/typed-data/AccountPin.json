@@ -1,0 +1,68 @@
+{
+ "types": {
+  "EIP712Domain": [
+   {
+    "name": "name",
+    "type": "string"
+   },
+   {
+    "name": "version",
+    "type": "string"
+   },
+   {
+    "name": "chainId",
+    "type": "uint256"
+   },
+   {
+    "name": "verifyingContract",
+    "type": "address"
+   }
+  ],
+  "AccountPin": [
+   {
+    "name": "accountMode",
+    "type": "uint8"
+   },
+   {
+    "name": "accountCodeHash",
+    "type": "bytes32"
+   },
+   {
+    "name": "delegate",
+    "type": "address"
+   },
+   {
+    "name": "delegateCodeHash",
+    "type": "bytes32"
+   },
+   {
+    "name": "implementationFamily",
+    "type": "bytes32"
+   },
+   {
+    "name": "pinVersion",
+    "type": "uint32"
+   },
+   {
+    "name": "signatureMode",
+    "type": "uint8"
+   }
+  ]
+ },
+ "primaryType": "AccountPin",
+ "domain": {
+  "name": "FastPay Mandates",
+  "version": "1",
+  "chainId": "84532",
+  "verifyingContract": "0x2222222222222222222222222222222222222222"
+ },
+ "message": {
+  "accountMode": "2",
+  "accountCodeHash": "0x4a37830a39af172052f51de869b4cdb29187b16a71da5457fca733c4db241364",
+  "delegate": "0xabababababababababababababababababababab",
+  "delegateCodeHash": "0x00e909366694deb1e4fbbd183b70356e899ca8dcca5ecf975177e3ec29c1e052",
+  "implementationFamily": "0x41e7cea110e32333d68057a4496a860f2f362502e359b0971b6b6544c205e24c",
+  "pinVersion": "1",
+  "signatureMode": "1"
+ }
+}

@@ -1,0 +1,205 @@
+{
+ "bytecodeHash": "none",
+ "contracts": {
+  "AllowanceMath": {
+   "abiEntries": 0,
+   "abiSha256": "0x37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+   "file": "src/Permit2Mock.sol",
+   "kind": "library",
+   "selectors": 0
+  },
+  "ContainModel": {
+   "abiEntries": 0,
+   "abiSha256": "0x37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+   "file": "src/ContainModel.sol",
+   "kind": "library",
+   "selectors": 0
+  },
+  "FastPayTypes": {
+   "abiEntries": 1,
+   "abiSha256": "0xe1b97cf595ffbb577dfc3ab50ffe87691589fa0d282a6d52c63c57b0775ad047",
+   "file": "src/generated/FastPayTypes.sol",
+   "kind": "library",
+   "selectors": 0
+  },
+  "HashModel": {
+   "abiEntries": 0,
+   "abiSha256": "0x37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+   "file": "src/HashModel.sol",
+   "kind": "library",
+   "selectors": 0
+  },
+  "MigrationModel": {
+   "abiEntries": 89,
+   "abiSha256": "0xb39f475fa972e3b242d4f8bb7cabe6a185db4173f7c81b71292002af0e05a029",
+   "exceedsEip170Limit24576": true,
+   "exceedsEip3860InitLimit49152": false,
+   "file": "src/MigrationModel.sol",
+   "initSize": 26163,
+   "kind": "contract",
+   "runtimeSize": 25900,
+   "selectors": 48,
+   "storageLayoutSha256": "0xd6cbf2ce708e7cf3649c6dca9f00af87ea12e99ab4e080ef13175a778b84fd49",
+   "storageVariables": 16
+  },
+  "Permit2Mock": {
+   "abiEntries": 26,
+   "abiSha256": "0x182ecd856190e61f8bb0d59d70466c8842406f8eaa15d1595695d68947962734",
+   "exceedsEip170Limit24576": false,
+   "exceedsEip3860InitLimit49152": false,
+   "file": "src/Permit2Mock.sol",
+   "initSize": 4232,
+   "kind": "contract",
+   "runtimeSize": 4205,
+   "selectors": 17,
+   "storageLayoutSha256": "0x94c5a7829075575fc8c9f0d8313c34786e908ce8b8ca63d078c19908b37b2c44",
+   "storageVariables": 6
+  },
+  "PinModel": {
+   "abiEntries": 0,
+   "abiSha256": "0x37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+   "file": "src/PinModel.sol",
+   "kind": "library",
+   "selectors": 0
+  },
+  "RegistryModel": {
+   "abiEntries": 44,
+   "abiSha256": "0x11fcc908c78617d5d7f16d858cebfbe20ead50d45baa5fe606e17074bfb962b0",
+   "exceedsEip170Limit24576": false,
+   "exceedsEip3860InitLimit49152": false,
+   "file": "src/RegistryModel.sol",
+   "initSize": 4855,
+   "kind": "contract",
+   "runtimeSize": 4828,
+   "selectors": 38,
+   "storageLayoutSha256": "0xa3823bcb454a9842b18d92432c20e36eae4a74404c04f755757b9a2d3f1ce1d1",
+   "storageVariables": 4
+  },
+  "SignerSetModel": {
+   "abiEntries": 25,
+   "abiSha256": "0x2fa2320d1c6d0242b79e8713311316d59d40a9646de866628877212ceca5f05e",
+   "exceedsEip170Limit24576": false,
+   "exceedsEip3860InitLimit49152": false,
+   "file": "src/SignerSetModel.sol",
+   "initSize": 2747,
+   "kind": "contract",
+   "runtimeSize": 2625,
+   "selectors": 14,
+   "storageLayoutSha256": "0xdfdb86aa7ce564f46da153f1a996e29d480f8042e981e45b8b947b65c0385fb3",
+   "storageVariables": 5
+  },
+  "TermsShape": {
+   "abiEntries": 0,
+   "abiSha256": "0x37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+   "file": "src/ContainModel.sol",
+   "kind": "library",
+   "selectors": 0
+  },
+  "TimeModel": {
+   "abiEntries": 0,
+   "abiSha256": "0x37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+   "file": "src/TimeModel.sol",
+   "kind": "library",
+   "selectors": 0
+  },
+  "WidthLib": {
+   "abiEntries": 0,
+   "abiSha256": "0x37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+   "file": "src/WidthLib.sol",
+   "kind": "library",
+   "selectors": 0
+  }
+ },
+ "evmVersion": "cancun",
+ "forge": "forge Version: 1.8.5 | Commit SHA: 51a52c59cffd940f76eddd0b4bb1791aa4b5ac7f | Build Timestamp: 2026-10-05T17:01:32.131957300Z (1791219692) | Build Profile: dist",
+ "lint": {
+  "byRule": {
+   "block-timestamp": {
+    "count": 18,
+    "disposition": "ACCEPTED-BY-DESIGN",
+    "firstLocations": [
+     "src/MigrationModel.sol:163",
+     "src/Permit2Mock.sol:132",
+     "src/Permit2Mock.sol:151",
+     "src/MigrationModel.sol:351",
+     "src/MigrationModel.sol:351"
+    ],
+    "reason": "The protocol is defined on block.timestamp: expiry, windows, grace and the Permit2 boundary are time rules, with the boundary conditions tested (TimestampBoundary.t.sol)."
+   },
+   "calls-loop": {
+    "count": 4,
+    "disposition": "ACCEPTED-BOUNDED",
+    "firstLocations": [
+     "src/MigrationModel.sol:425",
+     "src/MigrationModel.sol:463",
+     "src/MigrationModel.sol:492",
+     "src/MigrationModel.sol:785"
+    ],
+    "reason": "External calls inside loops are Permit2 allowance reads (view) whose loops are bounded by MAX_TOKENS_PER_MANDATE or MAX_EXPOSED_TOKENS_PER_ROUTER (tools/loop_audit.py, LoopBounds.t.sol)."
+   },
+   "encode-packed-collision": {
+    "count": 2,
+    "disposition": "ACCEPTED-CONSTANTS",
+    "firstLocations": [
+     "src/generated/FastPayTypes.sol:228",
+     "src/generated/FastPayTypes.sol:230"
+    ],
+    "reason": "abi.encodePacked of the two compile-time constant strings (Permit2's witness stub and the witness type string), as Permit2 itself builds its type hash; no argument is chosen by a caller, so no collision can be induced. The array hashes use one dynamic argument."
+   },
+   "missing-zero-check": {
+    "count": 1,
+    "disposition": "ACCEPTED-MODEL",
+    "firstLocations": [
+     "src/Permit2Mock.sol:105"
+    ],
+    "reason": "Reported on the test hook of the Permit2 mock (setHook): address(0) means 'no hook' there. No production function is affected."
+   },
+   "require-revert-in-loop": {
+    "count": 11,
+    "disposition": "ACCEPTED-MODEL",
+    "firstLocations": [
+     "src/WidthLib.sol:35",
+     "src/WidthLib.sol:30",
+     "src/WidthLib.sol:15",
+     "src/WidthLib.sol:10",
+     "src/WidthLib.sol:20"
+    ],
+    "reason": "A predicate that fails inside a bounded loop reverts the whole call: that is the intended all-or-nothing behavior."
+   },
+   "unsafe-typecast": {
+    "count": 20,
+    "disposition": "ACCEPTED-MODEL",
+    "firstLocations": [
+     "src/WidthLib.sol:11",
+     "src/ContainModel.sol:204",
+     "src/Permit2Mock.sol:78",
+     "src/Permit2Mock.sol:78",
+     "src/WidthLib.sol:16"
+    ],
+    "reason": "Narrowing casts of the model are guarded: WidthLib refuses a value that does not fit before it narrows, and IntegerWidth.t.sol shows that every narrowing reverts instead of truncating. A production contract uses checked SafeCast."
+   },
+   "unused-return": {
+    "count": 4,
+    "disposition": "ACCEPTED-MODEL",
+    "firstLocations": [
+     "src/MigrationModel.sol:425",
+     "src/MigrationModel.sol:463",
+     "src/MigrationModel.sol:492",
+     "src/MigrationModel.sol:785"
+    ],
+    "reason": "The second and third values of Permit2.allowance (expiration or nonce) are not needed by that predicate."
+   }
+  },
+  "exitCode": 0,
+  "findings": 60,
+  "untriaged": []
+ },
+ "optimizerRuns": 20,
+ "problems": [],
+ "schema": 1,
+ "selectorCollisions": [],
+ "solc": "0.8.24",
+ "tool": "tools/build_report.py",
+ "verdict": "PASS",
+ "viaIR": true
+}

@@ -1,0 +1,355 @@
+{
+ "schema": 1,
+ "tool": "tools/contracts_tests.py",
+ "forge": "forge Version: 1.8.5",
+ "project": "contracts",
+ "total": 296,
+ "passed": 289,
+ "failed": 0,
+ "skipped": 7,
+ "suites": [
+  {
+   "suite": "test/Charge.t.sol:ChargeTest",
+   "passed": 39,
+   "failed": 0,
+   "skipped": 0
+  },
+  {
+   "suite": "test/Deploy.t.sol:DeployTest",
+   "passed": 3,
+   "failed": 0,
+   "skipped": 0
+  },
+  {
+   "suite": "test/Deployment.t.sol:DeploymentTest",
+   "passed": 3,
+   "failed": 0,
+   "skipped": 0
+  },
+  {
+   "suite": "test/Differential.t.sol:DifferentialTest",
+   "passed": 2,
+   "failed": 0,
+   "skipped": 0
+  },
+  {
+   "suite": "test/Differential.t.sol:FiatVectorsTest",
+   "passed": 1,
+   "failed": 0,
+   "skipped": 0
+  },
+  {
+   "suite": "test/Gas.t.sol:GasTest",
+   "passed": 11,
+   "failed": 0,
+   "skipped": 0
+  },
+  {
+   "suite": "test/Gateway.t.sol:GatewayTest",
+   "passed": 23,
+   "failed": 0,
+   "skipped": 0
+  },
+  {
+   "suite": "test/Invariants.t.sol:InvariantsTest",
+   "passed": 1,
+   "failed": 0,
+   "skipped": 0
+  },
+  {
+   "suite": "test/ManagerAlone.t.sol:ManagerAloneTest",
+   "passed": 6,
+   "failed": 0,
+   "skipped": 0
+  },
+  {
+   "suite": "test/Mandates.t.sol:MandatesTest",
+   "passed": 29,
+   "failed": 0,
+   "skipped": 0
+  },
+  {
+   "suite": "test/PayOnce.t.sol:PayOnceTest",
+   "passed": 15,
+   "failed": 0,
+   "skipped": 0
+  },
+  {
+   "suite": "test/Queue.t.sol:QueueTest",
+   "passed": 19,
+   "failed": 0,
+   "skipped": 0
+  },
+  {
+   "suite": "test/Quote.t.sol:QuoteTest",
+   "passed": 29,
+   "failed": 0,
+   "skipped": 0
+  },
+  {
+   "suite": "test/Registries.t.sol:RegistriesTest",
+   "passed": 28,
+   "failed": 0,
+   "skipped": 0
+  },
+  {
+   "suite": "test/RogueRouter.t.sol:PinLibTest",
+   "passed": 4,
+   "failed": 0,
+   "skipped": 0
+  },
+  {
+   "suite": "test/RogueRouter.t.sol:RogueRouterTest",
+   "passed": 6,
+   "failed": 0,
+   "skipped": 0
+  },
+  {
+   "suite": "test/Successor.t.sol:SuccessorTest",
+   "passed": 51,
+   "failed": 0,
+   "skipped": 0
+  },
+  {
+   "suite": "test/fork/ForkSuites.t.sol:ForkChargeTest",
+   "passed": 0,
+   "failed": 0,
+   "skipped": 1
+  },
+  {
+   "suite": "test/fork/ForkSuites.t.sol:ForkEvidenceTest",
+   "passed": 0,
+   "failed": 0,
+   "skipped": 1
+  },
+  {
+   "suite": "test/fork/ForkSuites.t.sol:ForkGasTest",
+   "passed": 0,
+   "failed": 0,
+   "skipped": 1
+  },
+  {
+   "suite": "test/fork/ForkSuites.t.sol:ForkPayOnceTest",
+   "passed": 0,
+   "failed": 0,
+   "skipped": 1
+  },
+  {
+   "suite": "test/fork/ForkSuites.t.sol:ForkQueueTest",
+   "passed": 0,
+   "failed": 0,
+   "skipped": 1
+  },
+  {
+   "suite": "test/fork/ForkSuites.t.sol:ForkQuoteTest",
+   "passed": 0,
+   "failed": 0,
+   "skipped": 1
+  },
+  {
+   "suite": "test/fork/ForkSuites.t.sol:ForkSuccessorTest",
+   "passed": 0,
+   "failed": 0,
+   "skipped": 1
+  },
+  {
+   "suite": "test/generated/EIP712Golden.t.sol:EIP712GoldenTest",
+   "passed": 19,
+   "failed": 0,
+   "skipped": 0
+  }
+ ],
+ "invariants": {
+  "invariant_ExposureIndexIsExact()": {
+   "runs": 128,
+   "calls": 12288,
+   "reverts": 26
+  }
+ },
+ "gas": [
+  {
+   "test": "test_Gas_Activation_OneAndThreeTokens",
+   "name": "activate, 1 token",
+   "value": 348185
+  },
+  {
+   "test": "test_Gas_Activation_OneAndThreeTokens",
+   "name": "activate, 3 tokens",
+   "value": 519065
+  },
+  {
+   "test": "test_Gas_Charge_WithQuote_ColdAndWarm",
+   "name": "charge with quote, first charge (cold, fresh counters)",
+   "value": 449990
+  },
+  {
+   "test": "test_Gas_Charge_WithQuote_ColdAndWarm",
+   "name": "charge with quote, second charge (warm within the test)",
+   "value": 334640
+  },
+  {
+   "test": "test_Gas_MarginalEntry_AndTheExtrapolationTo50",
+   "name": "marginal tx gas per entry",
+   "value": 579713
+  },
+  {
+   "test": "test_Gas_MarginalEntry_AndTheExtrapolationTo50",
+   "name": "extrapolated tx gas of a step of 50",
+   "value": 29722940
+  },
+  {
+   "test": "test_Gas_MaxBatchStepFitsTheBudget",
+   "name": "MAX_BATCH",
+   "value": 10
+  },
+  {
+   "test": "test_Gas_MaxBatchStepFitsTheBudget",
+   "name": "worst-case step, tx gas estimate",
+   "value": 6509340
+  },
+  {
+   "test": "test_Gas_MaxBatchStepFitsTheBudget",
+   "name": "budget",
+   "value": 8388608
+  },
+  {
+   "test": "test_Gas_Revoke_AndRetire",
+   "name": "revoke, 3 tokens (the last mandate on them)",
+   "value": 106429
+  },
+  {
+   "test": "test_Gas_Step_Emergency_1",
+   "name": "EMERGENCY k=1 exec gas",
+   "value": 837001
+  },
+  {
+   "test": "test_Gas_Step_Emergency_1",
+   "name": "EMERGENCY k=1 per entry",
+   "value": 837001
+  },
+  {
+   "test": "test_Gas_Step_Emergency_1",
+   "name": "EMERGENCY k=1 calldata bytes",
+   "value": 4004
+  },
+  {
+   "test": "test_Gas_Step_Emergency_1",
+   "name": "EMERGENCY k=1 tx gas estimate",
+   "value": 921471
+  },
+  {
+   "test": "test_Gas_Step_Emergency_10",
+   "name": "EMERGENCY k=10 exec gas",
+   "value": 5863730
+  },
+  {
+   "test": "test_Gas_Step_Emergency_10",
+   "name": "EMERGENCY k=10 per entry",
+   "value": 586373
+  },
+  {
+   "test": "test_Gas_Step_Emergency_10",
+   "name": "EMERGENCY k=10 calldata bytes",
+   "value": 39140
+  },
+  {
+   "test": "test_Gas_Step_Emergency_10",
+   "name": "EMERGENCY k=10 tx gas estimate",
+   "value": 6509350
+  },
+  {
+   "test": "test_Gas_Step_Emergency_5",
+   "name": "EMERGENCY k=5 exec gas",
+   "value": 3301958
+  },
+  {
+   "test": "test_Gas_Step_Emergency_5",
+   "name": "EMERGENCY k=5 per entry",
+   "value": 660391
+  },
+  {
+   "test": "test_Gas_Step_Emergency_5",
+   "name": "EMERGENCY k=5 calldata bytes",
+   "value": 19620
+  },
+  {
+   "test": "test_Gas_Step_Emergency_5",
+   "name": "EMERGENCY k=5 tx gas estimate",
+   "value": 3635858
+  },
+  {
+   "test": "test_Gas_Step_Normal_1",
+   "name": "NORMAL k=1 exec gas",
+   "value": 838187
+  },
+  {
+   "test": "test_Gas_Step_Normal_1",
+   "name": "NORMAL k=1 per entry",
+   "value": 838187
+  },
+  {
+   "test": "test_Gas_Step_Normal_1",
+   "name": "NORMAL k=1 calldata bytes",
+   "value": 4004
+  },
+  {
+   "test": "test_Gas_Step_Normal_1",
+   "name": "NORMAL k=1 tx gas estimate",
+   "value": 922627
+  },
+  {
+   "test": "test_Gas_Step_Normal_10",
+   "name": "NORMAL k=10 exec gas",
+   "value": 5699239
+  },
+  {
+   "test": "test_Gas_Step_Normal_10",
+   "name": "NORMAL k=10 per entry",
+   "value": 569923
+  },
+  {
+   "test": "test_Gas_Step_Normal_10",
+   "name": "NORMAL k=10 calldata bytes",
+   "value": 39140
+  },
+  {
+   "test": "test_Gas_Step_Normal_10",
+   "name": "NORMAL k=10 tx gas estimate",
+   "value": 6344559
+  },
+  {
+   "test": "test_Gas_Step_Normal_5",
+   "name": "NORMAL k=5 exec gas",
+   "value": 3234140
+  },
+  {
+   "test": "test_Gas_Step_Normal_5",
+   "name": "NORMAL k=5 per entry",
+   "value": 646828
+  },
+  {
+   "test": "test_Gas_Step_Normal_5",
+   "name": "NORMAL k=5 calldata bytes",
+   "value": 19620
+  },
+  {
+   "test": "test_Gas_Step_Normal_5",
+   "name": "NORMAL k=5 tx gas estimate",
+   "value": 3567860
+  }
+ ],
+ "handlerCoverage": [
+  "coverage: charge: 4",
+  "coverage: mandates in the ghost list: 22",
+  "coverage: charge refused with: 0x5e503d5a00000000000000000000000000000000000000000000000000000000",
+  "coverage: charge refused with: 0xf96fb07100000000000000000000000000000000000000000000000000000000",
+  "coverage: charge refused with: 0xf96fb07100000000000000000000000000000000000000000000000000000000",
+  "coverage: charge refused with: 0xcc3a81a700000000000000000000000000000000000000000000000000000000",
+  "coverage: charge refused with: 0xf96fb07100000000000000000000000000000000000000000000000000000000",
+  "coverage: charge refused with: 0xf96fb07100000000000000000000000000000000000000000000000000000000",
+  "coverage: charge refused with: 0xf96fb07100000000000000000000000000000000000000000000000000000000",
+  "coverage: charge refused with: 0xd81b2f2e00000000000000000000000000000000000000000000000000000000"
+ ],
+ "note": "The reference-model suites (spec/foundry), the Permit2 fork tests and the wallet lab are separate evidence and are not counted here.",
+ "generatedAt": "2026-10-17T14:00:22Z"
+}

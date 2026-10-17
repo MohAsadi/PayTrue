@@ -1,0 +1,257 @@
+{
+  "address": "0x000000000022D473030F116dDEE9F6B43aC78BA3",
+  "chains": {
+    "1": {
+      "block": 26200868,
+      "codeHash": "c67d1657868aa5146eaf24fb879fb1fdec3d2d493b3683a61c9c2f4fb2851131",
+      "domainSeparator": "866a5aba21966af95d6c7ab78eb2b2fc913915c28be3b9aa07cc04ff903e3f28",
+      "maskedCodeHash": "463331fa7a0d5f07488e42c37b461bb56a822145c161a821fbafe7d4e916b546",
+      "name": "Ethereum mainnet",
+      "providers": [
+        "https://ethereum-rpc.publicnode.com",
+        "https://1rpc.io/eth",
+        "https://eth.drpc.org",
+        "https://rpc.flashbots.net",
+        "https://eth-mainnet.public.blastapi.io"
+      ]
+    },
+    "42161": {
+      "block": 515194580,
+      "codeHash": "9e51dcb64cf56fc09a82cb41edbc17c6a2250f18dbd1b91e884c0aca02acd57c",
+      "domainSeparator": "8a6e6e19bdfb3db3409910416b47c2f8fc28b49488d6555c7fceaa4479135bc3",
+      "maskedCodeHash": "463331fa7a0d5f07488e42c37b461bb56a822145c161a821fbafe7d4e916b546",
+      "name": "Arbitrum One",
+      "providers": [
+        "https://arb1.arbitrum.io/rpc",
+        "https://arbitrum-one-rpc.publicnode.com"
+      ]
+    },
+    "8453": {
+      "block": 52657059,
+      "codeHash": "a67739abc3ede9dbdc0491636c67d6a14ac07fab9030c3f509b1eb7b11dff8ed",
+      "domainSeparator": "3b6f35e4fce979ef8eac3bcdc8c3fc38fe7911bb0c69c8fe72bf1fd1a17e6f07",
+      "maskedCodeHash": "463331fa7a0d5f07488e42c37b461bb56a822145c161a821fbafe7d4e916b546",
+      "name": "Base",
+      "providers": [
+        "https://mainnet.base.org",
+        "https://base-rpc.publicnode.com"
+      ]
+    }
+  },
+  "compiler": {
+    "bytecode_hash": "none",
+    "optimizer": true,
+    "optimizer_runs": 1000000,
+    "solc": "0.8.17",
+    "source": "foundry.toml at the pinned commit (blob in sourceBlobs); EVM version not stated there, so the 0.8.17 default applies (assumption for the rebuild)",
+    "via_ir": true
+  },
+  "immutableOffsets": {
+    "chainId": 6945,
+    "domainSeparator": 6983
+  },
+  "mainHeadAtRecording": {
+    "aheadOfPin": 19,
+    "commit": "cc56ad0f3439c502c246fc5cfcc3db92bb8b7219",
+    "commitDate": "2023-09-29T15:36:13Z",
+    "deployedContractDiff": "imports, `IEIP712` inheritance with `override`, comment removals; `Permit2Lib.sol` (a library, not deployed) rewritten; no change to the logic of AllowanceTransfer, SignatureTransfer, EIP712 or SignatureVerification (read from the compare patch)"
+  },
+  "maskedCodeHash": "463331fa7a0d5f07488e42c37b461bb56a822145c161a821fbafe7d4e916b546",
+  "notEstablished": [
+    "human review at E2 of PR-01...PR-16 by two named reviewers",
+    "audit reports of Permit2 (not located or read)",
+    "fork tests: only the subset in forkReport, on the chains and blocks of forkRuns, against the mock tokens of the tests"
+  ],
+  "pin": {
+    "basis": "the repository's own tag named 0x000000000022D473030F116dDEE9F6B43aC78BA3 points at this commit; a tag label is a hint, not proof that the deployment was built from it",
+    "commit": "cc306b601f172c51bc04334a109e98340456620b",
+    "commitDate": "2022-11-17T23:53:10Z",
+    "commitMessage": "feat: fix docs link (#152)",
+    "repo": "Uniswap/permit2",
+    "tree": "0d35aeb758e99510961089df8f7dfd94b256e58f"
+  },
+  "rebuild": {
+    "builtAt": "2026-10-16T13:34:36Z",
+    "create2Address": "0x000000000022d473030f116ddee9f6b43ac78ba3",
+    "matches": true,
+    "note": "matches is true only if CREATE2, both drivers and a byte-for-byte comparison on every chain agree",
+    "record": "evidence/permit2/rebuild.json",
+    "tool": "tools/permit2_rebuild.py"
+  },
+  "recordedBy": "automated session (Claude); NOT a named human reviewer; evidence level: source E1 pinned, deployed code E3 for what is deployed, source-to-bytecode match NOT established",
+  "recordedOn": "2026-10-16",
+  "runtimeCodeLength": 9152,
+  "schema": 1,
+  "selectorAudit": "every PUSH4 value in the deployed dispatcher of Ethereum mainnet is one of the 15 external functions of the pinned source; no other selector is present (so no admin, upgrade, pause or extra function)",
+  "selectors": [
+    "0d58b1db",
+    "137c29fe",
+    "2a2d80d1",
+    "2b67b570",
+    "30f28b7a",
+    "3644e515",
+    "36c78516",
+    "3ff9dcb1",
+    "4fe02b44",
+    "65d9723c",
+    "87517c45",
+    "927da105",
+    "cc53287f",
+    "edd9444b",
+    "fe8ec1a7"
+  ],
+  "sourceBlobs": [
+    {
+      "bytes": 4357,
+      "gitBlobSha1": "f5154a56aac3cb472d30ee3b01df70a5d181e924",
+      "path": "README.md",
+      "sha256": "7f37d1fde3cca0705644c6e4f848845cd978b83520b4a8cb296b8d928aa7d34f"
+    },
+    {
+      "bytes": 321,
+      "gitBlobSha1": "27013c9c34a1f3e19eeb34228753572270d2bc48",
+      "path": "foundry.toml",
+      "sha256": "9812b0e859c5fbe431478b38afa37ea8f1bb9c68263034d3287920a1d7a85f11"
+    },
+    {
+      "bytes": 108,
+      "gitBlobSha1": "dd0a2b09c678496dbde6896a68d4d9feeef311b6",
+      "path": "remappings.txt",
+      "sha256": "1880c2a202833900cdc4c431ee3cf48f4fae9f8d0b390c5f630343831715631f"
+    },
+    {
+      "bytes": 6206,
+      "gitBlobSha1": "84edcde8b3f621b410a498aad8c3da8db6105912",
+      "path": "src/AllowanceTransfer.sol",
+      "sha256": "e8755950225a256cd458c02433958a9e614083b4e334bb9853ec4075bcb8ab92"
+    },
+    {
+      "bytes": 1855,
+      "gitBlobSha1": "bbd77f07a74e66e881004f572c0d94fa04897da1",
+      "path": "src/EIP712.sol",
+      "sha256": "195ebab17589ed34e23de94eb9238bd099acaba88cc64b49c2763c72083bec98"
+    },
+    {
+      "bytes": 538,
+      "gitBlobSha1": "7249e40a813980c099f5a95f6fb584339b3ff50c",
+      "path": "src/Permit2.sol",
+      "sha256": "a19dd81d4edafe3bba0178abfc9063886c2981b4711a4cbbf3fac19370defc9a"
+    },
+    {
+      "bytes": 454,
+      "gitBlobSha1": "2c42e2d1a6ec2de1ddd5ed159693b700d03dff50",
+      "path": "src/PermitErrors.sol",
+      "sha256": "0919679c5bb58466d3a06d9d3297ec4946ba5d135330f10f4fb080067586afad"
+    },
+    {
+      "bytes": 6689,
+      "gitBlobSha1": "f86687cb9204b03f77453365c300d558363a6181",
+      "path": "src/SignatureTransfer.sol",
+      "sha256": "b7a210d7349fd12b75e556a4d0d7ea5a7ea61b39264d53ea1299b03323f62991"
+    },
+    {
+      "bytes": 7585,
+      "gitBlobSha1": "c3739b9d9d9d6e86333dda814e6555c5fbfab55e",
+      "path": "src/interfaces/IAllowanceTransfer.sol",
+      "sha256": "aeecef7ca9a72ee02f1ef8edfb44599339c5dc758cf382455c2f72fb77dffc74"
+    },
+    {
+      "bytes": 928,
+      "gitBlobSha1": "912b7817e9933a3ba6749e06b07f0015d03bbf26",
+      "path": "src/interfaces/IDAIPermit.sol",
+      "sha256": "13a98c0cbfa847ea57a8b427f76762b40de5fd10472e9d26e3aaa26de11e7c49"
+    },
+    {
+      "bytes": 465,
+      "gitBlobSha1": "b8e667629a5eccba9bfe4750a81bea3566986d9a",
+      "path": "src/interfaces/IERC1271.sol",
+      "sha256": "ba35907d098ef8b6c6c967d522026d09c92c7e2344cc81e4ee89db8955fa4ca8"
+    },
+    {
+      "bytes": 6825,
+      "gitBlobSha1": "8b76a3ebd8f085712581d441385a5ed8fa7f9e5a",
+      "path": "src/interfaces/ISignatureTransfer.sol",
+      "sha256": "0a5d6ac59da350987693f40f0ff0a833f31b37e057645f8e6ed9a1dad691e45c"
+    },
+    {
+      "bytes": 1905,
+      "gitBlobSha1": "671c9724f446332caa18619f4c6363e49fd30933",
+      "path": "src/libraries/Allowance.sol",
+      "sha256": "6c7d1edc74a9dca9940fa835db09302ed1a35019d69f4188351466e9a3fff458"
+    },
+    {
+      "bytes": 6462,
+      "gitBlobSha1": "f03095ca45080c6520f5c7cebb6768ceca5b7def",
+      "path": "src/libraries/Permit2Lib.sol",
+      "sha256": "093f11d124d637914613bd43bfc8db99b753304669d7dfe7f4a4654659d56149"
+    },
+    {
+      "bytes": 5771,
+      "gitBlobSha1": "32d4a83f90a4fdeb764403f327a873b2f840154e",
+      "path": "src/libraries/PermitHash.sol",
+      "sha256": "23f89633dbd02d8b52a33de3a915af5af73ff25e31f88b6cf994358f802efa60"
+    },
+    {
+      "bytes": 455,
+      "gitBlobSha1": "5926036ad7523d9c2912a819881e64448010399d",
+      "path": "src/libraries/SafeCast160.sol",
+      "sha256": "b106146964044fd9c89df48721011c43785982bf0dcb74a241f7a6f270fa8b2b"
+    },
+    {
+      "bytes": 1812,
+      "gitBlobSha1": "904dfcd2ff1f870d0bf9e25a9dbedb4b8b929849",
+      "path": "src/libraries/SignatureVerification.sol",
+      "sha256": "1804b3d7b1183225419ec8ee45daf89174ff3668315d71d28111d5fcc179f8e4"
+    }
+  ],
+  "tag": {
+    "commit": "cc306b601f172c51bc04334a109e98340456620b",
+    "name": "0x000000000022D473030F116dDEE9F6B43aC78BA3"
+  },
+  "forkReport": {
+    "MIG-TV-22": "PASS",
+    "RV-T01": "PASS",
+    "RV-T02": "PASS",
+    "RV-T03": "PASS",
+    "RV-T04": "PASS",
+    "RV-T05": "PASS",
+    "RV-T06": "PASS",
+    "RV-T07": "PASS",
+    "RV-T08": "PASS",
+    "RV-T10": "PASS",
+    "RV-T11": "PASS"
+  },
+  "forkRuns": {
+    "file": "evidence/implementation/fork-runs.json",
+    "fileSha256": "c7e22dc3e60bacc6ab33e3d21cb05cf42c5de79b9cbf73f4c926eb6441e88673",
+    "forge": "forge Version: 1.8.5 | Commit SHA: 51a52c59cffd940f76eddd0b4bb1791aa4b5ac7f | Build Timestamp: 2026-10-05T17:01:32.131957300Z (1791219692) | Build Profile: dist",
+    "pinnedCommit": "cc306b601f172c51bc04334a109e98340456620b",
+    "chains": {
+      "1": {
+        "name": "Ethereum mainnet",
+        "block": 26211820,
+        "blockHash": "0x3e9e0ffb4a8766d8036f3adbe20a7d70a302846d16974f104366cdd231fced09",
+        "result": "PASS",
+        "passed": 30,
+        "failed": 0
+      },
+      "8453": {
+        "name": "Base",
+        "block": 52722988,
+        "blockHash": "0x9d7e7150a410d47a4b1c1b9ab37f5da32180d2a0bc18b0f67bb3e865bce7bdf9",
+        "result": "PASS",
+        "passed": 30,
+        "failed": 0
+      },
+      "42161": {
+        "name": "Arbitrum One",
+        "block": 515655382,
+        "blockHash": "0xb0c775640e0d063eefb5080f9ec7b0e6e2fab31a9a5e2eb23ea5395b85e7bea4",
+        "result": "PASS",
+        "passed": 30,
+        "failed": 0
+      }
+    },
+    "note": "a test is PASS only if it passed on every chain listed; recorded by tools/record_evidence.py"
+  }
+}

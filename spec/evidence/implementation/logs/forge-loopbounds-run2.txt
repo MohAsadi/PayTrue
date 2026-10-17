@@ -1,0 +1,123 @@
+Compiling 1 files with Solc 0.8.24
+Solc 0.8.24 finished in 48.54s
+Compiler run successful!
+
+Ran 2 tests for test/Exec3.t.sol:Exec3Test
+[PASS] test_Exec3_NeverTwoRouters_AcrossAnyChainOfSuccessors() (gas: 32965923)
+[PASS] test_Layer2Coexists_Layer3IsExclusive() (gas: 5211026)
+Suite result: ok. 2 passed; 0 failed; 0 skipped; finished in 101.48ms (32.54ms CPU time)
+
+Ran 14 tests for test/LoopBounds.t.sol:LoopBoundsTest
+[PASS] testFuzz_ExposurePositionMapAfterRandomMandates(uint256) (runs: 1000, μ: 30879332, ~: 30979267)
+[FAIL: group 1: 1 != 2; counterexample: calldata=0x19b21ceb000000000000000000000000000000000000000000000000000000000000230c args=[8972]] testFuzz_RegistryLiveCounterEqualsScan(uint256) (runs: 103, μ: 5071319, ~: 5072732)
+[PASS] test_Batch_AboveMaxBatchIsRefusedBeforeAnyLoop() (gas: 10044)
+[PASS] test_Batch_OfMaxBatchSuccessors_FitsABlock() (gas: 169170125)
+Logs:
+  batch of 50 EMERGENCY successors (3 tokens each), total gas: 28668981
+  per successor gas: 573379
+  batch of 100 EMERGENCY successors (hard max of PC-04), total gas: 57179565
+  per successor gas at 100: 571795
+
+[PASS] test_EmergencyMigration_WorstCase_AtTheProposedBoundAndAtTheHardMax() (gas: 29255300)
+Logs:
+  emergency migration gas, 8 exposed tokens (PC-18 proposal): 964344
+  emergency migration gas, 150 exposed tokens (hard max of PC-18): 1856699
+
+[PASS] test_Retire_And_Reduce_DoNotScanTheExposureList() (gas: 24767674)
+Logs:
+  reduce (drop one token) gas, exposure list of 8: 560183
+  reduce (drop one token) gas, exposure list of 152: 560183
+  retire gas, exposure list of 7: 175597
+  retire gas, exposure list of 151: 175597
+
+[PASS] test_Revoke_CostIsIndependentOfTheExposureListLength() (gas: 27566323)
+Logs:
+  revoke gas, exposure list of 3: 192424
+  revoke gas, exposure list of 8: 223828
+  revoke gas, exposure list of 153: 223828
+
+[PASS] test_Revoke_CostIsIndependentOfTheLineageHistory() (gas: 41449457)
+Logs:
+  revoke gas, generation 0: 156668
+  revoke gas, generation 60: 156668
+
+[PASS] test_Revoke_CostIsIndependentOfTheNumberOfSiblings() (gas: 21741042)
+Logs:
+  revoke gas, 1 mandate: 189938
+  revoke gas, 40 sibling mandates: 150293
+
+[PASS] test_SignerSet_BoundedAndTheEmergencyExitsDoNotLoop() (gas: 4595655)
+Logs:
+  removeQuoteSigner gas (set of 16): 44668
+  stopSignerSet gas (set of 16): 27542
+  proposeSignerSet gas at the bound: 834136
+  activateSignerSet gas at the bound: 152599
+
+[FAIL: a malformed terms record is refused before any loop that touches storage: 62967 >= 60000] test_Terms_DocumentedWidths() (gas: 6179936)
+[PASS] test_Terms_SuccessorWithMalformedTermsIsRefusedFirst() (gas: 3602289)
+[FAIL: a malformed terms record is refused before any loop that touches storage: 61712 >= 60000] test_Terms_TokenCountOutsideOneToThreeIsRefused() (gas: 2494961)
+[FAIL: a malformed terms record is refused before any loop that touches storage: 62383 >= 60000] test_Terms_TokenOrderAndCanonicalForm() (gas: 2495597)
+Suite result: FAILED. 10 passed; 4 failed; 0 skipped; finished in 6.22s (12.41s CPU time)
+
+Ran 1 test for test/MigrationInvariant.t.sol:MigrationInvariantTest
+[PASS]
+MigrationInvariantTest invariants:
+[PASS] invariant_ExposureListIsDenseAndBounded
+[PASS] invariant_I_MIG_10_ExposureIndexExact
+[PASS] invariant_I_MIG_11_NonInterference
+[PASS] invariant_I_MIG_1_AtMostOneActiveMandatePerLineage
+[PASS] invariant_I_MIG_3_CountersNeverDecrease
+[PASS] invariant_I_MIG_7_SharedAllowanceRule
+[PASS] invariant_I_MIG_8_Exec3AtMostOneRouterPerLineage
+[PASS] invariant_I_MIG_8_NoOverlappingAuthority
+[PASS] invariant_RegistryLiveCounterEqualsScan
+ MigrationInvariantTest invariants (runs: 256, calls: 16384, reverts: 0)
+
+╭------------------+-----------------+-------+---------+----------╮
+| Contract         | Selector        | Calls | Reverts | Discards |
++=================================================================+
+| MigrationHandler | activate        | 1264  | 0       | 0        |
+|------------------+-----------------+-------+---------+----------|
+| MigrationHandler | charge          | 1220  | 0       | 0        |
+|------------------+-----------------+-------+---------+----------|
+| MigrationHandler | clearRouter     | 1272  | 0       | 0        |
+|------------------+-----------------+-------+---------+----------|
+| MigrationHandler | deprecateRouter | 1241  | 0       | 0        |
+|------------------+-----------------+-------+---------+----------|
+| MigrationHandler | disableRouter   | 1296  | 0       | 0        |
+|------------------+-----------------+-------+---------+----------|
+| MigrationHandler | grant           | 1251  | 0       | 0        |
+|------------------+-----------------+-------+---------+----------|
+| MigrationHandler | migrate         | 1222  | 0       | 0        |
+|------------------+-----------------+-------+---------+----------|
+| MigrationHandler | registerRouter  | 1256  | 0       | 0        |
+|------------------+-----------------+-------+---------+----------|
+| MigrationHandler | retire          | 1303  | 0       | 0        |
+|------------------+-----------------+-------+---------+----------|
+| MigrationHandler | retireRouter    | 1260  | 0       | 0        |
+|------------------+-----------------+-------+---------+----------|
+| MigrationHandler | revoke          | 1263  | 0       | 0        |
+|------------------+-----------------+-------+---------+----------|
+| MigrationHandler | sunsetRouter    | 1304  | 0       | 0        |
+|------------------+-----------------+-------+---------+----------|
+| MigrationHandler | warp            | 1232  | 0       | 0        |
+╰------------------+-----------------+-------+---------+----------╯
+
+Suite result: ok. 1 passed; 0 failed; 0 skipped; finished in 103.35s (103.24s CPU time)
+
+Ran 3 test suites in 103.42s (109.67s CPU time): 13 tests passed, 4 failed, 0 skipped (17 total tests)
+
+Failing tests:
+Encountered 4 failing tests in test/LoopBounds.t.sol:LoopBoundsTest
+[FAIL: group 1: 1 != 2; counterexample: calldata=0x19b21ceb000000000000000000000000000000000000000000000000000000000000230c args=[8972]] testFuzz_RegistryLiveCounterEqualsScan(uint256) (runs: 103, μ: 5071319, ~: 5072732)
+[FAIL: a malformed terms record is refused before any loop that touches storage: 62967 >= 60000] test_Terms_DocumentedWidths() (gas: 6179936)
+[FAIL: a malformed terms record is refused before any loop that touches storage: 61712 >= 60000] test_Terms_TokenCountOutsideOneToThreeIsRefused() (gas: 2494961)
+[FAIL: a malformed terms record is refused before any loop that touches storage: 62383 >= 60000] test_Terms_TokenOrderAndCanonicalForm() (gas: 2495597)
+
+Encountered a total of 4 failing tests, 13 tests succeeded
+
+Tip: Run `forge test --rerun` to retry only the 4 failed tests
+Tip: Run `forge test --debug --match-test <TEST_NAME>` to inspect one failing test in the debugger
+
+Fuzz seed: 0xfa57 (use `--fuzz-seed` to reproduce)
+exit=1

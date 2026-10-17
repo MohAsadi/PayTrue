@@ -1,0 +1,4707 @@
+{
+ "schema": 1,
+ "tool": "tools/fork_run.py",
+ "project": "contracts",
+ "forge": "forge Version: 1.8.5 | Commit SHA: 51a52c59cffd940f76eddd0b4bb1791aa4b5ac7f | Build Timestamp: 2026-10-05T17:01:32.131957300Z (1791219692) | Build Profile: dist",
+ "back": 64,
+ "generatedAt": "2026-10-17T11:12:49Z",
+ "permit2": "0x000000000022D473030F116dDEE9F6B43aC78BA3",
+ "pinnedCommit": "cc306b601f172c51bc04334a109e98340456620b",
+ "chains": [
+  {
+   "chainId": 1,
+   "name": "Ethereum mainnet",
+   "block": 26211828,
+   "blockHash": "0xa699731fbc1810ad94b0c27bd2cc01c2c4fa7bf589c7aef0f227edb3c7cf1289",
+   "providersAgreeing": [
+    "https://ethereum-rpc.publicnode.com",
+    "https://eth.drpc.org",
+    "https://rpc.flashbots.net",
+    "https://eth-mainnet.public.blastapi.io"
+   ],
+   "attempts": [
+    {
+     "forkUrl": "https://ethereum-rpc.publicnode.com",
+     "exitCode": 0,
+     "seconds": 11.6,
+     "rawOutput": "evidence/implementation/logs/contracts-fork-1.json",
+     "tests": [
+      {
+       "suite": "ForkChargeTest",
+       "test": "test_Atomic_ABalanceShortfallRevertsEverything()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkChargeTest",
+       "test": "test_Atomic_APullThatFailsRevertsTheCounters()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkChargeTest",
+       "test": "test_Caps_AWindowResetsWhenItsIndexMoves()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkChargeTest",
+       "test": "test_Caps_Day_ResetsLazilyAtTheNextDay()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkChargeTest",
+       "test": "test_Caps_PerPayment()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkChargeTest",
+       "test": "test_Caps_TheBillingPeriodWindowResetsPerPeriod_NotPerWeek()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkChargeTest",
+       "test": "test_Caps_TheThirtyDayWindowSpansManyDays()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkChargeTest",
+       "test": "test_Caps_Total()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkChargeTest",
+       "test": "test_Caps_Week_Thirty_Period_EachOnItsOwn()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkChargeTest",
+       "test": "test_Charge_AnotherRouterCannotChargeTheMandate()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkChargeTest",
+       "test": "test_Charge_ChargesPerPeriod()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkChargeTest",
+       "test": "test_Charge_Event_CarriesTheFiatValueAndQuoteDigest()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkChargeTest",
+       "test": "test_Charge_FiatValueIsRoundedUp()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkChargeTest",
+       "test": "test_Charge_FutureCycle_CycleNotYetDue()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkChargeTest",
+       "test": "test_Charge_LateRetryOfAnEarlierCycleIsAllowed()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkChargeTest",
+       "test": "test_Charge_MinInterval_ChargeTooSoon()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkChargeTest",
+       "test": "test_Charge_OnlyAnExecutor()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkChargeTest",
+       "test": "test_Charge_PaymentIdHasNoRouterInput()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkChargeTest",
+       "test": "test_Charge_PaysMerchantAndFee_ZeroBalanceRouter()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkChargeTest",
+       "test": "test_Charge_SameCycleTwice_PaymentAlreadySettled()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkChargeTest",
+       "test": "test_Consume_OnlyTheBoundRouterContract()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkChargeTest",
+       "test": "test_Fee_AboveTheControllersRate_FeeAboveCeiling()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkChargeTest",
+       "test": "test_Fee_AboveTheMandateCap_FeeTooHigh()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkChargeTest",
+       "test": "test_Fee_GovernanceCannotRaiseItAboveTheImmutableCeiling()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkChargeTest",
+       "test": "test_Guard_Expired_AndNotYetStarted()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkChargeTest",
+       "test": "test_Guard_ExpiryBoundary_TheExpirySecondIsOver()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkChargeTest",
+       "test": "test_Guard_Paused_ByEachBit()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkChargeTest",
+       "test": "test_Guard_PinIsBoundByHash_AndTheAccountMustStillMatch()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkChargeTest",
+       "test": "test_Guard_Revoked()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkChargeTest",
+       "test": "test_Guard_StartBoundary_TheStartSecondIsValid()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkChargeTest",
+       "test": "test_Guard_TermsAreBoundToTheMandateByHash()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkChargeTest",
+       "test": "test_Guard_TokenNotInTheMandate()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkChargeTest",
+       "test": "test_Ledger_OnlyTheManagerWritesTheCounters()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkChargeTest",
+       "test": "test_Permit2_AllowanceIsDecrementedByTheRouterOnly()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkChargeTest",
+       "test": "test_Router_BlockedToken()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkChargeTest",
+       "test": "test_Router_ExecutorRemovedByTheGuardian()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkChargeTest",
+       "test": "test_Router_MerchantPausedOrTokenNotAccepted()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkChargeTest",
+       "test": "test_Router_RecipientChangeIsDelayed()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkChargeTest",
+       "test": "test_Router_RetiredOrDisabledRouterCannotCharge()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkEvidenceTest",
+       "test": "test_Fork_EveryRuntimeFitsTheLimitsOnThisChain()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkEvidenceTest",
+       "test": "test_Fork_Permit2DomainSeparatorEqualsTheGeneratedOne()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkGasTest",
+       "test": "test_Gas_Activation_OneAndThreeTokens()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": [
+        "activate, 1 token: 348173",
+        "activate, 3 tokens: 519053"
+       ]
+      },
+      {
+       "suite": "ForkGasTest",
+       "test": "test_Gas_Charge_WithQuote_ColdAndWarm()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": [
+        "charge with quote, first charge (cold, fresh counters): 449958",
+        "charge with quote, second charge (warm within the test): 334640"
+       ]
+      },
+      {
+       "suite": "ForkGasTest",
+       "test": "test_Gas_MarginalEntry_AndTheExtrapolationTo50()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": [
+        "marginal tx gas per entry: 579738",
+        "extrapolated tx gas of a step of 50: 29724192"
+       ]
+      },
+      {
+       "suite": "ForkGasTest",
+       "test": "test_Gas_MaxBatchStepFitsTheBudget()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": [
+        "MAX_BATCH: 10",
+        "worst-case step, tx gas estimate: 6509592",
+        "budget: 8388608"
+       ]
+      },
+      {
+       "suite": "ForkGasTest",
+       "test": "test_Gas_Revoke_AndRetire()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": [
+        "revoke, 3 tokens (the last mandate on them): 106429"
+       ]
+      },
+      {
+       "suite": "ForkGasTest",
+       "test": "test_Gas_Step_Emergency_1()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": [
+        "EMERGENCY k=1 exec gas: 836989",
+        "EMERGENCY k=1 per entry: 836989",
+        "EMERGENCY k=1 calldata bytes: 4004",
+        "EMERGENCY k=1 tx gas estimate: 921429"
+       ]
+      },
+      {
+       "suite": "ForkGasTest",
+       "test": "test_Gas_Step_Emergency_10()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": [
+        "EMERGENCY k=10 exec gas: 5863802",
+        "EMERGENCY k=10 per entry: 586380",
+        "EMERGENCY k=10 calldata bytes: 39140",
+        "EMERGENCY k=10 tx gas estimate: 6509602"
+       ]
+      },
+      {
+       "suite": "ForkGasTest",
+       "test": "test_Gas_Step_Emergency_5()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": [
+        "EMERGENCY k=5 exec gas: 3301994",
+        "EMERGENCY k=5 per entry: 660398",
+        "EMERGENCY k=5 calldata bytes: 19620",
+        "EMERGENCY k=5 tx gas estimate: 3635984"
+       ]
+      },
+      {
+       "suite": "ForkGasTest",
+       "test": "test_Gas_Step_Normal_1()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": [
+        "NORMAL k=1 exec gas: 838175",
+        "NORMAL k=1 per entry: 838175",
+        "NORMAL k=1 calldata bytes: 4004",
+        "NORMAL k=1 tx gas estimate: 922585"
+       ]
+      },
+      {
+       "suite": "ForkGasTest",
+       "test": "test_Gas_Step_Normal_10()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": [
+        "NORMAL k=10 exec gas: 5699323",
+        "NORMAL k=10 per entry: 569932",
+        "NORMAL k=10 calldata bytes: 39140",
+        "NORMAL k=10 tx gas estimate: 6344853"
+       ]
+      },
+      {
+       "suite": "ForkGasTest",
+       "test": "test_Gas_Step_Normal_5()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": [
+        "NORMAL k=5 exec gas: 3234176",
+        "NORMAL k=5 per entry: 646835",
+        "NORMAL k=5 calldata bytes: 19620",
+        "NORMAL k=5 tx gas estimate: 3567986"
+       ]
+      },
+      {
+       "suite": "ForkPayOnceTest",
+       "test": "test_Minout_AFeeOnTransferTokenIsRefusedByPayOnce()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkPayOnceTest",
+       "test": "test_Minout_AFeeOnTransferTokenIsRefusedByRecurringCharges()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkPayOnceTest",
+       "test": "test_PayOnce_ARouterThatIsNotInTheRegistryCannotMarkPayments()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkPayOnceTest",
+       "test": "test_PayOnce_ASecondSubmissionOfTheSamePayment_IsRefused()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkPayOnceTest",
+       "test": "test_PayOnce_ASignatureForOneRouterIsUselessToAnother()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkPayOnceTest",
+       "test": "test_PayOnce_FeeAndAmountsAreBounded()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkPayOnceTest",
+       "test": "test_PayOnce_MerchantAndTokenStatus()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkPayOnceTest",
+       "test": "test_PayOnce_OnlyAnExecutorSubmits()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkPayOnceTest",
+       "test": "test_PayOnce_Permit2NonceIsSingleUse()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkPayOnceTest",
+       "test": "test_PayOnce_ReentrancyIsLocked()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkPayOnceTest",
+       "test": "test_PayOnce_Settles_AndLeavesNothingBehind()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkPayOnceTest",
+       "test": "test_PayOnce_ThePaymentSettlesOnceAcrossRouterVersions()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkPayOnceTest",
+       "test": "test_PayOnce_TheRecipientIsTheRegistryRecipientNow_NotWhatTheSignatureSays()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkPayOnceTest",
+       "test": "test_PayOnce_TheWitnessBindsEveryTerm()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkPayOnceTest",
+       "test": "test_PayOnce_ValidityWindow()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkQueueTest",
+       "test": "test_Abort_OnlyTheCustomer_AndItStopsTheSteps()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkQueueTest",
+       "test": "test_Chain_ATamperedEntryIsRefused()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkQueueTest",
+       "test": "test_Chain_AnEntryForAnotherRouterIsRefused()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkQueueTest",
+       "test": "test_Chain_AnEntryOfAnotherKindOrRouterIsRefused()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkQueueTest",
+       "test": "test_Chain_OutOfOrderEntriesAreRefused()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkQueueTest",
+       "test": "test_Chain_TheAuthorizationInTheEntryDecidesWhatTheManagerSees()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkQueueTest",
+       "test": "test_Expiry_StepsAreRefusedAfterIt_AndAnyoneCanRecordIt()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkQueueTest",
+       "test": "test_Open_AFinalHeadThatIsNotZeroNeverCompletes()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkQueueTest",
+       "test": "test_Open_Validations()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkQueueTest",
+       "test": "test_Plan_CannotMigrateSomeoneElsesLineage()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkQueueTest",
+       "test": "test_Plan_Emergency()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkQueueTest",
+       "test": "test_Plan_IsResumable_InAnyChunking_ByAnyCaller()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkQueueTest",
+       "test": "test_Plan_OneStepMigratesEveryLineage()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkQueueTest",
+       "test": "test_Step_AFailingEntryRevertsTheWholeStep_AndTheCustomerCanSkipIt()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkQueueTest",
+       "test": "test_Step_AnExpiredAuthorizationInTheMiddleRevertsTheStep()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkQueueTest",
+       "test": "test_Step_Bounds()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkQueueTest",
+       "test": "test_Step_MoreEntriesThanThePlanHoldsIsRefused()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkQueueTest",
+       "test": "test_TheGatewayMayNotActivateASuccessorForAnotherCustomersMandate()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkQueueTest",
+       "test": "test_TheQueueMayOnlyActivateSuccessors()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkQuoteTest",
+       "test": "test_Bounds_AreBoundedInWidth_AndWellFormed()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkQuoteTest",
+       "test": "test_Bounds_WidthIsMeasuredOnTheMinimum()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkQuoteTest",
+       "test": "test_NonInterference_AQuoteForAMandateWithoutFiatCapsIsIgnored()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkQuoteTest",
+       "test": "test_NonInterference_AValidQuoteCannotOverrideATokenCap()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkQuoteTest",
+       "test": "test_Q0_NoQuote_FiatQuoteRequired()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkQuoteTest",
+       "test": "test_Q10_NotYetValid_AndTheBoundary()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkQuoteTest",
+       "test": "test_Q11_Expired_AndTheBoundary()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkQuoteTest",
+       "test": "test_Q12_TtlIsBoundedByTheMandateAndByTheRegistry()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkQuoteTest",
+       "test": "test_Q13_AQuoteIssuedBeforeTheSetWasActiveIsRefused()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkQuoteTest",
+       "test": "test_Q13_AStoppedSetIsRefused()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkQuoteTest",
+       "test": "test_Q13_RotationHonoursEarlierQuotesForTheGraceOnly()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkQuoteTest",
+       "test": "test_Q14_TokenVersionMustBeCurrent()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkQuoteTest",
+       "test": "test_Q15_BoundsVersionMustBeCurrent()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkQuoteTest",
+       "test": "test_Q16_RouteHash()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkQuoteTest",
+       "test": "test_Q17_PriceSourceSet()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkQuoteTest",
+       "test": "test_Q18_ATighterCurrentBandNarrowsAnExistingMandate()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkQuoteTest",
+       "test": "test_Q18_AWiderCurrentBandNeverWidensAnExistingMandate()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkQuoteTest",
+       "test": "test_Q18_AWiderCurrentUpperBandNeverWidensAnExistingMandate()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkQuoteTest",
+       "test": "test_Q18_AnUnpublishedPinnedVersionCanNeverBeCharged()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkQuoteTest",
+       "test": "test_Q18_BandEdgesAreInside_JustOutsideIsNot()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkQuoteTest",
+       "test": "test_Q19_FiatPerPaymentCap()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkQuoteTest",
+       "test": "test_Q19_FiatTotalAndWindowCaps()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkQuoteTest",
+       "test": "test_Q19_FiatValueTooLargeForUint64()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkQuoteTest",
+       "test": "test_Q1_AKeyOutsideTheSet_Unauthorized()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkQuoteTest",
+       "test": "test_Q1_ARemovedKeyIsRefusedWithNoGrace_AndStaysRefused()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkQuoteTest",
+       "test": "test_Q2_MalformedSignatures()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkQuoteTest",
+       "test": "test_Q3_AQuoteForAnotherRouterDoesNotVerify()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkQuoteTest",
+       "test": "test_Q4_to_Q8_EveryBoundFieldMustMatch()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkQuoteTest",
+       "test": "test_Q9_TimesMustBeOrdered()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkSuccessorTest",
+       "test": "test_A1_AStoredDirectOnlyPinAcceptsNoRelayedSuccessor()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkSuccessorTest",
+       "test": "test_A1_AStrangerCannotActivateWithoutTheCustomersSignature()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkSuccessorTest",
+       "test": "test_A1_TheGatewayRefusesAForgedOrReplayedSignature()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkSuccessorTest",
+       "test": "test_A1_ThroughTheGateway_WithTheStoredPinGoverning()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkSuccessorTest",
+       "test": "test_A2_ANonceUsedByAnotherMessageIsRefused()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkSuccessorTest",
+       "test": "test_A2_DeadlineAndNonce()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkSuccessorTest",
+       "test": "test_A3_EveryBoundFieldMustMatch()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkSuccessorTest",
+       "test": "test_A3_TheSnapshotCoversCustomerAnchorAndBoundsVersion()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkSuccessorTest",
+       "test": "test_AfterAMigration_TheCustomerCanRevokeTheSuccessor_AndTheLineageTerminates()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkSuccessorTest",
+       "test": "test_C1_ANarrowerSuccessorIsAccepted_AndAMigrationMayDropATokenOrShortenTheExpiry()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkSuccessorTest",
+       "test": "test_C1_ANormalMigrationCannotDeclareAWidening()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkSuccessorTest",
+       "test": "test_C1_EachClauseOfContainmentIsEnforced()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkSuccessorTest",
+       "test": "test_C2_ABoundsVersionChangeIsAWideningOfARevision()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkSuccessorTest",
+       "test": "test_C2_ALaterExpiryIsAWidening()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkSuccessorTest",
+       "test": "test_C2_ARevisionCannotChangeTheLineageConstants()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkSuccessorTest",
+       "test": "test_C2_ARevisionMayWidenWithTheExactMask_AndNothingElse()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkSuccessorTest",
+       "test": "test_G1_AnAllowanceThatExpiresThisSecondStillCounts()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkSuccessorTest",
+       "test": "test_G1_AnExpiredAllowanceDoesNotCount()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkSuccessorTest",
+       "test": "test_G1_EveryTokenOfTheNewMandateIsChecked()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkSuccessorTest",
+       "test": "test_G1_TheNewRouterNeedsAnAllowanceOfAtLeastThePerPaymentCap()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkSuccessorTest",
+       "test": "test_K1_NewPinWellFormedLiveAndWithTheRightVersion()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkSuccessorTest",
+       "test": "test_K1_ThePinMustHoldOnTheLiveAccount()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkSuccessorTest",
+       "test": "test_L1_AnExpiredPredecessorIsRefused_AndASupersededOneToo()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkSuccessorTest",
+       "test": "test_L1_PredecessorMustBeTheActiveMandateOfALiveLineage()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkSuccessorTest",
+       "test": "test_Migration_CountersAndSettledCyclesCarryOver()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkSuccessorTest",
+       "test": "test_Migration_PauseBitsAreInherited()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkSuccessorTest",
+       "test": "test_Migration_SecondGenerationUsesTheGrandparentInTheSnapshot()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkSuccessorTest",
+       "test": "test_Migration_SiblingsAreUntouched()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkSuccessorTest",
+       "test": "test_Migration_TheOldRouterCanNoLongerChargeThePredecessor()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkSuccessorTest",
+       "test": "test_Migration_WritesNothingToPermit2()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkSuccessorTest",
+       "test": "test_Normal_Migration_Effects()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkSuccessorTest",
+       "test": "test_O1E_ARegrantedOldAllowanceBlocksTheNextEmergencyActivation()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkSuccessorTest",
+       "test": "test_O1E_AnEmergencyMigrationFromANormalRouterIsAllowedAndStricter()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkSuccessorTest",
+       "test": "test_O1E_BoundaryAtTheExpirySecond()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkSuccessorTest",
+       "test": "test_O1E_EveryExposedTokenMustBeUnusable_NotOnlyThePredecessorsTokens()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkSuccessorTest",
+       "test": "test_O1E_IsEnumeratedFromTheIndex_SoACallerCannotOmitASiblingsToken()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkSuccessorTest",
+       "test": "test_O1N_AllowanceZeroedByApproveZeroIsUnusable()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkSuccessorTest",
+       "test": "test_O1N_AnExpiredOldAllowanceCountsAsUnusable()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkSuccessorTest",
+       "test": "test_O1N_BoundaryAtTheExpirySecond()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkSuccessorTest",
+       "test": "test_O1N_NoSibling_TheOldAllowanceMustBeUnusable()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkSuccessorTest",
+       "test": "test_O1N_TheLastSiblingToLeaveMustLockTheTokenDown()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkSuccessorTest",
+       "test": "test_O1N_WithASibling_AnUnlimitedOldAllowanceIsRefused()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkSuccessorTest",
+       "test": "test_O1N_WithASibling_TheOldAllowanceMayStayButNotUnlimited()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkSuccessorTest",
+       "test": "test_R1_TheNewRouterMustBeBindable()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkSuccessorTest",
+       "test": "test_R2_KindAgainstTheRouters()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkSuccessorTest",
+       "test": "test_R3_ADeprecatedStandardRouterIsStillNormalMode()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkSuccessorTest",
+       "test": "test_R3_ADisabledRouterIsEmergencyMode()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkSuccessorTest",
+       "test": "test_R3_TheModeIsDerivedFromTheRegistry_NotChosenByTheCaller()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkSuccessorTest",
+       "test": "test_X1_ExtensionsMustBeZeroOnBothSides()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkSuccessorTest",
+       "test": "test_X2_ExactlyEightExposedTokensAreAllowed()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkSuccessorTest",
+       "test": "test_X2_TheBoundOfEightTokensPerRouterAppliesToTheUnionWithTheNewTokens()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      }
+     ],
+     "passed": 166,
+     "failed": 0,
+     "skipped": 0
+    }
+   ],
+   "result": "PASS",
+   "usedAttempt": 0
+  },
+  {
+   "chainId": 8453,
+   "name": "Base",
+   "block": 52723027,
+   "blockHash": "0x8ec5e0e66a1bb286a5f657df3b82c2cb9eeb3a891a3569d7a39209ddf502850a",
+   "providersAgreeing": [
+    "https://mainnet.base.org",
+    "https://base-rpc.publicnode.com"
+   ],
+   "attempts": [
+    {
+     "forkUrl": "https://mainnet.base.org",
+     "exitCode": 0,
+     "seconds": 22.1,
+     "rawOutput": "evidence/implementation/logs/contracts-fork-8453.json",
+     "tests": [
+      {
+       "suite": "ForkChargeTest",
+       "test": "test_Atomic_ABalanceShortfallRevertsEverything()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkChargeTest",
+       "test": "test_Atomic_APullThatFailsRevertsTheCounters()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkChargeTest",
+       "test": "test_Caps_AWindowResetsWhenItsIndexMoves()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkChargeTest",
+       "test": "test_Caps_Day_ResetsLazilyAtTheNextDay()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkChargeTest",
+       "test": "test_Caps_PerPayment()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkChargeTest",
+       "test": "test_Caps_TheBillingPeriodWindowResetsPerPeriod_NotPerWeek()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkChargeTest",
+       "test": "test_Caps_TheThirtyDayWindowSpansManyDays()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkChargeTest",
+       "test": "test_Caps_Total()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkChargeTest",
+       "test": "test_Caps_Week_Thirty_Period_EachOnItsOwn()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkChargeTest",
+       "test": "test_Charge_AnotherRouterCannotChargeTheMandate()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkChargeTest",
+       "test": "test_Charge_ChargesPerPeriod()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkChargeTest",
+       "test": "test_Charge_Event_CarriesTheFiatValueAndQuoteDigest()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkChargeTest",
+       "test": "test_Charge_FiatValueIsRoundedUp()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkChargeTest",
+       "test": "test_Charge_FutureCycle_CycleNotYetDue()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkChargeTest",
+       "test": "test_Charge_LateRetryOfAnEarlierCycleIsAllowed()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkChargeTest",
+       "test": "test_Charge_MinInterval_ChargeTooSoon()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkChargeTest",
+       "test": "test_Charge_OnlyAnExecutor()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkChargeTest",
+       "test": "test_Charge_PaymentIdHasNoRouterInput()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkChargeTest",
+       "test": "test_Charge_PaysMerchantAndFee_ZeroBalanceRouter()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkChargeTest",
+       "test": "test_Charge_SameCycleTwice_PaymentAlreadySettled()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkChargeTest",
+       "test": "test_Consume_OnlyTheBoundRouterContract()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkChargeTest",
+       "test": "test_Fee_AboveTheControllersRate_FeeAboveCeiling()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkChargeTest",
+       "test": "test_Fee_AboveTheMandateCap_FeeTooHigh()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkChargeTest",
+       "test": "test_Fee_GovernanceCannotRaiseItAboveTheImmutableCeiling()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkChargeTest",
+       "test": "test_Guard_Expired_AndNotYetStarted()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkChargeTest",
+       "test": "test_Guard_ExpiryBoundary_TheExpirySecondIsOver()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkChargeTest",
+       "test": "test_Guard_Paused_ByEachBit()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkChargeTest",
+       "test": "test_Guard_PinIsBoundByHash_AndTheAccountMustStillMatch()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkChargeTest",
+       "test": "test_Guard_Revoked()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkChargeTest",
+       "test": "test_Guard_StartBoundary_TheStartSecondIsValid()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkChargeTest",
+       "test": "test_Guard_TermsAreBoundToTheMandateByHash()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkChargeTest",
+       "test": "test_Guard_TokenNotInTheMandate()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkChargeTest",
+       "test": "test_Ledger_OnlyTheManagerWritesTheCounters()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkChargeTest",
+       "test": "test_Permit2_AllowanceIsDecrementedByTheRouterOnly()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkChargeTest",
+       "test": "test_Router_BlockedToken()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkChargeTest",
+       "test": "test_Router_ExecutorRemovedByTheGuardian()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkChargeTest",
+       "test": "test_Router_MerchantPausedOrTokenNotAccepted()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkChargeTest",
+       "test": "test_Router_RecipientChangeIsDelayed()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkChargeTest",
+       "test": "test_Router_RetiredOrDisabledRouterCannotCharge()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkEvidenceTest",
+       "test": "test_Fork_EveryRuntimeFitsTheLimitsOnThisChain()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkEvidenceTest",
+       "test": "test_Fork_Permit2DomainSeparatorEqualsTheGeneratedOne()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkGasTest",
+       "test": "test_Gas_Activation_OneAndThreeTokens()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": [
+        "activate, 1 token: 348173",
+        "activate, 3 tokens: 519053"
+       ]
+      },
+      {
+       "suite": "ForkGasTest",
+       "test": "test_Gas_Charge_WithQuote_ColdAndWarm()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": [
+        "charge with quote, first charge (cold, fresh counters): 449970",
+        "charge with quote, second charge (warm within the test): 334628"
+       ]
+      },
+      {
+       "suite": "ForkGasTest",
+       "test": "test_Gas_MarginalEntry_AndTheExtrapolationTo50()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": [
+        "marginal tx gas per entry: 579780",
+        "extrapolated tx gas of a step of 50: 29726124"
+       ]
+      },
+      {
+       "suite": "ForkGasTest",
+       "test": "test_Gas_MaxBatchStepFitsTheBudget()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": [
+        "MAX_BATCH: 10",
+        "worst-case step, tx gas estimate: 6509844",
+        "budget: 8388608"
+       ]
+      },
+      {
+       "suite": "ForkGasTest",
+       "test": "test_Gas_Revoke_AndRetire()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": [
+        "revoke, 3 tokens (the last mandate on them): 106429"
+       ]
+      },
+      {
+       "suite": "ForkGasTest",
+       "test": "test_Gas_Step_Emergency_1()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": [
+        "EMERGENCY k=1 exec gas: 837013",
+        "EMERGENCY k=1 per entry: 837013",
+        "EMERGENCY k=1 calldata bytes: 4004",
+        "EMERGENCY k=1 tx gas estimate: 921513"
+       ]
+      },
+      {
+       "suite": "ForkGasTest",
+       "test": "test_Gas_Step_Emergency_10()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": [
+        "EMERGENCY k=10 exec gas: 5863874",
+        "EMERGENCY k=10 per entry: 586387",
+        "EMERGENCY k=10 calldata bytes: 39140",
+        "EMERGENCY k=10 tx gas estimate: 6509854"
+       ]
+      },
+      {
+       "suite": "ForkGasTest",
+       "test": "test_Gas_Step_Emergency_5()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": [
+        "EMERGENCY k=5 exec gas: 3302006",
+        "EMERGENCY k=5 per entry: 660401",
+        "EMERGENCY k=5 calldata bytes: 19620",
+        "EMERGENCY k=5 tx gas estimate: 3636026"
+       ]
+      },
+      {
+       "suite": "ForkGasTest",
+       "test": "test_Gas_Step_Normal_1()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": [
+        "NORMAL k=1 exec gas: 838199",
+        "NORMAL k=1 per entry: 838199",
+        "NORMAL k=1 calldata bytes: 4004",
+        "NORMAL k=1 tx gas estimate: 922669"
+       ]
+      },
+      {
+       "suite": "ForkGasTest",
+       "test": "test_Gas_Step_Normal_10()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": [
+        "NORMAL k=10 exec gas: 5699383",
+        "NORMAL k=10 per entry: 569938",
+        "NORMAL k=10 calldata bytes: 39140",
+        "NORMAL k=10 tx gas estimate: 6345063"
+       ]
+      },
+      {
+       "suite": "ForkGasTest",
+       "test": "test_Gas_Step_Normal_5()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": [
+        "NORMAL k=5 exec gas: 3234176",
+        "NORMAL k=5 per entry: 646835",
+        "NORMAL k=5 calldata bytes: 19620",
+        "NORMAL k=5 tx gas estimate: 3567986"
+       ]
+      },
+      {
+       "suite": "ForkPayOnceTest",
+       "test": "test_Minout_AFeeOnTransferTokenIsRefusedByPayOnce()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkPayOnceTest",
+       "test": "test_Minout_AFeeOnTransferTokenIsRefusedByRecurringCharges()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkPayOnceTest",
+       "test": "test_PayOnce_ARouterThatIsNotInTheRegistryCannotMarkPayments()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkPayOnceTest",
+       "test": "test_PayOnce_ASecondSubmissionOfTheSamePayment_IsRefused()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkPayOnceTest",
+       "test": "test_PayOnce_ASignatureForOneRouterIsUselessToAnother()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkPayOnceTest",
+       "test": "test_PayOnce_FeeAndAmountsAreBounded()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkPayOnceTest",
+       "test": "test_PayOnce_MerchantAndTokenStatus()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkPayOnceTest",
+       "test": "test_PayOnce_OnlyAnExecutorSubmits()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkPayOnceTest",
+       "test": "test_PayOnce_Permit2NonceIsSingleUse()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkPayOnceTest",
+       "test": "test_PayOnce_ReentrancyIsLocked()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkPayOnceTest",
+       "test": "test_PayOnce_Settles_AndLeavesNothingBehind()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkPayOnceTest",
+       "test": "test_PayOnce_ThePaymentSettlesOnceAcrossRouterVersions()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkPayOnceTest",
+       "test": "test_PayOnce_TheRecipientIsTheRegistryRecipientNow_NotWhatTheSignatureSays()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkPayOnceTest",
+       "test": "test_PayOnce_TheWitnessBindsEveryTerm()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkPayOnceTest",
+       "test": "test_PayOnce_ValidityWindow()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkQueueTest",
+       "test": "test_Abort_OnlyTheCustomer_AndItStopsTheSteps()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkQueueTest",
+       "test": "test_Chain_ATamperedEntryIsRefused()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkQueueTest",
+       "test": "test_Chain_AnEntryForAnotherRouterIsRefused()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkQueueTest",
+       "test": "test_Chain_AnEntryOfAnotherKindOrRouterIsRefused()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkQueueTest",
+       "test": "test_Chain_OutOfOrderEntriesAreRefused()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkQueueTest",
+       "test": "test_Chain_TheAuthorizationInTheEntryDecidesWhatTheManagerSees()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkQueueTest",
+       "test": "test_Expiry_StepsAreRefusedAfterIt_AndAnyoneCanRecordIt()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkQueueTest",
+       "test": "test_Open_AFinalHeadThatIsNotZeroNeverCompletes()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkQueueTest",
+       "test": "test_Open_Validations()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkQueueTest",
+       "test": "test_Plan_CannotMigrateSomeoneElsesLineage()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkQueueTest",
+       "test": "test_Plan_Emergency()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkQueueTest",
+       "test": "test_Plan_IsResumable_InAnyChunking_ByAnyCaller()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkQueueTest",
+       "test": "test_Plan_OneStepMigratesEveryLineage()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkQueueTest",
+       "test": "test_Step_AFailingEntryRevertsTheWholeStep_AndTheCustomerCanSkipIt()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkQueueTest",
+       "test": "test_Step_AnExpiredAuthorizationInTheMiddleRevertsTheStep()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkQueueTest",
+       "test": "test_Step_Bounds()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkQueueTest",
+       "test": "test_Step_MoreEntriesThanThePlanHoldsIsRefused()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkQueueTest",
+       "test": "test_TheGatewayMayNotActivateASuccessorForAnotherCustomersMandate()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkQueueTest",
+       "test": "test_TheQueueMayOnlyActivateSuccessors()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkQuoteTest",
+       "test": "test_Bounds_AreBoundedInWidth_AndWellFormed()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkQuoteTest",
+       "test": "test_Bounds_WidthIsMeasuredOnTheMinimum()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkQuoteTest",
+       "test": "test_NonInterference_AQuoteForAMandateWithoutFiatCapsIsIgnored()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkQuoteTest",
+       "test": "test_NonInterference_AValidQuoteCannotOverrideATokenCap()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkQuoteTest",
+       "test": "test_Q0_NoQuote_FiatQuoteRequired()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkQuoteTest",
+       "test": "test_Q10_NotYetValid_AndTheBoundary()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkQuoteTest",
+       "test": "test_Q11_Expired_AndTheBoundary()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkQuoteTest",
+       "test": "test_Q12_TtlIsBoundedByTheMandateAndByTheRegistry()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkQuoteTest",
+       "test": "test_Q13_AQuoteIssuedBeforeTheSetWasActiveIsRefused()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkQuoteTest",
+       "test": "test_Q13_AStoppedSetIsRefused()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkQuoteTest",
+       "test": "test_Q13_RotationHonoursEarlierQuotesForTheGraceOnly()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkQuoteTest",
+       "test": "test_Q14_TokenVersionMustBeCurrent()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkQuoteTest",
+       "test": "test_Q15_BoundsVersionMustBeCurrent()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkQuoteTest",
+       "test": "test_Q16_RouteHash()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkQuoteTest",
+       "test": "test_Q17_PriceSourceSet()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkQuoteTest",
+       "test": "test_Q18_ATighterCurrentBandNarrowsAnExistingMandate()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkQuoteTest",
+       "test": "test_Q18_AWiderCurrentBandNeverWidensAnExistingMandate()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkQuoteTest",
+       "test": "test_Q18_AWiderCurrentUpperBandNeverWidensAnExistingMandate()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkQuoteTest",
+       "test": "test_Q18_AnUnpublishedPinnedVersionCanNeverBeCharged()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkQuoteTest",
+       "test": "test_Q18_BandEdgesAreInside_JustOutsideIsNot()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkQuoteTest",
+       "test": "test_Q19_FiatPerPaymentCap()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkQuoteTest",
+       "test": "test_Q19_FiatTotalAndWindowCaps()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkQuoteTest",
+       "test": "test_Q19_FiatValueTooLargeForUint64()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkQuoteTest",
+       "test": "test_Q1_AKeyOutsideTheSet_Unauthorized()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkQuoteTest",
+       "test": "test_Q1_ARemovedKeyIsRefusedWithNoGrace_AndStaysRefused()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkQuoteTest",
+       "test": "test_Q2_MalformedSignatures()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkQuoteTest",
+       "test": "test_Q3_AQuoteForAnotherRouterDoesNotVerify()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkQuoteTest",
+       "test": "test_Q4_to_Q8_EveryBoundFieldMustMatch()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkQuoteTest",
+       "test": "test_Q9_TimesMustBeOrdered()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkSuccessorTest",
+       "test": "test_A1_AStoredDirectOnlyPinAcceptsNoRelayedSuccessor()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkSuccessorTest",
+       "test": "test_A1_AStrangerCannotActivateWithoutTheCustomersSignature()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkSuccessorTest",
+       "test": "test_A1_TheGatewayRefusesAForgedOrReplayedSignature()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkSuccessorTest",
+       "test": "test_A1_ThroughTheGateway_WithTheStoredPinGoverning()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkSuccessorTest",
+       "test": "test_A2_ANonceUsedByAnotherMessageIsRefused()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkSuccessorTest",
+       "test": "test_A2_DeadlineAndNonce()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkSuccessorTest",
+       "test": "test_A3_EveryBoundFieldMustMatch()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkSuccessorTest",
+       "test": "test_A3_TheSnapshotCoversCustomerAnchorAndBoundsVersion()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkSuccessorTest",
+       "test": "test_AfterAMigration_TheCustomerCanRevokeTheSuccessor_AndTheLineageTerminates()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkSuccessorTest",
+       "test": "test_C1_ANarrowerSuccessorIsAccepted_AndAMigrationMayDropATokenOrShortenTheExpiry()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkSuccessorTest",
+       "test": "test_C1_ANormalMigrationCannotDeclareAWidening()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkSuccessorTest",
+       "test": "test_C1_EachClauseOfContainmentIsEnforced()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkSuccessorTest",
+       "test": "test_C2_ABoundsVersionChangeIsAWideningOfARevision()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkSuccessorTest",
+       "test": "test_C2_ALaterExpiryIsAWidening()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkSuccessorTest",
+       "test": "test_C2_ARevisionCannotChangeTheLineageConstants()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkSuccessorTest",
+       "test": "test_C2_ARevisionMayWidenWithTheExactMask_AndNothingElse()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkSuccessorTest",
+       "test": "test_G1_AnAllowanceThatExpiresThisSecondStillCounts()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkSuccessorTest",
+       "test": "test_G1_AnExpiredAllowanceDoesNotCount()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkSuccessorTest",
+       "test": "test_G1_EveryTokenOfTheNewMandateIsChecked()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkSuccessorTest",
+       "test": "test_G1_TheNewRouterNeedsAnAllowanceOfAtLeastThePerPaymentCap()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkSuccessorTest",
+       "test": "test_K1_NewPinWellFormedLiveAndWithTheRightVersion()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkSuccessorTest",
+       "test": "test_K1_ThePinMustHoldOnTheLiveAccount()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkSuccessorTest",
+       "test": "test_L1_AnExpiredPredecessorIsRefused_AndASupersededOneToo()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkSuccessorTest",
+       "test": "test_L1_PredecessorMustBeTheActiveMandateOfALiveLineage()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkSuccessorTest",
+       "test": "test_Migration_CountersAndSettledCyclesCarryOver()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkSuccessorTest",
+       "test": "test_Migration_PauseBitsAreInherited()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkSuccessorTest",
+       "test": "test_Migration_SecondGenerationUsesTheGrandparentInTheSnapshot()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkSuccessorTest",
+       "test": "test_Migration_SiblingsAreUntouched()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkSuccessorTest",
+       "test": "test_Migration_TheOldRouterCanNoLongerChargeThePredecessor()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkSuccessorTest",
+       "test": "test_Migration_WritesNothingToPermit2()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkSuccessorTest",
+       "test": "test_Normal_Migration_Effects()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkSuccessorTest",
+       "test": "test_O1E_ARegrantedOldAllowanceBlocksTheNextEmergencyActivation()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkSuccessorTest",
+       "test": "test_O1E_AnEmergencyMigrationFromANormalRouterIsAllowedAndStricter()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkSuccessorTest",
+       "test": "test_O1E_BoundaryAtTheExpirySecond()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkSuccessorTest",
+       "test": "test_O1E_EveryExposedTokenMustBeUnusable_NotOnlyThePredecessorsTokens()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkSuccessorTest",
+       "test": "test_O1E_IsEnumeratedFromTheIndex_SoACallerCannotOmitASiblingsToken()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkSuccessorTest",
+       "test": "test_O1N_AllowanceZeroedByApproveZeroIsUnusable()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkSuccessorTest",
+       "test": "test_O1N_AnExpiredOldAllowanceCountsAsUnusable()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkSuccessorTest",
+       "test": "test_O1N_BoundaryAtTheExpirySecond()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkSuccessorTest",
+       "test": "test_O1N_NoSibling_TheOldAllowanceMustBeUnusable()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkSuccessorTest",
+       "test": "test_O1N_TheLastSiblingToLeaveMustLockTheTokenDown()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkSuccessorTest",
+       "test": "test_O1N_WithASibling_AnUnlimitedOldAllowanceIsRefused()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkSuccessorTest",
+       "test": "test_O1N_WithASibling_TheOldAllowanceMayStayButNotUnlimited()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkSuccessorTest",
+       "test": "test_R1_TheNewRouterMustBeBindable()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkSuccessorTest",
+       "test": "test_R2_KindAgainstTheRouters()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkSuccessorTest",
+       "test": "test_R3_ADeprecatedStandardRouterIsStillNormalMode()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkSuccessorTest",
+       "test": "test_R3_ADisabledRouterIsEmergencyMode()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkSuccessorTest",
+       "test": "test_R3_TheModeIsDerivedFromTheRegistry_NotChosenByTheCaller()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkSuccessorTest",
+       "test": "test_X1_ExtensionsMustBeZeroOnBothSides()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkSuccessorTest",
+       "test": "test_X2_ExactlyEightExposedTokensAreAllowed()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkSuccessorTest",
+       "test": "test_X2_TheBoundOfEightTokensPerRouterAppliesToTheUnionWithTheNewTokens()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      }
+     ],
+     "passed": 166,
+     "failed": 0,
+     "skipped": 0
+    }
+   ],
+   "result": "PASS",
+   "usedAttempt": 0
+  },
+  {
+   "chainId": 42161,
+   "name": "Arbitrum One",
+   "block": 515655559,
+   "blockHash": "0x4aba5b7a804b55d276ae3f9ac15c94ce409abcee9a3bb16db46365cdcd366f78",
+   "providersAgreeing": [
+    "https://arb1.arbitrum.io/rpc",
+    "https://arbitrum-one-rpc.publicnode.com"
+   ],
+   "attempts": [
+    {
+     "forkUrl": "https://arb1.arbitrum.io/rpc",
+     "exitCode": 0,
+     "seconds": 13.2,
+     "rawOutput": "evidence/implementation/logs/contracts-fork-42161.json",
+     "tests": [
+      {
+       "suite": "ForkChargeTest",
+       "test": "test_Atomic_ABalanceShortfallRevertsEverything()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkChargeTest",
+       "test": "test_Atomic_APullThatFailsRevertsTheCounters()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkChargeTest",
+       "test": "test_Caps_AWindowResetsWhenItsIndexMoves()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkChargeTest",
+       "test": "test_Caps_Day_ResetsLazilyAtTheNextDay()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkChargeTest",
+       "test": "test_Caps_PerPayment()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkChargeTest",
+       "test": "test_Caps_TheBillingPeriodWindowResetsPerPeriod_NotPerWeek()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkChargeTest",
+       "test": "test_Caps_TheThirtyDayWindowSpansManyDays()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkChargeTest",
+       "test": "test_Caps_Total()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkChargeTest",
+       "test": "test_Caps_Week_Thirty_Period_EachOnItsOwn()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkChargeTest",
+       "test": "test_Charge_AnotherRouterCannotChargeTheMandate()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkChargeTest",
+       "test": "test_Charge_ChargesPerPeriod()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkChargeTest",
+       "test": "test_Charge_Event_CarriesTheFiatValueAndQuoteDigest()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkChargeTest",
+       "test": "test_Charge_FiatValueIsRoundedUp()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkChargeTest",
+       "test": "test_Charge_FutureCycle_CycleNotYetDue()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkChargeTest",
+       "test": "test_Charge_LateRetryOfAnEarlierCycleIsAllowed()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkChargeTest",
+       "test": "test_Charge_MinInterval_ChargeTooSoon()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkChargeTest",
+       "test": "test_Charge_OnlyAnExecutor()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkChargeTest",
+       "test": "test_Charge_PaymentIdHasNoRouterInput()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkChargeTest",
+       "test": "test_Charge_PaysMerchantAndFee_ZeroBalanceRouter()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkChargeTest",
+       "test": "test_Charge_SameCycleTwice_PaymentAlreadySettled()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkChargeTest",
+       "test": "test_Consume_OnlyTheBoundRouterContract()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkChargeTest",
+       "test": "test_Fee_AboveTheControllersRate_FeeAboveCeiling()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkChargeTest",
+       "test": "test_Fee_AboveTheMandateCap_FeeTooHigh()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkChargeTest",
+       "test": "test_Fee_GovernanceCannotRaiseItAboveTheImmutableCeiling()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkChargeTest",
+       "test": "test_Guard_Expired_AndNotYetStarted()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkChargeTest",
+       "test": "test_Guard_ExpiryBoundary_TheExpirySecondIsOver()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkChargeTest",
+       "test": "test_Guard_Paused_ByEachBit()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkChargeTest",
+       "test": "test_Guard_PinIsBoundByHash_AndTheAccountMustStillMatch()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkChargeTest",
+       "test": "test_Guard_Revoked()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkChargeTest",
+       "test": "test_Guard_StartBoundary_TheStartSecondIsValid()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkChargeTest",
+       "test": "test_Guard_TermsAreBoundToTheMandateByHash()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkChargeTest",
+       "test": "test_Guard_TokenNotInTheMandate()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkChargeTest",
+       "test": "test_Ledger_OnlyTheManagerWritesTheCounters()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkChargeTest",
+       "test": "test_Permit2_AllowanceIsDecrementedByTheRouterOnly()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkChargeTest",
+       "test": "test_Router_BlockedToken()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkChargeTest",
+       "test": "test_Router_ExecutorRemovedByTheGuardian()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkChargeTest",
+       "test": "test_Router_MerchantPausedOrTokenNotAccepted()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkChargeTest",
+       "test": "test_Router_RecipientChangeIsDelayed()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkChargeTest",
+       "test": "test_Router_RetiredOrDisabledRouterCannotCharge()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkEvidenceTest",
+       "test": "test_Fork_EveryRuntimeFitsTheLimitsOnThisChain()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkEvidenceTest",
+       "test": "test_Fork_Permit2DomainSeparatorEqualsTheGeneratedOne()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkGasTest",
+       "test": "test_Gas_Activation_OneAndThreeTokens()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": [
+        "activate, 1 token: 348173",
+        "activate, 3 tokens: 519053"
+       ]
+      },
+      {
+       "suite": "ForkGasTest",
+       "test": "test_Gas_Charge_WithQuote_ColdAndWarm()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": [
+        "charge with quote, first charge (cold, fresh counters): 449970",
+        "charge with quote, second charge (warm within the test): 334640"
+       ]
+      },
+      {
+       "suite": "ForkGasTest",
+       "test": "test_Gas_MarginalEntry_AndTheExtrapolationTo50()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": [
+        "marginal tx gas per entry: 579780",
+        "extrapolated tx gas of a step of 50: 29726082"
+       ]
+      },
+      {
+       "suite": "ForkGasTest",
+       "test": "test_Gas_MaxBatchStepFitsTheBudget()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": [
+        "MAX_BATCH: 10",
+        "worst-case step, tx gas estimate: 6509802",
+        "budget: 8388608"
+       ]
+      },
+      {
+       "suite": "ForkGasTest",
+       "test": "test_Gas_Revoke_AndRetire()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": [
+        "revoke, 3 tokens (the last mandate on them): 106429"
+       ]
+      },
+      {
+       "suite": "ForkGasTest",
+       "test": "test_Gas_Step_Emergency_1()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": [
+        "EMERGENCY k=1 exec gas: 837013",
+        "EMERGENCY k=1 per entry: 837013",
+        "EMERGENCY k=1 calldata bytes: 4004",
+        "EMERGENCY k=1 tx gas estimate: 921513"
+       ]
+      },
+      {
+       "suite": "ForkGasTest",
+       "test": "test_Gas_Step_Emergency_10()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": [
+        "EMERGENCY k=10 exec gas: 5863862",
+        "EMERGENCY k=10 per entry: 586386",
+        "EMERGENCY k=10 calldata bytes: 39140",
+        "EMERGENCY k=10 tx gas estimate: 6509812"
+       ]
+      },
+      {
+       "suite": "ForkGasTest",
+       "test": "test_Gas_Step_Emergency_5()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": [
+        "EMERGENCY k=5 exec gas: 3301994",
+        "EMERGENCY k=5 per entry: 660398",
+        "EMERGENCY k=5 calldata bytes: 19620",
+        "EMERGENCY k=5 tx gas estimate: 3635984"
+       ]
+      },
+      {
+       "suite": "ForkGasTest",
+       "test": "test_Gas_Step_Normal_1()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": [
+        "NORMAL k=1 exec gas: 838199",
+        "NORMAL k=1 per entry: 838199",
+        "NORMAL k=1 calldata bytes: 4004",
+        "NORMAL k=1 tx gas estimate: 922669"
+       ]
+      },
+      {
+       "suite": "ForkGasTest",
+       "test": "test_Gas_Step_Normal_10()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": [
+        "NORMAL k=10 exec gas: 5699347",
+        "NORMAL k=10 per entry: 569934",
+        "NORMAL k=10 calldata bytes: 39140",
+        "NORMAL k=10 tx gas estimate: 6344937"
+       ]
+      },
+      {
+       "suite": "ForkGasTest",
+       "test": "test_Gas_Step_Normal_5()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": [
+        "NORMAL k=5 exec gas: 3234200",
+        "NORMAL k=5 per entry: 646840",
+        "NORMAL k=5 calldata bytes: 19620",
+        "NORMAL k=5 tx gas estimate: 3568070"
+       ]
+      },
+      {
+       "suite": "ForkPayOnceTest",
+       "test": "test_Minout_AFeeOnTransferTokenIsRefusedByPayOnce()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkPayOnceTest",
+       "test": "test_Minout_AFeeOnTransferTokenIsRefusedByRecurringCharges()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkPayOnceTest",
+       "test": "test_PayOnce_ARouterThatIsNotInTheRegistryCannotMarkPayments()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkPayOnceTest",
+       "test": "test_PayOnce_ASecondSubmissionOfTheSamePayment_IsRefused()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkPayOnceTest",
+       "test": "test_PayOnce_ASignatureForOneRouterIsUselessToAnother()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkPayOnceTest",
+       "test": "test_PayOnce_FeeAndAmountsAreBounded()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkPayOnceTest",
+       "test": "test_PayOnce_MerchantAndTokenStatus()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkPayOnceTest",
+       "test": "test_PayOnce_OnlyAnExecutorSubmits()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkPayOnceTest",
+       "test": "test_PayOnce_Permit2NonceIsSingleUse()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkPayOnceTest",
+       "test": "test_PayOnce_ReentrancyIsLocked()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkPayOnceTest",
+       "test": "test_PayOnce_Settles_AndLeavesNothingBehind()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkPayOnceTest",
+       "test": "test_PayOnce_ThePaymentSettlesOnceAcrossRouterVersions()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkPayOnceTest",
+       "test": "test_PayOnce_TheRecipientIsTheRegistryRecipientNow_NotWhatTheSignatureSays()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkPayOnceTest",
+       "test": "test_PayOnce_TheWitnessBindsEveryTerm()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkPayOnceTest",
+       "test": "test_PayOnce_ValidityWindow()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkQueueTest",
+       "test": "test_Abort_OnlyTheCustomer_AndItStopsTheSteps()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkQueueTest",
+       "test": "test_Chain_ATamperedEntryIsRefused()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkQueueTest",
+       "test": "test_Chain_AnEntryForAnotherRouterIsRefused()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkQueueTest",
+       "test": "test_Chain_AnEntryOfAnotherKindOrRouterIsRefused()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkQueueTest",
+       "test": "test_Chain_OutOfOrderEntriesAreRefused()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkQueueTest",
+       "test": "test_Chain_TheAuthorizationInTheEntryDecidesWhatTheManagerSees()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkQueueTest",
+       "test": "test_Expiry_StepsAreRefusedAfterIt_AndAnyoneCanRecordIt()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkQueueTest",
+       "test": "test_Open_AFinalHeadThatIsNotZeroNeverCompletes()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkQueueTest",
+       "test": "test_Open_Validations()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkQueueTest",
+       "test": "test_Plan_CannotMigrateSomeoneElsesLineage()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkQueueTest",
+       "test": "test_Plan_Emergency()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkQueueTest",
+       "test": "test_Plan_IsResumable_InAnyChunking_ByAnyCaller()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkQueueTest",
+       "test": "test_Plan_OneStepMigratesEveryLineage()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkQueueTest",
+       "test": "test_Step_AFailingEntryRevertsTheWholeStep_AndTheCustomerCanSkipIt()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkQueueTest",
+       "test": "test_Step_AnExpiredAuthorizationInTheMiddleRevertsTheStep()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkQueueTest",
+       "test": "test_Step_Bounds()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkQueueTest",
+       "test": "test_Step_MoreEntriesThanThePlanHoldsIsRefused()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkQueueTest",
+       "test": "test_TheGatewayMayNotActivateASuccessorForAnotherCustomersMandate()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkQueueTest",
+       "test": "test_TheQueueMayOnlyActivateSuccessors()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkQuoteTest",
+       "test": "test_Bounds_AreBoundedInWidth_AndWellFormed()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkQuoteTest",
+       "test": "test_Bounds_WidthIsMeasuredOnTheMinimum()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkQuoteTest",
+       "test": "test_NonInterference_AQuoteForAMandateWithoutFiatCapsIsIgnored()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkQuoteTest",
+       "test": "test_NonInterference_AValidQuoteCannotOverrideATokenCap()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkQuoteTest",
+       "test": "test_Q0_NoQuote_FiatQuoteRequired()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkQuoteTest",
+       "test": "test_Q10_NotYetValid_AndTheBoundary()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkQuoteTest",
+       "test": "test_Q11_Expired_AndTheBoundary()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkQuoteTest",
+       "test": "test_Q12_TtlIsBoundedByTheMandateAndByTheRegistry()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkQuoteTest",
+       "test": "test_Q13_AQuoteIssuedBeforeTheSetWasActiveIsRefused()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkQuoteTest",
+       "test": "test_Q13_AStoppedSetIsRefused()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkQuoteTest",
+       "test": "test_Q13_RotationHonoursEarlierQuotesForTheGraceOnly()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkQuoteTest",
+       "test": "test_Q14_TokenVersionMustBeCurrent()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkQuoteTest",
+       "test": "test_Q15_BoundsVersionMustBeCurrent()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkQuoteTest",
+       "test": "test_Q16_RouteHash()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkQuoteTest",
+       "test": "test_Q17_PriceSourceSet()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkQuoteTest",
+       "test": "test_Q18_ATighterCurrentBandNarrowsAnExistingMandate()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkQuoteTest",
+       "test": "test_Q18_AWiderCurrentBandNeverWidensAnExistingMandate()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkQuoteTest",
+       "test": "test_Q18_AWiderCurrentUpperBandNeverWidensAnExistingMandate()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkQuoteTest",
+       "test": "test_Q18_AnUnpublishedPinnedVersionCanNeverBeCharged()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkQuoteTest",
+       "test": "test_Q18_BandEdgesAreInside_JustOutsideIsNot()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkQuoteTest",
+       "test": "test_Q19_FiatPerPaymentCap()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkQuoteTest",
+       "test": "test_Q19_FiatTotalAndWindowCaps()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkQuoteTest",
+       "test": "test_Q19_FiatValueTooLargeForUint64()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkQuoteTest",
+       "test": "test_Q1_AKeyOutsideTheSet_Unauthorized()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkQuoteTest",
+       "test": "test_Q1_ARemovedKeyIsRefusedWithNoGrace_AndStaysRefused()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkQuoteTest",
+       "test": "test_Q2_MalformedSignatures()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkQuoteTest",
+       "test": "test_Q3_AQuoteForAnotherRouterDoesNotVerify()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkQuoteTest",
+       "test": "test_Q4_to_Q8_EveryBoundFieldMustMatch()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkQuoteTest",
+       "test": "test_Q9_TimesMustBeOrdered()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkSuccessorTest",
+       "test": "test_A1_AStoredDirectOnlyPinAcceptsNoRelayedSuccessor()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkSuccessorTest",
+       "test": "test_A1_AStrangerCannotActivateWithoutTheCustomersSignature()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkSuccessorTest",
+       "test": "test_A1_TheGatewayRefusesAForgedOrReplayedSignature()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkSuccessorTest",
+       "test": "test_A1_ThroughTheGateway_WithTheStoredPinGoverning()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkSuccessorTest",
+       "test": "test_A2_ANonceUsedByAnotherMessageIsRefused()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkSuccessorTest",
+       "test": "test_A2_DeadlineAndNonce()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkSuccessorTest",
+       "test": "test_A3_EveryBoundFieldMustMatch()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkSuccessorTest",
+       "test": "test_A3_TheSnapshotCoversCustomerAnchorAndBoundsVersion()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkSuccessorTest",
+       "test": "test_AfterAMigration_TheCustomerCanRevokeTheSuccessor_AndTheLineageTerminates()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkSuccessorTest",
+       "test": "test_C1_ANarrowerSuccessorIsAccepted_AndAMigrationMayDropATokenOrShortenTheExpiry()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkSuccessorTest",
+       "test": "test_C1_ANormalMigrationCannotDeclareAWidening()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkSuccessorTest",
+       "test": "test_C1_EachClauseOfContainmentIsEnforced()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkSuccessorTest",
+       "test": "test_C2_ABoundsVersionChangeIsAWideningOfARevision()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkSuccessorTest",
+       "test": "test_C2_ALaterExpiryIsAWidening()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkSuccessorTest",
+       "test": "test_C2_ARevisionCannotChangeTheLineageConstants()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkSuccessorTest",
+       "test": "test_C2_ARevisionMayWidenWithTheExactMask_AndNothingElse()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkSuccessorTest",
+       "test": "test_G1_AnAllowanceThatExpiresThisSecondStillCounts()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkSuccessorTest",
+       "test": "test_G1_AnExpiredAllowanceDoesNotCount()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkSuccessorTest",
+       "test": "test_G1_EveryTokenOfTheNewMandateIsChecked()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkSuccessorTest",
+       "test": "test_G1_TheNewRouterNeedsAnAllowanceOfAtLeastThePerPaymentCap()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkSuccessorTest",
+       "test": "test_K1_NewPinWellFormedLiveAndWithTheRightVersion()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkSuccessorTest",
+       "test": "test_K1_ThePinMustHoldOnTheLiveAccount()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkSuccessorTest",
+       "test": "test_L1_AnExpiredPredecessorIsRefused_AndASupersededOneToo()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkSuccessorTest",
+       "test": "test_L1_PredecessorMustBeTheActiveMandateOfALiveLineage()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkSuccessorTest",
+       "test": "test_Migration_CountersAndSettledCyclesCarryOver()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkSuccessorTest",
+       "test": "test_Migration_PauseBitsAreInherited()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkSuccessorTest",
+       "test": "test_Migration_SecondGenerationUsesTheGrandparentInTheSnapshot()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkSuccessorTest",
+       "test": "test_Migration_SiblingsAreUntouched()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkSuccessorTest",
+       "test": "test_Migration_TheOldRouterCanNoLongerChargeThePredecessor()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkSuccessorTest",
+       "test": "test_Migration_WritesNothingToPermit2()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkSuccessorTest",
+       "test": "test_Normal_Migration_Effects()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkSuccessorTest",
+       "test": "test_O1E_ARegrantedOldAllowanceBlocksTheNextEmergencyActivation()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkSuccessorTest",
+       "test": "test_O1E_AnEmergencyMigrationFromANormalRouterIsAllowedAndStricter()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkSuccessorTest",
+       "test": "test_O1E_BoundaryAtTheExpirySecond()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkSuccessorTest",
+       "test": "test_O1E_EveryExposedTokenMustBeUnusable_NotOnlyThePredecessorsTokens()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkSuccessorTest",
+       "test": "test_O1E_IsEnumeratedFromTheIndex_SoACallerCannotOmitASiblingsToken()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkSuccessorTest",
+       "test": "test_O1N_AllowanceZeroedByApproveZeroIsUnusable()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkSuccessorTest",
+       "test": "test_O1N_AnExpiredOldAllowanceCountsAsUnusable()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkSuccessorTest",
+       "test": "test_O1N_BoundaryAtTheExpirySecond()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkSuccessorTest",
+       "test": "test_O1N_NoSibling_TheOldAllowanceMustBeUnusable()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkSuccessorTest",
+       "test": "test_O1N_TheLastSiblingToLeaveMustLockTheTokenDown()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkSuccessorTest",
+       "test": "test_O1N_WithASibling_AnUnlimitedOldAllowanceIsRefused()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkSuccessorTest",
+       "test": "test_O1N_WithASibling_TheOldAllowanceMayStayButNotUnlimited()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkSuccessorTest",
+       "test": "test_R1_TheNewRouterMustBeBindable()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkSuccessorTest",
+       "test": "test_R2_KindAgainstTheRouters()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkSuccessorTest",
+       "test": "test_R3_ADeprecatedStandardRouterIsStillNormalMode()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkSuccessorTest",
+       "test": "test_R3_ADisabledRouterIsEmergencyMode()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkSuccessorTest",
+       "test": "test_R3_TheModeIsDerivedFromTheRegistry_NotChosenByTheCaller()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkSuccessorTest",
+       "test": "test_X1_ExtensionsMustBeZeroOnBothSides()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkSuccessorTest",
+       "test": "test_X2_ExactlyEightExposedTokensAreAllowed()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      },
+      {
+       "suite": "ForkSuccessorTest",
+       "test": "test_X2_TheBoundOfEightTokensPerRouterAppliesToTheUnionWithTheNewTokens()",
+       "status": "Success",
+       "reason": null,
+       "gas": null,
+       "fuzzRuns": null,
+       "logs": []
+      }
+     ],
+     "passed": 166,
+     "failed": 0,
+     "skipped": 0
+    }
+   ],
+   "result": "PASS",
+   "usedAttempt": 0
+  }
+ ],
+ "verdict": "PASS"
+}

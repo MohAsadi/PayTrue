@@ -1,0 +1,135 @@
+[
+ {
+  "allowedHosts": [
+   "codeload.github.com",
+   "github.com"
+  ],
+  "archiveFilename": "forge-std-77041d2ce690e692d6e03cc812b57d1ddaa4d505.zip",
+  "bytes": 128082,
+  "commit": "77041d2ce690e692d6e03cc812b57d1ddaa4d505",
+  "finalHost": "codeload.github.com",
+  "finalUrl": "https://codeload.github.com/foundry-rs/forge-std/zip/77041d2ce690e692d6e03cc812b57d1ddaa4d505",
+  "kind": "archive",
+  "name": "forge-std",
+  "redirectChain": [
+   "https://codeload.github.com/foundry-rs/forge-std/zip/77041d2ce690e692d6e03cc812b57d1ddaa4d505"
+  ],
+  "retrievedAt": "2026-10-16T13:10:41Z",
+  "sha256": "68207874a8c61d6dcd5c5de9136dd7388f7c53c3f369545e52d1d870823e9878",
+  "url": "https://github.com/foundry-rs/forge-std/archive/77041d2ce690e692d6e03cc812b57d1ddaa4d505.zip"
+ },
+ {
+  "allowedHosts": [
+   "codeload.github.com",
+   "github.com"
+  ],
+  "archiveFilename": "permit2-cc306b601f172c51bc04334a109e98340456620b.zip",
+  "bytes": 5565205,
+  "commit": "cc306b601f172c51bc04334a109e98340456620b",
+  "finalHost": "codeload.github.com",
+  "finalUrl": "https://codeload.github.com/Uniswap/permit2/zip/cc306b601f172c51bc04334a109e98340456620b",
+  "kind": "archive",
+  "name": "permit2",
+  "redirectChain": [
+   "https://codeload.github.com/Uniswap/permit2/zip/cc306b601f172c51bc04334a109e98340456620b"
+  ],
+  "retrievedAt": "2026-10-16T13:10:43Z",
+  "sha256": "6b0df80b1fa86d9bf3c9495651d047ae2c4a858e3865a9ed868e4723df453859",
+  "url": "https://github.com/Uniswap/permit2/archive/cc306b601f172c51bc04334a109e98340456620b.zip"
+ },
+ {
+  "allowedHosts": [
+   "codeload.github.com",
+   "github.com"
+  ],
+  "archiveFilename": "permit2-lib-forge-std-27e14b7f2448e5f5ac32719f51fe652aa0b0733e.zip",
+  "bytes": 35789,
+  "commit": "27e14b7f2448e5f5ac32719f51fe652aa0b0733e",
+  "finalHost": "codeload.github.com",
+  "finalUrl": "https://codeload.github.com/foundry-rs/forge-std/zip/27e14b7f2448e5f5ac32719f51fe652aa0b0733e",
+  "kind": "archive",
+  "name": "permit2-lib-forge-std",
+  "redirectChain": [
+   "https://codeload.github.com/foundry-rs/forge-std/zip/27e14b7f2448e5f5ac32719f51fe652aa0b0733e"
+  ],
+  "retrievedAt": "2026-10-16T13:10:44Z",
+  "sha256": "48fa7698e4c319cb170f55fe76925b9bfd8c330dc84392d2994f4b5434eda752",
+  "url": "https://github.com/foundry-rs/forge-std/archive/27e14b7f2448e5f5ac32719f51fe652aa0b0733e.zip"
+ },
+ {
+  "allowedHosts": [
+   "codeload.github.com",
+   "github.com"
+  ],
+  "archiveFilename": "permit2-lib-forge-gas-snapshot-3c5d52a26169876a144f7690d2f9ef0200eb0791.zip",
+  "bytes": 10748,
+  "commit": "3c5d52a26169876a144f7690d2f9ef0200eb0791",
+  "finalHost": "codeload.github.com",
+  "finalUrl": "https://codeload.github.com/marktoda/forge-gas-snapshot/zip/3c5d52a26169876a144f7690d2f9ef0200eb0791",
+  "kind": "archive",
+  "name": "permit2-lib-forge-gas-snapshot",
+  "redirectChain": [
+   "https://codeload.github.com/marktoda/forge-gas-snapshot/zip/3c5d52a26169876a144f7690d2f9ef0200eb0791"
+  ],
+  "retrievedAt": "2026-10-16T13:10:45Z",
+  "sha256": "c7958d06ca667e04dcda1eeff5bf2280400c9b806cf81761d90a0c3ed954d76e",
+  "url": "https://github.com/marktoda/forge-gas-snapshot/archive/3c5d52a26169876a144f7690d2f9ef0200eb0791.zip"
+ },
+ {
+  "allowedHosts": [
+   "codeload.github.com",
+   "github.com"
+  ],
+  "archiveFilename": "permit2-lib-openzeppelin-contracts-d3ff81b37f3c773b44dcaf5fda212c7176eef0e2.zip",
+  "bytes": 1869499,
+  "commit": "d3ff81b37f3c773b44dcaf5fda212c7176eef0e2",
+  "finalHost": "codeload.github.com",
+  "finalUrl": "https://codeload.github.com/OpenZeppelin/openzeppelin-contracts/zip/d3ff81b37f3c773b44dcaf5fda212c7176eef0e2",
+  "kind": "archive",
+  "name": "permit2-lib-openzeppelin-contracts",
+  "redirectChain": [
+   "https://codeload.github.com/OpenZeppelin/openzeppelin-contracts/zip/d3ff81b37f3c773b44dcaf5fda212c7176eef0e2"
+  ],
+  "retrievedAt": "2026-10-16T13:10:46Z",
+  "sha256": "0773c191a7c15e480dfceb18c368437d4627df8673e9e9dd3f9e298b86e87b63",
+  "url": "https://github.com/OpenZeppelin/openzeppelin-contracts/archive/d3ff81b37f3c773b44dcaf5fda212c7176eef0e2.zip"
+ },
+ {
+  "allowedHosts": [
+   "codeload.github.com",
+   "github.com"
+  ],
+  "archiveFilename": "solmate-for-permit2-8d910d876f51c3b2585c9109409d601f600e68e1.zip",
+  "bytes": 240597,
+  "commit": "8d910d876f51c3b2585c9109409d601f600e68e1",
+  "finalHost": "codeload.github.com",
+  "finalUrl": "https://codeload.github.com/transmissions11/solmate/zip/8d910d876f51c3b2585c9109409d601f600e68e1",
+  "kind": "archive",
+  "name": "solmate-for-permit2",
+  "redirectChain": [
+   "https://codeload.github.com/transmissions11/solmate/zip/8d910d876f51c3b2585c9109409d601f600e68e1"
+  ],
+  "retrievedAt": "2026-10-16T13:10:47Z",
+  "sha256": "05c34eec3127dbe36b03cc377366866aa3c23da9b2a0ef49c46b8025fbeb2d20",
+  "url": "https://github.com/transmissions11/solmate/archive/8d910d876f51c3b2585c9109409d601f600e68e1.zip"
+ },
+ {
+  "allowedHosts": [
+   "codeload.github.com",
+   "github.com"
+  ],
+  "archiveFilename": "permit2-nested-ds-test-9310e879db8ba3ea6d5c6489a579118fd264a3f5.zip",
+  "bytes": 17488,
+  "commit": "9310e879db8ba3ea6d5c6489a579118fd264a3f5",
+  "finalHost": "codeload.github.com",
+  "finalUrl": "https://codeload.github.com/dapphub/ds-test/zip/9310e879db8ba3ea6d5c6489a579118fd264a3f5",
+  "kind": "archive",
+  "name": "permit2-nested-ds-test",
+  "redirectChain": [
+   "https://codeload.github.com/dapphub/ds-test/zip/9310e879db8ba3ea6d5c6489a579118fd264a3f5"
+  ],
+  "retrievedAt": "2026-10-16T13:10:47Z",
+  "sha256": "d6d829b6c4eb9dee30a0f084df187f4efa1cd3f91ce73a20a1b5f83987add80e",
+  "url": "https://github.com/dapphub/ds-test/archive/9310e879db8ba3ea6d5c6489a579118fd264a3f5.zip"
+ }
+]

@@ -1,0 +1,108 @@
+{
+ "types": {
+  "EIP712Domain": [
+   {
+    "name": "name",
+    "type": "string"
+   },
+   {
+    "name": "version",
+    "type": "string"
+   },
+   {
+    "name": "chainId",
+    "type": "uint256"
+   },
+   {
+    "name": "verifyingContract",
+    "type": "address"
+   }
+  ],
+  "PriceQuote": [
+   {
+    "name": "paymentId",
+    "type": "bytes32"
+   },
+   {
+    "name": "payer",
+    "type": "address"
+   },
+   {
+    "name": "token",
+    "type": "address"
+   },
+   {
+    "name": "amountIn",
+    "type": "uint256"
+   },
+   {
+    "name": "currency",
+    "type": "uint16"
+   },
+   {
+    "name": "priceE18",
+    "type": "uint256"
+   },
+   {
+    "name": "issuedAt",
+    "type": "uint64"
+   },
+   {
+    "name": "validAfter",
+    "type": "uint64"
+   },
+   {
+    "name": "validUntil",
+    "type": "uint64"
+   },
+   {
+    "name": "nonce",
+    "type": "uint256"
+   },
+   {
+    "name": "signerSetVersion",
+    "type": "uint32"
+   },
+   {
+    "name": "registryVersion",
+    "type": "uint64"
+   },
+   {
+    "name": "boundsVersion",
+    "type": "uint32"
+   },
+   {
+    "name": "routeHash",
+    "type": "bytes32"
+   },
+   {
+    "name": "priceSourceSetHash",
+    "type": "bytes32"
+   }
+  ]
+ },
+ "primaryType": "PriceQuote",
+ "domain": {
+  "name": "FastPay Quote",
+  "version": "1",
+  "chainId": "84532",
+  "verifyingContract": "0x1111111111111111111111111111111111111111"
+ },
+ "message": {
+  "paymentId": "0xce0a7f5ef5ed03bc11198df6b564080f5512104724ad5ffd89a1a7f5d1eb07e3",
+  "payer": "0x4444444444444444444444444444444444444444",
+  "token": "0x5555555555555555555555555555555555555555",
+  "amountIn": "49990000",
+  "currency": "840",
+  "priceE18": "100000000000000000000",
+  "issuedAt": "1800000000",
+  "validAfter": "1800000001",
+  "validUntil": "1800000120",
+  "nonce": "424242",
+  "signerSetVersion": "3",
+  "registryVersion": "12",
+  "boundsVersion": "1",
+  "routeHash": "0xfdd8df3c220e58908ac7930433326b449ae46ddf928029a7fb6949364907d2d7",
+  "priceSourceSetHash": "0x1b7e9ef15cee6e37b6d59cbdb99f46a322e8a2109daa9e5c0c2a4a82c222d5d7"
+ }
+}

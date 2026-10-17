@@ -1,0 +1,728 @@
+[
+ {
+  "inputs": [],
+  "name": "MAX_LIVE_ROUTERS",
+  "outputs": [
+   {
+    "internalType": "uint256",
+    "name": "",
+    "type": "uint256"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "MIN_NOTICE_SECURITY",
+  "outputs": [
+   {
+    "internalType": "uint256",
+    "name": "",
+    "type": "uint256"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "MIN_NOTICE_STANDARD",
+  "outputs": [
+   {
+    "internalType": "uint256",
+    "name": "",
+    "type": "uint256"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "MODE_EMERGENCY",
+  "outputs": [
+   {
+    "internalType": "uint8",
+    "name": "",
+    "type": "uint8"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "MODE_NORMAL",
+  "outputs": [
+   {
+    "internalType": "uint8",
+    "name": "",
+    "type": "uint8"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "REASON_SECURITY",
+  "outputs": [
+   {
+    "internalType": "uint8",
+    "name": "",
+    "type": "uint8"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "REASON_STANDARD",
+  "outputs": [
+   {
+    "internalType": "uint8",
+    "name": "",
+    "type": "uint8"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "RETENTION",
+  "outputs": [
+   {
+    "internalType": "uint256",
+    "name": "",
+    "type": "uint256"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "ROLLBACK_WINDOW",
+  "outputs": [
+   {
+    "internalType": "uint256",
+    "name": "",
+    "type": "uint256"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "ST_ACTIVE",
+  "outputs": [
+   {
+    "internalType": "uint8",
+    "name": "",
+    "type": "uint8"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "ST_CANDIDATE",
+  "outputs": [
+   {
+    "internalType": "uint8",
+    "name": "",
+    "type": "uint8"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "ST_DEPRECATED",
+  "outputs": [
+   {
+    "internalType": "uint8",
+    "name": "",
+    "type": "uint8"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "ST_DISABLED",
+  "outputs": [
+   {
+    "internalType": "uint8",
+    "name": "",
+    "type": "uint8"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "ST_RETIRED",
+  "outputs": [
+   {
+    "internalType": "uint8",
+    "name": "",
+    "type": "uint8"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "ST_SUNSET",
+  "outputs": [
+   {
+    "internalType": "uint8",
+    "name": "",
+    "type": "uint8"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "ST_UNREGISTERED",
+  "outputs": [
+   {
+    "internalType": "uint8",
+    "name": "",
+    "type": "uint8"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "address",
+    "name": "router",
+    "type": "address"
+   }
+  ],
+  "name": "activate",
+  "outputs": [],
+  "stateMutability": "nonpayable",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "address",
+    "name": "router",
+    "type": "address"
+   }
+  ],
+  "name": "clearEmergency",
+  "outputs": [],
+  "stateMutability": "nonpayable",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "address",
+    "name": "router",
+    "type": "address"
+   }
+  ],
+  "name": "codeHashOf",
+  "outputs": [
+   {
+    "internalType": "bytes32",
+    "name": "",
+    "type": "bytes32"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "address",
+    "name": "router",
+    "type": "address"
+   },
+   {
+    "internalType": "address",
+    "name": "successor",
+    "type": "address"
+   },
+   {
+    "internalType": "uint8",
+    "name": "reason",
+    "type": "uint8"
+   },
+   {
+    "internalType": "uint256",
+    "name": "sunsetNotBefore",
+    "type": "uint256"
+   },
+   {
+    "internalType": "uint256",
+    "name": "mutant",
+    "type": "uint256"
+   }
+  ],
+  "name": "deprecate",
+  "outputs": [],
+  "stateMutability": "nonpayable",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "address",
+    "name": "router",
+    "type": "address"
+   }
+  ],
+  "name": "emergencyDisable",
+  "outputs": [],
+  "stateMutability": "nonpayable",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "address",
+    "name": "router",
+    "type": "address"
+   },
+   {
+    "internalType": "uint8",
+    "name": "state",
+    "type": "uint8"
+   },
+   {
+    "internalType": "uint8",
+    "name": "reason",
+    "type": "uint8"
+   },
+   {
+    "internalType": "uint256",
+    "name": "deprecatedAt",
+    "type": "uint256"
+   }
+  ],
+  "name": "forceState",
+  "outputs": [],
+  "stateMutability": "nonpayable",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "address",
+    "name": "router",
+    "type": "address"
+   },
+   {
+    "internalType": "uint256",
+    "name": "mutant",
+    "type": "uint256"
+   }
+  ],
+  "name": "isBindable",
+  "outputs": [
+   {
+    "internalType": "bool",
+    "name": "",
+    "type": "bool"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "address",
+    "name": "router",
+    "type": "address"
+   }
+  ],
+  "name": "isChargeable",
+  "outputs": [
+   {
+    "internalType": "bool",
+    "name": "",
+    "type": "bool"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "uint256",
+    "name": "group",
+    "type": "uint256"
+   }
+  ],
+  "name": "liveCount",
+  "outputs": [
+   {
+    "internalType": "uint256",
+    "name": "",
+    "type": "uint256"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "uint256",
+    "name": "group",
+    "type": "uint256"
+   }
+  ],
+  "name": "liveCountScan",
+  "outputs": [
+   {
+    "internalType": "uint256",
+    "name": "n",
+    "type": "uint256"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "address",
+    "name": "router",
+    "type": "address"
+   }
+  ],
+  "name": "markSunset",
+  "outputs": [],
+  "stateMutability": "nonpayable",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "address",
+    "name": "router",
+    "type": "address"
+   },
+   {
+    "internalType": "uint256",
+    "name": "mutant",
+    "type": "uint256"
+   }
+  ],
+  "name": "mode",
+  "outputs": [
+   {
+    "internalType": "uint8",
+    "name": "",
+    "type": "uint8"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "uint8",
+    "name": "reason",
+    "type": "uint8"
+   }
+  ],
+  "name": "notice",
+  "outputs": [
+   {
+    "internalType": "uint256",
+    "name": "",
+    "type": "uint256"
+   }
+  ],
+  "stateMutability": "pure",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "address",
+    "name": "router",
+    "type": "address"
+   },
+   {
+    "internalType": "bytes32",
+    "name": "codeHash",
+    "type": "bytes32"
+   },
+   {
+    "internalType": "uint32",
+    "name": "version",
+    "type": "uint32"
+   },
+   {
+    "internalType": "uint256",
+    "name": "group",
+    "type": "uint256"
+   }
+  ],
+  "name": "propose",
+  "outputs": [],
+  "stateMutability": "nonpayable",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "address",
+    "name": "router",
+    "type": "address"
+   },
+   {
+    "internalType": "bytes32",
+    "name": "codeHash",
+    "type": "bytes32"
+   },
+   {
+    "internalType": "uint32",
+    "name": "version",
+    "type": "uint32"
+   },
+   {
+    "internalType": "uint256",
+    "name": "group",
+    "type": "uint256"
+   }
+  ],
+  "name": "registerActive",
+  "outputs": [],
+  "stateMutability": "nonpayable",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "address",
+    "name": "router",
+    "type": "address"
+   },
+   {
+    "internalType": "uint256",
+    "name": "mutant",
+    "type": "uint256"
+   }
+  ],
+  "name": "retire",
+  "outputs": [],
+  "stateMutability": "nonpayable",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "uint256",
+    "name": "group",
+    "type": "uint256"
+   }
+  ],
+  "name": "routerCount",
+  "outputs": [
+   {
+    "internalType": "uint256",
+    "name": "",
+    "type": "uint256"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "address",
+    "name": "",
+    "type": "address"
+   }
+  ],
+  "name": "routers",
+  "outputs": [
+   {
+    "internalType": "uint8",
+    "name": "state",
+    "type": "uint8"
+   },
+   {
+    "internalType": "uint8",
+    "name": "reason",
+    "type": "uint8"
+   },
+   {
+    "internalType": "uint8",
+    "name": "prevState",
+    "type": "uint8"
+   },
+   {
+    "internalType": "uint32",
+    "name": "version",
+    "type": "uint32"
+   },
+   {
+    "internalType": "uint256",
+    "name": "group",
+    "type": "uint256"
+   },
+   {
+    "internalType": "uint256",
+    "name": "deprecatedAt",
+    "type": "uint256"
+   },
+   {
+    "internalType": "uint256",
+    "name": "sunsetNotBefore",
+    "type": "uint256"
+   },
+   {
+    "internalType": "uint256",
+    "name": "sunsetAt",
+    "type": "uint256"
+   },
+   {
+    "internalType": "bytes32",
+    "name": "codeHash",
+    "type": "bytes32"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "address",
+    "name": "router",
+    "type": "address"
+   }
+  ],
+  "name": "snap",
+  "outputs": [
+   {
+    "internalType": "uint8",
+    "name": "",
+    "type": "uint8"
+   },
+   {
+    "internalType": "uint8",
+    "name": "",
+    "type": "uint8"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "address",
+    "name": "router",
+    "type": "address"
+   }
+  ],
+  "name": "stateOf",
+  "outputs": [
+   {
+    "internalType": "uint8",
+    "name": "",
+    "type": "uint8"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "address",
+    "name": "router",
+    "type": "address"
+   },
+   {
+    "internalType": "uint256",
+    "name": "mutant",
+    "type": "uint256"
+   }
+  ],
+  "name": "sunset",
+  "outputs": [],
+  "stateMutability": "nonpayable",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "address",
+    "name": "router",
+    "type": "address"
+   }
+  ],
+  "name": "versionOf",
+  "outputs": [
+   {
+    "internalType": "uint32",
+    "name": "",
+    "type": "uint32"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "NotYetSunset",
+  "type": "error"
+ },
+ {
+  "inputs": [],
+  "name": "NoticeTooShort",
+  "type": "error"
+ },
+ {
+  "inputs": [],
+  "name": "RetentionNotElapsed",
+  "type": "error"
+ },
+ {
+  "inputs": [],
+  "name": "SuccessorNotActive",
+  "type": "error"
+ },
+ {
+  "inputs": [],
+  "name": "TooManyLiveRouters",
+  "type": "error"
+ },
+ {
+  "inputs": [],
+  "name": "WrongRouterState",
+  "type": "error"
+ }
+]

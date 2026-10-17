@@ -1,0 +1,1568 @@
+{
+  "counts": {
+    "backendVectors": 5,
+    "containmentTuples": 742,
+    "errors": 63,
+    "lemmaMTuples": 660,
+    "mutants": 151,
+    "scenarioInstructions": 4121,
+    "scenarios": 114,
+    "stateTables": {
+      "shared allowance, B on t1": {
+        "states": 384,
+        "transitions": 5312
+      },
+      "shared allowance, B on t1 and t2": {
+        "states": 324,
+        "transitions": 3726
+      },
+      "single lineage": {
+        "states": 12,
+        "transitions": 40
+      }
+    }
+  },
+  "coverage": {
+    "ACP-TV-13": ["ACP_TV_13_17", "ACP_TV_13_CHARGE"],
+    "ACP-TV-14": ["ACP_TV_13_17"],
+    "ACP-TV-15": ["ACP_TV_13_17"],
+    "ACP-TV-16": ["ACP_TV_13_17"],
+    "ACP-TV-17": ["ACP_TV_13_17"],
+    "ACP-TV-20": ["ACP_TV_35"],
+    "ACP-TV-21": ["ACP_TV_35"],
+    "ACP-TV-24": ["ACP_TV_ACTIVATE"],
+    "ACP-TV-25": ["ACP_TV_25"],
+    "ACP-TV-26": ["ACP_TV_26"],
+    "ACP-TV-27": ["ACP_TV_27_28"],
+    "ACP-TV-28": ["ACP_TV_27_28"],
+    "ACP-TV-29": ["ACP_TV_29"],
+    "ACP-TV-30": ["ACP_TV_30"],
+    "ACP-TV-31": ["ACP_TV_31"],
+    "ACP-TV-32": ["ACP_TV_31"],
+    "ACP-TV-33": ["ACP_TV_33"],
+    "ACP-TV-34": ["ACP_TV_34"],
+    "ACP-TV-35": ["ACP_TV_35", "ACP_TV_UPDATE_TERMINAL"],
+    "ACP-TV-36": ["ACP_TV_35"],
+    "ACP-TV-37": ["ACP_TV_37"],
+    "ACP-TV-38": ["ACP_TV_38"],
+    "ACP-TV-39": ["ACP_TV_39"],
+    "ACP-TV-40": ["ACP_TV_40"],
+    "ACP-TV-41": ["ACP_TV_41", "ACP_TV_T_SIG"],
+    "ACP-TV-42": ["ACP_TV_42", "ACP_TV_T_SIG"],
+    "ACP-TV-43": ["ACP_TV_43", "ACP_TV_T_SIG"],
+    "ACP-TV-44": ["ACP_TV_44", "ACP_TV_T_SIG"],
+    "CAP-TV-14": ["CAP_TV_14_15", "CAP_TV_Q13"],
+    "CAP-TV-15": ["CAP_TV_14_15"],
+    "CAP-TV-16": ["CAP_TV_16"],
+    "CAP-TV-23": ["CAP_TV_23"],
+    "CAP-TV-24": ["CAP_TV_24"],
+    "CAP-TV-25": ["CAP_TV_25_26"],
+    "CAP-TV-26": ["CAP_TV_25_26"],
+    "CAP-TV-27": ["CAP_TV_27", "CAP_TV_27B"],
+    "CAP-TV-28": ["CAP_TV_28"],
+    "CAP-TV-29": ["CAP_TV_29"],
+    "CAP-TV-30": ["CAP_TV_30"],
+    "CAP-TV-31": ["CAP_TV_31"],
+    "CAP-TV-32": ["CAP_TV_32"],
+    "K.1": ["B_014", "B_015", "B_016", "W_000"],
+    "K.2": ["B_017", "B_018", "B_019", "B_020", "B_021", "W_001"],
+    "K.3": ["B_022", "B_023", "W_002"],
+    "K.4": [
+      "B_024", "B_025", "B_026", "B_027", "B_028", "B_029", "B_030", "B_031", "B_032", "B_033", "B_034", "B_035",
+      "B_036", "B_037", "B_038", "B_039", "B_040", "B_041", "W_003", "W_004", "W_005"
+    ],
+    "K.5": [
+      "B_042", "B_043", "B_044", "B_045", "B_046", "B_047", "B_048", "B_049", "B_050", "B_051", "B_052", "B_053",
+      "B_054", "B_055", "B_056", "W_006", "W_007"
+    ],
+    "K.6": ["B_057", "B_058", "B_059", "B_060", "W_008"],
+    "K.7": ["B_061", "B_062", "B_063", "B_064", "B_065", "W_009", "W_010"],
+    "K.8": ["B_066", "B_067", "W_011"],
+    "K.9": ["B_068", "W_012"],
+    "MIG-TV-05": ["MIG_TV_05"],
+    "MIG-TV-06": ["MIG_TV_06"],
+    "MIG-TV-07": ["MIG_TV_07"],
+    "MIG-TV-08": ["MIG_TV_08"],
+    "MIG-TV-09": ["MIG_TV_09"],
+    "MIG-TV-10": ["MIG_TV_10"],
+    "MIG-TV-11": ["MIG_TV_11"],
+    "MIG-TV-12": ["MIG_TV_12", "MIG_TV_L1", "MIG_TV_L1B"],
+    "MIG-TV-13": ["MIG_TV_13"],
+    "MIG-TV-14": ["MIG_TV_14"],
+    "MIG-TV-15": ["MIG_TV_15"],
+    "MIG-TV-17": ["MIG_TV_17", "MIG_TV_A1", "MIG_TV_A1B", "MIG_TV_A1C", "MIG_TV_A2"],
+    "MIG-TV-19": ["MIG_TV_11", "hashes.test_PaymentIdIsRouterIndependent"],
+    "MIG-TV-20": [
+      "B_013", "B_014", "B_015", "B_016", "B_017", "B_018", "B_019", "B_020", "B_021", "B_022", "B_023", "B_024",
+      "B_025", "B_026", "B_027", "B_028", "B_029", "B_030", "B_031", "B_032", "B_033", "B_034", "B_035", "B_036",
+      "B_037", "B_038", "B_039", "B_040", "B_041", "B_042", "B_043", "B_044", "B_045", "B_046", "B_047", "B_048",
+      "B_049", "B_050", "B_051", "B_052", "B_053", "B_054", "B_055", "B_056", "B_057", "B_058", "B_059", "B_060",
+      "B_061", "B_062", "B_063", "B_064", "B_065", "B_066", "B_067", "B_068", "MIG_TV_20_K6"
+    ],
+    "MIG-TV-21": ["MIG_TV_21"],
+    "MIG-TV-22": ["MIG_TV_22A", "MIG_TV_22B", "MIG_TV_22C", "TB_ALLOWANCE"],
+    "MIG-TV-23": ["MIG_TV_23A", "MIG_TV_23B", "MIG_TV_23C"],
+    "MIG-TV-24": ["MIG_TV_24"],
+    "MIG-TV-25": ["MIG_TV_25"],
+    "MIG-TV-26": ["MIG_TV_26"],
+    "MIG-TV-27": ["MIG_TV_27"],
+    "MIG-TV-28": ["MIG_TV_28"],
+    "MIG-TV-29": ["MIG_TV_29", "MIG_TV_29B"],
+    "MIG-TV-30": ["MIG_TV_30"],
+    "MIG-TV-31": ["MIG_TV_31"],
+    "MIG-TV-32": ["MIG_TV_32"],
+    "MIG-TV-33": ["MIG_TV_33"],
+    "MIG-TV-34": ["MIG_TV_34"],
+    "MIG-TV-35": [
+      "MIG_TV_35_ACTIVE_E", "MIG_TV_35_ACTIVE_N", "MIG_TV_35_DEP_SEC_E", "MIG_TV_35_DEP_SEC_N",
+      "MIG_TV_35_DEP_STD_E", "MIG_TV_35_DEP_STD_N", "MIG_TV_35_DISABLED_E", "MIG_TV_35_DISABLED_N",
+      "MIG_TV_35_RETIRED_E", "MIG_TV_35_RETIRED_N", "MIG_TV_35_SUNSET_E", "MIG_TV_35_SUNSET_N"
+    ],
+    "MIG-TV-36": ["MIG_TV_36A", "MIG_TV_36B", "MIG_TV_36C"],
+    "MIG-TV-37": ["MIG_TV_37", "MIG_TV_37B"],
+    "MIG-TV-38": ["MIG_TV_38"],
+    "MIG-TV-39": ["MIG_TV_39_EMERGENCY", "MIG_TV_39_NORMAL", "MIG_TV_39_REVISION"],
+    "MIG-TV-40": ["MIG_TV_40D"],
+    "MIG-TV-41": ["MIG_TV_41"],
+    "MIG-TV-42": ["MIG_TV_42"],
+    "MIG-TV-43": ["MIG_TV_43_1", "MIG_TV_43_2", "MIG_TV_43_3", "MIG_TV_43_4", "MIG_TV_43_5", "MIG_TV_43_6"],
+    "MIG-TV-44": ["MIG_TV_44"],
+    "MIG-TV-45": ["MIG_TV_45"],
+    "MIG-TV-5": ["MIG_TV_05"],
+    "MIG-TV-6": ["MIG_TV_06"],
+    "MIG-TV-7": ["MIG_TV_07"],
+    "MIG-TV-8": ["MIG_TV_08"],
+    "MIG-TV-9": ["MIG_TV_09"]
+  },
+  "errors": [
+    {
+      "argKind": "none",
+      "argWord": -1,
+      "id": 1,
+      "name": "NotCustomer",
+      "selector": "0xa8df5f3e",
+      "signature": "NotCustomer()"
+    },
+    {
+      "argKind": "none",
+      "argWord": -1,
+      "id": 2,
+      "name": "SignatureModeNotPermitted",
+      "selector": "0x1e381846",
+      "signature": "SignatureModeNotPermitted()"
+    },
+    {
+      "argKind": "none",
+      "argWord": -1,
+      "id": 3,
+      "name": "AuthorizationExpired",
+      "selector": "0x0f05f5bf",
+      "signature": "AuthorizationExpired()"
+    },
+    {
+      "argKind": "none",
+      "argWord": -1,
+      "id": 4,
+      "name": "AuthorizationReplayed",
+      "selector": "0x22be437f",
+      "signature": "AuthorizationReplayed()"
+    },
+    {
+      "argKind": "none",
+      "argWord": -1,
+      "id": 5,
+      "name": "AuthorizationMismatch",
+      "selector": "0xae8b80e8",
+      "signature": "AuthorizationMismatch()"
+    },
+    {
+      "argKind": "none",
+      "argWord": -1,
+      "id": 6,
+      "name": "WrongPredecessor",
+      "selector": "0xa419ca88",
+      "signature": "WrongPredecessor()"
+    },
+    {
+      "argKind": "none",
+      "argWord": -1,
+      "id": 7,
+      "name": "RouterNotBindable",
+      "selector": "0x654c9512",
+      "signature": "RouterNotBindable()"
+    },
+    {
+      "argKind": "none",
+      "argWord": -1,
+      "id": 8,
+      "name": "WrongKind",
+      "selector": "0x35a08a07",
+      "signature": "WrongKind()"
+    },
+    {
+      "argKind": "none",
+      "argWord": -1,
+      "id": 9,
+      "name": "ModeMismatch",
+      "selector": "0x8b978717",
+      "signature": "ModeMismatch()"
+    },
+    {
+      "argKind": "none",
+      "argWord": -1,
+      "id": 10,
+      "name": "ExtensionsNotSupported",
+      "selector": "0xa76747a7",
+      "signature": "ExtensionsNotSupported()"
+    },
+    {
+      "argKind": "none",
+      "argWord": -1,
+      "id": 11,
+      "name": "AccountPinMalformed",
+      "selector": "0x3e4820ef",
+      "signature": "AccountPinMalformed()"
+    },
+    {
+      "argKind": "none",
+      "argWord": -1,
+      "id": 12,
+      "name": "AccountPinMismatch",
+      "selector": "0xa67aeb7e",
+      "signature": "AccountPinMismatch()"
+    },
+    {
+      "argKind": "none",
+      "argWord": -1,
+      "id": 13,
+      "name": "PinVersionMismatch",
+      "selector": "0x193971f2",
+      "signature": "PinVersionMismatch()"
+    },
+    {
+      "argKind": "none",
+      "argWord": -1,
+      "id": 14,
+      "name": "PinHashMismatch",
+      "selector": "0x818d2ffc",
+      "signature": "PinHashMismatch()"
+    },
+    {
+      "argKind": "uint",
+      "argWord": 1,
+      "id": 15,
+      "name": "AccountCodeChanged",
+      "selector": "0x6a96f22a",
+      "signature": "AccountCodeChanged(address,uint8)"
+    },
+    {
+      "argKind": "token",
+      "argWord": 0,
+      "id": 16,
+      "name": "NewPermissionMissing",
+      "selector": "0xde0f93de",
+      "signature": "NewPermissionMissing(address)"
+    },
+    {
+      "argKind": "none",
+      "argWord": -1,
+      "id": 17,
+      "name": "ExposureLimit",
+      "selector": "0xf034fc40",
+      "signature": "ExposureLimit()"
+    },
+    {
+      "argKind": "none",
+      "argWord": -1,
+      "id": 18,
+      "name": "TermsInvalid",
+      "selector": "0xcfb42ce1",
+      "signature": "TermsInvalid(uint8)"
+    },
+    {
+      "argKind": "none",
+      "argWord": -1,
+      "id": 19,
+      "name": "TooManySigners",
+      "selector": "0x46161fe4",
+      "signature": "TooManySigners(uint256,uint256)"
+    },
+    {
+      "argKind": "none",
+      "argWord": -1,
+      "id": 20,
+      "name": "TermsNotContained",
+      "selector": "0xafdc7058",
+      "signature": "TermsNotContained()"
+    },
+    {
+      "argKind": "none",
+      "argWord": -1,
+      "id": 21,
+      "name": "LineageConstantsChanged",
+      "selector": "0x39948536",
+      "signature": "LineageConstantsChanged()"
+    },
+    {
+      "argKind": "none",
+      "argWord": -1,
+      "id": 22,
+      "name": "WidenedMaskMismatch",
+      "selector": "0xc5cabe59",
+      "signature": "WidenedMaskMismatch()"
+    },
+    {
+      "argKind": "token",
+      "argWord": 0,
+      "id": 23,
+      "name": "OldPermissionNotRevoked",
+      "selector": "0x14ff05c0",
+      "signature": "OldPermissionNotRevoked(address)"
+    },
+    {
+      "argKind": "token",
+      "argWord": 0,
+      "id": 24,
+      "name": "ResidualAllowanceUnbounded",
+      "selector": "0xf1c2383f",
+      "signature": "ResidualAllowanceUnbounded(address)"
+    },
+    {
+      "argKind": "none",
+      "argWord": -1,
+      "id": 25,
+      "name": "PaymentAlreadySettled",
+      "selector": "0xcc3a81a7",
+      "signature": "PaymentAlreadySettled()"
+    },
+    {
+      "argKind": "none",
+      "argWord": -1,
+      "id": 26,
+      "name": "MandateNotConsumable",
+      "selector": "0x36bda7e5",
+      "signature": "MandateNotConsumable()"
+    },
+    {
+      "argKind": "none",
+      "argWord": -1,
+      "id": 27,
+      "name": "WrongRouter",
+      "selector": "0x64ec5f9b",
+      "signature": "WrongRouter()"
+    },
+    {
+      "argKind": "none",
+      "argWord": -1,
+      "id": 28,
+      "name": "RouterNotChargeable",
+      "selector": "0xd83f6cf2",
+      "signature": "RouterNotChargeable()"
+    },
+    {
+      "argKind": "none",
+      "argWord": -1,
+      "id": 29,
+      "name": "TokenNotInMandate",
+      "selector": "0xde6ad497",
+      "signature": "TokenNotInMandate()"
+    },
+    {
+      "argKind": "none",
+      "argWord": -1,
+      "id": 30,
+      "name": "TokenPerPaymentCapExceeded",
+      "selector": "0x5e503d5a",
+      "signature": "TokenPerPaymentCapExceeded()"
+    },
+    {
+      "argKind": "none",
+      "argWord": -1,
+      "id": 31,
+      "name": "TokenTotalCapExceeded",
+      "selector": "0x094cabef",
+      "signature": "TokenTotalCapExceeded()"
+    },
+    {
+      "argKind": "none",
+      "argWord": -1,
+      "id": 32,
+      "name": "MandateNotActive",
+      "selector": "0x952501f6",
+      "signature": "MandateNotActive()"
+    },
+    {
+      "argKind": "none",
+      "argWord": -1,
+      "id": 33,
+      "name": "NotRetirable",
+      "selector": "0x2f568246",
+      "signature": "NotRetirable()"
+    },
+    {
+      "argKind": "none",
+      "argWord": -1,
+      "id": 34,
+      "name": "NoTokensLeft",
+      "selector": "0x7364ba17",
+      "signature": "NoTokensLeft()"
+    },
+    {
+      "argKind": "none",
+      "argWord": -1,
+      "id": 35,
+      "name": "UnknownMandate",
+      "selector": "0x473251f4",
+      "signature": "UnknownMandate()"
+    },
+    {
+      "argKind": "none",
+      "argWord": -1,
+      "id": 36,
+      "name": "QuoteSignerUnauthorized",
+      "selector": "0xb7c458f6",
+      "signature": "QuoteSignerUnauthorized()"
+    },
+    {
+      "argKind": "none",
+      "argWord": -1,
+      "id": 37,
+      "name": "QuoteSignerRemoved",
+      "selector": "0xb746ccda",
+      "signature": "QuoteSignerRemoved()"
+    },
+    {
+      "argKind": "none",
+      "argWord": -1,
+      "id": 38,
+      "name": "QuoteSignerSetRetired",
+      "selector": "0x7843555f",
+      "signature": "QuoteSignerSetRetired()"
+    },
+    {
+      "argKind": "none",
+      "argWord": -1,
+      "id": 39,
+      "name": "QuoteSignerSetStopped",
+      "selector": "0x65d6062a",
+      "signature": "QuoteSignerSetStopped()"
+    },
+    {
+      "argKind": "key",
+      "argWord": 0,
+      "id": 40,
+      "name": "QuoteSignerTombstoned",
+      "selector": "0x3ea41d3e",
+      "signature": "QuoteSignerTombstoned(address)"
+    },
+    {
+      "argKind": "none",
+      "argWord": -1,
+      "id": 41,
+      "name": "NotGovernance",
+      "selector": "0xb56f932c",
+      "signature": "NotGovernance()"
+    },
+    {
+      "argKind": "none",
+      "argWord": -1,
+      "id": 42,
+      "name": "NotAuthorized",
+      "selector": "0xea8e4eb5",
+      "signature": "NotAuthorized()"
+    },
+    {
+      "argKind": "none",
+      "argWord": -1,
+      "id": 43,
+      "name": "SignerSetNotProposed",
+      "selector": "0xfea7216f",
+      "signature": "SignerSetNotProposed()"
+    },
+    {
+      "argKind": "none",
+      "argWord": -1,
+      "id": 44,
+      "name": "SignerSetVersionOrder",
+      "selector": "0xc773769c",
+      "signature": "SignerSetVersionOrder()"
+    },
+    {
+      "argKind": "none",
+      "argWord": -1,
+      "id": 45,
+      "name": "SuccessorNotActive",
+      "selector": "0xecd74048",
+      "signature": "SuccessorNotActive()"
+    },
+    {
+      "argKind": "none",
+      "argWord": -1,
+      "id": 46,
+      "name": "NoticeTooShort",
+      "selector": "0x68ee34c1",
+      "signature": "NoticeTooShort()"
+    },
+    {
+      "argKind": "none",
+      "argWord": -1,
+      "id": 47,
+      "name": "NotYetSunset",
+      "selector": "0x2973b214",
+      "signature": "NotYetSunset()"
+    },
+    {
+      "argKind": "none",
+      "argWord": -1,
+      "id": 48,
+      "name": "RetentionNotElapsed",
+      "selector": "0xd42be9e7",
+      "signature": "RetentionNotElapsed()"
+    },
+    {
+      "argKind": "none",
+      "argWord": -1,
+      "id": 49,
+      "name": "WrongRouterState",
+      "selector": "0x6ddcc1da",
+      "signature": "WrongRouterState()"
+    },
+    {
+      "argKind": "none",
+      "argWord": -1,
+      "id": 50,
+      "name": "TooManyLiveRouters",
+      "selector": "0xc9235c9e",
+      "signature": "TooManyLiveRouters()"
+    },
+    {
+      "argKind": "uint",
+      "argWord": 0,
+      "id": 51,
+      "name": "AllowanceExpired",
+      "selector": "0xd81b2f2e",
+      "signature": "AllowanceExpired(uint256)"
+    },
+    {
+      "argKind": "uint",
+      "argWord": 0,
+      "id": 52,
+      "name": "InsufficientAllowance",
+      "selector": "0xf96fb071",
+      "signature": "InsufficientAllowance(uint256)"
+    },
+    {
+      "argKind": "none",
+      "argWord": -1,
+      "id": 53,
+      "name": "InvalidNonce",
+      "selector": "0x756688fe",
+      "signature": "InvalidNonce()"
+    },
+    {
+      "argKind": "none",
+      "argWord": -1,
+      "id": 54,
+      "name": "ExcessiveInvalidation",
+      "selector": "0x24d35a26",
+      "signature": "ExcessiveInvalidation()"
+    },
+    {
+      "argKind": "none",
+      "argWord": -1,
+      "id": 55,
+      "name": "QuoteTimesInvalid",
+      "selector": "0x11fa9667",
+      "signature": "QuoteTimesInvalid()"
+    },
+    {
+      "argKind": "none",
+      "argWord": -1,
+      "id": 56,
+      "name": "QuoteNotYetValid",
+      "selector": "0x3d0ad81a",
+      "signature": "QuoteNotYetValid()"
+    },
+    {
+      "argKind": "none",
+      "argWord": -1,
+      "id": 57,
+      "name": "QuoteExpired",
+      "selector": "0x8727a7f9",
+      "signature": "QuoteExpired()"
+    },
+    {
+      "argKind": "none",
+      "argWord": -1,
+      "id": 58,
+      "name": "QuoteTtlTooLong",
+      "selector": "0xa62705f4",
+      "signature": "QuoteTtlTooLong()"
+    },
+    {
+      "argKind": "none",
+      "argWord": -1,
+      "id": 59,
+      "name": "BatchTooLarge",
+      "selector": "0x0b7d62e2",
+      "signature": "BatchTooLarge()"
+    },
+    {
+      "argKind": "none",
+      "argWord": -1,
+      "id": 60,
+      "name": "CycleNotYetDue",
+      "selector": "0x9105a208",
+      "signature": "CycleNotYetDue()"
+    },
+    {
+      "argKind": "none",
+      "argWord": -1,
+      "id": 61,
+      "name": "AbiOutOfRange",
+      "selector": "0xff5e8425",
+      "signature": "AbiOutOfRange()"
+    },
+    {
+      "argKind": "none",
+      "argWord": -1,
+      "id": 62,
+      "name": "UnsafeCast",
+      "selector": "0xc4bd89a9",
+      "signature": "UnsafeCast()"
+    },
+    {
+      "argKind": "uint",
+      "argWord": 0,
+      "id": 63,
+      "name": "Panic",
+      "selector": "0x4e487b71",
+      "signature": "Panic(uint256)"
+    }
+  ],
+  "mutants": [
+    {
+      "description": "A1: no authentication of the caller",
+      "id": 1,
+      "name": "A1_SKIP"
+    },
+    {
+      "description": "A1: the signature mode of the NEW pin governs, not the stored one (17 section 5.4 consequence 3)",
+      "id": 2,
+      "name": "A1_PIN_FROM_NEW"
+    },
+    {
+      "description": "AUTH: the ERC-1271 path does not require PIN_OK on the live account",
+      "id": 3,
+      "name": "AUTH_1271_NOPIN"
+    },
+    {
+      "description": "AUTH: DIRECT_ONLY accepts a valid signature",
+      "id": 4,
+      "name": "AUTH_DIRECT_ONLY_OK"
+    },
+    {
+      "description": "AUTH: an ECDSA signature is accepted under signatureMode ERC1271",
+      "id": 5,
+      "name": "AUTH_ECDSA_ANY"
+    },
+    {
+      "description": "AUTH: an ERC-1271 signature is accepted under signatureMode ECDSA_KEY",
+      "id": 6,
+      "name": "AUTH_1271_ANY"
+    },
+    {
+      "description": "AUTH: signature validity is not checked",
+      "id": 7,
+      "name": "AUTH_SIGOK_SKIP"
+    },
+    {
+      "description": "AUTH: exits (revokeBySig, pauseBySig) are gated by the signature mode",
+      "id": 8,
+      "name": "AUTH_EXIT_GATED"
+    },
+    {
+      "description": "A2: deadline not checked",
+      "id": 9,
+      "name": "A2_DEADLINE_SKIP"
+    },
+    {
+      "description": "A2: now < deadline instead of now <= deadline",
+      "id": 10,
+      "name": "A2_DEADLINE_STRICT"
+    },
+    {
+      "description": "A2: replay not checked",
+      "id": 11,
+      "name": "A2_NONCE_SKIP"
+    },
+    {
+      "description": "A2/E4: the nonce is not marked used",
+      "id": 12,
+      "name": "A2_NONCE_NOT_MARKED"
+    },
+    {
+      "description": "A3: no binding check",
+      "id": 13,
+      "name": "A3_SKIP"
+    },
+    {
+      "description": "A3: auth.customer not compared",
+      "id": 14,
+      "name": "A3_CUSTOMER"
+    },
+    {
+      "description": "A3: auth.lineageId not compared",
+      "id": 15,
+      "name": "A3_LINEAGE"
+    },
+    {
+      "description": "A3: auth.predecessorId not compared",
+      "id": 16,
+      "name": "A3_PRED"
+    },
+    {
+      "description": "A3: auth.kind not compared",
+      "id": 17,
+      "name": "A3_KIND"
+    },
+    {
+      "description": "A3: auth.newTermsHash not compared",
+      "id": 18,
+      "name": "A3_TERMS"
+    },
+    {
+      "description": "A3: auth.newRouter not compared",
+      "id": 19,
+      "name": "A3_ROUTER"
+    },
+    {
+      "description": "A3: auth.newRouterCodeHash not compared",
+      "id": 20,
+      "name": "A3_CODEHASH"
+    },
+    {
+      "description": "A3: auth.newRouterVersion not compared",
+      "id": 21,
+      "name": "A3_VERSION"
+    },
+    {
+      "description": "A3: hashStruct(auth.accountPin) not compared",
+      "id": 22,
+      "name": "A3_PIN"
+    },
+    {
+      "description": "A3: auth.termsSnapshotHash not compared",
+      "id": 23,
+      "name": "A3_SNAPSHOT"
+    },
+    {
+      "description": "L1: no lineage check",
+      "id": 24,
+      "name": "L1_SKIP"
+    },
+    {
+      "description": "L1: terminal(P) (revoked or expired) not checked",
+      "id": 25,
+      "name": "L1_TERMINAL"
+    },
+    {
+      "description": "R1: isBindable(Rnew) not checked",
+      "id": 26,
+      "name": "R1_SKIP"
+    },
+    {
+      "description": "R2: no kind/router consistency check",
+      "id": 27,
+      "name": "R2_SKIP"
+    },
+    {
+      "description": "R2: a migration to the same router is accepted",
+      "id": 28,
+      "name": "R2_SAME_ROUTER_OK"
+    },
+    {
+      "description": "R2: a revision to a different router is accepted",
+      "id": 29,
+      "name": "R2_REVISION_ANY"
+    },
+    {
+      "description": "R3: Mode(Rold) not enforced",
+      "id": 30,
+      "name": "R3_SKIP"
+    },
+    {
+      "description": "R3: kind must equal the mode (EMERGENCY on a normal router refused)",
+      "id": 31,
+      "name": "R3_STRICT"
+    },
+    {
+      "description": "X1: extensionsHash not checked",
+      "id": 32,
+      "name": "X1_SKIP"
+    },
+    {
+      "description": "K1 part 1: PIN_WELLFORMED(N.pin) not checked",
+      "id": 33,
+      "name": "K1_WF_SKIP"
+    },
+    {
+      "description": "K1 part 2: PIN_OK(C, N.pin) not checked",
+      "id": 34,
+      "name": "K1_OK_SKIP"
+    },
+    {
+      "description": "K1 part 3: pinVersion = nextPinVersion not checked",
+      "id": 35,
+      "name": "K1_VER_SKIP"
+    },
+    {
+      "description": "G1: new router funding not checked",
+      "id": 36,
+      "name": "G1_SKIP"
+    },
+    {
+      "description": "G1: now < e instead of now <= e",
+      "id": 37,
+      "name": "G1_EXPIRY_STRICT"
+    },
+    {
+      "description": "G1: a > perPaymentMax instead of a >= perPaymentMax",
+      "id": 38,
+      "name": "G1_AMOUNT_GT"
+    },
+    {
+      "description": "G1: only the first token of the new mandate is checked",
+      "id": 39,
+      "name": "G1_FIRST_ONLY"
+    },
+    {
+      "description": "G1: expiration not checked",
+      "id": 40,
+      "name": "G1_EXPIRY_SKIP"
+    },
+    {
+      "description": "X2: exposure limit not checked",
+      "id": 41,
+      "name": "X2_SKIP"
+    },
+    {
+      "description": "X2: count < MAX instead of count <= MAX",
+      "id": 42,
+      "name": "X2_LT"
+    },
+    {
+      "description": "X2: only the tokens already exposed are counted, not the new mandate's tokens",
+      "id": 43,
+      "name": "X2_NO_UNION"
+    },
+    {
+      "description": "C1: containment not checked",
+      "id": 44,
+      "name": "C1_SKIP"
+    },
+    {
+      "description": "C1: auth.widenedMask = 0 not checked",
+      "id": 45,
+      "name": "C1_MASK_SKIP"
+    },
+    {
+      "description": "K.1 expiry not checked",
+      "id": 46,
+      "name": "C1_K1_SKIP"
+    },
+    {
+      "description": "K.2 merchant scope not checked",
+      "id": 47,
+      "name": "C1_K2_SKIP"
+    },
+    {
+      "description": "K.3 token scope not checked",
+      "id": 48,
+      "name": "C1_K3_SKIP"
+    },
+    {
+      "description": "K.4 token caps not checked",
+      "id": 49,
+      "name": "C1_K4_SKIP"
+    },
+    {
+      "description": "K.5 fiat caps and quote age not checked",
+      "id": 50,
+      "name": "C1_K5_SKIP"
+    },
+    {
+      "description": "K.6 bounds version not checked",
+      "id": 51,
+      "name": "C1_K6_SKIP"
+    },
+    {
+      "description": "K.7 cadence not checked",
+      "id": 52,
+      "name": "C1_K7_SKIP"
+    },
+    {
+      "description": "K.8 fee cap not checked",
+      "id": 53,
+      "name": "C1_K8_SKIP"
+    },
+    {
+      "description": "K.9 extensions not checked",
+      "id": 54,
+      "name": "C1_K9_SKIP"
+    },
+    {
+      "description": "K.1 with < instead of <=",
+      "id": 55,
+      "name": "C1_K1_STRICT"
+    },
+    {
+      "description": "K.4 with < instead of <=",
+      "id": 56,
+      "name": "C1_K4_STRICT"
+    },
+    {
+      "description": "K.8 with < instead of <=",
+      "id": 57,
+      "name": "C1_K8_STRICT"
+    },
+    {
+      "description": "E(0) is taken as uint256 max instead of infinity",
+      "id": 58,
+      "name": "C1_E_INF_MAX"
+    },
+    {
+      "description": "C2: lineage constants not compared",
+      "id": 59,
+      "name": "C2_CONST_SKIP"
+    },
+    {
+      "description": "C2: widenedMask not compared with the computed one",
+      "id": 60,
+      "name": "C2_MASK_SKIP"
+    },
+    {
+      "description": "O1N: not checked",
+      "id": 61,
+      "name": "O1N_SKIP"
+    },
+    {
+      "description": "O1N first half: Sib = 0 => Unusable not enforced",
+      "id": 62,
+      "name": "O1N_ZERO_SKIP"
+    },
+    {
+      "description": "O1N second half: Sib > 0 => Bounded not enforced",
+      "id": 63,
+      "name": "O1N_BOUNDED_SKIP"
+    },
+    {
+      "description": "O1N: Sib = live instead of live - 1 (the predecessor counted as its own sibling)",
+      "id": 64,
+      "name": "O1N_SIB_LIVE"
+    },
+    {
+      "description": "Usable: now < e instead of now <= e (expiration = now counted as unusable)",
+      "id": 65,
+      "name": "U_STRICT"
+    },
+    {
+      "description": "Usable: the uint160.max sentinel counted as unusable",
+      "id": 66,
+      "name": "U_NO_UNLIM"
+    },
+    {
+      "description": "Usable: the amount is ignored (a = 0 with a future expiration counted as usable)",
+      "id": 67,
+      "name": "U_EXPIRY_ONLY"
+    },
+    {
+      "description": "O1E: not checked",
+      "id": 68,
+      "name": "O1E_SKIP"
+    },
+    {
+      "description": "O1E: only the predecessor's tokens, not every exposed token",
+      "id": 69,
+      "name": "O1E_PRED_ONLY"
+    },
+    {
+      "description": "Mode: DEPRECATED with reason SECURITY treated as NORMAL",
+      "id": 70,
+      "name": "MODE_SEC_NORMAL"
+    },
+    {
+      "description": "Mode: DISABLED_EMERGENCY treated as NORMAL",
+      "id": 71,
+      "name": "MODE_DISABLED_NORMAL"
+    },
+    {
+      "description": "Mode: SUNSET and RETIRED treated as NORMAL",
+      "id": 72,
+      "name": "MODE_SUNSET_NORMAL"
+    },
+    {
+      "description": "isBindable: DEPRECATED always bindable (rollback window ignored)",
+      "id": 73,
+      "name": "BIND_DEPR_ALWAYS"
+    },
+    {
+      "description": "isBindable: now <= deprecatedAt + window instead of <",
+      "id": 74,
+      "name": "BIND_WINDOW_LE"
+    },
+    {
+      "description": "registry: minimum notice not enforced at deprecation",
+      "id": 75,
+      "name": "REG_NOTICE_SKIP"
+    },
+    {
+      "description": "registry: sunset allowed before sunsetNotBefore",
+      "id": 76,
+      "name": "REG_SUNSET_EARLY"
+    },
+    {
+      "description": "registry: retire allowed before RETENTION",
+      "id": 77,
+      "name": "REG_RETIRE_EARLY"
+    },
+    {
+      "description": "E1: the predecessor is not revoked",
+      "id": 78,
+      "name": "E1_SKIP"
+    },
+    {
+      "description": "E1: wrong revocation reason",
+      "id": 79,
+      "name": "E1_REASON"
+    },
+    {
+      "description": "E2: lineage.activeMandateId not updated",
+      "id": 80,
+      "name": "E2_SKIP"
+    },
+    {
+      "description": "E3: pause bits not inherited",
+      "id": 81,
+      "name": "E3_PAUSE_DROP"
+    },
+    {
+      "description": "E6: no decrement on the old router",
+      "id": 82,
+      "name": "E6_SKIP_DEC"
+    },
+    {
+      "description": "E6: no increment on the new router",
+      "id": 83,
+      "name": "E6_SKIP_INC"
+    },
+    {
+      "description": "E6: increment by two (off by one)",
+      "id": 84,
+      "name": "E6_INC_TWO"
+    },
+    {
+      "description": "E6: only the first predecessor token is decremented",
+      "id": 85,
+      "name": "E6_DEC_FIRST_ONLY"
+    },
+    {
+      "description": "I-MIG-3: the successor resets the lineage counters",
+      "id": 86,
+      "name": "CNT_RESET"
+    },
+    {
+      "description": "activate: exposure not incremented",
+      "id": 87,
+      "name": "ACT_NO_INC"
+    },
+    {
+      "description": "activate: exposure limit not checked",
+      "id": 88,
+      "name": "ACT_X2_SKIP"
+    },
+    {
+      "description": "activate: PIN_WELLFORMED not checked",
+      "id": 89,
+      "name": "ACT_WF_SKIP"
+    },
+    {
+      "description": "activate: PIN_OK not checked",
+      "id": 90,
+      "name": "ACT_OK_SKIP"
+    },
+    {
+      "description": "activate: pinVersion = 1 not checked",
+      "id": 91,
+      "name": "ACT_VER_SKIP"
+    },
+    {
+      "description": "activate: router bindability not checked",
+      "id": 92,
+      "name": "ACT_BIND_SKIP"
+    },
+    {
+      "description": "revoke: exposure not decremented",
+      "id": 93,
+      "name": "REV_NO_DEC"
+    },
+    {
+      "description": "retire: exposure not decremented",
+      "id": 94,
+      "name": "RET_NO_DEC"
+    },
+    {
+      "description": "retire: allowed for an unexpired mandate",
+      "id": 95,
+      "name": "RET_ANYTIME"
+    },
+    {
+      "description": "reduce: exposure not decremented",
+      "id": 96,
+      "name": "RED_NO_DEC"
+    },
+    {
+      "description": "updateAccountPin: pinVersion = old + 1 not checked",
+      "id": 97,
+      "name": "UPD_VER_SKIP"
+    },
+    {
+      "description": "updateAccountPin: PIN_OK not checked",
+      "id": 98,
+      "name": "UPD_OK_SKIP"
+    },
+    {
+      "description": "updateAccountPin: PIN_WELLFORMED not checked",
+      "id": 99,
+      "name": "UPD_WF_SKIP"
+    },
+    {
+      "description": "updateAccountPin: caller not authenticated",
+      "id": 100,
+      "name": "UPD_AUTH_SKIP"
+    },
+    {
+      "description": "consume: hashStruct(pin) = accountPinHash not checked",
+      "id": 101,
+      "name": "CON_PINHASH_SKIP"
+    },
+    {
+      "description": "consume: PIN_OK not checked",
+      "id": 102,
+      "name": "CON_PINOK_SKIP"
+    },
+    {
+      "description": "consume: caller must be the bound router (not checked)",
+      "id": 103,
+      "name": "CON_ROUTER_SKIP"
+    },
+    {
+      "description": "consume: the mandate must be ACTIVE and the lineage's active one (not checked)",
+      "id": 104,
+      "name": "CON_ACTIVE_SKIP"
+    },
+    {
+      "description": "consume: pause bits not checked",
+      "id": 105,
+      "name": "CON_PAUSE_SKIP"
+    },
+    {
+      "description": "consume: expiry not checked",
+      "id": 106,
+      "name": "CON_TIME_SKIP"
+    },
+    {
+      "description": "consume: cycle settled once (not checked)",
+      "id": 107,
+      "name": "CON_SETTLE_SKIP"
+    },
+    {
+      "description": "consume: lineage total cap not checked",
+      "id": 108,
+      "name": "CON_TOTAL_SKIP"
+    },
+    {
+      "description": "consume: per-payment cap not checked",
+      "id": 109,
+      "name": "CON_PERPAY_SKIP"
+    },
+    {
+      "description": "consume: router chargeable (registry) not checked",
+      "id": 110,
+      "name": "CON_CHARGEABLE_SKIP"
+    },
+    {
+      "description": "PIN_WELLFORMED: pinVersion >= 1 not required",
+      "id": 111,
+      "name": "PW_VER0"
+    },
+    {
+      "description": "PIN_WELLFORMED: accountMode in {1,2,3,4} not required",
+      "id": 112,
+      "name": "PW_MODE_RANGE"
+    },
+    {
+      "description": "PIN_WELLFORMED mode 1: accountCodeHash = PIN_EOA not required",
+      "id": 113,
+      "name": "PW_M1_CODE"
+    },
+    {
+      "description": "PIN_WELLFORMED mode 1: delegate = 0 and delegateCodeHash = 0 not required",
+      "id": 114,
+      "name": "PW_M1_DELEGATE"
+    },
+    {
+      "description": "PIN_WELLFORMED mode 1: family = 0 not required",
+      "id": 115,
+      "name": "PW_M1_FAMILY"
+    },
+    {
+      "description": "PIN_WELLFORMED mode 1: signatureMode in {0,1} not required",
+      "id": 116,
+      "name": "PW_M1_SIG"
+    },
+    {
+      "description": "PIN_WELLFORMED mode 2: delegate != 0 not required",
+      "id": 117,
+      "name": "PW_M2_DELEGATE0"
+    },
+    {
+      "description": "PIN_WELLFORMED mode 2: accountCodeHash = keccak256(0xef0100 || delegate) not required",
+      "id": 118,
+      "name": "PW_M2_CODE"
+    },
+    {
+      "description": "PIN_WELLFORMED mode 2: delegateCodeHash not in {0, KECCAK_EMPTY} not required",
+      "id": 119,
+      "name": "PW_M2_DCODE"
+    },
+    {
+      "description": "PIN_WELLFORMED mode 2: family != 0 not required",
+      "id": 120,
+      "name": "PW_M2_FAMILY"
+    },
+    {
+      "description": "PIN_WELLFORMED modes 3,4: delegate = 0 and delegateCodeHash = 0 not required",
+      "id": 121,
+      "name": "PW_M34_DELEGATE"
+    },
+    {
+      "description": "PIN_WELLFORMED modes 3,4: accountCodeHash not in {0, KECCAK_EMPTY, PIN_EOA} not required",
+      "id": 122,
+      "name": "PW_M34_CODE"
+    },
+    {
+      "description": "PIN_WELLFORMED modes 3,4: family != 0 not required",
+      "id": 123,
+      "name": "PW_M34_FAMILY"
+    },
+    {
+      "description": "PIN_WELLFORMED modes 3,4: signatureMode in {0,2} not required",
+      "id": 124,
+      "name": "PW_M34_SIG"
+    },
+    {
+      "description": "PIN_OK mode 1: only h = 0 accepted (KECCAK_EMPTY refused)",
+      "id": 125,
+      "name": "PO_M1_EMPTY_ONLY"
+    },
+    {
+      "description": "PIN_OK mode 1: only h = KECCAK_EMPTY accepted (0 refused)",
+      "id": 126,
+      "name": "PO_M1_KE_ONLY"
+    },
+    {
+      "description": "PIN_OK mode 2: the delegate's code hash is not compared",
+      "id": 127,
+      "name": "PO_M2_NO_DELEGATE"
+    },
+    {
+      "description": "PIN_OK mode 2: the account's code hash is not compared",
+      "id": 128,
+      "name": "PO_M2_NO_ACCOUNT"
+    },
+    {
+      "description": "PIN_OK modes 3,4: the account's code hash is not compared",
+      "id": 129,
+      "name": "PO_M34_SKIP"
+    },
+    {
+      "description": "nextPinVersion: a successor always increments",
+      "id": 130,
+      "name": "NV_SUCC_ALWAYS"
+    },
+    {
+      "description": "nextPinVersion: a successor never increments",
+      "id": 131,
+      "name": "NV_SUCC_NEVER"
+    },
+    {
+      "description": "nextPinVersion: updateAccountPin keeps the version",
+      "id": 132,
+      "name": "NV_UPDATE_SAME"
+    },
+    {
+      "description": "Q1: removedAt(signer) = 0 not required",
+      "id": 133,
+      "name": "Q1_TOMB_SKIP"
+    },
+    {
+      "description": "Q1: membership in the named set not required",
+      "id": 134,
+      "name": "Q1_MEMBER_SKIP"
+    },
+    {
+      "description": "Q13: stopped flag not checked",
+      "id": 135,
+      "name": "Q13_STOP_SKIP"
+    },
+    {
+      "description": "Q13: activeFrom <= issuedAt not required",
+      "id": 136,
+      "name": "Q13_ACTIVE_SKIP"
+    },
+    {
+      "description": "Q13: issuedAt <= retiredAt instead of issuedAt < retiredAt",
+      "id": 137,
+      "name": "Q13_ISSUED_LE"
+    },
+    {
+      "description": "Q13: now < retiredAt + GRACE instead of now <= retiredAt + GRACE",
+      "id": 138,
+      "name": "Q13_GRACE_LT"
+    },
+    {
+      "description": "Q13: the grace limit is not enforced (retired sets stay valid for earlier quotes)",
+      "id": 139,
+      "name": "Q13_GRACE_SKIP"
+    },
+    {
+      "description": "proposeSignerSet: tombstoned keys accepted",
+      "id": 140,
+      "name": "SS_PROPOSE_TOMB_SKIP"
+    },
+    {
+      "description": "activateSignerSet: tombstones not re-checked",
+      "id": 141,
+      "name": "SS_ACTIVATE_TOMB_SKIP"
+    },
+    {
+      "description": "proposeSignerSet: the guardian may propose",
+      "id": 142,
+      "name": "SS_GUARDIAN_PROPOSE"
+    },
+    {
+      "description": "activateSignerSet: the guardian may activate",
+      "id": 143,
+      "name": "SS_GUARDIAN_ACTIVATE"
+    },
+    {
+      "description": "rotation: the old set is not retired",
+      "id": 144,
+      "name": "SS_ROTATE_NO_RETIRE"
+    },
+    {
+      "description": "Q9: issuedAt <= validAfter <= validUntil not checked",
+      "id": 145,
+      "name": "Q9_SKIP"
+    },
+    {
+      "description": "Q10: validAfter < now instead of validAfter <= now",
+      "id": 146,
+      "name": "Q10_STRICT"
+    },
+    {
+      "description": "Q11: now < validUntil instead of now <= validUntil",
+      "id": 147,
+      "name": "Q11_STRICT"
+    },
+    {
+      "description": "Q12: validUntil - issuedAt < min(...) instead of <=",
+      "id": 148,
+      "name": "Q12_LT"
+    },
+    {
+      "description": "G9: cycleIndex < currentIndex(now) instead of <=",
+      "id": 149,
+      "name": "CYC_LT"
+    },
+    {
+      "description": "windows: the index is computed from now - anchor + 1",
+      "id": 150,
+      "name": "WIN_OFFBYONE"
+    },
+    {
+      "description": "MAX_BATCH: n >= MAX_BATCH refused instead of n > MAX_BATCH",
+      "id": 151,
+      "name": "BATCH_GE"
+    }
+  ],
+  "note": "not compiled, not run: no Foundry toolchain in the authoring environment",
+  "ops": {
+    "ACCT_SET": 35,
+    "ACT": 101,
+    "ACTIVATE": 40,
+    "AUTH_ACCESS": 43,
+    "AUTH_NEW": 41,
+    "AUTH_SET": 42,
+    "BUILD": 100,
+    "CHK_AUTH": 78,
+    "CHK_AUTH_EXIT": 79,
+    "CHK_CONTAINED": 81,
+    "CHK_NEXTVER": 77,
+    "CHK_PINCHECK": 76,
+    "CHK_PINHASH": 80,
+    "CHK_WF": 75,
+    "CHK_WIDENED": 82,
+    "CONSUME": 49,
+    "DELEG_SET": 36,
+    "EXPECT_ACTIVE_GEN": 61,
+    "EXPECT_AUTHROUTERS": 64,
+    "EXPECT_EXPOSED": 63,
+    "EXPECT_INDEX_EXACT": 70,
+    "EXPECT_LIVE": 62,
+    "EXPECT_MODE": 66,
+    "EXPECT_PINVER": 65,
+    "EXPECT_SNAP_EQ": 69,
+    "EXPECT_STATUS": 60,
+    "EXPECT_USAGE": 67,
+    "FORCE_REG": 17,
+    "NOW": 1,
+    "OBSERVE": 102,
+    "P2_APPROVE": 20,
+    "P2_EXPECT": 26,
+    "P2_EXPECT_NONCE": 27,
+    "P2_INVALIDATE": 25,
+    "P2_LOCKDOWN": 21,
+    "P2_REGRANT": 23,
+    "P2_TRANSFER": 22,
+    "PAUSE": 50,
+    "PIN_PRESET": 33,
+    "PIN_SET": 34,
+    "REDUCE_DROP": 47,
+    "REG_CLEAR": 14,
+    "REG_DEPRECATE": 12,
+    "REG_DISABLE": 13,
+    "REG_PROPOSE": 11,
+    "REG_REGISTER": 10,
+    "REG_RETIRE": 16,
+    "REG_SUNSET": 15,
+    "RETIRE": 46,
+    "REVOKE": 45,
+    "SEED_LIVE": 96,
+    "SETREG": 2,
+    "SNAP": 68,
+    "SS_ACTIVATE": 91,
+    "SS_PROPOSE": 90,
+    "SS_REMOVE": 92,
+    "SS_STOP": 93,
+    "SS_VERIFY": 94,
+    "SUCCESSOR": 44,
+    "TERMS_COPY": 31,
+    "TERMS_RESET": 30,
+    "TERMS_SET": 32,
+    "UPDATE_PIN": 48,
+    "W_ADD": 97,
+    "W_BATCH": 98,
+    "W_CYCLE": 104,
+    "W_NARROW": 95,
+    "W_QUOTE": 99,
+    "W_WINDOW": 105
+  },
+  "revision": "0.5.0",
+  "schema": 1,
+  "sourceDigests": {
+    "eip712_vectors.py": "c93776dad1c4eed9",
+    "explore.py": "cff8c9fcadbdb7e8",
+    "lemma_gen.py": "0affbe7777179acd",
+    "protocol_model.py": "86b3f3f4d7ba346a",
+    "scenario_vm.py": "2c503ea131d0f1e3",
+    "vector_suite.py": "f03281e9e59eab2e",
+    "vectors_mig.py": "6e83f528c1397f7f",
+    "vectors_misc.py": "704aa154fe2b9cc8"
+  },
+  "vectorsPerSource": {
+    "11 section 3.1": 1,
+    "11 section 4.2": 1,
+    "11 section 4.8": 1,
+    "12 5.3.4": 13,
+    "12 section 13": 1,
+    "12 section 3": 2,
+    "ACP-TV-13": 2,
+    "ACP-TV-24": 1,
+    "ACP-TV-25": 1,
+    "ACP-TV-26": 1,
+    "ACP-TV-27, 28": 1,
+    "ACP-TV-29": 1,
+    "ACP-TV-30": 1,
+    "ACP-TV-31": 1,
+    "ACP-TV-33": 1,
+    "ACP-TV-34": 1,
+    "ACP-TV-35": 2,
+    "ACP-TV-37": 1,
+    "ACP-TV-38": 1,
+    "ACP-TV-39": 1,
+    "ACP-TV-40": 1,
+    "ACP-TV-41": 1,
+    "CAP-TV-14": 2,
+    "CAP-TV-16": 1,
+    "CAP-TV-23": 1,
+    "CAP-TV-24": 1,
+    "CAP-TV-25": 1,
+    "CAP-TV-27": 2,
+    "CAP-TV-28": 1,
+    "CAP-TV-29": 1,
+    "CAP-TV-30": 1,
+    "CAP-TV-31": 1,
+    "CAP-TV-32": 1,
+    "K.1": 1,
+    "K.2": 1,
+    "K.3": 1,
+    "K.4": 3,
+    "K.5": 2,
+    "K.6": 1,
+    "K.7": 2,
+    "K.8": 1,
+    "K.9": 1,
+    "Lemma M": 660,
+    "MIG-TV-05": 1,
+    "MIG-TV-06": 1,
+    "MIG-TV-07": 1,
+    "MIG-TV-08": 1,
+    "MIG-TV-09": 1,
+    "MIG-TV-10": 1,
+    "MIG-TV-11": 1,
+    "MIG-TV-12": 3,
+    "MIG-TV-13": 1,
+    "MIG-TV-14": 1,
+    "MIG-TV-15": 1,
+    "MIG-TV-17": 5,
+    "MIG-TV-20": 57,
+    "MIG-TV-21": 1,
+    "MIG-TV-22": 4,
+    "MIG-TV-23": 3,
+    "MIG-TV-24": 1,
+    "MIG-TV-25": 1,
+    "MIG-TV-26": 1,
+    "MIG-TV-27": 1,
+    "MIG-TV-28": 1,
+    "MIG-TV-29": 2,
+    "MIG-TV-30": 1,
+    "MIG-TV-31": 1,
+    "MIG-TV-32": 1,
+    "MIG-TV-33": 1,
+    "MIG-TV-34": 1,
+    "MIG-TV-35": 12,
+    "MIG-TV-36": 3,
+    "MIG-TV-37": 2,
+    "MIG-TV-38": 1,
+    "MIG-TV-39": 3,
+    "MIG-TV-40": 1,
+    "MIG-TV-41": 1,
+    "MIG-TV-42": 1,
+    "MIG-TV-43": 6,
+    "MIG-TV-44": 1,
+    "MIG-TV-45": 1,
+    "integer width": 6
+  }
+}

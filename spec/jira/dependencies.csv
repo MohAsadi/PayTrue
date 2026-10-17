@@ -1,0 +1,1187 @@
+predecessor,successor,type,lag_weeks,rule,predecessor_nominal_weeks,tiers
+EPIC-P0-AUDITSEL#A,EPIC-P0-AUDITSEL#R,FF,0.00,intra A->R finish,0.26,PMB;GA
+EPIC-P0-AUDITSEL#A,G_RG001,FS,0.00,epic complete -> gate or work,0.26,PMB;GA
+EPIC-P0-AUDITSEL#B,EPIC-P0-AUDITSEL#A,FF,1.00,intra B->A finish,0.46,PMB;GA
+EPIC-P0-AUDITSEL#B,EPIC-P0-AUDITSEL#A,SS,0.18,intra B->A,0.46,PMB;GA
+EPIC-P0-AUDITSEL#B,EPIC-P0-AUDITSEL#R,SS,0.32,intra B->R,0.46,PMB;GA
+EPIC-P0-AUDITSEL#B,G_RG001,FS,0.00,epic complete -> gate or work,0.46,PMB;GA
+EPIC-P0-AUDITSEL#R,G_RG001,FS,0.00,epic complete -> gate or work,0.14,PMB;GA
+EPIC-P0-DESIGN#A,EPIC-P0-DESIGN#R,FF,0.00,intra A->R finish,1.18,PMB;GA
+EPIC-P0-DESIGN#A,EPIC-P2-CHECKOUT#A,FF,0.00,cross: assurance finish,1.18,PMB;GA
+EPIC-P0-DESIGN#A,G_RG001,FS,0.00,epic complete -> gate or work,1.18,PMB;GA
+EPIC-P0-DESIGN#B,EPIC-P0-DESIGN#A,FF,1.00,intra B->A finish,1.63,PMB;GA
+EPIC-P0-DESIGN#B,EPIC-P0-DESIGN#A,SS,0.65,intra B->A,1.63,PMB;GA
+EPIC-P0-DESIGN#B,EPIC-P0-DESIGN#R,SS,1.14,intra B->R,1.63,PMB;GA
+EPIC-P0-DESIGN#B,EPIC-P2-CHECKOUT#B,SS,0.82,cross: feature predecessor -> SS,1.63,PMB;GA
+EPIC-P0-DESIGN#B,G_RG001,FS,0.00,epic complete -> gate or work,1.63,PMB;GA
+EPIC-P0-DESIGN#R,G_RG001,FS,0.00,epic complete -> gate or work,0.46,PMB;GA
+EPIC-P0-DOCS#A,EPIC-P0-DOCS#R,FF,0.00,intra A->R finish,0.38,PMB;GA
+EPIC-P0-DOCS#A,G_RG001,FS,0.00,epic complete -> gate or work,0.38,PMB;GA
+EPIC-P0-DOCS#B,EPIC-P0-DOCS#A,FF,1.00,intra B->A finish,0.53,PMB;GA
+EPIC-P0-DOCS#B,EPIC-P0-DOCS#A,SS,0.21,intra B->A,0.53,PMB;GA
+EPIC-P0-DOCS#B,EPIC-P0-DOCS#R,SS,0.37,intra B->R,0.53,PMB;GA
+EPIC-P0-DOCS#B,G_RG001,FS,0.00,epic complete -> gate or work,0.53,PMB;GA
+EPIC-P0-DOCS#R,G_RG001,FS,0.00,epic complete -> gate or work,0.22,PMB;GA
+EPIC-P0-HIRING#A,EPIC-P0-HIRING#R,FF,0.00,intra A->R finish,0.34,PMB;GA
+EPIC-P0-HIRING#A,G_RG001,FS,0.00,epic complete -> gate or work,0.34,PMB;GA
+EPIC-P0-HIRING#B,EPIC-P0-HIRING#A,FF,1.00,intra B->A finish,0.61,PMB;GA
+EPIC-P0-HIRING#B,EPIC-P0-HIRING#A,SS,0.25,intra B->A,0.61,PMB;GA
+EPIC-P0-HIRING#B,EPIC-P0-HIRING#R,SS,0.43,intra B->R,0.61,PMB;GA
+EPIC-P0-HIRING#B,G_RG001,FS,0.00,epic complete -> gate or work,0.61,PMB;GA
+EPIC-P0-HIRING#R,G_RG001,FS,0.00,epic complete -> gate or work,0.18,PMB;GA
+EPIC-P0-INFRA#A,EPIC-P0-INFRA#R,FF,0.00,intra A->R finish,0.58,PMB;GA
+EPIC-P0-INFRA#A,EPIC-P1-OBS#A,FF,0.00,cross: assurance finish,0.58,PMB;GA
+EPIC-P0-INFRA#A,EPIC-P1-QUOTE#A,FF,0.00,cross: assurance finish,0.58,PMB;GA
+EPIC-P0-INFRA#A,EPIC-P1-SECPROG#A,FF,0.00,cross: assurance finish,0.58,PMB;GA
+EPIC-P0-INFRA#A,EPIC-P1-SIGNER#A,FF,0.00,cross: assurance finish,0.58,PMB;GA
+EPIC-P0-INFRA#A,G_RG001,FS,0.00,epic complete -> gate or work,0.58,PMB;GA
+EPIC-P0-INFRA#B,EPIC-P0-INFRA#A,FF,1.00,intra B->A finish,0.80,PMB;GA
+EPIC-P0-INFRA#B,EPIC-P0-INFRA#A,SS,0.32,intra B->A,0.80,PMB;GA
+EPIC-P0-INFRA#B,EPIC-P0-INFRA#R,SS,0.56,intra B->R,0.80,PMB;GA
+EPIC-P0-INFRA#B,EPIC-P1-OBS#B,SS,0.40,cross: infrastructure predecessor -> SS,0.80,PMB;GA
+EPIC-P0-INFRA#B,EPIC-P1-QUOTE#B,SS,0.40,cross: infrastructure predecessor -> SS,0.80,PMB;GA
+EPIC-P0-INFRA#B,EPIC-P1-SECPROG#B,SS,0.40,cross: infrastructure predecessor -> SS,0.80,PMB;GA
+EPIC-P0-INFRA#B,EPIC-P1-SIGNER#B,SS,0.40,cross: infrastructure predecessor -> SS,0.80,PMB;GA
+EPIC-P0-INFRA#B,G_RG001,FS,0.00,epic complete -> gate or work,0.80,PMB;GA
+EPIC-P0-INFRA#R,G_RG001,FS,0.00,epic complete -> gate or work,0.34,PMB;GA
+EPIC-P0-LEGAL#A,EPIC-P0-LEGAL#R,FF,0.00,intra A->R finish,0.60,PMB;GA
+EPIC-P0-LEGAL#A,G_RG001,FS,0.00,epic complete -> gate or work,0.60,PMB;GA
+EPIC-P0-LEGAL#B,EPIC-P0-LEGAL#A,FF,1.00,intra B->A finish,0.83,PMB;GA
+EPIC-P0-LEGAL#B,EPIC-P0-LEGAL#A,SS,0.33,intra B->A,0.83,PMB;GA
+EPIC-P0-LEGAL#B,EPIC-P0-LEGAL#R,SS,0.58,intra B->R,0.83,PMB;GA
+EPIC-P0-LEGAL#B,EPIC-P2-COMPLIANCE#B,FS,0.00,cross: compliance predecessor -> FS,0.83,PMB;GA
+EPIC-P0-LEGAL#B,EPIC-P2-LEGALPACK#B,FS,0.00,cross: compliance predecessor -> FS,0.83,PMB;GA
+EPIC-P0-LEGAL#B,G_RG001,FS,0.00,epic complete -> gate or work,0.83,PMB;GA
+EPIC-P0-LEGAL#R,G_RG001,FS,0.00,epic complete -> gate or work,0.35,PMB;GA
+EPIC-P0-PLANNER#A,EPIC-P0-DESIGN#A,FF,0.00,cross: assurance finish,0.54,PMB;GA
+EPIC-P0-PLANNER#A,EPIC-P0-PLANNER#R,FF,0.00,intra A->R finish,0.54,PMB;GA
+EPIC-P0-PLANNER#A,EPIC-P1-MANDATE#A,FF,0.00,cross: assurance finish,0.54,PMB;GA
+EPIC-P0-PLANNER#A,G_FREEZE,FS,0.00,epic build and assurance complete -> gate,0.54,PMB;GA
+EPIC-P0-PLANNER#A,G_RG001,FS,0.00,epic complete -> gate or work,0.54,PMB;GA
+EPIC-P0-PLANNER#B,EPIC-P0-DESIGN#B,SS,0.37,cross: protocol predecessor -> SS,0.74,PMB;GA
+EPIC-P0-PLANNER#B,EPIC-P0-PLANNER#A,FF,1.00,intra B->A finish,0.74,PMB;GA
+EPIC-P0-PLANNER#B,EPIC-P0-PLANNER#A,SS,0.30,intra B->A,0.74,PMB;GA
+EPIC-P0-PLANNER#B,EPIC-P0-PLANNER#R,SS,0.52,intra B->R,0.74,PMB;GA
+EPIC-P0-PLANNER#B,EPIC-P1-MANDATE#B,SS,0.37,cross: protocol predecessor -> SS,0.74,PMB;GA
+EPIC-P0-PLANNER#B,G_FREEZE,FS,0.00,epic build and assurance complete -> gate,0.74,PMB;GA
+EPIC-P0-PLANNER#B,G_RG001,FS,0.00,epic complete -> gate or work,0.74,PMB;GA
+EPIC-P0-PLANNER#R,G_RG001,FS,0.00,epic complete -> gate or work,0.31,PMB;GA
+EPIC-P0-PRODUCT#A,EPIC-P0-PRODUCT#R,FF,0.00,intra A->R finish,0.61,PMB;GA
+EPIC-P0-PRODUCT#A,G_RG001,FS,0.00,epic complete -> gate or work,0.61,PMB;GA
+EPIC-P0-PRODUCT#B,EPIC-P0-PRODUCT#A,FF,1.00,intra B->A finish,1.10,PMB;GA
+EPIC-P0-PRODUCT#B,EPIC-P0-PRODUCT#A,SS,0.44,intra B->A,1.10,PMB;GA
+EPIC-P0-PRODUCT#B,EPIC-P0-PRODUCT#R,SS,0.77,intra B->R,1.10,PMB;GA
+EPIC-P0-PRODUCT#B,G_RG001,FS,0.00,epic complete -> gate or work,1.10,PMB;GA
+EPIC-P0-PRODUCT#R,G_RG001,FS,0.00,epic complete -> gate or work,0.33,PMB;GA
+EPIC-P0-PROTO#A,EPIC-P0-PROTO#R,FF,0.00,intra A->R finish,0.80,PMB;GA
+EPIC-P0-PROTO#A,G_FREEZE,FS,0.00,epic build and assurance complete -> gate,0.80,PMB;GA
+EPIC-P0-PROTO#A,G_RG001,FS,0.00,epic complete -> gate or work,0.80,PMB;GA
+EPIC-P0-PROTO#B,EPIC-P0-PRODUCT#B,FS,0.00,cross: research predecessor -> FS,1.43,PMB;GA
+EPIC-P0-PROTO#B,EPIC-P0-PROTO#A,FF,1.00,intra B->A finish,1.43,PMB;GA
+EPIC-P0-PROTO#B,EPIC-P0-PROTO#A,SS,0.57,intra B->A,1.43,PMB;GA
+EPIC-P0-PROTO#B,EPIC-P0-PROTO#R,SS,1.00,intra B->R,1.43,PMB;GA
+EPIC-P0-PROTO#B,EPIC-P0-TOKENLAB#B,FS,0.00,cross: research predecessor -> FS,1.43,PMB;GA
+EPIC-P0-PROTO#B,EPIC-P1-CONTRACTS#B,FS,0.00,cross: research predecessor -> FS,1.43,PMB;GA
+EPIC-P0-PROTO#B,G_FREEZE,FS,0.00,epic build and assurance complete -> gate,1.43,PMB;GA
+EPIC-P0-PROTO#B,G_RG001,FS,0.00,epic complete -> gate or work,1.43,PMB;GA
+EPIC-P0-PROTO#R,G_RG001,FS,0.00,epic complete -> gate or work,0.43,PMB;GA
+EPIC-P0-PROTOSPEC#A,EPIC-P0-PROTOSPEC#R,FF,0.00,intra A->R finish,2.06,PMB;GA
+EPIC-P0-PROTOSPEC#A,EPIC-P1-MIGRATION#A,FF,0.00,cross: assurance finish,2.06,PMB;GA
+EPIC-P0-PROTOSPEC#A,EPIC-P1-PAYONCE#A,FF,0.00,cross: assurance finish,2.06,PMB;GA
+EPIC-P0-PROTOSPEC#A,G_FREEZE,FS,0.00,epic build and assurance complete -> gate,2.06,PMB;GA
+EPIC-P0-PROTOSPEC#A,G_RG001,FS,0.00,epic complete -> gate or work,2.06,PMB;GA
+EPIC-P0-PROTOSPEC#A,L_PC_APPROVAL,FS,0.00,epic build and assurance complete -> gate,2.06,PMB;GA
+EPIC-P0-PROTOSPEC#B,EPIC-P0-PROTOSPEC#A,FF,1.00,intra B->A finish,2.86,PMB;GA
+EPIC-P0-PROTOSPEC#B,EPIC-P0-PROTOSPEC#A,SS,1.14,intra B->A,2.86,PMB;GA
+EPIC-P0-PROTOSPEC#B,EPIC-P0-PROTOSPEC#R,SS,2.00,intra B->R,2.86,PMB;GA
+EPIC-P0-PROTOSPEC#B,EPIC-P1-CONTRACTS#B,FS,0.00,override EPIC-P0-PROTOSPEC->EPIC-P1-CONTRACTS,2.86,PMB;GA
+EPIC-P0-PROTOSPEC#B,EPIC-P1-MIGRATION#B,SS,1.43,cross: protocol predecessor -> SS,2.86,PMB;GA
+EPIC-P0-PROTOSPEC#B,EPIC-P1-PAYONCE#B,SS,1.43,cross: protocol predecessor -> SS,2.86,PMB;GA
+EPIC-P0-PROTOSPEC#B,G_FREEZE,FS,0.00,epic build and assurance complete -> gate,2.86,PMB;GA
+EPIC-P0-PROTOSPEC#B,G_RG001,FS,0.00,epic complete -> gate or work,2.86,PMB;GA
+EPIC-P0-PROTOSPEC#B,L_PC_APPROVAL,FS,0.00,epic build and assurance complete -> gate,2.86,PMB;GA
+EPIC-P0-PROTOSPEC#R,G_RG001,FS,0.00,epic complete -> gate or work,1.20,PMB;GA
+EPIC-P0-SOURCES#A,EPIC-P0-SOURCES#R,FF,0.00,intra A->R finish,0.82,PMB;GA
+EPIC-P0-SOURCES#A,G_FREEZE,FS,0.00,epic build and assurance complete -> gate,0.82,PMB;GA
+EPIC-P0-SOURCES#A,G_RG001,FS,0.00,epic complete -> gate or work,0.82,PMB;GA
+EPIC-P0-SOURCES#B,EPIC-P0-PLANNER#B,FS,0.00,cross: research predecessor -> FS,1.46,PMB;GA
+EPIC-P0-SOURCES#B,EPIC-P0-PROTO#B,FS,0.00,cross: research predecessor -> FS,1.46,PMB;GA
+EPIC-P0-SOURCES#B,EPIC-P0-PROTOSPEC#B,FS,0.00,cross: research predecessor -> FS,1.46,PMB;GA
+EPIC-P0-SOURCES#B,EPIC-P0-SOURCES#A,FF,1.00,intra B->A finish,1.46,PMB;GA
+EPIC-P0-SOURCES#B,EPIC-P0-SOURCES#A,SS,0.58,intra B->A,1.46,PMB;GA
+EPIC-P0-SOURCES#B,EPIC-P0-SOURCES#R,SS,1.02,intra B->R,1.46,PMB;GA
+EPIC-P0-SOURCES#B,G_FREEZE,FS,0.00,epic build and assurance complete -> gate,1.46,PMB;GA
+EPIC-P0-SOURCES#B,G_RG001,FS,0.00,epic complete -> gate or work,1.46,PMB;GA
+EPIC-P0-SOURCES#B,L_PERMIT2_E2,FS,0.00,epic build package complete -> gate or wait,1.46,PMB;GA
+EPIC-P0-SOURCES#R,G_RG001,FS,0.00,epic complete -> gate or work,0.44,PMB;GA
+EPIC-P0-THREAT#A,EPIC-P0-THREAT#R,FF,0.00,intra A->R finish,0.77,PMB;GA
+EPIC-P0-THREAT#A,G_RG001,FS,0.00,epic complete -> gate or work,0.77,PMB;GA
+EPIC-P0-THREAT#B,EPIC-P0-THREAT#A,FF,1.00,intra B->A finish,1.07,PMB;GA
+EPIC-P0-THREAT#B,EPIC-P0-THREAT#A,SS,0.43,intra B->A,1.07,PMB;GA
+EPIC-P0-THREAT#B,EPIC-P0-THREAT#R,SS,0.75,intra B->R,1.07,PMB;GA
+EPIC-P0-THREAT#B,G_RG001,FS,0.00,epic complete -> gate or work,1.07,PMB;GA
+EPIC-P0-THREAT#R,G_RG001,FS,0.00,epic complete -> gate or work,0.45,PMB;GA
+EPIC-P0-TOKENLAB#A,EPIC-P0-TOKENLAB#R,FF,0.00,intra A->R finish,0.43,PMB;GA
+EPIC-P0-TOKENLAB#A,G_FREEZE,FS,0.00,epic build and assurance complete -> gate,0.43,PMB;GA
+EPIC-P0-TOKENLAB#A,G_RG001,FS,0.00,epic complete -> gate or work,0.43,PMB;GA
+EPIC-P0-TOKENLAB#B,EPIC-P0-TOKENLAB#A,FF,1.00,intra B->A finish,0.77,PMB;GA
+EPIC-P0-TOKENLAB#B,EPIC-P0-TOKENLAB#A,SS,0.31,intra B->A,0.77,PMB;GA
+EPIC-P0-TOKENLAB#B,EPIC-P0-TOKENLAB#R,SS,0.54,intra B->R,0.77,PMB;GA
+EPIC-P0-TOKENLAB#B,EPIC-P1-FORK#B,FS,0.00,cross: research predecessor -> FS,0.77,PMB;GA
+EPIC-P0-TOKENLAB#B,EPIC-P1-REVOKE#B,FS,0.00,cross: research predecessor -> FS,0.77,PMB;GA
+EPIC-P0-TOKENLAB#B,EPIC-P1-TOKENREG#B,FS,0.00,cross: research predecessor -> FS,0.77,PMB;GA
+EPIC-P0-TOKENLAB#B,G_FREEZE,FS,0.00,epic build and assurance complete -> gate,0.77,PMB;GA
+EPIC-P0-TOKENLAB#B,G_RG001,FS,0.00,epic complete -> gate or work,0.77,PMB;GA
+EPIC-P0-TOKENLAB#R,G_RG001,FS,0.00,epic complete -> gate or work,0.23,PMB;GA
+EPIC-P1-AUDITPREP#A,EPIC-P1-AUDITPREP#R,FF,0.00,intra A->R finish,1.03,GA
+EPIC-P1-AUDITPREP#A,G_CONTRACT_FREEZE,FS,0.00,epic build and assurance complete -> gate,1.03,PMB;GA
+EPIC-P1-AUDITPREP#A,G_RG002,FS,0.00,epic build and assurance complete -> gate,1.03,PMB;GA
+EPIC-P1-AUDITPREP#B,EPIC-P1-AUDITPREP#A,FF,1.00,intra B->A finish,1.43,PMB;GA
+EPIC-P1-AUDITPREP#B,EPIC-P1-AUDITPREP#A,SS,0.57,intra B->A,1.43,PMB;GA
+EPIC-P1-AUDITPREP#B,EPIC-P1-AUDITPREP#R,SS,1.00,intra B->R,1.43,GA
+EPIC-P1-AUDITPREP#B,G_CONTRACT_FREEZE,FS,0.00,epic build and assurance complete -> gate,1.43,PMB;GA
+EPIC-P1-AUDITPREP#B,G_RG002,FS,0.00,epic build and assurance complete -> gate,1.43,PMB;GA
+EPIC-P1-CHAINGW#A,EPIC-P1-CHAINGW#R,FF,0.00,intra A->R finish,3.91,PMB;GA
+EPIC-P1-CHAINGW#A,EPIC-P2-ORCH#A,FF,0.00,cross: assurance finish,3.91,PMB;GA
+EPIC-P1-CHAINGW#A,G_RG002,FS,0.00,epic build and assurance complete -> gate,3.91,PMB;GA
+EPIC-P1-CHAINGW#A,L_CHAIN_EVID,FS,0.00,epic complete -> gate or work,3.91,PMB;GA
+EPIC-P1-CHAINGW#B,EPIC-P1-CHAINGW#A,FF,1.00,intra B->A finish,5.43,PMB;GA
+EPIC-P1-CHAINGW#B,EPIC-P1-CHAINGW#A,SS,2.17,intra B->A,5.43,PMB;GA
+EPIC-P1-CHAINGW#B,EPIC-P1-CHAINGW#R,SS,3.80,intra B->R,5.43,PMB;GA
+EPIC-P1-CHAINGW#B,EPIC-P2-ORCH#B,SS,2.71,cross: feature predecessor -> SS,5.43,PMB;GA
+EPIC-P1-CHAINGW#B,G_RG002,FS,0.00,epic build and assurance complete -> gate,5.43,PMB;GA
+EPIC-P1-CHAINGW#B,L_CHAIN_EVID,FS,0.00,epic complete -> gate or work,5.43,PMB;GA
+EPIC-P1-CHAINGW#R,L_CHAIN_EVID,FS,0.00,epic complete -> gate or work,1.52,PMB;GA
+EPIC-P1-CONTRACTS#A,EPIC-P1-CONTRACTS#R,FF,0.00,intra A->R finish,8.65,GA
+EPIC-P1-CONTRACTS#A,EPIC-P1-MANDATE#A,FF,0.00,cross: assurance finish,8.65,PMB;GA
+EPIC-P1-CONTRACTS#A,EPIC-P1-MIGRATION#A,FF,0.00,cross: assurance finish,8.65,PMB;GA
+EPIC-P1-CONTRACTS#A,EPIC-P1-PAYONCE#A,FF,0.00,cross: assurance finish,8.65,PMB;GA
+EPIC-P1-CONTRACTS#A,EPIC-P1-QUOTE#A,FF,0.00,cross: assurance finish,8.65,PMB;GA
+EPIC-P1-CONTRACTS#A,EPIC-P1-REVOKE#A,FF,0.00,cross: assurance finish,8.65,PMB;GA
+EPIC-P1-CONTRACTS#A,EPIC-P2-DEPLOYPREP#A,FF,0.00,cross: assurance finish,8.65,PMB;GA
+EPIC-P1-CONTRACTS#A,G_CONTRACT_FREEZE,FS,0.00,epic build and assurance complete -> gate,8.65,PMB;GA
+EPIC-P1-CONTRACTS#A,G_RG002,FS,0.00,epic build and assurance complete -> gate,8.65,PMB;GA
+EPIC-P1-CONTRACTS#B,EPIC-P1-AUDITPREP#B,FS,0.00,override EPIC-P1-CONTRACTS->EPIC-P1-AUDITPREP,12.02,PMB;GA
+EPIC-P1-CONTRACTS#B,EPIC-P1-CONTRACTS#A,FF,1.00,intra B->A finish,12.02,PMB;GA
+EPIC-P1-CONTRACTS#B,EPIC-P1-CONTRACTS#A,SS,4.81,intra B->A,12.02,PMB;GA
+EPIC-P1-CONTRACTS#B,EPIC-P1-CONTRACTS#R,SS,8.41,intra B->R,12.02,GA
+EPIC-P1-CONTRACTS#B,EPIC-P1-MANDATE#B,SS,6.01,cross: protocol predecessor -> SS,12.02,PMB;GA
+EPIC-P1-CONTRACTS#B,EPIC-P1-MIGRATION#B,SS,6.01,cross: protocol predecessor -> SS,12.02,PMB;GA
+EPIC-P1-CONTRACTS#B,EPIC-P1-PAYONCE#B,SS,6.01,cross: protocol predecessor -> SS,12.02,PMB;GA
+EPIC-P1-CONTRACTS#B,EPIC-P1-QUOTE#B,SS,6.01,cross: protocol predecessor -> SS,12.02,PMB;GA
+EPIC-P1-CONTRACTS#B,EPIC-P1-REVOKE#B,SS,6.01,cross: protocol predecessor -> SS,12.02,PMB;GA
+EPIC-P1-CONTRACTS#B,EPIC-P2-DEPLOYPREP#B,SS,6.01,cross: protocol predecessor -> SS,12.02,PMB;GA
+EPIC-P1-CONTRACTS#B,G_CONTRACT_FREEZE,FS,0.00,epic build and assurance complete -> gate,12.02,PMB;GA
+EPIC-P1-CONTRACTS#B,G_RG002,FS,0.00,epic build and assurance complete -> gate,12.02,PMB;GA
+EPIC-P1-CORE#A,EPIC-P1-CORE#R,FF,0.00,intra A->R finish,2.44,GA
+EPIC-P1-CORE#A,EPIC-P1-FLAGS#A,FF,0.00,cross: assurance finish,2.44,PMB;GA
+EPIC-P1-CORE#A,EPIC-P2-MERCHANT#A,FF,0.00,cross: assurance finish,2.44,PMB;GA
+EPIC-P1-CORE#A,G_RG002,FS,0.00,epic build and assurance complete -> gate,2.44,PMB;GA
+EPIC-P1-CORE#B,EPIC-P1-CORE#A,FF,1.00,intra B->A finish,3.39,PMB;GA
+EPIC-P1-CORE#B,EPIC-P1-CORE#A,SS,1.36,intra B->A,3.39,PMB;GA
+EPIC-P1-CORE#B,EPIC-P1-CORE#R,SS,2.38,intra B->R,3.39,GA
+EPIC-P1-CORE#B,EPIC-P1-FLAGS#B,SS,1.70,cross: feature predecessor -> SS,3.39,PMB;GA
+EPIC-P1-CORE#B,EPIC-P1-LEDGER#B,SS,1.02,override EPIC-P1-CORE->EPIC-P1-LEDGER,3.39,PMB;GA
+EPIC-P1-CORE#B,EPIC-P2-MERCHANT#B,SS,1.70,cross: feature predecessor -> SS,3.39,PMB;GA
+EPIC-P1-CORE#B,G_RG002,FS,0.00,epic build and assurance complete -> gate,3.39,PMB;GA
+EPIC-P1-DELEGATION#A,EPIC-P1-DELEGATION#R,FF,0.00,intra A->R finish,1.57,PMB;GA
+EPIC-P1-DELEGATION#A,EPIC-P1-MANDATE#A,FF,0.00,cross: assurance finish,1.57,PMB;GA
+EPIC-P1-DELEGATION#A,G_RG002,FS,0.00,epic build and assurance complete -> gate,1.57,PMB;GA
+EPIC-P1-DELEGATION#A,W_WALLET_E3,FS,0.00,epic complete -> gate or work,1.57,PMB;GA
+EPIC-P1-DELEGATION#B,EPIC-P1-DELEGATION#A,FF,1.00,intra B->A finish,2.19,PMB;GA
+EPIC-P1-DELEGATION#B,EPIC-P1-DELEGATION#A,SS,0.88,intra B->A,2.19,PMB;GA
+EPIC-P1-DELEGATION#B,EPIC-P1-DELEGATION#R,SS,1.53,intra B->R,2.19,PMB;GA
+EPIC-P1-DELEGATION#B,EPIC-P1-MANDATE#B,SS,1.09,cross: feature predecessor -> SS,2.19,PMB;GA
+EPIC-P1-DELEGATION#B,G_RG002,FS,0.00,epic build and assurance complete -> gate,2.19,PMB;GA
+EPIC-P1-DELEGATION#B,W_WALLET_E3,FS,0.00,epic complete -> gate or work,2.19,PMB;GA
+EPIC-P1-DELEGATION#R,W_WALLET_E3,FS,0.00,epic complete -> gate or work,0.61,PMB;GA
+EPIC-P1-FLAGS#A,EPIC-P1-FLAGS#R,FF,0.00,intra A->R finish,0.64,GA
+EPIC-P1-FLAGS#A,EPIC-P2-ORCH#A,FF,0.00,cross: assurance finish,0.64,PMB;GA
+EPIC-P1-FLAGS#A,G_RG002,FS,0.00,epic build and assurance complete -> gate,0.64,PMB;GA
+EPIC-P1-FLAGS#B,EPIC-P1-FLAGS#A,FF,1.00,intra B->A finish,0.89,PMB;GA
+EPIC-P1-FLAGS#B,EPIC-P1-FLAGS#A,SS,0.36,intra B->A,0.89,PMB;GA
+EPIC-P1-FLAGS#B,EPIC-P1-FLAGS#R,SS,0.62,intra B->R,0.89,GA
+EPIC-P1-FLAGS#B,EPIC-P2-ORCH#B,SS,0.45,cross: feature predecessor -> SS,0.89,PMB;GA
+EPIC-P1-FLAGS#B,G_RG002,FS,0.00,epic build and assurance complete -> gate,0.89,PMB;GA
+EPIC-P1-FORK#A,EPIC-P1-FORK#R,FF,0.00,intra A->R finish,4.11,GA
+EPIC-P1-FORK#A,G_CONTRACT_FREEZE,FS,0.00,epic build and assurance complete -> gate,4.11,PMB;GA
+EPIC-P1-FORK#A,G_RG002,FS,0.00,epic build and assurance complete -> gate,4.11,PMB;GA
+EPIC-P1-FORK#B,EPIC-P1-FORK#A,FF,1.00,intra B->A finish,5.71,PMB;GA
+EPIC-P1-FORK#B,EPIC-P1-FORK#A,SS,2.29,intra B->A,5.71,PMB;GA
+EPIC-P1-FORK#B,EPIC-P1-FORK#R,SS,4.00,intra B->R,5.71,GA
+EPIC-P1-FORK#B,G_CONTRACT_FREEZE,FS,0.00,epic build and assurance complete -> gate,5.71,PMB;GA
+EPIC-P1-FORK#B,G_RG002,FS,0.00,epic build and assurance complete -> gate,5.71,PMB;GA
+EPIC-P1-LEDGER#A,EPIC-P1-LEDGER#R,FF,0.00,intra A->R finish,1.86,GA
+EPIC-P1-LEDGER#A,EPIC-P2-RECON#A,FF,0.00,cross: assurance finish,1.86,PMB;GA
+EPIC-P1-LEDGER#A,EPIC-P2-REFUNDS#A,FF,0.00,cross: assurance finish,1.86,PMB;GA
+EPIC-P1-LEDGER#A,G_RG002,FS,0.00,epic build and assurance complete -> gate,1.86,PMB;GA
+EPIC-P1-LEDGER#B,EPIC-P1-LEDGER#A,FF,1.00,intra B->A finish,2.59,PMB;GA
+EPIC-P1-LEDGER#B,EPIC-P1-LEDGER#A,SS,1.03,intra B->A,2.59,PMB;GA
+EPIC-P1-LEDGER#B,EPIC-P1-LEDGER#R,SS,1.81,intra B->R,2.59,GA
+EPIC-P1-LEDGER#B,EPIC-P2-RECON#B,SS,1.29,cross: data predecessor -> SS,2.59,PMB;GA
+EPIC-P1-LEDGER#B,EPIC-P2-REFUNDS#B,SS,1.29,cross: data predecessor -> SS,2.59,PMB;GA
+EPIC-P1-LEDGER#B,G_RG002,FS,0.00,epic build and assurance complete -> gate,2.59,PMB;GA
+EPIC-P1-MANDATE#A,EPIC-P1-MANDATE#R,FF,0.00,intra A->R finish,1.62,GA
+EPIC-P1-MANDATE#A,EPIC-P2-CHECKOUT#A,FF,0.00,cross: assurance finish,1.62,PMB;GA
+EPIC-P1-MANDATE#A,EPIC-P2-PORTAL#A,FF,0.00,cross: assurance finish,1.62,PMB;GA
+EPIC-P1-MANDATE#A,G_RG002,FS,0.00,epic build and assurance complete -> gate,1.62,PMB;GA
+EPIC-P1-MANDATE#B,EPIC-P1-MANDATE#A,FF,1.00,intra B->A finish,2.25,PMB;GA
+EPIC-P1-MANDATE#B,EPIC-P1-MANDATE#A,SS,0.90,intra B->A,2.25,PMB;GA
+EPIC-P1-MANDATE#B,EPIC-P1-MANDATE#R,SS,1.57,intra B->R,2.25,GA
+EPIC-P1-MANDATE#B,EPIC-P2-CHECKOUT#B,SS,1.12,cross: feature predecessor -> SS,2.25,PMB;GA
+EPIC-P1-MANDATE#B,EPIC-P2-PORTAL#B,SS,1.12,cross: feature predecessor -> SS,2.25,PMB;GA
+EPIC-P1-MANDATE#B,G_RG002,FS,0.00,epic build and assurance complete -> gate,2.25,PMB;GA
+EPIC-P1-MIGRATION#A,EPIC-P1-MIGRATION#R,FF,0.00,intra A->R finish,0.97,GA
+EPIC-P1-MIGRATION#A,EPIC-P2-MIGSVC#A,FF,0.00,cross: assurance finish,0.97,PMB;GA
+EPIC-P1-MIGRATION#A,EPIC-P2-PORTAL#A,FF,0.00,cross: assurance finish,0.97,PMB;GA
+EPIC-P1-MIGRATION#A,G_CONTRACT_FREEZE,FS,0.00,epic build and assurance complete -> gate,0.97,PMB;GA
+EPIC-P1-MIGRATION#A,G_RG002,FS,0.00,epic build and assurance complete -> gate,0.97,PMB;GA
+EPIC-P1-MIGRATION#B,EPIC-P1-MIGRATION#A,FF,1.00,intra B->A finish,1.35,PMB;GA
+EPIC-P1-MIGRATION#B,EPIC-P1-MIGRATION#A,SS,0.54,intra B->A,1.35,PMB;GA
+EPIC-P1-MIGRATION#B,EPIC-P1-MIGRATION#R,SS,0.95,intra B->R,1.35,GA
+EPIC-P1-MIGRATION#B,EPIC-P2-MIGSVC#B,SS,0.68,cross: migration predecessor -> SS,1.35,PMB;GA
+EPIC-P1-MIGRATION#B,EPIC-P2-PORTAL#B,SS,0.68,cross: migration predecessor -> SS,1.35,PMB;GA
+EPIC-P1-MIGRATION#B,G_CONTRACT_FREEZE,FS,0.00,epic build and assurance complete -> gate,1.35,PMB;GA
+EPIC-P1-MIGRATION#B,G_RG002,FS,0.00,epic build and assurance complete -> gate,1.35,PMB;GA
+EPIC-P1-OBS#A,EPIC-P1-OBS#R,FF,0.00,intra A->R finish,1.73,GA
+EPIC-P1-OBS#A,EPIC-P2-RUNBOOKS#A,FF,0.00,cross: assurance finish,1.73,PMB;GA
+EPIC-P1-OBS#A,G_RG002,FS,0.00,epic build and assurance complete -> gate,1.73,PMB;GA
+EPIC-P1-OBS#B,EPIC-P1-OBS#A,FF,1.00,intra B->A finish,2.40,PMB;GA
+EPIC-P1-OBS#B,EPIC-P1-OBS#A,SS,0.96,intra B->A,2.40,PMB;GA
+EPIC-P1-OBS#B,EPIC-P1-OBS#R,SS,1.68,intra B->R,2.40,GA
+EPIC-P1-OBS#B,EPIC-P2-RUNBOOKS#B,SS,1.20,cross: infrastructure predecessor -> SS,2.40,PMB;GA
+EPIC-P1-OBS#B,G_RG002,FS,0.00,epic build and assurance complete -> gate,2.40,PMB;GA
+EPIC-P1-PAYONCE#A,EPIC-P1-PAYONCE#R,FF,0.00,intra A->R finish,0.87,GA
+EPIC-P1-PAYONCE#A,EPIC-P2-CHECKOUT#A,FF,0.00,cross: assurance finish,0.87,PMB;GA
+EPIC-P1-PAYONCE#A,G_CONTRACT_FREEZE,FS,0.00,epic build and assurance complete -> gate,0.87,PMB;GA
+EPIC-P1-PAYONCE#A,G_RG002,FS,0.00,epic build and assurance complete -> gate,0.87,PMB;GA
+EPIC-P1-PAYONCE#B,EPIC-P1-PAYONCE#A,FF,1.00,intra B->A finish,1.20,PMB;GA
+EPIC-P1-PAYONCE#B,EPIC-P1-PAYONCE#A,SS,0.48,intra B->A,1.20,PMB;GA
+EPIC-P1-PAYONCE#B,EPIC-P1-PAYONCE#R,SS,0.84,intra B->R,1.20,GA
+EPIC-P1-PAYONCE#B,EPIC-P2-CHECKOUT#B,SS,0.60,cross: protocol predecessor -> SS,1.20,PMB;GA
+EPIC-P1-PAYONCE#B,G_CONTRACT_FREEZE,FS,0.00,epic build and assurance complete -> gate,1.20,PMB;GA
+EPIC-P1-PAYONCE#B,G_RG002,FS,0.00,epic build and assurance complete -> gate,1.20,PMB;GA
+EPIC-P1-QUOTE#A,EPIC-P1-QUOTE#R,FF,0.00,intra A->R finish,3.26,PMB;GA
+EPIC-P1-QUOTE#A,EPIC-P2-ORCH#A,FF,0.00,cross: assurance finish,3.26,PMB;GA
+EPIC-P1-QUOTE#A,G_RG002,FS,0.00,epic build and assurance complete -> gate,3.26,PMB;GA
+EPIC-P1-QUOTE#A,L_CHAIN_EVID,FS,0.00,epic complete -> gate or work,3.26,PMB;GA
+EPIC-P1-QUOTE#B,EPIC-P1-QUOTE#A,FF,1.00,intra B->A finish,4.52,PMB;GA
+EPIC-P1-QUOTE#B,EPIC-P1-QUOTE#A,SS,1.81,intra B->A,4.52,PMB;GA
+EPIC-P1-QUOTE#B,EPIC-P1-QUOTE#R,SS,3.17,intra B->R,4.52,PMB;GA
+EPIC-P1-QUOTE#B,EPIC-P2-ORCH#B,SS,2.26,cross: feature predecessor -> SS,4.52,PMB;GA
+EPIC-P1-QUOTE#B,G_RG002,FS,0.00,epic build and assurance complete -> gate,4.52,PMB;GA
+EPIC-P1-QUOTE#B,L_CHAIN_EVID,FS,0.00,epic complete -> gate or work,4.52,PMB;GA
+EPIC-P1-QUOTE#R,L_CHAIN_EVID,FS,0.00,epic complete -> gate or work,1.27,PMB;GA
+EPIC-P1-REVOKE#A,EPIC-P1-REVOKE#R,FF,0.00,intra A->R finish,0.45,GA
+EPIC-P1-REVOKE#A,G_CONTRACT_FREEZE,FS,0.00,epic build and assurance complete -> gate,0.45,PMB;GA
+EPIC-P1-REVOKE#A,G_RG002,FS,0.00,epic build and assurance complete -> gate,0.45,PMB;GA
+EPIC-P1-REVOKE#B,EPIC-P1-REVOKE#A,FF,1.00,intra B->A finish,0.62,PMB;GA
+EPIC-P1-REVOKE#B,EPIC-P1-REVOKE#A,SS,0.25,intra B->A,0.62,PMB;GA
+EPIC-P1-REVOKE#B,EPIC-P1-REVOKE#R,SS,0.43,intra B->R,0.62,GA
+EPIC-P1-REVOKE#B,G_CONTRACT_FREEZE,FS,0.00,epic build and assurance complete -> gate,0.62,PMB;GA
+EPIC-P1-REVOKE#B,G_RG002,FS,0.00,epic build and assurance complete -> gate,0.62,PMB;GA
+EPIC-P1-SECPROG#A,EPIC-P1-SECPROG#R,FF,0.00,intra A->R finish,1.73,PMB;GA
+EPIC-P1-SECPROG#A,G_RG002,FS,0.00,epic build and assurance complete -> gate,1.73,PMB;GA
+EPIC-P1-SECPROG#A,G_RG006,FS,0.00,epic complete -> gate or work,1.73,PMB;GA
+EPIC-P1-SECPROG#B,EPIC-P1-SECPROG#A,FF,1.00,intra B->A finish,2.40,PMB;GA
+EPIC-P1-SECPROG#B,EPIC-P1-SECPROG#A,SS,0.96,intra B->A,2.40,PMB;GA
+EPIC-P1-SECPROG#B,EPIC-P1-SECPROG#R,SS,1.68,intra B->R,2.40,PMB;GA
+EPIC-P1-SECPROG#B,G_RG002,FS,0.00,epic build and assurance complete -> gate,2.40,PMB;GA
+EPIC-P1-SECPROG#B,G_RG006,FS,0.00,epic complete -> gate or work,2.40,PMB;GA
+EPIC-P1-SECPROG#R,G_RG006,FS,0.00,epic complete -> gate or work,1.01,PMB;GA
+EPIC-P1-SIGNER#A,EPIC-P1-SIGNER#R,FF,0.00,intra A->R finish,2.47,PMB;GA
+EPIC-P1-SIGNER#A,EPIC-P2-ORCH#A,FF,0.00,cross: assurance finish,2.47,PMB;GA
+EPIC-P1-SIGNER#A,G_RG002,FS,0.00,epic build and assurance complete -> gate,2.47,PMB;GA
+EPIC-P1-SIGNER#A,L_CHAIN_EVID,FS,0.00,epic complete -> gate or work,2.47,PMB;GA
+EPIC-P1-SIGNER#B,EPIC-P1-SIGNER#A,FF,1.00,intra B->A finish,3.43,PMB;GA
+EPIC-P1-SIGNER#B,EPIC-P1-SIGNER#A,SS,1.37,intra B->A,3.43,PMB;GA
+EPIC-P1-SIGNER#B,EPIC-P1-SIGNER#R,SS,2.40,intra B->R,3.43,PMB;GA
+EPIC-P1-SIGNER#B,EPIC-P2-ORCH#B,SS,1.71,cross: feature predecessor -> SS,3.43,PMB;GA
+EPIC-P1-SIGNER#B,G_RG002,FS,0.00,epic build and assurance complete -> gate,3.43,PMB;GA
+EPIC-P1-SIGNER#B,L_CHAIN_EVID,FS,0.00,epic complete -> gate or work,3.43,PMB;GA
+EPIC-P1-SIGNER#R,L_CHAIN_EVID,FS,0.00,epic complete -> gate or work,0.96,PMB;GA
+EPIC-P1-TOKENREG#A,EPIC-P1-TOKENREG#R,FF,0.00,intra A->R finish,0.99,GA
+EPIC-P1-TOKENREG#A,EPIC-P3-TOKENOPS#A,FF,0.00,cross: assurance finish,0.99,GA
+EPIC-P1-TOKENREG#A,G_CONTRACT_FREEZE,FS,0.00,epic build and assurance complete -> gate,0.99,PMB;GA
+EPIC-P1-TOKENREG#A,G_RG002,FS,0.00,epic build and assurance complete -> gate,0.99,PMB;GA
+EPIC-P1-TOKENREG#B,EPIC-P1-TOKENREG#A,FF,1.00,intra B->A finish,1.38,PMB;GA
+EPIC-P1-TOKENREG#B,EPIC-P1-TOKENREG#A,SS,0.55,intra B->A,1.38,PMB;GA
+EPIC-P1-TOKENREG#B,EPIC-P1-TOKENREG#R,SS,0.96,intra B->R,1.38,GA
+EPIC-P1-TOKENREG#B,EPIC-P3-TOKENOPS#B,SS,0.69,cross: feature predecessor -> SS,1.38,GA
+EPIC-P1-TOKENREG#B,G_CONTRACT_FREEZE,FS,0.00,epic build and assurance complete -> gate,1.38,PMB;GA
+EPIC-P1-TOKENREG#B,G_RG002,FS,0.00,epic build and assurance complete -> gate,1.38,PMB;GA
+EPIC-P2-A11YL10N#A,EPIC-P2-A11YL10N#R,FF,0.00,intra A->R finish,2.06,PMB;GA
+EPIC-P2-A11YL10N#A,G_RG008,FS,0.00,epic complete -> gate or work,2.06,PMB;GA
+EPIC-P2-A11YL10N#B,EPIC-P2-A11YL10N#A,FF,1.00,intra B->A finish,2.86,PMB;GA
+EPIC-P2-A11YL10N#B,EPIC-P2-A11YL10N#A,SS,1.14,intra B->A,2.86,PMB;GA
+EPIC-P2-A11YL10N#B,EPIC-P2-A11YL10N#R,SS,2.00,intra B->R,2.86,PMB;GA
+EPIC-P2-A11YL10N#B,G_RG008,FS,0.00,epic complete -> gate or work,2.86,PMB;GA
+EPIC-P2-A11YL10N#R,G_RG008,FS,0.00,epic complete -> gate or work,0.80,PMB;GA
+EPIC-P2-CHECKOUT#A,EPIC-P2-A11YL10N#A,FF,0.00,cross: assurance finish,4.73,PMB;GA
+EPIC-P2-CHECKOUT#A,EPIC-P2-CHECKOUT#R,FF,0.00,intra A->R finish,4.73,PMB;GA
+EPIC-P2-CHECKOUT#A,G_FEATURE_COMPLETE,FS,0.00,epic build and assurance complete -> gate,4.73,PMB;GA
+EPIC-P2-CHECKOUT#A,W_WALLET_E3,FS,0.00,epic complete -> gate or work,4.73,PMB;GA
+EPIC-P2-CHECKOUT#B,EPIC-P2-A11YL10N#B,SS,3.29,cross: feature predecessor -> SS,6.57,PMB;GA
+EPIC-P2-CHECKOUT#B,EPIC-P2-CHECKOUT#A,FF,1.00,intra B->A finish,6.57,PMB;GA
+EPIC-P2-CHECKOUT#B,EPIC-P2-CHECKOUT#A,SS,2.63,intra B->A,6.57,PMB;GA
+EPIC-P2-CHECKOUT#B,EPIC-P2-CHECKOUT#R,SS,4.60,intra B->R,6.57,PMB;GA
+EPIC-P2-CHECKOUT#B,G_FEATURE_COMPLETE,FS,0.00,epic build and assurance complete -> gate,6.57,PMB;GA
+EPIC-P2-CHECKOUT#B,W_WALLET_E3,FS,0.00,epic complete -> gate or work,6.57,PMB;GA
+EPIC-P2-CHECKOUT#R,W_WALLET_E3,FS,0.00,epic complete -> gate or work,1.84,PMB;GA
+EPIC-P2-COMPLIANCE#A,EPIC-P2-COMPLIANCE#R,FF,0.00,intra A->R finish,1.14,PMB;GA
+EPIC-P2-COMPLIANCE#A,G_RG008,FS,0.00,epic complete -> gate or work,1.14,PMB;GA
+EPIC-P2-COMPLIANCE#B,EPIC-P2-COMPLIANCE#A,FF,1.00,intra B->A finish,1.59,PMB;GA
+EPIC-P2-COMPLIANCE#B,EPIC-P2-COMPLIANCE#A,SS,0.63,intra B->A,1.59,PMB;GA
+EPIC-P2-COMPLIANCE#B,EPIC-P2-COMPLIANCE#R,SS,1.11,intra B->R,1.59,PMB;GA
+EPIC-P2-COMPLIANCE#B,EPIC-P2-COMPOPS#B,FS,0.00,cross: compliance predecessor -> FS,1.59,PMB;GA
+EPIC-P2-COMPLIANCE#B,EPIC-P2-RISKCON#B,FS,0.00,cross: compliance predecessor -> FS,1.59,PMB;GA
+EPIC-P2-COMPLIANCE#B,G_RG008,FS,0.00,epic complete -> gate or work,1.59,PMB;GA
+EPIC-P2-COMPLIANCE#R,G_RG008,FS,0.00,epic complete -> gate or work,0.67,PMB;GA
+EPIC-P2-COMPOPS#A,EPIC-P2-COMPOPS#R,FF,0.00,intra A->R finish,2.23,PMB;GA
+EPIC-P2-COMPOPS#A,G_RG008,FS,0.00,epic complete -> gate or work,2.23,PMB;GA
+EPIC-P2-COMPOPS#B,EPIC-P2-COMPOPS#A,FF,1.00,intra B->A finish,3.10,PMB;GA
+EPIC-P2-COMPOPS#B,EPIC-P2-COMPOPS#A,SS,1.24,intra B->A,3.10,PMB;GA
+EPIC-P2-COMPOPS#B,EPIC-P2-COMPOPS#R,SS,2.17,intra B->R,3.10,PMB;GA
+EPIC-P2-COMPOPS#B,EPIC-P4-FRAUD#B,FS,0.00,cross: compliance predecessor -> FS,3.10,GA
+EPIC-P2-COMPOPS#B,G_RG008,FS,0.00,epic complete -> gate or work,3.10,PMB;GA
+EPIC-P2-COMPOPS#R,G_RG008,FS,0.00,epic complete -> gate or work,1.30,PMB;GA
+EPIC-P2-DEPLOYPREP#A,EPIC-P2-DEPLOYPREP#R,FF,0.00,intra A->R finish,1.85,PMB;GA
+EPIC-P2-DEPLOYPREP#A,EPIC-P3-DEPLOY#A,FF,0.00,cross: assurance finish,1.85,PMB;GA
+EPIC-P2-DEPLOYPREP#A,EPIC-P3-MIGDRILL#A,FF,0.00,cross: assurance finish,1.85,GA
+EPIC-P2-DEPLOYPREP#A,G_RG006,FS,0.00,epic complete -> gate or work,1.85,PMB;GA
+EPIC-P2-DEPLOYPREP#B,EPIC-P2-DEPLOYPREP#A,FF,1.00,intra B->A finish,2.57,PMB;GA
+EPIC-P2-DEPLOYPREP#B,EPIC-P2-DEPLOYPREP#A,SS,1.03,intra B->A,2.57,PMB;GA
+EPIC-P2-DEPLOYPREP#B,EPIC-P2-DEPLOYPREP#R,SS,1.80,intra B->R,2.57,PMB;GA
+EPIC-P2-DEPLOYPREP#B,EPIC-P3-DEPLOY#B,SS,1.29,cross: protocol predecessor -> SS,2.57,PMB;GA
+EPIC-P2-DEPLOYPREP#B,EPIC-P3-MIGDRILL#B,SS,1.29,cross: protocol predecessor -> SS,2.57,GA
+EPIC-P2-DEPLOYPREP#B,G_RG006,FS,0.00,epic complete -> gate or work,2.57,PMB;GA
+EPIC-P2-DEPLOYPREP#R,G_RG006,FS,0.00,epic complete -> gate or work,1.08,PMB;GA
+EPIC-P2-DEVDOC#A,EPIC-P2-DEVDOC#R,FF,0.00,intra A->R finish,1.37,GA
+EPIC-P2-DEVDOC#A,EPIC-P2-SANDBOX#A,FF,0.00,cross: assurance finish,1.37,PMB;GA
+EPIC-P2-DEVDOC#A,G_FEATURE_COMPLETE,FS,0.00,epic build and assurance complete -> gate,1.37,PMB;GA
+EPIC-P2-DEVDOC#B,EPIC-P2-DEVDOC#A,FF,1.00,intra B->A finish,1.90,PMB;GA
+EPIC-P2-DEVDOC#B,EPIC-P2-DEVDOC#A,SS,0.76,intra B->A,1.90,PMB;GA
+EPIC-P2-DEVDOC#B,EPIC-P2-DEVDOC#R,SS,1.33,intra B->R,1.90,GA
+EPIC-P2-DEVDOC#B,EPIC-P2-SANDBOX#B,SS,0.95,cross: feature predecessor -> SS,1.90,PMB;GA
+EPIC-P2-DEVDOC#B,G_FEATURE_COMPLETE,FS,0.00,epic build and assurance complete -> gate,1.90,PMB;GA
+EPIC-P2-LEGALPACK#A,EPIC-P2-LEGALPACK#R,FF,0.00,intra A->R finish,2.76,PMB;GA
+EPIC-P2-LEGALPACK#A,G_RG008,FS,0.00,epic complete -> gate or work,2.76,PMB;GA
+EPIC-P2-LEGALPACK#B,EPIC-P2-LEGALPACK#A,FF,1.00,intra B->A finish,3.84,PMB;GA
+EPIC-P2-LEGALPACK#B,EPIC-P2-LEGALPACK#A,SS,1.53,intra B->A,3.84,PMB;GA
+EPIC-P2-LEGALPACK#B,EPIC-P2-LEGALPACK#R,SS,2.69,intra B->R,3.84,PMB;GA
+EPIC-P2-LEGALPACK#B,EPIC-P3-LEGALGO#B,FS,0.00,cross: compliance predecessor -> FS,3.84,PMB;GA
+EPIC-P2-LEGALPACK#B,G_RG008,FS,0.00,epic complete -> gate or work,3.84,PMB;GA
+EPIC-P2-LEGALPACK#R,G_RG008,FS,0.00,epic complete -> gate or work,1.61,PMB;GA
+EPIC-P2-LOAD#A,EPIC-P2-LOAD#R,FF,0.00,intra A->R finish,5.13,PMB;GA
+EPIC-P2-LOAD#A,EPIC-P3-IRDR#A,FF,0.00,cross: assurance finish,5.13,PMB;GA
+EPIC-P2-LOAD#A,G_RG009,FS,0.00,epic complete -> gate or work,5.13,PMB;GA
+EPIC-P2-LOAD#B,EPIC-P2-LOAD#A,FF,1.00,intra B->A finish,7.12,PMB;GA
+EPIC-P2-LOAD#B,EPIC-P2-LOAD#A,SS,2.85,intra B->A,7.12,PMB;GA
+EPIC-P2-LOAD#B,EPIC-P2-LOAD#R,SS,4.98,intra B->R,7.12,PMB;GA
+EPIC-P2-LOAD#B,EPIC-P3-IRDR#B,SS,3.56,cross: infrastructure predecessor -> SS,7.12,PMB;GA
+EPIC-P2-LOAD#B,G_RG009,FS,0.00,epic complete -> gate or work,7.12,PMB;GA
+EPIC-P2-LOAD#R,G_RG009,FS,0.00,epic complete -> gate or work,2.99,PMB;GA
+EPIC-P2-MERCHANT#A,EPIC-P2-DEVDOC#A,FF,0.00,cross: assurance finish,2.12,PMB;GA
+EPIC-P2-MERCHANT#A,EPIC-P2-MERCHANT#R,FF,0.00,intra A->R finish,2.12,GA
+EPIC-P2-MERCHANT#A,EPIC-P2-MIGSVC#A,FF,0.00,cross: assurance finish,2.12,PMB;GA
+EPIC-P2-MERCHANT#A,G_FEATURE_COMPLETE,FS,0.00,epic build and assurance complete -> gate,2.12,PMB;GA
+EPIC-P2-MERCHANT#B,EPIC-P2-DEVDOC#B,SS,1.47,cross: feature predecessor -> SS,2.95,PMB;GA
+EPIC-P2-MERCHANT#B,EPIC-P2-MERCHANT#A,FF,1.00,intra B->A finish,2.95,PMB;GA
+EPIC-P2-MERCHANT#B,EPIC-P2-MERCHANT#A,SS,1.18,intra B->A,2.95,PMB;GA
+EPIC-P2-MERCHANT#B,EPIC-P2-MERCHANT#R,SS,2.06,intra B->R,2.95,GA
+EPIC-P2-MERCHANT#B,EPIC-P2-MIGSVC#B,SS,1.47,cross: feature predecessor -> SS,2.95,PMB;GA
+EPIC-P2-MERCHANT#B,G_FEATURE_COMPLETE,FS,0.00,epic build and assurance complete -> gate,2.95,PMB;GA
+EPIC-P2-MIGSVC#A,EPIC-P2-MIGSVC#R,FF,0.00,intra A->R finish,2.10,GA
+EPIC-P2-MIGSVC#A,EPIC-P3-MIGDRILL#A,FF,0.00,cross: assurance finish,2.10,GA
+EPIC-P2-MIGSVC#A,EPIC-P4-MIGGAME#A,FF,0.00,cross: assurance finish,2.10,GA
+EPIC-P2-MIGSVC#A,EPIC-P6-OPTIN#A,FF,0.00,cross: assurance finish,2.10,GA
+EPIC-P2-MIGSVC#A,EPIC-P7-MIGCAMP#A,FF,0.00,cross: assurance finish,2.10,GA
+EPIC-P2-MIGSVC#A,G_FEATURE_COMPLETE,FS,0.00,epic build and assurance complete -> gate,2.10,PMB;GA
+EPIC-P2-MIGSVC#B,EPIC-P2-MIGSVC#A,FF,1.00,intra B->A finish,2.92,PMB;GA
+EPIC-P2-MIGSVC#B,EPIC-P2-MIGSVC#A,SS,1.17,intra B->A,2.92,PMB;GA
+EPIC-P2-MIGSVC#B,EPIC-P2-MIGSVC#R,SS,2.04,intra B->R,2.92,GA
+EPIC-P2-MIGSVC#B,EPIC-P3-MIGDRILL#B,SS,1.46,cross: migration predecessor -> SS,2.92,GA
+EPIC-P2-MIGSVC#B,EPIC-P4-MIGGAME#B,SS,1.46,cross: migration predecessor -> SS,2.92,GA
+EPIC-P2-MIGSVC#B,EPIC-P6-OPTIN#B,SS,1.46,cross: migration predecessor -> SS,2.92,GA
+EPIC-P2-MIGSVC#B,EPIC-P7-MIGCAMP#B,SS,1.46,cross: migration predecessor -> SS,2.92,GA
+EPIC-P2-MIGSVC#B,G_FEATURE_COMPLETE,FS,0.00,epic build and assurance complete -> gate,2.92,PMB;GA
+EPIC-P2-ORCH#A,EPIC-P2-ORCH#R,FF,0.00,intra A->R finish,2.44,GA
+EPIC-P2-ORCH#A,EPIC-P2-SUBS#A,FF,0.00,cross: assurance finish,2.44,PMB;GA
+EPIC-P2-ORCH#A,G_FEATURE_COMPLETE,FS,0.00,epic build and assurance complete -> gate,2.44,PMB;GA
+EPIC-P2-ORCH#B,EPIC-P2-ORCH#A,FF,1.00,intra B->A finish,3.39,PMB;GA
+EPIC-P2-ORCH#B,EPIC-P2-ORCH#A,SS,1.36,intra B->A,3.39,PMB;GA
+EPIC-P2-ORCH#B,EPIC-P2-ORCH#R,SS,2.38,intra B->R,3.39,GA
+EPIC-P2-ORCH#B,EPIC-P2-SUBS#B,SS,1.70,cross: feature predecessor -> SS,3.39,PMB;GA
+EPIC-P2-ORCH#B,G_FEATURE_COMPLETE,FS,0.00,epic build and assurance complete -> gate,3.39,PMB;GA
+EPIC-P2-PORTAL#A,EPIC-P2-MIGSVC#A,FF,0.00,cross: assurance finish,2.78,PMB;GA
+EPIC-P2-PORTAL#A,EPIC-P2-PORTAL#R,FF,0.00,intra A->R finish,2.78,GA
+EPIC-P2-PORTAL#A,EPIC-P2-PORTALS#A,FF,0.00,cross: assurance finish,2.78,PMB;GA
+EPIC-P2-PORTAL#A,G_FEATURE_COMPLETE,FS,0.00,epic build and assurance complete -> gate,2.78,PMB;GA
+EPIC-P2-PORTAL#B,EPIC-P2-MIGSVC#B,SS,1.93,cross: feature predecessor -> SS,3.86,PMB;GA
+EPIC-P2-PORTAL#B,EPIC-P2-PORTAL#A,FF,1.00,intra B->A finish,3.86,PMB;GA
+EPIC-P2-PORTAL#B,EPIC-P2-PORTAL#A,SS,1.54,intra B->A,3.86,PMB;GA
+EPIC-P2-PORTAL#B,EPIC-P2-PORTAL#R,SS,2.70,intra B->R,3.86,GA
+EPIC-P2-PORTAL#B,EPIC-P2-PORTALS#B,SS,1.93,cross: feature predecessor -> SS,3.86,PMB;GA
+EPIC-P2-PORTAL#B,G_FEATURE_COMPLETE,FS,0.00,epic build and assurance complete -> gate,3.86,PMB;GA
+EPIC-P2-PORTALS#A,EPIC-P2-PORTALS#R,FF,0.00,intra A->R finish,1.85,GA
+EPIC-P2-PORTALS#A,G_FEATURE_COMPLETE,FS,0.00,epic build and assurance complete -> gate,1.85,PMB;GA
+EPIC-P2-PORTALS#B,EPIC-P2-PORTALS#A,FF,1.00,intra B->A finish,2.57,PMB;GA
+EPIC-P2-PORTALS#B,EPIC-P2-PORTALS#A,SS,1.03,intra B->A,2.57,PMB;GA
+EPIC-P2-PORTALS#B,EPIC-P2-PORTALS#R,SS,1.80,intra B->R,2.57,GA
+EPIC-P2-PORTALS#B,G_FEATURE_COMPLETE,FS,0.00,epic build and assurance complete -> gate,2.57,PMB;GA
+EPIC-P2-RECON#A,EPIC-P2-RECON#R,FF,0.00,intra A->R finish,1.32,PMB;GA
+EPIC-P2-RECON#A,G_FEATURE_COMPLETE,FS,0.00,epic build and assurance complete -> gate,1.32,PMB;GA
+EPIC-P2-RECON#A,L_RECON_TESTNET,FS,0.00,epic complete -> gate or work,1.32,PMB;GA
+EPIC-P2-RECON#B,EPIC-P2-RECON#A,FF,1.00,intra B->A finish,1.84,PMB;GA
+EPIC-P2-RECON#B,EPIC-P2-RECON#A,SS,0.73,intra B->A,1.84,PMB;GA
+EPIC-P2-RECON#B,EPIC-P2-RECON#R,SS,1.28,intra B->R,1.84,PMB;GA
+EPIC-P2-RECON#B,EPIC-P3-RECONPROD#B,FS,0.00,override EPIC-P2-RECON->EPIC-P3-RECONPROD,1.84,GA
+EPIC-P2-RECON#B,G_FEATURE_COMPLETE,FS,0.00,epic build and assurance complete -> gate,1.84,PMB;GA
+EPIC-P2-RECON#B,L_RECON_TESTNET,FS,0.00,epic complete -> gate or work,1.84,PMB;GA
+EPIC-P2-RECON#R,L_RECON_TESTNET,FS,0.00,epic complete -> gate or work,0.77,PMB;GA
+EPIC-P2-REFUNDS#A,EPIC-P2-REFUNDS#R,FF,0.00,intra A->R finish,1.03,PMB;GA
+EPIC-P2-REFUNDS#A,G_FEATURE_COMPLETE,FS,0.00,epic build and assurance complete -> gate,1.03,PMB;GA
+EPIC-P2-REFUNDS#A,L_RECON_TESTNET,FS,0.00,epic complete -> gate or work,1.03,PMB;GA
+EPIC-P2-REFUNDS#B,EPIC-P2-REFUNDS#A,FF,1.00,intra B->A finish,1.43,PMB;GA
+EPIC-P2-REFUNDS#B,EPIC-P2-REFUNDS#A,SS,0.57,intra B->A,1.43,PMB;GA
+EPIC-P2-REFUNDS#B,EPIC-P2-REFUNDS#R,SS,1.00,intra B->R,1.43,PMB;GA
+EPIC-P2-REFUNDS#B,G_FEATURE_COMPLETE,FS,0.00,epic build and assurance complete -> gate,1.43,PMB;GA
+EPIC-P2-REFUNDS#B,L_RECON_TESTNET,FS,0.00,epic complete -> gate or work,1.43,PMB;GA
+EPIC-P2-REFUNDS#R,L_RECON_TESTNET,FS,0.00,epic complete -> gate or work,0.40,PMB;GA
+EPIC-P2-RISKCON#A,EPIC-P2-RISKCON#R,FF,0.00,intra A->R finish,2.16,GA
+EPIC-P2-RISKCON#A,EPIC-P3-LIMITS#A,FF,0.00,cross: assurance finish,2.16,PMB;GA
+EPIC-P2-RISKCON#A,G_FEATURE_COMPLETE,FS,0.00,epic build and assurance complete -> gate,2.16,PMB;GA
+EPIC-P2-RISKCON#B,EPIC-P2-RISKCON#A,FF,1.00,intra B->A finish,3.00,PMB;GA
+EPIC-P2-RISKCON#B,EPIC-P2-RISKCON#A,SS,1.20,intra B->A,3.00,PMB;GA
+EPIC-P2-RISKCON#B,EPIC-P2-RISKCON#R,SS,2.10,intra B->R,3.00,GA
+EPIC-P2-RISKCON#B,EPIC-P3-LIMITS#B,SS,1.50,cross: feature predecessor -> SS,3.00,PMB;GA
+EPIC-P2-RISKCON#B,G_FEATURE_COMPLETE,FS,0.00,epic build and assurance complete -> gate,3.00,PMB;GA
+EPIC-P2-RUNBOOKS#A,EPIC-P2-RUNBOOKS#R,FF,0.00,intra A->R finish,0.96,PMB;GA
+EPIC-P2-RUNBOOKS#A,EPIC-P2-SUPPORTPREP#A,FF,0.00,cross: assurance finish,0.96,PMB;GA
+EPIC-P2-RUNBOOKS#A,G_FEATURE_COMPLETE,FS,0.00,epic build and assurance complete -> gate,0.96,PMB;GA
+EPIC-P2-RUNBOOKS#A,G_RG009,FS,0.00,epic complete -> gate or work,0.96,PMB;GA
+EPIC-P2-RUNBOOKS#B,EPIC-P2-RUNBOOKS#A,FF,1.00,intra B->A finish,1.34,PMB;GA
+EPIC-P2-RUNBOOKS#B,EPIC-P2-RUNBOOKS#A,SS,0.53,intra B->A,1.34,PMB;GA
+EPIC-P2-RUNBOOKS#B,EPIC-P2-RUNBOOKS#R,SS,0.94,intra B->R,1.34,PMB;GA
+EPIC-P2-RUNBOOKS#B,EPIC-P2-SUPPORTPREP#B,SS,0.67,cross: infrastructure predecessor -> SS,1.34,PMB;GA
+EPIC-P2-RUNBOOKS#B,G_FEATURE_COMPLETE,FS,0.00,epic build and assurance complete -> gate,1.34,PMB;GA
+EPIC-P2-RUNBOOKS#B,G_RG009,FS,0.00,epic complete -> gate or work,1.34,PMB;GA
+EPIC-P2-RUNBOOKS#R,G_RG009,FS,0.00,epic complete -> gate or work,0.56,PMB;GA
+EPIC-P2-SANDBOX#A,EPIC-P2-SANDBOX#R,FF,0.00,intra A->R finish,4.46,GA
+EPIC-P2-SANDBOX#A,G_FEATURE_COMPLETE,FS,0.00,epic build and assurance complete -> gate,4.46,PMB;GA
+EPIC-P2-SANDBOX#B,EPIC-P2-SANDBOX#A,FF,1.00,intra B->A finish,6.19,PMB;GA
+EPIC-P2-SANDBOX#B,EPIC-P2-SANDBOX#A,SS,2.48,intra B->A,6.19,PMB;GA
+EPIC-P2-SANDBOX#B,EPIC-P2-SANDBOX#R,SS,4.33,intra B->R,6.19,GA
+EPIC-P2-SANDBOX#B,G_FEATURE_COMPLETE,FS,0.00,epic build and assurance complete -> gate,6.19,PMB;GA
+EPIC-P2-SUBS#A,EPIC-P2-SUBS#R,FF,0.00,intra A->R finish,2.83,PMB;GA
+EPIC-P2-SUBS#A,EPIC-P3-T1START#A,FF,0.00,cross: assurance finish,2.83,GA
+EPIC-P2-SUBS#A,G_FEATURE_COMPLETE,FS,0.00,epic build and assurance complete -> gate,2.83,PMB;GA
+EPIC-P2-SUBS#A,L_RECON_TESTNET,FS,0.00,epic complete -> gate or work,2.83,PMB;GA
+EPIC-P2-SUBS#B,EPIC-P2-LOAD#B,SS,2.36,override EPIC-P2-SUBS->EPIC-P2-LOAD,3.93,PMB;GA
+EPIC-P2-SUBS#B,EPIC-P2-SUBS#A,FF,1.00,intra B->A finish,3.93,PMB;GA
+EPIC-P2-SUBS#B,EPIC-P2-SUBS#A,SS,1.57,intra B->A,3.93,PMB;GA
+EPIC-P2-SUBS#B,EPIC-P2-SUBS#R,SS,2.75,intra B->R,3.93,PMB;GA
+EPIC-P2-SUBS#B,EPIC-P3-T1START#B,SS,1.96,cross: feature predecessor -> SS,3.93,GA
+EPIC-P2-SUBS#B,G_FEATURE_COMPLETE,FS,0.00,epic build and assurance complete -> gate,3.93,PMB;GA
+EPIC-P2-SUBS#B,L_RECON_TESTNET,FS,0.00,epic complete -> gate or work,3.93,PMB;GA
+EPIC-P2-SUBS#R,L_RECON_TESTNET,FS,0.00,epic complete -> gate or work,1.10,PMB;GA
+EPIC-P2-SUPPORTPREP#A,EPIC-P2-SUPPORTPREP#R,FF,0.00,intra A->R finish,2.57,PMB;GA
+EPIC-P2-SUPPORTPREP#A,EPIC-P3-SUPPORT#A,FF,0.00,cross: assurance finish,2.57,GA
+EPIC-P2-SUPPORTPREP#A,G_FEATURE_COMPLETE,FS,0.00,epic build and assurance complete -> gate,2.57,PMB;GA
+EPIC-P2-SUPPORTPREP#A,G_RG009,FS,0.00,epic complete -> gate or work,2.57,PMB;GA
+EPIC-P2-SUPPORTPREP#B,EPIC-P2-SUPPORTPREP#A,FF,1.00,intra B->A finish,3.57,PMB;GA
+EPIC-P2-SUPPORTPREP#B,EPIC-P2-SUPPORTPREP#A,SS,1.43,intra B->A,3.57,PMB;GA
+EPIC-P2-SUPPORTPREP#B,EPIC-P2-SUPPORTPREP#R,SS,2.50,intra B->R,3.57,PMB;GA
+EPIC-P2-SUPPORTPREP#B,EPIC-P3-SUPPORT#B,SS,1.79,cross: feature predecessor -> SS,3.57,GA
+EPIC-P2-SUPPORTPREP#B,G_FEATURE_COMPLETE,FS,0.00,epic build and assurance complete -> gate,3.57,PMB;GA
+EPIC-P2-SUPPORTPREP#B,G_RG009,FS,0.00,epic complete -> gate or work,3.57,PMB;GA
+EPIC-P2-SUPPORTPREP#R,G_RG009,FS,0.00,epic complete -> gate or work,1.00,PMB;GA
+EPIC-P2-TESTNET#A,EPIC-P2-TESTNET#R,FF,0.00,intra A->R finish,4.81,PMB;GA
+EPIC-P2-TESTNET#A,L_RECON_TESTNET,FS,0.00,epic complete -> gate or work,4.81,PMB;GA
+EPIC-P2-TESTNET#B,EPIC-P2-TESTNET#A,FF,1.00,intra B->A finish,6.68,PMB;GA
+EPIC-P2-TESTNET#B,EPIC-P2-TESTNET#A,SS,2.67,intra B->A,6.68,PMB;GA
+EPIC-P2-TESTNET#B,EPIC-P2-TESTNET#R,SS,4.67,intra B->R,6.68,PMB;GA
+EPIC-P2-TESTNET#B,L_RECON_TESTNET,FS,0.00,epic complete -> gate or work,6.68,PMB;GA
+EPIC-P2-TESTNET#R,L_RECON_TESTNET,FS,0.00,epic complete -> gate or work,2.80,PMB;GA
+EPIC-P3-BOUNTY#A,EPIC-P3-BOUNTY#R,FF,0.00,intra A->R finish,1.25,PMB;GA
+EPIC-P3-BOUNTY#A,EPIC-P4-BOUNTYPUB#A,FF,0.00,cross: assurance finish,1.25,GA
+EPIC-P3-BOUNTY#A,G_BETA,FS,0.00,epic complete -> gate or work,1.25,PMB;GA
+EPIC-P3-BOUNTY#A,L_BOUNTYPUB,FS,0.00,epic complete -> gate or work,1.25,GA
+EPIC-P3-BOUNTY#B,EPIC-P3-BOUNTY#A,FF,1.00,intra B->A finish,1.74,PMB;GA
+EPIC-P3-BOUNTY#B,EPIC-P3-BOUNTY#A,SS,0.69,intra B->A,1.74,PMB;GA
+EPIC-P3-BOUNTY#B,EPIC-P3-BOUNTY#R,SS,1.22,intra B->R,1.74,PMB;GA
+EPIC-P3-BOUNTY#B,EPIC-P4-BOUNTYPUB#B,SS,0.87,cross: security predecessor -> SS,1.74,GA
+EPIC-P3-BOUNTY#B,G_BETA,FS,0.00,epic complete -> gate or work,1.74,PMB;GA
+EPIC-P3-BOUNTY#B,L_BOUNTYPUB,FS,0.00,epic complete -> gate or work,1.74,GA
+EPIC-P3-BOUNTY#R,G_BETA,FS,0.00,epic complete -> gate or work,0.73,PMB;GA
+EPIC-P3-BOUNTY#R,L_BOUNTYPUB,FS,0.00,epic complete -> gate or work,0.73,GA
+EPIC-P3-CANARY#A,EPIC-P3-CANARY#R,FF,0.00,intra A->R finish,1.79,GA
+EPIC-P3-CANARY#A,G_PUBBETA,FS,0.00,epic complete -> gate or work,1.79,GA
+EPIC-P3-CANARY#B,EPIC-P3-CANARY#A,FF,1.00,intra B->A finish,2.48,GA
+EPIC-P3-CANARY#B,EPIC-P3-CANARY#A,SS,0.99,intra B->A,2.48,GA
+EPIC-P3-CANARY#B,EPIC-P3-CANARY#R,SS,1.74,intra B->R,2.48,GA
+EPIC-P3-CANARY#B,EPIC-P3-TUNE#B,SS,0.99,override EPIC-P3-CANARY->EPIC-P3-TUNE,2.48,GA
+EPIC-P3-CANARY#B,G_PUBBETA,FS,0.00,epic complete -> gate or work,2.48,GA
+EPIC-P3-CANARY#R,G_PUBBETA,FS,0.00,epic complete -> gate or work,1.04,GA
+EPIC-P3-DEPLOY#A,EPIC-P3-CANARY#A,FF,0.00,cross: assurance finish,1.79,GA
+EPIC-P3-DEPLOY#A,EPIC-P3-DEPLOY#R,FF,0.00,intra A->R finish,1.79,PMB;GA
+EPIC-P3-DEPLOY#A,G_BETA,FS,0.00,epic complete -> gate or work,1.79,PMB;GA
+EPIC-P3-DEPLOY#B,EPIC-P3-CANARY#B,SS,1.24,cross: protocol predecessor -> SS,2.48,GA
+EPIC-P3-DEPLOY#B,EPIC-P3-DEPLOY#A,FF,1.00,intra B->A finish,2.48,PMB;GA
+EPIC-P3-DEPLOY#B,EPIC-P3-DEPLOY#A,SS,0.99,intra B->A,2.48,PMB;GA
+EPIC-P3-DEPLOY#B,EPIC-P3-DEPLOY#R,SS,1.74,intra B->R,2.48,PMB;GA
+EPIC-P3-DEPLOY#B,G_BETA,FS,0.00,epic complete -> gate or work,2.48,PMB;GA
+EPIC-P3-DEPLOY#R,G_BETA,FS,0.00,epic complete -> gate or work,1.04,PMB;GA
+EPIC-P3-IRDR#A,EPIC-P3-IRDR#R,FF,0.00,intra A->R finish,2.31,PMB;GA
+EPIC-P3-IRDR#A,EPIC-P4-DRDRILLS#A,FF,0.00,cross: assurance finish,2.31,GA
+EPIC-P3-IRDR#A,G_RG009,FS,0.00,epic complete -> gate or work,2.31,PMB;GA
+EPIC-P3-IRDR#B,EPIC-P3-IRDR#A,FF,1.00,intra B->A finish,3.20,PMB;GA
+EPIC-P3-IRDR#B,EPIC-P3-IRDR#A,SS,1.28,intra B->A,3.20,PMB;GA
+EPIC-P3-IRDR#B,EPIC-P3-IRDR#R,SS,2.24,intra B->R,3.20,PMB;GA
+EPIC-P3-IRDR#B,EPIC-P4-DRDRILLS#B,SS,1.60,cross: infrastructure predecessor -> SS,3.20,GA
+EPIC-P3-IRDR#B,G_RG009,FS,0.00,epic complete -> gate or work,3.20,PMB;GA
+EPIC-P3-IRDR#R,G_RG009,FS,0.00,epic complete -> gate or work,1.35,PMB;GA
+EPIC-P3-LEGALGO#A,EPIC-P3-LEGALGO#R,FF,0.00,intra A->R finish,2.52,PMB;GA
+EPIC-P3-LEGALGO#A,G_RG008,FS,0.00,epic complete -> gate or work,2.52,PMB;GA
+EPIC-P3-LEGALGO#B,EPIC-P3-LEGALGO#A,FF,1.00,intra B->A finish,3.50,PMB;GA
+EPIC-P3-LEGALGO#B,EPIC-P3-LEGALGO#A,SS,1.40,intra B->A,3.50,PMB;GA
+EPIC-P3-LEGALGO#B,EPIC-P3-LEGALGO#R,SS,2.45,intra B->R,3.50,PMB;GA
+EPIC-P3-LEGALGO#B,G_RG008,FS,0.00,epic complete -> gate or work,3.50,PMB;GA
+EPIC-P3-LEGALGO#R,G_RG008,FS,0.00,epic complete -> gate or work,1.47,PMB;GA
+EPIC-P3-LIMITS#A,EPIC-P3-LIMITS#R,FF,0.00,intra A->R finish,1.30,PMB;GA
+EPIC-P3-LIMITS#A,G_BETA,FS,0.00,epic complete -> gate or work,1.30,PMB;GA
+EPIC-P3-LIMITS#B,EPIC-P3-LIMITS#A,FF,1.00,intra B->A finish,1.80,PMB;GA
+EPIC-P3-LIMITS#B,EPIC-P3-LIMITS#A,SS,0.72,intra B->A,1.80,PMB;GA
+EPIC-P3-LIMITS#B,EPIC-P3-LIMITS#R,SS,1.26,intra B->R,1.80,PMB;GA
+EPIC-P3-LIMITS#B,EPIC-P4-MERCHANTOPS#B,FS,0.00,cross: compliance predecessor -> FS,1.80,GA
+EPIC-P3-LIMITS#B,G_BETA,FS,0.00,epic complete -> gate or work,1.80,PMB;GA
+EPIC-P3-LIMITS#R,G_BETA,FS,0.00,epic complete -> gate or work,0.76,PMB;GA
+EPIC-P3-MIGDRILL#A,EPIC-P3-MIGDRILL#R,FF,0.00,intra A->R finish,1.17,GA
+EPIC-P3-MIGDRILL#A,EPIC-P4-MIGGAME#A,FF,0.00,cross: assurance finish,1.17,GA
+EPIC-P3-MIGDRILL#A,G_PUBBETA,FS,0.00,epic complete -> gate or work,1.17,GA
+EPIC-P3-MIGDRILL#B,EPIC-P3-MIGDRILL#A,FF,1.00,intra B->A finish,1.62,GA
+EPIC-P3-MIGDRILL#B,EPIC-P3-MIGDRILL#A,SS,0.65,intra B->A,1.62,GA
+EPIC-P3-MIGDRILL#B,EPIC-P3-MIGDRILL#R,SS,1.14,intra B->R,1.62,GA
+EPIC-P3-MIGDRILL#B,EPIC-P4-MIGGAME#B,SS,0.81,cross: migration predecessor -> SS,1.62,GA
+EPIC-P3-MIGDRILL#B,G_PUBBETA,FS,0.00,epic complete -> gate or work,1.62,GA
+EPIC-P3-MIGDRILL#R,G_PUBBETA,FS,0.00,epic complete -> gate or work,0.68,GA
+EPIC-P3-RECONPROD#A,EPIC-P3-RECONPROD#R,FF,0.00,intra A->R finish,1.08,GA
+EPIC-P3-RECONPROD#A,G_PUBBETA,FS,0.00,epic complete -> gate or work,1.08,GA
+EPIC-P3-RECONPROD#B,EPIC-P3-RECONPROD#A,FF,1.00,intra B->A finish,1.50,GA
+EPIC-P3-RECONPROD#B,EPIC-P3-RECONPROD#A,SS,0.60,intra B->A,1.50,GA
+EPIC-P3-RECONPROD#B,EPIC-P3-RECONPROD#R,SS,1.05,intra B->R,1.50,GA
+EPIC-P3-RECONPROD#B,G_PUBBETA,FS,0.00,epic complete -> gate or work,1.50,GA
+EPIC-P3-RECONPROD#R,G_PUBBETA,FS,0.00,epic complete -> gate or work,0.63,GA
+EPIC-P3-SUPPORT#A,EPIC-P3-SUPPORT#R,FF,0.00,intra A->R finish,3.85,GA
+EPIC-P3-SUPPORT#A,EPIC-P5-SUPPORT247#A,FF,0.00,cross: assurance finish,3.85,GA
+EPIC-P3-SUPPORT#A,G_PUBBETA,FS,0.00,epic complete -> gate or work,3.85,GA
+EPIC-P3-SUPPORT#B,EPIC-P3-SUPPORT#A,FF,1.00,intra B->A finish,5.34,GA
+EPIC-P3-SUPPORT#B,EPIC-P3-SUPPORT#A,SS,2.14,intra B->A,5.34,GA
+EPIC-P3-SUPPORT#B,EPIC-P3-SUPPORT#R,SS,3.74,intra B->R,5.34,GA
+EPIC-P3-SUPPORT#B,EPIC-P5-SUPPORT247#B,SS,2.67,cross: infrastructure predecessor -> SS,5.34,GA
+EPIC-P3-SUPPORT#B,G_PUBBETA,FS,0.00,epic complete -> gate or work,5.34,GA
+EPIC-P3-SUPPORT#R,G_PUBBETA,FS,0.00,epic complete -> gate or work,2.24,GA
+EPIC-P3-T1START#A,EPIC-P3-T1START#R,FF,0.00,intra A->R finish,6.38,GA
+EPIC-P3-T1START#A,EPIC-P4-T1#A,FF,0.00,cross: assurance finish,6.38,GA
+EPIC-P3-T1START#B,EPIC-P3-T1START#A,FF,1.00,intra B->A finish,8.86,GA
+EPIC-P3-T1START#B,EPIC-P3-T1START#A,SS,3.54,intra B->A,8.86,GA
+EPIC-P3-T1START#B,EPIC-P3-T1START#R,SS,6.20,intra B->R,8.86,GA
+EPIC-P3-T1START#B,EPIC-P4-T1#B,SS,4.43,cross: feature predecessor -> SS,8.86,GA
+EPIC-P3-TOKENOPS#A,EPIC-P3-TOKENOPS#R,FF,0.00,intra A->R finish,1.03,GA
+EPIC-P3-TOKENOPS#A,G_PUBBETA,FS,0.00,epic complete -> gate or work,1.03,GA
+EPIC-P3-TOKENOPS#B,EPIC-P3-TOKENOPS#A,FF,1.00,intra B->A finish,1.43,GA
+EPIC-P3-TOKENOPS#B,EPIC-P3-TOKENOPS#A,SS,0.57,intra B->A,1.43,GA
+EPIC-P3-TOKENOPS#B,EPIC-P3-TOKENOPS#R,SS,1.00,intra B->R,1.43,GA
+EPIC-P3-TOKENOPS#B,G_PUBBETA,FS,0.00,epic complete -> gate or work,1.43,GA
+EPIC-P3-TOKENOPS#R,G_PUBBETA,FS,0.00,epic complete -> gate or work,0.60,GA
+EPIC-P3-TUNE#A,EPIC-P3-TUNE#R,FF,0.00,intra A->R finish,2.50,GA
+EPIC-P3-TUNE#A,EPIC-P4-SCALE#A,FF,0.00,cross: assurance finish,2.50,GA
+EPIC-P3-TUNE#A,G_PUBBETA,FS,0.00,epic complete -> gate or work,2.50,GA
+EPIC-P3-TUNE#B,EPIC-P3-TUNE#A,FF,1.00,intra B->A finish,3.47,GA
+EPIC-P3-TUNE#B,EPIC-P3-TUNE#A,SS,1.39,intra B->A,3.47,GA
+EPIC-P3-TUNE#B,EPIC-P3-TUNE#R,SS,2.43,intra B->R,3.47,GA
+EPIC-P3-TUNE#B,EPIC-P4-SCALE#B,SS,1.74,cross: infrastructure predecessor -> SS,3.47,GA
+EPIC-P3-TUNE#B,G_PUBBETA,FS,0.00,epic complete -> gate or work,3.47,GA
+EPIC-P3-TUNE#R,G_PUBBETA,FS,0.00,epic complete -> gate or work,1.46,GA
+EPIC-P4-BOUNTYPUB#A,EPIC-P4-BOUNTYPUB#R,FF,0.00,intra A->R finish,2.11,GA
+EPIC-P4-BOUNTYPUB#A,G_PUBBETA,FS,0.00,epic complete -> gate or work,2.11,GA
+EPIC-P4-BOUNTYPUB#B,EPIC-P4-BOUNTYPUB#A,FF,1.00,intra B->A finish,2.94,GA
+EPIC-P4-BOUNTYPUB#B,EPIC-P4-BOUNTYPUB#A,SS,1.18,intra B->A,2.94,GA
+EPIC-P4-BOUNTYPUB#B,EPIC-P4-BOUNTYPUB#R,SS,2.06,intra B->R,2.94,GA
+EPIC-P4-BOUNTYPUB#B,G_PUBBETA,FS,0.00,epic complete -> gate or work,2.94,GA
+EPIC-P4-BOUNTYPUB#R,G_PUBBETA,FS,0.00,epic complete -> gate or work,1.23,GA
+EPIC-P4-CHAINS#A,EPIC-P4-CHAINS#R,FF,0.00,intra A->R finish,3.85,GA
+EPIC-P4-CHAINS#A,G_PUBBETA,FS,0.00,epic complete -> gate or work,3.85,GA
+EPIC-P4-CHAINS#B,EPIC-P4-CHAINS#A,FF,1.00,intra B->A finish,5.34,GA
+EPIC-P4-CHAINS#B,EPIC-P4-CHAINS#A,SS,2.14,intra B->A,5.34,GA
+EPIC-P4-CHAINS#B,EPIC-P4-CHAINS#R,SS,3.74,intra B->R,5.34,GA
+EPIC-P4-CHAINS#B,G_PUBBETA,FS,0.00,epic complete -> gate or work,5.34,GA
+EPIC-P4-CHAINS#R,G_PUBBETA,FS,0.00,epic complete -> gate or work,2.24,GA
+EPIC-P4-COMPEXP#A,EPIC-P4-COMPEXP#R,FF,0.00,intra A->R finish,5.05,GA
+EPIC-P4-COMPEXP#A,G_GA,FS,0.00,epic complete -> gate or work,5.05,GA
+EPIC-P4-COMPEXP#B,EPIC-P4-COMPEXP#A,FF,1.00,intra B->A finish,7.01,GA
+EPIC-P4-COMPEXP#B,EPIC-P4-COMPEXP#A,SS,2.80,intra B->A,7.01,GA
+EPIC-P4-COMPEXP#B,EPIC-P4-COMPEXP#R,SS,4.91,intra B->R,7.01,GA
+EPIC-P4-COMPEXP#B,EPIC-P5-SLALEGAL#B,FS,0.00,cross: compliance predecessor -> FS,7.01,GA
+EPIC-P4-COMPEXP#B,G_GA,FS,0.00,epic complete -> gate or work,7.01,GA
+EPIC-P4-COMPEXP#R,G_GA,FS,0.00,epic complete -> gate or work,2.94,GA
+EPIC-P4-DRDRILLS#A,EPIC-P4-DRDRILLS#R,FF,0.00,intra A->R finish,2.31,GA
+EPIC-P4-DRDRILLS#A,EPIC-P5-DRILLS#A,FF,0.00,cross: assurance finish,2.31,GA
+EPIC-P4-DRDRILLS#A,G_GA,FS,0.00,epic complete -> gate or work,2.31,GA
+EPIC-P4-DRDRILLS#B,EPIC-P4-DRDRILLS#A,FF,1.00,intra B->A finish,3.20,GA
+EPIC-P4-DRDRILLS#B,EPIC-P4-DRDRILLS#A,SS,1.28,intra B->A,3.20,GA
+EPIC-P4-DRDRILLS#B,EPIC-P4-DRDRILLS#R,SS,2.24,intra B->R,3.20,GA
+EPIC-P4-DRDRILLS#B,EPIC-P5-DRILLS#B,SS,1.60,cross: infrastructure predecessor -> SS,3.20,GA
+EPIC-P4-DRDRILLS#B,G_GA,FS,0.00,epic complete -> gate or work,3.20,GA
+EPIC-P4-DRDRILLS#R,G_GA,FS,0.00,epic complete -> gate or work,1.35,GA
+EPIC-P4-FRAUD#A,EPIC-P4-FRAUD#R,FF,0.00,intra A->R finish,3.56,GA
+EPIC-P4-FRAUD#A,G_PUBBETA,FS,0.00,epic complete -> gate or work,3.56,GA
+EPIC-P4-FRAUD#B,EPIC-P4-FRAUD#A,FF,1.00,intra B->A finish,4.94,GA
+EPIC-P4-FRAUD#B,EPIC-P4-FRAUD#A,SS,1.98,intra B->A,4.94,GA
+EPIC-P4-FRAUD#B,EPIC-P4-FRAUD#R,SS,3.46,intra B->R,4.94,GA
+EPIC-P4-FRAUD#B,G_PUBBETA,FS,0.00,epic complete -> gate or work,4.94,GA
+EPIC-P4-FRAUD#R,G_PUBBETA,FS,0.00,epic complete -> gate or work,2.07,GA
+EPIC-P4-MERCHANTOPS#A,EPIC-P4-MERCHANTOPS#R,FF,0.00,intra A->R finish,3.03,GA
+EPIC-P4-MERCHANTOPS#A,G_PUBBETA,FS,0.00,epic complete -> gate or work,3.03,GA
+EPIC-P4-MERCHANTOPS#B,EPIC-P4-MERCHANTOPS#A,FF,1.00,intra B->A finish,4.21,GA
+EPIC-P4-MERCHANTOPS#B,EPIC-P4-MERCHANTOPS#A,SS,1.68,intra B->A,4.21,GA
+EPIC-P4-MERCHANTOPS#B,EPIC-P4-MERCHANTOPS#R,SS,2.94,intra B->R,4.21,GA
+EPIC-P4-MERCHANTOPS#B,G_PUBBETA,FS,0.00,epic complete -> gate or work,4.21,GA
+EPIC-P4-MERCHANTOPS#R,G_PUBBETA,FS,0.00,epic complete -> gate or work,1.77,GA
+EPIC-P4-MIGGAME#A,EPIC-P4-MIGGAME#R,FF,0.00,intra A->R finish,2.24,GA
+EPIC-P4-MIGGAME#A,G_GA,FS,0.00,epic complete -> gate or work,2.24,GA
+EPIC-P4-MIGGAME#B,EPIC-P4-MIGGAME#A,FF,1.00,intra B->A finish,3.12,GA
+EPIC-P4-MIGGAME#B,EPIC-P4-MIGGAME#A,SS,1.25,intra B->A,3.12,GA
+EPIC-P4-MIGGAME#B,EPIC-P4-MIGGAME#R,SS,2.18,intra B->R,3.12,GA
+EPIC-P4-MIGGAME#B,G_GA,FS,0.00,epic complete -> gate or work,3.12,GA
+EPIC-P4-MIGGAME#R,G_GA,FS,0.00,epic complete -> gate or work,1.31,GA
+EPIC-P4-SCALE#A,EPIC-P4-SCALE#R,FF,0.00,intra A->R finish,6.58,GA
+EPIC-P4-SCALE#A,EPIC-P5-OPSMAT#A,FF,0.00,cross: assurance finish,6.58,GA
+EPIC-P4-SCALE#A,G_GA,FS,0.00,epic complete -> gate or work,6.58,GA
+EPIC-P4-SCALE#B,EPIC-P4-SCALE#A,FF,1.00,intra B->A finish,9.14,GA
+EPIC-P4-SCALE#B,EPIC-P4-SCALE#A,SS,3.66,intra B->A,9.14,GA
+EPIC-P4-SCALE#B,EPIC-P4-SCALE#R,SS,6.40,intra B->R,9.14,GA
+EPIC-P4-SCALE#B,EPIC-P5-OPSMAT#B,SS,4.57,cross: infrastructure predecessor -> SS,9.14,GA
+EPIC-P4-SCALE#B,G_GA,FS,0.00,epic complete -> gate or work,9.14,GA
+EPIC-P4-SCALE#R,G_GA,FS,0.00,epic complete -> gate or work,2.56,GA
+EPIC-P4-T1#A,EPIC-P4-T1#R,FF,0.00,intra A->R finish,4.94,GA
+EPIC-P4-T1#A,G_PUBBETA,FS,0.00,epic complete -> gate or work,4.94,GA
+EPIC-P4-T1#B,EPIC-P4-T1#A,FF,1.00,intra B->A finish,6.86,GA
+EPIC-P4-T1#B,EPIC-P4-T1#A,SS,2.74,intra B->A,6.86,GA
+EPIC-P4-T1#B,EPIC-P4-T1#R,SS,4.80,intra B->R,6.86,GA
+EPIC-P4-T1#B,G_PUBBETA,FS,0.00,epic complete -> gate or work,6.86,GA
+EPIC-P4-T1#R,G_PUBBETA,FS,0.00,epic complete -> gate or work,1.92,GA
+EPIC-P4-V11PREP#A,EPIC-P4-V11PREP#R,FF,0.00,intra A->R finish,1.72,GA
+EPIC-P4-V11PREP#B,EPIC-P4-V11PREP#A,FF,1.00,intra B->A finish,3.07,GA
+EPIC-P4-V11PREP#B,EPIC-P4-V11PREP#A,SS,1.23,intra B->A,3.07,GA
+EPIC-P4-V11PREP#B,EPIC-P4-V11PREP#R,SS,2.15,intra B->R,3.07,GA
+EPIC-P4-V11PREP#B,EPIC-P6-ADAPTER#B,FS,0.00,cross: research predecessor -> FS,3.07,GA
+EPIC-P4-V11PREP#B,EPIC-P6-COMPLV11#B,FS,0.00,cross: research predecessor -> FS,3.07,GA
+EPIC-P4-V11PREP#B,EPIC-P6-QUOTEPAIRS#B,FS,0.00,cross: research predecessor -> FS,3.07,GA
+EPIC-P4-V11PREP#B,EPIC-P6-ROUTERV11#B,FS,0.00,cross: research predecessor -> FS,3.07,GA
+EPIC-P4-V11PREP#B,EPIC-P6-TOKENLABSTABLE#B,FS,0.00,cross: research predecessor -> FS,3.07,GA
+EPIC-P5-DOCS#A,EPIC-P5-DOCS#R,FF,0.00,intra A->R finish,5.49,GA
+EPIC-P5-DOCS#A,G_GA,FS,0.00,epic complete -> gate or work,5.49,GA
+EPIC-P5-DOCS#B,EPIC-P5-DOCS#A,FF,1.00,intra B->A finish,7.62,GA
+EPIC-P5-DOCS#B,EPIC-P5-DOCS#A,SS,3.05,intra B->A,7.62,GA
+EPIC-P5-DOCS#B,EPIC-P5-DOCS#R,SS,5.33,intra B->R,7.62,GA
+EPIC-P5-DOCS#B,G_GA,FS,0.00,epic complete -> gate or work,7.62,GA
+EPIC-P5-DOCS#R,G_GA,FS,0.00,epic complete -> gate or work,2.13,GA
+EPIC-P5-DRILLS#A,EPIC-P5-DRILLS#R,FF,0.00,intra A->R finish,4.04,GA
+EPIC-P5-DRILLS#A,G_GA,FS,0.00,epic complete -> gate or work,4.04,GA
+EPIC-P5-DRILLS#B,EPIC-P5-DRILLS#A,FF,1.00,intra B->A finish,5.61,GA
+EPIC-P5-DRILLS#B,EPIC-P5-DRILLS#A,SS,2.24,intra B->A,5.61,GA
+EPIC-P5-DRILLS#B,EPIC-P5-DRILLS#R,SS,3.92,intra B->R,5.61,GA
+EPIC-P5-DRILLS#B,G_GA,FS,0.00,epic complete -> gate or work,5.61,GA
+EPIC-P5-DRILLS#R,G_GA,FS,0.00,epic complete -> gate or work,2.36,GA
+EPIC-P5-GA#A,EPIC-P5-GA#R,FF,0.00,intra A->R finish,2.75,GA
+EPIC-P5-GA#A,G_GA,FS,0.00,epic complete -> gate or work,2.75,GA
+EPIC-P5-GA#B,EPIC-P5-GA#A,FF,1.00,intra B->A finish,4.92,GA
+EPIC-P5-GA#B,EPIC-P5-GA#A,SS,1.97,intra B->A,4.92,GA
+EPIC-P5-GA#B,EPIC-P5-GA#R,SS,3.44,intra B->R,4.92,GA
+EPIC-P5-GA#B,G_GA,FS,0.00,epic complete -> gate or work,4.92,GA
+EPIC-P5-GA#R,G_GA,FS,0.00,epic complete -> gate or work,1.47,GA
+EPIC-P5-OPSMAT#A,EPIC-P5-OPSMAT#R,FF,0.00,intra A->R finish,5.19,GA
+EPIC-P5-OPSMAT#A,G_GA,FS,0.00,epic complete -> gate or work,5.19,GA
+EPIC-P5-OPSMAT#B,EPIC-P5-OPSMAT#A,FF,1.00,intra B->A finish,7.21,GA
+EPIC-P5-OPSMAT#B,EPIC-P5-OPSMAT#A,SS,2.88,intra B->A,7.21,GA
+EPIC-P5-OPSMAT#B,EPIC-P5-OPSMAT#R,SS,5.05,intra B->R,7.21,GA
+EPIC-P5-OPSMAT#B,G_GA,FS,0.00,epic complete -> gate or work,7.21,GA
+EPIC-P5-OPSMAT#R,G_GA,FS,0.00,epic complete -> gate or work,3.03,GA
+EPIC-P5-RELREADY#A,EPIC-P5-RELREADY#R,FF,0.00,intra A->R finish,0.86,GA
+EPIC-P5-RELREADY#A,G_GA,FS,0.00,epic complete -> gate or work,0.86,GA
+EPIC-P5-RELREADY#B,EPIC-P5-RELREADY#A,FF,1.00,intra B->A finish,1.54,GA
+EPIC-P5-RELREADY#B,EPIC-P5-RELREADY#A,SS,0.61,intra B->A,1.54,GA
+EPIC-P5-RELREADY#B,EPIC-P5-RELREADY#R,SS,1.07,intra B->R,1.54,GA
+EPIC-P5-RELREADY#B,G_GA,FS,0.00,epic complete -> gate or work,1.54,GA
+EPIC-P5-RELREADY#R,G_GA,FS,0.00,epic complete -> gate or work,0.46,GA
+EPIC-P5-SLALEGAL#A,EPIC-P5-SLALEGAL#R,FF,0.00,intra A->R finish,2.52,GA
+EPIC-P5-SLALEGAL#A,G_GA,FS,0.00,epic complete -> gate or work,2.52,GA
+EPIC-P5-SLALEGAL#B,EPIC-P5-SLALEGAL#A,FF,1.00,intra B->A finish,3.50,GA
+EPIC-P5-SLALEGAL#B,EPIC-P5-SLALEGAL#A,SS,1.40,intra B->A,3.50,GA
+EPIC-P5-SLALEGAL#B,EPIC-P5-SLALEGAL#R,SS,2.45,intra B->R,3.50,GA
+EPIC-P5-SLALEGAL#B,G_GA,FS,0.00,epic complete -> gate or work,3.50,GA
+EPIC-P5-SLALEGAL#R,G_GA,FS,0.00,epic complete -> gate or work,1.47,GA
+EPIC-P5-SUPPORT247#A,EPIC-P5-SUPPORT247#R,FF,0.00,intra A->R finish,6.73,GA
+EPIC-P5-SUPPORT247#A,G_GA,FS,0.00,epic complete -> gate or work,6.73,GA
+EPIC-P5-SUPPORT247#B,EPIC-P5-SUPPORT247#A,FF,1.00,intra B->A finish,9.35,GA
+EPIC-P5-SUPPORT247#B,EPIC-P5-SUPPORT247#A,SS,3.74,intra B->A,9.35,GA
+EPIC-P5-SUPPORT247#B,EPIC-P5-SUPPORT247#R,SS,6.54,intra B->R,9.35,GA
+EPIC-P5-SUPPORT247#B,G_GA,FS,0.00,epic complete -> gate or work,9.35,GA
+EPIC-P5-SUPPORT247#R,G_GA,FS,0.00,epic complete -> gate or work,3.93,GA
+EPIC-P6-ADAPTER#A,EPIC-P6-ADAPTER#R,FF,0.00,intra A->R finish,2.75,GA
+EPIC-P6-ADAPTER#A,EPIC-P6-CONVBACKEND#A,FF,0.00,cross: assurance finish,2.75,GA
+EPIC-P6-ADAPTER#A,L_ADAPTER_AUDIT,FS,0.00,epic complete -> gate or work,2.75,GA
+EPIC-P6-ADAPTER#A,W_ADAPTER_AUDIT,FS,0.00,epic complete -> gate or work,2.75,GA
+EPIC-P6-ADAPTER#B,EPIC-P6-ADAPTER#A,FF,1.00,intra B->A finish,3.81,GA
+EPIC-P6-ADAPTER#B,EPIC-P6-ADAPTER#A,SS,1.53,intra B->A,3.81,GA
+EPIC-P6-ADAPTER#B,EPIC-P6-ADAPTER#R,SS,2.67,intra B->R,3.81,GA
+EPIC-P6-ADAPTER#B,EPIC-P6-CONVBACKEND#B,SS,1.91,cross: protocol predecessor -> SS,3.81,GA
+EPIC-P6-ADAPTER#B,L_ADAPTER_AUDIT,FS,0.00,epic complete -> gate or work,3.81,GA
+EPIC-P6-ADAPTER#B,W_ADAPTER_AUDIT,FS,0.00,epic complete -> gate or work,3.81,GA
+EPIC-P6-ADAPTER#R,L_ADAPTER_AUDIT,FS,0.00,epic complete -> gate or work,1.60,GA
+EPIC-P6-ADAPTER#R,W_ADAPTER_AUDIT,FS,0.00,epic complete -> gate or work,1.60,GA
+EPIC-P6-COMPLV11#A,EPIC-P6-COMPLV11#R,FF,0.00,intra A->R finish,3.60,GA
+EPIC-P6-COMPLV11#A,G_RG013,FS,0.00,epic complete -> gate or work,3.60,GA
+EPIC-P6-COMPLV11#B,EPIC-P6-COMPLV11#A,FF,1.00,intra B->A finish,5.01,GA
+EPIC-P6-COMPLV11#B,EPIC-P6-COMPLV11#A,SS,2.00,intra B->A,5.01,GA
+EPIC-P6-COMPLV11#B,EPIC-P6-COMPLV11#R,SS,3.50,intra B->R,5.01,GA
+EPIC-P6-COMPLV11#B,G_RG013,FS,0.00,epic complete -> gate or work,5.01,GA
+EPIC-P6-COMPLV11#R,G_RG013,FS,0.00,epic complete -> gate or work,2.10,GA
+EPIC-P6-CONVBACKEND#A,EPIC-P6-CONVBACKEND#R,FF,0.00,intra A->R finish,4.50,GA
+EPIC-P6-CONVBACKEND#A,EPIC-P6-FLAGROLLOUT#A,FF,0.00,cross: assurance finish,4.50,GA
+EPIC-P6-CONVBACKEND#B,EPIC-P6-CONVBACKEND#A,FF,1.00,intra B->A finish,6.25,GA
+EPIC-P6-CONVBACKEND#B,EPIC-P6-CONVBACKEND#A,SS,2.50,intra B->A,6.25,GA
+EPIC-P6-CONVBACKEND#B,EPIC-P6-CONVBACKEND#R,SS,4.38,intra B->R,6.25,GA
+EPIC-P6-CONVBACKEND#B,EPIC-P6-FLAGROLLOUT#B,SS,3.12,cross: feature predecessor -> SS,6.25,GA
+EPIC-P6-FLAGROLLOUT#A,EPIC-P6-FLAGROLLOUT#R,FF,0.00,intra A->R finish,1.65,GA
+EPIC-P6-FLAGROLLOUT#A,EPIC-P6-OPSV11#A,FF,0.00,cross: assurance finish,1.65,GA
+EPIC-P6-FLAGROLLOUT#A,G_RG013,FS,0.00,epic complete -> gate or work,1.65,GA
+EPIC-P6-FLAGROLLOUT#B,EPIC-P6-FLAGROLLOUT#A,FF,1.00,intra B->A finish,2.29,GA
+EPIC-P6-FLAGROLLOUT#B,EPIC-P6-FLAGROLLOUT#A,SS,0.92,intra B->A,2.29,GA
+EPIC-P6-FLAGROLLOUT#B,EPIC-P6-FLAGROLLOUT#R,SS,1.60,intra B->R,2.29,GA
+EPIC-P6-FLAGROLLOUT#B,EPIC-P6-OPSV11#B,SS,1.14,cross: infrastructure predecessor -> SS,2.29,GA
+EPIC-P6-FLAGROLLOUT#B,G_RG013,FS,0.00,epic complete -> gate or work,2.29,GA
+EPIC-P6-FLAGROLLOUT#R,G_RG013,FS,0.00,epic complete -> gate or work,0.96,GA
+EPIC-P6-OPSV11#A,EPIC-P6-OPSV11#R,FF,0.00,intra A->R finish,2.31,GA
+EPIC-P6-OPSV11#A,G_RG013,FS,0.00,epic complete -> gate or work,2.31,GA
+EPIC-P6-OPSV11#B,EPIC-P6-OPSV11#A,FF,1.00,intra B->A finish,3.20,GA
+EPIC-P6-OPSV11#B,EPIC-P6-OPSV11#A,SS,1.28,intra B->A,3.20,GA
+EPIC-P6-OPSV11#B,EPIC-P6-OPSV11#R,SS,2.24,intra B->R,3.20,GA
+EPIC-P6-OPSV11#B,G_RG013,FS,0.00,epic complete -> gate or work,3.20,GA
+EPIC-P6-OPSV11#R,G_RG013,FS,0.00,epic complete -> gate or work,1.35,GA
+EPIC-P6-OPTIN#A,EPIC-P6-FLAGROLLOUT#A,FF,0.00,cross: assurance finish,1.80,GA
+EPIC-P6-OPTIN#A,EPIC-P6-OPTIN#R,FF,0.00,intra A->R finish,1.80,GA
+EPIC-P6-OPTIN#B,EPIC-P6-FLAGROLLOUT#B,SS,1.25,cross: migration predecessor -> SS,2.50,GA
+EPIC-P6-OPTIN#B,EPIC-P6-OPTIN#A,FF,1.00,intra B->A finish,2.50,GA
+EPIC-P6-OPTIN#B,EPIC-P6-OPTIN#A,SS,1.00,intra B->A,2.50,GA
+EPIC-P6-OPTIN#B,EPIC-P6-OPTIN#R,SS,1.75,intra B->R,2.50,GA
+EPIC-P6-QUOTEPAIRS#A,EPIC-P6-QUOTEPAIRS#R,FF,0.00,intra A->R finish,4.11,GA
+EPIC-P6-QUOTEPAIRS#A,G_RG013,FS,0.00,epic complete -> gate or work,4.11,GA
+EPIC-P6-QUOTEPAIRS#B,EPIC-P6-QUOTEPAIRS#A,FF,1.00,intra B->A finish,5.71,GA
+EPIC-P6-QUOTEPAIRS#B,EPIC-P6-QUOTEPAIRS#A,SS,2.29,intra B->A,5.71,GA
+EPIC-P6-QUOTEPAIRS#B,EPIC-P6-QUOTEPAIRS#R,SS,4.00,intra B->R,5.71,GA
+EPIC-P6-QUOTEPAIRS#B,G_RG013,FS,0.00,epic complete -> gate or work,5.71,GA
+EPIC-P6-QUOTEPAIRS#R,G_RG013,FS,0.00,epic complete -> gate or work,1.60,GA
+EPIC-P6-ROUTERV11#A,EPIC-P6-ADAPTER#A,FF,0.00,cross: assurance finish,4.81,GA
+EPIC-P6-ROUTERV11#A,EPIC-P6-CONVBACKEND#A,FF,0.00,cross: assurance finish,4.81,GA
+EPIC-P6-ROUTERV11#A,EPIC-P6-OPTIN#A,FF,0.00,cross: assurance finish,4.81,GA
+EPIC-P6-ROUTERV11#A,EPIC-P6-ROUTERV11#R,FF,0.00,intra A->R finish,4.81,GA
+EPIC-P6-ROUTERV11#A,L_V11_AUDIT_AVAIL,FS,0.00,epic complete -> gate or work,4.81,GA
+EPIC-P6-ROUTERV11#A,W_V11_AUDIT_SUPPORT,FS,0.00,epic complete -> gate or work,4.81,GA
+EPIC-P6-ROUTERV11#B,EPIC-P6-ADAPTER#B,SS,3.34,cross: protocol predecessor -> SS,6.68,GA
+EPIC-P6-ROUTERV11#B,EPIC-P6-CONVBACKEND#B,SS,3.34,cross: protocol predecessor -> SS,6.68,GA
+EPIC-P6-ROUTERV11#B,EPIC-P6-OPTIN#B,SS,3.34,cross: protocol predecessor -> SS,6.68,GA
+EPIC-P6-ROUTERV11#B,EPIC-P6-ROUTERV11#A,FF,1.00,intra B->A finish,6.68,GA
+EPIC-P6-ROUTERV11#B,EPIC-P6-ROUTERV11#A,SS,2.67,intra B->A,6.68,GA
+EPIC-P6-ROUTERV11#B,EPIC-P6-ROUTERV11#R,SS,4.67,intra B->R,6.68,GA
+EPIC-P6-ROUTERV11#B,L_V11_AUDIT_AVAIL,FS,0.00,epic complete -> gate or work,6.68,GA
+EPIC-P6-ROUTERV11#B,W_V11_AUDIT_SUPPORT,FS,0.00,epic complete -> gate or work,6.68,GA
+EPIC-P6-ROUTERV11#R,L_V11_AUDIT_AVAIL,FS,0.00,epic complete -> gate or work,2.80,GA
+EPIC-P6-ROUTERV11#R,W_V11_AUDIT_SUPPORT,FS,0.00,epic complete -> gate or work,2.80,GA
+EPIC-P6-TOKENLABSTABLE#A,EPIC-P6-TOKENLABSTABLE#R,FF,0.00,intra A->R finish,0.98,GA
+EPIC-P6-TOKENLABSTABLE#B,EPIC-P6-FLAGROLLOUT#B,FS,0.00,cross: research predecessor -> FS,1.76,GA
+EPIC-P6-TOKENLABSTABLE#B,EPIC-P6-TOKENLABSTABLE#A,FF,1.00,intra B->A finish,1.76,GA
+EPIC-P6-TOKENLABSTABLE#B,EPIC-P6-TOKENLABSTABLE#A,SS,0.70,intra B->A,1.76,GA
+EPIC-P6-TOKENLABSTABLE#B,EPIC-P6-TOKENLABSTABLE#R,SS,1.23,intra B->R,1.76,GA
+EPIC-P6-TOKENLABSTABLE#B,EPIC-P7-TOKENLABGEN#B,FS,0.00,cross: research predecessor -> FS,1.76,GA
+EPIC-P7-COMPLV2#A,EPIC-P7-COMPLV2#R,FF,0.00,intra A->R finish,4.81,GA
+EPIC-P7-COMPLV2#A,G_RG014,FS,0.00,epic complete -> gate or work,4.81,GA
+EPIC-P7-COMPLV2#B,EPIC-P7-COMPLV2#A,FF,1.00,intra B->A finish,6.68,GA
+EPIC-P7-COMPLV2#B,EPIC-P7-COMPLV2#A,SS,2.67,intra B->A,6.68,GA
+EPIC-P7-COMPLV2#B,EPIC-P7-COMPLV2#R,SS,4.67,intra B->R,6.68,GA
+EPIC-P7-COMPLV2#B,EPIC-P7-SPLITS#B,FS,0.00,cross: compliance predecessor -> FS,6.68,GA
+EPIC-P7-COMPLV2#B,G_RG014,FS,0.00,epic complete -> gate or work,6.68,GA
+EPIC-P7-COMPLV2#R,G_RG014,FS,0.00,epic complete -> gate or work,2.80,GA
+EPIC-P7-GENCONV#A,EPIC-P7-GENCONV#R,FF,0.00,intra A->R finish,6.18,GA
+EPIC-P7-GENCONV#A,L_V20_AUDIT,FS,0.00,epic complete -> gate or work,6.18,GA
+EPIC-P7-GENCONV#A,W_V20_AUDIT,FS,0.00,epic complete -> gate or work,6.18,GA
+EPIC-P7-GENCONV#B,EPIC-P7-GENCONV#A,FF,1.00,intra B->A finish,8.58,GA
+EPIC-P7-GENCONV#B,EPIC-P7-GENCONV#A,SS,3.43,intra B->A,8.58,GA
+EPIC-P7-GENCONV#B,EPIC-P7-GENCONV#R,SS,6.01,intra B->R,8.58,GA
+EPIC-P7-GENCONV#B,L_V20_AUDIT,FS,0.00,epic complete -> gate or work,8.58,GA
+EPIC-P7-GENCONV#B,W_V20_AUDIT,FS,0.00,epic complete -> gate or work,8.58,GA
+EPIC-P7-GENCONV#R,L_V20_AUDIT,FS,0.00,epic complete -> gate or work,3.60,GA
+EPIC-P7-GENCONV#R,W_V20_AUDIT,FS,0.00,epic complete -> gate or work,3.60,GA
+EPIC-P7-MIGCAMP#A,EPIC-P7-MIGCAMP#R,FF,0.00,intra A->R finish,3.60,GA
+EPIC-P7-MIGCAMP#A,G_RG014,FS,0.00,epic complete -> gate or work,3.60,GA
+EPIC-P7-MIGCAMP#B,EPIC-P7-MIGCAMP#A,FF,1.00,intra B->A finish,5.01,GA
+EPIC-P7-MIGCAMP#B,EPIC-P7-MIGCAMP#A,SS,2.00,intra B->A,5.01,GA
+EPIC-P7-MIGCAMP#B,EPIC-P7-MIGCAMP#R,SS,3.50,intra B->R,5.01,GA
+EPIC-P7-MIGCAMP#B,G_RG014,FS,0.00,epic complete -> gate or work,5.01,GA
+EPIC-P7-MIGCAMP#R,G_RG014,FS,0.00,epic complete -> gate or work,2.10,GA
+EPIC-P7-ORACLE#A,EPIC-P7-ORACLE#R,FF,0.00,intra A->R finish,8.01,GA
+EPIC-P7-ORACLE#A,G_RG014,FS,0.00,epic complete -> gate or work,8.01,GA
+EPIC-P7-ORACLE#B,EPIC-P7-ORACLE#A,FF,1.00,intra B->A finish,11.13,GA
+EPIC-P7-ORACLE#B,EPIC-P7-ORACLE#A,SS,4.45,intra B->A,11.13,GA
+EPIC-P7-ORACLE#B,EPIC-P7-ORACLE#R,SS,7.79,intra B->R,11.13,GA
+EPIC-P7-ORACLE#B,G_RG014,FS,0.00,epic complete -> gate or work,11.13,GA
+EPIC-P7-ORACLE#R,G_RG014,FS,0.00,epic complete -> gate or work,4.67,GA
+EPIC-P7-ROUTERV2#A,EPIC-P7-ROUTERV2#R,FF,0.00,intra A->R finish,6.18,GA
+EPIC-P7-ROUTERV2#A,EPIC-P7-SPLITS#A,FF,0.00,cross: assurance finish,6.18,GA
+EPIC-P7-ROUTERV2#A,EPIC-P7-TOPUP#A,FF,0.00,cross: assurance finish,6.18,GA
+EPIC-P7-ROUTERV2#A,EPIC-P7-USAGE#A,FF,0.00,cross: assurance finish,6.18,GA
+EPIC-P7-ROUTERV2#A,L_V20_AUDIT,FS,0.00,epic complete -> gate or work,6.18,GA
+EPIC-P7-ROUTERV2#A,W_V20_AUDIT,FS,0.00,epic complete -> gate or work,6.18,GA
+EPIC-P7-ROUTERV2#B,EPIC-P7-ROUTERV2#A,FF,1.00,intra B->A finish,8.58,GA
+EPIC-P7-ROUTERV2#B,EPIC-P7-ROUTERV2#A,SS,3.43,intra B->A,8.58,GA
+EPIC-P7-ROUTERV2#B,EPIC-P7-ROUTERV2#R,SS,6.01,intra B->R,8.58,GA
+EPIC-P7-ROUTERV2#B,EPIC-P7-SPLITS#B,SS,4.29,cross: protocol predecessor -> SS,8.58,GA
+EPIC-P7-ROUTERV2#B,EPIC-P7-TOPUP#B,SS,4.29,cross: protocol predecessor -> SS,8.58,GA
+EPIC-P7-ROUTERV2#B,EPIC-P7-USAGE#B,SS,4.29,cross: protocol predecessor -> SS,8.58,GA
+EPIC-P7-ROUTERV2#B,L_V20_AUDIT,FS,0.00,epic complete -> gate or work,8.58,GA
+EPIC-P7-ROUTERV2#B,W_V20_AUDIT,FS,0.00,epic complete -> gate or work,8.58,GA
+EPIC-P7-ROUTERV2#R,L_V20_AUDIT,FS,0.00,epic complete -> gate or work,3.60,GA
+EPIC-P7-ROUTERV2#R,W_V20_AUDIT,FS,0.00,epic complete -> gate or work,3.60,GA
+EPIC-P7-SPLITS#A,EPIC-P7-SPLITS#R,FF,0.00,intra A->R finish,3.86,GA
+EPIC-P7-SPLITS#A,G_RG014,FS,0.00,epic complete -> gate or work,3.86,GA
+EPIC-P7-SPLITS#B,EPIC-P7-SPLITS#A,FF,1.00,intra B->A finish,5.36,GA
+EPIC-P7-SPLITS#B,EPIC-P7-SPLITS#A,SS,2.14,intra B->A,5.36,GA
+EPIC-P7-SPLITS#B,EPIC-P7-SPLITS#R,SS,3.75,intra B->R,5.36,GA
+EPIC-P7-SPLITS#B,G_RG014,FS,0.00,epic complete -> gate or work,5.36,GA
+EPIC-P7-SPLITS#R,G_RG014,FS,0.00,epic complete -> gate or work,1.50,GA
+EPIC-P7-TOKENLABGEN#A,EPIC-P7-TOKENLABGEN#R,FF,0.00,intra A->R finish,2.46,GA
+EPIC-P7-TOKENLABGEN#A,G_RG014,FS,0.00,epic complete -> gate or work,2.46,GA
+EPIC-P7-TOKENLABGEN#B,EPIC-P7-TOKENLABGEN#A,FF,1.00,intra B->A finish,4.39,GA
+EPIC-P7-TOKENLABGEN#B,EPIC-P7-TOKENLABGEN#A,SS,1.76,intra B->A,4.39,GA
+EPIC-P7-TOKENLABGEN#B,EPIC-P7-TOKENLABGEN#R,SS,3.07,intra B->R,4.39,GA
+EPIC-P7-TOKENLABGEN#B,G_RG014,FS,0.00,epic complete -> gate or work,4.39,GA
+EPIC-P7-TOKENLABGEN#R,G_RG014,FS,0.00,epic complete -> gate or work,1.32,GA
+EPIC-P7-TOPUP#A,EPIC-P7-TOPUP#R,FF,0.00,intra A->R finish,2.31,GA
+EPIC-P7-TOPUP#A,G_RG014,FS,0.00,epic complete -> gate or work,2.31,GA
+EPIC-P7-TOPUP#B,EPIC-P7-TOPUP#A,FF,1.00,intra B->A finish,3.21,GA
+EPIC-P7-TOPUP#B,EPIC-P7-TOPUP#A,SS,1.29,intra B->A,3.21,GA
+EPIC-P7-TOPUP#B,EPIC-P7-TOPUP#R,SS,2.25,intra B->R,3.21,GA
+EPIC-P7-TOPUP#B,G_RG014,FS,0.00,epic complete -> gate or work,3.21,GA
+EPIC-P7-TOPUP#R,G_RG014,FS,0.00,epic complete -> gate or work,0.90,GA
+EPIC-P7-USAGE#A,EPIC-P7-USAGE#R,FF,0.00,intra A->R finish,2.83,GA
+EPIC-P7-USAGE#A,G_RG014,FS,0.00,epic complete -> gate or work,2.83,GA
+EPIC-P7-USAGE#B,EPIC-P7-USAGE#A,FF,1.00,intra B->A finish,3.93,GA
+EPIC-P7-USAGE#B,EPIC-P7-USAGE#A,SS,1.57,intra B->A,3.93,GA
+EPIC-P7-USAGE#B,EPIC-P7-USAGE#R,SS,2.75,intra B->R,3.93,GA
+EPIC-P7-USAGE#B,G_RG014,FS,0.00,epic complete -> gate or work,3.93,GA
+EPIC-P7-USAGE#R,G_RG014,FS,0.00,epic complete -> gate or work,1.10,GA
+G_BETA,EPIC-P3-CANARY#B,FS,0.00,gate or wait -> epic,2.00,GA
+G_BETA,EPIC-P3-MIGDRILL#B,FS,0.00,gate or wait -> epic,2.00,GA
+G_BETA,EPIC-P3-RECONPROD#B,FS,0.00,gate or wait -> epic,2.00,GA
+G_BETA,EPIC-P3-SUPPORT#B,FS,0.00,gate or wait -> epic,2.00,GA
+G_BETA,EPIC-P3-TOKENOPS#B,FS,0.00,gate or wait -> epic,2.00,GA
+G_BETA,EPIC-P4-BOUNTYPUB#B,FS,0.00,gate or wait -> epic,2.00,GA
+G_BETA,EPIC-P4-V11PREP#B,FS,0.00,gate or wait -> epic,2.00,GA
+G_BETA,L_BETA_STABILITY,FS,0.00,node -> node,2.00,GA
+G_BETA,L_BOUNTYPUB,FS,0.00,node -> node,2.00,GA
+G_CONTRACT_FREEZE,EPIC-P2-DEPLOYPREP#B,FS,0.00,gate or wait -> epic,2.00,PMB;GA
+G_CONTRACT_FREEZE,G_RG002,FS,0.00,node -> node,2.00,PMB;GA
+G_CONTRACT_FREEZE,L_AUDIT_AVAIL,FS,0.00,node -> node,2.00,PMB;GA
+G_CONTRACT_FREEZE,W_AUDIT_SUPPORT,FS,0.00,node -> node,2.00,PMB;GA
+G_FEATURE_COMPLETE,L_PENTEST,FS,0.00,node -> node,0.50,PMB;GA
+G_FEATURE_COMPLETE,W_PENTEST_SUPPORT,FS,0.00,node -> node,0.50,PMB;GA
+G_FREEZE,EPIC-P1-CHAINGW#B,FS,0.00,gate or wait -> epic,2.00,PMB;GA
+G_FREEZE,EPIC-P1-CONTRACTS#B,FS,0.00,gate or wait -> epic,2.00,PMB;GA
+G_FREEZE,EPIC-P1-DELEGATION#B,FS,0.00,gate or wait -> epic,2.00,PMB;GA
+G_FREEZE,EPIC-P1-FORK#B,FS,0.00,gate or wait -> epic,2.00,PMB;GA
+G_FREEZE,EPIC-P1-TOKENREG#B,FS,0.00,gate or wait -> epic,2.00,PMB;GA
+G_FREEZE,G_RG001,FS,0.00,node -> node,2.00,PMB;GA
+G_GA,G_RG013,FS,0.00,node -> node,3.00,GA
+G_PUBBETA,EPIC-P5-GA#B,FS,0.00,gate or wait -> epic,2.00,GA
+G_PUBBETA,EPIC-P5-RELREADY#B,FS,0.00,gate or wait -> epic,2.00,GA
+G_PUBBETA,EPIC-P6-ROUTERV11#B,FS,0.00,gate or wait -> epic,2.00,GA
+G_PUBBETA,G_GA,FS,0.00,node -> node,2.00,GA
+G_PUBBETA,L_SLO8,FS,0.00,node -> node,2.00,GA
+G_RG001,EPIC-P1-CORE#B,FS,0.00,gate or wait -> epic,2.00,PMB;GA
+G_RG002,EPIC-P2-TESTNET#B,FS,0.00,gate or wait -> epic,2.00,PMB;GA
+G_RG002,EPIC-P3-T1START#B,FS,0.00,gate or wait -> epic,2.00,GA
+G_RG002,EPIC-P4-COMPEXP#B,FS,0.00,gate or wait -> epic,2.00,GA
+G_RG002,EPIC-P5-DOCS#B,FS,0.00,gate or wait -> epic,2.00,GA
+G_RG002,G_FEATURE_COMPLETE,FS,0.00,node -> node,2.00,PMB;GA
+G_RG002,W_WALLET_E3,FS,0.00,node -> node,2.00,PMB;GA
+G_RG003,G_BETA,FS,0.00,node -> node,1.00,PMB;GA
+G_RG004,G_BETA,FS,0.00,node -> node,1.00,PMB;GA
+G_RG005,EPIC-P3-BOUNTY#B,FS,0.00,gate or wait -> epic,1.00,PMB;GA
+G_RG005,EPIC-P3-DEPLOY#B,FS,0.00,gate or wait -> epic,1.00,PMB;GA
+G_RG005,EPIC-P4-CHAINS#B,FS,0.00,gate or wait -> epic,1.00,GA
+G_RG006,EPIC-P3-DEPLOY#B,FS,0.00,gate or wait -> epic,1.00,PMB;GA
+G_RG006,G_BETA,FS,0.00,node -> node,1.00,PMB;GA
+G_RG007,G_BETA,FS,0.00,node -> node,1.00,PMB;GA
+G_RG008,G_BETA,FS,0.00,node -> node,1.00,PMB;GA
+G_RG009,G_BETA,FS,0.00,node -> node,1.00,PMB;GA
+G_RG013,EPIC-P7-COMPLV2#B,FS,0.00,gate or wait -> epic,2.00,GA
+G_RG013,EPIC-P7-GENCONV#B,FS,0.00,gate or wait -> epic,2.00,GA
+G_RG013,EPIC-P7-ORACLE#B,FS,0.00,gate or wait -> epic,2.00,GA
+G_RG013,EPIC-P7-ROUTERV2#B,FS,0.00,gate or wait -> epic,2.00,GA
+G_RG013,G_RG014,FS,0.00,node -> node,2.00,GA
+L_ADAPTER_AUDIT,N_ADAPTER_AUDIT_DONE,FS,0.00,node -> node,11.00,GA
+L_AUDIT_AVAIL,L_AUDIT_RUN,FS,0.00,node -> node,4.00,PMB;GA
+L_AUDIT_RUN,W_REMEDIATE,FS,0.00,node -> node,11.00,PMB;GA
+L_BETA_STABILITY,G_PUBBETA,FS,0.00,node -> node,8.00,GA
+L_BOUNTYPUB,G_PUBBETA,FS,0.00,node -> node,12.00,GA
+L_CHAIN_EVID,G_RG004,FS,0.00,node -> node,10.00,PMB;GA
+L_COUNSEL_NOTICE,G_FREEZE,FS,0.00,node -> node,10.00,PMB;GA
+L_GOLIVE,G_RG008,FS,0.00,node -> node,5.00,PMB;GA
+L_LEGAL_MEMO,L_OD001,FS,0.00,node -> node,11.00,PMB;GA
+L_LICENSE,L_GOLIVE,FS,0.00,node -> node,34.00,PMB;GA
+L_OD001,EPIC-P2-COMPLIANCE#B,FS,0.00,gate or wait -> epic,4.00,PMB;GA
+L_OD001,EPIC-P4-COMPEXP#B,FS,0.00,gate or wait -> epic,4.00,GA
+L_OD001,L_LICENSE,FS,0.00,node -> node,4.00,PMB;GA
+L_PC_APPROVAL,G_FREEZE,FS,0.00,node -> node,2.00,PMB;GA
+L_PENTEST,W_PENTEST_FIX,FS,0.00,node -> node,6.00,PMB;GA
+L_PENTEST_RETEST,G_RG006,FS,0.00,node -> node,2.00,PMB;GA
+L_PERMIT2_E2,G_FREEZE,FS,0.00,node -> node,2.00,PMB;GA
+L_RECON_TESTNET,G_RG007,FS,0.00,node -> node,3.00,PMB;GA
+L_REREVIEW,G_RG005,FS,0.00,node -> node,3.00,PMB;GA
+L_SLO8,G_GA,FS,0.00,node -> node,10.00,GA
+L_V11_AUDIT_AVAIL,L_V11_AUDIT_RUN,FS,0.00,node -> node,3.00,GA
+L_V11_AUDIT_RUN,W_V11_REMEDIATE,FS,0.00,node -> node,9.00,GA
+L_V11_REREVIEW,N_V11_AUDIT_DONE,FS,0.00,node -> node,3.00,GA
+L_V20_AUDIT,N_V20_AUDIT_DONE,FS,0.00,node -> node,15.00,GA
+L_V20_NOTICE,G_RG014,FS,0.00,node -> node,26.00,GA
+L_WALLET_FIX,G_RG003,FS,0.00,node -> node,4.00,PMB;GA
+N_ADAPTER_AUDIT_DONE,EPIC-P6-FLAGROLLOUT#B,FS,0.00,gate or wait -> epic,0.50,GA
+N_ADAPTER_AUDIT_DONE,G_RG013,FS,0.00,node -> node,0.50,GA
+N_V11_AUDIT_DONE,EPIC-P6-FLAGROLLOUT#B,FS,0.00,gate or wait -> epic,0.50,GA
+N_V11_AUDIT_DONE,G_RG013,FS,0.00,node -> node,0.50,GA
+N_V20_AUDIT_DONE,EPIC-P7-MIGCAMP#B,FS,0.00,gate or wait -> epic,0.50,GA
+N_V20_AUDIT_DONE,L_V20_NOTICE,FS,0.00,node -> node,0.50,GA
+W_ADAPTER_AUDIT,N_ADAPTER_AUDIT_DONE,FS,0.00,node -> node,7.35,GA
+W_AUDIT_SUPPORT,G_RG005,FS,0.00,node -> node,5.63,PMB;GA
+W_LAB_MIN,G_FREEZE,FS,0.00,node -> node,8.00,PMB;GA
+W_LAB_MIN,L_PC_APPROVAL,FS,0.00,node -> node,8.00,PMB;GA
+W_LAB_MIN,W_LAB_REST,FS,0.00,node -> node,8.00,PMB;GA
+W_LAB_REST,G_RG001,FS,0.00,node -> node,3.43,PMB;GA
+W_PENTEST_FIX,L_PENTEST_RETEST,FS,0.00,node -> node,2.26,PMB;GA
+W_PENTEST_SUPPORT,G_RG006,FS,0.00,node -> node,1.51,PMB;GA
+W_REMEDIATE,L_REREVIEW,FS,0.00,node -> node,8.45,PMB;GA
+W_V11_AUDIT_SUPPORT,N_V11_AUDIT_DONE,FS,0.00,node -> node,4.49,GA
+W_V11_REMEDIATE,L_V11_REREVIEW,FS,0.00,node -> node,4.49,GA
+W_V20_AUDIT,N_V20_AUDIT_DONE,FS,0.00,node -> node,16.33,GA
+W_WALLET_E3,L_WALLET_FIX,FS,0.00,node -> node,11.43,PMB;GA
+EPIC-P0-INFRA#A,EPIC-P0-INFRA#R,FF,0.00,intra A->R finish,0.29,TRI
+EPIC-P0-INFRA#A,EPIC-P1-QUOTE#A,FF,0.00,cross: assurance finish,0.29,TRI
+EPIC-P0-INFRA#A,EPIC-P1-SIGNER#A,FF,0.00,cross: assurance finish,0.29,TRI
+EPIC-P0-INFRA#A,G_TRI4,FS,0.00,epic complete -> gate or work,0.29,TRI
+EPIC-P0-INFRA#B,EPIC-P0-INFRA#A,FF,1.00,intra B->A finish,0.40,TRI
+EPIC-P0-INFRA#B,EPIC-P0-INFRA#A,SS,0.16,intra B->A,0.40,TRI
+EPIC-P0-INFRA#B,EPIC-P0-INFRA#R,SS,0.28,intra B->R,0.40,TRI
+EPIC-P0-INFRA#B,EPIC-P1-QUOTE#B,SS,0.20,cross: infrastructure predecessor -> SS,0.40,TRI
+EPIC-P0-INFRA#B,EPIC-P1-SIGNER#B,SS,0.20,cross: infrastructure predecessor -> SS,0.40,TRI
+EPIC-P0-INFRA#B,G_TRI4,FS,0.00,epic complete -> gate or work,0.40,TRI
+EPIC-P0-INFRA#R,G_TRI4,FS,0.00,epic complete -> gate or work,0.17,TRI
+EPIC-P0-PLANNER#A,EPIC-P0-PLANNER#R,FF,0.00,intra A->R finish,0.54,TRI
+EPIC-P0-PLANNER#A,G_FREEZE,FS,0.00,epic build and assurance complete -> gate,0.54,TRI
+EPIC-P0-PLANNER#A,G_TRI3,FS,0.00,epic build and assurance complete -> gate,0.54,TRI
+EPIC-P0-PLANNER#A,G_TRI4,FS,0.00,epic complete -> gate or work,0.54,TRI
+EPIC-P0-PLANNER#B,EPIC-P0-PLANNER#A,FF,1.00,intra B->A finish,0.74,TRI
+EPIC-P0-PLANNER#B,EPIC-P0-PLANNER#A,SS,0.30,intra B->A,0.74,TRI
+EPIC-P0-PLANNER#B,EPIC-P0-PLANNER#R,SS,0.52,intra B->R,0.74,TRI
+EPIC-P0-PLANNER#B,G_FREEZE,FS,0.00,epic build and assurance complete -> gate,0.74,TRI
+EPIC-P0-PLANNER#B,G_TRI3,FS,0.00,epic build and assurance complete -> gate,0.74,TRI
+EPIC-P0-PLANNER#B,G_TRI4,FS,0.00,epic complete -> gate or work,0.74,TRI
+EPIC-P0-PLANNER#R,G_TRI4,FS,0.00,epic complete -> gate or work,0.31,TRI
+EPIC-P0-PROTO#A,EPIC-P0-PROTO#R,FF,0.00,intra A->R finish,0.80,TRI
+EPIC-P0-PROTO#A,G_FREEZE,FS,0.00,epic build and assurance complete -> gate,0.80,TRI
+EPIC-P0-PROTO#A,G_TRI4,FS,0.00,epic complete -> gate or work,0.80,TRI
+EPIC-P0-PROTO#B,EPIC-P0-PROTO#A,FF,1.00,intra B->A finish,1.43,TRI
+EPIC-P0-PROTO#B,EPIC-P0-PROTO#A,SS,0.57,intra B->A,1.43,TRI
+EPIC-P0-PROTO#B,EPIC-P0-PROTO#R,SS,1.00,intra B->R,1.43,TRI
+EPIC-P0-PROTO#B,EPIC-P0-TOKENLAB#B,FS,0.00,cross: research predecessor -> FS,1.43,TRI
+EPIC-P0-PROTO#B,EPIC-P1-CONTRACTS#B,FS,0.00,cross: research predecessor -> FS,1.43,TRI
+EPIC-P0-PROTO#B,G_FREEZE,FS,0.00,epic build and assurance complete -> gate,1.43,TRI
+EPIC-P0-PROTO#B,G_TRI4,FS,0.00,epic complete -> gate or work,1.43,TRI
+EPIC-P0-PROTO#R,G_TRI4,FS,0.00,epic complete -> gate or work,0.43,TRI
+EPIC-P0-PROTOSPEC#A,EPIC-P0-PROTOSPEC#R,FF,0.00,intra A->R finish,2.06,TRI
+EPIC-P0-PROTOSPEC#A,EPIC-P1-MIGRATION#A,FF,0.00,cross: assurance finish,2.06,TRI
+EPIC-P0-PROTOSPEC#A,EPIC-P1-PAYONCE#A,FF,0.00,cross: assurance finish,2.06,TRI
+EPIC-P0-PROTOSPEC#A,G_FREEZE,FS,0.00,epic build and assurance complete -> gate,2.06,TRI
+EPIC-P0-PROTOSPEC#A,G_TRI4,FS,0.00,epic complete -> gate or work,2.06,TRI
+EPIC-P0-PROTOSPEC#A,L_PC_APPROVAL,FS,0.00,epic build and assurance complete -> gate,2.06,TRI
+EPIC-P0-PROTOSPEC#B,EPIC-P0-PROTOSPEC#A,FF,1.00,intra B->A finish,2.86,TRI
+EPIC-P0-PROTOSPEC#B,EPIC-P0-PROTOSPEC#A,SS,1.14,intra B->A,2.86,TRI
+EPIC-P0-PROTOSPEC#B,EPIC-P0-PROTOSPEC#R,SS,2.00,intra B->R,2.86,TRI
+EPIC-P0-PROTOSPEC#B,EPIC-P1-CONTRACTS#B,FS,0.00,override EPIC-P0-PROTOSPEC->EPIC-P1-CONTRACTS,2.86,TRI
+EPIC-P0-PROTOSPEC#B,EPIC-P1-MIGRATION#B,SS,1.43,cross: protocol predecessor -> SS,2.86,TRI
+EPIC-P0-PROTOSPEC#B,EPIC-P1-PAYONCE#B,SS,1.43,cross: protocol predecessor -> SS,2.86,TRI
+EPIC-P0-PROTOSPEC#B,G_FREEZE,FS,0.00,epic build and assurance complete -> gate,2.86,TRI
+EPIC-P0-PROTOSPEC#B,G_TRI4,FS,0.00,epic complete -> gate or work,2.86,TRI
+EPIC-P0-PROTOSPEC#B,L_PC_APPROVAL,FS,0.00,epic build and assurance complete -> gate,2.86,TRI
+EPIC-P0-PROTOSPEC#R,G_TRI4,FS,0.00,epic complete -> gate or work,1.20,TRI
+EPIC-P0-SOURCES#A,EPIC-P0-SOURCES#R,FF,0.00,intra A->R finish,0.82,TRI
+EPIC-P0-SOURCES#A,G_FREEZE,FS,0.00,epic build and assurance complete -> gate,0.82,TRI
+EPIC-P0-SOURCES#A,G_TRI4,FS,0.00,epic complete -> gate or work,0.82,TRI
+EPIC-P0-SOURCES#B,EPIC-P0-PLANNER#B,FS,0.00,cross: research predecessor -> FS,1.46,TRI
+EPIC-P0-SOURCES#B,EPIC-P0-PROTO#B,FS,0.00,cross: research predecessor -> FS,1.46,TRI
+EPIC-P0-SOURCES#B,EPIC-P0-PROTOSPEC#B,FS,0.00,cross: research predecessor -> FS,1.46,TRI
+EPIC-P0-SOURCES#B,EPIC-P0-SOURCES#A,FF,1.00,intra B->A finish,1.46,TRI
+EPIC-P0-SOURCES#B,EPIC-P0-SOURCES#A,SS,0.58,intra B->A,1.46,TRI
+EPIC-P0-SOURCES#B,EPIC-P0-SOURCES#R,SS,1.02,intra B->R,1.46,TRI
+EPIC-P0-SOURCES#B,G_FREEZE,FS,0.00,epic build and assurance complete -> gate,1.46,TRI
+EPIC-P0-SOURCES#B,G_TRI4,FS,0.00,epic complete -> gate or work,1.46,TRI
+EPIC-P0-SOURCES#B,L_PERMIT2_E2,FS,0.00,epic build package complete -> gate or wait,1.46,TRI
+EPIC-P0-SOURCES#R,G_TRI4,FS,0.00,epic complete -> gate or work,0.44,TRI
+EPIC-P0-THREAT#A,EPIC-P0-THREAT#R,FF,0.00,intra A->R finish,0.38,TRI
+EPIC-P0-THREAT#A,G_TRI4,FS,0.00,epic complete -> gate or work,0.38,TRI
+EPIC-P0-THREAT#B,EPIC-P0-THREAT#A,FF,1.00,intra B->A finish,0.53,TRI
+EPIC-P0-THREAT#B,EPIC-P0-THREAT#A,SS,0.21,intra B->A,0.53,TRI
+EPIC-P0-THREAT#B,EPIC-P0-THREAT#R,SS,0.37,intra B->R,0.53,TRI
+EPIC-P0-THREAT#B,G_TRI4,FS,0.00,epic complete -> gate or work,0.53,TRI
+EPIC-P0-THREAT#R,G_TRI4,FS,0.00,epic complete -> gate or work,0.22,TRI
+EPIC-P0-TOKENLAB#A,EPIC-P0-TOKENLAB#R,FF,0.00,intra A->R finish,0.43,TRI
+EPIC-P0-TOKENLAB#A,G_FREEZE,FS,0.00,epic build and assurance complete -> gate,0.43,TRI
+EPIC-P0-TOKENLAB#A,G_TRI4,FS,0.00,epic complete -> gate or work,0.43,TRI
+EPIC-P0-TOKENLAB#B,EPIC-P0-TOKENLAB#A,FF,1.00,intra B->A finish,0.77,TRI
+EPIC-P0-TOKENLAB#B,EPIC-P0-TOKENLAB#A,SS,0.31,intra B->A,0.77,TRI
+EPIC-P0-TOKENLAB#B,EPIC-P0-TOKENLAB#R,SS,0.54,intra B->R,0.77,TRI
+EPIC-P0-TOKENLAB#B,EPIC-P1-FORK#B,FS,0.00,cross: research predecessor -> FS,0.77,TRI
+EPIC-P0-TOKENLAB#B,EPIC-P1-REVOKE#B,FS,0.00,cross: research predecessor -> FS,0.77,TRI
+EPIC-P0-TOKENLAB#B,EPIC-P1-TOKENREG#B,FS,0.00,cross: research predecessor -> FS,0.77,TRI
+EPIC-P0-TOKENLAB#B,G_FREEZE,FS,0.00,epic build and assurance complete -> gate,0.77,TRI
+EPIC-P0-TOKENLAB#B,G_TRI4,FS,0.00,epic complete -> gate or work,0.77,TRI
+EPIC-P0-TOKENLAB#R,G_TRI4,FS,0.00,epic complete -> gate or work,0.23,TRI
+EPIC-P1-CHAINGW#A,EPIC-P1-CHAINGW#R,FF,0.00,intra A->R finish,1.37,TRI
+EPIC-P1-CHAINGW#A,G_TRI4,FS,0.00,epic complete -> gate or work,1.37,TRI
+EPIC-P1-CHAINGW#B,EPIC-P1-CHAINGW#A,FF,1.00,intra B->A finish,1.90,TRI
+EPIC-P1-CHAINGW#B,EPIC-P1-CHAINGW#A,SS,0.76,intra B->A,1.90,TRI
+EPIC-P1-CHAINGW#B,EPIC-P1-CHAINGW#R,SS,1.33,intra B->R,1.90,TRI
+EPIC-P1-CHAINGW#B,G_TRI4,FS,0.00,epic complete -> gate or work,1.90,TRI
+EPIC-P1-CHAINGW#R,G_TRI4,FS,0.00,epic complete -> gate or work,0.53,TRI
+EPIC-P1-CONTRACTS#A,EPIC-P1-CONTRACTS#R,FF,0.00,intra A->R finish,8.65,TRI
+EPIC-P1-CONTRACTS#A,EPIC-P1-MIGRATION#A,FF,0.00,cross: assurance finish,8.65,TRI
+EPIC-P1-CONTRACTS#A,EPIC-P1-PAYONCE#A,FF,0.00,cross: assurance finish,8.65,TRI
+EPIC-P1-CONTRACTS#A,EPIC-P1-QUOTE#A,FF,0.00,cross: assurance finish,8.65,TRI
+EPIC-P1-CONTRACTS#A,EPIC-P1-REVOKE#A,FF,0.00,cross: assurance finish,8.65,TRI
+EPIC-P1-CONTRACTS#A,EPIC-P2-DEPLOYPREP#A,FF,0.00,cross: assurance finish,8.65,TRI
+EPIC-P1-CONTRACTS#A,G_TRI2,FS,0.00,epic build and assurance complete -> gate,8.65,TRI
+EPIC-P1-CONTRACTS#A,G_TRI4,FS,0.00,epic complete -> gate or work,8.65,TRI
+EPIC-P1-CONTRACTS#B,EPIC-P1-CONTRACTS#A,FF,1.00,intra B->A finish,12.02,TRI
+EPIC-P1-CONTRACTS#B,EPIC-P1-CONTRACTS#A,SS,4.81,intra B->A,12.02,TRI
+EPIC-P1-CONTRACTS#B,EPIC-P1-CONTRACTS#R,SS,8.41,intra B->R,12.02,TRI
+EPIC-P1-CONTRACTS#B,EPIC-P1-MIGRATION#B,SS,6.01,cross: protocol predecessor -> SS,12.02,TRI
+EPIC-P1-CONTRACTS#B,EPIC-P1-PAYONCE#B,SS,6.01,cross: protocol predecessor -> SS,12.02,TRI
+EPIC-P1-CONTRACTS#B,EPIC-P1-QUOTE#B,SS,6.01,cross: protocol predecessor -> SS,12.02,TRI
+EPIC-P1-CONTRACTS#B,EPIC-P1-REVOKE#B,SS,6.01,cross: protocol predecessor -> SS,12.02,TRI
+EPIC-P1-CONTRACTS#B,EPIC-P2-DEPLOYPREP#B,SS,6.01,cross: protocol predecessor -> SS,12.02,TRI
+EPIC-P1-CONTRACTS#B,G_TRI2,FS,0.00,epic build and assurance complete -> gate,12.02,TRI
+EPIC-P1-CONTRACTS#B,G_TRI4,FS,0.00,epic complete -> gate or work,12.02,TRI
+EPIC-P1-CONTRACTS#R,G_TRI4,FS,0.00,epic complete -> gate or work,5.05,TRI
+EPIC-P1-DELEGATION#A,EPIC-P1-DELEGATION#R,FF,0.00,intra A->R finish,1.57,TRI
+EPIC-P1-DELEGATION#A,G_TRI3,FS,0.00,epic build and assurance complete -> gate,1.57,TRI
+EPIC-P1-DELEGATION#A,G_TRI4,FS,0.00,epic complete -> gate or work,1.57,TRI
+EPIC-P1-DELEGATION#B,EPIC-P1-DELEGATION#A,FF,1.00,intra B->A finish,2.19,TRI
+EPIC-P1-DELEGATION#B,EPIC-P1-DELEGATION#A,SS,0.88,intra B->A,2.19,TRI
+EPIC-P1-DELEGATION#B,EPIC-P1-DELEGATION#R,SS,1.53,intra B->R,2.19,TRI
+EPIC-P1-DELEGATION#B,G_TRI3,FS,0.00,epic build and assurance complete -> gate,2.19,TRI
+EPIC-P1-DELEGATION#B,G_TRI4,FS,0.00,epic complete -> gate or work,2.19,TRI
+EPIC-P1-DELEGATION#R,G_TRI4,FS,0.00,epic complete -> gate or work,0.61,TRI
+EPIC-P1-FORK#A,EPIC-P1-FORK#R,FF,0.00,intra A->R finish,4.11,TRI
+EPIC-P1-FORK#A,G_TRI2,FS,0.00,epic build and assurance complete -> gate,4.11,TRI
+EPIC-P1-FORK#A,G_TRI4,FS,0.00,epic complete -> gate or work,4.11,TRI
+EPIC-P1-FORK#B,EPIC-P1-FORK#A,FF,1.00,intra B->A finish,5.71,TRI
+EPIC-P1-FORK#B,EPIC-P1-FORK#A,SS,2.29,intra B->A,5.71,TRI
+EPIC-P1-FORK#B,EPIC-P1-FORK#R,SS,4.00,intra B->R,5.71,TRI
+EPIC-P1-FORK#B,G_TRI2,FS,0.00,epic build and assurance complete -> gate,5.71,TRI
+EPIC-P1-FORK#B,G_TRI4,FS,0.00,epic complete -> gate or work,5.71,TRI
+EPIC-P1-FORK#R,G_TRI4,FS,0.00,epic complete -> gate or work,1.60,TRI
+EPIC-P1-MIGRATION#A,EPIC-P1-MIGRATION#R,FF,0.00,intra A->R finish,0.97,TRI
+EPIC-P1-MIGRATION#A,G_TRI2,FS,0.00,epic build and assurance complete -> gate,0.97,TRI
+EPIC-P1-MIGRATION#A,G_TRI3,FS,0.00,epic build and assurance complete -> gate,0.97,TRI
+EPIC-P1-MIGRATION#A,G_TRI4,FS,0.00,epic complete -> gate or work,0.97,TRI
+EPIC-P1-MIGRATION#B,EPIC-P1-MIGRATION#A,FF,1.00,intra B->A finish,1.35,TRI
+EPIC-P1-MIGRATION#B,EPIC-P1-MIGRATION#A,SS,0.54,intra B->A,1.35,TRI
+EPIC-P1-MIGRATION#B,EPIC-P1-MIGRATION#R,SS,0.95,intra B->R,1.35,TRI
+EPIC-P1-MIGRATION#B,G_TRI2,FS,0.00,epic build and assurance complete -> gate,1.35,TRI
+EPIC-P1-MIGRATION#B,G_TRI3,FS,0.00,epic build and assurance complete -> gate,1.35,TRI
+EPIC-P1-MIGRATION#B,G_TRI4,FS,0.00,epic complete -> gate or work,1.35,TRI
+EPIC-P1-MIGRATION#R,G_TRI4,FS,0.00,epic complete -> gate or work,0.57,TRI
+EPIC-P1-PAYONCE#A,EPIC-P1-PAYONCE#R,FF,0.00,intra A->R finish,0.87,TRI
+EPIC-P1-PAYONCE#A,G_TRI2,FS,0.00,epic build and assurance complete -> gate,0.87,TRI
+EPIC-P1-PAYONCE#A,G_TRI3,FS,0.00,epic build and assurance complete -> gate,0.87,TRI
+EPIC-P1-PAYONCE#A,G_TRI4,FS,0.00,epic complete -> gate or work,0.87,TRI
+EPIC-P1-PAYONCE#B,EPIC-P1-PAYONCE#A,FF,1.00,intra B->A finish,1.20,TRI
+EPIC-P1-PAYONCE#B,EPIC-P1-PAYONCE#A,SS,0.48,intra B->A,1.20,TRI
+EPIC-P1-PAYONCE#B,EPIC-P1-PAYONCE#R,SS,0.84,intra B->R,1.20,TRI
+EPIC-P1-PAYONCE#B,G_TRI2,FS,0.00,epic build and assurance complete -> gate,1.20,TRI
+EPIC-P1-PAYONCE#B,G_TRI3,FS,0.00,epic build and assurance complete -> gate,1.20,TRI
+EPIC-P1-PAYONCE#B,G_TRI4,FS,0.00,epic complete -> gate or work,1.20,TRI
+EPIC-P1-PAYONCE#R,G_TRI4,FS,0.00,epic complete -> gate or work,0.50,TRI
+EPIC-P1-QUOTE#A,EPIC-P1-QUOTE#R,FF,0.00,intra A->R finish,1.95,TRI
+EPIC-P1-QUOTE#A,G_TRI4,FS,0.00,epic complete -> gate or work,1.95,TRI
+EPIC-P1-QUOTE#B,EPIC-P1-QUOTE#A,FF,1.00,intra B->A finish,2.71,TRI
+EPIC-P1-QUOTE#B,EPIC-P1-QUOTE#A,SS,1.09,intra B->A,2.71,TRI
+EPIC-P1-QUOTE#B,EPIC-P1-QUOTE#R,SS,1.90,intra B->R,2.71,TRI
+EPIC-P1-QUOTE#B,G_TRI4,FS,0.00,epic complete -> gate or work,2.71,TRI
+EPIC-P1-QUOTE#R,G_TRI4,FS,0.00,epic complete -> gate or work,0.76,TRI
+EPIC-P1-REVOKE#A,EPIC-P1-REVOKE#R,FF,0.00,intra A->R finish,0.45,TRI
+EPIC-P1-REVOKE#A,G_TRI2,FS,0.00,epic build and assurance complete -> gate,0.45,TRI
+EPIC-P1-REVOKE#A,G_TRI4,FS,0.00,epic complete -> gate or work,0.45,TRI
+EPIC-P1-REVOKE#B,EPIC-P1-REVOKE#A,FF,1.00,intra B->A finish,0.62,TRI
+EPIC-P1-REVOKE#B,EPIC-P1-REVOKE#A,SS,0.25,intra B->A,0.62,TRI
+EPIC-P1-REVOKE#B,EPIC-P1-REVOKE#R,SS,0.43,intra B->R,0.62,TRI
+EPIC-P1-REVOKE#B,G_TRI2,FS,0.00,epic build and assurance complete -> gate,0.62,TRI
+EPIC-P1-REVOKE#B,G_TRI4,FS,0.00,epic complete -> gate or work,0.62,TRI
+EPIC-P1-REVOKE#R,G_TRI4,FS,0.00,epic complete -> gate or work,0.26,TRI
+EPIC-P1-SIGNER#A,EPIC-P1-SIGNER#R,FF,0.00,intra A->R finish,0.99,TRI
+EPIC-P1-SIGNER#A,G_TRI4,FS,0.00,epic complete -> gate or work,0.99,TRI
+EPIC-P1-SIGNER#B,EPIC-P1-SIGNER#A,FF,1.00,intra B->A finish,1.37,TRI
+EPIC-P1-SIGNER#B,EPIC-P1-SIGNER#A,SS,0.55,intra B->A,1.37,TRI
+EPIC-P1-SIGNER#B,EPIC-P1-SIGNER#R,SS,0.96,intra B->R,1.37,TRI
+EPIC-P1-SIGNER#B,G_TRI4,FS,0.00,epic complete -> gate or work,1.37,TRI
+EPIC-P1-SIGNER#R,G_TRI4,FS,0.00,epic complete -> gate or work,0.38,TRI
+EPIC-P1-TOKENREG#A,EPIC-P1-TOKENREG#R,FF,0.00,intra A->R finish,0.60,TRI
+EPIC-P1-TOKENREG#A,G_TRI2,FS,0.00,epic build and assurance complete -> gate,0.60,TRI
+EPIC-P1-TOKENREG#A,G_TRI4,FS,0.00,epic complete -> gate or work,0.60,TRI
+EPIC-P1-TOKENREG#B,EPIC-P1-TOKENREG#A,FF,1.00,intra B->A finish,0.83,TRI
+EPIC-P1-TOKENREG#B,EPIC-P1-TOKENREG#A,SS,0.33,intra B->A,0.83,TRI
+EPIC-P1-TOKENREG#B,EPIC-P1-TOKENREG#R,SS,0.58,intra B->R,0.83,TRI
+EPIC-P1-TOKENREG#B,G_TRI2,FS,0.00,epic build and assurance complete -> gate,0.83,TRI
+EPIC-P1-TOKENREG#B,G_TRI4,FS,0.00,epic complete -> gate or work,0.83,TRI
+EPIC-P1-TOKENREG#R,G_TRI4,FS,0.00,epic complete -> gate or work,0.23,TRI
+EPIC-P2-DEPLOYPREP#A,EPIC-P2-DEPLOYPREP#R,FF,0.00,intra A->R finish,1.11,TRI
+EPIC-P2-DEPLOYPREP#A,G_TRI4,FS,0.00,epic complete -> gate or work,1.11,TRI
+EPIC-P2-DEPLOYPREP#B,EPIC-P2-DEPLOYPREP#A,FF,1.00,intra B->A finish,1.54,TRI
+EPIC-P2-DEPLOYPREP#B,EPIC-P2-DEPLOYPREP#A,SS,0.62,intra B->A,1.54,TRI
+EPIC-P2-DEPLOYPREP#B,EPIC-P2-DEPLOYPREP#R,SS,1.08,intra B->R,1.54,TRI
+EPIC-P2-DEPLOYPREP#B,G_TRI4,FS,0.00,epic complete -> gate or work,1.54,TRI
+EPIC-P2-DEPLOYPREP#R,G_TRI4,FS,0.00,epic complete -> gate or work,0.65,TRI
+EPIC-P2-TESTNET#A,EPIC-P2-TESTNET#R,FF,0.00,intra A->R finish,2.40,TRI
+EPIC-P2-TESTNET#A,G_TRI4,FS,0.00,epic complete -> gate or work,2.40,TRI
+EPIC-P2-TESTNET#B,EPIC-P2-TESTNET#A,FF,1.00,intra B->A finish,3.34,TRI
+EPIC-P2-TESTNET#B,EPIC-P2-TESTNET#A,SS,1.33,intra B->A,3.34,TRI
+EPIC-P2-TESTNET#B,EPIC-P2-TESTNET#R,SS,2.34,intra B->R,3.34,TRI
+EPIC-P2-TESTNET#B,G_TRI4,FS,0.00,epic complete -> gate or work,3.34,TRI
+EPIC-P2-TESTNET#R,G_TRI4,FS,0.00,epic complete -> gate or work,1.40,TRI
+G_FREEZE,EPIC-P1-CHAINGW#B,FS,0.00,gate or wait -> epic,2.00,TRI
+G_FREEZE,EPIC-P1-CONTRACTS#B,FS,0.00,gate or wait -> epic,2.00,TRI
+G_FREEZE,EPIC-P1-DELEGATION#B,FS,0.00,gate or wait -> epic,2.00,TRI
+G_FREEZE,EPIC-P1-FORK#B,FS,0.00,gate or wait -> epic,2.00,TRI
+G_FREEZE,EPIC-P1-TOKENREG#B,FS,0.00,gate or wait -> epic,2.00,TRI
+G_TRI2,EPIC-P2-DEPLOYPREP#B,FS,0.00,gate or wait -> epic,2.00,TRI
+G_TRI2,EPIC-P2-TESTNET#B,FS,0.00,gate or wait -> epic,2.00,TRI
+G_TRI2,G_TRI4,FS,0.00,node -> node,2.00,TRI
+G_TRI3,G_TRI4,FS,0.00,node -> node,2.00,TRI
+L_COUNSEL_NOTICE,G_FREEZE,FS,0.00,node -> node,10.00,TRI
+L_PC_APPROVAL,G_FREEZE,FS,0.00,node -> node,2.00,TRI
+L_PERMIT2_E2,G_FREEZE,FS,0.00,node -> node,2.00,TRI
+W_LAB_MIN,G_FREEZE,FS,0.00,node -> node,8.00,TRI
+W_LAB_MIN,G_TRI3,FS,0.00,node -> node,8.00,TRI
+W_LAB_MIN,L_PC_APPROVAL,FS,0.00,node -> node,8.00,TRI
+W_LAB_MIN,W_LAB_REST,FS,0.00,node -> node,8.00,TRI
+W_LAB_REST,G_TRI3,FS,0.00,node -> node,3.43,TRI

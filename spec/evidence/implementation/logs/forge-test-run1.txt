@@ -1,0 +1,376 @@
+No files changed, compilation skipped
+
+Ran 1 test for test/generated/GenErrorSelectors.t.sol:GenErrorSelectorsTest
+[PASS] test_ErrorSelectorTable() (gas: 27111)
+Suite result: ok. 1 passed; 0 failed; 0 skipped; finished in 17.82ms (3.36ms CPU time)
+
+Ran 18 tests for test/ConfigRecords.t.sol:ConfigRecordsTest
+[PASS] test_ConfigRange_CYCLE_RULE() (gas: 20203)
+[PASS] test_ConfigRange_EIP712_NAMES_TAGS_AND_TYPES() (gas: 8105)
+[PASS] test_ConfigRange_FEE_CEILING_BPS() (gas: 5578)
+[PASS] test_ConfigRange_MAX_BAND_WIDTH_BPS() (gas: 4690)
+[PASS] test_ConfigRange_MAX_BATCH() (gas: 13499)
+[PASS] test_ConfigRange_MAX_EXPOSED_TOKENS_PER_ROUTER() (gas: 9980)
+[PASS] test_ConfigRange_MAX_QUOTE_TTL() (gas: 3620)
+[PASS] test_ConfigRange_MAX_ROUTERS_LIVE() (gas: 14904)
+[PASS] test_ConfigRange_MAX_TOKENS_PER_MANDATE() (gas: 6322)
+[PASS] test_ConfigRange_MIN_NOTICE_SECURITY() (gas: 16355)
+[PASS] test_ConfigRange_MIN_NOTICE_STANDARD() (gas: 10646)
+[PASS] test_ConfigRange_MIN_RECIPIENT_CHANGE_DELAY() (gas: 4029)
+[PASS] test_ConfigRange_PERMIT2_ADDRESS() (gas: 4015)
+[PASS] test_ConfigRange_PIN_EOA_AND_KECCAK_EMPTY() (gas: 5505)
+[PASS] test_ConfigRange_QUOTE_SET_GRACE() (gas: 8562)
+[PASS] test_ConfigRange_RETENTION() (gas: 9777)
+[PASS] test_ConfigRange_TIMELOCK_MIN_DELAY_AND_GUARDIAN() (gas: 73866)
+[PASS] test_ConfigRange_WINDOW_LENGTHS() (gas: 3890)
+Suite result: ok. 18 passed; 0 failed; 0 skipped; finished in 25.93ms (5.03ms CPU time)
+
+Ran 14 tests for test/fork/Permit2Freeze.t.sol:Permit2FreezeTest
+[SKIP] testFuzz_DifferentialAgainstMock(uint256) (runs: 0, μ: 0, ~: 0)
+[SKIP] test_F2_ApproveOverwritesTheSharedSlot() (gas: 0)
+[SKIP] test_F4_UnlimitedIsNeverDecremented_BoundedIs() (gas: 0)
+[SKIP] test_F5_ExpirationZeroStoresBlockTimestamp() (gas: 0)
+[SKIP] test_MIG_TV_22_40_UsabilityBoundary() (gas: 0)
+[SKIP] test_RV_T01_LockdownZeroesTheAmountOnly() (gas: 0)
+[SKIP] test_RV_T02_LockdownOfTheUnlimitedSentinel() (gas: 0)
+[SKIP] test_RV_T03_OneCallTwoPairsLeavesOtherSpendersAlone() (gas: 0)
+[SKIP] test_RV_T04_LockdownOfAnExpiredAllowance() (gas: 0)
+[SKIP] test_RV_T05_LockdownWithNoAllowance() (gas: 0)
+[SKIP] test_RV_T06_AnAttackersLockdownChangesNothingOfTheOwner() (gas: 0)
+[SKIP] test_RV_T07_AllowanceFromASignedPermit_LockdownAndReplay() (gas: 0)
+[SKIP] test_RV_T08_ApproveZeroZero() (gas: 0)
+[SKIP] test_RV_T10_InvalidateNonces_Cap() (gas: 0)
+Suite result: ok. 0 passed; 0 failed; 14 skipped; finished in 37.02ms (23.39ms CPU time)
+
+Ran 20 tests for test/TimestampBoundary.t.sol:TimestampBoundaryTest
+[PASS] test_A2_DeadlineEqualsNow_Accepted_OneSecondLate_Refused() (gas: 1856938)
+[PASS] test_CycleIndex_Boundaries() (gas: 20687)
+[PASS] test_G1_NewAllowanceExpiringNow_Accepted_OneSecondBefore_Refused() (gas: 1900536)
+[PASS] test_MandateExpiry_Boundaries() (gas: 1922589)
+[PASS] test_MandateExpiry_SuccessorAllowedOneSecondBefore() (gas: 1619379)
+[PASS] test_MaxBatch_Boundary() (gas: 14213)
+[PASS] test_O1N_AmountZero_Accepted() (gas: 1618744)
+[PASS] test_O1N_ExpirationEqualsNow_StillUsable_Reverts() (gas: 1939991)
+[PASS] test_O1N_ExpirationOneSecondAfterNow_Reverts() (gas: 1282147)
+[PASS] test_O1N_ExpirationOneSecondBeforeNow_Accepted() (gas: 1614841)
+[PASS] test_Permit2_ExpirationZeroStoresBlockTimestamp() (gas: 138331)
+[PASS] test_Permit2_LockdownKeepsTheExpiration() (gas: 137644)
+[PASS] test_Permit2_UsableAtExpiration_ExpiredOneSecondLater() (gas: 123437)
+[PASS] test_QuoteTimes_Boundaries() (gas: 70407)
+[PASS] test_Registry_NoticeSunsetRetentionBoundaries() (gas: 559966)
+[PASS] test_Registry_RollbackWindow() (gas: 404231)
+[PASS] test_Registry_SecurityNoticeIsShorter() (gas: 403169)
+[PASS] test_SignerSet_GraceBoundaries() (gas: 477078)
+[PASS] test_SignerSet_RemovalHasNoGrace() (gas: 472753)
+[PASS] test_WindowGrid_ChangesExactlyAtTheBoundary() (gas: 178932)
+Suite result: ok. 20 passed; 0 failed; 0 skipped; finished in 41.91ms (51.96ms CPU time)
+
+Ran 8 tests for test/generated/GenHashVectors.t.sol:GenHashVectorsTest
+[PASS] test_FiatRounding() (gas: 7117)
+[PASS] test_Identifiers() (gas: 12908)
+[PASS] test_PaymentIdIsRouterIndependent() (gas: 7372)
+[PASS] test_Permit2Usable() (gas: 7288)
+[PASS] test_PinConstants() (gas: 18755)
+[PASS] test_QuoteVector() (gas: 13091)
+[PASS] test_RouteHash() (gas: 4762)
+[PASS] test_SnapshotHash() (gas: 15457)
+Suite result: ok. 8 passed; 0 failed; 0 skipped; finished in 62.38ms (6.88ms CPU time)
+
+Ran 11 tests for test/SharedAllowance.t.sol:SharedAllowanceTest
+[PASS] test_E10_LockdownOfOneTokenLeavesTheOthersAlone() (gas: 270226)
+[PASS] test_E1_ThreeSiblings_LastNeedsLockdown() (gas: 3931970)
+[PASS] test_E2_PartialOverlap_ExclusiveTokenMustBeUnusable() (gas: 3305392)
+[PASS] test_E2_SharedTokenUnlimited_IsRefusedWhileExclusiveIsClean() (gas: 3160352)
+[PASS] test_E3_SecurityDeprecation_InterruptsSiblings() (gas: 3896395)
+[PASS] test_E4_ClearEmergency_RestoresNormalMode() (gas: 2358234)
+[PASS] test_E5_SiblingDrainsTheShareThenLastLineageNeedsNoLockdown() (gas: 2794788)
+[PASS] test_E6_RevokingTheOnlySibling_MakesTheNextMigrationALastLineageOne() (gas: 1778833)
+[PASS] test_E7_RevisionOnSharedTokenTouchesNeitherAllowanceNorSibling() (gas: 2408078)
+[PASS] test_E8_OldRouterCannotChargeTheMigratedLineageWhateverTheAllowance() (gas: 2832824)
+[PASS] test_E9_EmergencyListsEverySiblingToken() (gas: 4039726)
+Suite result: ok. 11 passed; 0 failed; 0 skipped; finished in 66.79ms (77.43ms CPU time)
+
+Ran 17 tests for test/IntegerWidth.t.sol:IntegerWidthTest
+[PASS] testFuzz_ApproveNeverTruncates(uint256,uint256) (runs: 1000, μ: 51103, ~: 38561)
+[PASS] testFuzz_NarrowNeverTruncates(uint256) (runs: 1000, μ: 21672, ~: 21479)
+[PASS] test_CycleArithmetic_LargeValues() (gas: 30969)
+[PASS] test_CycleArithmetic_RevertsInsteadOfWrapping() (gas: 34633)
+[PASS] test_EOfZeroIsInfinity() (gas: 24640)
+[PASS] test_G1_CapAboveUint160IsNotTruncated() (gas: 3630441)
+[PASS] test_Hazard_ExplicitCastTruncatesSilently() (gas: 4037)
+[PASS] test_Uint160_AmountAboveTheLimitIsRefused() (gas: 61026)
+[PASS] test_Uint160_SentinelIsNeverDecremented() (gas: 219791)
+[PASS] test_Uint256_FiatProductOverflowReverts() (gas: 16103)
+[PASS] test_Uint256_UsedPlusAmountNearTheLimitReverts() (gas: 49723)
+[PASS] test_Uint32_ExposureCountOverflowReverts() (gas: 2646661)
+[PASS] test_Uint32_ExposureCountUnderflowReverts() (gas: 3397485)
+[PASS] test_Uint32_PinVersionOverflowReverts() (gas: 45986)
+[PASS] test_Uint48_AboveTheLimitIsRefusedNotTruncated() (gas: 93363)
+[PASS] test_Uint48_ExpirationAtTheLimit() (gas: 132754)
+[PASS] test_WidthLib_RefusesWhatACastWouldTruncate() (gas: 68263)
+Suite result: ok. 17 passed; 0 failed; 0 skipped; finished in 727.82ms (708.46ms CPU time)
+
+Ran 8 tests for test/Pin.t.sol:PinTest
+[PASS] testFuzz_AuthTruthTable(uint8,uint8,uint8,bool,bool,uint8) (runs: 1000, μ: 19454, ~: 19392)
+[PASS] testFuzz_HashStructInjective(uint8,uint8) (runs: 1000, μ: 8441, ~: 8311)
+[PASS] testFuzz_PinOk(uint8,uint8,uint8,bytes32) (runs: 1000, μ: 5349, ~: 5330)
+[PASS] testFuzz_WellFormed(uint8,uint256,uint32,uint8) (runs: 1000, μ: 5130, ~: 5013)
+[PASS] test_UpdateAccountPin_ChangesOnlyThePinAndItsVersion() (gas: 1410645)
+[PASS] test_UpdateAccountPin_RefusedUpdateChangesNothing() (gas: 1097926)
+[PASS] test_UpdateAccountPin_VersionIsMonotone() (gas: 3721673)
+[PASS] test_WellFormed_AsWritten_Mode2PutsNoBoundOnSignatureMode() (gas: 1567)
+Suite result: ok. 8 passed; 0 failed; 0 skipped; finished in 814.18ms (794.75ms CPU time)
+
+Ran 1 test for test/generated/GenContainment.t.sol:GenContainmentTest
+[PASS] test_ContainmentAndLemmaM() (gas: 256055894)
+Suite result: ok. 1 passed; 0 failed; 0 skipped; finished in 938.33ms (875.38ms CPU time)
+
+Ran 15 tests for test/EIP712Permit2.t.sol:EIP712Permit2Test
+[PASS] test_Permit2DomainSeparator_EqualsTheGoldenVector() (gas: 9188)
+[PASS] test_Rebuild_Create2AddressIsTheCanonicalOne() (gas: 136068)
+[PASS] test_Rebuild_ImmutablesAreWhatTheEvidenceNames() (gas: 37433)
+[PASS] test_Rebuild_RuntimeCodeEqualsTheLocalExpectation() (gas: 362618)
+[PASS] test_Witness_Batch_Accepted() (gas: 272704)
+[PASS] test_Witness_Batch_PermittedAmountsAreBinding() (gas: 155817)
+[PASS] test_Witness_Batch_SingleSignatureDoesNotValidateAsBatchAndViceVersa() (gas: 210596)
+[PASS] test_Witness_Batch_WrongSpenderAndLengthMismatch() (gas: 166214)
+[PASS] test_Witness_Single_Accepted() (gas: 158651)
+[PASS] test_Witness_Single_AnyChangeOfTheTypeStringFails() (gas: 513920)
+[PASS] test_Witness_Single_DestinationIsNotBoundByPermit2() (gas: 158927)
+[PASS] test_Witness_Single_EveryFieldIsBound() (gas: 875240)
+[PASS] test_Witness_Single_ExpiredAndOverRequested() (gas: 121804)
+[PASS] test_Witness_Single_OnlyTheSignedSpender() (gas: 107837)
+[PASS] test_Witness_Single_ReplayIsRefused() (gas: 188246)
+Suite result: ok. 15 passed; 0 failed; 0 skipped; finished in 979.45ms (94.27ms CPU time)
+
+Ran 6 tests for test/MigrationFuzz.t.sol:MigrationFuzzTest
+[PASS] testFuzz_ContainedMatchesOracle(uint256) (runs: 1000, μ: 96315, ~: 97772)
+[PASS] testFuzz_ExposureIndex(uint256) (runs: 1000, μ: 101252571, ~: 98921398)
+[PASS] testFuzz_LemmaM(uint256) (runs: 1000, μ: 59577, ~: 51330)
+[PASS] testFuzz_LemmaM_Tightened(uint256) (runs: 1000, μ: 440348, ~: 442974)
+[PASS] testFuzz_OldPermission(uint8,uint8,uint8,uint8) (runs: 1000, μ: 1950302, ~: 1974901)
+[PASS] testFuzz_RouterMode(uint8) (runs: 1000, μ: 137897, ~: 159357)
+Suite result: ok. 6 passed; 0 failed; 0 skipped; finished in 89.46s (97.70s CPU time)
+
+Ran 1 test for test/MigrationInvariant.t.sol:MigrationInvariantTest
+[PASS]
+MigrationInvariantTest invariants:
+[PASS] invariant_I_MIG_10_ExposureIndexExact
+[PASS] invariant_I_MIG_11_NonInterference
+[PASS] invariant_I_MIG_1_AtMostOneActiveMandatePerLineage
+[PASS] invariant_I_MIG_3_CountersNeverDecrease
+[PASS] invariant_I_MIG_7_SharedAllowanceRule
+[PASS] invariant_I_MIG_8_NoOverlappingAuthority
+ MigrationInvariantTest invariants (runs: 256, calls: 16384, reverts: 0)
+
+╭------------------+-----------------+-------+---------+----------╮
+| Contract         | Selector        | Calls | Reverts | Discards |
++=================================================================+
+| MigrationHandler | activate        | 1741  | 0       | 0        |
+|------------------+-----------------+-------+---------+----------|
+| MigrationHandler | charge          | 1783  | 0       | 0        |
+|------------------+-----------------+-------+---------+----------|
+| MigrationHandler | deprecateRouter | 1925  | 0       | 0        |
+|------------------+-----------------+-------+---------+----------|
+| MigrationHandler | disableRouter   | 1770  | 0       | 0        |
+|------------------+-----------------+-------+---------+----------|
+| MigrationHandler | grant           | 1879  | 0       | 0        |
+|------------------+-----------------+-------+---------+----------|
+| MigrationHandler | migrate         | 1822  | 0       | 0        |
+|------------------+-----------------+-------+---------+----------|
+| MigrationHandler | retire          | 1862  | 0       | 0        |
+|------------------+-----------------+-------+---------+----------|
+| MigrationHandler | revoke          | 1805  | 0       | 0        |
+|------------------+-----------------+-------+---------+----------|
+| MigrationHandler | warp            | 1797  | 0       | 0        |
+╰------------------+-----------------+-------+---------+----------╯
+
+Suite result: ok. 1 passed; 0 failed; 0 skipped; finished in 111.88s (111.85s CPU time)
+
+Ran 3 tests for test/generated/GenTables.t.sol:GenTablesTest
+[PASS] test_Table_SharedAllowanceX() (gas: 378479415)
+[PASS] test_Table_SharedAllowanceY() (gas: 279558611)
+[PASS] test_Table_SingleLineage() (gas: 2770027)
+Suite result: ok. 3 passed; 0 failed; 0 skipped; finished in 115.19s (2.87s CPU time)
+
+Ran 16 tests for test/generated/EIP712Golden.t.sol:EIP712GoldenTest
+[PASS] test_AccountPinUpdate_MatchesGolden() (gas: 19199)
+[PASS] test_AccountPin_MatchesGolden() (gas: 15488)
+[PASS] test_AccountPinsUpdate_MatchesGolden() (gas: 21437)
+[PASS] test_ActivationTerms_MatchesGolden() (gas: 47477)
+[PASS] test_FiatTerms_MatchesGolden() (gas: 17219)
+[PASS] test_MandateTerms_MatchesGolden() (gas: 35794)
+[PASS] test_PauseMandate_MatchesGolden() (gas: 14084)
+[PASS] test_PayOnceIntent_MatchesGolden() (gas: 13085)
+[PASS] test_Permit2Witness_MatchesGolden() (gas: 25970)
+[PASS] test_PriceQuote_MatchesGolden() (gas: 18589)
+[PASS] test_ReduceMandate_MatchesGolden() (gas: 14489)
+[PASS] test_ResumeMandate_MatchesGolden() (gas: 14106)
+[PASS] test_RevokeMandate_MatchesGolden() (gas: 13930)
+[PASS] test_SuccessorAuthorization_MatchesGolden() (gas: 22635)
+[PASS] test_Tags_MatchGolden() (gas: 5616)
+[PASS] test_TokenTerms_MatchesGolden() (gas: 15326)
+Suite result: ok. 16 passed; 0 failed; 0 skipped; finished in 127.81s (16.11ms CPU time)
+
+Ran 113 tests for test/generated/GenScenarios.t.sol:GenScenariosTest
+[PASS] test_ACP_TV_13_17() (gas: 28833121)
+[PASS] test_ACP_TV_13_CHARGE() (gas: 30197525)
+[PASS] test_ACP_TV_25() (gas: 28765627)
+[PASS] test_ACP_TV_26() (gas: 28935768)
+[PASS] test_ACP_TV_27_28() (gas: 29087432)
+[PASS] test_ACP_TV_29() (gas: 29278391)
+[PASS] test_ACP_TV_30() (gas: 28882305)
+[PASS] test_ACP_TV_31() (gas: 30696052)
+[PASS] test_ACP_TV_33() (gas: 30444665)
+[PASS] test_ACP_TV_34() (gas: 30997303)
+[PASS] test_ACP_TV_35() (gas: 31109271)
+[PASS] test_ACP_TV_37() (gas: 28978035)
+[PASS] test_ACP_TV_38() (gas: 28875881)
+[PASS] test_ACP_TV_39() (gas: 28887967)
+[PASS] test_ACP_TV_40() (gas: 28900660)
+[PASS] test_ACP_TV_41() (gas: 28764516)
+[PASS] test_ACP_TV_ACTIVATE() (gas: 30566494)
+[PASS] test_ACP_TV_UPDATE_TERMINAL() (gas: 31336313)
+[PASS] test_CAP_TV_14_15() (gas: 28830745)
+[PASS] test_CAP_TV_16() (gas: 28841004)
+[PASS] test_CAP_TV_23() (gas: 28815085)
+[PASS] test_CAP_TV_24() (gas: 28620435)
+[PASS] test_CAP_TV_25_26() (gas: 28819013)
+[PASS] test_CAP_TV_27() (gas: 28814152)
+[PASS] test_CAP_TV_27B() (gas: 28793514)
+[PASS] test_CAP_TV_28() (gas: 28824945)
+[PASS] test_CAP_TV_29() (gas: 30386917)
+[PASS] test_CAP_TV_30() (gas: 28822855)
+[PASS] test_CAP_TV_31() (gas: 28623369)
+[PASS] test_CAP_TV_32() (gas: 28691726)
+[PASS] test_CAP_TV_Q13() (gas: 28574571)
+[PASS] test_IW_ARITHMETIC() (gas: 28318385)
+[PASS] test_IW_CONSUME() (gas: 31100501)
+[PASS] test_IW_CONTAIN() (gas: 29196013)
+[PASS] test_IW_COUNTS() (gas: 30211058)
+[PASS] test_IW_NARROW() (gas: 28409408)
+[PASS] test_IW_PERMIT2() (gas: 28435272)
+[PASS] test_MIG_TV_05() (gas: 30972367)
+[PASS] test_MIG_TV_06() (gas: 30927658)
+[PASS] test_MIG_TV_07() (gas: 30793704)
+[PASS] test_MIG_TV_08() (gas: 31033202)
+[PASS] test_MIG_TV_09() (gas: 32106079)
+[PASS] test_MIG_TV_10() (gas: 30900228)
+[PASS] test_MIG_TV_11() (gas: 30845116)
+[PASS] test_MIG_TV_12() (gas: 31127627)
+[PASS] test_MIG_TV_13() (gas: 31848036)
+[PASS] test_MIG_TV_14() (gas: 30797564)
+[PASS] test_MIG_TV_15() (gas: 31565697)
+[PASS] test_MIG_TV_17() (gas: 32354173)
+[PASS] test_MIG_TV_21() (gas: 32148089)
+[PASS] test_MIG_TV_22A() (gas: 30769269)
+[PASS] test_MIG_TV_22B() (gas: 30588613)
+[PASS] test_MIG_TV_22C() (gas: 30588977)
+[PASS] test_MIG_TV_23A() (gas: 30351085)
+[PASS] test_MIG_TV_23B() (gas: 31471367)
+[PASS] test_MIG_TV_23C() (gas: 30978979)
+[PASS] test_MIG_TV_24() (gas: 31253124)
+[PASS] test_MIG_TV_25() (gas: 30815150)
+[PASS] test_MIG_TV_26() (gas: 32853055)
+[PASS] test_MIG_TV_27() (gas: 30786901)
+[PASS] test_MIG_TV_28() (gas: 30780690)
+[PASS] test_MIG_TV_29() (gas: 31411194)
+[PASS] test_MIG_TV_29B() (gas: 31590897)
+[PASS] test_MIG_TV_30() (gas: 31674371)
+[PASS] test_MIG_TV_31() (gas: 31004313)
+[PASS] test_MIG_TV_32() (gas: 31809613)
+[PASS] test_MIG_TV_33() (gas: 32176565)
+[PASS] test_MIG_TV_34() (gas: 31905770)
+[PASS] test_MIG_TV_35_ACTIVE_E() (gas: 30621883)
+[PASS] test_MIG_TV_35_ACTIVE_N() (gas: 30601136)
+[PASS] test_MIG_TV_35_DEP_SEC_E() (gas: 30675565)
+[PASS] test_MIG_TV_35_DEP_SEC_N() (gas: 30398534)
+[PASS] test_MIG_TV_35_DEP_STD_E() (gas: 30676629)
+[PASS] test_MIG_TV_35_DEP_STD_N() (gas: 30656476)
+[PASS] test_MIG_TV_35_DISABLED_E() (gas: 30630932)
+[PASS] test_MIG_TV_35_DISABLED_N() (gas: 30354649)
+[PASS] test_MIG_TV_35_RETIRED_E() (gas: 30731549)
+[PASS] test_MIG_TV_35_RETIRED_N() (gas: 30453859)
+[PASS] test_MIG_TV_35_SUNSET_E() (gas: 30713577)
+[PASS] test_MIG_TV_35_SUNSET_N() (gas: 30438285)
+[PASS] test_MIG_TV_36A() (gas: 31642426)
+[PASS] test_MIG_TV_36B() (gas: 31790590)
+[PASS] test_MIG_TV_36C() (gas: 29933462)
+[PASS] test_MIG_TV_37() (gas: 37885161)
+[PASS] test_MIG_TV_37B() (gas: 38226364)
+[PASS] test_MIG_TV_38() (gas: 149860693)
+[PASS] test_MIG_TV_39_EMERGENCY() (gas: 34418698)
+[PASS] test_MIG_TV_39_NORMAL() (gas: 34379123)
+[PASS] test_MIG_TV_39_REVISION() (gas: 34989301)
+[PASS] test_MIG_TV_40D() (gas: 30769127)
+[PASS] test_MIG_TV_41() (gas: 30828691)
+[PASS] test_MIG_TV_42() (gas: 30910763)
+[PASS] test_MIG_TV_43_1() (gas: 314444492)
+[PASS] test_MIG_TV_43_2() (gas: 250146862)
+[PASS] test_MIG_TV_43_3() (gas: 154780392)
+[PASS] test_MIG_TV_43_4() (gas: 162877240)
+[PASS] test_MIG_TV_43_5() (gas: 474526879)
+[PASS] test_MIG_TV_43_6() (gas: 502809683)
+[PASS] test_MIG_TV_44() (gas: 31643500)
+[PASS] test_MIG_TV_45() (gas: 31725903)
+[PASS] test_MIG_TV_A1() (gas: 31495948)
+[PASS] test_MIG_TV_A1B() (gas: 31727265)
+[PASS] test_MIG_TV_A1C() (gas: 31976453)
+[PASS] test_MIG_TV_A2() (gas: 31262443)
+[PASS] test_MIG_TV_L1() (gas: 30832351)
+[PASS] test_MIG_TV_L1B() (gas: 30343526)
+[PASS] test_TB_ALLOWANCE() (gas: 28541922)
+[PASS] test_TB_BATCH() (gas: 28304145)
+[PASS] test_TB_MANDATE_EXPIRY() (gas: 30060724)
+[PASS] test_TB_QUOTE_TIMES() (gas: 28357459)
+[PASS] test_TB_REGISTRY_GUARDS() (gas: 28861456)
+[PASS] test_TB_REGISTRY_NOTICE() (gas: 28778449)
+[PASS] test_TB_WINDOW_GRID() (gas: 28566877)
+Suite result: ok. 113 passed; 0 failed; 0 skipped; finished in 143.96s (29.23s CPU time)
+
+Ran 5 tests for test/SignerSet.t.sol:SignerSetTest
+[PASS]
+SignerSetTest invariants:
+[PASS] invariant_SR1_SR2_SR5_HoldInEveryState
+[PASS] invariant_SR3_RemovalStopAndTimeOnlyShrinkAcceptance
+[PASS] invariant_SR4_TombstonePermanence
+[PASS] invariant_SR7_GuardianCannotAdd
+ SignerSetTest invariants (runs: 256, calls: 16384, reverts: 0)
+
+╭------------------+--------------------+-------+---------+----------╮
+| Contract         | Selector           | Calls | Reverts | Discards |
++====================================================================+
+| SignerSetHandler | guardianTries      | 3223  | 0       | 0        |
+|------------------+--------------------+-------+---------+----------|
+| SignerSetHandler | proposeAndActivate | 3282  | 0       | 0        |
+|------------------+--------------------+-------+---------+----------|
+| SignerSetHandler | remove             | 3282  | 0       | 0        |
+|------------------+--------------------+-------+---------+----------|
+| SignerSetHandler | stop               | 3274  | 0       | 0        |
+|------------------+--------------------+-------+---------+----------|
+| SignerSetHandler | warp               | 3323  | 0       | 0        |
+╰------------------+--------------------+-------+---------+----------╯
+
+[PASS] testFuzz_SR1_to_SR5_OnRandomHistories(uint256) (runs: 1000, μ: 61852983, ~: 61843417)
+[PASS] testFuzz_SR7_GuardianCannotAddFromAnyHistory(uint256,uint8) (runs: 1000, μ: 375934, ~: 361547)
+[PASS] testFuzz_TombstoneSurvivesAnyHistory(uint256) (runs: 1000, μ: 356936, ~: 337554)
+[PASS] test_Tombstone_IsPermanentAndRemovalIsIdempotent() (gas: 150283)
+Suite result: ok. 5 passed; 0 failed; 0 skipped; finished in 165.96s (323.48s CPU time)
+
+Ran 12 tests for test/MigrationMutation.t.sol:MigrationMutationTest
+[PASS] testMutantsKilled_0() (gas: 7831009579)
+[PASS] testMutantsKilled_1() (gas: 1621922924)
+[PASS] testMutantsKilled_2() (gas: 6491179884)
+[PASS] testMutantsKilled_3() (gas: 19192883394)
+[PASS] testMutantsKilled_4() (gas: 6948173058)
+[PASS] testMutantsKilled_5() (gas: 8467694853)
+[PASS] testMutantsKilled_6() (gas: 19407615423)
+[PASS] testMutantsKilled_7() (gas: 28530649273)
+[PASS] testMutantsKilled_8() (gas: 31057370219)
+[PASS] testMutantsKilled_9() (gas: 13053330966)
+[PASS] test_ChunksCoverEveryMutant() (gas: 613)
+[PASS] test_Mutant0PassesEverything() (gas: 2676097203)
+Suite result: ok. 12 passed; 0 failed; 0 skipped; finished in 288.07s (1325.09s CPU time)
+
+Ran 17 test suites in 288.11s (1046.04s CPU time): 255 tests passed, 0 failed, 14 skipped (269 total tests)
+exit=0

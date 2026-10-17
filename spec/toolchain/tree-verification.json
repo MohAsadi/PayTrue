@@ -1,0 +1,213 @@
+{
+ "trees": [
+  {
+   "blobsInCommit": 59,
+   "blobsMatched": 59,
+   "commit": "77041d2ce690e692d6e03cc812b57d1ddaa4d505",
+   "extraLocalFiles": [],
+   "extractedTo": "foundry/lib/forge-std",
+   "filesHashed": 59,
+   "localRootTreeRecomputed": "86836b75653248e7be359b24e6441ea7fce669a7",
+   "mismatchedOrMissing": [],
+   "name": "forge-std",
+   "nestedPinnedSubmodulesExtractedHere": [],
+   "repo": "foundry-rs/forge-std",
+   "rootTree": "86836b75653248e7be359b24e6441ea7fce669a7",
+   "rootTreeEqual": true,
+   "sha256Listing": "2835220febd30183aaac29e090f664b603602a6d6a2064e7ed9f2c8643bf9d9d",
+   "submoduleEntriesNotInArchive": {},
+   "submodulePath": null,
+   "verified": true
+  },
+  {
+   "blobsInCommit": 96,
+   "blobsMatched": 96,
+   "commit": "cc306b601f172c51bc04334a109e98340456620b",
+   "extraLocalFiles": [],
+   "extractedTo": "toolchain/permit2-build/permit2",
+   "filesHashed": 96,
+   "localRootTreeRecomputed": "0d35aeb758e99510961089df8f7dfd94b256e58f",
+   "mismatchedOrMissing": [],
+   "name": "permit2",
+   "nestedPinnedSubmodulesExtractedHere": [
+    "lib/forge-gas-snapshot",
+    "lib/forge-std",
+    "lib/openzeppelin-contracts",
+    "lib/solmate"
+   ],
+   "repo": "Uniswap/permit2",
+   "rootTree": "0d35aeb758e99510961089df8f7dfd94b256e58f",
+   "rootTreeEqual": true,
+   "sha256Listing": "c744d515c4b9f22791e8971a0c4e6099b7fa422ef5e16d0089dc604e943db70b",
+   "submoduleEntriesNotInArchive": {
+    "lib/forge-gas-snapshot": "3c5d52a26169876a144f7690d2f9ef0200eb0791",
+    "lib/forge-std": "27e14b7f2448e5f5ac32719f51fe652aa0b0733e",
+    "lib/openzeppelin-contracts": "d3ff81b37f3c773b44dcaf5fda212c7176eef0e2",
+    "lib/solmate": "8d910d876f51c3b2585c9109409d601f600e68e1"
+   },
+   "submodulePath": null,
+   "verified": true
+  },
+  {
+   "blobsInCommit": 17,
+   "blobsMatched": 17,
+   "commit": "27e14b7f2448e5f5ac32719f51fe652aa0b0733e",
+   "extraLocalFiles": [],
+   "extractedTo": "toolchain/permit2-build/permit2/lib/forge-std",
+   "filesHashed": 17,
+   "localRootTreeRecomputed": "bba451aab0c1f1f9c0eca53aa5b64f77dc024989",
+   "mismatchedOrMissing": [],
+   "name": "permit2-lib-forge-std",
+   "nestedPinnedSubmodulesExtractedHere": [
+    "lib/ds-test"
+   ],
+   "repo": "foundry-rs/forge-std",
+   "rootTree": "bba451aab0c1f1f9c0eca53aa5b64f77dc024989",
+   "rootTreeEqual": true,
+   "sha256Listing": "f19f032f0de9cb56c5b6573466680b3d1e38f8bef17813830c1549f4716f3214",
+   "submoduleEntriesNotInArchive": {
+    "lib/ds-test": "9310e879db8ba3ea6d5c6489a579118fd264a3f5"
+   },
+   "submodulePath": {
+    "matches": true,
+    "parent": "permit2",
+    "parentCommit": "cc306b601f172c51bc04334a109e98340456620b",
+    "parentEntryCommit": "27e14b7f2448e5f5ac32719f51fe652aa0b0733e",
+    "path": "lib/forge-std"
+   },
+   "verified": true
+  },
+  {
+   "blobsInCommit": 17,
+   "blobsMatched": 17,
+   "commit": "3c5d52a26169876a144f7690d2f9ef0200eb0791",
+   "extraLocalFiles": [],
+   "extractedTo": "toolchain/permit2-build/permit2/lib/forge-gas-snapshot",
+   "filesHashed": 17,
+   "localRootTreeRecomputed": "376849efbc583b504d298c6eab19a053ad9baafb",
+   "mismatchedOrMissing": [],
+   "name": "permit2-lib-forge-gas-snapshot",
+   "nestedPinnedSubmodulesExtractedHere": [],
+   "repo": "marktoda/forge-gas-snapshot",
+   "rootTree": "376849efbc583b504d298c6eab19a053ad9baafb",
+   "rootTreeEqual": true,
+   "sha256Listing": "4cb9a5926c9539c458e799ea0af84bf3608f73bfdb4c2917adc767246d31b6e9",
+   "submoduleEntriesNotInArchive": {
+    "lib/forge-std": "2c7cbfc6fbede6d7c9e6b17afe997e3fdfe22fef"
+   },
+   "submodulePath": {
+    "matches": true,
+    "parent": "permit2",
+    "parentCommit": "cc306b601f172c51bc04334a109e98340456620b",
+    "parentEntryCommit": "3c5d52a26169876a144f7690d2f9ef0200eb0791",
+    "path": "lib/forge-gas-snapshot"
+   },
+   "verified": true
+  },
+  {
+   "blobsInCommit": 518,
+   "blobsMatched": 518,
+   "commit": "d3ff81b37f3c773b44dcaf5fda212c7176eef0e2",
+   "extraLocalFiles": [],
+   "extractedTo": "toolchain/permit2-build/permit2/lib/openzeppelin-contracts",
+   "filesHashed": 518,
+   "localRootTreeRecomputed": "45443c1cce55b851e77003411c5a814367360ad0",
+   "mismatchedOrMissing": [],
+   "name": "permit2-lib-openzeppelin-contracts",
+   "nestedPinnedSubmodulesExtractedHere": [],
+   "repo": "OpenZeppelin/openzeppelin-contracts",
+   "rootTree": "45443c1cce55b851e77003411c5a814367360ad0",
+   "rootTreeEqual": true,
+   "sha256Listing": "671262bd3d58c6be66f27b6732c9cd92eda30babce99ce973299e7c62043b19c",
+   "submoduleEntriesNotInArchive": {},
+   "submodulePath": {
+    "matches": true,
+    "parent": "permit2",
+    "parentCommit": "cc306b601f172c51bc04334a109e98340456620b",
+    "parentEntryCommit": "d3ff81b37f3c773b44dcaf5fda212c7176eef0e2",
+    "path": "lib/openzeppelin-contracts"
+   },
+   "verified": true
+  },
+  {
+   "blobsInCommit": 71,
+   "blobsMatched": 71,
+   "commit": "8d910d876f51c3b2585c9109409d601f600e68e1",
+   "extraLocalFiles": [],
+   "extractedTo": "toolchain/permit2-build/permit2/lib/solmate",
+   "filesHashed": 71,
+   "localRootTreeRecomputed": "1983ff8775795a389ce89370342814df201320b0",
+   "mismatchedOrMissing": [],
+   "name": "solmate-for-permit2",
+   "nestedPinnedSubmodulesExtractedHere": [
+    "lib/ds-test"
+   ],
+   "repo": "transmissions11/solmate",
+   "rootTree": "1983ff8775795a389ce89370342814df201320b0",
+   "rootTreeEqual": true,
+   "sha256Listing": "73286793862612283604b27d2ce22b3f31a008133098a5f4a911f25afb93e347",
+   "submoduleEntriesNotInArchive": {
+    "lib/ds-test": "9310e879db8ba3ea6d5c6489a579118fd264a3f5"
+   },
+   "submodulePath": {
+    "matches": true,
+    "parent": "permit2",
+    "parentCommit": "cc306b601f172c51bc04334a109e98340456620b",
+    "parentEntryCommit": "8d910d876f51c3b2585c9109409d601f600e68e1",
+    "path": "lib/solmate"
+   },
+   "verified": true
+  },
+  {
+   "blobsInCommit": 6,
+   "blobsMatched": 6,
+   "commit": "9310e879db8ba3ea6d5c6489a579118fd264a3f5",
+   "extraLocalFiles": [],
+   "extractedTo": "toolchain/permit2-build/permit2/lib/forge-std/lib/ds-test",
+   "filesHashed": 6,
+   "localRootTreeRecomputed": "bb4f123098b3c169a99b0200f311709b97302ed7",
+   "mismatchedOrMissing": [],
+   "name": "permit2-nested-ds-test",
+   "nestedPinnedSubmodulesExtractedHere": [],
+   "repo": "dapphub/ds-test",
+   "rootTree": "bb4f123098b3c169a99b0200f311709b97302ed7",
+   "rootTreeEqual": true,
+   "sha256Listing": "c69665df9535210ff02d7029cff4de1645749f914bd64cac9a2924ad56da1f5f",
+   "submoduleEntriesNotInArchive": {},
+   "submodulePath": {
+    "matches": true,
+    "parent": "permit2-lib-forge-std",
+    "parentCommit": "27e14b7f2448e5f5ac32719f51fe652aa0b0733e",
+    "parentEntryCommit": "9310e879db8ba3ea6d5c6489a579118fd264a3f5",
+    "path": "lib/ds-test"
+   },
+   "verified": true
+  },
+  {
+   "blobsInCommit": 6,
+   "blobsMatched": 6,
+   "commit": "9310e879db8ba3ea6d5c6489a579118fd264a3f5",
+   "extraLocalFiles": [],
+   "extractedTo": "toolchain/permit2-build/permit2/lib/solmate/lib/ds-test",
+   "filesHashed": 6,
+   "localRootTreeRecomputed": "bb4f123098b3c169a99b0200f311709b97302ed7",
+   "mismatchedOrMissing": [],
+   "name": "permit2-nested-ds-test",
+   "nestedPinnedSubmodulesExtractedHere": [],
+   "repo": "dapphub/ds-test",
+   "rootTree": "bb4f123098b3c169a99b0200f311709b97302ed7",
+   "rootTreeEqual": true,
+   "sha256Listing": "c69665df9535210ff02d7029cff4de1645749f914bd64cac9a2924ad56da1f5f",
+   "submoduleEntriesNotInArchive": {},
+   "submodulePath": {
+    "matches": true,
+    "parent": "solmate-for-permit2",
+    "parentCommit": "8d910d876f51c3b2585c9109409d601f600e68e1",
+    "parentEntryCommit": "9310e879db8ba3ea6d5c6489a579118fd264a3f5",
+    "path": "lib/ds-test"
+   },
+   "verified": true
+  }
+ ],
+ "verifiedAt": "2026-10-16T13:11:13Z"
+}

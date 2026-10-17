@@ -1,0 +1,376 @@
+[
+ {
+  "inputs": [
+   {
+    "internalType": "uint256",
+    "name": "grace_",
+    "type": "uint256"
+   }
+  ],
+  "stateMutability": "nonpayable",
+  "type": "constructor"
+ },
+ {
+  "inputs": [],
+  "name": "MAX_SIGNERS_PER_SET",
+  "outputs": [
+   {
+    "internalType": "uint256",
+    "name": "",
+    "type": "uint256"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "ROLE_GOVERNANCE",
+  "outputs": [
+   {
+    "internalType": "uint8",
+    "name": "",
+    "type": "uint8"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "ROLE_GUARDIAN",
+  "outputs": [
+   {
+    "internalType": "uint8",
+    "name": "",
+    "type": "uint8"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "address",
+    "name": "key",
+    "type": "address"
+   },
+   {
+    "internalType": "uint256",
+    "name": "version",
+    "type": "uint256"
+   },
+   {
+    "internalType": "uint256",
+    "name": "issuedAt",
+    "type": "uint256"
+   },
+   {
+    "internalType": "uint256",
+    "name": "mutant",
+    "type": "uint256"
+   }
+  ],
+  "name": "accepts",
+  "outputs": [
+   {
+    "internalType": "bool",
+    "name": "",
+    "type": "bool"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "uint8",
+    "name": "role",
+    "type": "uint8"
+   },
+   {
+    "internalType": "uint256",
+    "name": "version",
+    "type": "uint256"
+   },
+   {
+    "internalType": "uint256",
+    "name": "mutant",
+    "type": "uint256"
+   }
+  ],
+  "name": "activateSignerSet",
+  "outputs": [],
+  "stateMutability": "nonpayable",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "current",
+  "outputs": [
+   {
+    "internalType": "uint256",
+    "name": "",
+    "type": "uint256"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "grace",
+  "outputs": [
+   {
+    "internalType": "uint256",
+    "name": "",
+    "type": "uint256"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "uint256",
+    "name": "",
+    "type": "uint256"
+   },
+   {
+    "internalType": "address",
+    "name": "",
+    "type": "address"
+   }
+  ],
+  "name": "isMember",
+  "outputs": [
+   {
+    "internalType": "bool",
+    "name": "",
+    "type": "bool"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "uint8",
+    "name": "role",
+    "type": "uint8"
+   },
+   {
+    "internalType": "uint256",
+    "name": "version",
+    "type": "uint256"
+   },
+   {
+    "internalType": "address[]",
+    "name": "members",
+    "type": "address[]"
+   },
+   {
+    "internalType": "uint256",
+    "name": "mutant",
+    "type": "uint256"
+   }
+  ],
+  "name": "proposeSignerSet",
+  "outputs": [],
+  "stateMutability": "nonpayable",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "uint8",
+    "name": "role",
+    "type": "uint8"
+   },
+   {
+    "internalType": "address",
+    "name": "key",
+    "type": "address"
+   }
+  ],
+  "name": "removeQuoteSigner",
+  "outputs": [],
+  "stateMutability": "nonpayable",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "address",
+    "name": "",
+    "type": "address"
+   }
+  ],
+  "name": "removedAt",
+  "outputs": [
+   {
+    "internalType": "uint256",
+    "name": "",
+    "type": "uint256"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "uint256",
+    "name": "",
+    "type": "uint256"
+   }
+  ],
+  "name": "sets",
+  "outputs": [
+   {
+    "internalType": "uint256",
+    "name": "activeFrom",
+    "type": "uint256"
+   },
+   {
+    "internalType": "uint256",
+    "name": "retiredAt",
+    "type": "uint256"
+   },
+   {
+    "internalType": "bool",
+    "name": "stopped",
+    "type": "bool"
+   },
+   {
+    "internalType": "bool",
+    "name": "active",
+    "type": "bool"
+   },
+   {
+    "internalType": "bool",
+    "name": "exists",
+    "type": "bool"
+   }
+  ],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "uint8",
+    "name": "role",
+    "type": "uint8"
+   },
+   {
+    "internalType": "uint256",
+    "name": "version",
+    "type": "uint256"
+   }
+  ],
+  "name": "stopSignerSet",
+  "outputs": [],
+  "stateMutability": "nonpayable",
+  "type": "function"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "address",
+    "name": "key",
+    "type": "address"
+   },
+   {
+    "internalType": "uint256",
+    "name": "version",
+    "type": "uint256"
+   },
+   {
+    "internalType": "uint256",
+    "name": "issuedAt",
+    "type": "uint256"
+   },
+   {
+    "internalType": "uint256",
+    "name": "mutant",
+    "type": "uint256"
+   }
+  ],
+  "name": "verify",
+  "outputs": [],
+  "stateMutability": "view",
+  "type": "function"
+ },
+ {
+  "inputs": [],
+  "name": "NotAuthorized",
+  "type": "error"
+ },
+ {
+  "inputs": [],
+  "name": "NotGovernance",
+  "type": "error"
+ },
+ {
+  "inputs": [],
+  "name": "QuoteSignerRemoved",
+  "type": "error"
+ },
+ {
+  "inputs": [],
+  "name": "QuoteSignerSetRetired",
+  "type": "error"
+ },
+ {
+  "inputs": [],
+  "name": "QuoteSignerSetStopped",
+  "type": "error"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "address",
+    "name": "key",
+    "type": "address"
+   }
+  ],
+  "name": "QuoteSignerTombstoned",
+  "type": "error"
+ },
+ {
+  "inputs": [],
+  "name": "QuoteSignerUnauthorized",
+  "type": "error"
+ },
+ {
+  "inputs": [],
+  "name": "SignerSetNotProposed",
+  "type": "error"
+ },
+ {
+  "inputs": [],
+  "name": "SignerSetVersionOrder",
+  "type": "error"
+ },
+ {
+  "inputs": [
+   {
+    "internalType": "uint256",
+    "name": "count",
+    "type": "uint256"
+   },
+   {
+    "internalType": "uint256",
+    "name": "max",
+    "type": "uint256"
+   }
+  ],
+  "name": "TooManySigners",
+  "type": "error"
+ }
+]

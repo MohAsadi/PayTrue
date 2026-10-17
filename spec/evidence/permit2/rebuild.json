@@ -1,0 +1,1069 @@
+{
+ "allMatch": true,
+ "buildConfiguration": {
+  "auto_detect_remappings": true,
+  "build_info": false,
+  "bytecode_hash": "none",
+  "cbor_metadata": true,
+  "evm_version": "london",
+  "extra_output": [],
+  "ffi": true,
+  "ignored_error_codes": [
+   "license",
+   "code-size",
+   "init-code-size",
+   "transient-storage",
+   "transfer-deprecated",
+   "natspec-memory-safe-assembly-deprecated"
+  ],
+  "libs": [
+   "lib"
+  ],
+  "optimizer": true,
+  "optimizer_runs": 1000000,
+  "out": "out",
+  "remappings": [
+   "forge-std/=lib/forge-std/src/",
+   "openzeppelin-contracts/=lib/openzeppelin-contracts/",
+   "solmate/=lib/solmate/src/",
+   "lib/forge-std/:ds-test/=lib/forge-std/lib/ds-test/src/",
+   "lib/solmate/:ds-test/=lib/solmate/lib/ds-test/src/",
+   "ds-test/=lib/forge-std/lib/ds-test/src/",
+   "forge-gas-snapshot/=lib/forge-gas-snapshot/src/"
+  ],
+  "script": "script",
+  "skip": [],
+  "solc": "I:\\CryptoGateway\\spec\\toolchain\\solc\\solc-0.8.17.exe",
+  "sparse_mode": false,
+  "src": "src",
+  "test": "test",
+  "use_literal_content": false,
+  "via_ir": true
+ },
+ "builtAt": "2026-10-16T13:34:36Z",
+ "comparison": {
+  "1": {
+   "deployedKeccak256": "0xc67d1657868aa5146eaf24fb879fb1fdec3d2d493b3683a61c9c2f4fb2851131",
+   "differingBytes": 33,
+   "differingRanges": [
+    {
+     "length": 1,
+     "offset": 6976
+    },
+    {
+     "length": 32,
+     "offset": 6983
+    }
+   ],
+   "immutableReferences": [
+    {
+     "deployedBytes": "0000000000000000000000000000000000000000000000000000000000000001",
+     "expectedImmutable": "chainId",
+     "length": 32,
+     "offset": 6945,
+     "rebuiltBytes": "0000000000000000000000000000000000000000000000000000000000000000",
+     "rebuiltIsZeroPlaceholder": true
+    },
+    {
+     "deployedBytes": "866a5aba21966af95d6c7ab78eb2b2fc913915c28be3b9aa07cc04ff903e3f28",
+     "expectedImmutable": "domainSeparator",
+     "length": 32,
+     "offset": 6983,
+     "rebuiltBytes": "0000000000000000000000000000000000000000000000000000000000000000",
+     "rebuiltIsZeroPlaceholder": true
+    }
+   ],
+   "lengthEqual": true,
+   "metadataStripped": {
+    "deployedTrailer": "a164736f6c6343000811000a",
+    "rebuiltTrailer": "a164736f6c6343000811000a",
+    "strippedCodeEqual": true,
+    "strippedLength": 9140,
+    "trailersEqual": true
+   },
+   "ok": true,
+   "rangesInsideImmutableReferences": [
+    {
+     "length": 1,
+     "offset": 6976
+    },
+    {
+     "length": 32,
+     "offset": 6983
+    }
+   ],
+   "rangesOutsideImmutableReferences": [],
+   "rebuiltWithImmutablesFilledKeccak256": "0xc67d1657868aa5146eaf24fb879fb1fdec3d2d493b3683a61c9c2f4fb2851131",
+   "remainingDifferencesAfterFillingBothImmutables": 0
+  },
+  "42161": {
+   "deployedKeccak256": "0x9e51dcb64cf56fc09a82cb41edbc17c6a2250f18dbd1b91e884c0aca02acd57c",
+   "differingBytes": 34,
+   "differingRanges": [
+    {
+     "length": 2,
+     "offset": 6975
+    },
+    {
+     "length": 32,
+     "offset": 6983
+    }
+   ],
+   "immutableReferences": [
+    {
+     "deployedBytes": "000000000000000000000000000000000000000000000000000000000000a4b1",
+     "expectedImmutable": "chainId",
+     "length": 32,
+     "offset": 6945,
+     "rebuiltBytes": "0000000000000000000000000000000000000000000000000000000000000000",
+     "rebuiltIsZeroPlaceholder": true
+    },
+    {
+     "deployedBytes": "8a6e6e19bdfb3db3409910416b47c2f8fc28b49488d6555c7fceaa4479135bc3",
+     "expectedImmutable": "domainSeparator",
+     "length": 32,
+     "offset": 6983,
+     "rebuiltBytes": "0000000000000000000000000000000000000000000000000000000000000000",
+     "rebuiltIsZeroPlaceholder": true
+    }
+   ],
+   "lengthEqual": true,
+   "metadataStripped": {
+    "deployedTrailer": "a164736f6c6343000811000a",
+    "rebuiltTrailer": "a164736f6c6343000811000a",
+    "strippedCodeEqual": true,
+    "strippedLength": 9140,
+    "trailersEqual": true
+   },
+   "ok": true,
+   "rangesInsideImmutableReferences": [
+    {
+     "length": 2,
+     "offset": 6975
+    },
+    {
+     "length": 32,
+     "offset": 6983
+    }
+   ],
+   "rangesOutsideImmutableReferences": [],
+   "rebuiltWithImmutablesFilledKeccak256": "0x9e51dcb64cf56fc09a82cb41edbc17c6a2250f18dbd1b91e884c0aca02acd57c",
+   "remainingDifferencesAfterFillingBothImmutables": 0
+  },
+  "8453": {
+   "deployedKeccak256": "0xa67739abc3ede9dbdc0491636c67d6a14ac07fab9030c3f509b1eb7b11dff8ed",
+   "differingBytes": 34,
+   "differingRanges": [
+    {
+     "length": 2,
+     "offset": 6975
+    },
+    {
+     "length": 32,
+     "offset": 6983
+    }
+   ],
+   "immutableReferences": [
+    {
+     "deployedBytes": "0000000000000000000000000000000000000000000000000000000000002105",
+     "expectedImmutable": "chainId",
+     "length": 32,
+     "offset": 6945,
+     "rebuiltBytes": "0000000000000000000000000000000000000000000000000000000000000000",
+     "rebuiltIsZeroPlaceholder": true
+    },
+    {
+     "deployedBytes": "3b6f35e4fce979ef8eac3bcdc8c3fc38fe7911bb0c69c8fe72bf1fd1a17e6f07",
+     "expectedImmutable": "domainSeparator",
+     "length": 32,
+     "offset": 6983,
+     "rebuiltBytes": "0000000000000000000000000000000000000000000000000000000000000000",
+     "rebuiltIsZeroPlaceholder": true
+    }
+   ],
+   "lengthEqual": true,
+   "metadataStripped": {
+    "deployedTrailer": "a164736f6c6343000811000a",
+    "rebuiltTrailer": "a164736f6c6343000811000a",
+    "strippedCodeEqual": true,
+    "strippedLength": 9140,
+    "trailersEqual": true
+   },
+   "ok": true,
+   "rangesInsideImmutableReferences": [
+    {
+     "length": 2,
+     "offset": 6975
+    },
+    {
+     "length": 32,
+     "offset": 6983
+    }
+   ],
+   "rangesOutsideImmutableReferences": [],
+   "rebuiltWithImmutablesFilledKeccak256": "0xa67739abc3ede9dbdc0491636c67d6a14ac07fab9030c3f509b1eb7b11dff8ed",
+   "remainingDifferencesAfterFillingBothImmutables": 0
+  }
+ },
+ "compilerSettings": {
+  "evmVersion": "london",
+  "libraries": {},
+  "metadata": {
+   "bytecodeHash": "none",
+   "useLiteralContent": false
+  },
+  "optimizer": {
+   "enabled": true,
+   "runs": 1000000
+  },
+  "outputSelection": {
+   "*": {
+    "": [
+     "ast"
+    ],
+    "*": [
+     "abi",
+     "evm.bytecode.object",
+     "evm.bytecode.sourceMap",
+     "evm.bytecode.linkReferences",
+     "evm.deployedBytecode.object",
+     "evm.deployedBytecode.sourceMap",
+     "evm.deployedBytecode.linkReferences",
+     "evm.deployedBytecode.immutableReferences",
+     "evm.methodIdentifiers",
+     "metadata"
+    ]
+   }
+  },
+  "remappings": [
+   "forge-std/=lib/forge-std/src/",
+   "openzeppelin-contracts/=lib/openzeppelin-contracts/",
+   "solmate/=lib/solmate/src/",
+   "lib/forge-std/:ds-test/=lib/forge-std/lib/ds-test/src/",
+   "I:/CryptoGateway/spec/toolchain/isolated/run-20261016T132258Z/tree/lib/forge-std/:ds-test/=lib/forge-std/lib/ds-test/src/",
+   "lib/solmate/:ds-test/=lib/solmate/lib/ds-test/src/",
+   "I:/CryptoGateway/spec/toolchain/isolated/run-20261016T132258Z/tree/lib/solmate/:ds-test/=lib/solmate/lib/ds-test/src/",
+   "ds-test/=lib/forge-std/lib/ds-test/src/",
+   "forge-gas-snapshot/=lib/forge-gas-snapshot/src/"
+  ],
+  "solc": null,
+  "viaIR": true
+ },
+ "constructor": {
+  "abi": [],
+  "arguments": "none (the ABI has no constructor inputs): initCode == creation code",
+  "initCodeKeccak256": "0xe2be1e05eedf35dacd66c65c862f8150ff9ab4b6b24b9bbe62be71b6b16cf0f8"
+ },
+ "create2": {
+  "canonicalAddress": "0x000000000022D473030F116dDEE9F6B43aC78BA3",
+  "computedAddress": "0x000000000022d473030f116ddee9f6b43ac78ba3",
+  "deployer": "0x4e59b44847b379578588920cA78FbF26c0B4956C",
+  "matches": true,
+  "salt": "0x0000000000000000000000000000000000000000d3af2663da51c10215000000",
+  "saltSource": "script/DeployPermit2.s.sol at the pinned commit (SALT)"
+ },
+ "creationCodeKeccak256": "0xe2be1e05eedf35dacd66c65c862f8150ff9ab4b6b24b9bbe62be71b6b16cf0f8",
+ "creationCodeLength": 9345,
+ "dependencies": [
+  {
+   "archiveBytes": 35789,
+   "archiveFilename": "permit2-lib-forge-std-27e14b7f2448e5f5ac32719f51fe652aa0b0733e.zip",
+   "archiveSha256": "48fa7698e4c319cb170f55fe76925b9bfd8c330dc84392d2994f4b5434eda752",
+   "archiveUrl": "https://github.com/foundry-rs/forge-std/archive/27e14b7f2448e5f5ac32719f51fe652aa0b0733e.zip",
+   "commit": "27e14b7f2448e5f5ac32719f51fe652aa0b0733e",
+   "extractedTo": "lib/forge-std",
+   "extractedTreeSha256Listing": "f19f032f0de9cb56c5b6573466680b3d1e38f8bef17813830c1549f4716f3214",
+   "filesHashed": 17,
+   "finalUrl": "https://codeload.github.com/foundry-rs/forge-std/zip/27e14b7f2448e5f5ac32719f51fe652aa0b0733e",
+   "gitRootTree": "bba451aab0c1f1f9c0eca53aa5b64f77dc024989",
+   "gitRootTreeRecomputedFromExtractedFiles": "bba451aab0c1f1f9c0eca53aa5b64f77dc024989",
+   "name": "permit2-lib-forge-std",
+   "redirectChain": [
+    "https://codeload.github.com/foundry-rs/forge-std/zip/27e14b7f2448e5f5ac32719f51fe652aa0b0733e"
+   ],
+   "repository": "foundry-rs/forge-std",
+   "retrievedAt": "2026-10-16T13:10:44Z",
+   "roleInCompileUnit": {
+    "directory": "lib/forge-std",
+    "filesInCompileUnit": 5,
+    "reachedFromDeploymentScript": 4,
+    "reachedFromNoRoot": 0,
+    "reachedFromProductionContract": 0,
+    "reachedFromTests": 5,
+    "requiredFor": "deployment-script compilation"
+   },
+   "submodulePath": {
+    "matches": true,
+    "parent": "permit2",
+    "parentCommit": "cc306b601f172c51bc04334a109e98340456620b",
+    "parentEntryCommit": "27e14b7f2448e5f5ac32719f51fe652aa0b0733e",
+    "path": "lib/forge-std"
+   },
+   "submodulesNotPresentInThisArchive": {
+    "lib/ds-test": "9310e879db8ba3ea6d5c6489a579118fd264a3f5"
+   }
+  },
+  {
+   "archiveBytes": 10748,
+   "archiveFilename": "permit2-lib-forge-gas-snapshot-3c5d52a26169876a144f7690d2f9ef0200eb0791.zip",
+   "archiveSha256": "c7958d06ca667e04dcda1eeff5bf2280400c9b806cf81761d90a0c3ed954d76e",
+   "archiveUrl": "https://github.com/marktoda/forge-gas-snapshot/archive/3c5d52a26169876a144f7690d2f9ef0200eb0791.zip",
+   "commit": "3c5d52a26169876a144f7690d2f9ef0200eb0791",
+   "extractedTo": "lib/forge-gas-snapshot",
+   "extractedTreeSha256Listing": "4cb9a5926c9539c458e799ea0af84bf3608f73bfdb4c2917adc767246d31b6e9",
+   "filesHashed": 17,
+   "finalUrl": "https://codeload.github.com/marktoda/forge-gas-snapshot/zip/3c5d52a26169876a144f7690d2f9ef0200eb0791",
+   "gitRootTree": "376849efbc583b504d298c6eab19a053ad9baafb",
+   "gitRootTreeRecomputedFromExtractedFiles": "376849efbc583b504d298c6eab19a053ad9baafb",
+   "name": "permit2-lib-forge-gas-snapshot",
+   "redirectChain": [
+    "https://codeload.github.com/marktoda/forge-gas-snapshot/zip/3c5d52a26169876a144f7690d2f9ef0200eb0791"
+   ],
+   "repository": "marktoda/forge-gas-snapshot",
+   "retrievedAt": "2026-10-16T13:10:45Z",
+   "roleInCompileUnit": {
+    "directory": "lib/forge-gas-snapshot",
+    "filesInCompileUnit": 2,
+    "reachedFromDeploymentScript": 0,
+    "reachedFromNoRoot": 0,
+    "reachedFromProductionContract": 0,
+    "reachedFromTests": 2,
+    "requiredFor": "test compilation"
+   },
+   "submodulePath": {
+    "matches": true,
+    "parent": "permit2",
+    "parentCommit": "cc306b601f172c51bc04334a109e98340456620b",
+    "parentEntryCommit": "3c5d52a26169876a144f7690d2f9ef0200eb0791",
+    "path": "lib/forge-gas-snapshot"
+   },
+   "submodulesNotPresentInThisArchive": {
+    "lib/forge-std": "2c7cbfc6fbede6d7c9e6b17afe997e3fdfe22fef"
+   }
+  },
+  {
+   "archiveBytes": 1869499,
+   "archiveFilename": "permit2-lib-openzeppelin-contracts-d3ff81b37f3c773b44dcaf5fda212c7176eef0e2.zip",
+   "archiveSha256": "0773c191a7c15e480dfceb18c368437d4627df8673e9e9dd3f9e298b86e87b63",
+   "archiveUrl": "https://github.com/OpenZeppelin/openzeppelin-contracts/archive/d3ff81b37f3c773b44dcaf5fda212c7176eef0e2.zip",
+   "commit": "d3ff81b37f3c773b44dcaf5fda212c7176eef0e2",
+   "extractedTo": "lib/openzeppelin-contracts",
+   "extractedTreeSha256Listing": "671262bd3d58c6be66f27b6732c9cd92eda30babce99ce973299e7c62043b19c",
+   "filesHashed": 518,
+   "finalUrl": "https://codeload.github.com/OpenZeppelin/openzeppelin-contracts/zip/d3ff81b37f3c773b44dcaf5fda212c7176eef0e2",
+   "gitRootTree": "45443c1cce55b851e77003411c5a814367360ad0",
+   "gitRootTreeRecomputedFromExtractedFiles": "45443c1cce55b851e77003411c5a814367360ad0",
+   "name": "permit2-lib-openzeppelin-contracts",
+   "redirectChain": [
+    "https://codeload.github.com/OpenZeppelin/openzeppelin-contracts/zip/d3ff81b37f3c773b44dcaf5fda212c7176eef0e2"
+   ],
+   "repository": "OpenZeppelin/openzeppelin-contracts",
+   "retrievedAt": "2026-10-16T13:10:46Z",
+   "roleInCompileUnit": {
+    "directory": "lib/openzeppelin-contracts",
+    "filesInCompileUnit": 7,
+    "reachedFromDeploymentScript": 0,
+    "reachedFromNoRoot": 0,
+    "reachedFromProductionContract": 0,
+    "reachedFromTests": 7,
+    "requiredFor": "test compilation"
+   },
+   "submodulePath": {
+    "matches": true,
+    "parent": "permit2",
+    "parentCommit": "cc306b601f172c51bc04334a109e98340456620b",
+    "parentEntryCommit": "d3ff81b37f3c773b44dcaf5fda212c7176eef0e2",
+    "path": "lib/openzeppelin-contracts"
+   },
+   "submodulesNotPresentInThisArchive": {}
+  },
+  {
+   "archiveBytes": 240597,
+   "archiveFilename": "solmate-for-permit2-8d910d876f51c3b2585c9109409d601f600e68e1.zip",
+   "archiveSha256": "05c34eec3127dbe36b03cc377366866aa3c23da9b2a0ef49c46b8025fbeb2d20",
+   "archiveUrl": "https://github.com/transmissions11/solmate/archive/8d910d876f51c3b2585c9109409d601f600e68e1.zip",
+   "commit": "8d910d876f51c3b2585c9109409d601f600e68e1",
+   "extractedTo": "lib/solmate",
+   "extractedTreeSha256Listing": "73286793862612283604b27d2ce22b3f31a008133098a5f4a911f25afb93e347",
+   "filesHashed": 71,
+   "finalUrl": "https://codeload.github.com/transmissions11/solmate/zip/8d910d876f51c3b2585c9109409d601f600e68e1",
+   "gitRootTree": "1983ff8775795a389ce89370342814df201320b0",
+   "gitRootTreeRecomputedFromExtractedFiles": "1983ff8775795a389ce89370342814df201320b0",
+   "name": "solmate-for-permit2",
+   "redirectChain": [
+    "https://codeload.github.com/transmissions11/solmate/zip/8d910d876f51c3b2585c9109409d601f600e68e1"
+   ],
+   "repository": "transmissions11/solmate",
+   "retrievedAt": "2026-10-16T13:10:47Z",
+   "roleInCompileUnit": {
+    "directory": "lib/solmate",
+    "filesInCompileUnit": 7,
+    "reachedFromDeploymentScript": 2,
+    "reachedFromNoRoot": 0,
+    "reachedFromProductionContract": 2,
+    "reachedFromTests": 7,
+    "requiredFor": "production compilation (the contract that is deployed)"
+   },
+   "submodulePath": {
+    "matches": true,
+    "parent": "permit2",
+    "parentCommit": "cc306b601f172c51bc04334a109e98340456620b",
+    "parentEntryCommit": "8d910d876f51c3b2585c9109409d601f600e68e1",
+    "path": "lib/solmate"
+   },
+   "submodulesNotPresentInThisArchive": {
+    "lib/ds-test": "9310e879db8ba3ea6d5c6489a579118fd264a3f5"
+   }
+  },
+  {
+   "archiveBytes": 17488,
+   "archiveFilename": "permit2-nested-ds-test-9310e879db8ba3ea6d5c6489a579118fd264a3f5.zip",
+   "archiveSha256": "d6d829b6c4eb9dee30a0f084df187f4efa1cd3f91ce73a20a1b5f83987add80e",
+   "archiveUrl": "https://github.com/dapphub/ds-test/archive/9310e879db8ba3ea6d5c6489a579118fd264a3f5.zip",
+   "commit": "9310e879db8ba3ea6d5c6489a579118fd264a3f5",
+   "extractedTo": "lib/forge-std/lib/ds-test",
+   "extractedTreeSha256Listing": "c69665df9535210ff02d7029cff4de1645749f914bd64cac9a2924ad56da1f5f",
+   "filesHashed": 6,
+   "finalUrl": "https://codeload.github.com/dapphub/ds-test/zip/9310e879db8ba3ea6d5c6489a579118fd264a3f5",
+   "gitRootTree": "bb4f123098b3c169a99b0200f311709b97302ed7",
+   "gitRootTreeRecomputedFromExtractedFiles": "bb4f123098b3c169a99b0200f311709b97302ed7",
+   "name": "permit2-nested-ds-test",
+   "redirectChain": [
+    "https://codeload.github.com/dapphub/ds-test/zip/9310e879db8ba3ea6d5c6489a579118fd264a3f5"
+   ],
+   "repository": "dapphub/ds-test",
+   "retrievedAt": "2026-10-16T13:10:47Z",
+   "roleInCompileUnit": {
+    "directory": "lib/forge-std/lib/ds-test",
+    "filesInCompileUnit": 1,
+    "reachedFromDeploymentScript": 0,
+    "reachedFromNoRoot": 0,
+    "reachedFromProductionContract": 0,
+    "reachedFromTests": 1,
+    "requiredFor": "test compilation"
+   },
+   "submodulePath": {
+    "matches": true,
+    "parent": "permit2-lib-forge-std",
+    "parentCommit": "27e14b7f2448e5f5ac32719f51fe652aa0b0733e",
+    "parentEntryCommit": "9310e879db8ba3ea6d5c6489a579118fd264a3f5",
+    "path": "lib/ds-test"
+   },
+   "submodulesNotPresentInThisArchive": {}
+  },
+  {
+   "archiveBytes": 17488,
+   "archiveFilename": "permit2-nested-ds-test-9310e879db8ba3ea6d5c6489a579118fd264a3f5.zip",
+   "archiveSha256": "d6d829b6c4eb9dee30a0f084df187f4efa1cd3f91ce73a20a1b5f83987add80e",
+   "archiveUrl": "https://github.com/dapphub/ds-test/archive/9310e879db8ba3ea6d5c6489a579118fd264a3f5.zip",
+   "commit": "9310e879db8ba3ea6d5c6489a579118fd264a3f5",
+   "extractedTo": "lib/solmate/lib/ds-test",
+   "extractedTreeSha256Listing": "c69665df9535210ff02d7029cff4de1645749f914bd64cac9a2924ad56da1f5f",
+   "filesHashed": 6,
+   "finalUrl": "https://codeload.github.com/dapphub/ds-test/zip/9310e879db8ba3ea6d5c6489a579118fd264a3f5",
+   "gitRootTree": "bb4f123098b3c169a99b0200f311709b97302ed7",
+   "gitRootTreeRecomputedFromExtractedFiles": "bb4f123098b3c169a99b0200f311709b97302ed7",
+   "name": "permit2-nested-ds-test",
+   "redirectChain": [
+    "https://codeload.github.com/dapphub/ds-test/zip/9310e879db8ba3ea6d5c6489a579118fd264a3f5"
+   ],
+   "repository": "dapphub/ds-test",
+   "retrievedAt": "2026-10-16T13:10:47Z",
+   "roleInCompileUnit": {
+    "directory": "lib/solmate/lib/ds-test",
+    "filesInCompileUnit": 1,
+    "reachedFromDeploymentScript": 0,
+    "reachedFromNoRoot": 0,
+    "reachedFromProductionContract": 0,
+    "reachedFromTests": 1,
+    "requiredFor": "test compilation"
+   },
+   "submodulePath": {
+    "matches": true,
+    "parent": "solmate-for-permit2",
+    "parentCommit": "8d910d876f51c3b2585c9109409d601f600e68e1",
+    "parentEntryCommit": "9310e879db8ba3ea6d5c6489a579118fd264a3f5",
+    "path": "lib/ds-test"
+   },
+   "submodulesNotPresentInThisArchive": {}
+  }
+ ],
+ "dependencyRoleSummary": {
+  "_src": {
+   "filesInCompileUnit": 14,
+   "reachedFromProductionContract": 11
+  },
+  "_unit": {
+   "files": 77,
+   "lib": 23,
+   "script": 1,
+   "src": 14,
+   "test": 39
+  }
+ },
+ "deployedCode": {
+  "1": {
+   "block": 26205361,
+   "keccak256": "0xc67d1657868aa5146eaf24fb879fb1fdec3d2d493b3683a61c9c2f4fb2851131",
+   "length": 9152,
+   "providers": [
+    "https://ethereum-rpc.publicnode.com",
+    "https://1rpc.io/eth",
+    "https://eth.drpc.org",
+    "https://rpc.flashbots.net",
+    "https://eth-mainnet.public.blastapi.io"
+   ]
+  },
+  "42161": {
+   "block": 515388238,
+   "keccak256": "0x9e51dcb64cf56fc09a82cb41edbc17c6a2250f18dbd1b91e884c0aca02acd57c",
+   "length": 9152,
+   "providers": [
+    "https://arb1.arbitrum.io/rpc",
+    "https://arbitrum-one-rpc.publicnode.com"
+   ]
+  },
+  "8453": {
+   "block": 52684099,
+   "keccak256": "0xa67739abc3ede9dbdc0491636c67d6a14ac07fab9030c3f509b1eb7b11dff8ed",
+   "length": 9152,
+   "providers": [
+    "https://mainnet.base.org",
+    "https://base-rpc.publicnode.com"
+   ]
+  }
+ },
+ "deployerProxy": {
+  "1": {
+   "block": 26205361,
+   "code": {
+    "keccak256": "0x2fa86add0aed31f33a762c9d88e807c475bd51d0f52bd0955754b2608f7e4989",
+    "length": 69
+   },
+   "providers": [
+    "https://ethereum-rpc.publicnode.com",
+    "https://eth.drpc.org",
+    "https://rpc.flashbots.net",
+    "https://eth-mainnet.public.blastapi.io"
+   ]
+  },
+  "42161": {
+   "block": 515388254,
+   "code": {
+    "keccak256": "0x2fa86add0aed31f33a762c9d88e807c475bd51d0f52bd0955754b2608f7e4989",
+    "length": 69
+   },
+   "providers": [
+    "https://arb1.arbitrum.io/rpc",
+    "https://arbitrum-one-rpc.publicnode.com"
+   ]
+  },
+  "8453": {
+   "block": 52684101,
+   "code": {
+    "keccak256": "0x2fa86add0aed31f33a762c9d88e807c475bd51d0f52bd0955754b2608f7e4989",
+    "length": 69
+   },
+   "providers": [
+    "https://mainnet.base.org",
+    "https://base-rpc.publicnode.com"
+   ]
+  }
+ },
+ "drivers": {
+  "forgeAndSolcDirectCreationCodeEqual": true,
+  "forgeAndSolcDirectRuntimeCodeEqual": true,
+  "immutableReferencesEqual": true
+ },
+ "evmVersion": "london",
+ "immutableReferences": [
+  {
+   "length": 32,
+   "offset": 6945
+  },
+  {
+   "length": 32,
+   "offset": 6983
+  }
+ ],
+ "immutableReferencesByAstId": {
+  "28192": [
+   {
+    "length": 32,
+    "start": 6983
+   }
+  ],
+  "28194": [
+   {
+    "length": 32,
+    "start": 6945
+   }
+  ]
+ },
+ "immutableVariables": {
+  "28192": {
+   "mutability": "immutable",
+   "name": "_CACHED_DOMAIN_SEPARATOR",
+   "sourceUnit": "src/EIP712.sol",
+   "type": "bytes32"
+  },
+  "28194": {
+   "mutability": "immutable",
+   "name": "_CACHED_CHAIN_ID",
+   "sourceUnit": "src/EIP712.sol",
+   "type": "uint256"
+  }
+ },
+ "includeExcludeRules": "forge default: every .sol file under src, test and script plus every file they import (including lib/); no `skip` and no `ignored_file_paths` unless the buildConfiguration above lists them",
+ "inputs": {
+  "archives": {
+   "permit2": {
+    "commit": "cc306b601f172c51bc04334a109e98340456620b",
+    "sha256": "6b0df80b1fa86d9bf3c9495651d047ae2c4a858e3865a9ed868e4723df453859",
+    "url": "https://github.com/Uniswap/permit2/archive/cc306b601f172c51bc04334a109e98340456620b.zip"
+   },
+   "permit2-lib-forge-gas-snapshot": {
+    "commit": "3c5d52a26169876a144f7690d2f9ef0200eb0791",
+    "sha256": "c7958d06ca667e04dcda1eeff5bf2280400c9b806cf81761d90a0c3ed954d76e",
+    "url": "https://github.com/marktoda/forge-gas-snapshot/archive/3c5d52a26169876a144f7690d2f9ef0200eb0791.zip"
+   },
+   "permit2-lib-forge-std": {
+    "commit": "27e14b7f2448e5f5ac32719f51fe652aa0b0733e",
+    "sha256": "48fa7698e4c319cb170f55fe76925b9bfd8c330dc84392d2994f4b5434eda752",
+    "url": "https://github.com/foundry-rs/forge-std/archive/27e14b7f2448e5f5ac32719f51fe652aa0b0733e.zip"
+   },
+   "permit2-lib-openzeppelin-contracts": {
+    "commit": "d3ff81b37f3c773b44dcaf5fda212c7176eef0e2",
+    "sha256": "0773c191a7c15e480dfceb18c368437d4627df8673e9e9dd3f9e298b86e87b63",
+    "url": "https://github.com/OpenZeppelin/openzeppelin-contracts/archive/d3ff81b37f3c773b44dcaf5fda212c7176eef0e2.zip"
+   },
+   "permit2-nested-ds-test": {
+    "commit": "9310e879db8ba3ea6d5c6489a579118fd264a3f5",
+    "sha256": "d6d829b6c4eb9dee30a0f084df187f4efa1cd3f91ce73a20a1b5f83987add80e",
+    "url": "https://github.com/dapphub/ds-test/archive/9310e879db8ba3ea6d5c6489a579118fd264a3f5.zip"
+   },
+   "solmate-for-permit2": {
+    "commit": "8d910d876f51c3b2585c9109409d601f600e68e1",
+    "sha256": "05c34eec3127dbe36b03cc377366866aa3c23da9b2a0ef49c46b8025fbeb2d20",
+    "url": "https://github.com/transmissions11/solmate/archive/8d910d876f51c3b2585c9109409d601f600e68e1.zip"
+   }
+  },
+  "toolchainVerified": true,
+  "treesVerified": {
+   "forge-std": {
+    "blobs": 59,
+    "commit": "77041d2ce690e692d6e03cc812b57d1ddaa4d505",
+    "rootTree": "86836b75653248e7be359b24e6441ea7fce669a7"
+   },
+   "permit2": {
+    "blobs": 96,
+    "commit": "cc306b601f172c51bc04334a109e98340456620b",
+    "rootTree": "0d35aeb758e99510961089df8f7dfd94b256e58f"
+   },
+   "permit2-lib-forge-gas-snapshot": {
+    "blobs": 17,
+    "commit": "3c5d52a26169876a144f7690d2f9ef0200eb0791",
+    "rootTree": "376849efbc583b504d298c6eab19a053ad9baafb"
+   },
+   "permit2-lib-forge-std": {
+    "blobs": 17,
+    "commit": "27e14b7f2448e5f5ac32719f51fe652aa0b0733e",
+    "rootTree": "bba451aab0c1f1f9c0eca53aa5b64f77dc024989"
+   },
+   "permit2-lib-openzeppelin-contracts": {
+    "blobs": 518,
+    "commit": "d3ff81b37f3c773b44dcaf5fda212c7176eef0e2",
+    "rootTree": "45443c1cce55b851e77003411c5a814367360ad0"
+   },
+   "permit2-nested-ds-test": {
+    "blobs": 6,
+    "commit": "9310e879db8ba3ea6d5c6489a579118fd264a3f5",
+    "rootTree": "bb4f123098b3c169a99b0200f311709b97302ed7"
+   },
+   "solmate-for-permit2": {
+    "blobs": 71,
+    "commit": "8d910d876f51c3b2585c9109409d601f600e68e1",
+    "rootTree": "1983ff8775795a389ce89370342814df201320b0"
+   }
+  }
+ },
+ "isolation": {
+  "command": [
+   "build",
+   "--root",
+   "I:\\CryptoGateway\\spec\\toolchain\\isolated\\run-20261016T132258Z\\tree",
+   "--offline",
+   "--force",
+   "--build-info"
+  ],
+  "method": "fresh empty directory, scrubbed environment, FOUNDRY_OFFLINE and --offline, proxies pointing at a closed port, no script or test executed",
+  "osSandbox": false,
+  "runDirectory": "toolchain/isolated/run-20261016T132258Z"
+ },
+ "linkedLibraries": {},
+ "metadata": {
+  "bytecodeHash": "none",
+  "cbor": null,
+  "rebuiltRuntimeTrailerHex": "a164736f6c6343000811000a"
+ },
+ "nestedForgeStdOfForgeGasSnapshot": {
+  "commit": "2c7cbfc6fbede6d7c9e6b17afe997e3fdfe22fef",
+  "fetched": false,
+  "required": false,
+  "sourcesFromItInTheCompileUnit": []
+ },
+ "network": {
+  "environmentVariables": [
+   "ALL_PROXY",
+   "APPDATA",
+   "FOUNDRY_DISABLE_NIGHTLY_WARNING",
+   "FOUNDRY_OFFLINE",
+   "FOUNDRY_SOLC",
+   "HOME",
+   "HTTPS_PROXY",
+   "HTTP_PROXY",
+   "LOCALAPPDATA",
+   "NO_COLOR",
+   "PATH",
+   "SystemRoot",
+   "TEMP",
+   "TMP",
+   "USERPROFILE"
+  ],
+  "method": "software only: FOUNDRY_OFFLINE, --offline, proxies at a closed port; the build process was sampled with netstat",
+  "nonLoopbackTcpRowsObserved": [],
+  "samples": 1027
+ },
+ "pinnedPermit2": {
+  "archiveSha256": "6b0df80b1fa86d9bf3c9495651d047ae2c4a858e3865a9ed868e4723df453859",
+  "archiveUrl": "https://github.com/Uniswap/permit2/archive/cc306b601f172c51bc04334a109e98340456620b.zip",
+  "commit": "cc306b601f172c51bc04334a109e98340456620b",
+  "extractedTreeSha256Listing": "c744d515c4b9f22791e8971a0c4e6099b7fa422ef5e16d0089dc604e943db70b",
+  "finalUrl": "https://codeload.github.com/Uniswap/permit2/zip/cc306b601f172c51bc04334a109e98340456620b",
+  "gitRootTree": "0d35aeb758e99510961089df8f7dfd94b256e58f",
+  "gitRootTreeRecomputedFromExtractedFiles": "0d35aeb758e99510961089df8f7dfd94b256e58f"
+ },
+ "runtimeCodeKeccak256WithZeroImmutables": "0x463331fa7a0d5f07488e42c37b461bb56a822145c161a821fbafe7d4e916b546",
+ "runtimeCodeLength": 9152,
+ "schema": 2,
+ "solcVersionPinned": "I:\\CryptoGateway\\spec\\toolchain\\solc\\solc-0.8.17.exe",
+ "sourceCommit": "cc306b601f172c51bc04334a109e98340456620b",
+ "sourceCount": 77,
+ "sourceHashes": {
+  "lib/forge-gas-snapshot/src/GasSnapshot.sol": {
+   "gitBlobSha1": "7ac6e021f3e1623884d71708f4ff82fb312b8d15",
+   "sha256": "058869bd7f7aafb581e8e4be626985797882d0d28b104fe451e2ed624b9b4b6d"
+  },
+  "lib/forge-gas-snapshot/src/utils/UintString.sol": {
+   "gitBlobSha1": "a4cfff27a158e9bdb9df3b6a60c640219690b007",
+   "sha256": "9a37f7b96f45f62fd70005c2a0916f7141475213c92a60f77390ef284dddae56"
+  },
+  "lib/forge-std/lib/ds-test/src/test.sol": {
+   "gitBlobSha1": "515a3bd012c34268e12191e0c3aba25ac55a93bb",
+   "sha256": "96bddc5e416c3ca8278606d51b3af220d74108adddddea55f5e488077733a82c"
+  },
+  "lib/forge-std/src/Script.sol": {
+   "gitBlobSha1": "9bbd8599474b7d0944743634526fb5e86a5467a6",
+   "sha256": "712cb9bb3b61cd00ebd9ba3fccb4a6783c9a5f5cbaf0d128c26ed7b69643729e"
+  },
+  "lib/forge-std/src/Test.sol": {
+   "gitBlobSha1": "da549594a5130ff0a0c608fc78e6e95dfccaad03",
+   "sha256": "bca5a14291bbca21af0732aa22e65144e0aaf1a190ee155d73b40501dae5e918"
+  },
+  "lib/forge-std/src/Vm.sol": {
+   "gitBlobSha1": "6479ca7eacb54c9fbbd03b92e778d89983ebda9c",
+   "sha256": "646eb5b74a51333e29b744368d5d647026ce07079b0e81e17322c7ec33d97978"
+  },
+  "lib/forge-std/src/console.sol": {
+   "gitBlobSha1": "ad57e53687d9c517ef80a53e0d8f67337b1435ab",
+   "sha256": "f8fa05526f70fa83e8c42b0cdd64760169444a98b32fd40fe6a31f8f4c846cd0"
+  },
+  "lib/forge-std/src/console2.sol": {
+   "gitBlobSha1": "2edfda5b6604ac5d1d24bab7bd1b263059abb413",
+   "sha256": "80010a2569c7481f2e68b68bd989292dd1ee7062de4b1c07a92ce74d122b0190"
+  },
+  "lib/openzeppelin-contracts/contracts/token/ERC20/IERC20.sol": {
+   "gitBlobSha1": "b816bfed0863ab125252a7dc210dd1c9e8feac65",
+   "sha256": "94f23e4af51a18c2269b355b8c7cf4db8003d075c9c541019eb8dcf4122864d5"
+  },
+  "lib/openzeppelin-contracts/contracts/token/ERC20/extensions/draft-IERC20Permit.sol": {
+   "gitBlobSha1": "6363b14084e2aa541819d7b50fae1defed9ea1fa",
+   "sha256": "3e7aa0e0f69eec8f097ad664d525e7b3f0a3fda8dcdd97de5433ddb131db86ef"
+  },
+  "lib/openzeppelin-contracts/contracts/token/ERC20/utils/SafeERC20.sol": {
+   "gitBlobSha1": "37d25f58ae9613226aa4569275b34dbb3e4dd36a",
+   "sha256": "fa36a21bd954262006d806b988e4495562e7b50420775e2aa0deecb596fd1902"
+  },
+  "lib/openzeppelin-contracts/contracts/utils/Address.sol": {
+   "gitBlobSha1": "69f3bf87af667458a3b586635967401c68ec1465",
+   "sha256": "b34455be5d038960030a948b1cadda19b375bbf84bf08b7be89d09c197f29e35"
+  },
+  "lib/openzeppelin-contracts/contracts/utils/Strings.sol": {
+   "gitBlobSha1": "39e0cf124f84d60650c0b6e7f4f57ab0c3c56eb9",
+   "sha256": "34127ad0054df5963b0fd694c1b313d17e9114a2f426b85526d6d976210298ab"
+  },
+  "lib/openzeppelin-contracts/contracts/utils/cryptography/ECDSA.sol": {
+   "gitBlobSha1": "38b2ea3598aafdc63bbfb32012253ac9cd29ff2b",
+   "sha256": "a1168b6c6836cd79990146bd2888e95db35c9d3161a522e3087806423894ba6c"
+  },
+  "lib/openzeppelin-contracts/contracts/utils/cryptography/draft-EIP712.sol": {
+   "gitBlobSha1": "a32c25b7f7a8fff649b82ce9183744d5e765bc90",
+   "sha256": "fc0e6c5d7184bd03b8deae6ca9a48a1eaaecf9f5e4703611aabfb63401e6d43f"
+  },
+  "lib/solmate/lib/ds-test/src/test.sol": {
+   "gitBlobSha1": "515a3bd012c34268e12191e0c3aba25ac55a93bb",
+   "sha256": "96bddc5e416c3ca8278606d51b3af220d74108adddddea55f5e488077733a82c"
+  },
+  "lib/solmate/src/test/utils/DSTestPlus.sol": {
+   "gitBlobSha1": "b56d4c9b52dc630252141592d11dc2a2550cf31a",
+   "sha256": "7da8f26070bfdad701f87e58a6da018f2da2a1ec91101c8bc352bc4792c3626c"
+  },
+  "lib/solmate/src/test/utils/Hevm.sol": {
+   "gitBlobSha1": "8ca0eff952660e0084d2b9eedf66f81ae737ab29",
+   "sha256": "718d506242acaeb4d53596746843a73e2a80b77b9e815344f5d3d4b77bd2fdd2"
+  },
+  "lib/solmate/src/test/utils/mocks/MockERC20.sol": {
+   "gitBlobSha1": "fbbaef5a1992b274936b775182b72d00c1850590",
+   "sha256": "9af27b7d7230e4eb62406011643a8844405493f2f6d2c10daff87a9276f65eab"
+  },
+  "lib/solmate/src/tokens/ERC1155.sol": {
+   "gitBlobSha1": "cff0f02d376c87b66adc13b2a08a6291470e5e03",
+   "sha256": "3dbbc6faef59c3ee32b1c202510fab2ac6084faf19c164e0d85a392be1fd52ae"
+  },
+  "lib/solmate/src/tokens/ERC20.sol": {
+   "gitBlobSha1": "965704466c0dbd8038d77a72482d82d21413625a",
+   "sha256": "a3a7e839f42762ef24623581542a916e838f3c7c0bef647963d1fdad0f9d208a"
+  },
+  "lib/solmate/src/tokens/ERC721.sol": {
+   "gitBlobSha1": "b47f27124fb680be04be80733d57509a53b2c40e",
+   "sha256": "2da0cca384448208e25d43eeb5953a237de0e6712942a07d0f2674e895b0d3d3"
+  },
+  "lib/solmate/src/utils/SafeTransferLib.sol": {
+   "gitBlobSha1": "7080fd835daa220575d41e26a4a100799ab66fc5",
+   "sha256": "cb02c2a5b1b1c66b8ba3d700a47b400684483d96d93606ed71d0e63c0b6100bf"
+  },
+  "script/DeployPermit2.s.sol": {
+   "gitBlobSha1": "18159d3ba58df7e1019f71cdf245fcf700a6b014",
+   "sha256": "d1085fa275e065bc50af25389a5cc7f6b16b9cd5e947126ef677871bf46fb09f"
+  },
+  "src/AllowanceTransfer.sol": {
+   "gitBlobSha1": "84edcde8b3f621b410a498aad8c3da8db6105912",
+   "sha256": "e8755950225a256cd458c02433958a9e614083b4e334bb9853ec4075bcb8ab92"
+  },
+  "src/EIP712.sol": {
+   "gitBlobSha1": "bbd77f07a74e66e881004f572c0d94fa04897da1",
+   "sha256": "195ebab17589ed34e23de94eb9238bd099acaba88cc64b49c2763c72083bec98"
+  },
+  "src/Permit2.sol": {
+   "gitBlobSha1": "7249e40a813980c099f5a95f6fb584339b3ff50c",
+   "sha256": "a19dd81d4edafe3bba0178abfc9063886c2981b4711a4cbbf3fac19370defc9a"
+  },
+  "src/PermitErrors.sol": {
+   "gitBlobSha1": "2c42e2d1a6ec2de1ddd5ed159693b700d03dff50",
+   "sha256": "0919679c5bb58466d3a06d9d3297ec4946ba5d135330f10f4fb080067586afad"
+  },
+  "src/SignatureTransfer.sol": {
+   "gitBlobSha1": "f86687cb9204b03f77453365c300d558363a6181",
+   "sha256": "b7a210d7349fd12b75e556a4d0d7ea5a7ea61b39264d53ea1299b03323f62991"
+  },
+  "src/interfaces/IAllowanceTransfer.sol": {
+   "gitBlobSha1": "c3739b9d9d9d6e86333dda814e6555c5fbfab55e",
+   "sha256": "aeecef7ca9a72ee02f1ef8edfb44599339c5dc758cf382455c2f72fb77dffc74"
+  },
+  "src/interfaces/IDAIPermit.sol": {
+   "gitBlobSha1": "912b7817e9933a3ba6749e06b07f0015d03bbf26",
+   "sha256": "13a98c0cbfa847ea57a8b427f76762b40de5fd10472e9d26e3aaa26de11e7c49"
+  },
+  "src/interfaces/IERC1271.sol": {
+   "gitBlobSha1": "b8e667629a5eccba9bfe4750a81bea3566986d9a",
+   "sha256": "ba35907d098ef8b6c6c967d522026d09c92c7e2344cc81e4ee89db8955fa4ca8"
+  },
+  "src/interfaces/ISignatureTransfer.sol": {
+   "gitBlobSha1": "8b76a3ebd8f085712581d441385a5ed8fa7f9e5a",
+   "sha256": "0a5d6ac59da350987693f40f0ff0a833f31b37e057645f8e6ed9a1dad691e45c"
+  },
+  "src/libraries/Allowance.sol": {
+   "gitBlobSha1": "671c9724f446332caa18619f4c6363e49fd30933",
+   "sha256": "6c7d1edc74a9dca9940fa835db09302ed1a35019d69f4188351466e9a3fff458"
+  },
+  "src/libraries/Permit2Lib.sol": {
+   "gitBlobSha1": "f03095ca45080c6520f5c7cebb6768ceca5b7def",
+   "sha256": "093f11d124d637914613bd43bfc8db99b753304669d7dfe7f4a4654659d56149"
+  },
+  "src/libraries/PermitHash.sol": {
+   "gitBlobSha1": "32d4a83f90a4fdeb764403f327a873b2f840154e",
+   "sha256": "23f89633dbd02d8b52a33de3a915af5af73ff25e31f88b6cf994358f802efa60"
+  },
+  "src/libraries/SafeCast160.sol": {
+   "gitBlobSha1": "5926036ad7523d9c2912a819881e64448010399d",
+   "sha256": "b106146964044fd9c89df48721011c43785982bf0dcb74a241f7a6f270fa8b2b"
+  },
+  "src/libraries/SignatureVerification.sol": {
+   "gitBlobSha1": "904dfcd2ff1f870d0bf9e25a9dbedb4b8b929849",
+   "sha256": "1804b3d7b1183225419ec8ee45daf89174ff3668315d71d28111d5fcc179f8e4"
+  },
+  "test/AllowanceTransferInvariants.t.sol": {
+   "gitBlobSha1": "9fdbd29017723df36f45ab7ef7d5b0d597e38c3d",
+   "sha256": "43ca91225c76e7ccbfb9fe41512e26ccc631a7d55814d44b0b0ec4e9370f350b"
+  },
+  "test/AllowanceTransferTest.t.sol": {
+   "gitBlobSha1": "8416bc3f19e096c6b9d19ec0c47fba58ccd3302d",
+   "sha256": "78bf12b3f5b31d4ea62dba0c8180e086d047f39d40cdea64a8eee2b18b8e4461"
+  },
+  "test/AllowanceUnitTest.sol": {
+   "gitBlobSha1": "2aa0d1707cda6cf6dc94d71c98974bdd7d15d0d5",
+   "sha256": "b122973fd9c7f91064fe60a432e7066de1df4983c8071774ac79b84bc4d07287"
+  },
+  "test/CompactSignature.t.sol": {
+   "gitBlobSha1": "0f6cbc9191ef877595ee02b460a32f5be2ef958e",
+   "sha256": "814f1db7350e70c725204a5dd22fd2588dd1ff1b0ce38bc0a0de95001e8c0ae6"
+  },
+  "test/EIP712.t.sol": {
+   "gitBlobSha1": "b56d6e24a6f24524306f9d6c1251409dfc8a90f0",
+   "sha256": "672d08ed30691dbe7811761ebdffd3c9b978304ffb32bcaba8767a6eb625011b"
+  },
+  "test/NonceBitmap.t.sol": {
+   "gitBlobSha1": "eed4f5615952707fc0d4015bb236036cd28acb8f",
+   "sha256": "e28fd9a56eed067d74aa9e75428e2e2cdfe2d0f0f17aa387127ae705a571106a"
+  },
+  "test/Permit2Lib.t.sol": {
+   "gitBlobSha1": "3dfc2f796e9493b5685e9f3293d5d3d774a6d0bd",
+   "sha256": "3844a75fa50b9d625ea221e99250cfae9147a9a53a7759ec22e4719206c150fa"
+  },
+  "test/SignatureTransfer.t.sol": {
+   "gitBlobSha1": "758b14980d59ba9fee74394e1430ff46bad5f83c",
+   "sha256": "d906e28fe90067215a22a31014278385daca22bca462ef01d304efbb0ab3347b"
+  },
+  "test/TypehashGeneration.t.sol": {
+   "gitBlobSha1": "763b2ac5a29fe07b945df94a84a9f3dea4491ab4",
+   "sha256": "136dd10d72201bca64d085f88625ec024107de72f7188a08e414920298e3e03a"
+  },
+  "test/actors/Permitter.sol": {
+   "gitBlobSha1": "76e00e8e7a77108c11cbfc5724d0403a370311f2",
+   "sha256": "4044e048ce02b1ef6c3c2292c92d00f7904f79c4947b2f706c09f4398b03aa62"
+  },
+  "test/actors/Spender.sol": {
+   "gitBlobSha1": "22483789010a8481e7fef5b9da7f15ab8cc70fd9",
+   "sha256": "34ab127682b2842590467a0541da64ae13d9681b7655d8d82ed96525574436cc"
+  },
+  "test/integration/Argent.t.sol": {
+   "gitBlobSha1": "1eb8ceb9e35997509ed807bde961fd0b2ea829d9",
+   "sha256": "81bd9780fadaca1626b5956b1514c2e648ad3a98c8f25213274ba160c740ac26"
+  },
+  "test/integration/GnosisSafe.t.sol": {
+   "gitBlobSha1": "68eb104df15e3e0d960e2a378b5adfd7d4e83805",
+   "sha256": "fd207815eb92d8e2e063ad16441e511f93023e95d463fb5b5111765864daeced"
+  },
+  "test/integration/MainnetToken.t.sol": {
+   "gitBlobSha1": "e52fff9820f95c98c95d725538db4f68d408cf20",
+   "sha256": "404675d51e9b2281b2213037f7dc48b6e54a09f0ff5223045b2c65df9cddb735"
+  },
+  "test/integration/tokens/DAI.t.sol": {
+   "gitBlobSha1": "2166dcb722bb5f244ee8aa8f267d978028a73b3d",
+   "sha256": "cdce3bf05e1fad5d90b70632bad7ef9aafcc158dcec9368cf19bccad23bbfc7a"
+  },
+  "test/integration/tokens/FeeOnTransferToken.t.sol": {
+   "gitBlobSha1": "48100a7fb6de7d4c5ce2450b5c2779b23d9934ac",
+   "sha256": "8d6394a2fea9810629533fd6933d099e91234496cc30a5b7c7de8ccd87e66555"
+  },
+  "test/integration/tokens/RebasingToken.t.sol": {
+   "gitBlobSha1": "29b7642e4841b3942585d90df2551b22b3db5123",
+   "sha256": "77f7da8375b698e22eec24468d18b67848f6e426c74a11058fac46a27a5676bf"
+  },
+  "test/integration/tokens/TooManyReturnBytesToken.t.sol": {
+   "gitBlobSha1": "2c6f0fe4938acd7289a7e436f412d37068694bd6",
+   "sha256": "952a929b517b85c985e55888c16553ce76394477978fb962c691d3c721ba46b3"
+  },
+  "test/integration/tokens/UNI.t.sol": {
+   "gitBlobSha1": "381b12eff1b285439022844fa1681a52fd1b042e",
+   "sha256": "e21a3fe4540d836f93a35526414763700c00a4d94ff18f596c03f592ce8094e9"
+  },
+  "test/integration/tokens/USDC.t.sol": {
+   "gitBlobSha1": "26597b3c2792e97f229547e40eba27ffc9a66601",
+   "sha256": "bd67e2ae8c35e30c7e236a88da569c91e4b6d1092dd8260694785bf38cc6c1aa"
+  },
+  "test/integration/tokens/USDT.t.sol": {
+   "gitBlobSha1": "d3f4f53fdfeba9c8a35f7c9bc609dcbd65dd387d",
+   "sha256": "c01cd544e511522699d4f708a8c84070f636b513b3449ba50832ed59c7d57ad2"
+  },
+  "test/integration/tokens/WBTC.t.sol": {
+   "gitBlobSha1": "aff6166d62e6634b406f7572093b0e5c51f5e202",
+   "sha256": "9d8d6713de8cc739c5fed34734ef0026bb05e0cb95f072715a57eebd41e62078"
+  },
+  "test/integration/tokens/ZRX.t.sol": {
+   "gitBlobSha1": "a8041e3764570d59f8699615116a2f9c5aa59fa2",
+   "sha256": "b4448d6c1827bdafdbf6f31af21fe2cd06b607fa9bcc241a48d2b1863c219cfa"
+  },
+  "test/mocks/MockERC1155.sol": {
+   "gitBlobSha1": "fcaf06ac8296b44ee57688a7c0e51e826aa27683",
+   "sha256": "e15e692cf1e65b5419b65f44a26b8b8f80d876e94b5b4cc5c7a3a1d2f2cb1ca2"
+  },
+  "test/mocks/MockERC20.sol": {
+   "gitBlobSha1": "ddd9a6578cea0ced511c217534485c8f8b41263b",
+   "sha256": "c9fad3cd432898afbe8b73a64c59f8e3b072aa1e039eb7911b840080d3a452e3"
+  },
+  "test/mocks/MockERC721.sol": {
+   "gitBlobSha1": "a0d8389cf78a244596b8b20b024445b77b333819",
+   "sha256": "08d1d76c1fc44e0bc9b69d362958e808c9b1c162c124f8c205c08ae7c39a785d"
+  },
+  "test/mocks/MockHash.sol": {
+   "gitBlobSha1": "1cf1f59a61055e14899436330b6ebfb5669db142",
+   "sha256": "cd41eaa8c3700b47d32b18e3fa0dda22c975fe5ba6b9c4b70f4f911ebaa72eb6"
+  },
+  "test/mocks/MockNonPermitERC20.sol": {
+   "gitBlobSha1": "1c2c1749ab2d3061a4487f90c5ccca2b680e52a6",
+   "sha256": "296ac4451e002f13e16ec35e51f4200f6d6062fbd33604b2f06342714d8dbc38"
+  },
+  "test/mocks/MockNonPermitNonERC20WithDS.sol": {
+   "gitBlobSha1": "850c43b15beb8481c18f54ce959b7e3d36ced55a",
+   "sha256": "787a60fac45a407898d2fbfdf820e88c96a90e39d835fc1546b5b5d74b1a87e8"
+  },
+  "test/mocks/MockPermit2.sol": {
+   "gitBlobSha1": "aae4d047d851a71dba1b4bfc23657092adb7aeb1",
+   "sha256": "fc7445ca18941d99961782bbc5a5c67a82070becbc2d8100fdcc14aed1e0963d"
+  },
+  "test/mocks/MockPermit2Lib.sol": {
+   "gitBlobSha1": "b7790030abe6245a785f74804dddb9e465c42b18",
+   "sha256": "4ab6b4a3d9a08ed065c8c3fdc102a6d9a9667e7c6ae945db1736e7571bc25169"
+  },
+  "test/mocks/MockPermitWithDS.sol": {
+   "gitBlobSha1": "ecf61b03507eec3078dda8a9350382671ad1a96d",
+   "sha256": "31fcf413f15a01e2356d4ecf6ca3e1b2ce9f88890a2f6ce589863c73ca56919a"
+  },
+  "test/mocks/MockSignatureVerification.sol": {
+   "gitBlobSha1": "dee8b79166d2ddcc650b75c79176df8a1cefeda8",
+   "sha256": "c5082fda0caedff9420cbdddafe3239428c805f09d19ec70c0e4b773ea21e794"
+  },
+  "test/utils/AddressBuilder.sol": {
+   "gitBlobSha1": "7d0eab95a3320348490c5a132c89f8e8e52c4c9a",
+   "sha256": "61967dcff3b5d0271c9252a2d61b99ff8e967dc965bd631bf3633549ba642041"
+  },
+  "test/utils/AmountBuilder.sol": {
+   "gitBlobSha1": "efcb832b00f595863e87028a98576ba9f29fc9b3",
+   "sha256": "6f83356201e713319c23aec6420dc05e3e2852b4901f353e23aa6bd68a4c040f"
+  },
+  "test/utils/InvariantTest.sol": {
+   "gitBlobSha1": "dae5df15355f1cb06846f4603118a799ebb173ee",
+   "sha256": "dd6d2427b92be94769253bd27c5f94b06655f240a0a3f3bb9d43dc16c7be574c"
+  },
+  "test/utils/PermitSignature.sol": {
+   "gitBlobSha1": "fb65618e95abc5d819e02f768a3f04460adc1f09",
+   "sha256": "635c9738fdfbeaf51b084a10f358516edf55b2e922065af85b07b273ddebf4d2"
+  },
+  "test/utils/StructBuilder.sol": {
+   "gitBlobSha1": "dd203d7dfc6c49053b9d2f9ddf99d3c22d041643",
+   "sha256": "88441b99cf04b5c4e1f948a4875541e737e5a36d2388d38ca9a4425ff368a2e1"
+  },
+  "test/utils/TokenProvider.sol": {
+   "gitBlobSha1": "a240fa40e67aa865392add04155dc3255928fba1",
+   "sha256": "4a89c764aa3ceba0661851f23faf54e9116be97cc7ab1f7acb05f7ecb38db580"
+  }
+ },
+ "tool": "tools/permit2_rebuild.py",
+ "toolchain": {
+  "forge": "forge Version: 1.8.5\nCommit SHA: 51a52c59cffd940f76eddd0b4bb1791aa4b5ac7f\nBuild Timestamp: 2026-10-05T17:01:32.131957300Z (1791219692)\nBuild Profile: dist",
+  "forgeSha256": "21f86b563d87404a68481f513bf3e419780ee536307b89c658215ae6f8f5aa45",
+  "solc": "0.8.17",
+  "solcSha256": "7615e019666f29c7e77b20f9c506dda839a875fbc9baf3322d21348c88c05c69"
+ }
+}

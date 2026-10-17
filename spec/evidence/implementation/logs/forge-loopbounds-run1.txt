@@ -1,0 +1,194 @@
+Compiling 42 files with Solc 0.8.24
+Solc 0.8.24 finished in 82.04s
+Compiler run successful with warnings:
+Warning (2018): Function state mutability can be restricted to pure
+  --> test/MigrationInvariant.t.sol:43:5:
+   |
+43 |     function _token(uint8 sel) internal view returns (address) {
+   |     ^ (Relevant source part starts here and spans across multiple lines).
+
+Warning (2018): Function state mutability can be restricted to view
+   --> test/MigrationInvariant.t.sol:227:5:
+    |
+227 |     function invariant_I_MIG_1_AtMostOneActiveMandatePerLineage() public {
+    |     ^ (Relevant source part starts here and spans across multiple lines).
+
+Warning (2018): Function state mutability can be restricted to view
+   --> test/MigrationInvariant.t.sol:245:5:
+    |
+245 |     function invariant_I_MIG_3_CountersNeverDecrease() public {
+    |     ^ (Relevant source part starts here and spans across multiple lines).
+
+Warning (2018): Function state mutability can be restricted to view
+   --> test/MigrationInvariant.t.sol:250:5:
+    |
+250 |     function invariant_I_MIG_7_SharedAllowanceRule() public {
+    |     ^ (Relevant source part starts here and spans across multiple lines).
+
+Warning (2018): Function state mutability can be restricted to view
+   --> test/MigrationInvariant.t.sol:255:5:
+    |
+255 |     function invariant_I_MIG_8_NoOverlappingAuthority() public {
+    |     ^ (Relevant source part starts here and spans across multiple lines).
+
+Warning (2018): Function state mutability can be restricted to view
+   --> test/MigrationInvariant.t.sol:269:5:
+    |
+269 |     function invariant_I_MIG_8_Exec3AtMostOneRouterPerLineage() public {
+    |     ^ (Relevant source part starts here and spans across multiple lines).
+
+Warning (2018): Function state mutability can be restricted to view
+   --> test/MigrationInvariant.t.sol:290:5:
+    |
+290 |     function invariant_ExposureListIsDenseAndBounded() public {
+    |     ^ (Relevant source part starts here and spans across multiple lines).
+
+Warning (2018): Function state mutability can be restricted to view
+   --> test/MigrationInvariant.t.sol:307:5:
+    |
+307 |     function invariant_RegistryLiveCounterEqualsScan() public {
+    |     ^ (Relevant source part starts here and spans across multiple lines).
+
+Warning (2018): Function state mutability can be restricted to view
+   --> test/MigrationInvariant.t.sol:312:5:
+    |
+312 |     function invariant_I_MIG_10_ExposureIndexExact() public {
+    |     ^ (Relevant source part starts here and spans across multiple lines).
+
+Warning (2018): Function state mutability can be restricted to view
+   --> test/MigrationInvariant.t.sol:328:5:
+    |
+328 |     function invariant_I_MIG_11_NonInterference() public {
+    |     ^ (Relevant source part starts here and spans across multiple lines).
+
+Warning (2018): Function state mutability can be restricted to pure
+  --> test/helpers/VectorSuite.sol:18:5:
+   |
+18 |     function loadScenario(string memory json, string memory id) internal view returns (uint256[] memory) {
+   |     ^ (Relevant source part starts here and spans across multiple lines).
+
+Warning (2018): Function state mutability can be restricted to pure
+   --> test/helpers/VectorSuite.sol:108:5:
+    |
+108 |     function runContainment(string memory json, uint256 mutant) internal view returns (uint256 failures) {
+    |     ^ (Relevant source part starts here and spans across multiple lines).
+
+
+Ran 2 tests for test/Exec3.t.sol:Exec3Test
+[PASS] test_Exec3_NeverTwoRouters_AcrossAnyChainOfSuccessors() (gas: 32965923)
+[PASS] test_Layer2Coexists_Layer3IsExclusive() (gas: 5211026)
+Suite result: ok. 2 passed; 0 failed; 0 skipped; finished in 116.68ms (40.62ms CPU time)
+
+Ran 14 tests for test/LoopBounds.t.sol:LoopBoundsTest
+[PASS] testFuzz_ExposurePositionMapAfterRandomMandates(uint256) (runs: 1000, μ: 30914747, ~: 30979284)
+[FAIL: group 1: 0 != 1; counterexample: calldata=0x19b21ceb00000000000000000000000000000000000000000016481578a90b56d19024d5 args=[26936774494407027325936853 [2.693e25]]] testFuzz_RegistryLiveCounterEqualsScan(uint256) (runs: 2, μ: 4915042, ~: 4915042)
+[PASS] test_Batch_AboveMaxBatchIsRefusedBeforeAnyLoop() (gas: 10053)
+[FAIL: a batch at the proposed MAX_BATCH fits the lowest block gas limit assumed: 33876940 >= 30000000] test_Batch_OfMaxBatchSuccessors_FitsABlock() (gas: 55659480)
+Logs:
+  batch of 50 EMERGENCY successors (3 tokens each), total gas: 33876940
+  per successor gas: 677538
+
+[PASS] test_EmergencyMigration_WorstCase_AtTheProposedBoundAndAtTheHardMax() (gas: 29255305)
+Logs:
+  emergency migration gas, 8 exposed tokens (PC-18 proposal): 964344
+  emergency migration gas, 150 exposed tokens (hard max of PC-18): 1856699
+
+[FAIL: assertion failed: 563758 >= 400000] test_Retire_And_Reduce_DoNotScanTheExposureList() (gas: 19965314)
+Logs:
+  reduce (drop one token) gas, exposure list of 152: 563758
+
+[FAIL: a longer list must not cost more than a few storage slots: 223828 > 217424] test_Revoke_CostIsIndependentOfTheExposureListLength() (gas: 27689993)
+Logs:
+  revoke gas, exposure list of 3: 192424
+  revoke gas, exposure list of 8: 223828
+  revoke gas, exposure list of 153: 223828
+
+[PASS] test_Revoke_CostIsIndependentOfTheLineageHistory() (gas: 41449461)
+Logs:
+  revoke gas, generation 0: 156668
+  revoke gas, generation 60: 156668
+
+[PASS] test_Revoke_CostIsIndependentOfTheNumberOfSiblings() (gas: 21741048)
+Logs:
+  revoke gas, 1 mandate: 189938
+  revoke gas, 40 sibling mandates: 150293
+
+[PASS] test_SignerSet_BoundedAndTheEmergencyExitsDoNotLoop() (gas: 4670399)
+Logs:
+  removeQuoteSigner gas (set of 16): 44638
+  stopSignerSet gas (set of 16): 27476
+  proposeSignerSet gas at the bound: 834106
+  activateSignerSet gas at the bound: 152566
+
+[FAIL: next call did not revert as expected] test_Terms_DocumentedWidths() (gas: 6115504)
+[FAIL: next call did not revert as expected] test_Terms_SuccessorWithMalformedTermsIsRefusedFirst() (gas: 3553881)
+[FAIL: next call did not revert as expected] test_Terms_TokenCountOutsideOneToThreeIsRefused() (gas: 2431838)
+[FAIL: next call did not revert as expected] test_Terms_TokenOrderAndCanonicalForm() (gas: 2431803)
+Suite result: FAILED. 6 passed; 8 failed; 0 skipped; finished in 8.99s (18.31s CPU time)
+
+Ran 1 test for test/MigrationInvariant.t.sol:MigrationInvariantTest
+[PASS]
+MigrationInvariantTest invariants:
+[PASS] invariant_ExposureListIsDenseAndBounded
+[PASS] invariant_I_MIG_10_ExposureIndexExact
+[PASS] invariant_I_MIG_11_NonInterference
+[PASS] invariant_I_MIG_1_AtMostOneActiveMandatePerLineage
+[PASS] invariant_I_MIG_3_CountersNeverDecrease
+[PASS] invariant_I_MIG_7_SharedAllowanceRule
+[PASS] invariant_I_MIG_8_Exec3AtMostOneRouterPerLineage
+[PASS] invariant_I_MIG_8_NoOverlappingAuthority
+[PASS] invariant_RegistryLiveCounterEqualsScan
+ MigrationInvariantTest invariants (runs: 256, calls: 16384, reverts: 0)
+
+╭------------------+-----------------+-------+---------+----------╮
+| Contract         | Selector        | Calls | Reverts | Discards |
++=================================================================+
+| MigrationHandler | activate        | 1264  | 0       | 0        |
+|------------------+-----------------+-------+---------+----------|
+| MigrationHandler | charge          | 1220  | 0       | 0        |
+|------------------+-----------------+-------+---------+----------|
+| MigrationHandler | clearRouter     | 1272  | 0       | 0        |
+|------------------+-----------------+-------+---------+----------|
+| MigrationHandler | deprecateRouter | 1241  | 0       | 0        |
+|------------------+-----------------+-------+---------+----------|
+| MigrationHandler | disableRouter   | 1296  | 0       | 0        |
+|------------------+-----------------+-------+---------+----------|
+| MigrationHandler | grant           | 1251  | 0       | 0        |
+|------------------+-----------------+-------+---------+----------|
+| MigrationHandler | migrate         | 1222  | 0       | 0        |
+|------------------+-----------------+-------+---------+----------|
+| MigrationHandler | registerRouter  | 1256  | 0       | 0        |
+|------------------+-----------------+-------+---------+----------|
+| MigrationHandler | retire          | 1303  | 0       | 0        |
+|------------------+-----------------+-------+---------+----------|
+| MigrationHandler | retireRouter    | 1260  | 0       | 0        |
+|------------------+-----------------+-------+---------+----------|
+| MigrationHandler | revoke          | 1263  | 0       | 0        |
+|------------------+-----------------+-------+---------+----------|
+| MigrationHandler | sunsetRouter    | 1304  | 0       | 0        |
+|------------------+-----------------+-------+---------+----------|
+| MigrationHandler | warp            | 1232  | 0       | 0        |
+╰------------------+-----------------+-------+---------+----------╯
+
+Suite result: ok. 1 passed; 0 failed; 0 skipped; finished in 110.32s (110.22s CPU time)
+
+Ran 3 test suites in 110.42s (119.43s CPU time): 9 tests passed, 8 failed, 0 skipped (17 total tests)
+
+Failing tests:
+Encountered 8 failing tests in test/LoopBounds.t.sol:LoopBoundsTest
+[FAIL: group 1: 0 != 1; counterexample: calldata=0x19b21ceb00000000000000000000000000000000000000000016481578a90b56d19024d5 args=[26936774494407027325936853 [2.693e25]]] testFuzz_RegistryLiveCounterEqualsScan(uint256) (runs: 2, μ: 4915042, ~: 4915042)
+[FAIL: a batch at the proposed MAX_BATCH fits the lowest block gas limit assumed: 33876940 >= 30000000] test_Batch_OfMaxBatchSuccessors_FitsABlock() (gas: 55659480)
+[FAIL: assertion failed: 563758 >= 400000] test_Retire_And_Reduce_DoNotScanTheExposureList() (gas: 19965314)
+[FAIL: a longer list must not cost more than a few storage slots: 223828 > 217424] test_Revoke_CostIsIndependentOfTheExposureListLength() (gas: 27689993)
+[FAIL: next call did not revert as expected] test_Terms_DocumentedWidths() (gas: 6115504)
+[FAIL: next call did not revert as expected] test_Terms_SuccessorWithMalformedTermsIsRefusedFirst() (gas: 3553881)
+[FAIL: next call did not revert as expected] test_Terms_TokenCountOutsideOneToThreeIsRefused() (gas: 2431838)
+[FAIL: next call did not revert as expected] test_Terms_TokenOrderAndCanonicalForm() (gas: 2431803)
+
+Encountered a total of 8 failing tests, 9 tests succeeded
+
+Tip: Run `forge test --rerun` to retry only the 8 failed tests
+Tip: Run `forge test --debug --match-test <TEST_NAME>` to inspect one failing test in the debugger
+
+Fuzz seed: 0xfa57 (use `--fuzz-seed` to reproduce)
+exit=1

@@ -1,0 +1,63 @@
+{
+ "types": {
+  "EIP712Domain": [
+   {
+    "name": "name",
+    "type": "string"
+   },
+   {
+    "name": "version",
+    "type": "string"
+   },
+   {
+    "name": "chainId",
+    "type": "uint256"
+   },
+   {
+    "name": "verifyingContract",
+    "type": "address"
+   }
+  ],
+  "ReduceMandate": [
+   {
+    "name": "customer",
+    "type": "address"
+   },
+   {
+    "name": "mandateId",
+    "type": "bytes32"
+   },
+   {
+    "name": "oldTermsHash",
+    "type": "bytes32"
+   },
+   {
+    "name": "newTermsHash",
+    "type": "bytes32"
+   },
+   {
+    "name": "deadline",
+    "type": "uint64"
+   },
+   {
+    "name": "nonce",
+    "type": "uint256"
+   }
+  ]
+ },
+ "primaryType": "ReduceMandate",
+ "domain": {
+  "name": "FastPay Mandates",
+  "version": "1",
+  "chainId": "84532",
+  "verifyingContract": "0x2222222222222222222222222222222222222222"
+ },
+ "message": {
+  "customer": "0x4444444444444444444444444444444444444444",
+  "mandateId": "0x1010101010101010101010101010101010101010101010101010101010101010",
+  "oldTermsHash": "0x9674fedf26f09c88394060316e8d844d61ea3d0c7514af33f375407db3506f55",
+  "newTermsHash": "0x1f4f9bb29726d128c924d1c3a1d9af8c5a8056657dfc51ed6a6050a279a298f7",
+  "deadline": "1800003600",
+  "nonce": "12"
+ }
+}

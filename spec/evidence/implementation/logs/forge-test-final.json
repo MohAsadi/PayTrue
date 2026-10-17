@@ -1,0 +1,4432 @@
+{
+ "test/BoundsVersion.t.sol:BoundsVersionTest": {
+  "duration": "104ms 775\u00b5s 500ns",
+  "warnings": [],
+  "test_results": {
+   "test_AcceptsReadsTheBandOfTheVersion()": {
+    "status": "Success",
+    "reason": null,
+    "counterexample": null,
+    "kind": {
+     "Unit": {
+      "gas": 2853866
+     }
+    },
+    "duration": "18ms 129\u00b5s 700ns",
+    "decoded_logs": []
+   },
+   "test_K6AndWidenedMaskBit6FollowTheVersion()": {
+    "status": "Success",
+    "reason": null,
+    "counterexample": null,
+    "kind": {
+     "Unit": {
+      "gas": 4314406
+     }
+    },
+    "duration": "61ms 420\u00b5s 800ns",
+    "decoded_logs": []
+   },
+   "test_K6SkipMutantAcceptsAChangedVersion()": {
+    "status": "Success",
+    "reason": null,
+    "counterexample": null,
+    "kind": {
+     "Unit": {
+      "gas": 78629
+     }
+    },
+    "duration": "463\u00b5s 600ns",
+    "decoded_logs": []
+   },
+   "test_ManagerAcceptsARevisionWithBit6()": {
+    "status": "Success",
+    "reason": null,
+    "counterexample": null,
+    "kind": {
+     "Unit": {
+      "gas": 3173264
+     }
+    },
+    "duration": "6ms 353\u00b5s 500ns",
+    "decoded_logs": []
+   },
+   "test_ManagerRefusesAMigrationThatChangesTheVersion()": {
+    "status": "Success",
+    "reason": null,
+    "counterexample": null,
+    "kind": {
+     "Unit": {
+      "gas": 3106538
+     }
+    },
+    "duration": "7ms 330\u00b5s 300ns",
+    "decoded_logs": []
+   },
+   "test_RegistryBands()": {
+    "status": "Success",
+    "reason": null,
+    "counterexample": null,
+    "kind": {
+     "Unit": {
+      "gas": 16570
+     }
+    },
+    "duration": "193\u00b5s 400ns",
+    "decoded_logs": []
+   },
+   "test_RetiredScenarioField13()": {
+    "status": "Success",
+    "reason": null,
+    "counterexample": null,
+    "kind": {
+     "Unit": {
+      "gas": 10099612
+     }
+    },
+    "duration": "4ms 800ns",
+    "decoded_logs": []
+   }
+  }
+ },
+ "test/ConfigRecords.t.sol:ConfigRecordsTest": {
+  "duration": "20ms 331\u00b5s 400ns",
+  "warnings": [],
+  "test_results": {
+   "test_ConfigRange_CYCLE_RULE()": {
+    "status": "Success",
+    "reason": null,
+    "counterexample": null,
+    "kind": {
+     "Unit": {
+      "gas": 20203
+     }
+    },
+    "duration": "106\u00b5s 700ns",
+    "decoded_logs": []
+   },
+   "test_ConfigRange_EIP712_NAMES_TAGS_AND_TYPES()": {
+    "status": "Success",
+    "reason": null,
+    "counterexample": null,
+    "kind": {
+     "Unit": {
+      "gas": 8105
+     }
+    },
+    "duration": "17ms 72\u00b5s 700ns",
+    "decoded_logs": []
+   },
+   "test_ConfigRange_FEE_CEILING_BPS()": {
+    "status": "Success",
+    "reason": null,
+    "counterexample": null,
+    "kind": {
+     "Unit": {
+      "gas": 5582
+     }
+    },
+    "duration": "68\u00b5s 500ns",
+    "decoded_logs": []
+   },
+   "test_ConfigRange_MAX_BAND_WIDTH_BPS()": {
+    "status": "Success",
+    "reason": null,
+    "counterexample": null,
+    "kind": {
+     "Unit": {
+      "gas": 4690
+     }
+    },
+    "duration": "63\u00b5s 900ns",
+    "decoded_logs": []
+   },
+   "test_ConfigRange_MAX_BATCH()": {
+    "status": "Success",
+    "reason": null,
+    "counterexample": null,
+    "kind": {
+     "Unit": {
+      "gas": 13499
+     }
+    },
+    "duration": "60\u00b5s 800ns",
+    "decoded_logs": []
+   },
+   "test_ConfigRange_MAX_EXPOSED_TOKENS_PER_ROUTER()": {
+    "status": "Success",
+    "reason": null,
+    "counterexample": null,
+    "kind": {
+     "Unit": {
+      "gas": 9958
+     }
+    },
+    "duration": "59\u00b5s",
+    "decoded_logs": []
+   },
+   "test_ConfigRange_MAX_QUOTE_TTL()": {
+    "status": "Success",
+    "reason": null,
+    "counterexample": null,
+    "kind": {
+     "Unit": {
+      "gas": 3620
+     }
+    },
+    "duration": "40\u00b5s 100ns",
+    "decoded_logs": []
+   },
+   "test_ConfigRange_MAX_ROUTERS_LIVE()": {
+    "status": "Success",
+    "reason": null,
+    "counterexample": null,
+    "kind": {
+     "Unit": {
+      "gas": 14904
+     }
+    },
+    "duration": "100\u00b5s 200ns",
+    "decoded_logs": []
+   },
+   "test_ConfigRange_MAX_SIGNERS_PER_SET()": {
+    "status": "Success",
+    "reason": null,
+    "counterexample": null,
+    "kind": {
+     "Unit": {
+      "gas": 8873
+     }
+    },
+    "duration": "292\u00b5s 100ns",
+    "decoded_logs": []
+   },
+   "test_ConfigRange_MAX_TOKENS_PER_MANDATE()": {
+    "status": "Success",
+    "reason": null,
+    "counterexample": null,
+    "kind": {
+     "Unit": {
+      "gas": 6303
+     }
+    },
+    "duration": "68\u00b5s 200ns",
+    "decoded_logs": []
+   },
+   "test_ConfigRange_MIN_NOTICE_SECURITY()": {
+    "status": "Success",
+    "reason": null,
+    "counterexample": null,
+    "kind": {
+     "Unit": {
+      "gas": 16355
+     }
+    },
+    "duration": "66\u00b5s 100ns",
+    "decoded_logs": []
+   },
+   "test_ConfigRange_MIN_NOTICE_STANDARD()": {
+    "status": "Success",
+    "reason": null,
+    "counterexample": null,
+    "kind": {
+     "Unit": {
+      "gas": 10668
+     }
+    },
+    "duration": "62\u00b5s 600ns",
+    "decoded_logs": []
+   },
+   "test_ConfigRange_MIN_RECIPIENT_CHANGE_DELAY()": {
+    "status": "Success",
+    "reason": null,
+    "counterexample": null,
+    "kind": {
+     "Unit": {
+      "gas": 4029
+     }
+    },
+    "duration": "36\u00b5s 900ns",
+    "decoded_logs": []
+   },
+   "test_ConfigRange_PERMIT2_ADDRESS()": {
+    "status": "Success",
+    "reason": null,
+    "counterexample": null,
+    "kind": {
+     "Unit": {
+      "gas": 4015
+     }
+    },
+    "duration": "47\u00b5s 300ns",
+    "decoded_logs": []
+   },
+   "test_ConfigRange_PIN_EOA_AND_KECCAK_EMPTY()": {
+    "status": "Success",
+    "reason": null,
+    "counterexample": null,
+    "kind": {
+     "Unit": {
+      "gas": 5505
+     }
+    },
+    "duration": "48\u00b5s 700ns",
+    "decoded_logs": []
+   },
+   "test_ConfigRange_QUOTE_SET_GRACE()": {
+    "status": "Success",
+    "reason": null,
+    "counterexample": null,
+    "kind": {
+     "Unit": {
+      "gas": 8562
+     }
+    },
+    "duration": "282\u00b5s 900ns",
+    "decoded_logs": []
+   },
+   "test_ConfigRange_RETENTION()": {
+    "status": "Success",
+    "reason": null,
+    "counterexample": null,
+    "kind": {
+     "Unit": {
+      "gas": 9777
+     }
+    },
+    "duration": "57\u00b5s 300ns",
+    "decoded_logs": []
+   },
+   "test_ConfigRange_TIMELOCK_MIN_DELAY_AND_GUARDIAN()": {
+    "status": "Success",
+    "reason": null,
+    "counterexample": null,
+    "kind": {
+     "Unit": {
+      "gas": 73865
+     }
+    },
+    "duration": "301\u00b5s",
+    "decoded_logs": []
+   },
+   "test_ConfigRange_WINDOW_LENGTHS()": {
+    "status": "Success",
+    "reason": null,
+    "counterexample": null,
+    "kind": {
+     "Unit": {
+      "gas": 3890
+     }
+    },
+    "duration": "43\u00b5s",
+    "decoded_logs": []
+   }
+  }
+ },
+ "test/EIP712Permit2.t.sol:EIP712Permit2Test": {
+  "duration": "104ms 405\u00b5s 800ns",
+  "warnings": [],
+  "test_results": {
+   "test_Permit2DomainSeparator_EqualsTheGoldenVector()": {
+    "status": "Success",
+    "reason": null,
+    "counterexample": null,
+    "kind": {
+     "Unit": {
+      "gas": 9188
+     }
+    },
+    "duration": "105\u00b5s 700ns",
+    "decoded_logs": []
+   },
+   "test_Rebuild_Create2AddressIsTheCanonicalOne()": {
+    "status": "Success",
+    "reason": null,
+    "counterexample": null,
+    "kind": {
+     "Unit": {
+      "gas": 136068
+     }
+    },
+    "duration": "2ms 49\u00b5s 500ns",
+    "decoded_logs": []
+   },
+   "test_Rebuild_ImmutablesAreWhatTheEvidenceNames()": {
+    "status": "Success",
+    "reason": null,
+    "counterexample": null,
+    "kind": {
+     "Unit": {
+      "gas": 37433
+     }
+    },
+    "duration": "1ms 339\u00b5s",
+    "decoded_logs": []
+   },
+   "test_Rebuild_RuntimeCodeEqualsTheLocalExpectation()": {
+    "status": "Success",
+    "reason": null,
+    "counterexample": null,
+    "kind": {
+     "Unit": {
+      "gas": 362618
+     }
+    },
+    "duration": "51ms 495\u00b5s 100ns",
+    "decoded_logs": []
+   },
+   "test_Witness_Batch_Accepted()": {
+    "status": "Success",
+    "reason": null,
+    "counterexample": null,
+    "kind": {
+     "Unit": {
+      "gas": 276797
+     }
+    },
+    "duration": "1ms 636\u00b5s",
+    "decoded_logs": []
+   },
+   "test_Witness_Batch_PermittedAmountsAreBinding()": {
+    "status": "Success",
+    "reason": null,
+    "counterexample": null,
+    "kind": {
+     "Unit": {
+      "gas": 158538
+     }
+    },
+    "duration": "780\u00b5s 300ns",
+    "decoded_logs": []
+   },
+   "test_Witness_Batch_SingleSignatureDoesNotValidateAsBatchAndViceVersa()": {
+    "status": "Success",
+    "reason": null,
+    "counterexample": null,
+    "kind": {
+     "Unit": {
+      "gas": 216068
+     }
+    },
+    "duration": "1ms 220\u00b5s 800ns",
+    "decoded_logs": []
+   },
+   "test_Witness_Batch_WrongSpenderAndLengthMismatch()": {
+    "status": "Success",
+    "reason": null,
+    "counterexample": null,
+    "kind": {
+     "Unit": {
+      "gas": 170305
+     }
+    },
+    "duration": "853\u00b5s 700ns",
+    "decoded_logs": []
+   },
+   "test_Witness_Single_Accepted()": {
+    "status": "Success",
+    "reason": null,
+    "counterexample": null,
+    "kind": {
+     "Unit": {
+      "gas": 161367
+     }
+    },
+    "duration": "638\u00b5s 300ns",
+    "decoded_logs": []
+   },
+   "test_Witness_Single_AnyChangeOfTheTypeStringFails()": {
+    "status": "Success",
+    "reason": null,
+    "counterexample": null,
+    "kind": {
+     "Unit": {
+      "gas": 524939
+     }
+    },
+    "duration": "2ms 538\u00b5s 500ns",
+    "decoded_logs": []
+   },
+   "test_Witness_Single_DestinationIsNotBoundByPermit2()": {
+    "status": "Success",
+    "reason": null,
+    "counterexample": null,
+    "kind": {
+     "Unit": {
+      "gas": 161643
+     }
+    },
+    "duration": "650\u00b5s 500ns",
+    "decoded_logs": []
+   },
+   "test_Witness_Single_EveryFieldIsBound()": {
+    "status": "Success",
+    "reason": null,
+    "counterexample": null,
+    "kind": {
+     "Unit": {
+      "gas": 893468
+     }
+    },
+    "duration": "4ms 100\u00b5s",
+    "decoded_logs": []
+   },
+   "test_Witness_Single_ExpiredAndOverRequested()": {
+    "status": "Success",
+    "reason": null,
+    "counterexample": null,
+    "kind": {
+     "Unit": {
+      "gas": 125888
+     }
+    },
+    "duration": "751\u00b5s 900ns",
+    "decoded_logs": []
+   },
+   "test_Witness_Single_OnlyTheSignedSpender()": {
+    "status": "Success",
+    "reason": null,
+    "counterexample": null,
+    "kind": {
+     "Unit": {
+      "gas": 110553
+     }
+    },
+    "duration": "566\u00b5s 500ns",
+    "decoded_logs": []
+   },
+   "test_Witness_Single_ReplayIsRefused()": {
+    "status": "Success",
+    "reason": null,
+    "counterexample": null,
+    "kind": {
+     "Unit": {
+      "gas": 192330
+     }
+    },
+    "duration": "720\u00b5s 800ns",
+    "decoded_logs": []
+   }
+  }
+ },
+ "test/Exec3.t.sol:Exec3Test": {
+  "duration": "60ms 89\u00b5s 700ns",
+  "warnings": [],
+  "test_results": {
+   "test_Exec3_NeverTwoRouters_AcrossAnyChainOfSuccessors()": {
+    "status": "Success",
+    "reason": null,
+    "counterexample": null,
+    "kind": {
+     "Unit": {
+      "gas": 32588205
+     }
+    },
+    "duration": "44ms 374\u00b5s 900ns",
+    "decoded_logs": []
+   },
+   "test_Layer2Coexists_Layer3IsExclusive()": {
+    "status": "Success",
+    "reason": null,
+    "counterexample": null,
+    "kind": {
+     "Unit": {
+      "gas": 5135870
+     }
+    },
+    "duration": "14ms 180\u00b5s 200ns",
+    "decoded_logs": []
+   }
+  }
+ },
+ "test/IntegerWidth.t.sol:IntegerWidthTest": {
+  "duration": "766ms 472\u00b5s 500ns",
+  "warnings": [],
+  "test_results": {
+   "testFuzz_ApproveNeverTruncates(uint256,uint256)": {
+    "status": "Success",
+    "reason": null,
+    "counterexample": null,
+    "kind": {
+     "Fuzz": {
+      "first_case": {
+       "gas": 60017,
+       "stipend": 21584
+      },
+      "runs": 1000,
+      "mean_gas": 50750,
+      "median_gas": 38695,
+      "failed_corpus_replays": 0
+     }
+    },
+    "duration": "416ms 535\u00b5s 200ns",
+    "decoded_logs": []
+   },
+   "testFuzz_NarrowNeverTruncates(uint256)": {
+    "status": "Success",
+    "reason": null,
+    "counterexample": null,
+    "kind": {
+     "Fuzz": {
+      "first_case": {
+       "gas": 43582,
+       "stipend": 21216
+      },
+      "runs": 1000,
+      "mean_gas": 21667,
+      "median_gas": 21479,
+      "failed_corpus_replays": 0
+     }
+    },
+    "duration": "305ms 438\u00b5s",
+    "decoded_logs": []
+   },
+   "test_CycleArithmetic_LargeValues()": {
+    "status": "Success",
+    "reason": null,
+    "counterexample": null,
+    "kind": {
+     "Unit": {
+      "gas": 30947
+     }
+    },
+    "duration": "164\u00b5s 700ns",
+    "decoded_logs": []
+   },
+   "test_CycleArithmetic_RevertsInsteadOfWrapping()": {
+    "status": "Success",
+    "reason": null,
+    "counterexample": null,
+    "kind": {
+     "Unit": {
+      "gas": 34589
+     }
+    },
+    "duration": "152\u00b5s 400ns",
+    "decoded_logs": []
+   },
+   "test_EOfZeroIsInfinity()": {
+    "status": "Success",
+    "reason": null,
+    "counterexample": null,
+    "kind": {
+     "Unit": {
+      "gas": 24460
+     }
+    },
+    "duration": "272\u00b5s 400ns",
+    "decoded_logs": []
+   },
+   "test_G1_CapAboveUint160IsNotTruncated()": {
+    "status": "Success",
+    "reason": null,
+    "counterexample": null,
+    "kind": {
+     "Unit": {
+      "gas": 3610257
+     }
+    },
+    "duration": "17ms 315\u00b5s 200ns",
+    "decoded_logs": []
+   },
+   "test_Hazard_ExplicitCastTruncatesSilently()": {
+    "status": "Success",
+    "reason": null,
+    "counterexample": null,
+    "kind": {
+     "Unit": {
+      "gas": 4037
+     }
+    },
+    "duration": "294\u00b5s 400ns",
+    "decoded_logs": []
+   },
+   "test_Uint160_AmountAboveTheLimitIsRefused()": {
+    "status": "Success",
+    "reason": null,
+    "counterexample": null,
+    "kind": {
+     "Unit": {
+      "gas": 61306
+     }
+    },
+    "duration": "1ms 266\u00b5s 500ns",
+    "decoded_logs": []
+   },
+   "test_Uint160_SentinelIsNeverDecremented()": {
+    "status": "Success",
+    "reason": null,
+    "counterexample": null,
+    "kind": {
+     "Unit": {
+      "gas": 226953
+     }
+    },
+    "duration": "1ms 211\u00b5s 500ns",
+    "decoded_logs": []
+   },
+   "test_Uint256_FiatProductOverflowReverts()": {
+    "status": "Success",
+    "reason": null,
+    "counterexample": null,
+    "kind": {
+     "Unit": {
+      "gas": 16103
+     }
+    },
+    "duration": "117\u00b5s",
+    "decoded_logs": []
+   },
+   "test_Uint256_UsedPlusAmountNearTheLimitReverts()": {
+    "status": "Success",
+    "reason": null,
+    "counterexample": null,
+    "kind": {
+     "Unit": {
+      "gas": 49788
+     }
+    },
+    "duration": "424\u00b5s 200ns",
+    "decoded_logs": []
+   },
+   "test_Uint32_ExposureCountOverflowReverts()": {
+    "status": "Success",
+    "reason": null,
+    "counterexample": null,
+    "kind": {
+     "Unit": {
+      "gas": 2643218
+     }
+    },
+    "duration": "5ms 942\u00b5s 900ns",
+    "decoded_logs": []
+   },
+   "test_Uint32_ExposureCountUnderflowReverts()": {
+    "status": "Success",
+    "reason": null,
+    "counterexample": null,
+    "kind": {
+     "Unit": {
+      "gas": 3369732
+     }
+    },
+    "duration": "7ms 704\u00b5s",
+    "decoded_logs": []
+   },
+   "test_Uint32_PinVersionOverflowReverts()": {
+    "status": "Success",
+    "reason": null,
+    "counterexample": null,
+    "kind": {
+     "Unit": {
+      "gas": 45986
+     }
+    },
+    "duration": "287\u00b5s 100ns",
+    "decoded_logs": []
+   },
+   "test_Uint48_AboveTheLimitIsRefusedNotTruncated()": {
+    "status": "Success",
+    "reason": null,
+    "counterexample": null,
+    "kind": {
+     "Unit": {
+      "gas": 93901
+     }
+    },
+    "duration": "287\u00b5s 500ns",
+    "decoded_logs": []
+   },
+   "test_Uint48_ExpirationAtTheLimit()": {
+    "status": "Success",
+    "reason": null,
+    "counterexample": null,
+    "kind": {
+     "Unit": {
+      "gas": 135269
+     }
+    },
+    "duration": "390\u00b5s 100ns",
+    "decoded_logs": []
+   },
+   "test_WidthLib_RefusesWhatACastWouldTruncate()": {
+    "status": "Success",
+    "reason": null,
+    "counterexample": null,
+    "kind": {
+     "Unit": {
+      "gas": 68241
+     }
+    },
+    "duration": "186\u00b5s 600ns",
+    "decoded_logs": []
+   }
+  }
+ },
+ "test/LoopBounds.t.sol:LoopBoundsTest": {
+  "duration": "3m 40s 147ms 507\u00b5s 500ns",
+  "warnings": [],
+  "test_results": {
+   "testFuzz_ExposurePositionMapAfterRandomMandates(uint256)": {
+    "status": "Success",
+    "reason": null,
+    "counterexample": null,
+    "kind": {
+     "Fuzz": {
+      "first_case": {
+       "gas": 31829018,
+       "stipend": 21216
+      },
+      "runs": 1000,
+      "mean_gas": 30648074,
+      "median_gas": 30713280,
+      "failed_corpus_replays": 0
+     }
+    },
+    "duration": "3m 40s 145ms 254\u00b5s 800ns",
+    "decoded_logs": []
+   },
+   "testFuzz_RegistryLiveCounterEqualsScan(uint256)": {
+    "status": "Success",
+    "reason": null,
+    "counterexample": null,
+    "kind": {
+     "Fuzz": {
+      "first_case": {
+       "gas": 4803812,
+       "stipend": 21216
+      },
+      "runs": 1000,
+      "mean_gas": 5065608,
+      "median_gas": 5082502,
+      "failed_corpus_replays": 0
+     }
+    },
+    "duration": "30s 938ms 815\u00b5s 300ns",
+    "decoded_logs": []
+   },
+   "test_Batch_AboveMaxBatchIsRefusedBeforeAnyLoop()": {
+    "status": "Success",
+    "reason": null,
+    "counterexample": null,
+    "kind": {
+     "Unit": {
+      "gas": 10044
+     }
+    },
+    "duration": "159\u00b5s 300ns",
+    "decoded_logs": []
+   },
+   "test_Batch_OfMaxBatchSuccessors_FitsABlock()": {
+    "status": "Success",
+    "reason": null,
+    "counterexample": null,
+    "kind": {
+     "Unit": {
+      "gas": 125887566
+     }
+    },
+    "duration": "1s 797ms 136\u00b5s",
+    "decoded_logs": [
+     "batch of MAX_BATCH EMERGENCY successors (3 tokens each), total gas: 5917402",
+     "per successor gas: 591740",
+     "batch of 100 EMERGENCY successors (hard max of PC-04), total gas: 57144760",
+     "per successor gas at 100: 571447"
+    ]
+   },
+   "test_EmergencyMigration_WorstCase_AtTheProposedBoundAndAtTheHardMax()": {
+    "status": "Success",
+    "reason": null,
+    "counterexample": null,
+    "kind": {
+     "Unit": {
+      "gas": 29135615
+     }
+    },
+    "duration": "159ms 181\u00b5s 700ns",
+    "decoded_logs": [
+     "emergency migration gas, 8 exposed tokens (PC-18 proposal): 966896",
+     "emergency migration gas, 150 exposed tokens (hard max of PC-18): 1885666"
+    ]
+   },
+   "test_Retire_And_Reduce_DoNotScanTheExposureList()": {
+    "status": "Success",
+    "reason": null,
+    "counterexample": null,
+    "kind": {
+     "Unit": {
+      "gas": 24656816
+     }
+    },
+    "duration": "130ms 108\u00b5s 400ns",
+    "decoded_logs": [
+     "reduce (drop one token) gas, exposure list of 8: 535925",
+     "reduce (drop one token) gas, exposure list of 152: 535925",
+     "retire gas, exposure list of 7: 173457",
+     "retire gas, exposure list of 151: 173457"
+    ]
+   },
+   "test_Revoke_CostIsIndependentOfTheExposureListLength()": {
+    "status": "Success",
+    "reason": null,
+    "counterexample": null,
+    "kind": {
+     "Unit": {
+      "gas": 27476516
+     }
+    },
+    "duration": "148ms 946\u00b5s 500ns",
+    "decoded_logs": [
+     "revoke gas, exposure list of 3: 190284",
+     "revoke gas, exposure list of 8: 221688",
+     "revoke gas, exposure list of 153: 221688"
+    ]
+   },
+   "test_Revoke_CostIsIndependentOfTheLineageHistory()": {
+    "status": "Success",
+    "reason": null,
+    "counterexample": null,
+    "kind": {
+     "Unit": {
+      "gas": 41695715
+     }
+    },
+    "duration": "768ms 847\u00b5s 900ns",
+    "decoded_logs": [
+     "revoke gas, generation 0: 154528",
+     "revoke gas, generation 60: 154528"
+    ]
+   },
+   "test_Revoke_CostIsIndependentOfTheNumberOfSiblings()": {
+    "status": "Success",
+    "reason": null,
+    "counterexample": null,
+    "kind": {
+     "Unit": {
+      "gas": 21666950
+     }
+    },
+    "duration": "230ms 484\u00b5s 900ns",
+    "decoded_logs": [
+     "revoke gas, 1 mandate: 187798",
+     "revoke gas, 40 sibling mandates: 148153"
+    ]
+   },
+   "test_SignerSet_BoundedAndTheEmergencyExitsDoNotLoop()": {
+    "status": "Success",
+    "reason": null,
+    "counterexample": null,
+    "kind": {
+     "Unit": {
+      "gas": 4595655
+     }
+    },
+    "duration": "90ms 185\u00b5s 300ns",
+    "decoded_logs": [
+     "removeQuoteSigner gas (set of 16): 44668",
+     "stopSignerSet gas (set of 16): 27542",
+     "proposeSignerSet gas at the bound: 834136",
+     "activateSignerSet gas at the bound: 152599"
+    ]
+   },
+   "test_Terms_DocumentedWidths()": {
+    "status": "Success",
+    "reason": null,
+    "counterexample": null,
+    "kind": {
+     "Unit": {
+      "gas": 26096437
+     }
+    },
+    "duration": "142ms 149\u00b5s 800ns",
+    "decoded_logs": []
+   },
+   "test_Terms_SuccessorWithMalformedTermsIsRefusedFirst()": {
+    "status": "Success",
+    "reason": null,
+    "counterexample": null,
+    "kind": {
+     "Unit": {
+      "gas": 3576285
+     }
+    },
+    "duration": "16ms 883\u00b5s 200ns",
+    "decoded_logs": []
+   },
+   "test_Terms_TokenCountOutsideOneToThreeIsRefused()": {
+    "status": "Success",
+    "reason": null,
+    "counterexample": null,
+    "kind": {
+     "Unit": {
+      "gas": 3739940
+     }
+    },
+    "duration": "28ms 517\u00b5s",
+    "decoded_logs": []
+   },
+   "test_Terms_TokenOrderAndCanonicalForm()": {
+    "status": "Success",
+    "reason": null,
+    "counterexample": null,
+    "kind": {
+     "Unit": {
+      "gas": 12459536
+     }
+    },
+    "duration": "62ms 945\u00b5s 600ns",
+    "decoded_logs": []
+   }
+  }
+ },
+ "test/MigrationFuzz.t.sol:MigrationFuzzTest": {
+  "duration": "10h 4m 13s 515ms 460\u00b5s 900ns",
+  "warnings": [],
+  "test_results": {
+   "testFuzz_ContainedMatchesOracle(uint256)": {
+    "status": "Success",
+    "reason": null,
+    "counterexample": null,
+    "kind": {
+     "Fuzz": {
+      "first_case": {
+       "gas": 118937,
+       "stipend": 21216
+      },
+      "runs": 1000,
+      "mean_gas": 94067,
+      "median_gas": 96047,
+      "failed_corpus_replays": 0
+     }
+    },
+    "duration": "977ms 104\u00b5s 800ns",
+    "decoded_logs": [
+     "Bound result 21634"
+    ]
+   },
+   "testFuzz_ExposureIndex(uint256)": {
+    "status": "Success",
+    "reason": null,
+    "counterexample": null,
+    "kind": {
+     "Fuzz": {
+      "first_case": {
+       "gas": 125407312,
+       "stipend": 21216
+      },
+      "runs": 1000,
+      "mean_gas": 99818159,
+      "median_gas": 97713172,
+      "failed_corpus_replays": 0
+     }
+    },
+    "duration": "10h 4m 13s 485ms 625\u00b5s 900ns",
+    "decoded_logs": []
+   },
+   "testFuzz_LemmaM(uint256)": {
+    "status": "Success",
+    "reason": null,
+    "counterexample": null,
+    "kind": {
+     "Fuzz": {
+      "first_case": {
+       "gas": 72624,
+       "stipend": 21216
+      },
+      "runs": 1000,
+      "mean_gas": 60303,
+      "median_gas": 50216,
+      "failed_corpus_replays": 0
+     }
+    },
+    "duration": "6m 17s 50ms 367\u00b5s 700ns",
+    "decoded_logs": [
+     "Bound result 21634"
+    ]
+   },
+   "testFuzz_LemmaM_Tightened(uint256)": {
+    "status": "Success",
+    "reason": null,
+    "counterexample": null,
+    "kind": {
+     "Fuzz": {
+      "first_case": {
+       "gas": 465769,
+       "stipend": 21216
+      },
+      "runs": 1000,
+      "mean_gas": 438437,
+      "median_gas": 441565,
+      "failed_corpus_replays": 0
+     }
+    },
+    "duration": "4m 48s 272ms 432\u00b5s 800ns",
+    "decoded_logs": [
+     "Bound result 21634"
+    ]
+   },
+   "testFuzz_OldPermission(uint8,uint8,uint8,uint8)": {
+    "status": "Success",
+    "reason": null,
+    "counterexample": null,
+    "kind": {
+     "Fuzz": {
+      "first_case": {
+       "gas": 2461137,
+       "stipend": 21624
+      },
+      "runs": 1000,
+      "mean_gas": 1939761,
+      "median_gas": 1959364,
+      "failed_corpus_replays": 0
+     }
+    },
+    "duration": "19s 159ms 314\u00b5s 700ns",
+    "decoded_logs": []
+   },
+   "testFuzz_RouterMode(uint8)": {
+    "status": "Success",
+    "reason": null,
+    "counterexample": null,
+    "kind": {
+     "Fuzz": {
+      "first_case": {
+       "gas": 255539,
+       "stipend": 21204
+      },
+      "runs": 1000,
+      "mean_gas": 138204,
+      "median_gas": 159247,
+      "failed_corpus_replays": 0
+     }
+    },
+    "duration": "1s 61ms 74\u00b5s 600ns",
+    "decoded_logs": []
+   }
+  }
+ },
+ "test/MigrationInvariant.t.sol:MigrationInvariantTest": {
+  "duration": "8m 5s 69ms 306\u00b5s 700ns",
+  "warnings": [],
+  "test_results": {
+   "invariant_ExposureListIsDenseAndBounded()": {
+    "status": "Success",
+    "reason": null,
+    "counterexample": null,
+    "kind": {
+     "Invariant": {
+      "runs": 256,
+      "calls": 16384,
+      "reverts": 0,
+      "workers": 1,
+      "metrics": {
+       "test/MigrationInvariant.t.sol:MigrationHandler.activate": {
+        "calls": 1264,
+        "reverts": 0,
+        "discards": 0
+       },
+       "test/MigrationInvariant.t.sol:MigrationHandler.registerRouter": {
+        "calls": 1256,
+        "reverts": 0,
+        "discards": 0
+       },
+       "test/MigrationInvariant.t.sol:MigrationHandler.deprecateRouter": {
+        "calls": 1241,
+        "reverts": 0,
+        "discards": 0
+       },
+       "test/MigrationInvariant.t.sol:MigrationHandler.retire": {
+        "calls": 1303,
+        "reverts": 0,
+        "discards": 0
+       },
+       "test/MigrationInvariant.t.sol:MigrationHandler.charge": {
+        "calls": 1220,
+        "reverts": 0,
+        "discards": 0
+       },
+       "test/MigrationInvariant.t.sol:MigrationHandler.grant": {
+        "calls": 1251,
+        "reverts": 0,
+        "discards": 0
+       },
+       "test/MigrationInvariant.t.sol:MigrationHandler.sunsetRouter": {
+        "calls": 1304,
+        "reverts": 0,
+        "discards": 0
+       },
+       "test/MigrationInvariant.t.sol:MigrationHandler.migrate": {
+        "calls": 1222,
+        "reverts": 0,
+        "discards": 0
+       },
+       "test/MigrationInvariant.t.sol:MigrationHandler.revoke": {
+        "calls": 1263,
+        "reverts": 0,
+        "discards": 0
+       },
+       "test/MigrationInvariant.t.sol:MigrationHandler.clearRouter": {
+        "calls": 1272,
+        "reverts": 0,
+        "discards": 0
+       },
+       "test/MigrationInvariant.t.sol:MigrationHandler.warp": {
+        "calls": 1232,
+        "reverts": 0,
+        "discards": 0
+       },
+       "test/MigrationInvariant.t.sol:MigrationHandler.disableRouter": {
+        "calls": 1296,
+        "reverts": 0,
+        "discards": 0
+       },
+       "test/MigrationInvariant.t.sol:MigrationHandler.retireRouter": {
+        "calls": 1260,
+        "reverts": 0,
+        "discards": 0
+       }
+      },
+      "failed_corpus_replays": 0,
+      "optimization_best_value": null
+     }
+    },
+    "duration": "8m 5s 47ms 864\u00b5s 100ns",
+    "decoded_logs": []
+   }
+  }
+ },
+ "test/MigrationMutation.t.sol:MigrationMutationTest": {
+  "duration": "10h 4m 13s 506ms 878\u00b5s 500ns",
+  "warnings": [],
+  "test_results": {
+   "testMutantsKilled_0()": {
+    "status": "Success",
+    "reason": null,
+    "counterexample": null,
+    "kind": {
+     "Unit": {
+      "gas": 6540814914
+     }
+    },
+    "duration": "3m 55s 44ms 546\u00b5s 400ns",
+    "decoded_logs": []
+   },
+   "testMutantsKilled_1()": {
+    "status": "Success",
+    "reason": null,
+    "counterexample": null,
+    "kind": {
+     "Unit": {
+      "gas": 1310568969
+     }
+    },
+    "duration": "39s 56ms 781\u00b5s 800ns",
+    "decoded_logs": []
+   },
+   "testMutantsKilled_2()": {
+    "status": "Success",
+    "reason": null,
+    "counterexample": null,
+    "kind": {
+     "Unit": {
+      "gas": 5946707222
+     }
+    },
+    "duration": "2m 32s 601ms 697\u00b5s 400ns",
+    "decoded_logs": []
+   },
+   "testMutantsKilled_3()": {
+    "status": "Success",
+    "reason": null,
+    "counterexample": null,
+    "kind": {
+     "Unit": {
+      "gas": 14133623308
+     }
+    },
+    "duration": "5m 5s 4ms 115\u00b5s 700ns",
+    "decoded_logs": []
+   },
+   "testMutantsKilled_4()": {
+    "status": "Success",
+    "reason": null,
+    "counterexample": null,
+    "kind": {
+     "Unit": {
+      "gas": 6614079068
+     }
+    },
+    "duration": "2m 57s 542ms 605\u00b5s",
+    "decoded_logs": []
+   },
+   "testMutantsKilled_5()": {
+    "status": "Success",
+    "reason": null,
+    "counterexample": null,
+    "kind": {
+     "Unit": {
+      "gas": 7918563150
+     }
+    },
+    "duration": "3m 18s 514ms 78\u00b5s 900ns",
+    "decoded_logs": []
+   },
+   "testMutantsKilled_6()": {
+    "status": "Success",
+    "reason": null,
+    "counterexample": null,
+    "kind": {
+     "Unit": {
+      "gas": 18321412393
+     }
+    },
+    "duration": "7m 57s 782ms 463\u00b5s 100ns",
+    "decoded_logs": []
+   },
+   "testMutantsKilled_7()": {
+    "status": "Success",
+    "reason": null,
+    "counterexample": null,
+    "kind": {
+     "Unit": {
+      "gas": 26722229315
+     }
+    },
+    "duration": "10h 1m 54s 407ms 650\u00b5s 700ns",
+    "decoded_logs": []
+   },
+   "testMutantsKilled_8()": {
+    "status": "Success",
+    "reason": null,
+    "counterexample": null,
+    "kind": {
+     "Unit": {
+      "gas": 29213237512
+     }
+    },
+    "duration": "10h 1m 32s 676ms 249\u00b5s 300ns",
+    "decoded_logs": []
+   },
+   "testMutantsKilled_9()": {
+    "status": "Success",
+    "reason": null,
+    "counterexample": null,
+    "kind": {
+     "Unit": {
+      "gas": 12249354872
+     }
+    },
+    "duration": "5m 59s 113ms 451\u00b5s 300ns",
+    "decoded_logs": []
+   },
+   "test_ChunksCoverEveryMutant()": {
+    "status": "Success",
+    "reason": null,
+    "counterexample": null,
+    "kind": {
+     "Unit": {
+      "gas": 613
+     }
+    },
+    "duration": "62\u00b5s 700ns",
+    "decoded_logs": []
+   },
+   "test_Mutant0PassesEverything()": {
+    "status": "Success",
+    "reason": null,
+    "counterexample": null,
+    "kind": {
+     "Unit": {
+      "gas": 2550119557
+     }
+    },
+    "duration": "1m 16s 110ms 473\u00b5s 700ns",
+    "decoded_logs": []
+   }
+  }
+ },
+ "test/Pin.t.sol:PinTest": {
+  "duration": "581ms 585\u00b5s",
+  "warnings": [],
+  "test_results": {
+   "testFuzz_AuthTruthTable(uint8,uint8,uint8,bool,bool,uint8)": {
+    "status": "Success",
+    "reason": null,
+    "counterexample": null,
+    "kind": {
+     "Fuzz": {
+      "first_case": {
+       "gas": 40955,
+       "stipend": 21904
+      },
+      "runs": 1000,
+      "mean_gas": 19457,
+      "median_gas": 19392,
+      "failed_corpus_replays": 0
+     }
+    },
+    "duration": "156ms 224\u00b5s 500ns",
+    "decoded_logs": []
+   },
+   "testFuzz_HashStructInjective(uint8,uint8)": {
+    "status": "Success",
+    "reason": null,
+    "counterexample": null,
+    "kind": {
+     "Fuzz": {
+      "first_case": {
+       "gas": 29702,
+       "stipend": 21344
+      },
+      "runs": 1000,
+      "mean_gas": 8447,
+      "median_gas": 8314,
+      "failed_corpus_replays": 0
+     }
+    },
+    "duration": "108ms 461\u00b5s 200ns",
+    "decoded_logs": []
+   },
+   "testFuzz_PinOk(uint8,uint8,uint8,bytes32)": {
+    "status": "Success",
+    "reason": null,
+    "counterexample": null,
+    "kind": {
+     "Fuzz": {
+      "first_case": {
+       "gas": 27018,
+       "stipend": 21636
+      },
+      "runs": 1000,
+      "mean_gas": 5351,
+      "median_gas": 5330,
+      "failed_corpus_replays": 0
+     }
+    },
+    "duration": "60ms 441\u00b5s 800ns",
+    "decoded_logs": []
+   },
+   "testFuzz_WellFormed(uint8,uint256,uint32,uint8)": {
+    "status": "Success",
+    "reason": null,
+    "counterexample": null,
+    "kind": {
+     "Fuzz": {
+      "first_case": {
+       "gas": 26542,
+       "stipend": 21852
+      },
+      "runs": 1000,
+      "mean_gas": 5134,
+      "median_gas": 5029,
+      "failed_corpus_replays": 0
+     }
+    },
+    "duration": "77ms 639\u00b5s 500ns",
+    "decoded_logs": []
+   },
+   "test_UpdateAccountPin_ChangesOnlyThePinAndItsVersion()": {
+    "status": "Success",
+    "reason": null,
+    "counterexample": null,
+    "kind": {
+     "Unit": {
+      "gas": 1381515
+     }
+    },
+    "duration": "1ms 324\u00b5s 700ns",
+    "decoded_logs": []
+   },
+   "test_UpdateAccountPin_RefusedUpdateChangesNothing()": {
+    "status": "Success",
+    "reason": null,
+    "counterexample": null,
+    "kind": {
+     "Unit": {
+      "gas": 1073258
+     }
+    },
+    "duration": "865\u00b5s 400ns",
+    "decoded_logs": []
+   },
+   "test_UpdateAccountPin_VersionIsMonotone()": {
+    "status": "Success",
+    "reason": null,
+    "counterexample": null,
+    "kind": {
+     "Unit": {
+      "gas": 3667070
+     }
+    },
+    "duration": "3ms 362\u00b5s 700ns",
+    "decoded_logs": []
+   },
+   "test_WellFormed_AsWritten_Mode2PutsNoBoundOnSignatureMode()": {
+    "status": "Success",
+    "reason": null,
+    "counterexample": null,
+    "kind": {
+     "Unit": {
+      "gas": 1567
+     }
+    },
+    "duration": "46\u00b5s 600ns",
+    "decoded_logs": []
+   }
+  }
+ },
+ "test/Reentrancy.t.sol:ReentrancyTest": {
+  "duration": "17ms 371\u00b5s 700ns",
+  "warnings": [],
+  "test_results": {
+   "test_Consume_CallbackCannotChargeTheSameCycleTwice()": {
+    "status": "Success",
+    "reason": null,
+    "counterexample": null,
+    "kind": {
+     "Unit": {
+      "gas": 7877363
+     }
+    },
+    "duration": "2ms 52\u00b5s 800ns",
+    "decoded_logs": []
+   },
+   "test_Consume_CallbackCannotExceedTheTotalCap()": {
+    "status": "Success",
+    "reason": null,
+    "counterexample": null,
+    "kind": {
+     "Unit": {
+      "gas": 7889680
+     }
+    },
+    "duration": "3ms 478\u00b5s 500ns",
+    "decoded_logs": []
+   },
+   "test_Consume_FailedPullLeavesNoEffect()": {
+    "status": "Success",
+    "reason": null,
+    "counterexample": null,
+    "kind": {
+     "Unit": {
+      "gas": 7496151
+     }
+    },
+    "duration": "1ms 559\u00b5s 500ns",
+    "decoded_logs": []
+   },
+   "test_LegacyOrder_CallbackChargedTheSameCycleTwice()": {
+    "status": "Success",
+    "reason": null,
+    "counterexample": null,
+    "kind": {
+     "Unit": {
+      "gas": 7868841
+     }
+    },
+    "duration": "1ms 855\u00b5s 300ns",
+    "decoded_logs": []
+   },
+   "test_LegacyOrder_CallbackExceededTheTotalCap()": {
+    "status": "Success",
+    "reason": null,
+    "counterexample": null,
+    "kind": {
+     "Unit": {
+      "gas": 7878015
+     }
+    },
+    "duration": "1ms 767\u00b5s 500ns",
+    "decoded_logs": []
+   }
+  }
+ },
+ "test/SharedAllowance.t.sol:SharedAllowanceTest": {
+  "duration": "83ms 755\u00b5s 800ns",
+  "warnings": [],
+  "test_results": {
+   "test_E10_LockdownOfOneTokenLeavesTheOthersAlone()": {
+    "status": "Success",
+    "reason": null,
+    "counterexample": null,
+    "kind": {
+     "Unit": {
+      "gas": 271258
+     }
+    },
+    "duration": "1ms 732\u00b5s 800ns",
+    "decoded_logs": []
+   },
+   "test_E1_ThreeSiblings_LastNeedsLockdown()": {
+    "status": "Success",
+    "reason": null,
+    "counterexample": null,
+    "kind": {
+     "Unit": {
+      "gas": 3930111
+     }
+    },
+    "duration": "11ms 965\u00b5s 200ns",
+    "decoded_logs": []
+   },
+   "test_E2_PartialOverlap_ExclusiveTokenMustBeUnusable()": {
+    "status": "Success",
+    "reason": null,
+    "counterexample": null,
+    "kind": {
+     "Unit": {
+      "gas": 3269075
+     }
+    },
+    "duration": "5ms 322\u00b5s 700ns",
+    "decoded_logs": []
+   },
+   "test_E2_SharedTokenUnlimited_IsRefusedWhileExclusiveIsClean()": {
+    "status": "Success",
+    "reason": null,
+    "counterexample": null,
+    "kind": {
+     "Unit": {
+      "gas": 3123756
+     }
+    },
+    "duration": "6ms 970\u00b5s 600ns",
+    "decoded_logs": []
+   },
+   "test_E3_SecurityDeprecation_InterruptsSiblings()": {
+    "status": "Success",
+    "reason": null,
+    "counterexample": null,
+    "kind": {
+     "Unit": {
+      "gas": 3921432
+     }
+    },
+    "duration": "27ms 134\u00b5s 900ns",
+    "decoded_logs": []
+   },
+   "test_E4_ClearEmergency_RestoresNormalMode()": {
+    "status": "Success",
+    "reason": null,
+    "counterexample": null,
+    "kind": {
+     "Unit": {
+      "gas": 2345848
+     }
+    },
+    "duration": "5ms 106\u00b5s",
+    "decoded_logs": []
+   },
+   "test_E5_SiblingDrainsTheShareThenLastLineageNeedsNoLockdown()": {
+    "status": "Success",
+    "reason": null,
+    "counterexample": null,
+    "kind": {
+     "Unit": {
+      "gas": 2782816
+     }
+    },
+    "duration": "5ms 468\u00b5s 600ns",
+    "decoded_logs": []
+   },
+   "test_E6_RevokingTheOnlySibling_MakesTheNextMigrationALastLineageOne()": {
+    "status": "Success",
+    "reason": null,
+    "counterexample": null,
+    "kind": {
+     "Unit": {
+      "gas": 1759332
+     }
+    },
+    "duration": "2ms 811\u00b5s 700ns",
+    "decoded_logs": []
+   },
+   "test_E7_RevisionOnSharedTokenTouchesNeitherAllowanceNorSibling()": {
+    "status": "Success",
+    "reason": null,
+    "counterexample": null,
+    "kind": {
+     "Unit": {
+      "gas": 2364425
+     }
+    },
+    "duration": "2ms 478\u00b5s 500ns",
+    "decoded_logs": []
+   },
+   "test_E8_OldRouterCannotChargeTheMigratedLineageWhateverTheAllowance()": {
+    "status": "Success",
+    "reason": null,
+    "counterexample": null,
+    "kind": {
+     "Unit": {
+      "gas": 2806628
+     }
+    },
+    "duration": "3ms 562\u00b5s 300ns",
+    "decoded_logs": []
+   },
+   "test_E9_EmergencyListsEverySiblingToken()": {
+    "status": "Success",
+    "reason": null,
+    "counterexample": null,
+    "kind": {
+     "Unit": {
+      "gas": 3990039
+     }
+    },
+    "duration": "7ms 88\u00b5s 600ns",
+    "decoded_logs": []
+   }
+  }
+ },
+ "test/SignerSet.t.sol:SignerSetTest": {
+  "duration": "10h 4m 13s 512ms 878\u00b5s",
+  "warnings": [],
+  "test_results": {
+   "invariant_SR1_SR2_SR5_HoldInEveryState()": {
+    "status": "Success",
+    "reason": null,
+    "counterexample": null,
+    "kind": {
+     "Invariant": {
+      "runs": 256,
+      "calls": 16384,
+      "reverts": 0,
+      "workers": 1,
+      "metrics": {
+       "test/SignerSet.t.sol:SignerSetHandler.proposeAndActivate": {
+        "calls": 3282,
+        "reverts": 0,
+        "discards": 0
+       },
+       "test/SignerSet.t.sol:SignerSetHandler.warp": {
+        "calls": 3323,
+        "reverts": 0,
+        "discards": 0
+       },
+       "test/SignerSet.t.sol:SignerSetHandler.guardianTries": {
+        "calls": 3223,
+        "reverts": 0,
+        "discards": 0
+       },
+       "test/SignerSet.t.sol:SignerSetHandler.stop": {
+        "calls": 3274,
+        "reverts": 0,
+        "discards": 0
+       },
+       "test/SignerSet.t.sol:SignerSetHandler.remove": {
+        "calls": 3282,
+        "reverts": 0,
+        "discards": 0
+       }
+      },
+      "failed_corpus_replays": 0,
+      "optimization_best_value": null
+     }
+    },
+    "duration": "8m 2s 356ms 464\u00b5s 500ns",
+    "decoded_logs": []
+   },
+   "testFuzz_SR1_to_SR5_OnRandomHistories(uint256)": {
+    "status": "Success",
+    "reason": null,
+    "counterexample": null,
+    "kind": {
+     "Fuzz": {
+      "first_case": {
+       "gas": 57844971,
+       "stipend": 21216
+      },
+      "runs": 1000,
+      "mean_gas": 61896546,
+      "median_gas": 61861545,
+      "failed_corpus_replays": 0
+     }
+    },
+    "duration": "6m 17s 351ms 996\u00b5s 300ns",
+    "decoded_logs": []
+   },
+   "testFuzz_SR7_GuardianCannotAddFromAnyHistory(uint256,uint8)": {
+    "status": "Success",
+    "reason": null,
+    "counterexample": null,
+    "kind": {
+     "Fuzz": {
+      "first_case": {
+       "gas": 313804,
+       "stipend": 21356
+      },
+      "runs": 1000,
+      "mean_gas": 372118,
+      "median_gas": 356847,
+      "failed_corpus_replays": 0
+     }
+    },
+    "duration": "3s 84ms 624\u00b5s",
+    "decoded_logs": []
+   },
+   "testFuzz_TombstoneSurvivesAnyHistory(uint256)": {
+    "status": "Success",
+    "reason": null,
+    "counterexample": null,
+    "kind": {
+     "Fuzz": {
+      "first_case": {
+       "gas": 321220,
+       "stipend": 21216
+      },
+      "runs": 1000,
+      "mean_gas": 356187,
+      "median_gas": 336439,
+      "failed_corpus_replays": 0
+     }
+    },
+    "duration": "10h 4m 13s 22ms 443\u00b5s 700ns",
+    "decoded_logs": []
+   },
+   "test_Tombstone_IsPermanentAndRemovalIsIdempotent()": {
+    "status": "Success",
+    "reason": null,
+    "counterexample": null,
+    "kind": {
+     "Unit": {
+      "gas": 150283
+     }
+    },
+    "duration": "805\u00b5s 800ns",
+    "decoded_logs": []
+   }
+  }
+ },
+ "test/TermsHashParity.t.sol:TermsHashParityTest": {
+  "duration": "10h 4m 13s 513ms 49\u00b5s",
+  "warnings": [],
+  "test_results": {
+   "testFuzz_ModelHashesEqualTheGeneratedLibrary(uint256,bytes32,bytes32,uint32,address)": {
+    "status": "Success",
+    "reason": null,
+    "counterexample": null,
+    "kind": {
+     "Fuzz": {
+      "first_case": {
+       "gas": 115401,
+       "stipend": 22304
+      },
+      "runs": 1000,
+      "mean_gas": 120509,
+      "median_gas": 120113,
+      "failed_corpus_replays": 0
+     }
+    },
+    "duration": "10h 4m 13s 506ms 473\u00b5s 100ns",
+    "decoded_logs": []
+   },
+   "testFuzz_SnapshotCoversWhatTheDocumentLists(uint256,bytes32,bytes32,uint32,address)": {
+    "status": "Success",
+    "reason": null,
+    "counterexample": null,
+    "kind": {
+     "Fuzz": {
+      "first_case": {
+       "gas": 148441,
+       "stipend": 22304
+      },
+      "runs": 1000,
+      "mean_gas": 167707,
+      "median_gas": 166657,
+      "failed_corpus_replays": 0
+     }
+    },
+    "duration": "6m 17s 400ms 27\u00b5s 200ns",
+    "decoded_logs": []
+   },
+   "test_BuildAuthUsesTheTypedHashes()": {
+    "status": "Success",
+    "reason": null,
+    "counterexample": null,
+    "kind": {
+     "Unit": {
+      "gas": 2329203
+     }
+    },
+    "duration": "27ms 847\u00b5s 200ns",
+    "decoded_logs": []
+   },
+   "test_CapOrderIsTheTypedOrder()": {
+    "status": "Success",
+    "reason": null,
+    "counterexample": null,
+    "kind": {
+     "Unit": {
+      "gas": 88634
+     }
+    },
+    "duration": "728\u00b5s 900ns",
+    "decoded_logs": []
+   },
+   "test_ConversionRefusesAboveTheTypedWidth()": {
+    "status": "Success",
+    "reason": null,
+    "counterexample": null,
+    "kind": {
+     "Unit": {
+      "gas": 197091
+     }
+    },
+    "duration": "1ms 416\u00b5s 200ns",
+    "decoded_logs": []
+   }
+  }
+ },
+ "test/TimestampBoundary.t.sol:TimestampBoundaryTest": {
+  "duration": "52ms 50\u00b5s 100ns",
+  "warnings": [],
+  "test_results": {
+   "test_A2_DeadlineEqualsNow_Accepted_OneSecondLate_Refused()": {
+    "status": "Success",
+    "reason": null,
+    "counterexample": null,
+    "kind": {
+     "Unit": {
+      "gas": 1841609
+     }
+    },
+    "duration": "3ms 811\u00b5s",
+    "decoded_logs": []
+   },
+   "test_CycleIndex_Boundaries()": {
+    "status": "Success",
+    "reason": null,
+    "counterexample": null,
+    "kind": {
+     "Unit": {
+      "gas": 20687
+     }
+    },
+    "duration": "73\u00b5s 600ns",
+    "decoded_logs": []
+   },
+   "test_G1_NewAllowanceExpiringNow_Accepted_OneSecondBefore_Refused()": {
+    "status": "Success",
+    "reason": null,
+    "counterexample": null,
+    "kind": {
+     "Unit": {
+      "gas": 1888680
+     }
+    },
+    "duration": "4ms 523\u00b5s 600ns",
+    "decoded_logs": []
+   },
+   "test_MandateExpiry_Boundaries()": {
+    "status": "Success",
+    "reason": null,
+    "counterexample": null,
+    "kind": {
+     "Unit": {
+      "gas": 1899120
+     }
+    },
+    "duration": "3ms 288\u00b5s 800ns",
+    "decoded_logs": []
+   },
+   "test_MandateExpiry_SuccessorAllowedOneSecondBefore()": {
+    "status": "Success",
+    "reason": null,
+    "counterexample": null,
+    "kind": {
+     "Unit": {
+      "gas": 1602516
+     }
+    },
+    "duration": "4ms 350\u00b5s 500ns",
+    "decoded_logs": []
+   },
+   "test_MaxBatch_Boundary()": {
+    "status": "Success",
+    "reason": null,
+    "counterexample": null,
+    "kind": {
+     "Unit": {
+      "gas": 14213
+     }
+    },
+    "duration": "67\u00b5s 100ns",
+    "decoded_logs": []
+   },
+   "test_O1N_AmountZero_Accepted()": {
+    "status": "Success",
+    "reason": null,
+    "counterexample": null,
+    "kind": {
+     "Unit": {
+      "gas": 1601766
+     }
+    },
+    "duration": "2ms 613\u00b5s",
+    "decoded_logs": []
+   },
+   "test_O1N_ExpirationEqualsNow_StillUsable_Reverts()": {
+    "status": "Success",
+    "reason": null,
+    "counterexample": null,
+    "kind": {
+     "Unit": {
+      "gas": 1928202
+     }
+    },
+    "duration": "4ms 506\u00b5s 500ns",
+    "decoded_logs": []
+   },
+   "test_O1N_ExpirationOneSecondAfterNow_Reverts()": {
+    "status": "Success",
+    "reason": null,
+    "counterexample": null,
+    "kind": {
+     "Unit": {
+      "gas": 1265154
+     }
+    },
+    "duration": "2ms 481\u00b5s 600ns",
+    "decoded_logs": []
+   },
+   "test_O1N_ExpirationOneSecondBeforeNow_Accepted()": {
+    "status": "Success",
+    "reason": null,
+    "counterexample": null,
+    "kind": {
+     "Unit": {
+      "gas": 1597863
+     }
+    },
+    "duration": "2ms 475\u00b5s 400ns",
+    "decoded_logs": []
+   },
+   "test_Permit2_ExpirationZeroStoresBlockTimestamp()": {
+    "status": "Success",
+    "reason": null,
+    "counterexample": null,
+    "kind": {
+     "Unit": {
+      "gas": 140824
+     }
+    },
+    "duration": "330\u00b5s 500ns",
+    "decoded_logs": []
+   },
+   "test_Permit2_LockdownKeepsTheExpiration()": {
+    "status": "Success",
+    "reason": null,
+    "counterexample": null,
+    "kind": {
+     "Unit": {
+      "gas": 138080
+     }
+    },
+    "duration": "235\u00b5s 200ns",
+    "decoded_logs": []
+   },
+   "test_Permit2_UsableAtExpiration_ExpiredOneSecondLater()": {
+    "status": "Success",
+    "reason": null,
+    "counterexample": null,
+    "kind": {
+     "Unit": {
+      "gas": 125812
+     }
+    },
+    "duration": "216\u00b5s 400ns",
+    "decoded_logs": []
+   },
+   "test_QuoteTimes_Boundaries()": {
+    "status": "Success",
+    "reason": null,
+    "counterexample": null,
+    "kind": {
+     "Unit": {
+      "gas": 70407
+     }
+    },
+    "duration": "155\u00b5s 400ns",
+    "decoded_logs": []
+   },
+   "test_Registry_NoticeSunsetRetentionBoundaries()": {
+    "status": "Success",
+    "reason": null,
+    "counterexample": null,
+    "kind": {
+     "Unit": {
+      "gas": 559966
+     }
+    },
+    "duration": "6ms 8\u00b5s 600ns",
+    "decoded_logs": []
+   },
+   "test_Registry_RollbackWindow()": {
+    "status": "Success",
+    "reason": null,
+    "counterexample": null,
+    "kind": {
+     "Unit": {
+      "gas": 404231
+     }
+    },
+    "duration": "529\u00b5s 400ns",
+    "decoded_logs": []
+   },
+   "test_Registry_SecurityNoticeIsShorter()": {
+    "status": "Success",
+    "reason": null,
+    "counterexample": null,
+    "kind": {
+     "Unit": {
+      "gas": 403169
+     }
+    },
+    "duration": "531\u00b5s 200ns",
+    "decoded_logs": []
+   },
+   "test_SignerSet_GraceBoundaries()": {
+    "status": "Success",
+    "reason": null,
+    "counterexample": null,
+    "kind": {
+     "Unit": {
+      "gas": 477078
+     }
+    },
+    "duration": "556\u00b5s 100ns",
+    "decoded_logs": []
+   },
+   "test_SignerSet_RemovalHasNoGrace()": {
+    "status": "Success",
+    "reason": null,
+    "counterexample": null,
+    "kind": {
+     "Unit": {
+      "gas": 472753
+     }
+    },
+    "duration": "567\u00b5s 300ns",
+    "decoded_logs": []
+   },
+   "test_WindowGrid_ChangesExactlyAtTheBoundary()": {
+    "status": "Success",
+    "reason": null,
+    "counterexample": null,
+    "kind": {
+     "Unit": {
+      "gas": 178932
+     }
+    },
+    "duration": "402\u00b5s 600ns",
+    "decoded_logs": []
+   }
+  }
+ },
+ "test/fork/Permit2Freeze.t.sol:Permit2FreezeTest": {
+  "duration": "22ms 216\u00b5s",
+  "warnings": [],
+  "test_results": {
+   "testFuzz_DifferentialAgainstMock(uint256)": {
+    "status": "Skipped",
+    "reason": null,
+    "counterexample": {
+     "Single": {
+      "warp": null,
+      "roll": null,
+      "sender": "0x1804c8ab1f12e6bbf3894d4083f33e07309d1f38",
+      "addr": "0x7fa9385be102ac3eac297483dd6233d62b3e1496",
+      "calldata": "0x96fa79240000000000000000000000000000000000000000000000000000000000c0ffee",
+      "contract_name": null,
+      "func_name": null,
+      "signature": null,
+      "args": "12648430 [1.264e7]",
+      "raw_args": "12648430",
+      "fuzz_seed": "0xfa57",
+      "fuzz_run": 1,
+      "fuzz_worker": 0
+     }
+    },
+    "kind": {
+     "Fuzz": {
+      "first_case": {
+       "gas": 0,
+       "stipend": 0
+      },
+      "runs": 0,
+      "mean_gas": 0,
+      "median_gas": 0,
+      "failed_corpus_replays": 0
+     }
+    },
+    "duration": "20ms 207\u00b5s 700ns",
+    "decoded_logs": [
+     "SKIPPED: ETH_RPC_URL is not set; the Permit2 freeze fork tests did not run"
+    ]
+   },
+   "test_F2_ApproveOverwritesTheSharedSlot()": {
+    "status": "Skipped",
+    "reason": null,
+    "counterexample": null,
+    "kind": {
+     "Unit": {
+      "gas": 0
+     }
+    },
+    "duration": "73\u00b5s 500ns",
+    "decoded_logs": []
+   },
+   "test_F4_UnlimitedIsNeverDecremented_BoundedIs()": {
+    "status": "Skipped",
+    "reason": null,
+    "counterexample": null,
+    "kind": {
+     "Unit": {
+      "gas": 0
+     }
+    },
+    "duration": "48\u00b5s 300ns",
+    "decoded_logs": []
+   },
+   "test_F5_ExpirationZeroStoresBlockTimestamp()": {
+    "status": "Skipped",
+    "reason": null,
+    "counterexample": null,
+    "kind": {
+     "Unit": {
+      "gas": 0
+     }
+    },
+    "duration": "33\u00b5s 600ns",
+    "decoded_logs": []
+   },
+   "test_MIG_TV_22_40_UsabilityBoundary()": {
+    "status": "Skipped",
+    "reason": null,
+    "counterexample": null,
+    "kind": {
+     "Unit": {
+      "gas": 0
+     }
+    },
+    "duration": "36\u00b5s 500ns",
+    "decoded_logs": []
+   },
+   "test_RV_T01_LockdownZeroesTheAmountOnly()": {
+    "status": "Skipped",
+    "reason": null,
+    "counterexample": null,
+    "kind": {
+     "Unit": {
+      "gas": 0
+     }
+    },
+    "duration": "30\u00b5s 600ns",
+    "decoded_logs": []
+   },
+   "test_RV_T02_LockdownOfTheUnlimitedSentinel()": {
+    "status": "Skipped",
+    "reason": null,
+    "counterexample": null,
+    "kind": {
+     "Unit": {
+      "gas": 0
+     }
+    },
+    "duration": "31\u00b5s 800ns",
+    "decoded_logs": []
+   },
+   "test_RV_T03_OneCallTwoPairsLeavesOtherSpendersAlone()": {
+    "status": "Skipped",
+    "reason": null,
+    "counterexample": null,
+    "kind": {
+     "Unit": {
+      "gas": 0
+     }
+    },
+    "duration": "33\u00b5s 100ns",
+    "decoded_logs": []
+   },
+   "test_RV_T04_LockdownOfAnExpiredAllowance()": {
+    "status": "Skipped",
+    "reason": null,
+    "counterexample": null,
+    "kind": {
+     "Unit": {
+      "gas": 0
+     }
+    },
+    "duration": "31\u00b5s 200ns",
+    "decoded_logs": []
+   },
+   "test_RV_T05_LockdownWithNoAllowance()": {
+    "status": "Skipped",
+    "reason": null,
+    "counterexample": null,
+    "kind": {
+     "Unit": {
+      "gas": 0
+     }
+    },
+    "duration": "36\u00b5s 100ns",
+    "decoded_logs": []
+   },
+   "test_RV_T06_AnAttackersLockdownChangesNothingOfTheOwner()": {
+    "status": "Skipped",
+    "reason": null,
+    "counterexample": null,
+    "kind": {
+     "Unit": {
+      "gas": 0
+     }
+    },
+    "duration": "43\u00b5s 200ns",
+    "decoded_logs": []
+   },
+   "test_RV_T07_AllowanceFromASignedPermit_LockdownAndReplay()": {
+    "status": "Skipped",
+    "reason": null,
+    "counterexample": null,
+    "kind": {
+     "Unit": {
+      "gas": 0
+     }
+    },
+    "duration": "32\u00b5s 100ns",
+    "decoded_logs": []
+   },
+   "test_RV_T08_ApproveZeroZero()": {
+    "status": "Skipped",
+    "reason": null,
+    "counterexample": null,
+    "kind": {
+     "Unit": {
+      "gas": 0
+     }
+    },
+    "duration": "37\u00b5s 100ns",
+    "decoded_logs": []
+   },
+   "test_RV_T10_InvalidateNonces_Cap()": {
+    "status": "Skipped",
+    "reason": null,
+    "counterexample": null,
+    "kind": {
+     "Unit": {
+      "gas": 0
+     }
+    },
+    "duration": "43\u00b5s 100ns",
+    "decoded_logs": []
+   },
+   "test_RV_T11_LockdownForEoa_DelegatedEoa_AndContractAccount()": {
+    "status": "Skipped",
+    "reason": null,
+    "counterexample": null,
+    "kind": {
+     "Unit": {
+      "gas": 0
+     }
+    },
+    "duration": "27\u00b5s 200ns",
+    "decoded_logs": []
+   }
+  }
+ },
+ "test/fork/Permit2ThreeChains.t.sol:Permit2ThreeChainsTest": {
+  "duration": "6ms 386\u00b5s 800ns",
+  "warnings": [],
+  "test_results": {
+   "test_Fork_ChainBlockAndCodeAreRecorded()": {
+    "status": "Skipped",
+    "reason": null,
+    "counterexample": null,
+    "kind": {
+     "Unit": {
+      "gas": 0
+     }
+    },
+    "duration": "661\u00b5s 400ns",
+    "decoded_logs": []
+   },
+   "test_Fork_DeployedCodeIsExactlyTheRebuiltCode()": {
+    "status": "Skipped",
+    "reason": null,
+    "counterexample": null,
+    "kind": {
+     "Unit": {
+      "gas": 0
+     }
+    },
+    "duration": "148\u00b5s 800ns",
+    "decoded_logs": []
+   },
+   "test_Fork_DomainSeparatorEqualsTheGoldenLibrary()": {
+    "status": "Skipped",
+    "reason": null,
+    "counterexample": null,
+    "kind": {
+     "Unit": {
+      "gas": 0
+     }
+    },
+    "duration": "64\u00b5s",
+    "decoded_logs": []
+   },
+   "test_Fork_ImmutableSlotsHoldTheChainIdAndTheDomainSeparator()": {
+    "status": "Skipped",
+    "reason": null,
+    "counterexample": null,
+    "kind": {
+     "Unit": {
+      "gas": 0
+     }
+    },
+    "duration": "718\u00b5s 100ns",
+    "decoded_logs": []
+   },
+   "test_Witness_Batch_Accepted()": {
+    "status": "Skipped",
+    "reason": null,
+    "counterexample": null,
+    "kind": {
+     "Unit": {
+      "gas": 0
+     }
+    },
+    "duration": "903\u00b5s 400ns",
+    "decoded_logs": []
+   },
+   "test_Witness_Batch_PermittedAmountsAreBinding()": {
+    "status": "Skipped",
+    "reason": null,
+    "counterexample": null,
+    "kind": {
+     "Unit": {
+      "gas": 0
+     }
+    },
+    "duration": "389\u00b5s 600ns",
+    "decoded_logs": []
+   },
+   "test_Witness_Batch_SingleSignatureDoesNotValidateAsBatchAndViceVersa()": {
+    "status": "Skipped",
+    "reason": null,
+    "counterexample": null,
+    "kind": {
+     "Unit": {
+      "gas": 0
+     }
+    },
+    "duration": "70\u00b5s 900ns",
+    "decoded_logs": []
+   },
+   "test_Witness_Batch_WrongSpenderAndLengthMismatch()": {
+    "status": "Skipped",
+    "reason": null,
+    "counterexample": null,
+    "kind": {
+     "Unit": {
+      "gas": 0
+     }
+    },
+    "duration": "357\u00b5s 400ns",
+    "decoded_logs": []
+   },
+   "test_Witness_Single_Accepted()": {
+    "status": "Skipped",
+    "reason": null,
+    "counterexample": null,
+    "kind": {
+     "Unit": {
+      "gas": 0
+     }
+    },
+    "duration": "119\u00b5s 700ns",
+    "decoded_logs": []
+   },
+   "test_Witness_Single_AnyChangeOfTheTypeStringFails()": {
+    "status": "Skipped",
+    "reason": null,
+    "counterexample": null,
+    "kind": {
+     "Unit": {
+      "gas": 0
+     }
+    },
+    "duration": "39\u00b5s 200ns",
+    "decoded_logs": []
+   },
+   "test_Witness_Single_DestinationIsNotBoundByPermit2()": {
+    "status": "Skipped",
+    "reason": null,
+    "counterexample": null,
+    "kind": {
+     "Unit": {
+      "gas": 0
+     }
+    },
+    "duration": "35\u00b5s 500ns",
+    "decoded_logs": []
+   },
+   "test_Witness_Single_EveryFieldIsBound()": {
+    "status": "Skipped",
+    "reason": null,
+    "counterexample": null,
+    "kind": {
+     "Unit": {
+      "gas": 0
+     }
+    },
+    "duration": "337\u00b5s",
+    "decoded_logs": []
+   },
+   "test_Witness_Single_ExpiredAndOverRequested()": {
+    "status": "Skipped",
+    "reason": null,
+    "counterexample": null,
+    "kind": {
+     "Unit": {
+      "gas": 0
+     }
+    },
+    "duration": "276\u00b5s 300ns",
+    "decoded_logs": []
+   },
+   "test_Witness_Single_OnlyTheSignedSpender()": {
+    "status": "Skipped",
+    "reason": null,
+    "counterexample": null,
+    "kind": {
+     "Unit": {
+      "gas": 0
+     }
+    },
+    "duration": "892\u00b5s 200ns",
+    "decoded_logs": []
+   },
+   "test_Witness_Single_ReplayIsRefused()": {
+    "status": "Skipped",
+    "reason": null,
+    "counterexample": null,
+    "kind": {
+     "Unit": {
+      "gas": 0
+     }
+    },
+    "duration": "63\u00b5s 100ns",
+    "decoded_logs": []
+   }
+  }
+ },
+ "test/generated/EIP712Golden.t.sol:EIP712GoldenTest": {
+  "duration": "33ms 329\u00b5s 500ns",
+  "warnings": [],
+  "test_results": {
+   "test_AccountPinUpdate_MatchesGolden()": {
+    "status": "Success",
+    "reason": null,
+    "counterexample": null,
+    "kind": {
+     "Unit": {
+      "gas": 19286
+     }
+    },
+    "duration": "947\u00b5s 500ns",
+    "decoded_logs": []
+   },
+   "test_AccountPin_MatchesGolden()": {
+    "status": "Success",
+    "reason": null,
+    "counterexample": null,
+    "kind": {
+     "Unit": {
+      "gas": 15657
+     }
+    },
+    "duration": "267\u00b5s 300ns",
+    "decoded_logs": []
+   },
+   "test_AccountPinsUpdate_MatchesGolden()": {
+    "status": "Success",
+    "reason": null,
+    "counterexample": null,
+    "kind": {
+     "Unit": {
+      "gas": 21581
+     }
+    },
+    "duration": "375\u00b5s 800ns",
+    "decoded_logs": []
+   },
+   "test_ActivationTerms_MatchesGolden()": {
+    "status": "Success",
+    "reason": null,
+    "counterexample": null,
+    "kind": {
+     "Unit": {
+      "gas": 51753
+     }
+    },
+    "duration": "2ms 63\u00b5s 700ns",
+    "decoded_logs": []
+   },
+   "test_FiatTerms_MatchesGolden()": {
+    "status": "Success",
+    "reason": null,
+    "counterexample": null,
+    "kind": {
+     "Unit": {
+      "gas": 18897
+     }
+    },
+    "duration": "1ms 30\u00b5s 900ns",
+    "decoded_logs": []
+   },
+   "test_MandateTerms_MatchesGolden()": {
+    "status": "Success",
+    "reason": null,
+    "counterexample": null,
+    "kind": {
+     "Unit": {
+      "gas": 39970
+     }
+    },
+    "duration": "654\u00b5s 100ns",
+    "decoded_logs": []
+   },
+   "test_PauseMandate_MatchesGolden()": {
+    "status": "Success",
+    "reason": null,
+    "counterexample": null,
+    "kind": {
+     "Unit": {
+      "gas": 14275
+     }
+    },
+    "duration": "664\u00b5s 100ns",
+    "decoded_logs": []
+   },
+   "test_PayOnceIntent_MatchesGolden()": {
+    "status": "Success",
+    "reason": null,
+    "counterexample": null,
+    "kind": {
+     "Unit": {
+      "gas": 14415
+     }
+    },
+    "duration": "402\u00b5s 300ns",
+    "decoded_logs": []
+   },
+   "test_Permit2Witness_MatchesGolden()": {
+    "status": "Success",
+    "reason": null,
+    "counterexample": null,
+    "kind": {
+     "Unit": {
+      "gas": 28896
+     }
+    },
+    "duration": "277\u00b5s 200ns",
+    "decoded_logs": []
+   },
+   "test_PriceQuote_MatchesGolden()": {
+    "status": "Success",
+    "reason": null,
+    "counterexample": null,
+    "kind": {
+     "Unit": {
+      "gas": 21745
+     }
+    },
+    "duration": "572\u00b5s 900ns",
+    "decoded_logs": []
+   },
+   "test_ReduceMandate_MatchesGolden()": {
+    "status": "Success",
+    "reason": null,
+    "counterexample": null,
+    "kind": {
+     "Unit": {
+      "gas": 14608
+     }
+    },
+    "duration": "488\u00b5s 200ns",
+    "decoded_logs": []
+   },
+   "test_ResumeMandate_MatchesGolden()": {
+    "status": "Success",
+    "reason": null,
+    "counterexample": null,
+    "kind": {
+     "Unit": {
+      "gas": 14297
+     }
+    },
+    "duration": "259\u00b5s 700ns",
+    "decoded_logs": []
+   },
+   "test_RevokeMandate_MatchesGolden()": {
+    "status": "Success",
+    "reason": null,
+    "counterexample": null,
+    "kind": {
+     "Unit": {
+      "gas": 14099
+     }
+    },
+    "duration": "420\u00b5s 600ns",
+    "decoded_logs": []
+   },
+   "test_Signatures_RecoverToTheTestSigner()": {
+    "status": "Success",
+    "reason": null,
+    "counterexample": null,
+    "kind": {
+     "Unit": {
+      "gas": 161025
+     }
+    },
+    "duration": "8ms 812\u00b5s 800ns",
+    "decoded_logs": []
+   },
+   "test_SnapshotHash_MatchesGolden()": {
+    "status": "Success",
+    "reason": null,
+    "counterexample": null,
+    "kind": {
+     "Unit": {
+      "gas": 16333
+     }
+    },
+    "duration": "205\u00b5s 100ns",
+    "decoded_logs": []
+   },
+   "test_SuccessorAuthorization_MatchesGolden()": {
+    "status": "Success",
+    "reason": null,
+    "counterexample": null,
+    "kind": {
+     "Unit": {
+      "gas": 25413
+     }
+    },
+    "duration": "431\u00b5s 300ns",
+    "decoded_logs": []
+   },
+   "test_Tags_MatchGolden()": {
+    "status": "Success",
+    "reason": null,
+    "counterexample": null,
+    "kind": {
+     "Unit": {
+      "gas": 5721
+     }
+    },
+    "duration": "60\u00b5s 900ns",
+    "decoded_logs": []
+   },
+   "test_TokenTerms_MatchesGolden()": {
+    "status": "Success",
+    "reason": null,
+    "counterexample": null,
+    "kind": {
+     "Unit": {
+      "gas": 15518
+     }
+    },
+    "duration": "213\u00b5s 500ns",
+    "decoded_logs": []
+   },
+   "test_WalletPayloads_DigestEqualsGolden()": {
+    "status": "Success",
+    "reason": null,
+    "counterexample": null,
+    "kind": {
+     "Unit": {
+      "gas": 172909
+     }
+    },
+    "duration": "13ms 915\u00b5s 900ns",
+    "decoded_logs": []
+   }
+  }
+ },
+ "test/generated/GenContainment.t.sol:GenContainmentTest": {
+  "duration": "680ms 966\u00b5s 700ns",
+  "warnings": [],
+  "test_results": {
+   "test_ContainmentAndLemmaM()": {
+    "status": "Success",
+    "reason": null,
+    "counterexample": null,
+    "kind": {
+     "Unit": {
+      "gas": 250061156
+     }
+    },
+    "duration": "596ms 352\u00b5s 600ns",
+    "decoded_logs": []
+   }
+  }
+ },
+ "test/generated/GenErrorSelectors.t.sol:GenErrorSelectorsTest": {
+  "duration": "625\u00b5s 700ns",
+  "warnings": [],
+  "test_results": {
+   "test_ErrorSelectorTable()": {
+    "status": "Success",
+    "reason": null,
+    "counterexample": null,
+    "kind": {
+     "Unit": {
+      "gas": 27905
+     }
+    },
+    "duration": "251\u00b5s 200ns",
+    "decoded_logs": []
+   }
+  }
+ },
+ "test/generated/GenHashVectors.t.sol:GenHashVectorsTest": {
+  "duration": "11ms 863\u00b5s 100ns",
+  "warnings": [],
+  "test_results": {
+   "test_BoundsBands()": {
+    "status": "Success",
+    "reason": null,
+    "counterexample": null,
+    "kind": {
+     "Unit": {
+      "gas": 10419
+     }
+    },
+    "duration": "150\u00b5s 900ns",
+    "decoded_logs": []
+   },
+   "test_FiatRounding()": {
+    "status": "Success",
+    "reason": null,
+    "counterexample": null,
+    "kind": {
+     "Unit": {
+      "gas": 7205
+     }
+    },
+    "duration": "92\u00b5s 500ns",
+    "decoded_logs": []
+   },
+   "test_Identifiers()": {
+    "status": "Success",
+    "reason": null,
+    "counterexample": null,
+    "kind": {
+     "Unit": {
+      "gas": 13224
+     }
+    },
+    "duration": "126\u00b5s 900ns",
+    "decoded_logs": []
+   },
+   "test_PaymentIdIsRouterIndependent()": {
+    "status": "Success",
+    "reason": null,
+    "counterexample": null,
+    "kind": {
+     "Unit": {
+      "gas": 7438
+     }
+    },
+    "duration": "91\u00b5s 100ns",
+    "decoded_logs": []
+   },
+   "test_Permit2Usable()": {
+    "status": "Success",
+    "reason": null,
+    "counterexample": null,
+    "kind": {
+     "Unit": {
+      "gas": 7354
+     }
+    },
+    "duration": "165\u00b5s 300ns",
+    "decoded_logs": []
+   },
+   "test_PinConstants()": {
+    "status": "Success",
+    "reason": null,
+    "counterexample": null,
+    "kind": {
+     "Unit": {
+      "gas": 18990
+     }
+    },
+    "duration": "188\u00b5s 200ns",
+    "decoded_logs": []
+   },
+   "test_QuoteVector()": {
+    "status": "Success",
+    "reason": null,
+    "counterexample": null,
+    "kind": {
+     "Unit": {
+      "gas": 13331
+     }
+    },
+    "duration": "129\u00b5s 600ns",
+    "decoded_logs": []
+   },
+   "test_RouteHash()": {
+    "status": "Success",
+    "reason": null,
+    "counterexample": null,
+    "kind": {
+     "Unit": {
+      "gas": 4850
+     }
+    },
+    "duration": "219\u00b5s 700ns",
+    "decoded_logs": []
+   },
+   "test_SnapshotHash()": {
+    "status": "Success",
+    "reason": null,
+    "counterexample": null,
+    "kind": {
+     "Unit": {
+      "gas": 31534
+     }
+    },
+    "duration": "356\u00b5s 300ns",
+    "decoded_logs": []
+   },
+   "test_TermsHashes_TH_00()": {
+    "status": "Success",
+    "reason": null,
+    "counterexample": null,
+    "kind": {
+     "Unit": {
+      "gas": 76987
+     }
+    },
+    "duration": "757\u00b5s 200ns",
+    "decoded_logs": []
+   },
+   "test_TermsHashes_TH_01()": {
+    "status": "Success",
+    "reason": null,
+    "counterexample": null,
+    "kind": {
+     "Unit": {
+      "gas": 64627
+     }
+    },
+    "duration": "619\u00b5s 600ns",
+    "decoded_logs": []
+   },
+   "test_TermsHashes_TH_02()": {
+    "status": "Success",
+    "reason": null,
+    "counterexample": null,
+    "kind": {
+     "Unit": {
+      "gas": 77218
+     }
+    },
+    "duration": "678\u00b5s 100ns",
+    "decoded_logs": []
+   },
+   "test_TermsHashes_TH_03()": {
+    "status": "Success",
+    "reason": null,
+    "counterexample": null,
+    "kind": {
+     "Unit": {
+      "gas": 64238
+     }
+    },
+    "duration": "2ms 22\u00b5s 700ns",
+    "decoded_logs": []
+   },
+   "test_TermsHashes_TH_04()": {
+    "status": "Success",
+    "reason": null,
+    "counterexample": null,
+    "kind": {
+     "Unit": {
+      "gas": 64132
+     }
+    },
+    "duration": "605\u00b5s 600ns",
+    "decoded_logs": []
+   },
+   "test_TermsHashes_TH_05()": {
+    "status": "Success",
+    "reason": null,
+    "counterexample": null,
+    "kind": {
+     "Unit": {
+      "gas": 76993
+     }
+    },
+    "duration": "791\u00b5s 700ns",
+    "decoded_logs": []
+   },
+   "test_TermsHashes_TH_06()": {
+    "status": "Success",
+    "reason": null,
+    "counterexample": null,
+    "kind": {
+     "Unit": {
+      "gas": 90889
+     }
+    },
+    "duration": "916\u00b5s 500ns",
+    "decoded_logs": []
+   },
+   "test_TermsHashes_TH_07()": {
+    "status": "Success",
+    "reason": null,
+    "counterexample": null,
+    "kind": {
+     "Unit": {
+      "gas": 76637
+     }
+    },
+    "duration": "1ms 801\u00b5s",
+    "decoded_logs": []
+   },
+   "test_TermsHashes_TH_08()": {
+    "status": "Success",
+    "reason": null,
+    "counterexample": null,
+    "kind": {
+     "Unit": {
+      "gas": 91406
+     }
+    },
+    "duration": "1ms 265\u00b5s 400ns",
+    "decoded_logs": []
+   }
+  }
+ },
+ "test/generated/GenScenarios.t.sol:GenScenariosTest": {
+  "duration": "1m 17s 610ms 665\u00b5s 400ns",
+  "warnings": [],
+  "test_results": {
+   "test_ACP_TV_13_17()": {
+    "status": "Success",
+    "reason": null,
+    "counterexample": null,
+    "kind": {
+     "Unit": {
+      "gas": 28057951
+     }
+    },
+    "duration": "63ms 421\u00b5s 900ns",
+    "decoded_logs": []
+   },
+   "test_ACP_TV_13_CHARGE()": {
+    "status": "Success",
+    "reason": null,
+    "counterexample": null,
+    "kind": {
+     "Unit": {
+      "gas": 29379727
+     }
+    },
+    "duration": "49ms 758\u00b5s 600ns",
+    "decoded_logs": []
+   },
+   "test_ACP_TV_25()": {
+    "status": "Success",
+    "reason": null,
+    "counterexample": null,
+    "kind": {
+     "Unit": {
+      "gas": 27990457
+     }
+    },
+    "duration": "42ms 893\u00b5s 500ns",
+    "decoded_logs": []
+   },
+   "test_ACP_TV_26()": {
+    "status": "Success",
+    "reason": null,
+    "counterexample": null,
+    "kind": {
+     "Unit": {
+      "gas": 28160620
+     }
+    },
+    "duration": "45ms 415\u00b5s 600ns",
+    "decoded_logs": []
+   },
+   "test_ACP_TV_27_28()": {
+    "status": "Success",
+    "reason": null,
+    "counterexample": null,
+    "kind": {
+     "Unit": {
+      "gas": 28312284
+     }
+    },
+    "duration": "45ms 585\u00b5s 100ns",
+    "decoded_logs": []
+   },
+   "test_ACP_TV_29()": {
+    "status": "Success",
+    "reason": null,
+    "counterexample": null,
+    "kind": {
+     "Unit": {
+      "gas": 28503243
+     }
+    },
+    "duration": "71ms 678\u00b5s 200ns",
+    "decoded_logs": []
+   },
+   "test_ACP_TV_30()": {
+    "status": "Success",
+    "reason": null,
+    "counterexample": null,
+    "kind": {
+     "Unit": {
+      "gas": 28107157
+     }
+    },
+    "duration": "109ms 359\u00b5s 700ns",
+    "decoded_logs": []
+   },
+   "test_ACP_TV_31()": {
+    "status": "Success",
+    "reason": null,
+    "counterexample": null,
+    "kind": {
+     "Unit": {
+      "gas": 29877822
+     }
+    },
+    "duration": "137ms 117\u00b5s 200ns",
+    "decoded_logs": []
+   },
+   "test_ACP_TV_33()": {
+    "status": "Success",
+    "reason": null,
+    "counterexample": null,
+    "kind": {
+     "Unit": {
+      "gas": 29626829
+     }
+    },
+    "duration": "140ms 211\u00b5s 900ns",
+    "decoded_logs": []
+   },
+   "test_ACP_TV_34()": {
+    "status": "Success",
+    "reason": null,
+    "counterexample": null,
+    "kind": {
+     "Unit": {
+      "gas": 30178855
+     }
+    },
+    "duration": "164ms 102\u00b5s 400ns",
+    "decoded_logs": []
+   },
+   "test_ACP_TV_35()": {
+    "status": "Success",
+    "reason": null,
+    "counterexample": null,
+    "kind": {
+     "Unit": {
+      "gas": 30288125
+     }
+    },
+    "duration": "183ms 279\u00b5s 900ns",
+    "decoded_logs": []
+   },
+   "test_ACP_TV_37()": {
+    "status": "Success",
+    "reason": null,
+    "counterexample": null,
+    "kind": {
+     "Unit": {
+      "gas": 28202999
+     }
+    },
+    "duration": "137ms 855\u00b5s 400ns",
+    "decoded_logs": []
+   },
+   "test_ACP_TV_38()": {
+    "status": "Success",
+    "reason": null,
+    "counterexample": null,
+    "kind": {
+     "Unit": {
+      "gas": 28100447
+     }
+    },
+    "duration": "129ms 991\u00b5s",
+    "decoded_logs": []
+   },
+   "test_ACP_TV_39()": {
+    "status": "Success",
+    "reason": null,
+    "counterexample": null,
+    "kind": {
+     "Unit": {
+      "gas": 28112379
+     }
+    },
+    "duration": "114ms 168\u00b5s 400ns",
+    "decoded_logs": []
+   },
+   "test_ACP_TV_40()": {
+    "status": "Success",
+    "reason": null,
+    "counterexample": null,
+    "kind": {
+     "Unit": {
+      "gas": 28125380
+     }
+    },
+    "duration": "146ms 372\u00b5s 600ns",
+    "decoded_logs": []
+   },
+   "test_ACP_TV_41()": {
+    "status": "Success",
+    "reason": null,
+    "counterexample": null,
+    "kind": {
+     "Unit": {
+      "gas": 27989302
+     }
+    },
+    "duration": "133ms 948\u00b5s 400ns",
+    "decoded_logs": []
+   },
+   "test_ACP_TV_ACTIVATE()": {
+    "status": "Success",
+    "reason": null,
+    "counterexample": null,
+    "kind": {
+     "Unit": {
+      "gas": 29744437
+     }
+    },
+    "duration": "193ms 216\u00b5s 900ns",
+    "decoded_logs": []
+   },
+   "test_ACP_TV_UPDATE_TERMINAL()": {
+    "status": "Success",
+    "reason": null,
+    "counterexample": null,
+    "kind": {
+     "Unit": {
+      "gas": 30471272
+     }
+    },
+    "duration": "183ms 990\u00b5s 500ns",
+    "decoded_logs": []
+   },
+   "test_CAP_TV_14_15()": {
+    "status": "Success",
+    "reason": null,
+    "counterexample": null,
+    "kind": {
+     "Unit": {
+      "gas": 28055743
+     }
+    },
+    "duration": "180ms 410\u00b5s 100ns",
+    "decoded_logs": []
+   },
+   "test_CAP_TV_16()": {
+    "status": "Success",
+    "reason": null,
+    "counterexample": null,
+    "kind": {
+     "Unit": {
+      "gas": 28066024
+     }
+    },
+    "duration": "205ms 66\u00b5s 800ns",
+    "decoded_logs": []
+   },
+   "test_CAP_TV_23()": {
+    "status": "Success",
+    "reason": null,
+    "counterexample": null,
+    "kind": {
+     "Unit": {
+      "gas": 28039993
+     }
+    },
+    "duration": "166ms 223\u00b5s 800ns",
+    "decoded_logs": []
+   },
+   "test_CAP_TV_24()": {
+    "status": "Success",
+    "reason": null,
+    "counterexample": null,
+    "kind": {
+     "Unit": {
+      "gas": 27845399
+     }
+    },
+    "duration": "176ms 435\u00b5s 900ns",
+    "decoded_logs": []
+   },
+   "test_CAP_TV_25_26()": {
+    "status": "Success",
+    "reason": null,
+    "counterexample": null,
+    "kind": {
+     "Unit": {
+      "gas": 28044033
+     }
+    },
+    "duration": "214ms 22\u00b5s 300ns",
+    "decoded_logs": []
+   },
+   "test_CAP_TV_27()": {
+    "status": "Success",
+    "reason": null,
+    "counterexample": null,
+    "kind": {
+     "Unit": {
+      "gas": 28039116
+     }
+    },
+    "duration": "211ms 685\u00b5s 900ns",
+    "decoded_logs": []
+   },
+   "test_CAP_TV_27B()": {
+    "status": "Success",
+    "reason": null,
+    "counterexample": null,
+    "kind": {
+     "Unit": {
+      "gas": 28018422
+     }
+    },
+    "duration": "184ms 424\u00b5s 700ns",
+    "decoded_logs": []
+   },
+   "test_CAP_TV_28()": {
+    "status": "Success",
+    "reason": null,
+    "counterexample": null,
+    "kind": {
+     "Unit": {
+      "gas": 28050021
+     }
+    },
+    "duration": "170ms 662\u00b5s 700ns",
+    "decoded_logs": []
+   },
+   "test_CAP_TV_29()": {
+    "status": "Success",
+    "reason": null,
+    "counterexample": null,
+    "kind": {
+     "Unit": {
+      "gas": 29569417
+     }
+    },
+    "duration": "169ms 531\u00b5s 500ns",
+    "decoded_logs": []
+   },
+   "test_CAP_TV_30()": {
+    "status": "Success",
+    "reason": null,
+    "counterexample": null,
+    "kind": {
+     "Unit": {
+      "gas": 28047819
+     }
+    },
+    "duration": "159ms 465\u00b5s 800ns",
+    "decoded_logs": []
+   },
+   "test_CAP_TV_31()": {
+    "status": "Success",
+    "reason": null,
+    "counterexample": null,
+    "kind": {
+     "Unit": {
+      "gas": 27848333
+     }
+    },
+    "duration": "184ms 187\u00b5s 100ns",
+    "decoded_logs": []
+   },
+   "test_CAP_TV_32()": {
+    "status": "Success",
+    "reason": null,
+    "counterexample": null,
+    "kind": {
+     "Unit": {
+      "gas": 27916836
+     }
+    },
+    "duration": "137ms 843\u00b5s 400ns",
+    "decoded_logs": []
+   },
+   "test_CAP_TV_Q13()": {
+    "status": "Success",
+    "reason": null,
+    "counterexample": null,
+    "kind": {
+     "Unit": {
+      "gas": 27799479
+     }
+    },
+    "duration": "131ms 419\u00b5s 800ns",
+    "decoded_logs": []
+   },
+   "test_IW_ARITHMETIC()": {
+    "status": "Success",
+    "reason": null,
+    "counterexample": null,
+    "kind": {
+     "Unit": {
+      "gas": 27543349
+     }
+    },
+    "duration": "121ms 32\u00b5s 900ns",
+    "decoded_logs": []
+   },
+   "test_IW_CONSUME()": {
+    "status": "Success",
+    "reason": null,
+    "counterexample": null,
+    "kind": {
+     "Unit": {
+      "gas": 30237586
+     }
+    },
+    "duration": "138ms 413\u00b5s 800ns",
+    "decoded_logs": []
+   },
+   "test_IW_CONTAIN()": {
+    "status": "Success",
+    "reason": null,
+    "counterexample": null,
+    "kind": {
+     "Unit": {
+      "gas": 28374206
+     }
+    },
+    "duration": "140ms 233\u00b5s 400ns",
+    "decoded_logs": []
+   },
+   "test_IW_COUNTS()": {
+    "status": "Success",
+    "reason": null,
+    "counterexample": null,
+    "kind": {
+     "Unit": {
+      "gas": 29368711
+     }
+    },
+    "duration": "116ms 458\u00b5s 200ns",
+    "decoded_logs": []
+   },
+   "test_IW_NARROW()": {
+    "status": "Success",
+    "reason": null,
+    "counterexample": null,
+    "kind": {
+     "Unit": {
+      "gas": 27634910
+     }
+    },
+    "duration": "146ms 344\u00b5s 700ns",
+    "decoded_logs": []
+   },
+   "test_IW_PERMIT2()": {
+    "status": "Success",
+    "reason": null,
+    "counterexample": null,
+    "kind": {
+     "Unit": {
+      "gas": 27664024
+     }
+    },
+    "duration": "123ms 520\u00b5s 400ns",
+    "decoded_logs": []
+   },
+   "test_MIG_TV_05()": {
+    "status": "Success",
+    "reason": null,
+    "counterexample": null,
+    "kind": {
+     "Unit": {
+      "gas": 30166078
+     }
+    },
+    "duration": "148ms 36\u00b5s 400ns",
+    "decoded_logs": []
+   },
+   "test_MIG_TV_06()": {
+    "status": "Success",
+    "reason": null,
+    "counterexample": null,
+    "kind": {
+     "Unit": {
+      "gas": 30117469
+     }
+    },
+    "duration": "132ms 214\u00b5s 600ns",
+    "decoded_logs": []
+   },
+   "test_MIG_TV_07()": {
+    "status": "Success",
+    "reason": null,
+    "counterexample": null,
+    "kind": {
+     "Unit": {
+      "gas": 29983507
+     }
+    },
+    "duration": "136ms 957\u00b5s 200ns",
+    "decoded_logs": []
+   },
+   "test_MIG_TV_08()": {
+    "status": "Success",
+    "reason": null,
+    "counterexample": null,
+    "kind": {
+     "Unit": {
+      "gas": 30242228
+     }
+    },
+    "duration": "160ms 366\u00b5s 100ns",
+    "decoded_logs": []
+   },
+   "test_MIG_TV_09()": {
+    "status": "Success",
+    "reason": null,
+    "counterexample": null,
+    "kind": {
+     "Unit": {
+      "gas": 31275636
+     }
+    },
+    "duration": "159ms 716\u00b5s",
+    "decoded_logs": []
+   },
+   "test_MIG_TV_10()": {
+    "status": "Success",
+    "reason": null,
+    "counterexample": null,
+    "kind": {
+     "Unit": {
+      "gas": 30089789
+     }
+    },
+    "duration": "149ms 340\u00b5s 900ns",
+    "decoded_logs": []
+   },
+   "test_MIG_TV_11()": {
+    "status": "Success",
+    "reason": null,
+    "counterexample": null,
+    "kind": {
+     "Unit": {
+      "gas": 30034864
+     }
+    },
+    "duration": "180ms 800\u00b5s 300ns",
+    "decoded_logs": []
+   },
+   "test_MIG_TV_12()": {
+    "status": "Success",
+    "reason": null,
+    "counterexample": null,
+    "kind": {
+     "Unit": {
+      "gas": 30323340
+     }
+    },
+    "duration": "163ms 452\u00b5s 900ns",
+    "decoded_logs": []
+   },
+   "test_MIG_TV_13()": {
+    "status": "Success",
+    "reason": null,
+    "counterexample": null,
+    "kind": {
+     "Unit": {
+      "gas": 31056384
+     }
+    },
+    "duration": "195ms 795\u00b5s 800ns",
+    "decoded_logs": []
+   },
+   "test_MIG_TV_14()": {
+    "status": "Success",
+    "reason": null,
+    "counterexample": null,
+    "kind": {
+     "Unit": {
+      "gas": 29987086
+     }
+    },
+    "duration": "145ms 584\u00b5s 700ns",
+    "decoded_logs": []
+   },
+   "test_MIG_TV_15()": {
+    "status": "Success",
+    "reason": null,
+    "counterexample": null,
+    "kind": {
+     "Unit": {
+      "gas": 30714512
+     }
+    },
+    "duration": "170ms 271\u00b5s 700ns",
+    "decoded_logs": []
+   },
+   "test_MIG_TV_17()": {
+    "status": "Success",
+    "reason": null,
+    "counterexample": null,
+    "kind": {
+     "Unit": {
+      "gas": 31613081
+     }
+    },
+    "duration": "275ms 461\u00b5s 300ns",
+    "decoded_logs": []
+   },
+   "test_MIG_TV_20_K6()": {
+    "status": "Success",
+    "reason": null,
+    "counterexample": null,
+    "kind": {
+     "Unit": {
+      "gas": 32285504
+     }
+    },
+    "duration": "395ms 174\u00b5s 900ns",
+    "decoded_logs": []
+   },
+   "test_MIG_TV_21()": {
+    "status": "Success",
+    "reason": null,
+    "counterexample": null,
+    "kind": {
+     "Unit": {
+      "gas": 31326884
+     }
+    },
+    "duration": "5s 190ms 708\u00b5s 800ns",
+    "decoded_logs": []
+   },
+   "test_MIG_TV_22A()": {
+    "status": "Success",
+    "reason": null,
+    "counterexample": null,
+    "kind": {
+     "Unit": {
+      "gas": 29964170
+     }
+    },
+    "duration": "347ms 377\u00b5s 400ns",
+    "decoded_logs": []
+   },
+   "test_MIG_TV_22B()": {
+    "status": "Success",
+    "reason": null,
+    "counterexample": null,
+    "kind": {
+     "Unit": {
+      "gas": 29776231
+     }
+    },
+    "duration": "308ms 452\u00b5s",
+    "decoded_logs": []
+   },
+   "test_MIG_TV_22C()": {
+    "status": "Success",
+    "reason": null,
+    "counterexample": null,
+    "kind": {
+     "Unit": {
+      "gas": 29776595
+     }
+    },
+    "duration": "275ms 772\u00b5s 300ns",
+    "decoded_logs": []
+   },
+   "test_MIG_TV_23A()": {
+    "status": "Success",
+    "reason": null,
+    "counterexample": null,
+    "kind": {
+     "Unit": {
+      "gas": 29538950
+     }
+    },
+    "duration": "271ms 186\u00b5s 700ns",
+    "decoded_logs": []
+   },
+   "test_MIG_TV_23B()": {
+    "status": "Success",
+    "reason": null,
+    "counterexample": null,
+    "kind": {
+     "Unit": {
+      "gas": 30644018
+     }
+    },
+    "duration": "303ms 711\u00b5s 700ns",
+    "decoded_logs": []
+   },
+   "test_MIG_TV_23C()": {
+    "status": "Success",
+    "reason": null,
+    "counterexample": null,
+    "kind": {
+     "Unit": {
+      "gas": 30144248
+     }
+    },
+    "duration": "187ms 413\u00b5s 700ns",
+    "decoded_logs": []
+   },
+   "test_MIG_TV_24()": {
+    "status": "Success",
+    "reason": null,
+    "counterexample": null,
+    "kind": {
+     "Unit": {
+      "gas": 30470008
+     }
+    },
+    "duration": "202ms 428\u00b5s 200ns",
+    "decoded_logs": []
+   },
+   "test_MIG_TV_25()": {
+    "status": "Success",
+    "reason": null,
+    "counterexample": null,
+    "kind": {
+     "Unit": {
+      "gas": 30001724
+     }
+    },
+    "duration": "161ms 195\u00b5s",
+    "decoded_logs": []
+   },
+   "test_MIG_TV_26()": {
+    "status": "Success",
+    "reason": null,
+    "counterexample": null,
+    "kind": {
+     "Unit": {
+      "gas": 32058023
+     }
+    },
+    "duration": "190ms 305\u00b5s 200ns",
+    "decoded_logs": []
+   },
+   "test_MIG_TV_27()": {
+    "status": "Success",
+    "reason": null,
+    "counterexample": null,
+    "kind": {
+     "Unit": {
+      "gas": 29976751
+     }
+    },
+    "duration": "161ms 787\u00b5s 400ns",
+    "decoded_logs": []
+   },
+   "test_MIG_TV_28()": {
+    "status": "Success",
+    "reason": null,
+    "counterexample": null,
+    "kind": {
+     "Unit": {
+      "gas": 29989325
+     }
+    },
+    "duration": "144ms 615\u00b5s 500ns",
+    "decoded_logs": []
+   },
+   "test_MIG_TV_29()": {
+    "status": "Success",
+    "reason": null,
+    "counterexample": null,
+    "kind": {
+     "Unit": {
+      "gas": 30627164
+     }
+    },
+    "duration": "172ms 727\u00b5s 100ns",
+    "decoded_logs": []
+   },
+   "test_MIG_TV_29B()": {
+    "status": "Success",
+    "reason": null,
+    "counterexample": null,
+    "kind": {
+     "Unit": {
+      "gas": 30793087
+     }
+    },
+    "duration": "144ms 447\u00b5s 500ns",
+    "decoded_logs": []
+   },
+   "test_MIG_TV_30()": {
+    "status": "Success",
+    "reason": null,
+    "counterexample": null,
+    "kind": {
+     "Unit": {
+      "gas": 30839737
+     }
+    },
+    "duration": "154ms 228\u00b5s 200ns",
+    "decoded_logs": []
+   },
+   "test_MIG_TV_31()": {
+    "status": "Success",
+    "reason": null,
+    "counterexample": null,
+    "kind": {
+     "Unit": {
+      "gas": 30169516
+     }
+    },
+    "duration": "137ms 368\u00b5s 700ns",
+    "decoded_logs": []
+   },
+   "test_MIG_TV_32()": {
+    "status": "Success",
+    "reason": null,
+    "counterexample": null,
+    "kind": {
+     "Unit": {
+      "gas": 30989300
+     }
+    },
+    "duration": "172ms 621\u00b5s 700ns",
+    "decoded_logs": []
+   },
+   "test_MIG_TV_33()": {
+    "status": "Success",
+    "reason": null,
+    "counterexample": null,
+    "kind": {
+     "Unit": {
+      "gas": 31353487
+     }
+    },
+    "duration": "152ms 250\u00b5s 500ns",
+    "decoded_logs": []
+   },
+   "test_MIG_TV_34()": {
+    "status": "Success",
+    "reason": null,
+    "counterexample": null,
+    "kind": {
+     "Unit": {
+      "gas": 31056848
+     }
+    },
+    "duration": "154ms 538\u00b5s 200ns",
+    "decoded_logs": []
+   },
+   "test_MIG_TV_35_ACTIVE_E()": {
+    "status": "Success",
+    "reason": null,
+    "counterexample": null,
+    "kind": {
+     "Unit": {
+      "gas": 29809712
+     }
+    },
+    "duration": "119ms 512\u00b5s 900ns",
+    "decoded_logs": []
+   },
+   "test_MIG_TV_35_ACTIVE_N()": {
+    "status": "Success",
+    "reason": null,
+    "counterexample": null,
+    "kind": {
+     "Unit": {
+      "gas": 29788894
+     }
+    },
+    "duration": "130ms 396\u00b5s 400ns",
+    "decoded_logs": []
+   },
+   "test_MIG_TV_35_DEP_SEC_E()": {
+    "status": "Success",
+    "reason": null,
+    "counterexample": null,
+    "kind": {
+     "Unit": {
+      "gas": 29863369
+     }
+    },
+    "duration": "123ms 816\u00b5s 900ns",
+    "decoded_logs": []
+   },
+   "test_MIG_TV_35_DEP_SEC_N()": {
+    "status": "Success",
+    "reason": null,
+    "counterexample": null,
+    "kind": {
+     "Unit": {
+      "gas": 29586067
+     }
+    },
+    "duration": "122ms 754\u00b5s 300ns",
+    "decoded_logs": []
+   },
+   "test_MIG_TV_35_DEP_STD_E()": {
+    "status": "Success",
+    "reason": null,
+    "counterexample": null,
+    "kind": {
+     "Unit": {
+      "gas": 29864455
+     }
+    },
+    "duration": "152ms 802\u00b5s 500ns",
+    "decoded_logs": []
+   },
+   "test_MIG_TV_35_DEP_STD_N()": {
+    "status": "Success",
+    "reason": null,
+    "counterexample": null,
+    "kind": {
+     "Unit": {
+      "gas": 29844231
+     }
+    },
+    "duration": "158ms 718\u00b5s 500ns",
+    "decoded_logs": []
+   },
+   "test_MIG_TV_35_DISABLED_E()": {
+    "status": "Success",
+    "reason": null,
+    "counterexample": null,
+    "kind": {
+     "Unit": {
+      "gas": 29818758
+     }
+    },
+    "duration": "152ms 188\u00b5s 800ns",
+    "decoded_logs": []
+   },
+   "test_MIG_TV_35_DISABLED_N()": {
+    "status": "Success",
+    "reason": null,
+    "counterexample": null,
+    "kind": {
+     "Unit": {
+      "gas": 29542204
+     }
+    },
+    "duration": "152ms 501\u00b5s 400ns",
+    "decoded_logs": []
+   },
+   "test_MIG_TV_35_RETIRED_E()": {
+    "status": "Success",
+    "reason": null,
+    "counterexample": null,
+    "kind": {
+     "Unit": {
+      "gas": 29919375
+     }
+    },
+    "duration": "159ms 566\u00b5s 100ns",
+    "decoded_logs": []
+   },
+   "test_MIG_TV_35_RETIRED_N()": {
+    "status": "Success",
+    "reason": null,
+    "counterexample": null,
+    "kind": {
+     "Unit": {
+      "gas": 29641414
+     }
+    },
+    "duration": "164ms 647\u00b5s 700ns",
+    "decoded_logs": []
+   },
+   "test_MIG_TV_35_SUNSET_E()": {
+    "status": "Success",
+    "reason": null,
+    "counterexample": null,
+    "kind": {
+     "Unit": {
+      "gas": 29901384
+     }
+    },
+    "duration": "153ms 772\u00b5s",
+    "decoded_logs": []
+   },
+   "test_MIG_TV_35_SUNSET_N()": {
+    "status": "Success",
+    "reason": null,
+    "counterexample": null,
+    "kind": {
+     "Unit": {
+      "gas": 29625843
+     }
+    },
+    "duration": "199ms 59\u00b5s 400ns",
+    "decoded_logs": []
+   },
+   "test_MIG_TV_36A()": {
+    "status": "Success",
+    "reason": null,
+    "counterexample": null,
+    "kind": {
+     "Unit": {
+      "gas": 30785262
+     }
+    },
+    "duration": "184ms 436\u00b5s 100ns",
+    "decoded_logs": []
+   },
+   "test_MIG_TV_36B()": {
+    "status": "Success",
+    "reason": null,
+    "counterexample": null,
+    "kind": {
+     "Unit": {
+      "gas": 30940677
+     }
+    },
+    "duration": "168ms 727\u00b5s 500ns",
+    "decoded_logs": []
+   },
+   "test_MIG_TV_36C()": {
+    "status": "Success",
+    "reason": null,
+    "counterexample": null,
+    "kind": {
+     "Unit": {
+      "gas": 29113799
+     }
+    },
+    "duration": "150ms 698\u00b5s 200ns",
+    "decoded_logs": []
+   },
+   "test_MIG_TV_37()": {
+    "status": "Success",
+    "reason": null,
+    "counterexample": null,
+    "kind": {
+     "Unit": {
+      "gas": 36862322
+     }
+    },
+    "duration": "251ms 132\u00b5s 800ns",
+    "decoded_logs": []
+   },
+   "test_MIG_TV_37B()": {
+    "status": "Success",
+    "reason": null,
+    "counterexample": null,
+    "kind": {
+     "Unit": {
+      "gas": 37241514
+     }
+    },
+    "duration": "267ms 210\u00b5s 900ns",
+    "decoded_logs": []
+   },
+   "test_MIG_TV_38()": {
+    "status": "Success",
+    "reason": null,
+    "counterexample": null,
+    "kind": {
+     "Unit": {
+      "gas": 46027581
+     }
+    },
+    "duration": "490ms 596\u00b5s 200ns",
+    "decoded_logs": []
+   },
+   "test_MIG_TV_39_EMERGENCY()": {
+    "status": "Success",
+    "reason": null,
+    "counterexample": null,
+    "kind": {
+     "Unit": {
+      "gas": 33609812
+     }
+    },
+    "duration": "238ms 660\u00b5s 100ns",
+    "decoded_logs": []
+   },
+   "test_MIG_TV_39_NORMAL()": {
+    "status": "Success",
+    "reason": null,
+    "counterexample": null,
+    "kind": {
+     "Unit": {
+      "gas": 33570051
+     }
+    },
+    "duration": "297ms 245\u00b5s 900ns",
+    "decoded_logs": []
+   },
+   "test_MIG_TV_39_REVISION()": {
+    "status": "Success",
+    "reason": null,
+    "counterexample": null,
+    "kind": {
+     "Unit": {
+      "gas": 34135627
+     }
+    },
+    "duration": "249ms 83\u00b5s 500ns",
+    "decoded_logs": []
+   },
+   "test_MIG_TV_40D()": {
+    "status": "Success",
+    "reason": null,
+    "counterexample": null,
+    "kind": {
+     "Unit": {
+      "gas": 29964028
+     }
+    },
+    "duration": "146ms 414\u00b5s 100ns",
+    "decoded_logs": []
+   },
+   "test_MIG_TV_41()": {
+    "status": "Success",
+    "reason": null,
+    "counterexample": null,
+    "kind": {
+     "Unit": {
+      "gas": 30031054
+     }
+    },
+    "duration": "119ms 749\u00b5s 700ns",
+    "decoded_logs": []
+   },
+   "test_MIG_TV_42()": {
+    "status": "Success",
+    "reason": null,
+    "counterexample": null,
+    "kind": {
+     "Unit": {
+      "gas": 30133382
+     }
+    },
+    "duration": "134ms 714\u00b5s 800ns",
+    "decoded_logs": []
+   },
+   "test_MIG_TV_43_1()": {
+    "status": "Success",
+    "reason": null,
+    "counterexample": null,
+    "kind": {
+     "Unit": {
+      "gas": 311398814
+     }
+    },
+    "duration": "9s 55ms 649\u00b5s 100ns",
+    "decoded_logs": []
+   },
+   "test_MIG_TV_43_2()": {
+    "status": "Success",
+    "reason": null,
+    "counterexample": null,
+    "kind": {
+     "Unit": {
+      "gas": 247706013
+     }
+    },
+    "duration": "7s 528ms 238\u00b5s 600ns",
+    "decoded_logs": []
+   },
+   "test_MIG_TV_43_3()": {
+    "status": "Success",
+    "reason": null,
+    "counterexample": null,
+    "kind": {
+     "Unit": {
+      "gas": 153254581
+     }
+    },
+    "duration": "4s 210ms 78\u00b5s 500ns",
+    "decoded_logs": []
+   },
+   "test_MIG_TV_43_4()": {
+    "status": "Success",
+    "reason": null,
+    "counterexample": null,
+    "kind": {
+     "Unit": {
+      "gas": 161335927
+     }
+    },
+    "duration": "5s 252ms 955\u00b5s 600ns",
+    "decoded_logs": []
+   },
+   "test_MIG_TV_43_5()": {
+    "status": "Success",
+    "reason": null,
+    "counterexample": null,
+    "kind": {
+     "Unit": {
+      "gas": 469943935
+     }
+    },
+    "duration": "15s 211ms 99\u00b5s",
+    "decoded_logs": []
+   },
+   "test_MIG_TV_43_6()": {
+    "status": "Success",
+    "reason": null,
+    "counterexample": null,
+    "kind": {
+     "Unit": {
+      "gas": 498004672
+     }
+    },
+    "duration": "13s 665ms 831\u00b5s 700ns",
+    "decoded_logs": []
+   },
+   "test_MIG_TV_44()": {
+    "status": "Success",
+    "reason": null,
+    "counterexample": null,
+    "kind": {
+     "Unit": {
+      "gas": 30809138
+     }
+    },
+    "duration": "111ms 767\u00b5s 300ns",
+    "decoded_logs": []
+   },
+   "test_MIG_TV_45()": {
+    "status": "Success",
+    "reason": null,
+    "counterexample": null,
+    "kind": {
+     "Unit": {
+      "gas": 30897858
+     }
+    },
+    "duration": "114ms 363\u00b5s 700ns",
+    "decoded_logs": []
+   },
+   "test_MIG_TV_A1()": {
+    "status": "Success",
+    "reason": null,
+    "counterexample": null,
+    "kind": {
+     "Unit": {
+      "gas": 30698454
+     }
+    },
+    "duration": "121ms 101\u00b5s",
+    "decoded_logs": []
+   },
+   "test_MIG_TV_A1B()": {
+    "status": "Success",
+    "reason": null,
+    "counterexample": null,
+    "kind": {
+     "Unit": {
+      "gas": 30900143
+     }
+    },
+    "duration": "118ms 88\u00b5s",
+    "decoded_logs": []
+   },
+   "test_MIG_TV_A1C()": {
+    "status": "Success",
+    "reason": null,
+    "counterexample": null,
+    "kind": {
+     "Unit": {
+      "gas": 31149016
+     }
+    },
+    "duration": "141ms 722\u00b5s 400ns",
+    "decoded_logs": []
+   },
+   "test_MIG_TV_A2()": {
+    "status": "Success",
+    "reason": null,
+    "counterexample": null,
+    "kind": {
+     "Unit": {
+      "gas": 30465163
+     }
+    },
+    "duration": "151ms 808\u00b5s 600ns",
+    "decoded_logs": []
+   },
+   "test_MIG_TV_L1()": {
+    "status": "Success",
+    "reason": null,
+    "counterexample": null,
+    "kind": {
+     "Unit": {
+      "gas": 30034331
+     }
+    },
+    "duration": "121ms 640\u00b5s 100ns",
+    "decoded_logs": []
+   },
+   "test_MIG_TV_L1B()": {
+    "status": "Success",
+    "reason": null,
+    "counterexample": null,
+    "kind": {
+     "Unit": {
+      "gas": 29530991
+     }
+    },
+    "duration": "128ms 627\u00b5s 200ns",
+    "decoded_logs": []
+   },
+   "test_TB_ALLOWANCE()": {
+    "status": "Success",
+    "reason": null,
+    "counterexample": null,
+    "kind": {
+     "Unit": {
+      "gas": 27771469
+     }
+    },
+    "duration": "104ms 714\u00b5s 700ns",
+    "decoded_logs": []
+   },
+   "test_TB_BATCH()": {
+    "status": "Success",
+    "reason": null,
+    "counterexample": null,
+    "kind": {
+     "Unit": {
+      "gas": 27529109
+     }
+    },
+    "duration": "116ms 674\u00b5s 900ns",
+    "decoded_logs": []
+   },
+   "test_TB_MANDATE_EXPIRY()": {
+    "status": "Success",
+    "reason": null,
+    "counterexample": null,
+    "kind": {
+     "Unit": {
+      "gas": 29242465
+     }
+    },
+    "duration": "96ms 515\u00b5s 100ns",
+    "decoded_logs": []
+   },
+   "test_TB_QUOTE_TIMES()": {
+    "status": "Success",
+    "reason": null,
+    "counterexample": null,
+    "kind": {
+     "Unit": {
+      "gas": 27582647
+     }
+    },
+    "duration": "92ms 92\u00b5s",
+    "decoded_logs": []
+   },
+   "test_TB_REGISTRY_GUARDS()": {
+    "status": "Success",
+    "reason": null,
+    "counterexample": null,
+    "kind": {
+     "Unit": {
+      "gas": 28086532
+     }
+    },
+    "duration": "108ms 719\u00b5s 300ns",
+    "decoded_logs": []
+   },
+   "test_TB_REGISTRY_NOTICE()": {
+    "status": "Success",
+    "reason": null,
+    "counterexample": null,
+    "kind": {
+     "Unit": {
+      "gas": 28003693
+     }
+    },
+    "duration": "111ms 255\u00b5s 700ns",
+    "decoded_logs": []
+   },
+   "test_TB_WINDOW_GRID()": {
+    "status": "Success",
+    "reason": null,
+    "counterexample": null,
+    "kind": {
+     "Unit": {
+      "gas": 27791931
+     }
+    },
+    "duration": "102ms 96\u00b5s 600ns",
+    "decoded_logs": []
+   }
+  }
+ },
+ "test/generated/GenTables.t.sol:GenTablesTest": {
+  "duration": "5s 837ms 806\u00b5s 600ns",
+  "warnings": [],
+  "test_results": {
+   "test_Table_SharedAllowanceX()": {
+    "status": "Success",
+    "reason": null,
+    "counterexample": null,
+    "kind": {
+     "Unit": {
+      "gas": 377666370
+     }
+    },
+    "duration": "3s 545ms 266\u00b5s 300ns",
+    "decoded_logs": []
+   },
+   "test_Table_SharedAllowanceY()": {
+    "status": "Success",
+    "reason": null,
+    "counterexample": null,
+    "kind": {
+     "Unit": {
+      "gas": 279015324
+     }
+    },
+    "duration": "2s 255ms 644\u00b5s 400ns",
+    "decoded_logs": []
+   },
+   "test_Table_SingleLineage()": {
+    "status": "Success",
+    "reason": null,
+    "counterexample": null,
+    "kind": {
+     "Unit": {
+      "gas": 2744872
+     }
+    },
+    "duration": "25ms 252\u00b5s 600ns",
+    "decoded_logs": []
+   }
+  }
+ }
+}

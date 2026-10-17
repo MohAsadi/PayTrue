@@ -1,0 +1,40 @@
+{
+ "_comment": "Template only. Copy to evidence/wallet-lab/EVL-nn/<runId>.json, fill every field from the real run, put the raw artifacts beside the record, and have a DIFFERENT person set reviewer. Both people sign the record in their own wallet (personal_sign over the message printed by `python -I tools/wallet_lab_verify.py --message RECORD.json`) and must be registered in evidence/wallet-lab-kit/people.json. Never edit a reviewed record; add a new one.",
+ "runId": "EVL-02-WL-11-<wallet>-<version>-<platform>-<chainId>-<yyyymmddThhmmZ>",
+ "evl": "EVL-02",
+ "testId": "WL-11",
+ "wallet": "<vendor and product>",
+ "walletVersion": "<exact build>",
+ "platform": "<browser or OS and version>",
+ "accountType": "A1",
+ "chainId": 11155111,
+ "startedAt": "<ISO 8601 UTC>",
+ "tester": "<name>",
+ "reviewer": "<a different name>",
+ "inputs": {
+  "requestPayloadSha256": "<sha256>",
+  "planId": "<id or fixture id>"
+ },
+ "raw": [
+  {
+   "name": "wallet_getCapabilities.json",
+   "sha256": "<sha256 of the file beside this record>"
+  }
+ ],
+ "screenshots": [],
+ "observed": {},
+ "result": "PASS | FAIL | INCONCLUSIVE | NOT_APPLICABLE",
+ "findings": [],
+ "evidenceId": "EV-<id from the immutable store>",
+ "typedDataSignatures": [],
+ "signatures": {
+  "tester": {
+   "signer": "<0x address registered for the tester>",
+   "sig": "<0x personal_sign signature, 65 bytes>"
+  },
+  "reviewer": {
+   "signer": "<0x address registered for the reviewer>",
+   "sig": "<0x personal_sign signature, 65 bytes>"
+  }
+ }
+}
