@@ -1,0 +1,14 @@
+# PayTrue on its own subdomain: https://pay.example.com/...   (the recommended layout)
+#   PAYTRUE_PUBLIC_ORIGIN=https://pay.example.com   PAYTRUE_BASE_PATH=/
+# A dedicated origin keeps the hosted checkout apart from every other script and cookie of your main site.
+# Not run by this repository's checks: validate with `caddy validate --config <this file>` before use.
+
+pay.example.com {
+	header {
+		Strict-Transport-Security "max-age=31536000"
+		X-Content-Type-Options "nosniff"
+		Referrer-Policy "no-referrer"
+		-Server
+	}
+	reverse_proxy 127.0.0.1:8080
+}

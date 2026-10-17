@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Embedded checkout example (experimental)</title>
+  <style>
+    body { font: 16px/1.5 system-ui, sans-serif; max-width: 42rem; margin: 2rem auto; padding: 0 1rem; }
+    iframe { width: 100%; min-height: 24rem; border: 1px solid #888; }
+    pre { background: #f2f2f2; padding: .5rem; overflow: auto; }
+    @media (prefers-color-scheme: dark) { body { background: #111; color: #eee; } pre { background: #222; } }
+  </style>
+</head>
+<body>
+  <h1>Your shop</h1>
+  <p><strong>Experimental.</strong> The hosted checkout below is framed by this page. The checkout is a development stub: no wallet, no chain, no money.</p>
+  <div id="frame"></div>
+  <h2>Messages this page believed</h2>
+  <p>A message counts only if it came from the exact checkout origin, from the frame this page created, with an exact shape. Nothing here proves a payment:
+     fulfil from a signed webhook or an authenticated read of the session, never from this page.</p>
+  <pre id="log">(waiting)</pre>
+  <script type="module" src="/host.js"></script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+# Local quickstart: a devnet (anvil with the PayTrue contracts deployed) and the development stub of the checkout API.
+#   docker compose -f deploy/compose/compose.yaml up --build
+# Both services publish on 127.0.0.1 only. NOTHING here is for production: the devnet holds every role in unlocked accounts and the stub has no wallet,
+# no chain access and no persistence. The images are built locally from this repository; none is published or pulled from a PayTrue registry.
+#
+# If a host port is taken or reserved (Windows reserves some), set PAYTRUE_DEVSERVER_PORT / PAYTRUE_DEVNET_PORT in your shell.
+#
+# Status: the file is checked with `docker compose config` only. The images have not been built by this repository's checks.
+name: paytrue-dev
+
+services:
+  devnet:
+    build:
+      context: ../..
+      dockerfile: deploy/docker/Dockerfile.devnet
+    ports:
+      - "127.0.0.1:${PAYTRUE_DEVNET_PORT:-8545}:8545"
+    volumes:
+      # the manifest of the deployment (deployments/local-31337.json) appears on the host
+      - ../../deployments:/out
+    restart: "no"
+
+  devserver:
+    build:
+      context: ../..
+      dockerfile: deploy/docker/Dockerfile.devserver
+    ports:
+      - "127.0.0.1:${PAYTRUE_DEVSERVER_PORT:-8080}:8080"
+    environment:
+      PAYTRUE_ENV: development
+      PAYTRUE_PUBLIC_ORIGIN: http://localhost:${PAYTRUE_DEVSERVER_PORT:-8080}
+      # a development key and secret; override them in your shell. They protect nothing: the stub only listens on 127.0.0.1
+      PAYTRUE_API_KEY: ${PAYTRUE_API_KEY:-dev_key_change_me}
+      PAYTRUE_WEBHOOK_SECRET: ${PAYTRUE_WEBHOOK_SECRET:-dev_whsec_change_me}
+      PAYTRUE_WEBHOOK_URL: ${PAYTRUE_WEBHOOK_URL:-}
+    restart: "no"

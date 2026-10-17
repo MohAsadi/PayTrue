@@ -1,0 +1,22 @@
+# SPDX-License-Identifier: Apache-2.0
+# The PayTrue DEVELOPMENT STUB (packages/devserver): in memory, no wallet, no chain. NOT for production; the stub refuses PAYTRUE_ENV=production.
+# Build from the repository root:  docker build -f deploy/docker/Dockerfile.devserver -t paytrue-devserver .
+#
+# Pin the base image by digest in your own build (`docker buildx imagetools inspect node:22-alpine`): a tag can move. This repository does not publish an image.
+FROM node:22-alpine
+
+WORKDIR /app
+COPY packages/config packages/config
+COPY packages/sdk packages/sdk
+COPY packages/devserver packages/devserver
+
+USER node
+ENV PAYTRUE_ENV=development \
+    PAYTRUE_LISTEN_HOST=0.0.0.0 \
+    PAYTRUE_LISTEN_PORT=8080
+EXPOSE 8080
+
+# the merchant API answers 401 without a key: that proves the process is up, whatever the base path is
+HEALTHCHECK --interval=10s --timeout=3s --retries=5 CMD node -e "fetch('http://127.0.0.1:'+(process.env.PAYTRUE_LISTEN_PORT||8080)+((process.env.PAYTRUE_BASE_PATH||'').replace(/\/$/,''))+'/v1/checkout/sessions').then(r=>process.exit(r.status===401?0:1)).catch(()=>process.exit(1))"
+
+CMD ["node", "packages/devserver/bin/paytrue-devserver.mjs"]

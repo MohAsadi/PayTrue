@@ -1,0 +1,21 @@
+# PayTrue under a PATH of a domain you already serve: https://example.com/paytrue/...
+# The application keeps the prefix:   PAYTRUE_PUBLIC_ORIGIN=https://example.com   PAYTRUE_BASE_PATH=/paytrue   PAYTRUE_PROXY_STRIPS_BASE_PATH=false
+#
+# TRADE-OFF (read docs/domains.md): the hosted checkout now shares an origin with the rest of example.com. Script that runs anywhere on that origin could reach
+# the checkout page, and the cookies of your own site are sent to /paytrue. A subdomain (subdomain.Caddyfile) is the safer layout.
+# Not run by this repository's checks: validate with `caddy validate --config <this file>` before use.
+
+example.com {
+	# ... your existing site stays here, unchanged ...
+
+	handle /paytrue/* {
+		header {
+			Strict-Transport-Security "max-age=31536000"
+			X-Content-Type-Options "nosniff"
+			Referrer-Policy "no-referrer"
+			-Server
+		}
+		# the upstream is wherever you run the PayTrue service (here the development stub on its default port)
+		reverse_proxy 127.0.0.1:8080
+	}
+}
