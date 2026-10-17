@@ -145,6 +145,9 @@ Rule: a requirement with no test ID, or a test with no requirement, fails the we
 | C.25 | Recorded evidence and freeze readiness: pinned Permit2 record, wallet-lab run records, freeze register, `freeze_readiness.py` | TPM, QA Lead | D0.5 → [evidence/](evidence/README.md) |
 | C.26 | Executable suites: Foundry reference model, exported vectors, fuzz, invariant, mutation, integer-width, timestamp-boundary, shared-allowance and fork tests | Solidity Lead, QA Lead | D0.5 → [foundry/](foundry/) |
 | C.27 | Checkout session and wallet-connection profile: hosted self-custody checkout, the `CheckoutSession` object and its state machine, expiry and quote rules, the wallet-connection profile (every wallet claim `UNVERIFIED`), the two QR codes, customer experiences, merchant integration (**PROPOSED**; needs Security and Privacy review and wallet-lab evidence) | Principal Product Manager, Wallet Protocol Eng | PROPOSED → [19](19-checkout-session-and-wallet-connect-profile.md) |
+| C.28 | Checkout API catalog (**proposed**): the merchant API (`POST /v1/checkout/sessions` and its reads and cancel), the hosted-page API, validation rules, limits and errors | Payments Core lead, Merchant PM | PROPOSED → [checkout/api-catalog.md](checkout/api-catalog.md) |
+| C.29 | Checkout event catalog (**proposed**): the seven `checkout.session.*` events, their fields, signature, replay window, retries, deduplication and ordering | Payments Core lead, Merchant PM | PROPOSED → [checkout/event-catalog.md](checkout/event-catalog.md) |
+| C.30 | Checkout configuration-record list (**proposed**): CSR-01, the session lifetime. Backend configuration: not a PC record and not counted by condition C-4 | Payments PM, TPM | PROPOSED → [checkout/config-records.md](checkout/config-records.md) |
 
 ### Part D — Smart Contracts (6.D, §12)
 | Ref | Title | Owner | Status |
