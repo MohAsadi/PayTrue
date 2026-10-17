@@ -105,7 +105,7 @@ Rule: a requirement with no test ID, or a test with no requirement, fails the we
 | B.1 | Brand foundation (incl. name clearance, RISK-013) | Design Systems Lead | P0-W4 |
 | B.2 | Design tokens, typography, color, spacing/layout, motion | Design Systems Lead | P0-W6 |
 | B.3 | Component library + Storybook conventions | Design Systems Lead | P1 |
-| B.4 | Checkout user flows | Product Designer | P0-W6 |
+| B.4 | Checkout user flows (a **proposed** session and wallet-connection profile is in [19](19-checkout-session-and-wallet-connect-profile.md); not frozen, not reviewed) | Product Designer | P0-W6 |
 | B.5 | FastPay activation flows (one per planner outcome, [05](05-evm-authorization-decision-tree.md)) | Product Designer | P0-W8 |
 | B.6 | Merchant dashboard | Product Designer | P1 |
 | B.7 | Customer mandate portal | Product Designer | P1 |
@@ -144,6 +144,7 @@ Rule: a requirement with no test ID, or a test with no requirement, fails the we
 | C.24 | Configuration records: each production-blocking constant as its own record (owner, unit, rationale, evidence, safe range, test, release gate, approval block) | Principal Architect | D0.5 → [18](18-configuration-records.md) |
 | C.25 | Recorded evidence and freeze readiness: pinned Permit2 record, wallet-lab run records, freeze register, `freeze_readiness.py` | TPM, QA Lead | D0.5 → [evidence/](evidence/README.md) |
 | C.26 | Executable suites: Foundry reference model, exported vectors, fuzz, invariant, mutation, integer-width, timestamp-boundary, shared-allowance and fork tests | Solidity Lead, QA Lead | D0.5 → [foundry/](foundry/) |
+| C.27 | Checkout session and wallet-connection profile: hosted self-custody checkout, the `CheckoutSession` object and its state machine, expiry and quote rules, the wallet-connection profile (every wallet claim `UNVERIFIED`), the two QR codes, customer experiences, merchant integration (**PROPOSED**; needs Security and Privacy review and wallet-lab evidence) | Principal Product Manager, Wallet Protocol Eng | PROPOSED → [19](19-checkout-session-and-wallet-connect-profile.md) |
 
 ### Part D — Smart Contracts (6.D, §12)
 | Ref | Title | Owner | Status |
