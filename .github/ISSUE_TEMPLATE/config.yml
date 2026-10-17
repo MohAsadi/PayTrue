@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Report a security vulnerability (private)
+    url: https://github.com/MohAsadi/PayTrue/security/advisories/new
+    about: Do not open a public issue for a vulnerability. Use GitHub's private reporting (SECURITY.md).
+  - name: Documentation
+    url: https://github.com/MohAsadi/PayTrue/tree/main/docs
+    about: Getting started, self-hosting, domains, embedding, headless use and the open-source readiness report.

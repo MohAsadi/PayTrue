@@ -1,0 +1,10 @@
+version: 2
+updates:
+  # The packages have no dependencies. Only the GitHub Actions used by the workflows are kept current.
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+    commit-message:
+      prefix: "ci"
+    open-pull-requests-limit: 5

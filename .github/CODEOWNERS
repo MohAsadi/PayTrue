@@ -1,0 +1,17 @@
+# Code owners: every pull request that touches these paths asks the owner for review.
+# Add maintainers here as they are appointed (GOVERNANCE.md). Enable "Require review from Code Owners" in the branch protection of `main`.
+*                       @MohAsadi
+/contracts/             @MohAsadi
+/spec/eip712/           @MohAsadi
+/spec/evidence/         @MohAsadi
+/spec/toolchain/        @MohAsadi
+/packages/              @MohAsadi
+/deploy/                @MohAsadi
+/scripts/               @MohAsadi
+/.github/               @MohAsadi
+/LICENSE                @MohAsadi
+/NOTICE                 @MohAsadi
+/THIRD_PARTY_NOTICES.md @MohAsadi
+/TRADEMARK.md           @MohAsadi
+/SECURITY.md            @MohAsadi
+/GOVERNANCE.md          @MohAsadi

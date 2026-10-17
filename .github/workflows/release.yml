@@ -1,0 +1,92 @@
+name: Release
+
+# A tag `vX.Y.Z` re-runs the checks, packs the packages and prepares a DRAFT GitHub release with the tarballs and their SHA-256 sums.
+# Nothing is published by default. The npm job is OFF unless the repository variable PAYTRUE_ENABLE_NPM_PUBLISH is "true", it runs in the protected
+# environment `npm-publish` (manual approval; the npm token is an environment secret), and every package is `"private": true` until a maintainer removes
+# that flag, so it would fail anyway. No container image is built or published by this repository.
+on:
+  push:
+    tags: ["v*"]
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    name: Checks
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - run: python -I scripts/repo_hygiene.py --history
+      - run: python -I scripts/test_repo_hygiene.py
+      - run: python -I scripts/check_docs.py
+      - run: node packages/config/scripts/generate-env-example.mjs --check
+      - run: node packages/config/scripts/generate-config-doc.mjs --check
+      - run: node --test packages/config/test/*.test.mjs packages/sdk/test/*.test.mjs packages/eip712/test/*.test.mjs packages/devserver/test/*.test.mjs
+
+  pack:
+    name: Pack the packages
+    needs: verify
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - name: npm pack
+        run: |
+          mkdir -p dist
+          for p in config sdk eip712; do (cd packages/$p && npm pack --pack-destination ../../dist); done
+          (cd dist && sha256sum *.tgz > SHA256SUMS && cat SHA256SUMS)
+      - uses: actions/upload-artifact@v4
+        with:
+          name: paytrue-packages
+          path: dist/*
+
+  draft-release:
+    name: Draft GitHub release
+    needs: pack
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/download-artifact@v4
+        with:
+          name: paytrue-packages
+          path: dist
+      - name: Create the draft (a maintainer reviews and publishes it by hand)
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh release create "$GITHUB_REF_NAME" dist/* --repo "$GITHUB_REPOSITORY" --draft --generate-notes --title "$GITHUB_REF_NAME"
+
+  publish-npm:
+    name: Publish to npm (off by default)
+    needs: draft-release
+    if: ${{ vars.PAYTRUE_ENABLE_NPM_PUBLISH == 'true' }}
+    runs-on: ubuntu-latest
+    environment: npm-publish
+    permissions:
+      contents: read
+      id-token: write
+    steps:
+      - uses: actions/download-artifact@v4
+        with:
+          name: paytrue-packages
+          path: dist
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          registry-url: https://registry.npmjs.org
+      - name: Publish with provenance
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+        run: |
+          for f in dist/*.tgz; do npm publish "$f" --provenance --access public; done

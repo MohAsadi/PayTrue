@@ -1,0 +1,53 @@
+name: Bug report
+description: Something in the code, the tools or the documentation is wrong. Not for security vulnerabilities.
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        **Security vulnerability?** Do not file it here. Use the private link in SECURITY.md.
+        PayTrue is pre-alpha: nothing is audited and no production service exists.
+  - type: input
+    id: commit
+    attributes:
+      label: Commit or version
+      description: The output of `git rev-parse HEAD`.
+    validations:
+      required: true
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area
+      options:
+        - contracts
+        - packages/config
+        - packages/sdk
+        - packages/eip712
+        - packages/devserver
+        - scripts or deployment files
+        - specification or tools
+        - documentation
+        - other
+    validations:
+      required: true
+  - type: textarea
+    id: command
+    attributes:
+      label: What you ran
+      description: The exact command and its full output.
+      render: shell
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: What you expected, and what happened instead
+    validations:
+      required: true
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment
+      description: OS, Node, Python and Foundry versions; whether you used the pinned toolchain (`spec/toolchain`).
+    validations:
+      required: true

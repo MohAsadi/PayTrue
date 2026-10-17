@@ -1,0 +1,33 @@
+name: Feature request
+description: Propose a change or an addition.
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        A change to a protocol rule, a type or a constant starts in the specification (`spec/`), not in code. Say which document and section it changes.
+  - type: textarea
+    id: problem
+    attributes:
+      label: The problem
+      description: What can you not do today, and who is affected (an operator, a merchant, a contributor)?
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposal
+    validations:
+      required: true
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives and what it would cost
+      description: Include any effect on the contracts, the EIP-712 types, the freeze fingerprints or the evidence.
+  - type: checkboxes
+    id: scope
+    attributes:
+      label: Scope
+      options:
+        - label: It needs no new runtime dependency (the packages are dependency-free), or I say why it does
+        - label: It names no PayTrue-hosted service and defaults to none
