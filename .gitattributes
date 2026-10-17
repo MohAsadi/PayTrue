@@ -1,5 +1,6 @@
-# Normalise line endings; do not rewrite them in place (the specification documents are edited with their own line endings).
-* text=auto
+# Text files are stored with LF and checked out with LF on every platform. The evidence tools hash file bytes (sources, golden vectors, reports), so a CRLF
+# checkout (Git for Windows with core.autocrlf=true) makes spec/tools/check_all.py fail on checks 17, 18 and 21.
+* text=auto eol=lf
 
 # Generated or recorded files: collapsed in review and ignored by language statistics.
 contracts/src/generated/** linguist-generated=true
