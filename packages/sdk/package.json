@@ -1,0 +1,40 @@
+{
+  "name": "@paytrue/sdk",
+  "version": "0.0.0",
+  "description": "A dependency-free client, webhook verification and embedding helpers for the PayTrue checkout API. No default host: point it at your own deployment.",
+  "license": "Apache-2.0",
+  "private": true,
+  "type": "module",
+  "sideEffects": false,
+  "main": "./src/index.js",
+  "types": "./src/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./src/index.d.ts",
+      "default": "./src/index.js"
+    },
+    "./embed": {
+      "types": "./src/embed.d.ts",
+      "default": "./src/embed.js"
+    }
+  },
+  "files": [
+    "src",
+    "README.md"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MohAsadi/PayTrue.git",
+    "directory": "packages/sdk"
+  },
+  "bugs": {
+    "url": "https://github.com/MohAsadi/PayTrue/issues"
+  },
+  "homepage": "https://github.com/MohAsadi/PayTrue/tree/main/packages/sdk#readme",
+  "scripts": {
+    "test": "node --test \"test/*.test.mjs\""
+  }
+}

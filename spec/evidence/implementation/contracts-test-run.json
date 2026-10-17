@@ -3,8 +3,8 @@
  "tool": "tools/contracts_tests.py",
  "forge": "forge Version: 1.8.5",
  "project": "contracts",
- "total": 296,
- "passed": 289,
+ "total": 297,
+ "passed": 290,
  "failed": 0,
  "skipped": 7,
  "suites": [
@@ -16,7 +16,7 @@
   },
   {
    "suite": "test/Deploy.t.sol:DeployTest",
-   "passed": 3,
+   "passed": 4,
    "failed": 0,
    "skipped": 0
   },
@@ -163,7 +163,7 @@
   "invariant_ExposureIndexIsExact()": {
    "runs": 128,
    "calls": 12288,
-   "reverts": 26
+   "reverts": 24
   }
  },
  "gas": [
@@ -339,17 +339,17 @@
   }
  ],
  "handlerCoverage": [
-  "coverage: charge: 4",
-  "coverage: mandates in the ghost list: 22",
+  "coverage: migration refused with: 0xde0f93de00000000000000000000000000000000000000000000000000000000",
+  "coverage: migration refused with: 0xde0f93de00000000000000000000000000000000000000000000000000000000",
   "coverage: charge refused with: 0x5e503d5a00000000000000000000000000000000000000000000000000000000",
+  "coverage: charge refused with: 0x36bda7e500000000000000000000000000000000000000000000000000000000",
   "coverage: charge refused with: 0xf96fb07100000000000000000000000000000000000000000000000000000000",
   "coverage: charge refused with: 0xf96fb07100000000000000000000000000000000000000000000000000000000",
   "coverage: charge refused with: 0xcc3a81a700000000000000000000000000000000000000000000000000000000",
-  "coverage: charge refused with: 0xf96fb07100000000000000000000000000000000000000000000000000000000",
-  "coverage: charge refused with: 0xf96fb07100000000000000000000000000000000000000000000000000000000",
-  "coverage: charge refused with: 0xf96fb07100000000000000000000000000000000000000000000000000000000",
+  "coverage: charge refused with: 0xcc3a81a700000000000000000000000000000000000000000000000000000000",
+  "coverage: charge refused with: 0xd81b2f2e00000000000000000000000000000000000000000000000000000000",
   "coverage: charge refused with: 0xd81b2f2e00000000000000000000000000000000000000000000000000000000"
  ],
  "note": "The reference-model suites (spec/foundry), the Permit2 fork tests and the wallet lab are separate evidence and are not counted here.",
- "generatedAt": "2026-10-17T14:00:22Z"
+ "generatedAt": "2026-10-17T17:01:30Z"
 }

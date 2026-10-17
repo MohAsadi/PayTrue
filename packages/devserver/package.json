@@ -1,0 +1,34 @@
+{
+  "name": "@paytrue/devserver",
+  "version": "0.0.0",
+  "description": "A development stub of the PayTrue checkout API for examples, SDK tests and reverse-proxy layouts. In memory, no wallet, no chain. NOT a payment server and never for production.",
+  "license": "Apache-2.0",
+  "private": true,
+  "type": "module",
+  "bin": {
+    "paytrue-devserver": "./bin/paytrue-devserver.mjs"
+  },
+  "files": [
+    "src",
+    "bin",
+    "README.md"
+  ],
+  "exports": {
+    ".": "./src/server.mjs"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MohAsadi/PayTrue.git",
+    "directory": "packages/devserver"
+  },
+  "bugs": {
+    "url": "https://github.com/MohAsadi/PayTrue/issues"
+  },
+  "scripts": {
+    "start": "node bin/paytrue-devserver.mjs",
+    "test": "node --test \"test/*.test.mjs\""
+  }
+}

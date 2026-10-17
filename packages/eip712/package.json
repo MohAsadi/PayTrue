@@ -1,0 +1,41 @@
+{
+  "name": "@paytrue/eip712",
+  "version": "0.0.0",
+  "description": "The EIP-712 typed-data encoder of PayTrue (domains, type hashes, struct hashes, the Permit2 witness, the migration snapshot) with its type definitions, golden vectors and wallet payloads. No dependencies. The type set is a proposal and is not frozen.",
+  "license": "Apache-2.0",
+  "private": true,
+  "type": "module",
+  "sideEffects": false,
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    },
+    "./types.json": "./dist/data/types.json",
+    "./golden-vectors.json": "./dist/data/golden-vectors.json",
+    "./typed-data/*": "./dist/data/typed-data/*"
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MohAsadi/PayTrue.git",
+    "directory": "packages/eip712"
+  },
+  "bugs": {
+    "url": "https://github.com/MohAsadi/PayTrue/issues"
+  },
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "prepack": "node scripts/build.mjs",
+    "pretest": "node scripts/build.mjs",
+    "test": "node --test \"test/*.test.mjs\""
+  }
+}

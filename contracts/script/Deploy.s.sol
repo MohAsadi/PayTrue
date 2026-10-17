@@ -1,4 +1,4 @@
-// SPDX-License-Identifier: UNLICENSED
+// SPDX-License-Identifier: Apache-2.0
 pragma solidity 0.8.24;
 
 import {Script, console2} from "forge-std/Script.sol";
@@ -31,8 +31,11 @@ import {PaymentRouter} from "../src/PaymentRouter.sol";
 /// every constant that has no value yet (the fee ceiling, PC-05) must be supplied: there are no defaults. The script is exercised by contracts/test/Deploy.t.sol
 /// on a local EVM only.
 ///
-///   FASTPAY_PERMIT2 FASTPAY_GOVERNANCE FASTPAY_GUARDIAN FASTPAY_RISK_AUTHORITY FASTPAY_MAX_QUOTE_TTL FASTPAY_MAX_BAND_WIDTH_BPS FASTPAY_QUOTE_SET_GRACE
-///   FASTPAY_FEE_CEILING_BPS FASTPAY_FEE_BPS FASTPAY_FEE_RECIPIENT      forge script script/Deploy.s.sol --rpc-url ... --broadcast
+///   PAYTRUE_PERMIT2 PAYTRUE_GOVERNANCE PAYTRUE_GUARDIAN PAYTRUE_RISK_AUTHORITY PAYTRUE_MAX_QUOTE_TTL PAYTRUE_MAX_BAND_WIDTH_BPS PAYTRUE_QUOTE_SET_GRACE
+///   PAYTRUE_FEE_CEILING_BPS PAYTRUE_FEE_BPS PAYTRUE_FEE_RECIPIENT      forge script script/Deploy.s.sol --rpc-url ... --broadcast
+///
+/// Each PAYTRUE_* name is read first; the earlier FASTPAY_* name of the same variable is read when the PAYTRUE_* one is unset or empty. Only the names of the
+/// environment variables changed: the contracts, their constructors and every constant are untouched.
 contract Deploy is Script {
     struct Params {
         address permit2; // the canonical Permit2 of the chain (PC-13); the caller checks it against the pinned record
@@ -65,19 +68,29 @@ contract Deploy is Script {
     error WrongPrediction();
     error WiringBroken();
 
-    function run() external returns (System memory s) {
-        Params memory p = Params({
-            permit2: vm.envAddress("FASTPAY_PERMIT2"),
-            governance: vm.envAddress("FASTPAY_GOVERNANCE"),
-            guardian: vm.envAddress("FASTPAY_GUARDIAN"),
-            riskAuthority: vm.envAddress("FASTPAY_RISK_AUTHORITY"),
-            maxQuoteTtl: uint32(vm.envUint("FASTPAY_MAX_QUOTE_TTL")),
-            maxBandWidthBps: vm.envUint("FASTPAY_MAX_BAND_WIDTH_BPS"),
-            quoteSetGrace: vm.envUint("FASTPAY_QUOTE_SET_GRACE"),
-            feeCeilingBps: uint16(vm.envUint("FASTPAY_FEE_CEILING_BPS")),
-            feeBps: uint16(vm.envUint("FASTPAY_FEE_BPS")),
-            feeRecipient: vm.envAddress("FASTPAY_FEE_RECIPIENT")
+    /// The parameters from the environment: the PAYTRUE_* name, else the legacy FASTPAY_* name, else a revert (there are no defaults).
+    function params() public view returns (Params memory p) {
+        p = Params({
+            permit2: vm.envAddress(_name("PAYTRUE_PERMIT2", "FASTPAY_PERMIT2")),
+            governance: vm.envAddress(_name("PAYTRUE_GOVERNANCE", "FASTPAY_GOVERNANCE")),
+            guardian: vm.envAddress(_name("PAYTRUE_GUARDIAN", "FASTPAY_GUARDIAN")),
+            riskAuthority: vm.envAddress(_name("PAYTRUE_RISK_AUTHORITY", "FASTPAY_RISK_AUTHORITY")),
+            maxQuoteTtl: uint32(vm.envUint(_name("PAYTRUE_MAX_QUOTE_TTL", "FASTPAY_MAX_QUOTE_TTL"))),
+            maxBandWidthBps: vm.envUint(_name("PAYTRUE_MAX_BAND_WIDTH_BPS", "FASTPAY_MAX_BAND_WIDTH_BPS")),
+            quoteSetGrace: vm.envUint(_name("PAYTRUE_QUOTE_SET_GRACE", "FASTPAY_QUOTE_SET_GRACE")),
+            feeCeilingBps: uint16(vm.envUint(_name("PAYTRUE_FEE_CEILING_BPS", "FASTPAY_FEE_CEILING_BPS"))),
+            feeBps: uint16(vm.envUint(_name("PAYTRUE_FEE_BPS", "FASTPAY_FEE_BPS"))),
+            feeRecipient: vm.envAddress(_name("PAYTRUE_FEE_RECIPIENT", "FASTPAY_FEE_RECIPIENT"))
         });
+    }
+
+    /// `current` when that variable is set and not empty, otherwise `legacy`.
+    function _name(string memory current, string memory legacy) private view returns (string memory) {
+        return bytes(vm.envOr(current, string(""))).length != 0 ? current : legacy;
+    }
+
+    function run() external returns (System memory s) {
+        Params memory p = params();
         vm.startBroadcast();
         (, address deployer,) = vm.readCallers();
         s = deploy(deployer, p);

@@ -1,4 +1,7 @@
-# FastPay contracts (the actual contracts)
+# PayTrue contracts (the actual contracts)
+
+Licensed under [Apache-2.0](../LICENSE). The specification and the generated library still use the working name FastPay (`FastPayTypes`, the EIP-712 domain names); those names are
+protected, see [rename impact](../docs/rename-impact.md).
 
 **Status: implementation evidence, not a release.** These are the Solidity contracts that the specification (`../spec`, version 0.5.0, draft) describes.
 They are compiled and tested with a pinned toolchain, but they are **not audited**, the constants they use are **proposals**
@@ -25,7 +28,10 @@ fixed at deployment. The architecture decisions are ADR-020 (versioned bounds, s
 `MAX_BATCH`), ADR-023 (signer sets) in `../spec/06-initial-architecture.md`.
 
 **Not built in this pass:** `chargeInitial`, `payOnceWithSignatureAndPermit`, `payOnceWithAuthorization`, `payOnce`, `RefundManager`, `EmergencyGuardian`, a plan
-opened by relayed signature, the typed charge request (finding F-19), deployment scripts. The `recipientPolicy` of a mandate is opaque (F-18).
+opened by relayed signature, the typed charge request (finding F-19). The `recipientPolicy` of a mandate is opaque (F-18).
+
+A **deployment script** exists (`script/Deploy.s.sol`, parameters in `PAYTRUE_*` environment variables, the earlier `FASTPAY_*` names as a fallback). It is deployment code, not a deployment: no address is
+recorded anywhere. See [contract deployments](../docs/contracts-deployments.md) and `python -I ../scripts/devnet.py --once` for a verified local run.
 
 ## Frozen compiler settings
 
@@ -44,7 +50,7 @@ frozen-settings.json    the frozen compiler settings
 
 ## Running
 
-The Foundry toolchain is pinned and fetched by `../spec/toolchain/fetch_toolchain.py` (see `../spec/toolchain/README.md`); use its wrapper:
+The Foundry toolchain is pinned and fetched by `../spec/toolchain/fetch_toolchain.py` (see [the toolchain README](../spec/toolchain/README.md)); use its wrapper:
 
 ```bash
 python -I spec/toolchain/forge.py --project contracts build --sizes       # compile and print runtime sizes
@@ -55,6 +61,13 @@ python -I spec/tools/loop_audit.py --project contracts                    # ever
 python -I spec/tools/contracts_mutation.py                                # mutation testing of these contracts (about an hour)
 python -I spec/tools/fork_run.py --project contracts                      # the suites on forks of Ethereum, Base and Arbitrum One (needs network)
 ```
+
+## Using the contracts from another project
+
+The sources in `src/` import only each other (and `src/generated/FastPayTypes.sol`, generated from `spec/eip712/types.json`); they need no library. Copy or vendor `contracts/src` and compile with the
+**frozen settings** (`frozen-settings.json`): a different compiler or optimizer is a different bytecode and none of the recorded evidence applies to it. The **tests and the script** need forge-std, and
+the tests read vectors from `../spec/foundry/vectors` and `../spec/eip712` and the Permit2 fixture from `../spec/evidence/permit2` (a known limitation of this layout: `contracts/` is not yet a standalone
+package, see [architecture](../docs/architecture.md)). No contract contains an address or a URL of any PayTrue party.
 
 ## Suites
 

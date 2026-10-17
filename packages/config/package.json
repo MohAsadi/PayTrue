@@ -1,0 +1,38 @@
+{
+  "name": "@paytrue/config",
+  "version": "0.0.0",
+  "description": "Read and validate the PAYTRUE_* environment of a self-hosted PayTrue deployment and derive its URLs for a path on an existing domain, a subdomain or a dedicated host. No dependencies.",
+  "license": "Apache-2.0",
+  "private": true,
+  "type": "module",
+  "sideEffects": false,
+  "main": "./src/index.js",
+  "types": "./src/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./src/index.d.ts",
+      "default": "./src/index.js"
+    },
+    "./schema": "./src/schema.js"
+  },
+  "files": [
+    "src",
+    "README.md"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MohAsadi/PayTrue.git",
+    "directory": "packages/config"
+  },
+  "bugs": {
+    "url": "https://github.com/MohAsadi/PayTrue/issues"
+  },
+  "homepage": "https://github.com/MohAsadi/PayTrue/tree/main/packages/config#readme",
+  "scripts": {
+    "test": "node --test \"test/*.test.mjs\"",
+    "env-example": "node scripts/generate-env-example.mjs"
+  }
+}
