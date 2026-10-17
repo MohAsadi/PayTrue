@@ -105,5 +105,7 @@ jobs:
           node-version: "22"
       - name: Fetch the pinned toolchain
         run: python -I spec/toolchain/fetch_toolchain.py
+      - name: Build the contracts (check 18 compares the forge build with the recorded report, so it needs one)
+        run: python -I spec/toolchain/forge.py --project contracts build
       - name: The 21 consistency checks
         run: python -I spec/tools/check_all.py

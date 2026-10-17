@@ -31,6 +31,7 @@ node --test "packages/config/test/*.test.mjs" "packages/sdk/test/*.test.mjs" "pa
 node packages/config/scripts/generate-env-example.mjs --check
 node packages/config/scripts/generate-config-doc.mjs --check
 python -I spec/toolchain/forge.py --project contracts test      # when you touched contracts/ (about four minutes)
+python -I spec/toolchain/forge.py --project contracts build     # check 18 compares this build with the recorded report, so build first
 python -I spec/tools/check_all.py                                # when you touched spec/, contracts/ or evidence (21 checks)
 ```
 

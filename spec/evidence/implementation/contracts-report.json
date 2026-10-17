@@ -18,12 +18,12 @@
  "frozenSettings": "contracts/frozen-settings.json",
  "settingsFrozenFileSha256": "fca7110349b28012c01b5ec6470787a96b739bf85f240a3c3ebfa2a8bb34ee4d",
  "sourcesSha256": {
-  "src/Errors.sol": "e9f6be76b92b760bfadcf9719c37f5cc10400ba3ede250c09514bc18e42c2f68",
+  "src/Errors.sol": "ca155b40cd5d70e07e630a968ca0957de79228f002707dec99f920f7555d26c5",
   "src/ExecutorRegistry.sol": "923a74d12550bf50c13d4b5835c134609983e4729ad02524ac9e7aadab0adb7c",
-  "src/FeeController.sol": "98be443a36f7df47202aafe22f4906d3944a09b9470db7a77a3088ce957efc28",
+  "src/FeeController.sol": "6d2649c7a0d86ff51657cdd497e2a6743f6e3481c65c784d02b91ffbb8cfd68e",
   "src/generated/FastPayTypes.sol": "ecc2a6fe8aec718780cfb0cb32a3ff1dbb056e24139bec04dee7e8f071e54fa1",
   "src/interfaces/IERC20.sol": "663f7c25a50a30427d99eaa77961b9fd5d484b7d511f4665c357bc0761bad4dd",
-  "src/interfaces/IMandateManager.sol": "8603672ec340957b68fa730227ec0d6891e21f804912b7cd6fe8956e21229c73",
+  "src/interfaces/IMandateManager.sol": "67915a0b2b83b6a29ca035ab8dcbb46f4d047c96eb8307fe4ea6448bcd1de59f",
   "src/interfaces/IPermit2.sol": "2cef2e1bc92b42b672dce3c67146f58cee8a3afd39f2e36343ca71b6a1a22c18",
   "src/interfaces/IRegistries.sol": "1b44e6b6b6c8397a2b6bf4b794e467ed312279142d743039f26b66cb787515ed",
   "src/interfaces/IRouterRegistry.sol": "b72cb1b864312a414db68d540b5ccc1a76447cf8a44a5d8220e59d550fcc8827",
@@ -36,13 +36,13 @@
   "src/MandateGateway.sol": "426ffc1d292555daa7d2c6c6a7a5fa7ed6298115fb28c998c992022531ed89a2",
   "src/MandateManager.sol": "29d3fcbf1fcc3a18c42250230e25baf3f15a0222ae3c41aba2452222df8f7e03",
   "src/MerchantRegistry.sol": "a0c12b20fdb56dc0b64a229db61be960d16053c28181ba3b61d61b962d3f3627",
-  "src/MigrationQueue.sol": "1c75f32fa95827f28791a7645aa159b74eeebca5beae6da0e52c59558a5de3e1",
-  "src/PaymentRouter.sol": "6984417f4f580ef63885e0dc5298662155de1965bc4b42040d9e3e426b921c67",
+  "src/MigrationQueue.sol": "83694991a96502a31b838d3b6696f9751ad412cd7703445173e46423a7679621",
+  "src/PaymentRouter.sol": "e4b8457c01d890fda9f5c0bc4edfaa6568d59183b675ecdb77e58be692d0c727",
   "src/RouterRegistry.sol": "4b513a08db670e590b842b420070d5bf4cbf017184f134ee3aba03276e1bbb81",
   "src/SignerSetRegistry.sol": "bb4035a286e083b5544e0455bab97a2a4e8447f9e444582bb7c718cac6cb1a91",
   "src/SuccessorValidator.sol": "84a08b7742995018d103a956fa27cea5d2d3a1df550b03da40fdee1c7c332a6b",
-  "src/TokenPolicyRegistry.sol": "2d18a8d6e58e1dd5475760f1f5bcd1ad75e26a5d2376a553aab720f97e00acfe",
-  "src/UsageLedger.sol": "43b3d6a99a8662834951de184210f770e0aa97c5f787f3fbb337f15257cab877"
+  "src/TokenPolicyRegistry.sol": "d35a381977ec4fe16018e16d7df781b43ca6b465f9394a168d1871aadfe3a775",
+  "src/UsageLedger.sol": "d4ce7e21e174143033ffec7b732af6b97e3e4b405f5a8d00030a145f67fdb02f"
  },
  "contracts": {
   "AuthLib": {

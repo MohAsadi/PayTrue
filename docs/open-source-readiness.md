@@ -46,7 +46,7 @@ Status words: **COMPLETE** (nothing left that an engineer can do), **PARTIAL** (
 | 22 | Cryptographic identifiers not to be renamed | PARTIAL | COMPLETE | 11 protected identifiers (EIP-712 domain names, hashed tags, the wallet-lab signing prefix) are listed, and the hygiene check fails if one disappears; tests prove it |
 | 23 | Optional PayTrue Cloud separation | NOT_IMPLEMENTED | COMPLETE | [Cloud boundary](cloud-boundary.md): nothing requires Cloud; the loader has no default Cloud URL and refuses to enable Cloud without one. *Cloud itself does not exist and is not simulated.* |
 | 24 | Package publishing readiness | NOT_IMPLEMENTED | PARTIAL | Manifests, types, `files`, `exports`, `engines`, `npm pack --dry-run` in CI, a draft-only release path, `"private": true` as a guard. **Left (blocked):** the `@paytrue` npm scope, account, two-factor authentication and provenance publisher are unverified or not set up; the name is not cleared |
-| 25 | External contributor readiness | PARTIAL | PARTIAL | [CONTRIBUTING](../CONTRIBUTING.md), [CODE_OF_CONDUCT](../CODE_OF_CONDUCT.md), [GOVERNANCE](../GOVERNANCE.md), [SUPPORT](../SUPPORT.md), one command list that CI also runs. **Left:** the Linux toolchain path is unverified; a conduct-reporting contact is not published |
+| 25 | External contributor readiness | PARTIAL | PARTIAL | [CONTRIBUTING](../CONTRIBUTING.md), [CODE_OF_CONDUCT](../CODE_OF_CONDUCT.md), [GOVERNANCE](../GOVERNANCE.md), [SUPPORT](../SUPPORT.md), one command list that CI also runs. A fresh Windows clone was run through every check (see below). **Left:** the Linux toolchain path is unverified; the toolchain download itself was not re-run in the clone; a conduct-reporting contact is not published |
 
 Totals after this change: **5 COMPLETE, 20 PARTIAL, 0 BLOCKED as a whole, 0 SPECIFIED_ONLY, 0 NOT_IMPLEMENTED.** "PARTIAL" is the honest state of almost everything, because the one thing
 that would make most of them COMPLETE, a production checkout service, is not built.
@@ -62,6 +62,7 @@ that would make most of them COMPLETE, a production checkout service, is not bui
 | Hygiene (`scripts/repo_hygiene.py --history`) | 0 failures; 1 warning (the 47.3 MiB log); no secret in the tree or in the Git history (4 commits before this change) |
 | Hygiene checker's own tests | 11 pass |
 | Documentation links | Checked by `scripts/check_docs.py` |
+| Fresh clone of the branch (Windows, Git's default `core.autocrlf=true`, pinned toolchain archives restored from a local copy, no download) | Hygiene, link check, generated-file checks, 55 package tests, headless example, `npm pack --dry-run`, contracts build, **290 contract tests**, devnet and all 21 specification checks pass. The run **found a defect, now fixed**: a CRLF checkout changed the bytes the evidence tools hash and failed checks 17, 18 and 21, so `.gitattributes` now forces LF and the contracts report was re-recorded from LF sources (no bytecode or size changed). Check 18 also needs `forge build` first; CI and CONTRIBUTING now say so |
 | Local devnet quickstart | Run end to end with the pinned anvil and forge |
 | Embedding example | Run in a real browser, positive and negative case |
 | Compose file | Validated with `docker compose config`; **nothing pulled or built** |
