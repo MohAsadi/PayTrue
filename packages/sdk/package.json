@@ -19,8 +19,7 @@
     }
   },
   "files": [
-    "src",
-    "README.md"
+    "src"
   ],
   "engines": {
     "node": ">=18"

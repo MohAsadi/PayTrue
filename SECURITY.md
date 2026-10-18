@@ -5,7 +5,7 @@ PayTrue handles money, so security reports are taken seriously. **Please do not 
 ## Status of the project: read this first
 
 PayTrue is **pre-alpha**. The contracts are **not audited**, the protocol is **not frozen**, no wallet has been tested, and no production payment service exists. Do not put real funds
-behind anything built from this repository today ([production deployment](docs/production-deployment.md)). A finding is still valuable: this is the time to find it.
+behind anything built from this repository today ([README, Production](README.md#production)). A finding is still valuable: this is the time to find it.
 
 ## How to report
 
@@ -64,4 +64,4 @@ decision**, because it breaks every clone. The repository is checked by `python 
 ## For operators
 
 Your deployment's security is yours: keep governance behind a timelock and the guardian stop-only, keep one key class per key, use at least two independent RPC providers, and pin and verify the
-toolchain. [Self-hosting](docs/self-hosting.md) and [contract deployments](docs/contracts-deployments.md) list what you are responsible for.
+toolchain. The README sections [Deploy your own contracts](README.md#deploy-your-own-contracts) and [Production](README.md#production) list what you are responsible for.

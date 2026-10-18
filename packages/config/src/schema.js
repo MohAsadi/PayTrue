@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: Apache-2.0
-// The environment of a self-hosted PayTrue deployment, in one place. `.env.example` and docs/configuration.md are checked against this list.
+// The environment of a self-hosted PayTrue deployment, in one place. `.env.example` and the configuration table of README.md are checked against this list.
 //
 // Every variable is read by code that exists in this repository: the configuration loader (group "runtime"), the development stub (group "devserver"),
 // the contract deployment script (group "contracts") or a tool. Nothing is listed for a component that does not exist.
@@ -51,7 +51,7 @@ export const ENV_SCHEMA = [
   { name: "PAYTRUE_RPC_URLS_<chainId>", group: "runtime", default: "http://127.0.0.1:8545 for 31337 (development only)", requiredWhen: "production, for every chain id", example: "https://rpc-a.example.org,https://rpc-b.example.net",
     description: "Comma-separated RPC URLs of one chain. Production needs at least two distinct hosts: a money decision rests on two independent sources." },
   { name: "PAYTRUE_DEPLOYMENT_FILE", group: "runtime", default: "deployments/local-31337.json (development only)", requiredWhen: "production", example: "deployments/sovereign-8453.json",
-    description: "The deployment manifest (docs/contracts-deployments.md) that names the contract addresses of your own deployment. PayTrue ships no canonical addresses." },
+    description: "The deployment manifest (README, section Deploy your own contracts) that names the contract addresses of your own deployment. PayTrue ships no canonical addresses." },
 
   // ---- runtime: sessions and webhooks
   { name: "PAYTRUE_SESSION_LIFETIME_MIN_SECONDS", group: "runtime", default: "600", example: "600",

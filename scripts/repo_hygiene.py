@@ -98,7 +98,7 @@ def check_forbidden(files, res):
         if any(fnmatch.fnmatch(base, p) or fnmatch.fnmatch(f, p) for p in CONFIG["forbiddenTrackedPatterns"]):
             problems.append(f"{f}: a file of a type that must not be tracked (keys, environment files, binaries, archives, media)")
         if any(fnmatch.fnmatch(f, p) for p in CONFIG["privateEvidencePatterns"]):
-            problems.append(f"{f}: wallet-lab raw artifacts are private by default (docs/evidence-policy.md); publish a redacted one only by a reviewed `git add -f`")
+            problems.append(f"{f}: wallet-lab raw artifacts are private by default (README, section Contributing); publish a redacted one only by a reviewed `git add -f`")
     for p in problems:
         res.add("forbidden", "FAIL", p)
     if not problems:
@@ -236,7 +236,7 @@ def keccak256(data):
 
 
 def check_protected(res):
-    """The cryptographic identifiers that a blind find-and-replace of the product name would change (docs/rename-impact.md)."""
+    """The cryptographic identifiers that a blind find-and-replace of the product name would change (README, section Contributing)."""
     problems = []
     for item in CONFIG["protectedIdentifiers"]:
         s = item["string"]
@@ -246,7 +246,7 @@ def check_protected(res):
         for rel in item["mustAppearIn"]:
             if s not in read_text(rel):
                 problems.append(f"{item['id']}: {s!r} no longer appears in {rel}. A protected identifier was renamed or removed; "
-                                f"changing it is a new domain or a new tag and needs the impact analysis of docs/rename-impact.md")
+                                f"changing it is a new domain or a new tag and needs an impact analysis and the regeneration of every dependent artifact")
     for p in problems:
         res.add("protected", "FAIL", p)
     if not problems:
@@ -266,7 +266,7 @@ def check_packages(res):
                 problems.append(f"{rel}: missing {key!r}")
         for key in ("dependencies", "devDependencies", "peerDependencies", "optionalDependencies"):
             if d.get(key):
-                problems.append(f"{rel}: has {key}; the packages are dependency-free by policy (add the dependency to THIRD_PARTY_NOTICES.md and the policy first)")
+                problems.append(f"{rel}: has {key}; the packages are dependency-free by policy (add it to the third-party table of the README and to the policy first)")
         if CONFIG.get("packagesMustBePrivateUntilRelease") and d.get("private") is not True:
             problems.append(f"{rel}: must stay \"private\": true until a release is approved by the maintainers")
     for p in problems:

@@ -1,7 +1,7 @@
 # ---- Toolchain: binaries, downloads, compilers, fetched dependency trees and generated build runs.
 # They are pinned by URL, commit and SHA-256 in spec/toolchain/toolchain.lock.json and fetched again by
 # `python spec/toolchain/fetch_toolchain.py`. Some are larger than GitHub accepts (100 MB per file) and several carry
-# copyleft licenses (see THIRD_PARTY_NOTICES.md), so none of them is tracked.
+# copyleft licenses (see the README, section License), so none of them is tracked.
 spec/toolchain/bin/
 spec/toolchain/_download/
 spec/toolchain/solc/
@@ -44,7 +44,7 @@ secrets/
 .secrets/
 
 # ---- Private evidence. Wallet-lab raw artifacts (screenshots, recordings, network captures, device logs) are kept in a private
-# evidence store (docs/evidence-policy.md). A signed run record (JSON) is public; a raw artifact is published only after a
+# evidence store (README, section Contributing). A signed run record (JSON) is public; a raw artifact is published only after a
 # redaction review, by an explicit `git add -f`.
 evidence-private/
 spec/evidence/wallet-lab/**/*.png

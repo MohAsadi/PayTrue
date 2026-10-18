@@ -1,5 +1,5 @@
 {
-  "_comment": "Settings of scripts/repo_hygiene.py. protectedIdentifiers are the cryptographic identifiers that a blind rename of the product name would change: see docs/rename-impact.md before editing any of them.",
+  "_comment": "Settings of scripts/repo_hygiene.py. protectedIdentifiers are the cryptographic identifiers that a blind rename of the product name would change: never edit one without an impact analysis and the regeneration of every dependent artifact (README, section Contributing).",
   "maxFileMiB": 50,
   "warnFileMiB": 20,
   "ownSpdx": "Apache-2.0",
@@ -66,15 +66,8 @@
   ],
   "requiredFiles": [
     "LICENSE",
-    "NOTICE",
     "README.md",
     "SECURITY.md",
-    "CONTRIBUTING.md",
-    "CODE_OF_CONDUCT.md",
-    "GOVERNANCE.md",
-    "TRADEMARK.md",
-    "SUPPORT.md",
-    "THIRD_PARTY_NOTICES.md",
     ".gitignore",
     ".gitattributes",
     ".editorconfig",
@@ -83,8 +76,7 @@
     ".github/PULL_REQUEST_TEMPLATE.md",
     ".github/ISSUE_TEMPLATE/config.yml",
     ".github/workflows/ci.yml",
-    ".github/workflows/release.yml",
-    "docs/README.md"
+    ".github/workflows/release.yml"
   ],
   "hostCheckDirs": [
     "packages",

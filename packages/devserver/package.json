@@ -10,8 +10,7 @@
   },
   "files": [
     "src",
-    "bin",
-    "README.md"
+    "bin"
   ],
   "exports": {
     ".": "./src/server.mjs"

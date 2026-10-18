@@ -25,7 +25,7 @@ python -I spec/toolchain/forge.py --tool anvil --help           # the pinned anv
 
 Tracked: `toolchain.lock.json`, `fetch_toolchain.py`, `forge.py`, `fetch-record.json`, `tree-verification.json`, this file.
 **Not tracked** (ignored, re-fetched on demand): `bin/`, `_download/`, `solc/`, `permit2-build/` (Permit2's source tree and its dependencies, some of which are copyleft: see
-[THIRD_PARTY_NOTICES](../../THIRD_PARTY_NOTICES.md)) and `isolated/` (the directory of a Permit2 rebuild run). `spec/foundry/lib/forge-std` is written by the fetch and is tracked (MIT OR Apache-2.0).
+the "License" section of the [root README](../../README.md#license-third-party-code-and-the-name)) and `isolated/` (the directory of a Permit2 rebuild run). `spec/foundry/lib/forge-std` is written by the fetch and is tracked (MIT OR Apache-2.0).
 
 ## Platforms
 

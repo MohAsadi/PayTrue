@@ -4,7 +4,7 @@
 
     python -I scripts/validate_deployment.py deployments/sovereign.example.json [more files]
 
-A manifest names the contract addresses of ONE deployment on ONE chain. Two kinds exist (docs/contracts-deployments.md):
+A manifest names the contract addresses of ONE deployment on ONE chain. Two kinds exist (README, section Deploy your own contracts):
   sovereign  an operator deployed the contracts under their own governance; PayTrue maintainers vouch for nothing.
   canonical  a PayTrue-maintained deployment. None exists. The schema refuses `canonical` unless it carries an approved protocol freeze and audit references:
              the freeze is not approved, so no valid canonical manifest can be written today.

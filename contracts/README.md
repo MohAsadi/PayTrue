@@ -1,7 +1,7 @@
 # PayTrue contracts (the actual contracts)
 
 Licensed under [Apache-2.0](../LICENSE). The specification and the generated library still use the working name FastPay (`FastPayTypes`, the EIP-712 domain names); those names are
-protected, see [rename impact](../docs/rename-impact.md).
+protected: never rename them (not even to rename the product) without an impact analysis and the regeneration of every dependent artifact, see "Contributing" in the [root README](../README.md).
 
 **Status: implementation evidence, not a release.** These are the Solidity contracts that the specification (`../spec`, version 0.5.0, draft) describes.
 They are compiled and tested with a pinned toolchain, but they are **not audited**, the constants they use are **proposals**
@@ -31,7 +31,7 @@ fixed at deployment. The architecture decisions are ADR-020 (versioned bounds, s
 opened by relayed signature, the typed charge request (finding F-19). The `recipientPolicy` of a mandate is opaque (F-18).
 
 A **deployment script** exists (`script/Deploy.s.sol`, parameters in `PAYTRUE_*` environment variables, the earlier `FASTPAY_*` names as a fallback). It is deployment code, not a deployment: no address is
-recorded anywhere. See [contract deployments](../docs/contracts-deployments.md) and `python -I ../scripts/devnet.py --once` for a verified local run.
+recorded anywhere. See "Deploy your own contracts" in the [root README](../README.md#deploy-your-own-contracts) and `python -I ../scripts/devnet.py --once` for a verified local run.
 
 ## Frozen compiler settings
 
@@ -67,7 +67,7 @@ python -I spec/tools/fork_run.py --project contracts                      # the 
 The sources in `src/` import only each other (and `src/generated/FastPayTypes.sol`, generated from `spec/eip712/types.json`); they need no library. Copy or vendor `contracts/src` and compile with the
 **frozen settings** (`frozen-settings.json`): a different compiler or optimizer is a different bytecode and none of the recorded evidence applies to it. The **tests and the script** need forge-std, and
 the tests read vectors from `../spec/foundry/vectors` and `../spec/eip712` and the Permit2 fixture from `../spec/evidence/permit2` (a known limitation of this layout: `contracts/` is not yet a standalone
-package, see [architecture](../docs/architecture.md)). No contract contains an address or a URL of any PayTrue party.
+package). No contract contains an address or a URL of any PayTrue party.
 
 ## Suites
 

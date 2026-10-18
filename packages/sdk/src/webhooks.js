@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: Apache-2.0
 // Webhook signing, verification and ordering for PayTrue events. Server side (uses node:crypto). No dependencies.
 //
-// The scheme is the one of the proposed event catalog (docs/headless.md): header `t=<unix seconds>,v1=<hex>[,v1=<hex>]`, where v1 is the HMAC-SHA-256,
+// The scheme is the one of the proposed event catalog (README, section Use the packages): header `t=<unix seconds>,v1=<hex>[,v1=<hex>]`, where v1 is the HMAC-SHA-256,
 // under the endpoint's secret, of `<t>.<raw body>`. Several v1 values are accepted so that a secret can be rotated with an overlap.
 import { createHmac, timingSafeEqual } from "node:crypto";
 

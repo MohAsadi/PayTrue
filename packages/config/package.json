@@ -16,8 +16,7 @@
     "./schema": "./src/schema.js"
   },
   "files": [
-    "src",
-    "README.md"
+    "src"
   ],
   "engines": {
     "node": ">=20"

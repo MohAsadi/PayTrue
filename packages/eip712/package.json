@@ -18,8 +18,7 @@
     "./typed-data/*": "./dist/data/typed-data/*"
   },
   "files": [
-    "dist",
-    "README.md"
+    "dist"
   ],
   "engines": {
     "node": ">=18"

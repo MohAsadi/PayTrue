@@ -171,10 +171,15 @@ test(".env.example is exactly what the schema renders", () => {
   assert.equal(file, renderEnvExample());
 });
 
-test("docs/configuration.md is exactly what the schema renders", async () => {
-  const { renderConfigDoc } = await import("../scripts/generate-config-doc.mjs");
-  const file = readFileSync(new URL("../../../docs/configuration.md", import.meta.url), "utf8").replace(/\r\n/g, "\n");
-  assert.equal(file, renderConfigDoc());
+test("the configuration table of README.md is exactly what the schema renders", async () => {
+  const { withConfigBlock } = await import("../scripts/generate-config-doc.mjs");
+  const file = readFileSync(new URL("../../../README.md", import.meta.url), "utf8").replace(/\r\n/g, "\n");
+  assert.equal(file, withConfigBlock(file));
+});
+
+test("the README generator refuses a README without its markers", async () => {
+  const { withConfigBlock } = await import("../scripts/generate-config-doc.mjs");
+  assert.throws(() => withConfigBlock("# no markers here\n"), /markers/);
 });
 
 test("every runtime variable of the schema is read by the loader and no variable is listed twice", () => {

@@ -154,7 +154,7 @@ export function loadConfig(env = process.env) {
   const secureCookie = checkoutOrigin.startsWith("https://");
   if (sameSite === "none" && !(production && secureCookie)) problems.push("PAYTRUE_COOKIE_SAMESITE=none needs production and an https checkout origin (the cookie must be Secure)");
   if (frameAncestors.length > 0 && sameSite === "strict") {
-    warnings.push("PAYTRUE_ALLOWED_FRAME_ANCESTORS is set while the cookie is SameSite=strict: a browser will not send a strict cookie from inside a cross-site frame, so an embedded checkout cannot keep its control cookie. Embedded checkout is separately gated; see docs/embedding.md");
+    warnings.push("PAYTRUE_ALLOWED_FRAME_ANCESTORS is set while the cookie is SameSite=strict: a browser will not send a strict cookie from inside a cross-site frame, so an embedded checkout cannot keep its control cookie. Embedded checkout is separately gated; see the README, section Embed the checkout");
   }
 
   // ---- chains

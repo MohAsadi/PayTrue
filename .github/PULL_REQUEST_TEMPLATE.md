@@ -13,9 +13,9 @@
 
 ## Checklist
 
-- [ ] I did not edit a generated file by hand (EIP-712 outputs, `.env.example`, `docs/configuration.md`, `spec/18-configuration-records.md`, recorded evidence)
-- [ ] I did not rename or remove a protected cryptographic identifier ([docs/rename-impact.md](../docs/rename-impact.md))
-- [ ] New Solidity files start with `// SPDX-License-Identifier: Apache-2.0`; I added no GPL, AGPL, unlicensed or vendored code, and no dependency (or I added its row to `THIRD_PARTY_NOTICES.md`)
+- [ ] I did not edit a generated file by hand (EIP-712 outputs, `.env.example`, the configuration table of the README, `spec/18-configuration-records.md`, recorded evidence)
+- [ ] I did not rename or remove a protected cryptographic identifier (see "Contributing" in the [README](../README.md))
+- [ ] New Solidity files start with `// SPDX-License-Identifier: Apache-2.0`; I added no GPL, AGPL, unlicensed or vendored code, and no dependency (or I added its row to the third-party table of the README)
 - [ ] No secret, key, `.env`, binary, archive or build output is included; no file is over 20 MiB
 - [ ] I did not claim that a wallet works, a component is audited or a constant is approved without evidence
 - [ ] I added or changed a test that fails without this change (or I explain why none applies)
