@@ -72,6 +72,21 @@ class Case(unittest.TestCase):
         self.put("t.mjs", "const API_KEY = '" + "dummy_value_1234567890" + "';\n")  # built in pieces so this file does not trip the scan it tests
         self.assertEqual(self.levels(self.run_check("check_secrets", ["t.mjs"])), {"FAIL"})
 
+    # ---- encoding
+    def test_utf16_bom_and_invalid_utf8_files_are_refused(self):
+        self.put("README.md", binary="# PayTrue\n".encode("utf-16"))  # what `echo "# PayTrue" > README.md` writes in Windows PowerShell 5
+        self.put("bom.md", binary=b"\xef\xbb\xbf# x\n")
+        self.put("nul.txt", binary=b"a\x00b\n")
+        self.put("latin1.md", binary="café\n".encode("latin-1"))
+        for rel in ("README.md", "bom.md", "nul.txt", "latin1.md"):
+            self.assertEqual(self.levels(self.run_check("check_encoding", [rel])), {"FAIL"}, rel)
+
+    def test_utf8_files_and_listed_binaries_pass(self):
+        self.put("ok.md", "# café · ok\n")
+        self.put("a.json.gz", binary=b"\x1f\x8b\x08\x00binary")
+        for rel in ("ok.md", "a.json.gz"):
+            self.assertEqual(self.levels(self.run_check("check_encoding", [rel])), {"PASS"}, rel)
+
     def test_allow_listed_upstream_paths_are_skipped(self):
         up = self.mod.CONFIG["secretAllowPaths"][0]
         self.put(up + "StdChains.sol", "string x = 'https://sepolia.infura.io/v3/" + "a" * 32 + "';")

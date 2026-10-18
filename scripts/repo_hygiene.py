@@ -105,6 +105,36 @@ def check_forbidden(files, res):
         res.add("forbidden", "PASS", "no key, environment file, binary, archive or private-evidence artifact is tracked")
 
 
+def check_encoding(files, res):
+    """Text is UTF-8 without a byte-order mark. GitHub shows UTF-16 (what `echo x > file` writes in Windows PowerShell 5) as garbage, and the other checks read files leniently."""
+    skip = tuple(CONFIG["encodingSkipSuffixes"])
+    problems = []
+    for f in files:
+        if f.lower().endswith(skip):
+            continue
+        try:
+            b = (ROOT / f).read_bytes()
+        except OSError:
+            continue
+        if b[:3] == b"\xef\xbb\xbf":
+            kind = "a UTF-8 byte-order mark"
+        elif b[:2] in (b"\xff\xfe", b"\xfe\xff"):
+            kind = "UTF-16 (GitHub renders it as garbage)"
+        elif b"\x00" in b:
+            kind = "NUL bytes"
+        else:
+            try:
+                b.decode("utf-8")
+                continue
+            except UnicodeDecodeError as e:
+                kind = f"invalid UTF-8 at byte {e.start}"
+        problems.append(f"{f}: {kind}; store text as UTF-8 without a byte-order mark")
+    for p in problems:
+        res.add("encoding", "FAIL", p)
+    if not problems:
+        res.add("encoding", "PASS", f"{len(files)} tracked files are UTF-8 without a byte-order mark (or a listed binary type)")
+
+
 def check_secrets(files, res):
     hits = []
     for f in files:
@@ -277,6 +307,8 @@ def main():
         check_size(files, res)
     if on("forbidden"):
         check_forbidden(files, res)
+    if on("encoding"):
+        check_encoding(files, res)
     if on("secrets"):
         check_secrets(files, res)
     if on("spdx"):

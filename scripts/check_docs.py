@@ -34,7 +34,7 @@ def slug(heading):
 def anchors(path):
     found = set()
     in_code = False
-    for line in path.read_text(encoding="utf-8", errors="replace").split("\n"):
+    for line in path.read_bytes().decode("utf-8", errors="replace").split("\n"):
         if FENCE.match(line):
             in_code = not in_code
         if not in_code:
@@ -48,7 +48,14 @@ def main():
     problems = []
     n = 0
     for rel in files():
-        text = (ROOT / rel).read_text(encoding="utf-8", errors="replace")
+        try:
+            text = (ROOT / rel).read_bytes().decode("utf-8")
+        except UnicodeDecodeError as e:
+            problems.append(f"{rel}: not valid UTF-8 (byte {e.start}); GitHub would show it as garbage and its links cannot be checked")
+            continue
+        if text.startswith("﻿"):
+            problems.append(f"{rel}: starts with a byte-order mark; store Markdown as UTF-8 without one")
+            text = text[1:]
         in_code = False
         for i, line in enumerate(text.split("\n"), 1):
             if FENCE.match(line):

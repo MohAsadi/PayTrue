@@ -61,7 +61,8 @@ that would make most of them COMPLETE, a production checkout service, is not bui
 | Packages (Node's built-in runner) | 55 tests pass (config, SDK, EIP-712, development stub); generated files are current |
 | Hygiene (`scripts/repo_hygiene.py --history`) | 0 failures; 1 warning (the 47.3 MiB log); no secret in the tree or in the Git history (4 commits before this change) |
 | Hygiene checker's own tests | 11 pass |
-| Documentation links | Checked by `scripts/check_docs.py` |
+| Documentation links | Checked by `scripts/check_docs.py` (175 links, 0 broken) |
+| README as GitHub shows it | **Defect found after the first push and fixed:** `README.md` was stored as UTF-16 with a byte-order mark (inherited from the original one-line file), so GitHub showed `��# PayTrue` and my first checks read it as garbage without complaining. It is now UTF-8; the hygiene check `encoding` and the link check refuse UTF-16, a BOM, NUL bytes and invalid UTF-8, with tests. The default branch on GitHub keeps the garbled one-line README until this branch is merged |
 | Fresh clone of the branch (Windows, Git's default `core.autocrlf=true`, pinned toolchain archives restored from a local copy, no download) | Hygiene, link check, generated-file checks, 55 package tests, headless example, `npm pack --dry-run`, contracts build, **290 contract tests**, devnet and all 21 specification checks pass. The run **found a defect, now fixed**: a CRLF checkout changed the bytes the evidence tools hash and failed checks 17, 18 and 21, so `.gitattributes` now forces LF and the contracts report was re-recorded from LF sources (no bytecode or size changed). Check 18 also needs `forge build` first; CI and CONTRIBUTING now say so |
 | Local devnet quickstart | Run end to end with the pinned anvil and forge |
 | Embedding example | Run in a real browser, positive and negative case |
