@@ -46,7 +46,7 @@ jobs:
           mkdir -p dist
           for p in config sdk eip712; do (cd packages/$p && npm pack --pack-destination ../../dist); done
           (cd dist && sha256sum *.tgz > SHA256SUMS && cat SHA256SUMS)
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v7
         with:
           name: paytrue-packages
           path: dist/*
