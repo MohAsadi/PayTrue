@@ -1,0 +1,23 @@
+# SPDX-License-Identifier: Apache-2.0
+# A local devnet: the PINNED anvil and forge of spec/toolchain/toolchain.lock.json (fetched at build time and verified by SHA-256), Permit2 at its canonical
+# address, and the PayTrue contracts deployed by contracts/script/Deploy.s.sol. It runs the same script as `python -I scripts/devnet.py` on your machine.
+# Build from the repository root:  docker build -f deploy/docker/Dockerfile.devnet -t paytrue-devnet .
+#
+# NOT for production: anvil's unlocked accounts hold every role. Pin the base image by digest in your own build.
+FROM python:3.12-slim
+
+RUN apt-get update \
+ && apt-get install -y --no-install-recommends ca-certificates \
+ && rm -rf /var/lib/apt/lists/*
+
+WORKDIR /work
+COPY . .
+
+# fetches the pinned Linux toolchain; the tool refuses any artifact whose SHA-256 differs from the lock
+RUN python -I spec/toolchain/fetch_toolchain.py
+
+EXPOSE 8545
+VOLUME ["/out"]
+HEALTHCHECK --interval=10s --timeout=5s --retries=30 CMD python -c "import json,urllib.request;r=urllib.request.Request('http://127.0.0.1:8545',data=json.dumps({'jsonrpc':'2.0','id':1,'method':'eth_chainId','params':[]}).encode(),headers={'Content-Type':'application/json'});raise SystemExit(0 if json.load(urllib.request.urlopen(r,timeout=3)).get('result') else 1)"
+
+CMD ["python", "-I", "scripts/devnet.py", "--host", "0.0.0.0", "--manifest", "/out/local-31337.json"]

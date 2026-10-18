@@ -1,4 +1,4 @@
-// SPDX-License-Identifier: UNLICENSED
+// SPDX-License-Identifier: Apache-2.0
 pragma solidity 0.8.24;
 
 // Custom errors of the FastPay contracts. Names follow documents 11, 12 and 17 where they name one; the others are named here (and are

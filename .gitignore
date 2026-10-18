@@ -1,21 +1,70 @@
-# Toolchain binaries, downloaded archives and compilers. They are pinned by URL and SHA-256 in
-# spec/toolchain/toolchain.lock.json and fetched again by spec/toolchain/fetch_toolchain.py;
-# several of them are larger than GitHub accepts (100 MB per file) or recommends (50 MB).
+# ---- Toolchain: binaries, downloads, compilers, fetched dependency trees and generated build runs.
+# They are pinned by URL, commit and SHA-256 in spec/toolchain/toolchain.lock.json and fetched again by
+# `python spec/toolchain/fetch_toolchain.py`. Some are larger than GitHub accepts (100 MB per file) and several carry
+# copyleft licenses (see THIRD_PARTY_NOTICES.md), so none of them is tracked.
 spec/toolchain/bin/
 spec/toolchain/_download/
 spec/toolchain/solc/
+spec/toolchain/permit2-build/
+spec/toolchain/isolated/
 
-# Build output of the Foundry projects (rebuilt by tools/contracts_report.py and spec/toolchain/forge.py)
+# ---- Build output of the Foundry projects (rebuilt by spec/tools/contracts_report.py and spec/toolchain/forge.py)
 contracts/out/
 contracts/cache/
 contracts/broadcast/
 spec/foundry/out/
 spec/foundry/cache/
 
-# Working copy that tools/contracts_mutation.py creates and deletes
+# ---- Working copies and generated runs
 contracts_mut/
 contracts_mut_*/
 
-# Python bytecode
+# ---- Node and package build output
+node_modules/
+dist/
+*.tgz
+packages/*/src-generated/
+
+# ---- Python bytecode
 __pycache__/
 *.pyc
+
+# ---- Secrets, keys and local configuration. Never commit these.
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+*.keystore
+id_rsa*
+id_ed25519*
+secrets/
+.secrets/
+
+# ---- Private evidence. Wallet-lab raw artifacts (screenshots, recordings, network captures, device logs) are kept in a private
+# evidence store (docs/evidence-policy.md). A signed run record (JSON) is public; a raw artifact is published only after a
+# redaction review, by an explicit `git add -f`.
+evidence-private/
+spec/evidence/wallet-lab/**/*.png
+spec/evidence/wallet-lab/**/*.jpg
+spec/evidence/wallet-lab/**/*.jpeg
+spec/evidence/wallet-lab/**/*.gif
+spec/evidence/wallet-lab/**/*.webp
+spec/evidence/wallet-lab/**/*.mp4
+spec/evidence/wallet-lab/**/*.mov
+spec/evidence/wallet-lab/**/*.har
+spec/evidence/wallet-lab/**/*.pdf
+spec/evidence/wallet-lab/**/raw/
+
+# ---- Local devnet output
+deployments/local-*.json
+deploy/.data/
+
+# ---- Editors and operating systems
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp

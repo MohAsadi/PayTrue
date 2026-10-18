@@ -1,0 +1,18 @@
+# Text files are stored with LF and checked out with LF on every platform. The evidence tools hash file bytes (sources, golden vectors, reports), so a CRLF
+# checkout (Git for Windows with core.autocrlf=true) makes spec/tools/check_all.py fail on checks 17, 18 and 21.
+* text=auto eol=lf
+
+# Generated or recorded files: collapsed in review and ignored by language statistics.
+contracts/src/generated/** linguist-generated=true
+spec/foundry/src/generated/** linguist-generated=true
+spec/foundry/test/generated/** linguist-generated=true
+spec/foundry/vectors/** linguist-generated=true
+spec/eip712/*.generated.ts linguist-generated=true
+spec/eip712/golden-vectors.json linguist-generated=true
+spec/eip712/typed-data/** linguist-generated=true
+spec/evidence/** linguist-generated=true
+spec/jira/backlog.csv linguist-generated=true
+spec/18-configuration-records.md linguist-generated=true
+
+# Third-party source kept in the tree.
+spec/foundry/lib/** linguist-vendored=true

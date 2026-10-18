@@ -48,7 +48,7 @@ def sol_member_type(t):
 
 def gen_solidity(reg):
     doc = reg.doc
-    L = ["// SPDX-License-Identifier: UNLICENSED", "pragma solidity 0.8.24;", "", f"// {HEADER}",
+    L = ["// SPDX-License-Identifier: Apache-2.0", "pragma solidity 0.8.24;", "", f"// {HEADER}",
          f"// Source: eip712/types.json (spec {doc['specVersion']}, status {doc['status']}: not frozen until the freeze register says so).",
          "// Every array that is hashed is bounded by a named constant (PC-04, PC-11): hashing is O(bound), never unbounded.", "",
          "library FastPayTypes {",
@@ -348,7 +348,7 @@ def gen_golden_test(reg, golden):
         tags.append(f"        assertEq(T.{k}, {e['hash']});")
     tags.append("    }")
     tests.append("\n".join(tags))
-    head = ["// SPDX-License-Identifier: UNLICENSED", "pragma solidity 0.8.24;", "", f"// {HEADER}",
+    head = ["// SPDX-License-Identifier: Apache-2.0", "pragma solidity 0.8.24;", "", f"// {HEADER}",
             "// Golden vectors of eip712/golden-vectors.json as Solidity literals: the generated library must reproduce every hash that the",
             "// Python reference encoder (tools/eip712_types.py) produced. Illustrative addresses and amounts only.", "",
             'import "forge-std/Test.sol";', 'import {FastPayTypes as T} from "../../src/generated/FastPayTypes.sol";', "",

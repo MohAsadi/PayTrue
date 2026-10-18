@@ -1,0 +1,111 @@
+name: CI
+
+# What runs on every pull request and every push to main. Jobs marked "advisory" use the Linux path of the pinned toolchain, which the maintainers have NOT yet
+# exercised (the checks were developed on Windows); remove `continue-on-error` from them after their first green run on a Linux runner.
+on:
+  pull_request:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  hygiene:
+    name: Repository hygiene
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Sizes, secrets (tree and history), licenses, vendored trees, protected identifiers, packages
+        run: python -I scripts/repo_hygiene.py --history
+      - name: The hygiene checker itself fails on what it exists to catch
+        run: python -I scripts/test_repo_hygiene.py
+      - name: Relative links of the public documents
+        run: python -I scripts/check_docs.py
+      - name: Example deployment manifest
+        run: python -I scripts/validate_deployment.py deployments/example-sovereign-31337.json
+
+  packages:
+    name: Packages (Node ${{ matrix.node }})
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        node: ["20", "22"]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node }}
+      - name: Generated files are current
+        run: |
+          node packages/config/scripts/generate-env-example.mjs --check
+          node packages/config/scripts/generate-config-doc.mjs --check
+      - name: Tests (config, SDK, development stub)
+        run: node --test packages/config/test/*.test.mjs packages/sdk/test/*.test.mjs packages/devserver/test/*.test.mjs
+      - name: Tests (EIP-712 package; its build needs Node 22.13 or later)
+        if: matrix.node == '22'
+        run: node --test packages/eip712/test/*.test.mjs
+      - name: Headless example, end to end against the development stub
+        run: node examples/headless-node/index.mjs
+      - name: What would be published (dry run, offline)
+        if: matrix.node == '22'
+        run: |
+          for p in config sdk eip712; do (cd packages/$p && npm pack --dry-run); done
+
+  compose:
+    name: Compose file
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Validate the compose file (does not pull or build anything)
+        run: docker compose -f deploy/compose/compose.yaml config --quiet
+
+  contracts:
+    name: Contracts, pinned toolchain (advisory)
+    runs-on: ubuntu-latest
+    continue-on-error: true
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Fetch the pinned toolchain (every artifact is verified against its SHA-256)
+        run: python -I spec/toolchain/fetch_toolchain.py
+      - name: Build and runtime sizes
+        run: python -I spec/toolchain/forge.py --project contracts build --sizes
+      - name: Tests
+        run: python -I spec/toolchain/forge.py --project contracts test
+      - name: Local devnet deployment, end to end
+        run: python -I scripts/devnet.py --once
+
+  specification:
+    name: Specification checks (advisory)
+    runs-on: ubuntu-latest
+    continue-on-error: true
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - name: Fetch the pinned toolchain
+        run: python -I spec/toolchain/fetch_toolchain.py
+      - name: Build the contracts (check 18 compares the forge build with the recorded report, so it needs one)
+        run: python -I spec/toolchain/forge.py --project contracts build
+      - name: The 21 consistency checks
+        run: python -I spec/tools/check_all.py

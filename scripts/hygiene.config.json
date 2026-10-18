@@ -1,0 +1,212 @@
+{
+  "_comment": "Settings of scripts/repo_hygiene.py. protectedIdentifiers are the cryptographic identifiers that a blind rename of the product name would change: see docs/rename-impact.md before editing any of them.",
+  "maxFileMiB": 50,
+  "warnFileMiB": 20,
+  "ownSpdx": "Apache-2.0",
+  "allowedThirdPartySpdx": [
+    "MIT",
+    "Apache-2.0",
+    "MIT OR Apache-2.0"
+  ],
+  "thirdPartySourcePrefixes": [
+    "spec/foundry/lib/forge-std/"
+  ],
+  "secretAllowPaths": [
+    "spec/foundry/lib/forge-std/"
+  ],
+  "forbiddenTrackedPrefixes": [
+    "spec/toolchain/bin/",
+    "spec/toolchain/_download/",
+    "spec/toolchain/solc/",
+    "spec/toolchain/isolated/",
+    "spec/toolchain/permit2-build/",
+    "contracts/out/",
+    "contracts/cache/",
+    "contracts/broadcast/",
+    "spec/foundry/out/",
+    "spec/foundry/cache/",
+    "node_modules/"
+  ],
+  "encodingSkipSuffixes": [
+    ".gz"
+  ],
+  "allowTrackedPatterns": [
+    ".env.example"
+  ],
+  "forbiddenTrackedPatterns": [
+    "*.pem",
+    "*.key",
+    "*.p12",
+    "*.pfx",
+    "*.keystore",
+    "id_rsa*",
+    "id_ed25519*",
+    ".env",
+    ".env.*",
+    "*.exe",
+    "*.dll",
+    "*.dylib",
+    "*.zip",
+    "*.tgz",
+    "*.tar.gz",
+    "*.7z",
+    "*.mp4",
+    "*.mov",
+    "*.har",
+    "*.heic"
+  ],
+  "privateEvidencePatterns": [
+    "spec/evidence/wallet-lab/*.png",
+    "spec/evidence/wallet-lab/*.jpg",
+    "spec/evidence/wallet-lab/*.jpeg",
+    "spec/evidence/wallet-lab/*.pdf",
+    "spec/evidence/wallet-lab/*.gif",
+    "spec/evidence/wallet-lab/*.webp",
+    "spec/evidence/wallet-lab/*/raw/*"
+  ],
+  "requiredFiles": [
+    "LICENSE",
+    "NOTICE",
+    "README.md",
+    "SECURITY.md",
+    "CONTRIBUTING.md",
+    "CODE_OF_CONDUCT.md",
+    "GOVERNANCE.md",
+    "TRADEMARK.md",
+    "SUPPORT.md",
+    "THIRD_PARTY_NOTICES.md",
+    ".gitignore",
+    ".gitattributes",
+    ".editorconfig",
+    ".env.example",
+    ".github/CODEOWNERS",
+    ".github/PULL_REQUEST_TEMPLATE.md",
+    ".github/ISSUE_TEMPLATE/config.yml",
+    ".github/workflows/ci.yml",
+    ".github/workflows/release.yml",
+    "docs/README.md"
+  ],
+  "hostCheckDirs": [
+    "packages",
+    "deploy",
+    "examples",
+    "contracts",
+    "scripts"
+  ],
+  "deniedHostPattern": "paytrue\\.(me|com|io|app|dev|cloud)",
+  "packagesMustBePrivateUntilRelease": true,
+  "protectedIdentifiers": [
+    {
+      "id": "EIP712-DOMAIN-MANDATES",
+      "kind": "EIP-712 domain name (part of the domain separator)",
+      "string": "FastPay Mandates",
+      "mustAppearIn": [
+        "spec/eip712/types.json",
+        "contracts/src/generated/FastPayTypes.sol",
+        "spec/eip712/fastpay-types.generated.ts",
+        "spec/eip712/golden-vectors.json"
+      ],
+      "keccak256": "ed345e4b13fb27d8593d4308bc2e940615cba3572a35c442b76ca1beb38d491f"
+    },
+    {
+      "id": "EIP712-DOMAIN-QUOTE",
+      "kind": "EIP-712 domain name (part of the domain separator)",
+      "string": "FastPay Quote",
+      "mustAppearIn": [
+        "spec/eip712/types.json",
+        "contracts/src/generated/FastPayTypes.sol",
+        "spec/eip712/fastpay-types.generated.ts",
+        "spec/eip712/golden-vectors.json"
+      ],
+      "keccak256": "d003b34a2da733a446ac06729e0c953f5b080dbd13bdfd3b4ea83a61bc284d30"
+    },
+    {
+      "id": "TAG-LINEAGE_TAG",
+      "kind": "hashed domain-separation tag",
+      "string": "fastpay.lineage.v1",
+      "mustAppearIn": [
+        "spec/eip712/types.json",
+        "contracts/src/generated/FastPayTypes.sol"
+      ],
+      "keccak256": "bf83254ba89afa77ea2c40c1c20ce6b11934c50e327179d94462f39f2aa718ca"
+    },
+    {
+      "id": "TAG-MANDATE_TAG",
+      "kind": "hashed domain-separation tag",
+      "string": "fastpay.mandate.v1",
+      "mustAppearIn": [
+        "spec/eip712/types.json",
+        "contracts/src/generated/FastPayTypes.sol"
+      ],
+      "keccak256": "0945ea3d0f624223c05a4649c8e90b730e0955e6c384b0c6495dc8d46ca84a47"
+    },
+    {
+      "id": "TAG-CYCLE_TAG",
+      "kind": "hashed domain-separation tag",
+      "string": "fastpay.cycle.v1",
+      "mustAppearIn": [
+        "spec/eip712/types.json",
+        "contracts/src/generated/FastPayTypes.sol"
+      ],
+      "keccak256": "1b3b500f4535f791b4c727ae471cd2d9a515d37b0f981805b68a4420165b214c"
+    },
+    {
+      "id": "TAG-ROUTE_DIRECT_TAG",
+      "kind": "hashed domain-separation tag",
+      "string": "fastpay.route.direct.v1",
+      "mustAppearIn": [
+        "spec/eip712/types.json",
+        "contracts/src/generated/FastPayTypes.sol"
+      ],
+      "keccak256": "48a89266632b4264377511a397d72a77f3b9d62cd378b304495771cc80eac486"
+    },
+    {
+      "id": "TAG-SNAPSHOT_TAG",
+      "kind": "hashed domain-separation tag",
+      "string": "fastpay.migration.snapshot.v1",
+      "mustAppearIn": [
+        "spec/eip712/types.json",
+        "contracts/src/generated/FastPayTypes.sol"
+      ],
+      "keccak256": "4aad20bbdc76b59b6c54f2654e80c83256a985795153592e09edf6ed88fa0092"
+    },
+    {
+      "id": "TAG-PIN_EOA",
+      "kind": "hashed domain-separation tag",
+      "string": "fastpay.pin.eoa.v1",
+      "mustAppearIn": [
+        "spec/eip712/types.json",
+        "contracts/src/generated/FastPayTypes.sol"
+      ],
+      "keccak256": "8b07c3b3a0bc8c34a9a1a11064f80e35587006d2afc562b5114a4d9071547ba5"
+    },
+    {
+      "id": "TAG-PLAN",
+      "kind": "hashed domain-separation tag of the migration plan",
+      "string": "fastpay.plan.v1",
+      "mustAppearIn": [
+        "contracts/src/MigrationQueue.sol"
+      ],
+      "keccak256": "821a8610044e19155d03fbb0eb83399fa7cce33dc13cc7d2f3a2e937c2a85e1b"
+    },
+    {
+      "id": "TAG-PLAN-ENTRY",
+      "kind": "hashed domain-separation tag of a plan entry",
+      "string": "fastpay.plan.entry.v1",
+      "mustAppearIn": [
+        "contracts/src/MigrationQueue.sol"
+      ],
+      "keccak256": "77f6d4673447f6af30d3590dcb69500b45c2eab884abf2d79b47bce66a5140f0"
+    },
+    {
+      "id": "WALLET-LAB-SIGNING-PREFIX",
+      "kind": "prefix of the message that testers and reviewers sign",
+      "string": "fastpay-wallet-lab-run-record:v1:",
+      "mustAppearIn": [
+        "spec/tools/wallet_lab_verify.py",
+        "spec/evidence/wallet-lab-kit/README.md"
+      ],
+      "keccak256": "58020e05969339da01fcf26bb177cb2892eadc0129b45584f54dd2b664466ef5"
+    }
+  ]
+}

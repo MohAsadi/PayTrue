@@ -1,4 +1,4 @@
-// SPDX-License-Identifier: UNLICENSED
+// SPDX-License-Identifier: Apache-2.0
 pragma solidity 0.8.24;
 
 /// A minimal ERC-20 for the fork tests: no hooks, a plain return value, mint for anyone. It stands in for a real token so that the Permit2

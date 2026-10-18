@@ -1,4 +1,4 @@
-// SPDX-License-Identifier: UNLICENSED
+// SPDX-License-Identifier: Apache-2.0
 pragma solidity 0.8.24;
 
 /// Versioned quote-signer sets (document 11 section 4.7). `verifySigner` is the whole of Q1 and Q13 and costs a fixed number of storage

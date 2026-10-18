@@ -1,0 +1,39 @@
+# Headless or split layout: the hosted checkout on one origin, the merchant API on another.
+#   PAYTRUE_CHECKOUT_ORIGIN=https://checkout.example.com   PAYTRUE_CHECKOUT_BASE_PATH=/
+#   PAYTRUE_API_ORIGIN=https://api.example.com             PAYTRUE_API_BASE_PATH=/payments
+# The merchant API is called by your servers (never by a browser of a customer), so it needs no CORS and is best kept off the public internet when you can
+# (an allow-list of your own servers, or a private network).
+# Not run by this repository's checks: validate with `caddy validate --config <this file>` before use.
+
+checkout.example.com {
+	header {
+		Strict-Transport-Security "max-age=31536000"
+		X-Content-Type-Options "nosniff"
+		Referrer-Policy "no-referrer"
+		-Server
+	}
+	# only the hosted pages; the API is not reachable on this host
+	@pages path /c/*
+	handle @pages {
+		reverse_proxy 127.0.0.1:8080
+	}
+	handle {
+		respond "Not found" 404
+	}
+}
+
+api.example.com {
+	# only the merchant API, under /payments
+	@api path /payments/v1/*
+	handle @api {
+		# remote_ip: replace with the addresses of YOUR servers
+		@allowed remote_ip 203.0.113.0/24
+		handle @allowed {
+			reverse_proxy 127.0.0.1:8080
+		}
+		respond "Forbidden" 403
+	}
+	handle {
+		respond "Not found" 404
+	}
+}

@@ -1,4 +1,4 @@
-// SPDX-License-Identifier: UNLICENSED
+// SPDX-License-Identifier: Apache-2.0
 pragma solidity 0.8.24;
 
 /// RouterRegistry (document 12 section 3): router lifecycle, code hashes and versions, the router mode that decides which migration

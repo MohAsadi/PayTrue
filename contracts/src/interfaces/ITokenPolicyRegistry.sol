@@ -1,4 +1,4 @@
-// SPDX-License-Identifier: UNLICENSED
+// SPDX-License-Identifier: Apache-2.0
 pragma solidity 0.8.24;
 
 /// Token policy and the versioned price-bounds registry (ADR-020, document 11 section 4.3).

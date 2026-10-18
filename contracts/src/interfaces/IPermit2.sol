@@ -1,4 +1,4 @@
-// SPDX-License-Identifier: UNLICENSED
+// SPDX-License-Identifier: Apache-2.0
 pragma solidity 0.8.24;
 
 /// The part of Permit2 (Uniswap/permit2 at commit cc306b601f172c51bc04334a109e98340456620b) that FastPay calls. The deployed code at the
